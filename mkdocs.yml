@@ -1,0 +1,18 @@
+site_name: Weka Wiki
+site_url: https://github.com/Waikato/weka-wiki
+site_description: Documention on Weka that can also be found in the manual and the example archive that comes with each Weka download (zip or installer).
+theme: readthedocs
+# if page names start with a blank, eg ' Some name', then they get 
+# excluded from the navigation on the left-hand side
+pages:
+    - 'Home': index.md
+    - 'Resources':
+      - 'FAQ': faq.md
+      - 'Not so FAQ': not_so_faq.md
+      - 'Troubleshooting': troubleshooting.md
+      - 'Learning resources': learning_resources.md
+    - 'Packages': 
+      - 'Package manager': packages/manager.md
+      - 'Unofficial packages': packages/unofficial.md
+      - 'Package structure': packages/structure.md
+    - 'Mailing list': mailing_list.md
