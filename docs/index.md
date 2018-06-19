@@ -8,10 +8,10 @@ You can post questions to the [Weka mailing list](mailing_list.md). Please keep
 in mind that you cannot expect an immediate answer to your question(s). The
 questions are mainly answered by volunteers, Weka users just like you.
 
-# You are looking for packages? (Weka 3.7.2+)
-You can easily install packages through Weka's package manager interface,
-either official ones or unofficial ones.
-Have a look at the [Package manager](packages/manager.md) article for more information on this topic.
+# You are looking for packages?
+With Weka 3.7.2 and later, you can easily install packages through Weka's
+package manager interface, either official ones or unofficial ones.
+Have a look at the [Packages](packages/index.md) article for more information on this topic.
 
 # You found a bug?
 Please post the bug report to the [Weka mailing list](mailing_list.md). The
