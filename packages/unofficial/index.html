@@ -109,7 +109,47 @@
 		
     <ul class="subnav">
             
+    <li class="toctree-l2"><a href="#preprocessing">Preprocessing</a></li>
+    
+
+    <li class="toctree-l2"><a href="#classification">Classification</a></li>
+    
+
+    <li class="toctree-l2"><a href="#clustering">Clustering</a></li>
+    
+
+    <li class="toctree-l2"><a href="#similarity-functions">Similarity functions</a></li>
+    
+
+    <li class="toctree-l2"><a href="#discretization">Discretization</a></li>
+    
+
+    <li class="toctree-l2"><a href="#feature-selection">Feature selection</a></li>
+    
+
+    <li class="toctree-l2"><a href="#frequent-pattern-mining">Frequent pattern mining</a></li>
+    
+
+    <li class="toctree-l2"><a href="#stemming">Stemming</a></li>
+    
+
+    <li class="toctree-l2"><a href="#text-mining">Text mining</a></li>
+    
+
+    <li class="toctree-l2"><a href="#visualization">Visualization</a></li>
+    
+
+    <li class="toctree-l2"><a href="#parameter-optimization">Parameter optimization</a></li>
+    
+
+    <li class="toctree-l2"><a href="#others">Others</a></li>
+    
+
     </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
 	    </li>
           
             <li class="toctree-l1">
@@ -172,7 +212,74 @@
           <div role="main">
             <div class="section">
               
-                
+                <p>There are a number of packages for WEKA 3.8 on the internet that are not listed in the "official" WEKA package repository. These packages can nevertheless be easily installed via the package manager in WEKA 3.8 (available via the Tools menu in WEKA's GUIChooser) by providing the URL for the package .zip file.</p>
+<p>Below is an (incomplete list) of packages that are available.</p>
+<h1 id="preprocessing">Preprocessing</h1>
+<ul>
+<li><a href="https://github.com/fracpete/dataset-weights-weka-package dataset-weights">dataset-weights</a> -- filters for setting attribute and instance weights using various methods.</li>
+<li><a href="https://github.com/fracpete/missing-values-imputation-weka-package">missing-values-imputation</a> -- various methods for imputing missing values using a filter.</li>
+<li><a href="https://github.com/fracpete/mxexpression-weka-package">mxexpression</a> -- filter for updating a target attribute using a mathematical expression.</li>
+</ul>
+<h1 id="classification">Classification</h1>
+<ul>
+<li><a href="https://github.com/amten/NeuralNetwork Java neural">network package</a> -- Java (convolutional or fully-connected) neural network implementation with plugin for <a href="http://www.cs.waikato.ac.nz/ml/weka/">Weka</a>. Uses dropout and rectified linear units. Implementation is multithreaded and uses <a href="https://github.com/fommil/matrix-toolkits-java">MTJ</a> matrix library with native libs for performance.</li>
+<li><a href="http://doc.gold.ac.uk/~mas02mg/software/hmmweka/">HMMWeka</a> -- This library makes Hidden Markov Model machine learning available in Weka.</li>
+<li><a href="https://github.com/fracpete/collective-classification-weka-package">Collective classification</a> -- Algorithms around semi-supervised learning and collective classification.</li>
+<li><a href="http://www.quansun.com/bagging_es/">Bagging ensemble selection</a> -- Bagging Ensemble Selection - a new ensemble learning strategy.</li>
+<li><a href="http://www.cioslab.vcu.edu/alg/InstallWekaPackage.htm">DataSqueezer</a> -- Efficient rule builder that generates a set of production rules from labeled input data. It can handle missing data and has log-linear asymptotic complexity with the number of training examples.</li>
+<li><a href="http://www.cioslab.vcu.edu/alg/InstallWekaPackage.htm">miDS</a> -- mi-DS is a multiple-Instance learning supervised algorithm based on the DataSqueezer algorithm.</li>
+<li><a href="http://datamining.xmu.edu.cn/main/~chenwq/downloads/">LibD3C</a> -- Ensemble classifiers with a clustering and dynamic selection strategy.</li>
+<li><a href="http://www.uco.es/grupos/kdis/kdiswiki/ICRM/">ICRM</a> -- An Interpretable Classification Rule Mining Algorithm.</li>
+<li><a href="https://github.com/fracpete/tclass-weka-package">tclass</a> -- TClass is a supervised learner for multivariate time series, originally developed by <a href="http://www.cse.unsw.edu.au/~waleed/">Waleed Kadous</a>.</li>
+<li><a href="https://github.com/fracpete/wekaclassalgos">wekaclassalgos</a> -- collection of artificial neural network (ANN) algorithms and artificial immune system (AIS) algorithms, originally developed by <a href="https://sourceforge.net/projects/wekaclassalgos/">Jason Brownlee</a>.</li>
+<li><a href="https://github.com/fracpete/mxexpression-weka-package">mxexpression</a> -- classifier for making predictions using a mathematical expression.</li>
+</ul>
+<h1 id="clustering">Clustering</h1>
+<ul>
+<li><a href="http://datamining.xmu.edu.cn/main/~chenwq/downloads">APCluster</a> -- Affinity propagation algorithm for clustering, used especially in bioinformatics and computer vision.</li>
+<li><a href="http://voltaic-sandbox-523.appspot.com/projects.html">Fast Optics</a> -- Fast Implementation of OPTICS algorithm using random projections for Euclidean distances.</li>
+</ul>
+<h1 id="similarity-functions">Similarity functions</h1>
+<ul>
+<li><a href="http://sourceforge.net/projects/wekabiosimilarity/">wekabiosimilarity</a> -- implements several measures to compare binary feature vectors; and, additionally, extrapolates those measures to work with multi-value, string and numerical feature vectors.</li>
+</ul>
+<h1 id="discretization">Discretization</h1>
+<ul>
+<li><a href="http://www.uco.es/grupos/kdis/kdiswiki/ur-CAIM/">ur-CAIM</a> -- Improved CAIM Discretization for Unbalanced and Balanced Data.</li>
+<li><a href="http://www.cioslab.vcu.edu/alg/InstallWekaPackage.htm">CAIM</a> -- Class-Attribute Interdependence Maximization algorithm: discretizes a continuous feature into a number of intervals. This is done by using class information, without requiring the user to provide this number.</li>
+</ul>
+<h1 id="feature-selection">Feature selection</h1>
+<ul>
+<li><a href="http://users.aber.ac.uk/pds7/weka/">RSARSubsetEval</a> -- Rough set feature selection.</li>
+</ul>
+<h1 id="frequent-pattern-mining">Frequent pattern mining</h1>
+<ul>
+<li><a href="https://github.com/mniemann87/XApriori">XApriori</a> --Available case analysis modification of Apriori frequent pattern mining algorithm.</li>
+</ul>
+<h1 id="stemming">Stemming</h1>
+<ul>
+<li><a href="https://github.com/fracpete/snowball-stemmers-weka-package/releases">Snowball stemmers</a> -- Contains the actual snowball stemmer algorithms to make the Snowball stemmer wrapper in Weka work.</li>
+<li><a href="https://github.com/fracpete/ptstemmer-weka-package/releases">PTStemmer</a> -- Wrapper for <a href="http://code.google.com/p/ptstemmer/">Pedro Oliveira's stemmer library</a> for Portuguese.</li>
+</ul>
+<h1 id="text-mining">Text mining</h1>
+<ul>
+<li><a href="https://github.com/fracpete/nlp-weka-package/releases">nlp</a> -- Contains components for natural language processing, eg part-of-speech tagging filter and Penn Tree Bank tokenizer. Makes use of the <a href="http://nlp.stanford.edu/software/">Stanford Parser</a> (parser models need to be downloaded separately).</li>
+</ul>
+<h1 id="visualization">Visualization</h1>
+<ul>
+<li><a href="https://github.com/fracpete/graphviz-treevisualize-weka-package/releases">graphviz-treevisualize</a> -- Generating nice graphs in the Explorer from trees (eg J48) using the GraphViz executables.</li>
+<li><a href="https://github.com/fracpete/confusionmatrix-weka-package/releases">confusionmatrix</a> -- Various visualizations of confusion matrices in the Explorer.</li>
+<li><a href="https://github.com/fracpete/serialized-model-viewer-weka-package/releases">serialized-model-viewer</a> -- Adds a standalone tab to the Explorer that allows the user to load a serialized model and view its content as text (simply uses the objects' <code>toString()</code> method).</li>
+</ul>
+<h1 id="parameter-optimization">Parameter optimization</h1>
+<ul>
+<li><a href="https://github.com/fracpete/multisearch-weka-package/releases">multisearch</a> -- Meta-classifier similar to GridSearch, but for optimizing arbitrary number of parameters.</li>
+</ul>
+<h1 id="others">Others</h1>
+<ul>
+<li><a href="https://github.com/fracpete/screencast4j-weka-package">screencast4j</a> -- Allows you to record sound, webcam and screen feeds, storing them in separate files to be combined into a screencast using a <a href="https://en.wikipedia.org/wiki/List_of_video_editing_software">video editor</a>. This screencast you can then share on YouTube, for instance.</li>
+<li><a href="https://github.com/fracpete/command-to-code-weka-package">command-to-code</a> -- Turns command-lines (eg of classifiers or filters) into various Java code snippets.</li>
+</ul>
               
             </div>
           </div>
@@ -180,7 +287,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../structure/" class="btn btn-neutral float-right" title=" Package structure">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../structure/" class="btn btn-neutral float-right" title=" How are packages structured for the package management system?">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
         <a href="../manager/" class="btn btn-neutral" title=" Package manager"><span class="icon icon-circle-arrow-left"></span> Previous</a>
