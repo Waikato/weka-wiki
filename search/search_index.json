@@ -1,0 +1,269 @@
+{
+    "docs": [
+        {
+            "location": "/",
+            "text": "New to Weka?\n\n\nHave a look at the \nFrequently Asked Questions\n (= FAQ), the \nTroubleshooting\n article or search the \nmailing list archives\n.\nDon't forget to check out the documentation on the \nWeka homepage\n and the\n\nLearning Resources\n.\n\n\nYou have questions regarding Weka?\n\n\nYou can post questions to the \nWeka mailing list\n. Please keep\nin mind that you cannot expect an immediate answer to your question(s). The\nquestions are mainly answered by volunteers, Weka users just like you.\n\n\nYou are looking for packages?\n\n\nWith Weka 3.7.2 and later, you can easily install packages through Weka's\npackage manager interface, either official ones or unofficial ones.\nHave a look at the \nPackages\n article for more information on this topic.\n\n\nYou found a bug?\n\n\nPlease post the bug report to the \nWeka mailing list\n. The\nfollowing information will help tracking things down:\n\n\n\n\nversion of Weka (e.g., 3.9.2)\n\n\noperating system (e.g., Windows 10 or Ubuntu 16.04 64bit)\n\n\nJava version (e.g., 1.8.0_162 64bit)\n\n\n\n\nYou can also run the following command in the SimpleCLI and attach the generate output as text file to your post:\n\n\n    java weka.core.SystemInfo",
+            "title": "Home"
+        },
+        {
+            "location": "/#new-to-weka",
+            "text": "Have a look at the  Frequently Asked Questions  (= FAQ), the  Troubleshooting  article or search the  mailing list archives .\nDon't forget to check out the documentation on the  Weka homepage  and the Learning Resources .",
+            "title": "New to Weka?"
+        },
+        {
+            "location": "/#you-have-questions-regarding-weka",
+            "text": "You can post questions to the  Weka mailing list . Please keep\nin mind that you cannot expect an immediate answer to your question(s). The\nquestions are mainly answered by volunteers, Weka users just like you.",
+            "title": "You have questions regarding Weka?"
+        },
+        {
+            "location": "/#you-are-looking-for-packages",
+            "text": "With Weka 3.7.2 and later, you can easily install packages through Weka's\npackage manager interface, either official ones or unofficial ones.\nHave a look at the  Packages  article for more information on this topic.",
+            "title": "You are looking for packages?"
+        },
+        {
+            "location": "/#you-found-a-bug",
+            "text": "Please post the bug report to the  Weka mailing list . The\nfollowing information will help tracking things down:   version of Weka (e.g., 3.9.2)  operating system (e.g., Windows 10 or Ubuntu 16.04 64bit)  Java version (e.g., 1.8.0_162 64bit)   You can also run the following command in the SimpleCLI and attach the generate output as text file to your post:      java weka.core.SystemInfo",
+            "title": "You found a bug?"
+        },
+        {
+            "location": "/faq/",
+            "text": "General\n\n\n\n\nWhat are the principal release branches of Weka?\n\n\nWhere can I get old versions of WEKA?\n\n\nHow do I get the latest bugfixes?\n\n\nCan I check my CLASSPATH from within WEKA?\n\n\nWhere is my home directory located?\n\n\nCan I check how much memory is available for WEKA?\n\n\nCan I use WEKA in commercial applications?\n\n\n\n\nBasic usage\n\n\n\n\nCan I use CSV files?\n\n\nHow do I perform CSV file conversion?\n\n\nHow do I divide a dataset into training and test set?\n\n\nHow do I generate compatible train and test sets that get processed with a filter?\n\n\nHow do I perform attribute selection?\n\n\nHow do I perform clustering?\n\n\nWhere do I find visualization of classifiers, etc.?\n\n\nHow do I perform text classification?\n\n\nHow can I perform multi-instance learning in WEKA?\n\n\nHow do I perform cost-sensitive classification?\n\n\nHow do I make predictions with a trained model?\n\n\nWhy am I missing certain nominal or string values from sparse instances?\n\n\nCan I use WEKA for time series analysis?\n\n\nDoes WEKA support multi-label classification?\n\n\nHow do I perform one-class classification?\n\n\nCan I make a screenshot of a plot or graph directly in WEKA?\n\n\nHow do I use the package manager?\n\n\nWhat do I do if the package manager does not start?\n\n\n\n\nAdvanced usage\n\n\n\n\nHow can I track instances in WEKA?\n\n\nHow do I use ID attributes?\n\n\nHow do I connect to a database?\n\n\nHow do I use WEKA from command line?\n\n\nCan I tune the parameters of a classifier?\n\n\nHow do I generate Learning curves?\n\n\nWhere can I find information regarding ROC curves?\n\n\nI have unbalanced data - now what?\n\n\nCan I run an experiment using clusterers in the Experimenter?\n\n\nHow can I use transactional data in Weka?\n\n\nHow can I use Weka with Matlab or Octave?\n\n\n\n\nCustomizing Weka\n\n\n\n\nCan I change the colors (background, axes, etc.) of the plots in WEKA?\n\n\nHow do I add a new classifier, filter, kernel, etc\n\n\n\n\nUsing third-party tools\n\n\n\n\nHow do I use libsvm in WEKA?\n\n\nThe snowball stemmers don't work, what am I doing wrong?\n\n\n\n\nDeveloping with WEKA\n\n\n\n\nWhere can I get WEKA's source code?\n\n\nHow do I compile WEKA?\n\n\nWhat is CVS and what do I need to do to access it?\n\n\nWhat is Subversion and what do I need to do to access it?\n\n\nHow do I use WEKA's classes in my own code?\n\n\nHow do I write a new classifier or filter?\n\n\nCan I compile WEKA into native code?\n\n\nCan I use WEKA from C#?\n\n\nCan I use WEKA from Python?\n\n\nCan I use WEKA from Groovy?\n\n\nSerialization is nice, but what about generating actual Java code from WEKA classes?\n\n\nHow are packages structured for the package management system?\n\n\nPluggable evaluation metrics for classification/regression\n\n\nHow can I contribute to WEKA?\n\n\n\n\nWindows\n\n\n\n\nHow do I modify the CLASSPATH?\n\n\nHow do I modify the RunWeka.bat file?\n\n\nCan I process UTF-8 datasets or files?\n\n\nHow do I run the Windows Weka installer in silent mode?\n\n\n\n\nTroubleshooting\n\n\n\n\nI have Weka download problems - what's going wrong?\n\n\nMy ARFF file doesn't load - why?\n\n\nWhat does nominal value not declared in header, read Token[X], line Y mean?\n\n\nHow do I get rid of this OutOfMemoryException?\n\n\nHow do I deal with a StackOverflowError?\n\n\nWhy do I get the error message 'training and test set are not compatible'?\n\n\nCouldn't read from database: unknown data type\n\n\nTrying to add JDBC driver: ... - Error, not in CLASSPATH?\n\n\nI cannot process large datasets - any ideas?\n\n\nSee \nTroubleshooting\n article for more troubleshooting.",
+            "title": "FAQ"
+        },
+        {
+            "location": "/faq/#general",
+            "text": "What are the principal release branches of Weka?  Where can I get old versions of WEKA?  How do I get the latest bugfixes?  Can I check my CLASSPATH from within WEKA?  Where is my home directory located?  Can I check how much memory is available for WEKA?  Can I use WEKA in commercial applications?",
+            "title": "General"
+        },
+        {
+            "location": "/faq/#basic-usage",
+            "text": "Can I use CSV files?  How do I perform CSV file conversion?  How do I divide a dataset into training and test set?  How do I generate compatible train and test sets that get processed with a filter?  How do I perform attribute selection?  How do I perform clustering?  Where do I find visualization of classifiers, etc.?  How do I perform text classification?  How can I perform multi-instance learning in WEKA?  How do I perform cost-sensitive classification?  How do I make predictions with a trained model?  Why am I missing certain nominal or string values from sparse instances?  Can I use WEKA for time series analysis?  Does WEKA support multi-label classification?  How do I perform one-class classification?  Can I make a screenshot of a plot or graph directly in WEKA?  How do I use the package manager?  What do I do if the package manager does not start?",
+            "title": "Basic usage"
+        },
+        {
+            "location": "/faq/#advanced-usage",
+            "text": "How can I track instances in WEKA?  How do I use ID attributes?  How do I connect to a database?  How do I use WEKA from command line?  Can I tune the parameters of a classifier?  How do I generate Learning curves?  Where can I find information regarding ROC curves?  I have unbalanced data - now what?  Can I run an experiment using clusterers in the Experimenter?  How can I use transactional data in Weka?  How can I use Weka with Matlab or Octave?",
+            "title": "Advanced usage"
+        },
+        {
+            "location": "/faq/#customizing-weka",
+            "text": "Can I change the colors (background, axes, etc.) of the plots in WEKA?  How do I add a new classifier, filter, kernel, etc",
+            "title": "Customizing Weka"
+        },
+        {
+            "location": "/faq/#using-third-party-tools",
+            "text": "How do I use libsvm in WEKA?  The snowball stemmers don't work, what am I doing wrong?",
+            "title": "Using third-party tools"
+        },
+        {
+            "location": "/faq/#developing-with-weka",
+            "text": "Where can I get WEKA's source code?  How do I compile WEKA?  What is CVS and what do I need to do to access it?  What is Subversion and what do I need to do to access it?  How do I use WEKA's classes in my own code?  How do I write a new classifier or filter?  Can I compile WEKA into native code?  Can I use WEKA from C#?  Can I use WEKA from Python?  Can I use WEKA from Groovy?  Serialization is nice, but what about generating actual Java code from WEKA classes?  How are packages structured for the package management system?  Pluggable evaluation metrics for classification/regression  How can I contribute to WEKA?",
+            "title": "Developing with WEKA"
+        },
+        {
+            "location": "/faq/#windows",
+            "text": "How do I modify the CLASSPATH?  How do I modify the RunWeka.bat file?  Can I process UTF-8 datasets or files?  How do I run the Windows Weka installer in silent mode?",
+            "title": "Windows"
+        },
+        {
+            "location": "/faq/#troubleshooting",
+            "text": "I have Weka download problems - what's going wrong?  My ARFF file doesn't load - why?  What does nominal value not declared in header, read Token[X], line Y mean?  How do I get rid of this OutOfMemoryException?  How do I deal with a StackOverflowError?  Why do I get the error message 'training and test set are not compatible'?  Couldn't read from database: unknown data type  Trying to add JDBC driver: ... - Error, not in CLASSPATH?  I cannot process large datasets - any ideas?  See  Troubleshooting  article for more troubleshooting.",
+            "title": "Troubleshooting"
+        },
+        {
+            "location": "/not_so_faq/",
+            "text": "Associators\n\n\n\n\nHow do I use the associator GeneralizedSequentialPatterns?\n\n\n\n\nClassifiers\n\n\n\n\nWhat do those numbers mean in a J48 tree?",
+            "title": "Not so FAQ"
+        },
+        {
+            "location": "/not_so_faq/#associators",
+            "text": "How do I use the associator GeneralizedSequentialPatterns?",
+            "title": "Associators"
+        },
+        {
+            "location": "/not_so_faq/#classifiers",
+            "text": "What do those numbers mean in a J48 tree?",
+            "title": "Classifiers"
+        },
+        {
+            "location": "/troubleshooting/",
+            "text": "Click on one of the links for more information:\n\n\n\n\nWeka download problems\n\n\nOutOfMemoryException\n\n\nStackOverflowError\n\n\njust-in-time (JIT) compiler\n\n\nCSV file conversion\n\n\nARFF file doesn't load\n\n\nError message: nominal value not declared in header, read Token[X], line Y\n\n\nSpaces in labels of ARFF files\n\n\nSingle quotes in labels of ARFF files\n\n\nCLASSPATH problems\n\n\nInstance ID\n\n\nVisualization\n\n\nMemory consumption and Garbage collector\n\n\nGUIChooser starts but not Experimenter or Explorer\n\n\nKnowledgeFlow toolbars are empty\n\n\nOSX Mountain Lion - Weka x-y-z is damaged and can't be installed. You should eject the disk image\n\n\n\n\nSee also the \nFrequently Asked Questions\n.",
+            "title": "Troubleshooting"
+        },
+        {
+            "location": "/learning_resources/",
+            "text": "Videos\n\n\n\n\nYoutube channel of Data Mining with Weka MOOCs\n\n\n\n\nTutorials\n\n\n\n\nLearn Data Science Online\n\n\n\n\nMOOCs\n\n\n\n\nData Mining with Weka\n\n\nMore Data Mining with Weka\n\n\nAdvanced Data Mining with Weka",
+            "title": "Learning resources"
+        },
+        {
+            "location": "/learning_resources/#videos",
+            "text": "Youtube channel of Data Mining with Weka MOOCs",
+            "title": "Videos"
+        },
+        {
+            "location": "/learning_resources/#tutorials",
+            "text": "Learn Data Science Online",
+            "title": "Tutorials"
+        },
+        {
+            "location": "/learning_resources/#moocs",
+            "text": "Data Mining with Weka  More Data Mining with Weka  Advanced Data Mining with Weka",
+            "title": "MOOCs"
+        },
+        {
+            "location": "/packages/",
+            "text": "Weka 3.7.2 introduced support for packages, making it easy to extend Weka\nwithout having to recompile or patch the underlying Weka installation.\n\n\nHere are some pointers for using and developing packages:\n\n\n\n\nHow do I use the package manager?\n\n\nUnofficial packages\n\n\nHow are packages structured for the package management system?",
+            "title": "Packages"
+        },
+        {
+            "location": "/mailing_list/",
+            "text": "The WEKA Mailing list can be found here:\n\n\n\n\nList\n for subscribing/unsubscribing to the list\n\n\nArchives\n (\nMirror 1\n, \nMirror 2\n) for searching previous posted messages\n\n\n\n\nBefore posting, please read the \nMailing List Etiquette\n.",
+            "title": "Mailing list"
+        },
+        {
+            "location": "/subversion/",
+            "text": "General\n\n\nThe Weka \nSubversion\n repository is accessible and browseable via the following URL:\n\n\n\n\nhttps://svn.cms.waikato.ac.nz/svn/weka/\n\n\n\n\nA Subversion repository has usually the following layout:\n\n\n root\n  |\n  +- trunk\n  |\n  +- tags\n  |\n  +- branches\n\n\n\n\nWhere \ntrunk\n contains the \nmain trunk\n of the development, \ntags\n snapshots in time of the repository (e.g., when a new version got released) and \nbranches\n development branches that forked off the main trunk at some stage (e.g., legacy versions that still get bugfixed).\n\n\nSource code\n\n\nThe latest version of the Weka source code can be obtained with this URL:\n\n\nhttps://svn.cms.waikato.ac.nz/svn/weka/trunk/weka\n\n\nIf you want to obtain the source code of the book version, use this URL:\n\n\nhttps://svn.cms.waikato.ac.nz/svn/weka/branches/stable-3-8/\n\n\nSpecific version\n\n\nWhenever a release of Weka is generated, the repository gets \ntagged\n:\n\n\ndev-X-Y-Z\n\n\nthe tag for a release of the developer version, e.g., \ndev-3-9-2\n for Weka 3.9.2\n\n\nhttps://svn.cms.waikato.ac.nz/svn/weka/tags/dev-3-9-2\n\n\nstable-X-Y-Z\n\n\nthe tag for a release of a stable version. The book version is one of those stable versions, e.g., \nstable-3-8-2\n for Weka 3.8.2.\n\n\nhttps://svn.cms.waikato.ac.nz/svn/weka/tags/stable-3-8-2\n\n\nJUnit\n\n\nWeka's JUnit tests are no longer a separate module (as it was the case before the migration to Subversion). They are now located in the \nsrc/test\n directory of the Weka source code tree.\n\n\nCommandline\n\n\nModern Linux distributions already come with Subversion either pre-installed or easily installed via the package manager of the distribution. If that shouldn't be case, or if you are using Windows, you have to download the appropriate client from [http://subversion.tigris.org/ Subversion's homepage].\n\n\nA checkout of the current developer version of Weka looks like this:\n\n\nsvn co https://svn.cms.waikato.ac.nz/svn/weka/trunk/weka\n\n\n\n\nYou can also obtain the source code for a specific date. The \n-r\n option of the \nsvn\n command-line client can also take dates (format: YYYYMMDD) instead of only revision numbers. In order to distinguish the dates from revision numbers, you have to enclose the date within curly brackets:\n\n\nsvn co -r {20180616} https://svn.cms.waikato.ac.nz/svn/weka/trunk/weka\n\n\n\n\nLinks\n\n\n\n\nSubversion on WikiPedia\n\n\nSubversion homepage\n\n\nJUnit homepage",
+            "title": " subversion"
+        },
+        {
+            "location": "/subversion/#general",
+            "text": "The Weka  Subversion  repository is accessible and browseable via the following URL:   https://svn.cms.waikato.ac.nz/svn/weka/   A Subversion repository has usually the following layout:   root\n  |\n  +- trunk\n  |\n  +- tags\n  |\n  +- branches  Where  trunk  contains the  main trunk  of the development,  tags  snapshots in time of the repository (e.g., when a new version got released) and  branches  development branches that forked off the main trunk at some stage (e.g., legacy versions that still get bugfixed).",
+            "title": "General"
+        },
+        {
+            "location": "/subversion/#source-code",
+            "text": "The latest version of the Weka source code can be obtained with this URL:  https://svn.cms.waikato.ac.nz/svn/weka/trunk/weka  If you want to obtain the source code of the book version, use this URL:  https://svn.cms.waikato.ac.nz/svn/weka/branches/stable-3-8/",
+            "title": "Source code"
+        },
+        {
+            "location": "/subversion/#specific-version",
+            "text": "Whenever a release of Weka is generated, the repository gets  tagged :  dev-X-Y-Z  the tag for a release of the developer version, e.g.,  dev-3-9-2  for Weka 3.9.2  https://svn.cms.waikato.ac.nz/svn/weka/tags/dev-3-9-2  stable-X-Y-Z  the tag for a release of a stable version. The book version is one of those stable versions, e.g.,  stable-3-8-2  for Weka 3.8.2.  https://svn.cms.waikato.ac.nz/svn/weka/tags/stable-3-8-2",
+            "title": "Specific version"
+        },
+        {
+            "location": "/subversion/#junit",
+            "text": "Weka's JUnit tests are no longer a separate module (as it was the case before the migration to Subversion). They are now located in the  src/test  directory of the Weka source code tree.",
+            "title": "JUnit"
+        },
+        {
+            "location": "/subversion/#commandline",
+            "text": "Modern Linux distributions already come with Subversion either pre-installed or easily installed via the package manager of the distribution. If that shouldn't be case, or if you are using Windows, you have to download the appropriate client from [http://subversion.tigris.org/ Subversion's homepage].  A checkout of the current developer version of Weka looks like this:  svn co https://svn.cms.waikato.ac.nz/svn/weka/trunk/weka  You can also obtain the source code for a specific date. The  -r  option of the  svn  command-line client can also take dates (format: YYYYMMDD) instead of only revision numbers. In order to distinguish the dates from revision numbers, you have to enclose the date within curly brackets:  svn co -r {20180616} https://svn.cms.waikato.ac.nz/svn/weka/trunk/weka",
+            "title": "Commandline"
+        },
+        {
+            "location": "/subversion/#links",
+            "text": "Subversion on WikiPedia  Subversion homepage  JUnit homepage",
+            "title": "Links"
+        },
+        {
+            "location": "/get_latest_bugfixes/",
+            "text": "Weka is actively developed, that means that bugs are fixed and new functionality is added (only to the developer version) all the time. Every now and then (about every 6-12 months), when there was a sufficiently large number of improvements or fixes, a release is made and uploaded to \nSourceforget.net\n.\n\n\nIf you don't want to wait that long, you have two options:\n\n\n\n\n\n\nGet the latest source code from \nSubversion\n and compile it yourself. See the following articles for more information\n\n\n\n\nobtaining the source code from Subversion\n, either book or developer version\n\n\ncompiling the source code\n\n\n\n\n\n\n\n\nDownload a \nsnapshot\n from the download section of the \nWeka homepage\n. Snapshots for book and developer version are generated automatically every night, based on the current Subversion code. The \nZIP files\n have the same content as a release, i.e., compiled classes (= weka.jar), source code (= weka-src.jar), Javadoc and other documentation.\n\n\n\n\n\n\nNote:\n compare the timestamp of the \nWeka Mailing List\n post that reports a bugfix with the one of the snapshot to make sure the bugfix is already included in the snapshot.",
+            "title": " get latest bugfixes"
+        },
+        {
+            "location": "/compiling_weka/",
+            "text": "There are several ways of compiling the Weka source code:\n\n\n\n\nwith \nant\n\n\n\n\ntakes care of compiling all the necessary classes and easily generates jar archives\n\n\n\n\nwith \nmaven\n\n\n\n\nsimilar to ant\n\n\n\n\nwith an IDE, like IntelliJ IDEA, Eclipse or NetBeans\n\n\n\n\ncan be very helpful for debugging tricky bugs",
+            "title": " compiling weka"
+        },
+        {
+            "location": "/ant/",
+            "text": "What is ANT? This is how the ANT \nhomepage\n defines its tool:\n\n\nApache Ant is a Java-based build tool. In theory, it is kind of like Make, but without Make's wrinkles.\n\n\nBasics\n\n\n\n\nthe ANT build file is based on \nXML\n\n\nthe usual name for the build file is \nbuild.xml\n\n\ninvocation - the usual build file needs not be specified explicitly, if it's in the current directory; if not target is specified, the default one is used\n\n\n\n\nant [-f <build-file>] [<target>]\n\n\n\n\ndisplaying all the available targets of a build file\n\n\n\n\nant [-f <build-file>] -projecthelp\n\n\nWeka and ANT\n\n\n\n\na build file for Weka is available from \nsubversion\n (it has been included in the \nweka-src.jar\n since version 3.4.8 and 3.5.3)\n\n\nit is located in the \nweka\n directory\n\n\n\n\nsome targets of interest\n\n\n\n\n\n\nclean\n - Removes the build, dist and reports directories; also any class files in the source tree\n\n\n\n\ncompile\n - Compile weka and deposit class files in \n${path_modifier}/build/classes\n\n\ndocs\n - Make javadocs into {${path_modifier}/doc}}\n\n\nexejar\n - Create an executable jar file in \n${path_modifier}/dist\n\n\n\n\nLinks\n\n\n\n\nANT homepage\n\n\nXML",
+            "title": " ant"
+        },
+        {
+            "location": "/ant/#basics",
+            "text": "the ANT build file is based on  XML  the usual name for the build file is  build.xml  invocation - the usual build file needs not be specified explicitly, if it's in the current directory; if not target is specified, the default one is used   ant [-f <build-file>] [<target>]   displaying all the available targets of a build file   ant [-f <build-file>] -projecthelp",
+            "title": "Basics"
+        },
+        {
+            "location": "/ant/#weka-and-ant",
+            "text": "a build file for Weka is available from  subversion  (it has been included in the  weka-src.jar  since version 3.4.8 and 3.5.3)  it is located in the  weka  directory   some targets of interest    clean  - Removes the build, dist and reports directories; also any class files in the source tree   compile  - Compile weka and deposit class files in  ${path_modifier}/build/classes  docs  - Make javadocs into {${path_modifier}/doc}}  exejar  - Create an executable jar file in  ${path_modifier}/dist",
+            "title": "Weka and ANT"
+        },
+        {
+            "location": "/ant/#links",
+            "text": "ANT homepage  XML",
+            "title": "Links"
+        },
+        {
+            "location": "/packages/manager/",
+            "text": "",
+            "title": " Package manager"
+        },
+        {
+            "location": "/packages/unofficial/",
+            "text": "",
+            "title": " Unofficial packages"
+        },
+        {
+            "location": "/packages/structure/",
+            "text": "",
+            "title": " Package structure"
+        },
+        {
+            "location": "/not_so_faq/gsp/",
+            "text": "Class\n\n\nweka.associators.GeneralizedSequentialPatterns\n\n\nPublication\n\n\nRamakrishnan Srikant, Rakesh Agrawal (1996). Mining Sequential Patterns: Generalizations and Performance Improvements.\n\n\nDownloads\n\n\n\n\nGeneralizedSequentialPattern_example.arff",
+            "title": " GeneralizedSequentialPatterns"
+        },
+        {
+            "location": "/not_so_faq/gsp/#class",
+            "text": "weka.associators.GeneralizedSequentialPatterns",
+            "title": "Class"
+        },
+        {
+            "location": "/not_so_faq/gsp/#publication",
+            "text": "Ramakrishnan Srikant, Rakesh Agrawal (1996). Mining Sequential Patterns: Generalizations and Performance Improvements.",
+            "title": "Publication"
+        },
+        {
+            "location": "/not_so_faq/gsp/#downloads",
+            "text": "GeneralizedSequentialPattern_example.arff",
+            "title": "Downloads"
+        },
+        {
+            "location": "/not_so_faq/j48_numbers/",
+            "text": "J48 pruned tree\nnode-caps = yes\n| deg-malig = 1: recurrence-events (1.01/0.4)\n| deg-malig = 2: no-recurrence-events (26.2/8.0)\n| deg-malig = 3: recurrence-events (30.4/7.4)\nnode-caps = no: no-recurrence-events (228.39/53.4)\n\n\n\n\nThe \nfirst\n number is the total number of instances (weight of instances) reaching the leaf. The \nsecond\n number is the number (weight) of those instances that are misclassified.\n\n\nIf your data has \nmissing\n attribute values then you will end up with \nfractional\n instances at the leafs. When splitting on an attribute where some of the training instances have missing values, J48 will divide a training instance with a missing value for the split attribute up into fractional parts proportional to the frequencies of the observed non-missing values. This is discussed in the Witten & Frank Data Mining book as well as Ross Quinlan's original publications on C4.5.",
+            "title": " What do those numbers mean in a J48 tree?"
+        },
+        {
+            "location": "/faqs/different_versions/",
+            "text": "What are the principal release branches of Weka?\n\n\nRefer to \nHistory\n for a tabular overview of all Weka releases.\n\n\nSeveral branches are associated with the 1st, 2nd, 3rd, and \n4th\n edition of the book \nData Mining: Practical Machine Learning Tools and Techniques\n by \nIan H. Witten\n and \nEibe Frank\n, joined by \nMark Hall\n for the 3rd edition and \nChris Pal\n for the 4th edition.\n\n\nOnce created, non-development branches receive bug fixes, but no new features (classifiers, filters, etc.).\n\n\n\n\n\n\n\n\nVersion name\n\n\nMost recent base number\n\n\nAssociated with book edition\n\n\n\n\n\n\n\n\n\n\nBook 1st ed. version\n\n\n3.0.x\n\n\n1st edition\n\n\n\n\n\n\nOld GUI version\n\n\n3.2.x\n\n\nnone\n\n\n\n\n\n\nBook 2nd ed. version\n\n\n3.4.x\n\n\n2nd edition\n\n\n\n\n\n\nBook 3rd ed. version\n\n\n3.6.x\n\n\n3rd edition\n\n\n\n\n\n\nBook 4th ed. version\n\n\n3.8.x\n\n\n4th edition\n\n\n\n\n\n\nDevelopment version\n\n\n3.9.x\n\n\nnone\n\n\n\n\n\n\n\n\nFor \ncontributions\n, you should always develop against the developer version.",
+            "title": " different versions"
+        },
+        {
+            "location": "/faqs/different_versions/#what-are-the-principal-release-branches-of-weka",
+            "text": "Refer to  History  for a tabular overview of all Weka releases.  Several branches are associated with the 1st, 2nd, 3rd, and  4th  edition of the book  Data Mining: Practical Machine Learning Tools and Techniques  by  Ian H. Witten  and  Eibe Frank , joined by  Mark Hall  for the 3rd edition and  Chris Pal  for the 4th edition.  Once created, non-development branches receive bug fixes, but no new features (classifiers, filters, etc.).     Version name  Most recent base number  Associated with book edition      Book 1st ed. version  3.0.x  1st edition    Old GUI version  3.2.x  none    Book 2nd ed. version  3.4.x  2nd edition    Book 3rd ed. version  3.6.x  3rd edition    Book 4th ed. version  3.8.x  4th edition    Development version  3.9.x  none     For  contributions , you should always develop against the developer version.",
+            "title": "What are the principal release branches of Weka?"
+        },
+        {
+            "location": "/faqs/old_versions/",
+            "text": "Where can I get old versions of WEKA?\n\n\nIf you need a specific version of WEKA, e.g., due to some third-party tools, go \nWEKA's project page\n on \nSourceforge.net\n. In the \nFiles section\n you have access to all the releases ever made.",
+            "title": " old versions"
+        },
+        {
+            "location": "/faqs/old_versions/#where-can-i-get-old-versions-of-weka",
+            "text": "If you need a specific version of WEKA, e.g., due to some third-party tools, go  WEKA's project page  on  Sourceforge.net . In the  Files section  you have access to all the releases ever made.",
+            "title": "Where can I get old versions of WEKA?"
+        },
+        {
+            "location": "/faqs/latest_bugfixes/",
+            "text": "How do I get the latest bugfixes?\n\n\nThe article \nHow to get the latest bugfixes\n explains it in detail (it's basically either obtaining the source code from \nSubversion\n and compiling it yourself or getting a snapshot from the download section of the \nWEKA homepage\n).",
+            "title": " latest bugfixes"
+        },
+        {
+            "location": "/faqs/latest_bugfixes/#how-do-i-get-the-latest-bugfixes",
+            "text": "The article  How to get the latest bugfixes  explains it in detail (it's basically either obtaining the source code from  Subversion  and compiling it yourself or getting a snapshot from the download section of the  WEKA homepage ).",
+            "title": "How do I get the latest bugfixes?"
+        },
+        {
+            "location": "/faqs/contribution/",
+            "text": "How can I contribute to WEKA?\n\n\nInformation on how to contribute to WEKA can be found in the [[How are packages structured for the package management system?#Contributing|Contributing a package]] section of the [[How are packages structured for the package management system?]] article. The conditions for new classifiers (schemes in general) are that, firstly, they have to be published in the proceedings of a renowned conference (e.g., ICML) or as an article of respected journal (e.g., Machine Learning) and, secondly, that they outperform other standard schemes (e.g., J48/C4.5).\n\n\nBut please bear in mind, that we don't have a lot of man power, i.e., being the WEKA maintainer is \nNOT\n a full-time position.",
+            "title": " contribution"
+        },
+        {
+            "location": "/faqs/contribution/#how-can-i-contribute-to-weka",
+            "text": "Information on how to contribute to WEKA can be found in the [[How are packages structured for the package management system?#Contributing|Contributing a package]] section of the [[How are packages structured for the package management system?]] article. The conditions for new classifiers (schemes in general) are that, firstly, they have to be published in the proceedings of a renowned conference (e.g., ICML) or as an article of respected journal (e.g., Machine Learning) and, secondly, that they outperform other standard schemes (e.g., J48/C4.5).  But please bear in mind, that we don't have a lot of man power, i.e., being the WEKA maintainer is  NOT  a full-time position.",
+            "title": "How can I contribute to WEKA?"
+        }
+    ]
+}
