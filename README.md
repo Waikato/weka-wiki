@@ -4,6 +4,10 @@ Not really a wiki, but replacing some of the content that was hosted on
 weka.wikispaces.com before it shut down. Uses [mkdocs](http://www.mkdocs.org/) 
 to generate the content.
 
+The wiki can be found at this location:
+
+https://Waikato.github.io/weka-wiki/
+
 
 ## Installation
 
@@ -63,5 +67,13 @@ them as you like, it will automatically rebuild and refresh the browser.
 
 ```
 ./venv/bin/mkdocs build --clean && mkdocs serve
+```
+
+## Deploying
+
+You can deploy the current state to Github pages with the following command:
+
+```
+./venv/bin/mkdocs gh-deploy --clean
 ```
 
