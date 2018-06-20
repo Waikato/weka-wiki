@@ -8,6 +8,8 @@ The wiki can be found at this location:
 
 https://Waikato.github.io/weka-wiki/
 
+**Please note, this is still work in progress!**
+
 
 ## Installation
 

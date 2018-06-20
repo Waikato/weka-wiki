@@ -1,5 +1,7 @@
 <img style="float: right;" src="img/Waikato_coat_of_arms.jpg">
 
+**Please note, the migration from the old wiki in this new format is still work in progress!**
+
 # New to Weka?
 Have a look at the [Frequently Asked Questions](faq.md) (= FAQ), the [Troubleshooting](troubleshooting.md) article or search the [mailing list archives](mailing_list.md).
 Don't forget to check out the documentation on the [Weka homepage](http://www.cs.waikato.ac.nz/ml/weka/) and the
