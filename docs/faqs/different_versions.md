@@ -1,5 +1,3 @@
-# What are the principal release branches of Weka?
-
 Refer to [History](http://www.cs.waikato.ac.nz/ml/weka/index_history.html) for a tabular overview of all Weka releases.
 
 Several branches are associated with the 1st, 2nd, 3rd, and [4th](http://www.cs.waikato.ac.nz/~ml/weka/book.html 4th) edition of the book *Data Mining: Practical Machine Learning Tools and Techniques* by [Ian H. Witten](http://www.cs.waikato.ac.nz/~ihw) and [Eibe Frank](http://www.cs.waikato.ac.nz/~eibe), joined by [Mark Hall](http://www.cs.waikato.ac.nz/~mhall) for the 3rd edition and [Chris Pal](http://www.professeurs.polymtl.ca/christopher.pal/) for the 4th edition.

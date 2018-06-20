@@ -24,13 +24,14 @@ pages:
   # packages
   - ' Package manager': packages/manager.md
   - ' Unofficial packages': packages/unofficial.md
-  - ' Package structure': packages/structure.md
+  - ' How are packages structured for the package management system?': packages/structure.md
   # not so faq
-  - ' GeneralizedSequentialPatterns': not_so_faq/gsp.md
+  - ' Generalized Sequential Patterns': not_so_faq/gsp.md
   - ' What do those numbers mean in a J48 tree?': not_so_faq/j48_numbers.md
   # faq
-  - ' different versions': faqs/different_versions.md
-  - ' old versions': faqs/old_versions.md
-  - ' latest bugfixes': faqs/latest_bugfixes.md
-  - ' contribution': faqs/contribution.md
+  - ' What are the principal release branches of Weka?': faqs/different_versions.md
+  - ' Where can I get old versions of WEKA?': faqs/old_versions.md
+  - ' How do I get the latest bugfixes?': faqs/latest_bugfixes.md
+  - ' How can I contribute to WEKA?': faqs/contribution.md
+  - ' Weka package manager does not start' : faqs/package_manager_doesnt_start.md
 
