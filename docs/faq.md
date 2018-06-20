@@ -1,8 +1,8 @@
 # General
 
-* What are the principal release branches of Weka?
-* Where can I get old versions of WEKA?
-* How do I get the latest bugfixes?
+* [What are the principal release branches of Weka?](faqs/different_versions.md)
+* [Where can I get old versions of WEKA?](faqs/old_versions.md)
+* [How do I get the latest bugfixes?](faqs/latest_bugfixes.md)
 * Can I check my CLASSPATH from within WEKA?
 * Where is my home directory located?
 * Can I check how much memory is available for WEKA?
@@ -73,7 +73,7 @@
 * Serialization is nice, but what about generating actual Java code from WEKA classes?
 * How are packages structured for the package management system?
 * Pluggable evaluation metrics for classification/regression
-* How can I contribute to WEKA?
+* [How can I contribute to WEKA?](faqs/contribution.md)
 
 
 # Windows

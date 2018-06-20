@@ -14,10 +14,23 @@ pages:
     - 'Troubleshooting': troubleshooting.md
     - 'Learning resources': learning_resources.md
   - 'Packages': packages/index.md
+  - 'Mailing list': mailing_list.md
+  # unlisted pages
+  # general
+  - ' subversion': subversion.md
+  - ' get latest bugfixes': get_latest_bugfixes.md
+  - ' compiling weka': compiling_weka.md
+  - ' ant': ant.md
+  # packages
   - ' Package manager': packages/manager.md
   - ' Unofficial packages': packages/unofficial.md
   - ' Package structure': packages/structure.md
-  - 'Mailing list': mailing_list.md
+  # not so faq
   - ' GeneralizedSequentialPatterns': not_so_faq/gsp.md
   - ' What do those numbers mean in a J48 tree?': not_so_faq/j48_numbers.md
+  # faq
+  - ' different versions': faqs/different_versions.md
+  - ' old versions': faqs/old_versions.md
+  - ' latest bugfixes': faqs/latest_bugfixes.md
+  - ' contribution': faqs/contribution.md
 
