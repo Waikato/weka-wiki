@@ -187,8 +187,8 @@ Articles still to migrate
 * Tuning classifier parameters
 * ~~Unofficial packages for WEKA~~
 * ~~Unofficial packages for WEKA 3.7~~
-* Use Weka in your Java code
-* Use Weka in your Java code 2
+* ~~Use Weka in your Java code~~
+* ~~Use Weka in your Java code 2~~
 * Use Weka with the Microsoft .NET Framework
 * Using a new Java framework to create ARFF from JPA Entity
 * Using cluster algorithms
