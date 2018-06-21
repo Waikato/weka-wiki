@@ -10,7 +10,7 @@ The following sections explain how to use them in your own code. A link to an **
 A comprehensive source of information is the chapter *Using the API* of the Weka manual.
 
 # Instances 
-## ARFF File
+## Datasets
 The `DataSource` class is not limited to ARFF files. It can also read CSV files and other formats (basically all file formats that Weka can import via its converters).
 ```java
  import weka.core.converters.ConverterUtils.DataSource;
@@ -533,8 +533,8 @@ If neither the meta-classifier nor filter approach is suitable for your purposes
 Most machine learning schemes, like classifiers and clusterers, are susceptible to the ordering of the data. Using a different seed for randomizing the data will most likely produce a different result. For example, the Explorer, or a classifier/clusterer run from the command line, uses only a seeded `java.util.Random` number generator, whereas the `weka.core.Instances.getRandomNumberGenerator(int)` (which the [WekaDemo.java](files/WekaDemo.java) uses) also takes the data into account for seeding. Unless one runs 10-fold cross-validation 10 times and averages the results, one will most likely get different results.
 
 # See also
-* [[Weka Examples]] - pointer to collection of example classes
-* [[Databases]] - for more information about using databases in Weka (includes ODBC, e.g., for MS Access)
+* [Weka Examples](weka_examples.md) - pointer to collection of example classes
+* [Databases](databases.md) - for more information about using databases in Weka (includes ODBC, e.g., for MS Access)
 * [[weka_experiment_DatabaseUtils.props|weka/experiment/DatabaseUtils.props]] - the database setup file
 * [[Generating cross-validation folds (Java approach)]] - in case you want to run 10-fold cross-validation manually
 * [[Generating classifier evaluation output manually]] - if you want to generate some of the evaluation statistics output manually

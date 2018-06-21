@@ -161,7 +161,7 @@
     
         <ul>
         
-            <li><a class="toctree-l3" href="#arff-file">ARFF File</a></li>
+            <li><a class="toctree-l3" href="#datasets">Datasets</a></li>
         
             <li><a class="toctree-l3" href="#database">Database</a></li>
         
@@ -285,8 +285,8 @@
 <p>The following sections explain how to use them in your own code. A link to an <strong>example class</strong> can be found at the end of this page, under the <a href="#links">Links</a> section. The classifiers and filters always list their options in the Javadoc API (<a href="http://weka.sourceforge.net/doc.stable/">stable</a>, <a href="http://weka.sourceforge.net/doc.dev/">developer</a> version) specification.</p>
 <p>A comprehensive source of information is the chapter <em>Using the API</em> of the Weka manual.</p>
 <h1 id="instances">Instances</h1>
-<h2 id="arff-file">ARFF File</h2>
-<p>The <code>DataSource</code> class is not limited to ARFF files. It can also read CSV files and other formats (basically all file formats that Weka can import via its converters).</p>
+<h2 id="datasets">Datasets</h2>
+<p>The <code>DataSource</code> class is not limited to ARFF files. It can also read CSV files and other formats (basically all file formats that Weka can import via its converters; it uses the file extension to determine the associated loader).</p>
 <pre><code class="java"> import weka.core.converters.ConverterUtils.DataSource;
  ...
  DataSource source = new DataSource(&quot;/some/where/data.arff&quot;);
