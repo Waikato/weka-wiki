@@ -26,6 +26,16 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://github.com/Waikato/weka-wiki/using_the_api/</loc>
+     <lastmod>2018-06-21</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://github.com/Waikato/weka-wiki/extending_weka/</loc>
+     <lastmod>2018-06-21</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://github.com/Waikato/weka-wiki/packages/</loc>
      <lastmod>2018-06-21</lastmod>
      <changefreq>daily</changefreq>
@@ -52,6 +62,11 @@
     </url>
     <url>
      <loc>https://github.com/Waikato/weka-wiki/ant/</loc>
+     <lastmod>2018-06-21</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://github.com/Waikato/weka-wiki/snapshots/</loc>
      <lastmod>2018-06-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -102,6 +117,16 @@
     </url>
     <url>
      <loc>https://github.com/Waikato/weka-wiki/faqs/package_manager_doesnt_start/</loc>
+     <lastmod>2018-06-21</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://github.com/Waikato/weka-wiki/use_weka_in_your_java_code/</loc>
+     <lastmod>2018-06-21</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://github.com/Waikato/weka-wiki/weka_examples/</loc>
      <lastmod>2018-06-21</lastmod>
      <changefreq>daily</changefreq>
     </url>
