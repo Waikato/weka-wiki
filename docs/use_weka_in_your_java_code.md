@@ -10,8 +10,8 @@ The following sections explain how to use them in your own code. A link to an **
 A comprehensive source of information is the chapter *Using the API* of the Weka manual.
 
 # Instances 
-## ARFF File
-The `DataSource` class is not limited to ARFF files. It can also read CSV files and other formats (basically all file formats that Weka can import via its converters).
+## Datasets
+The `DataSource` class is not limited to ARFF files. It can also read CSV files and other formats (basically all file formats that Weka can import via its converters; it uses the file extension to determine the associated loader).
 ```java
  import weka.core.converters.ConverterUtils.DataSource;
  ...
