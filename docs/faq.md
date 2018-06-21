@@ -62,7 +62,6 @@
 
 * Where can I get WEKA's source code?
 * How do I compile WEKA?
-* What is CVS and what do I need to do to access it?
 * What is Subversion and what do I need to do to access it?
 * How do I use WEKA's classes in my own code?
 * How do I write a new classifier or filter?

@@ -3,7 +3,7 @@ Articles still to migrate
 * Adding attributes to a dataset
 * Adding tabs in the Explorer
 * Add weights to dataset
-* ANT
+* ~~ANT~~
 * Area under the curve
 * ARFF
 * ARFF (book version)
@@ -35,10 +35,10 @@ Articles still to migrate
 * CLASSPATH
 * CLASSPATH problems
 * Command redirection
-* Compiling Weka
-* Compiling Weka with gcj
-* Compiling Weka with gcj (book version)
-* Compiling Weka with gcj (developer version)
+* ~~Compiling Weka~~
+* ~~Compiling Weka with gcj~~
+* ~~Compiling Weka with gcj (book version)~~
+* ~~Compiling Weka with gcj (developer version)~~
 * Converting CSV to ARFF
 * CostMatrix
 * CostSensitiveClassifier
@@ -49,14 +49,13 @@ Articles still to migrate
 * Databases
 * Datasets
 * Discretizing datasets
-* discussion
 * Displaying results of cross-validation folds
 * Document classification
 * Does WEKA support multi-label classification_
-* Eclipse
-* Eclipse 3.4.x
-* Eclipse 3.4.x (Subversion)
-* Eclipse 3.4.x (weka-src.jar)
+* ~~Eclipse~~
+* ~~Eclipse 3.4.x~~
+* ~~Eclipse 3.4.x (Subversion)~~
+* ~~Eclipse 3.4.x (weka-src.jar)~~
 * Ensemble Selection
 * Explorer error visualization plugins
 * Explorer graph visualization plugins
@@ -65,12 +64,11 @@ Articles still to migrate
 * Explorer visualization plugins
 * Exporting Charts from the Knowledge Flow
 * Extensions for Weka's main GUI
-* FAQ
+* ~~FAQ~~
 * Feature extraction from images
-* files
 * FilteredClassifierUpdateable
-* Frequently Asked Questions
-* GeneralizedSequentialPatterns
+* ~~Frequently Asked Questions~~ -- **links need updating, though**
+* ~~GeneralizedSequentialPatterns~~
 * Generating and saving a precision-recall curve
 * Generating classifier evaluation output manually
 * Generating cross-validation folds
@@ -83,8 +81,8 @@ Articles still to migrate
 * GenericObjectEditor (developer version)
 * GPGPU
 * GUIChooser starts but not Experimenter or Explorer
-* home
-* How are packages structured for the package management system_
+* ~~home~~
+* ~~How are packages structured for the package management system_~~
 * How can I contribute to WEKA_
 * How can I perform multi-instance learning in WEKA_
 * How can I track instances in WEKA_
@@ -109,7 +107,7 @@ Articles still to migrate
 * How do I use ID attributes_
 * How do I use libsvm in WEKA_
 * How do I use the associator GeneralizedSequentialPatterns_
-* How do I use the package manager_
+* ~~How do I use the package manager_~~
 * How do I use WEKA from command line_
 * How do I use WEKA's classes in my own code_
 * How do I write a new classifier or filter_
@@ -125,7 +123,7 @@ Articles still to migrate
 * JVM
 * KnowledgeFlow toolbars are empty
 * Learning curves
-* Learning Resources
+* ~~Learning Resources~~
 * LibSVM
 * Load an XML BIF file
 * Making predictions
@@ -135,17 +133,17 @@ Articles still to migrate
 * MetaCost
 * MS SQL Server 2000 (Desktop Engine)
 * Multi-instance classification
-* NetBeans
-* Netbeans 6.0
-* Netbeans 6.0 (Subversion)
-* Netbeans 6.0 (weka-src.jar)
-* Not so FAQ
-* Not So Frequently Asked Questions
+* ~~NetBeans~~
+* ~~Netbeans 6.0~~
+* ~~Netbeans 6.0 (Subversion)~~
+* ~~Netbeans 6.0 (weka-src.jar)~~
+* ~~Not so FAQ~~
+* ~~Not So Frequently Asked Questions~~
 * Optimizing parameters
 * OSX Mountain Lion - Weka x-y-z is damaged and can't be installed. You should eject the disk image
 * OutOfMemory
 * OutOfMemoryException
-* Packages
+* ~~Packages~~
 * Paper References
 * Performing attribute selection
 * Piqle
@@ -153,7 +151,7 @@ Articles still to migrate
 * Plotting multiple ROC curves
 * Pluggable evaluation metrics
 * Primer
-* Programmatic Use
+* ~~Programmatic Use~~
 * PROMPT
 * Properties file
 * Props file
@@ -179,16 +177,16 @@ Articles still to migrate
 * StackOverflowError
 * Stemmers
 * Stop word filtering and attributes
-* Subversion
+* ~~Subversion~~
 * Text categorization with Weka
 * Text classification with Weka
 * The snowball stemmers don't work, what am I doing wrong_
 * Transferring an ARFF file into a database
-* Troubleshooting
+* ~~Troubleshooting~~ **needs linking to articles, though**
 * Trying to add JDBC driver... - Error, not in CLASSPATH_
 * Tuning classifier parameters
-* Unofficial packages for WEKA
-* Unofficial packages for WEKA 3.7
+* ~~Unofficial packages for WEKA~~
+* ~~Unofficial packages for WEKA 3.7~~
 * Use Weka in your Java code
 * Use Weka in your Java code 2
 * Use Weka with the Microsoft .NET Framework
@@ -224,15 +222,15 @@ Articles still to migrate
 * weka_gui_SimpleCLI.props
 * weka_gui_treevisualizer_TreeVisualizes.props
 * weka_gui_visualize_Visualize.props
-* Weka Mailing List
+* ~~Weka Mailing List~~
 * Weka on a memory stick
-* Weka package manager does not start
-* What do those numbers mean in a J48 tree_
-* What is CVS and what do I need to do to access it_
+* ~~Weka package manager does not start~~
+* ~~What do those numbers mean in a J48 tree_~~
+* ~~What is CVS and what do I need to do to access it_~~
 * What is Subversion and what do I need to do to access it_
-* What's the difference between book, stable-3.6 and developer version_
+* ~~What's the difference between book, stable-3.6 and developer version_~~
 * Where can I find information regarding ROC curves_
-* Where can I get old versions of WEKA_
+* ~~Where can I get old versions of WEKA_~~
 * Where can I get WEKA's source code_
 * Where does WEKA look for .props files_
 * Where is my home directory located_
@@ -241,11 +239,11 @@ Articles still to migrate
 * Windows Databases
 * Writing your own Classifier
 * Writing your own Classifier (post 3.5.2)
-* Writing your own Classifier (up to 3.5.2)
+* ~~Writing your own Classifier (up to 3.5.2)~~
 * Writing your own Filter
 * Writing your own Filter (default)
 * Writing your own Filter (post 3.5.3)
-* Writing your own Filter (up to 3.5.3)
+* ~~Writing your own Filter (up to 3.5.3)~~
 * XML
 * XRFF
 * ZeroR
