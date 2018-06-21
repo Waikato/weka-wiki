@@ -170,9 +170,8 @@ Articles still to migrate
 * Serialization
 * Serialization is nice, but what about generating actual Java code from WEKA classes_
 * Single quotes in labels of ARFF files
-* Snapshot
-* Snapshots
-* space.menu
+* ~~Snapshot~~
+* ~~Snapshots~~
 * Spaces in labels of ARFF files
 * StackOverflowError
 * Stemmers
@@ -205,7 +204,7 @@ Articles still to migrate
 * weka_core_Capabilities.props
 * weka_core_logging_Logging.props
 * Weka download problems
-* Weka Examples
+* ~~Weka Examples~~
 * weka_experiment_DatabaseUtils.props
 * Weka For Newbies
 * weka_gui_beans_Beans.props
