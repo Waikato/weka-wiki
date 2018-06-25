@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title> Weka Examples - Weka Wiki</title>
+  <title> Generating cross-validation folds (Java approach) - Weka Wiki</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
@@ -17,9 +17,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = " Weka Examples";
-    var mkdocs_page_input_path = "weka_examples.md";
-    var mkdocs_page_url = "/weka_examples/";
+    var mkdocs_page_name = " Generating cross-validation folds (Java approach)";
+    var mkdocs_page_input_path = "generating_cv_folds_java.md";
+    var mkdocs_page_url = "/generating_cv_folds_java/";
   </script>
   
   <script src="../js/jquery-2.1.1.min.js"></script>
@@ -157,23 +157,44 @@
 		
 	    </li>
           
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
             <li class="toctree-l1 current">
 		
     <ul class="subnav">
             
+    <li class="toctree-l2"><a href="#randomize-the-data">Randomize the data</a></li>
+    
+
+    <li class="toctree-l2"><a href="#generate-the-folds">Generate the folds</a></li>
+    
+
+    <li class="toctree-l2"><a href="#single-run">Single run</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#multiple-runs">Multiple runs</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l2"><a href="#see-also">See also</a></li>
+    
+
+    <li class="toctree-l2"><a href="#downloads">Downloads</a></li>
+    
+
     </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-	    </li>
-          
-            <li class="toctree-l1">
-		
-	    </li>
-          
-            <li class="toctree-l1">
-		
 	    </li>
           
             <li class="toctree-l1">
@@ -202,7 +223,7 @@
     
       
     
-    <li> Weka Examples</li>
+    <li> Generating cross-validation folds (Java approach)</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -212,22 +233,69 @@
           <div role="main">
             <div class="section">
               
-                <p>The <em>Weka Examples</em> collection is a comprehensive collection of examples for the different versions of Weka in the form of an <a href="../ant/">ANT</a> project. You can access these examples as follows:</p>
+                <p>This article describes how to generate train/test splits for <a href="http://en.wikipedia.org/wiki/Cross-validation">cross-validation</a> using the Weka API directly. </p>
+<p>The following variables are given:</p>
+<pre><code class="java"> Instances data =  ...;   // contains the full dataset we wann create train/test sets from
+ int seed = ...;          // the seed for randomizing the data
+ int folds = ...;         // the number of folds to generate, &gt;=2
+</code></pre>
+
+<h1 id="randomize-the-data">Randomize the data</h1>
+<p>First, randomize your data:</p>
+<pre><code class="java"> Random rand = new Random(seed);   // create seeded number generator
+ randData = new Instances(data);   // create copy of original data
+ randData.randomize(rand);         // randomize data with number generator
+</code></pre>
+
+<p>In case your data has a nominal class and you wanna perform stratified cross-validation:</p>
+<pre><code class="java"> randData.stratify(folds);
+</code></pre>
+
+<h1 id="generate-the-folds">Generate the folds</h1>
+<h1 id="single-run">Single run</h1>
+<p>Next thing that we have to do is creating the train and the test set:</p>
+<pre><code class="java"> for (int n = 0; n &lt; folds; n++) {
+   Instances train = randData.trainCV(folds, n, rand);
+   Instances test = randData.testCV(folds, n);
+
+   // further processing, classification, etc.
+   ...
+ }
+</code></pre>
+
+<p><strong>Note:</strong></p>
 <ul>
-<li>through <a href="../snapshots/">snapshots</a> or releases (they contain a separate ZIP file with the <a href="../ant/">ANT</a> project)</li>
-<li>
-<p><a href="../subversion/">subversion</a></p>
-<ul>
-<li>
-<p>stable-3.8 version (3.8.x): </p>
-<p><a href="https://svn.cms.waikato.ac.nz/svn/weka/branches/stable-3-8/wekaexamples/">https://svn.cms.waikato.ac.nz/svn/weka/branches/stable-3-8/wekaexamples/</a></p>
-</li>
-<li>
-<p>developer version (3.9.x): </p>
-<p><a href="https://svn.cms.waikato.ac.nz/svn/weka/trunk/wekaexamples/">https://svn.cms.waikato.ac.nz/svn/weka/trunk/wekaexamples/</a></p>
-</li>
+<li>the above code is used by the <code>weka.filters.supervised.instance.StratifiedRemoveFolds</code> filter</li>
+<li>the <code>weka.classifiers.Evaluation</code> class and the Explorer/Experimenter would use this method for obtaining the train set:
+[[code format="java"]]
+ Instances train = randData.trainCV(folds, n, rand);
+[[code]]</li>
 </ul>
-</li>
+<h2 id="multiple-runs">Multiple runs</h2>
+<p>The example above only performs one run of a cross-validation. In case you want to run 10 runs of 10-fold cross-validation, use the following loop:</p>
+<pre><code class="java"> Instances data = ...;  // our dataset again, obtained from somewhere
+ int runs = 10;
+ for (int i = 0; i &lt; runs; i++) {
+   seed = i+1;  // every run gets a new, but defined seed value
+
+   // see: randomize the data
+   ...
+
+   // see: generate the folds
+   ...
+ }
+</code></pre>
+
+<h1 id="see-also">See also</h1>
+<ul>
+<li><a href="../use_weka_in_your_java_code/">Use Weka in your Java code</a> - for general use of the Weka API</li>
+</ul>
+<h1 id="downloads">Downloads</h1>
+<ul>
+<li><a href="../files/CrossValidationSingleRun.java">CrossValidationSingleRun.java</a> (<a href="https://svn.cms.waikato.ac.nz/svn/weka/branches/stable-3-8/wekaexamples/src/main/java/wekaexamples/classifiers/CrossValidationSingleRun.java">stable</a>, <a href="https://svn.cms.waikato.ac.nz/svn/weka/trunk/wekaexamples/src/main/java/wekaexamples/classifiers/CrossValidationSingleRun.java">developer</a>) - simulates a single run of 10-fold cross-validation</li>
+<li><a href="../files/CrossValidationSingleRunVariant.java">CrossValidationSingleRunVariant.java</a> (<a href="https://svn.cms.waikato.ac.nz/svn/weka/branches/stable-3-8/wekaexamples/src/main/java/wekaexamples/classifiers/CrossValidationSingleRunVariant.java">stable</a>, <a href="https://svn.cms.waikato.ac.nz/svn/weka/trunk/wekaexamples/src/main/java/wekaexamples/classifiers/CrossValidationSingleRunVariant.java">developer</a>) - simulates a single run of 10-fold cross-validation, but outputs the confusion matrices for each single train/test pair as well.</li>
+<li><a href="../files/CrossValidationMultipleRuns.java">CrossValidationMultipleRuns.java</a> (<a href="https://svn.cms.waikato.ac.nz/svn/weka/branches/stable-3-8/wekaexamples/src/main/java/wekaexamples/classifiers/CrossValidationMultipleRuns.java">stable</a>, <a href="https://svn.cms.waikato.ac.nz/svn/weka/trunk/wekaexamples/src/main/java/wekaexamples/classifiers/CrossValidationMultipleRuns.java">developer</a>) - simulates 10 runs of 10-fold cross-validation</li>
+<li><a href="../files/CrossValidationAddPrediction.java">CrossValidationAddPrediction.java</a> (<a href="https://svn.cms.waikato.ac.nz/svn/weka/branches/stable-3-8/wekaexamples/src/main/java/wekaexamples/classifiers/CrossValidationAddPrediction.java">stable</a>, <a href="https://svn.cms.waikato.ac.nz/svn/weka/trunk/wekaexamples/src/main/java/wekaexamples/classifiers/CrossValidationAddPrediction.java">developer</a>) - simulates a single run of 10-fold cross-validation, but also adds the classification/distribution/error flag to the test data (uses the <code>AddClassification</code> filter)</li>
 </ul>
               
             </div>
@@ -239,7 +307,7 @@
         <a href="../generating_cv_folds/" class="btn btn-neutral float-right" title=" Generating cross-validation folds">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../use_weka_in_your_java_code/" class="btn btn-neutral" title=" Use Weka in your Java code"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../generating_cv_folds_filter/" class="btn btn-neutral" title=" Generating cross-validation folds (Filter approach)"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -265,7 +333,7 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../use_weka_in_your_java_code/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../generating_cv_folds_filter/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
         <span style="margin-left: 15px"><a href="../generating_cv_folds/" style="color: #fcfcfc">Next &raquo;</a></span>

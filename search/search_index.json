@@ -564,6 +564,61 @@
             "location": "/weka_examples/",
             "text": "The \nWeka Examples\n collection is a comprehensive collection of examples for the different versions of Weka in the form of an \nANT\n project. You can access these examples as follows:\n\n\n\n\nthrough \nsnapshots\n or releases (they contain a separate ZIP file with the \nANT\n project)\n\n\n\n\nsubversion\n\n\n\n\n\n\nstable-3.8 version (3.8.x): \n\n\nhttps://svn.cms.waikato.ac.nz/svn/weka/branches/stable-3-8/wekaexamples/\n\n\n\n\n\n\ndeveloper version (3.9.x): \n\n\nhttps://svn.cms.waikato.ac.nz/svn/weka/trunk/wekaexamples/",
             "title": " Weka Examples"
+        },
+        {
+            "location": "/generating_cv_folds/",
+            "text": "You have two choices of generating cross-validation folds:\n\n\n\n\nFilter approach\n - uses a \nbash\n script to generate the train/test pairs beforehand\n\n\nJava approach\n - to be used from within your own Java code, creates train/test pairs on the fly",
+            "title": " Generating cross-validation folds"
+        },
+        {
+            "location": "/generating_cv_folds_filter/",
+            "text": "The filter \nRemoveFolds\n (package \nweka.filters.unsupervised.instance\n) can be used to generate the train/test splits used in cross-validation (for stratified folds, use \nweka.filters.supervised.instance.StratifiedRemoveFolds\n). The filter has to be used twice for each train/test split, first to generate the train set and then to obtain the test set.\n\n\nSince this is rather cumbersome by hand, one can also put this into a \nbash\n script:\n\n\n #!/bin/bash\n #\n # expects the weka.jar as first parameter and the datasets to work on as \n # second parameter.\n #\n # FracPete, 2007-04-10\n\n if [ ! $# -eq 2 ]\n then\n   echo\n   echo \"usage: folds.sh <weka.jar> <dataset>\"\n   echo\n   exit 1\n fi\n\n JAR=$1\n DATASET=$2\n FOLDS=10\n FILTER=weka.filters.unsupervised.instance.RemoveFolds\n SEED=1\n\n for ((i = 1; i <= $FOLDS; i++))\n do\n   echo \"Generating pair $i/$FOLDS...\"\n\n   OUTFILE=`echo $DATASET | sed s/\"\\.arff\"//g`\n   # train set\n   java -cp $JAR $FILTER -V -N $FOLDS -F $i -S $SEED -i $DATASET -o \"$OUTFILE-train-$i-of-$FOLDS.arff\"\n   # test set\n   java -cp $JAR $FILTER    -N $FOLDS -F $i -S $SEED -i $DATASET -o \"$OUTFILE-test-$i-of-$FOLDS.arff\"\n done\n\n\n\n\nThe script expects two parameters:\n\n\n\n\nthe \nweka.jar\n (or the path to the Weka classes)\n\n\nthe dataset to generate the train/test pairs from \n\n\n\n\nExample:\n\n\n ./folds.sh /some/where/weka.jar /some/where/else/dataset.arff\n\n\n\n\nThis example will create the train/test splits for a 10-fold cross-validation at the same location as the original dataset, i.e., in the directory \n/some/where/else/\n.\n\n\nDownloads\n\n\n\n\nfolds.sh",
+            "title": " Generating cross-validation folds (Filter approach)"
+        },
+        {
+            "location": "/generating_cv_folds_filter/#downloads",
+            "text": "folds.sh",
+            "title": "Downloads"
+        },
+        {
+            "location": "/generating_cv_folds_java/",
+            "text": "This article describes how to generate train/test splits for \ncross-validation\n using the Weka API directly. \n\n\nThe following variables are given:\n\n\n Instances data =  ...;   // contains the full dataset we wann create train/test sets from\n int seed = ...;          // the seed for randomizing the data\n int folds = ...;         // the number of folds to generate, >=2\n\n\n\n\nRandomize the data\n\n\nFirst, randomize your data:\n\n\n Random rand = new Random(seed);   // create seeded number generator\n randData = new Instances(data);   // create copy of original data\n randData.randomize(rand);         // randomize data with number generator\n\n\n\n\nIn case your data has a nominal class and you wanna perform stratified cross-validation:\n\n\n randData.stratify(folds);\n\n\n\n\nGenerate the folds\n\n\nSingle run\n\n\nNext thing that we have to do is creating the train and the test set:\n\n\n for (int n = 0; n < folds; n++) {\n   Instances train = randData.trainCV(folds, n, rand);\n   Instances test = randData.testCV(folds, n);\n\n   // further processing, classification, etc.\n   ...\n }\n\n\n\n\nNote:\n\n\n\n\nthe above code is used by the \nweka.filters.supervised.instance.StratifiedRemoveFolds\n filter\n\n\nthe \nweka.classifiers.Evaluation\n class and the Explorer/Experimenter would use this method for obtaining the train set:\n[[code format=\"java\"]]\n Instances train = randData.trainCV(folds, n, rand);\n[[code]]\n\n\n\n\nMultiple runs\n\n\nThe example above only performs one run of a cross-validation. In case you want to run 10 runs of 10-fold cross-validation, use the following loop:\n\n\n Instances data = ...;  // our dataset again, obtained from somewhere\n int runs = 10;\n for (int i = 0; i < runs; i++) {\n   seed = i+1;  // every run gets a new, but defined seed value\n\n   // see: randomize the data\n   ...\n\n   // see: generate the folds\n   ...\n }\n\n\n\n\nSee also\n\n\n\n\nUse Weka in your Java code\n - for general use of the Weka API\n\n\n\n\nDownloads\n\n\n\n\nCrossValidationSingleRun.java\n (\nstable\n, \ndeveloper\n) - simulates a single run of 10-fold cross-validation\n\n\nCrossValidationSingleRunVariant.java\n (\nstable\n, \ndeveloper\n) - simulates a single run of 10-fold cross-validation, but outputs the confusion matrices for each single train/test pair as well.\n\n\nCrossValidationMultipleRuns.java\n (\nstable\n, \ndeveloper\n) - simulates 10 runs of 10-fold cross-validation\n\n\nCrossValidationAddPrediction.java\n (\nstable\n, \ndeveloper\n) - simulates a single run of 10-fold cross-validation, but also adds the classification/distribution/error flag to the test data (uses the \nAddClassification\n filter)",
+            "title": " Generating cross-validation folds (Java approach)"
+        },
+        {
+            "location": "/generating_cv_folds_java/#randomize-the-data",
+            "text": "First, randomize your data:   Random rand = new Random(seed);   // create seeded number generator\n randData = new Instances(data);   // create copy of original data\n randData.randomize(rand);         // randomize data with number generator  In case your data has a nominal class and you wanna perform stratified cross-validation:   randData.stratify(folds);",
+            "title": "Randomize the data"
+        },
+        {
+            "location": "/generating_cv_folds_java/#generate-the-folds",
+            "text": "",
+            "title": "Generate the folds"
+        },
+        {
+            "location": "/generating_cv_folds_java/#single-run",
+            "text": "Next thing that we have to do is creating the train and the test set:   for (int n = 0; n < folds; n++) {\n   Instances train = randData.trainCV(folds, n, rand);\n   Instances test = randData.testCV(folds, n);\n\n   // further processing, classification, etc.\n   ...\n }  Note:   the above code is used by the  weka.filters.supervised.instance.StratifiedRemoveFolds  filter  the  weka.classifiers.Evaluation  class and the Explorer/Experimenter would use this method for obtaining the train set:\n[[code format=\"java\"]]\n Instances train = randData.trainCV(folds, n, rand);\n[[code]]",
+            "title": "Single run"
+        },
+        {
+            "location": "/generating_cv_folds_java/#multiple-runs",
+            "text": "The example above only performs one run of a cross-validation. In case you want to run 10 runs of 10-fold cross-validation, use the following loop:   Instances data = ...;  // our dataset again, obtained from somewhere\n int runs = 10;\n for (int i = 0; i < runs; i++) {\n   seed = i+1;  // every run gets a new, but defined seed value\n\n   // see: randomize the data\n   ...\n\n   // see: generate the folds\n   ...\n }",
+            "title": "Multiple runs"
+        },
+        {
+            "location": "/generating_cv_folds_java/#see-also",
+            "text": "Use Weka in your Java code  - for general use of the Weka API",
+            "title": "See also"
+        },
+        {
+            "location": "/generating_cv_folds_java/#downloads",
+            "text": "CrossValidationSingleRun.java  ( stable ,  developer ) - simulates a single run of 10-fold cross-validation  CrossValidationSingleRunVariant.java  ( stable ,  developer ) - simulates a single run of 10-fold cross-validation, but outputs the confusion matrices for each single train/test pair as well.  CrossValidationMultipleRuns.java  ( stable ,  developer ) - simulates 10 runs of 10-fold cross-validation  CrossValidationAddPrediction.java  ( stable ,  developer ) - simulates a single run of 10-fold cross-validation, but also adds the classification/distribution/error flag to the test data (uses the  AddClassification  filter)",
+            "title": "Downloads"
+        },
+        {
+            "location": "/generating_cv_folds/",
+            "text": "You have two choices of generating cross-validation folds:\n\n\n\n\nFilter approach\n - uses a \nbash\n script to generate the train/test pairs beforehand\n\n\nJava approach\n - to be used from within your own Java code, creates train/test pairs on the fly",
+            "title": " Generating cross-validation folds"
         }
     ]
 }
