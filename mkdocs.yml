@@ -40,5 +40,9 @@ pages:
   # using the API
   - ' Use Weka in your Java code': use_weka_in_your_java_code.md
   - ' Weka Examples': weka_examples.md
+  - ' Generating cross-validation folds': generating_cv_folds.md
+  - ' Generating cross-validation folds (Filter approach)': generating_cv_folds_filter.md
+  - ' Generating cross-validation folds (Java approach)': generating_cv_folds_java.md
+  - ' Generating cross-validation folds': generating_cv_folds.md
   # extending Weka
 
