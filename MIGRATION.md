@@ -71,9 +71,9 @@ Articles still to migrate
 * ~~GeneralizedSequentialPatterns~~
 * Generating and saving a precision-recall curve
 * Generating classifier evaluation output manually
-* Generating cross-validation folds
-* Generating cross-validation folds (Filter approach)
-* Generating cross-validation folds (Java approach)
+* ~~Generating cross-validation folds~~
+* ~~Generating cross-validation folds (Filter approach)~~
+* ~~Generating cross-validation folds (Java approach)~~
 * Generating ROC curve
 * Generating source code from Weka classes
 * GenericObjectEditor
