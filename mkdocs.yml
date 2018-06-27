@@ -54,5 +54,6 @@ pages:
   - ' Creating an ARFF file': creating_arff_file.md
   - ' Creating Instances on-the-fly': creating_instances.md
   - ' Binarize Attribute': binarize_attribute.md
+  - ' ARFF files from Text Collections': arff_from_text_collections.md
   # extending Weka
 

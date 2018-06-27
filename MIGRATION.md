@@ -9,7 +9,7 @@ Articles still to migrate
 * ~~ARFF (book version)~~
 * ~~ARFF (developer version)~~
 * ~~ARFF file doesn't load~~
-* ARFF files from Text Collections
+* ~~ARFF files from Text Collections~~
 * ~~ARFF (stable version)~~
 * ~~ARFF Syntax Highlighting~~
 * AUC
