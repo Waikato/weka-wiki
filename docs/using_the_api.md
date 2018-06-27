@@ -6,4 +6,5 @@ Several articles describe certain aspects of using the Weka API:
 * [Creating an ARFF file](creating_arff_file.md)
 * [Binarize Attribute](binarize_attribute.md)
 * [ARFF files from Text Collections](arff_from_text_collections.md)
+* [Adding attributes to a dataset](adding_attributes_to_dataset.md)
 
