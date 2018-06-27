@@ -8,7 +8,7 @@ Articles still to migrate
 * ARFF
 * ARFF (book version)
 * ARFF (developer version)
-* ARFF file doesn't load
+* ~~ARFF file doesn't load~~
 * ARFF files from Text Collections
 * ARFF (stable version)
 * ARFF Syntax Highlighting
