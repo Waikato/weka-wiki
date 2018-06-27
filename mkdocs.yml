@@ -37,6 +37,7 @@ pages:
   - ' How do I get the latest bugfixes?': faqs/latest_bugfixes.md
   - ' How can I contribute to WEKA?': faqs/contribution.md
   - ' Weka package manager does not start' : faqs/package_manager_doesnt_start.md
+  - ' ARFF file does not load' : faqs/arff_does_not_load.md
   # using the API
   - ' Use Weka in your Java code': use_weka_in_your_java_code.md
   - ' Weka Examples': weka_examples.md

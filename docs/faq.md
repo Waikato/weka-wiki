@@ -86,7 +86,7 @@
 # Troubleshooting
 
 * I have Weka download problems - what's going wrong?
-* My ARFF file doesn't load - why?
+* [My ARFF file doesn't load - why?](faqs/arff_does_not_load.md)
 * What does nominal value not declared in header, read Token[X], line Y mean?
 * How do I get rid of this OutOfMemoryException?
 * How do I deal with a StackOverflowError?
