@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title> Maven - Weka Wiki</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = " Maven";
+    var mkdocs_page_input_path = "maven.md";
+    var mkdocs_page_url = "/maven/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Weka Wiki</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Resources</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../faq/">FAQ</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../not_so_faq/">Not so FAQ</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../troubleshooting/">Troubleshooting</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../learning_resources/">Learning resources</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../using_the_api/">Using the API</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../extending_weka/">Extending Weka</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../arff/">ARFF Format</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../packages/">Packages</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../mailing_list/">Mailing list</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#so-why-another-build-tool">So why another build tool?</a></li>
+    
+
+    <li class="toctree-l2"><a href="#compiling">Compiling</a></li>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Weka Wiki</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li> Maven</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p><a href="https://maven.apache.org/">Maven</a> is another build tool. But unlike <a href="../ant/">Ant</a>, it is a more high-level tool. Though its configuration file, <a href="https://maven.apache.org/pom.html">pom.xml</a> is written in XML as well, Maven uses a different approach to the build process. In Ant, you tell it where to find Java classes for compilation, what libraries to compile against, where to put the compiled ones and then how to combine them into a jar. With Maven, you only specify dependent libraries, a compile and a jar plugin and maybe tweak the options a bit. For this to work, Maven enforces a strict <a href="https://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html">directory structure</a> (though you can tweak that, if you need to).</p>
+<h1 id="so-why-another-build-tool">So why another build tool?</h1>
+<p>Whereas Ant scripts quite often create a <em>fat jar</em>, i.e., a jar that contains not only the project's code, but also the contain of libraries the code was compiled against. Handy if you only want to have a single jar. However, this is a nightmare, if you need to update a single library, but all you have is a single, enormous jar. Maven handles <a href="https://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html">dependencies automatically</a>, relying on libraries (they call them artifacts) to be publicly available, e.g., on <a href="http://search.maven.org/">Maven Central</a>. It allows you to use newer versions of libraries than defined by the dependent libraries (e.g., critical bug fixes), without having to modify any jars manually. Though Maven can also generate <em>far jar</em> files, it is not considered good practice, as it defeats Maven's automatic version resolution.</p>
+<p>In order to make Weka, and most of its packages, available to a wider audience (e.g., other software developers), we also publish on Maven Central.</p>
+<h1 id="compiling">Compiling</h1>
+<p>For compiling Weka, you would issue a command like this (in the same directory as <code>pom.xml</code>):</p>
+<pre><code class="bash">mvn clean install
+</code></pre>
+
+<p>If you don't want the tests to run, use this:</p>
+<pre><code class="bash">mvn clean install -DskipTests=true
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../snapshots/" class="btn btn-neutral float-right" title=" Snapsnots">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../ant/" class="btn btn-neutral" title=" Ant"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../ant/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../snapshots/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/require.js"></script>
+      <script src="../search/search.js"></script>
+
+</body>
+</html>
