@@ -45,6 +45,7 @@ pages:
   - ' ARFF file does not load' : faqs/arff_does_not_load.md
   # just using weka
   - ' Command redirection': command_redirection.md
+  - ' Area under the curve': auc.md
   # using the API
   - ' Use Weka in your Java code': use_weka_in_your_java_code.md
   - ' Weka Examples': weka_examples.md

@@ -4,7 +4,7 @@ Articles still to migrate
 * Adding tabs in the Explorer
 * Add weights to dataset
 * ~~ANT~~
-* Area under the curve
+* ~~Area under the curve~~
 * ~~ARFF~~
 * ~~ARFF (book version)~~
 * ~~ARFF (developer version)~~
@@ -12,7 +12,7 @@ Articles still to migrate
 * ~~ARFF files from Text Collections~~
 * ~~ARFF (stable version)~~
 * ~~ARFF Syntax Highlighting~~
-* AUC
+* ~~AUC~~
 * ~~Batch filtering~~
 * ~~Binarize Attribute~~
 * Can I change the colors (background, axes, etc.) of the plots in WEKA_
