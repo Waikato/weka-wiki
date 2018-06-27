@@ -43,8 +43,8 @@ Articles still to migrate
 * CostMatrix
 * CostSensitiveClassifier
 * Couldn't read from database - unknown data type
-* Creating an ARFF file
-* Creating Instances on-the-fly
+* ~~Creating an ARFF file~~
+* ~~Creating Instances on-the-fly~~
 * CSV file conversion
 * Databases
 * Datasets

@@ -29,6 +29,8 @@ pages:
   - ' ARFF (stable version)': arff_stable.md
   - ' ARFF (developer version)': arff_developer.md
   - ' ARFF Syntax Highlighting': arff_syntax.md
+  - ' Creating an ARFF file': creating_arff_file.md
+  - ' Creating Instances on-the-fly': creating_instances.md
   # packages
   - ' Package manager': packages/manager.md
   - ' Unofficial packages': packages/unofficial.md

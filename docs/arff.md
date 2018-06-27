@@ -7,7 +7,7 @@ A description of the ARFF format can be found in the following articles:
 # Creating an ARFF file
 How to create an ARFF file on the fly, i.e., inside Java, you can find here:
 
-* [Creating an ARFF file](creating_an_arff_file.md)
+* [Creating an ARFF file](creating_arff_file.md)
 
 # See also
 * [ARFF Syntax Highlighting](arff_syntax.md) for various editors
