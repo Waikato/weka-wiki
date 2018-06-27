@@ -15,6 +15,7 @@ pages:
     - 'Learning resources': learning_resources.md
     - 'Using the API': using_the_api.md
     - 'Extending Weka': extending_weka.md
+    - 'ARFF Format': arff.md
   - 'Packages': packages/index.md
   - 'Mailing list': mailing_list.md
   # unlisted pages
@@ -25,6 +26,9 @@ pages:
   - ' Ant': ant.md
   - ' Maven': maven.md
   - ' Snapsnots': snapshots.md
+  - ' ARFF (stable version)': arff_stable.md
+  - ' ARFF (developer version)': arff_developer.md
+  - ' ARFF Syntax Highlighting': arff_syntax.md
   # packages
   - ' Package manager': packages/manager.md
   - ' Unofficial packages': packages/unofficial.md
