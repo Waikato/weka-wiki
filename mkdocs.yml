@@ -23,6 +23,7 @@ pages:
   - ' Get latest Bugfixes': get_latest_bugfixes.md
   - ' Compiling Weka': compiling_weka.md
   - ' Ant': ant.md
+  - ' Maven': maven.md
   - ' Snapsnots': snapshots.md
   # packages
   - ' Package manager': packages/manager.md
