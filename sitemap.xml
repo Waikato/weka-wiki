@@ -151,6 +151,21 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://github.com/Waikato/weka-wiki/command_redirection/</loc>
+     <lastmod>2018-06-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://github.com/Waikato/weka-wiki/auc/</loc>
+     <lastmod>2018-06-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://github.com/Waikato/weka-wiki/batch_filtering/</loc>
+     <lastmod>2018-06-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://github.com/Waikato/weka-wiki/use_weka_in_your_java_code/</loc>
      <lastmod>2018-06-27</lastmod>
      <changefreq>daily</changefreq>

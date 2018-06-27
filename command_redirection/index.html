@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title> Subversion - Weka Wiki</title>
+  <title> Command redirection - Weka Wiki</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
@@ -17,9 +17,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = " Subversion";
-    var mkdocs_page_input_path = "subversion.md";
-    var mkdocs_page_url = "/subversion/";
+    var mkdocs_page_name = " Command redirection";
+    var mkdocs_page_input_path = "command_redirection.md";
+    var mkdocs_page_url = "/command_redirection/";
   </script>
   
   <script src="../js/jquery-2.1.1.min.js"></script>
@@ -97,109 +97,100 @@
     <a class="" href="../mailing_list/">Mailing list</a>
 	    </li>
           
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
             <li class="toctree-l1 current">
 		
     <ul class="subnav">
             
-    <li class="toctree-l2"><a href="#general">General</a></li>
+    <li class="toctree-l2"><a href="#console">Console</a></li>
     
 
-    <li class="toctree-l2"><a href="#source-code">Source code</a></li>
-    
-
-    <li class="toctree-l2"><a href="#specific-version">Specific version</a></li>
-    
-
-    <li class="toctree-l2"><a href="#junit">JUnit</a></li>
-    
-
-    <li class="toctree-l2"><a href="#commandline">Commandline</a></li>
+    <li class="toctree-l2"><a href="#simplecli">SimpleCLI</a></li>
     
 
     <li class="toctree-l2"><a href="#links">Links</a></li>
     
 
     </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-	    </li>
-          
-            <li class="toctree-l1">
-		
-	    </li>
-          
-            <li class="toctree-l1">
-		
-	    </li>
-          
-            <li class="toctree-l1">
-		
-	    </li>
-          
-            <li class="toctree-l1">
-		
-	    </li>
-          
-            <li class="toctree-l1">
-		
-	    </li>
-          
-            <li class="toctree-l1">
-		
-	    </li>
-          
-            <li class="toctree-l1">
-		
-	    </li>
-          
-            <li class="toctree-l1">
-		
-	    </li>
-          
-            <li class="toctree-l1">
-		
-	    </li>
-          
-            <li class="toctree-l1">
-		
-	    </li>
-          
-            <li class="toctree-l1">
-		
-	    </li>
-          
-            <li class="toctree-l1">
-		
-	    </li>
-          
-            <li class="toctree-l1">
-		
-	    </li>
-          
-            <li class="toctree-l1">
-		
-	    </li>
-          
-            <li class="toctree-l1">
-		
-	    </li>
-          
-            <li class="toctree-l1">
-		
-	    </li>
-          
-            <li class="toctree-l1">
-		
-	    </li>
-          
-            <li class="toctree-l1">
-		
-	    </li>
-          
-            <li class="toctree-l1">
-		
 	    </li>
           
             <li class="toctree-l1">
@@ -280,7 +271,7 @@
     
       
     
-    <li> Subversion</li>
+    <li> Command redirection</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -290,52 +281,56 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="general">General</h1>
-<p>The Weka <a href="http://en.wikipedia.org/wiki/Subversion_%28software%29">Subversion</a> repository is accessible and browseable via the following URL:</p>
+                <h1 id="console">Console</h1>
+<p>With command redirection one can redirect <a href="http://en.wikipedia.org/wiki/Standard_streams">standard streams</a> like <em>stdin</em>, <em>stdout</em> and <em>stderr</em> to user-specified locations. Quite often it is useful to redirect the output of a program to a text file.</p>
 <ul>
-<li>https://svn.cms.waikato.ac.nz/svn/weka/</li>
+<li>
+<p>redirecting <em>stdout</em> to a file</p>
+<p><code>someProgram &gt;/some/where/output.txt     (Linux/Unix Bash)
+someProgram &gt;c:\some\where\output.txt   (Windows command prompt)</code></p>
+</li>
+<li>
+<p>redirecting <em>stderr</em> to a file</p>
+<p><code>someProgram 2&gt;/some/where/output.txt     (Linux/Unix Bash)
+someProgram 2&gt;c:\some\where\output.txt   (Windows command prompt)</code></p>
+</li>
+<li>
+<p>redirecting <em>stdout</em> and <em>stderr</em> to a file</p>
+<p><code>someProgram &amp;&gt;/some/where/output.txt         (Linux/Unix Bash)
+someProgram &gt;c:\some\where\output.txt 2&gt;&amp;1   (Windows command prompt)</code></p>
+</li>
 </ul>
-<p>A Subversion repository has usually the following layout:</p>
-<pre><code> root
-  |
-  +- trunk
-  |
-  +- tags
-  |
-  +- branches
+<p><strong>Note:</strong> under Weka quite often the output is printed to <em>stderr</em>, e.g., if one is using the <em>-p 0</em> option from the commandline to print the predicted values for a test file:</p>
+<pre><code> java weka.classifiers.trees.J48 -t train.arff -T test.arff -p 0 2&gt; j48.txt
 </code></pre>
 
-<p>Where <code>trunk</code> contains the <code>main trunk</code> of the development, <code>tags</code> snapshots in time of the repository (e.g., when a new version got released) and <code>branches</code> development branches that forked off the main trunk at some stage (e.g., legacy versions that still get bugfixed).</p>
-<h1 id="source-code">Source code</h1>
-<p>The latest version of the Weka source code can be obtained with this URL:</p>
-<p>https://svn.cms.waikato.ac.nz/svn/weka/trunk/weka</p>
-<p>If you want to obtain the source code of the book version, use this URL:</p>
-<p>https://svn.cms.waikato.ac.nz/svn/weka/branches/stable-3-8/</p>
-<h1 id="specific-version">Specific version</h1>
-<p>Whenever a release of Weka is generated, the repository gets <a href="http://en.wikipedia.org/wiki/Revision_tag">tagged</a>:</p>
-<p><code>dev-X-Y-Z</code></p>
-<p>the tag for a release of the developer version, e.g., <code>dev-3-9-2</code> for Weka 3.9.2</p>
-<p>https://svn.cms.waikato.ac.nz/svn/weka/tags/dev-3-9-2</p>
-<p><code>stable-X-Y-Z</code></p>
-<p>the tag for a release of a stable version. The book version is one of those stable versions, e.g., <code>stable-3-8-2</code> for Weka 3.8.2.</p>
-<p>https://svn.cms.waikato.ac.nz/svn/weka/tags/stable-3-8-2</p>
-<h1 id="junit">JUnit</h1>
-<p>Weka's JUnit tests are no longer a separate module (as it was the case before the migration to Subversion). They are now located in the <code>src/test</code> directory of the Weka source code tree.</p>
-<h1 id="commandline">Commandline</h1>
-<p>Modern Linux distributions already come with Subversion either pre-installed or easily installed via the package manager of the distribution. If that shouldn't be case, or if you are using Windows, you have to download the appropriate client from [http://subversion.tigris.org/ Subversion's homepage].</p>
-<p>A checkout of the current developer version of Weka looks like this:</p>
-<pre><code>svn co https://svn.cms.waikato.ac.nz/svn/weka/trunk/weka
+<p>or if one already has a trained model:</p>
+<pre><code> java weka.classifiers.trees.J48 -l j48.model -T test.arff -p 0 2&gt; j48.txt
 </code></pre>
 
-<p>You can also obtain the source code for a specific date. The <code>-r</code> option of the <code>svn</code> command-line client can also take dates (format: YYYYMMDD) instead of only revision numbers. In order to distinguish the dates from revision numbers, you have to enclose the date within curly brackets:</p>
-<pre><code>svn co -r {20180616} https://svn.cms.waikato.ac.nz/svn/weka/trunk/weka
+<h1 id="simplecli">SimpleCLI</h1>
+<p>One can perform a basic redirection also in the SimpleCLI, e.g.:</p>
+<pre><code> java weka.classifiers.trees.J48 -t test.arff &gt; j48.txt
 </code></pre>
 
+<p><strong>Note:</strong> the <strong>&gt;</strong> must be preceded and followed by a <em>space</em>, otherwise it is not recognized as redirection, but part of another parameter.</p>
 <h1 id="links">Links</h1>
 <ul>
-<li><a href="http://en.wikipedia.org/wiki/Subversion_%28software%29">Subversion on WikiPedia</a></li>
-<li><a href="https://subversion.apache.org/">Subversion homepage</a></li>
-<li><a href="http://www.junit.org/">JUnit homepage</a></li>
+<li>
+<p>Linux</p>
+<ul>
+<li><a href="http://www.tldp.org/HOWTO/Bash-Prog-Intro-HOWTO-3.html">Command redirection under Bash</a></li>
+<li><a href="http://www.tldp.org/LDP/abs/html/io-redirection.html">I/O Redirection under Bash</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Redirection_%28Unix%29">Redirection under Unix (WikiPedia)</a></li>
+</ul>
+</li>
+<li>
+<p>Windows</p>
+<ul>
+<li><a href="http://technet.microsoft.com/en-us/library/bb490982.aspx">Command redirection under MS Windows</a></li>
+<li><a href="http://www.robvanderwoude.com/redirection.php">Command redirection under MS DOS</a></li>
+</ul>
+</li>
 </ul>
               
             </div>
@@ -344,10 +339,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../get_latest_bugfixes/" class="btn btn-neutral float-right" title=" Get latest Bugfixes">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../auc/" class="btn btn-neutral float-right" title=" Area under the curve">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../mailing_list/" class="btn btn-neutral" title="Mailing list"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../faqs/arff_does_not_load/" class="btn btn-neutral" title=" ARFF file does not load"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -373,10 +368,10 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../mailing_list/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../faqs/arff_does_not_load/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../get_latest_bugfixes/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../auc/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
