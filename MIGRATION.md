@@ -5,13 +5,13 @@ Articles still to migrate
 * Add weights to dataset
 * ~~ANT~~
 * Area under the curve
-* ARFF
-* ARFF (book version)
-* ARFF (developer version)
+* ~~ARFF~~
+* ~~ARFF (book version)~~
+* ~~ARFF (developer version)~~
 * ~~ARFF file doesn't load~~
 * ARFF files from Text Collections
-* ARFF (stable version)
-* ARFF Syntax Highlighting
+* ~~ARFF (stable version)~~
+* ~~ARFF Syntax Highlighting~~
 * AUC
 * Batch filtering
 * Binarize Attribute
