@@ -536,9 +536,9 @@ Most machine learning schemes, like classifiers and clusterers, are susceptible 
 * [Weka Examples](weka_examples.md) - pointer to collection of example classes
 * [Databases](databases.md) - for more information about using databases in Weka (includes ODBC, e.g., for MS Access)
 * [[weka_experiment_DatabaseUtils.props|weka/experiment/DatabaseUtils.props]] - the database setup file
-* [[Generating cross-validation folds (Java approach)]] - in case you want to run 10-fold cross-validation manually
+* [Generating cross-validation folds (Java approach)](generating_cv_folds_java.md) - in case you want to run 10-fold cross-validation manually
 * [[Generating classifier evaluation output manually]] - if you want to generate some of the evaluation statistics output manually
-* [[Creating Instances on-the-fly]] - explains how to generate a `weka.core.Instances` object from scratch
+* [Creating Instances on-the-fly](create_arff_file.md) - explains how to generate a `weka.core.Instances` object from scratch
 * [[Save Instances to an ARFF File]] - shows how to output a dataset
 * [[Using the Experiment API]]
 
