@@ -14,7 +14,7 @@ Articles still to migrate
 * ~~ARFF Syntax Highlighting~~
 * AUC
 * ~~Batch filtering~~
-* Binarize Attribute
+* ~~Binarize Attribute~~
 * Can I change the colors (background, axes, etc.) of the plots in WEKA_
 * Can I check how much memory is available for WEKA_
 * Can I check my CLASSPATH from within WEKA_
@@ -34,7 +34,7 @@ Articles still to migrate
 * Classifying large datasets
 * CLASSPATH
 * CLASSPATH problems
-* Command redirection
+* ~~Command redirection~~
 * ~~Compiling Weka~~
 * ~~Compiling Weka with gcj~~
 * ~~Compiling Weka with gcj (book version)~~
