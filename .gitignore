@@ -5,3 +5,4 @@ old/weka/
 *.bak
 *.swp
 serve.sh
+deploy.sh
