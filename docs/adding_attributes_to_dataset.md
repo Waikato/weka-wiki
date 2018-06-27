@@ -97,7 +97,7 @@ Source code:
 # See also 
 * [Creating an ARFF file](creating_arff_file.md) - explains the creation of all the different attribute types
 * [Use Weka in your Java code](use_weka_in_your_java_code.md) - for general usage of the Weka API
-* [[Save Instances to an ARFF File]] - if you want to save the output to a file instead of printing them to stdout
+* [Save Instances to an ARFF File](save_instances_to_arff.md) - if you want to save the output to a file instead of printing them to stdout
 
 # Downloads
 * [AddAttribute.java](files/AddAttribute.java) ([stable](ttps://svn.cms.waikato.ac.nz/svn/weka/branches/stable-3-8/wekaexamples/src/main/java/wekaexamples/filters/AddAttribute.java), [developer](https://svn.cms.waikato.ac.nz/svn/weka/trunk/wekaexamples/src/main/java/wekaexamples/filters/AddAttribute.java))

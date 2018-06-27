@@ -1,6 +1,6 @@
 Articles still to migrate
 
-* Adding attributes to a dataset
+* ~~Adding attributes to a dataset~~
 * Adding tabs in the Explorer
 * Add weights to dataset
 * ~~ANT~~
@@ -165,7 +165,7 @@ Articles still to migrate
 * ROC
 * ROC curves
 * Running an Experiment Using Clusterers
-* Save Instances to an ARFF File
+* ~~Save Instances to an ARFF File~~
 * Saving and loading models
 * Serialization
 * Serialization is nice, but what about generating actual Java code from WEKA classes_
