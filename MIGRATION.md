@@ -13,7 +13,7 @@ Articles still to migrate
 * ~~ARFF (stable version)~~
 * ~~ARFF Syntax Highlighting~~
 * AUC
-* Batch filtering
+* ~~Batch filtering~~
 * Binarize Attribute
 * Can I change the colors (background, axes, etc.) of the plots in WEKA_
 * Can I check how much memory is available for WEKA_

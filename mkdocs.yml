@@ -29,8 +29,6 @@ pages:
   - ' ARFF (stable version)': arff_stable.md
   - ' ARFF (developer version)': arff_developer.md
   - ' ARFF Syntax Highlighting': arff_syntax.md
-  - ' Creating an ARFF file': creating_arff_file.md
-  - ' Creating Instances on-the-fly': creating_instances.md
   # packages
   - ' Package manager': packages/manager.md
   - ' Unofficial packages': packages/unofficial.md
@@ -45,6 +43,7 @@ pages:
   - ' How can I contribute to WEKA?': faqs/contribution.md
   - ' Weka package manager does not start' : faqs/package_manager_doesnt_start.md
   - ' ARFF file does not load' : faqs/arff_does_not_load.md
+  # just using weka
   # using the API
   - ' Use Weka in your Java code': use_weka_in_your_java_code.md
   - ' Weka Examples': weka_examples.md
@@ -52,5 +51,8 @@ pages:
   - ' Generating cross-validation folds (Filter approach)': generating_cv_folds_filter.md
   - ' Generating cross-validation folds (Java approach)': generating_cv_folds_java.md
   - ' Generating cross-validation folds': generating_cv_folds.md
+  - ' Creating an ARFF file': creating_arff_file.md
+  - ' Creating Instances on-the-fly': creating_instances.md
+  - ' Binarize Attribute': binarize_attribute.md
   # extending Weka
 
