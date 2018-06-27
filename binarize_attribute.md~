@@ -1,0 +1,62 @@
+[[toc]]
+Sometimes one wants to binarize a nominal attribute of a certain dataset by grouping all values except the one of interest together as a negation of this value. E.g., in the {{weather}} data the outlook attribute, where //sunny// is of interest and the other values, //rainy// and //overcast//, are grouped together as //not-sunny//.
+
+Original dataset:
+[[code format="text"]]
+ @relation weather
+
+ @attribute outlook {sunny, overcast, rainy}
+ @attribute temperature real
+ @attribute humidity real
+ @attribute windy {TRUE, FALSE}
+ @attribute play {yes, no}
+
+ @data
+ sunny,85,85,FALSE,no
+ sunny,80,90,TRUE,no
+ overcast,83,86,FALSE,yes
+ rainy,70,96,FALSE,yes
+ rainy,68,80,FALSE,yes
+ rainy,65,70,TRUE,no
+ overcast,64,65,TRUE,yes
+ sunny,72,95,FALSE,no
+ sunny,69,70,FALSE,yes
+ rainy,75,80,FALSE,yes
+ sunny,75,70,TRUE,yes
+ overcast,72,90,TRUE,yes
+ overcast,81,75,FALSE,yes
+ rainy,71,91,TRUE,no
+[[code]]
+Desired output:
+[[code format="text"]]
+ @relation weather-sunny-and-not_sunny
+
+ @attribute outlook {sunny,not_sunny}
+ @attribute temperature numeric
+ @attribute humidity numeric
+ @attribute windy {TRUE,FALSE}
+ @attribute play {yes,no}
+
+ @data
+ sunny,85,85,FALSE,no
+ sunny,80,90,TRUE,no
+ not_sunny,83,86,FALSE,yes
+ not_sunny,70,96,FALSE,yes
+ not_sunny,68,80,FALSE,yes
+ not_sunny,65,70,TRUE,no
+ not_sunny,64,65,TRUE,yes
+ sunny,72,95,FALSE,no
+ sunny,69,70,FALSE,yes
+ not_sunny,75,80,FALSE,yes
+ sunny,75,70,TRUE,yes
+ not_sunny,72,90,TRUE,yes
+ not_sunny,81,75,FALSE,yes
+ not_sunny,71,91,TRUE,no
+[[code]]
+The Weka filter {{[[http://weka.sourceforge.net/doc/weka/filters/unsupervised/attribute/NominalToBinary.html|NominalToBinary]]}} cannot be used directly, since it generates a new attribute for each value of the nominal attribute. As a postprocessing step one could delete all the attributes that are of no interest, but this is quite cumbersome.
+
+The [[file:Binarize.java]] class on the other hand generates directly several [[ARFF]] out of a given one in the desired format.
+
+= Download =
+* [[file:Binarize.java]] ([[https://svn.cms.waikato.ac.nz/svn/weka/branches/book2ndEd-branch/wekaexamples/src/main/java/wekaexamples/filters/Binarize.java|book]], [[https://svn.cms.waikato.ac.nz/svn/weka/branches/stable-3-6/wekaexamples/src/main/java/wekaexamples/filters/Binarize.java|stable-3.6]], [[https://svn.cms.waikato.ac.nz/svn/weka/trunk/wekaexamples/src/main/java/wekaexamples/filters/Binarize.java|developer]])
+> updated 30/08/2007, thanks to [[https://list.scms.waikato.ac.nz/mailman/htdig/wekalist/2007-August/011012.html|Jens Grivolla and Joachim Neumann]]

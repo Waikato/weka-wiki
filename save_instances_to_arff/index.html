@@ -7,24 +7,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   
-  <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title> What are the principal release branches of Weka? - Weka Wiki</title>
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title> Save Instances to an ARFF File - Weka Wiki</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
-  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
-  <link rel="stylesheet" href="../../css/highlight.css">
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
   
   <script>
     // Current page data
-    var mkdocs_page_name = " What are the principal release branches of Weka?";
-    var mkdocs_page_input_path = "faqs/different_versions.md";
-    var mkdocs_page_url = "/faqs/different_versions/";
+    var mkdocs_page_name = " Save Instances to an ARFF File";
+    var mkdocs_page_input_path = "save_instances_to_arff.md";
+    var mkdocs_page_url = "/save_instances_to_arff/";
   </script>
   
-  <script src="../../js/jquery-2.1.1.min.js"></script>
-  <script src="../../js/modernizr-2.8.3.min.js"></script>
-  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
   
 </head>
 
@@ -35,9 +35,9 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
       <div class="wy-side-nav-search">
-        <a href="../.." class="icon icon-home"> Weka Wiki</a>
+        <a href=".." class="icon icon-home"> Weka Wiki</a>
         <div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
   </form>
 </div>
@@ -49,7 +49,7 @@
           
             <li class="toctree-l1">
 		
-    <a class="" href="../..">Home</a>
+    <a class="" href="..">Home</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -58,43 +58,111 @@
     <ul class="subnav">
                 <li class="">
                     
-    <a class="" href="../../faq/">FAQ</a>
+    <a class="" href="../faq/">FAQ</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../not_so_faq/">Not so FAQ</a>
+    <a class="" href="../not_so_faq/">Not so FAQ</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../troubleshooting/">Troubleshooting</a>
+    <a class="" href="../troubleshooting/">Troubleshooting</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../learning_resources/">Learning resources</a>
+    <a class="" href="../learning_resources/">Learning resources</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../using_the_api/">Using the API</a>
+    <a class="" href="../using_the_api/">Using the API</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../extending_weka/">Extending Weka</a>
+    <a class="" href="../extending_weka/">Extending Weka</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../arff/">ARFF Format</a>
+    <a class="" href="../arff/">ARFF Format</a>
                 </li>
     </ul>
 	    </li>
           
             <li class="toctree-l1">
 		
-    <a class="" href="../../packages/">Packages</a>
+    <a class="" href="../packages/">Packages</a>
 	    </li>
           
             <li class="toctree-l1">
 		
-    <a class="" href="../../mailing_list/">Mailing list</a>
+    <a class="" href="../mailing_list/">Mailing list</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
 	    </li>
           
             <li class="toctree-l1">
@@ -157,75 +225,16 @@
 		
     <ul class="subnav">
             
+    <li class="toctree-l2"><a href="#datasink">DataSink</a></li>
+    
+
+    <li class="toctree-l2"><a href="#converter">Converter</a></li>
+    
+
+    <li class="toctree-l2"><a href="#java-io">Java I/O</a></li>
+    
+
     </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-	    </li>
-          
-            <li class="toctree-l1">
-		
-	    </li>
-          
-            <li class="toctree-l1">
-		
-	    </li>
-          
-            <li class="toctree-l1">
-		
-	    </li>
-          
-            <li class="toctree-l1">
-		
-	    </li>
-          
-            <li class="toctree-l1">
-		
-	    </li>
-          
-            <li class="toctree-l1">
-		
-	    </li>
-          
-            <li class="toctree-l1">
-		
-	    </li>
-          
-            <li class="toctree-l1">
-		
-	    </li>
-          
-            <li class="toctree-l1">
-		
-	    </li>
-          
-            <li class="toctree-l1">
-		
-	    </li>
-          
-            <li class="toctree-l1">
-		
-	    </li>
-          
-            <li class="toctree-l1">
-		
-	    </li>
-          
-            <li class="toctree-l1">
-		
-	    </li>
-          
-            <li class="toctree-l1">
-		
-	    </li>
-          
-            <li class="toctree-l1">
-		
-	    </li>
-          
-            <li class="toctree-l1">
-		
 	    </li>
           
         </ul>
@@ -238,7 +247,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../..">Weka Wiki</a>
+        <a href="..">Weka Wiki</a>
       </nav>
 
       
@@ -246,11 +255,11 @@
         <div class="rst-content">
           <div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href="../..">Docs</a> &raquo;</li>
+    <li><a href="..">Docs</a> &raquo;</li>
     
       
     
-    <li> What are the principal release branches of Weka?</li>
+    <li> Save Instances to an ARFF File</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -260,51 +269,51 @@
           <div role="main">
             <div class="section">
               
-                <p>Refer to <a href="http://www.cs.waikato.ac.nz/ml/weka/index_history.html">History</a> for a tabular overview of all Weka releases.</p>
-<p>Several branches are associated with the 1st, 2nd, 3rd, and <a href="http://www.cs.waikato.ac.nz/~ml/weka/book.html 4th">4th</a> edition of the book <em>Data Mining: Practical Machine Learning Tools and Techniques</em> by <a href="http://www.cs.waikato.ac.nz/~ihw">Ian H. Witten</a> and <a href="http://www.cs.waikato.ac.nz/~eibe">Eibe Frank</a>, joined by <a href="http://www.cs.waikato.ac.nz/~mhall">Mark Hall</a> for the 3rd edition and <a href="http://www.professeurs.polymtl.ca/christopher.pal/">Chris Pal</a> for the 4th edition.</p>
-<p>Once created, non-development branches receive bug fixes, but no new features (classifiers, filters, etc.).</p>
-<table>
-<thead>
-<tr>
-<th>Version name</th>
-<th>Most recent base number</th>
-<th>Associated with book edition</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Book 1st ed. version</td>
-<td>3.0.x</td>
-<td>1st edition</td>
-</tr>
-<tr>
-<td>Old GUI version</td>
-<td>3.2.x</td>
-<td>none</td>
-</tr>
-<tr>
-<td>Book 2nd ed. version</td>
-<td>3.4.x</td>
-<td>2nd edition</td>
-</tr>
-<tr>
-<td>Book 3rd ed. version</td>
-<td>3.6.x</td>
-<td>3rd edition</td>
-</tr>
-<tr>
-<td>Book 4th ed. version</td>
-<td>3.8.x</td>
-<td>4th edition</td>
-</tr>
-<tr>
-<td>Development version</td>
-<td>3.9.x</td>
-<td>none</td>
-</tr>
-</tbody>
-</table>
-<p>For <a href="../contribution/">contributions</a>, you should always develop against the developer version.</p>
+                <h1 id="datasink">DataSink</h1>
+<p>The easiest way to save an <code>weka.core.Instances</code> object to a file is by using
+the <a href="http://weka.sourceforge.net/doc.dev/weka/core/converters/ConverterUtils.DataSink.html">weka.core.converters.ConverterUtils.DataSink</a> class.</p>
+<pre><code class="java"> import weka.core.converters.ConverterUtils.DataSink;
+ import weka.core.Instances;
+
+ Instances dataset = ...
+ String outputFilename = ...
+ try {
+   DataSink.write(outputFilename, dataset);
+ }
+ catch (Exception e) {
+   System.err.println(&quot;Failed to save data to: &quot; + outputFilename);
+   e.printStackTrace();
+ }
+</code></pre>
+
+<h1 id="converter">Converter</h1>
+<p>You can use the <code>ArffSaver</code> class (<code>weka.core.converters.ArffSaver</code>) for saving a <code>weka.core.Instances</code> object to a file.</p>
+<p>Here is the snippet :</p>
+<pre><code class="java"> Instances dataSet = ...
+ ArffSaver saver = new ArffSaver();
+ saver.setInstances(dataSet);
+ saver.setFile(new File(&quot;./data/test.arff&quot;));
+ saver.writeBatch();
+</code></pre>
+
+<p><strong>Notes:</strong> </p>
+<ul>
+<li>using the converter approach, one can easily swap the <code>ArffSaver</code> with another saver, e.g., the <code>CSVSaver</code> to output the data in a different format.</li>
+<li>The <a href="../weka_examples/">Weka Examples</a> collection dedicates quite a few examples to the use of converters in the <code>wekaexamples.core.converters</code> package (<a href="https://svn.cms.waikato.ac.nz/svn/weka/branches/stable-3-6/wekaexamples/src/main/java/wekaexamples/core/converters/">stable</a>, <a href="https://svn.cms.waikato.ac.nz/svn/weka/trunk/wekaexamples/src/main/java/wekaexamples/core/converters/">developer</a>)</li>
+</ul>
+<h1 id="java-io">Java I/O</h1>
+<p>You can also save the <code>weka.core.Instances</code> object directly using Java I/O classes:</p>
+<pre><code class="java"> import java.io.BufferedWriter;
+ import java.io.FileWriter;
+ ...
+ Instances dataSet = ...
+ BufferedWriter writer = new BufferedWriter(new FileWriter(&quot;./data/test.arff&quot;));
+ writer.write(dataSet.toString());
+ writer.flush();
+ writer.close();
+</code></pre>
+
+<p><strong>Note:</strong> using the <code>toString()</code> of the <code>weka.core.Instances</code> doesn't scale very well for large datasets, since the complete string has to fit into memory. It is best to use a converter, as described in the previous section, which uses an incremental approach for writing the dataset to disk.</p>
               
             </div>
           </div>
@@ -312,10 +321,8 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../old_versions/" class="btn btn-neutral float-right" title=" Where can I get old versions of WEKA?">Next <span class="icon icon-circle-arrow-right"></span></a>
       
-      
-        <a href="../../not_so_faq/j48_numbers/" class="btn btn-neutral" title=" What do those numbers mean in a J48 tree?"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../adding_attributes_to_dataset/" class="btn btn-neutral" title=" Adding attributes to a dataset"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -341,17 +348,15 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../../not_so_faq/j48_numbers/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../adding_attributes_to_dataset/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
-      
-        <span style="margin-left: 15px"><a href="../old_versions/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
-    <script>var base_url = '../..';</script>
-    <script src="../../js/theme.js"></script>
-      <script src="../../search/require.js"></script>
-      <script src="../../search/search.js"></script>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/require.js"></script>
+      <script src="../search/search.js"></script>
 
 </body>
 </html>

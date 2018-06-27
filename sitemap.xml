@@ -96,16 +96,6 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://github.com/Waikato/weka-wiki/creating_arff_file/</loc>
-     <lastmod>2018-06-27</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://github.com/Waikato/weka-wiki/creating_instances/</loc>
-     <lastmod>2018-06-27</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
      <loc>https://github.com/Waikato/weka-wiki/packages/manager/</loc>
      <lastmod>2018-06-27</lastmod>
      <changefreq>daily</changefreq>
@@ -187,6 +177,36 @@
     </url>
     <url>
      <loc>https://github.com/Waikato/weka-wiki/generating_cv_folds/</loc>
+     <lastmod>2018-06-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://github.com/Waikato/weka-wiki/creating_arff_file/</loc>
+     <lastmod>2018-06-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://github.com/Waikato/weka-wiki/creating_instances/</loc>
+     <lastmod>2018-06-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://github.com/Waikato/weka-wiki/binarize_attribute/</loc>
+     <lastmod>2018-06-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://github.com/Waikato/weka-wiki/arff_from_text_collections/</loc>
+     <lastmod>2018-06-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://github.com/Waikato/weka-wiki/adding_attributes_to_dataset/</loc>
+     <lastmod>2018-06-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://github.com/Waikato/weka-wiki/save_instances_to_arff/</loc>
      <lastmod>2018-06-27</lastmod>
      <changefreq>daily</changefreq>
     </url>
