@@ -9,3 +9,4 @@ Several articles describe certain aspects of using the Weka API:
 * [Adding attributes to a dataset](adding_attributes_to_dataset.md)
 * [Save Instances to an ARFF File](save_instances_to_arff.md)
 * [Generating ROC curve](generating_roc_curve.md)
+* [Visualizing ROC curve](visualizing_roc_curve.md)

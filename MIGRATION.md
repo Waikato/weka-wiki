@@ -148,7 +148,7 @@ Articles still to migrate
 * Performing attribute selection
 * Piqle
 * Plotting error rate for incremental classifier
-* Plotting multiple ROC curves
+* ~~Plotting multiple ROC curves~~
 * Pluggable evaluation metrics
 * Primer
 * ~~Programmatic Use~~
@@ -200,7 +200,7 @@ Articles still to migrate
 * Visualization
 * Visualizing a Tree
 * Visualizing cluster assignments
-* Visualizing ROC curve
+* ~~Visualizing ROC curve~~
 * weka_core_Capabilities.props
 * weka_core_logging_Logging.props
 * Weka download problems

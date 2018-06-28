@@ -48,6 +48,7 @@ pages:
   - ' Area under the curve': auc.md
   - ' Batch filtering': batch_filtering.md
   - ' ROC Curves': roc_curves.md
+  - ' Plotting multiple ROC curves': plotting_multiple_roc_curves.md
   # using the API
   - ' Use Weka in your Java code': use_weka_in_your_java_code.md
   - ' Weka Examples': weka_examples.md
@@ -62,6 +63,7 @@ pages:
   - ' Adding attributes to a dataset': adding_attributes_to_dataset.md
   - ' Save Instances to an ARFF File': save_instances_to_arff.md
   - ' Generating ROC curve': generating_roc_curve.md
+  - ' Visualizing ROC curve': visualizing_roc_curve.md
   # extending Weka
   - ' Writing your own Classifier': writing_classifier.md
   - ' Writing your own Filter': writing_filter.md

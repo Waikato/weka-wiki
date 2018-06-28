@@ -50,14 +50,14 @@ A previously saved ROC data file can be displayed in two ways:
     java [CLASSPATH|-classpath <your-classpath>] weka.gui.visualize.VisualizePanel <file>
     ```
 
-* with the [AUC](auc.md) - needs [[Visualizing ROC curve|this]] source code
+* with the [AUC](auc.md) - needs [this](visualizing_roc_curve.md) source code
 
 # KnowledgeFlow
-See [[Plotting multiple ROC curves]].
+See [Plotting multiple ROC curves](plotting_multiple_roc_curves.md).
 
 # See also
-* [[Plotting multiple ROC curves]]
-* [[Generating ROC curve]]
+* [Plotting multiple ROC curves](plotting_multiple_roc_curves.md)
+* [Generating ROC curve](generating_roc_curve.md)
 
 # Links
 * [WikiPedia article on ROC curve](http://en.wikipedia.org/wiki/ROC_Curve)
