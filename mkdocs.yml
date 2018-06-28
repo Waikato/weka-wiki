@@ -47,6 +47,7 @@ pages:
   - ' Command redirection': command_redirection.md
   - ' Area under the curve': auc.md
   - ' Batch filtering': batch_filtering.md
+  - ' ROC Curves': roc_curves.md
   # using the API
   - ' Use Weka in your Java code': use_weka_in_your_java_code.md
   - ' Weka Examples': weka_examples.md

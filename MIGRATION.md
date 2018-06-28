@@ -162,8 +162,8 @@ Articles still to migrate
 * Remove Attributes
 * Removing misclassified instances from dataset
 * Rename Attribute Values
-* ROC
-* ROC curves
+* ~~ROC~~
+* ~~ROC curves~~
 * Running an Experiment Using Clusterers
 * ~~Save Instances to an ARFF File~~
 * Saving and loading models
