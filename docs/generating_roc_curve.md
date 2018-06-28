@@ -78,8 +78,8 @@ Source code:
 
 # See also
 * [ROC curves](roc_curves.md)
-* [[Visualizing ROC curve]]
-* [[Plotting multiple ROC curves]]
+* [Visualizing ROC curve](visualizing_roc_curve.md)
+* [Plotting multiple ROC curves](plotting_multiple_roc_curves.md)
 
 # Downloads
 * [GenerateROC.java](files/GenerateROC.java) ([stable](https://svn.cms.waikato.ac.nz/svn/weka/branches/stable-3-8/wekaexamples/src/main/java/wekaexamples/gui/visualize/GenerateROC.java|stable-3.6), [developer](https://svn.cms.waikato.ac.nz/svn/weka/trunk/wekaexamples/src/main/java/wekaexamples/gui/visualize/GenerateROC.java))
