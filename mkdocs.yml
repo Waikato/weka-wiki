@@ -61,4 +61,6 @@ pages:
   - ' Adding attributes to a dataset': adding_attributes_to_dataset.md
   - ' Save Instances to an ARFF File': save_instances_to_arff.md
   # extending Weka
+  - ' Writing your own Classifier': writing_classifier.md
+  - ' Writing your own Filter': writing_filter.md
 

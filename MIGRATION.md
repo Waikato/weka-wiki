@@ -236,12 +236,12 @@ Articles still to migrate
 * Why am I missing certain nominal or string values from sparse instances_
 * Why do I get the error message 'training and test set are not compatible'_
 * Windows Databases
-* Writing your own Classifier
-* Writing your own Classifier (post 3.5.2)
+* ~~Writing your own Classifier~~
+* ~~Writing your own Classifier (post 3.5.2)~~
 * ~~Writing your own Classifier (up to 3.5.2)~~
-* Writing your own Filter
-* Writing your own Filter (default)
-* Writing your own Filter (post 3.5.3)
+* ~~Writing your own Filter~~
+* ~~Writing your own Filter (default)~~
+* ~~Writing your own Filter (post 3.5.3)~~
 * ~~Writing your own Filter (up to 3.5.3)~~
 * XML
 * XRFF
