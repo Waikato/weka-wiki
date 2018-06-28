@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title> Generating cross-validation folds (Filter approach) - Weka Wiki</title>
+  <title> Visualizing ROC curve - Weka Wiki</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
@@ -17,9 +17,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = " Generating cross-validation folds (Filter approach)";
-    var mkdocs_page_input_path = "generating_cv_folds_filter.md";
-    var mkdocs_page_url = "/generating_cv_folds_filter/";
+    var mkdocs_page_name = " Visualizing ROC curve";
+    var mkdocs_page_input_path = "visualizing_roc_curve.md";
+    var mkdocs_page_url = "/visualizing_roc_curve/";
   </script>
   
   <script src="../js/jquery-2.1.1.min.js"></script>
@@ -209,54 +209,57 @@
 		
 	    </li>
           
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
             <li class="toctree-l1 current">
 		
     <ul class="subnav">
             
+    <li class="toctree-l2"><a href="#see-also">See also</a></li>
+    
+
     <li class="toctree-l2"><a href="#downloads">Downloads</a></li>
     
 
     </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-	    </li>
-          
-            <li class="toctree-l1">
-		
-	    </li>
-          
-            <li class="toctree-l1">
-		
-	    </li>
-          
-            <li class="toctree-l1">
-		
-	    </li>
-          
-            <li class="toctree-l1">
-		
-	    </li>
-          
-            <li class="toctree-l1">
-		
-	    </li>
-          
-            <li class="toctree-l1">
-		
-	    </li>
-          
-            <li class="toctree-l1">
-		
-	    </li>
-          
-            <li class="toctree-l1">
-		
-	    </li>
-          
-            <li class="toctree-l1">
-		
 	    </li>
           
             <li class="toctree-l1">
@@ -289,7 +292,7 @@
     
       
     
-    <li> Generating cross-validation folds (Filter approach)</li>
+    <li> Visualizing ROC curve</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -299,54 +302,82 @@
           <div role="main">
             <div class="section">
               
-                <p>The filter <code>RemoveFolds</code> (package <code>weka.filters.unsupervised.instance</code>) can be used to generate the train/test splits used in cross-validation (for stratified folds, use <code>weka.filters.supervised.instance.StratifiedRemoveFolds</code>). The filter has to be used twice for each train/test split, first to generate the train set and then to obtain the test set.</p>
-<p>Since this is rather cumbersome by hand, one can also put this into a <a href="http://en.wikipedia.org/wiki/Bash">bash</a> script:</p>
-<pre><code class="bash"> #!/bin/bash
- #
- # expects the weka.jar as first parameter and the datasets to work on as 
- # second parameter.
- #
- # FracPete, 2007-04-10
-
- if [ ! $# -eq 2 ]
- then
-   echo
-   echo &quot;usage: folds.sh &lt;weka.jar&gt; &lt;dataset&gt;&quot;
-   echo
-   exit 1
- fi
-
- JAR=$1
- DATASET=$2
- FOLDS=10
- FILTER=weka.filters.unsupervised.instance.RemoveFolds
- SEED=1
-
- for ((i = 1; i &lt;= $FOLDS; i++))
- do
-   echo &quot;Generating pair $i/$FOLDS...&quot;
-
-   OUTFILE=`echo $DATASET | sed s/&quot;\.arff&quot;//g`
-   # train set
-   java -cp $JAR $FILTER -V -N $FOLDS -F $i -S $SEED -i $DATASET -o &quot;$OUTFILE-train-$i-of-$FOLDS.arff&quot;
-   # test set
-   java -cp $JAR $FILTER    -N $FOLDS -F $i -S $SEED -i $DATASET -o &quot;$OUTFILE-test-$i-of-$FOLDS.arff&quot;
- done
+                <p>The following class lets you display a previously saved [[ROC curves|ROC curve]], which also displays the <a href="../auc/">AUC</a>.</p>
+<p>If you don't need the <a href="../auc/">AUC</a>, then you can also use this command to display the curve:</p>
+<pre><code class="bash"> java [CLASSPATH|-classpath &lt;your-classpath&gt;] weka.gui.visualize.VisualizePanel &lt;file&gt;
 </code></pre>
 
-<p>The script expects two parameters:</p>
-<ol>
-<li>the <code>weka.jar</code> (or the path to the Weka classes)</li>
-<li>the dataset to generate the train/test pairs from </li>
-</ol>
-<p>Example:</p>
-<pre><code class="bash"> ./folds.sh /some/where/weka.jar /some/where/else/dataset.arff
+<p>Source code:</p>
+<pre><code class="java">  import java.awt.*;
+  import java.io.*;
+  import javax.swing.*;
+  import weka.core.*;
+  import weka.classifiers.evaluation.*;
+  import weka.gui.visualize.*;
+
+  /**
+   * Visualizes a previously saved ROC curve. Code taken from the 
+   * &lt;code&gt;weka.gui.explorer.ClassifierPanel&lt;/code&gt; - involved methods:
+   * &lt;ul&gt;
+   *    &lt;li&gt;visualize(String,int,int)&lt;/li&gt;
+   *    &lt;/li&gt;visualizeClassifierErrors(VisualizePanel)&lt;/li&gt;
+   * &lt;/ul&gt;
+   *
+   * @author FracPete
+   */
+  public class VisualizeROC {
+
+    /**
+     * takes one argument: previously saved ROC curve data (ARFF file)
+     */
+    public static void main(String[] args) throws Exception {
+      Instances result = new Instances(
+                            new BufferedReader(
+                              new FileReader(args[0])));
+      result.setClassIndex(result.numAttributes() - 1);
+      ThresholdCurve tc = new ThresholdCurve();
+      // method visualize
+      ThresholdVisualizePanel vmc = new ThresholdVisualizePanel();
+      vmc.setROCString(&quot;(Area under ROC = &quot; + 
+          Utils.doubleToString(tc.getROCArea(result), 4) + &quot;)&quot;);
+      vmc.setName(result.relationName());
+      PlotData2D tempd = new PlotData2D(result);
+      tempd.setPlotName(result.relationName());
+      tempd.addInstanceNumberAttribute();
+      // specify which points are connected
+      boolean[] cp = new boolean[result.numInstances()];
+      for (int n = 1; n &lt; cp.length; n++)
+        cp[n] = true;
+      tempd.setConnectPoints(cp);
+      // add plot
+      vmc.addPlot(tempd);
+      // method visualizeClassifierErrors
+      String plotName = vmc.getName(); 
+      final javax.swing.JFrame jf = 
+        new javax.swing.JFrame(&quot;Weka Classifier Visualize: &quot;+plotName);
+      jf.setSize(500,400);
+      jf.getContentPane().setLayout(new BorderLayout());
+
+      jf.getContentPane().add(vmc, BorderLayout.CENTER);
+      jf.addWindowListener(new java.awt.event.WindowAdapter() {
+        public void windowClosing(java.awt.event.WindowEvent e) {
+        jf.dispose();
+        }
+      });
+
+      jf.setVisible(true);
+    }
+  }
 </code></pre>
 
-<p>This example will create the train/test splits for a 10-fold cross-validation at the same location as the original dataset, i.e., in the directory <code>/some/where/else/</code>.</p>
+<h1 id="see-also">See also</h1>
+<ul>
+<li><a href="../roc_curves/">ROC curves</a></li>
+<li><a href="../plotting_multiple_roc_curves/">Plotting multiple ROC curves</a> - also contains a Java example of plotting multiple ROC curves in a single plot</li>
+</ul>
 <h1 id="downloads">Downloads</h1>
 <ul>
-<li><a href="../files/folds.sh">folds.sh</a></li>
+<li><a href="../files/VisualizeROC.java">VisualizeROC.java</a> (<a href="https://svn.cms.waikato.ac.nz/svn/weka/branches/stable-3-6/wekaexamples/src/main/java/wekaexamples/gui/visualize/VisualizeROC.java">stable</a>, <a href="https://svn.cms.waikato.ac.nz/svn/weka/trunk/wekaexamples/src/main/java/wekaexamples/gui/visualize/VisualizeROC.java">developer</a>)</li>
 </ul>
               
             </div>
@@ -355,10 +386,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../generating_cv_folds_java/" class="btn btn-neutral float-right" title=" Generating cross-validation folds (Java approach)">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../writing_classifier/" class="btn btn-neutral float-right" title=" Writing your own Classifier">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../generating_cv_folds/" class="btn btn-neutral" title=" Generating cross-validation folds"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../generating_roc_curve/" class="btn btn-neutral" title=" Generating ROC curve"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -384,10 +415,10 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../generating_cv_folds/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../generating_roc_curve/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../generating_cv_folds_java/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../writing_classifier/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

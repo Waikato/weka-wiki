@@ -1,0 +1,39 @@
+= KnowledgeFlow =
+== Description ==
+Comparing different classifiers on one dataset can also be done via [[ROC curves]], not just via Accuracy, Correlation coefficient etc. In the **Explorer** it is **not** possible to do that for several classifiers, this is only possible in the **KnowledgeFlow**.
+
+This is the basic setup (based on [[https://list.scms.waikato.ac.nz/mailman/htdig/wekalist/2005-May/003989.html|this]] Wekalist post):
+[[code format="text"]]
+ ArffLoader 
+ ---dataSet---> ClassAssigner 
+ ---dataSet---> ClassValuePicker              (the class label you want the plot for)
+ ---dataSet---> CrossValidationFoldMaker 
+ ---trainingSet/testSet (i.e. BOTH connections)---> Classifier of your choice 
+ ---batchClassifier---> ClassifierPerformanceEvaluator 
+ ---thresholdData---> ModelPerformanceChart
+[[code]]
+[[image:Knowledgeflow_breast-cancer_roc-curve_setup.jpg caption="Knowledgeflow setup"]]
+[[image:Knowledgeflow_breast-cancer_roc-curve.jpg caption="Resulting graph"]]
+This setup can be easily extended to host several classifiers, which illustrates the [[file:Plotting_multiple_roc.kfml]] example, containing {{J48}} and {{RandomForest}} as classifiers.
+
+== Version ==
+>= 3.5.1
+
+= Java =
+== Description ==
+The [[file:VisualizeMultipleROC.java]] class lets you display several ROC curves in a single plot. The data it is using for display is from previously saved ROC curves. This example class is just a modified version of the [[file:VisualizeROC.java]] class, which displays only a single ROC curve (see [[Visualizing ROC curve]] article).
+
+== Version ==
+>= 3.5.1
+
+= See also =
+* [[http://en.wikipedia.org/wiki/ROC_Curve|WikiPedia article on ROC curve]]
+* [[Visualizing ROC curve]]
+* [[ROC curves]]
+
+= Downloads =
+* [[file:Plotting_multiple_roc.kfml]] - Example KnowledgeFlow layout file
+* [[file:VisualizeMultipleROC.java]] ([[https://svn.cms.waikato.ac.nz/svn/weka/branches/stable-3-6/wekaexamples/src/main/java/wekaexamples/gui/visualize/VisualizeMultipleROC.java|stable-3.6]], [[https://svn.cms.waikato.ac.nz/svn/weka/trunk/wekaexamples/src/main/java/wekaexamples/gui/visualize/VisualizeMultipleROC.java|developer]])
+
+= Links =
+* [[https://list.scms.waikato.ac.nz/mailman/htdig/wekalist/2005-May/003989.html|Original Wekalist post]] of KnowledgeFlow example
