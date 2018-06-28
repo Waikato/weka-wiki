@@ -74,7 +74,7 @@ Articles still to migrate
 * ~~Generating cross-validation folds~~
 * ~~Generating cross-validation folds (Filter approach)~~
 * ~~Generating cross-validation folds (Java approach)~~
-* Generating ROC curve
+* ~~Generating ROC curve~~
 * Generating source code from Weka classes
 * GenericObjectEditor
 * GenericObjectEditor (book version)
