@@ -1,8 +1,8 @@
-[[toc]]
 The following little Java class trains a NaiveBayes classifier with a dataset provided by the user and displays the ROC curve for the first class label.
 
 Source code:
-[[code format="java"]]
+
+```java
  import java.awt.*;
  import java.io.*;
  import java.util.*;
@@ -74,15 +74,13 @@ Source code:
      jf.setVisible(true);
    }
  }
-[[code]]
+```
 
-=See also= 
-* [[ROC curves]]
+# See also
+* [ROC curves](roc_curves.md)
 * [[Visualizing ROC curve]]
 * [[Plotting multiple ROC curves]]
 
-=Downloads= 
-* [[file:GenerateROC.java]] ([[https://svn.cms.waikato.ac.nz/svn/weka/branches/stable-3-6/wekaexamples/src/main/java/wekaexamples/gui/visualize/GenerateROC.java|stable-3.6]], [[https://svn.cms.waikato.ac.nz/svn/weka/trunk/wekaexamples/src/main/java/wekaexamples/gui/visualize/GenerateROC.java|developer]])
+# Downloads
+* [GenerateROC.java](files/GenerateROC.java) ([stable](https://svn.cms.waikato.ac.nz/svn/weka/branches/stable-3-8/wekaexamples/src/main/java/wekaexamples/gui/visualize/GenerateROC.java|stable-3.6), [developer](https://svn.cms.waikato.ac.nz/svn/weka/trunk/wekaexamples/src/main/java/wekaexamples/gui/visualize/GenerateROC.java))
 
-==Version== 
-Needs the developer version >=3.5.1 or 3.6.x
