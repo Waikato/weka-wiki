@@ -246,6 +246,11 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://github.com/Waikato/weka-wiki/serialization/</loc>
+     <lastmod>2018-07-02</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://github.com/Waikato/weka-wiki/writing_classifier/</loc>
      <lastmod>2018-07-02</lastmod>
      <changefreq>daily</changefreq>
