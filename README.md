@@ -68,7 +68,7 @@ mkdocs monitors setup and markdown files, so you can just add and edit
 them as you like, it will automatically rebuild and refresh the browser.
 
 ```
-./venv/bin/mkdocs build --clean && mkdocs serve
+./venv/bin/mkdocs build --clean && ./venv/bin/mkdocs serve
 ```
 
 ## Deploying
