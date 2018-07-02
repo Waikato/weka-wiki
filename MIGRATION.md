@@ -46,7 +46,7 @@ Articles still to migrate
 * ~~Creating an ARFF file~~
 * ~~Creating Instances on-the-fly~~
 * CSV file conversion
-* Databases
+* ~~Databases~~
 * Datasets
 * Discretizing datasets
 * Displaying results of cross-validation folds
