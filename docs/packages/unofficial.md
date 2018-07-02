@@ -67,4 +67,5 @@ Below is an (incomplete list) of packages that are available.
 
 * [screencast4j](https://github.com/fracpete/screencast4j-weka-package) -- Allows you to record sound, webcam and screen feeds, storing them in separate files to be combined into a screencast using a [video editor](https://en.wikipedia.org/wiki/List_of_video_editing_software). This screencast you can then share on YouTube, for instance.
 * [command-to-code](https://github.com/fracpete/command-to-code-weka-package) -- Turns command-lines (eg of classifiers or filters) into various Java code snippets.
+* [jshell-scripting](https://github.com/fracpete/jshell-scripting-weka-package) -- Allows scripting in Java, using [jshell](https://docs.oracle.com/javase/9/jshell/)
 
