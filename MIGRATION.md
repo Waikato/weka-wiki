@@ -167,7 +167,7 @@ Articles still to migrate
 * Running an Experiment Using Clusterers
 * ~~Save Instances to an ARFF File~~
 * Saving and loading models
-* Serialization
+* ~~Serialization~~
 * Serialization is nice, but what about generating actual Java code from WEKA classes_
 * Single quotes in labels of ARFF files
 * ~~Snapshot~~

@@ -64,6 +64,7 @@ pages:
   - ' Save Instances to an ARFF File': save_instances_to_arff.md
   - ' Generating ROC curve': generating_roc_curve.md
   - ' Visualizing ROC curve': visualizing_roc_curve.md
+  - ' Serialization': serialization.md
   # extending Weka
   - ' Writing your own Classifier': writing_classifier.md
   - ' Writing your own Filter': writing_filter.md
