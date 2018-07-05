@@ -1,4 +1,4 @@
-Articles still to migrate
+Articles still to migrate:
 
 * ~~Adding attributes to a dataset~~
 * Adding tabs in the Explorer
