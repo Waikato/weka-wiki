@@ -197,6 +197,10 @@
 		
 	    </li>
           
+            <li class="toctree-l1">
+		
+	    </li>
+          
             <li class="toctree-l1 current">
 		
     <ul class="subnav">
@@ -402,7 +406,7 @@
 </code></pre>
 
 <h2 id="database">Database</h2>
-<p>Reading from <a href="databases.md">Databases</a> is slightly more complicated, but still very easy. First, you'll have to modify your <a href="../databases#configuration-files">DatabaseUtils.props</a> file to reflect your database connection. Suppose you want to connect to a <a href="http://wwww.mysql.com/">MySQL</a> server that is running on the local machine on the default port <code>3306</code>. The MySQL JDBC driver is called <a href="http://dev.mysql.com/downloads/connector/j/">Connector/J</a>. (The driver class is <code>org.gjt.mm.mysql.Driver</code>.) The database where your target data resides is called <code>some_database</code>. Since you're only reading, you can use the default user <code>nobody</code> without a password. Your props file must contain the following lines:</p>
+<p>Reading from <a href="../databases/">Databases</a> is slightly more complicated, but still very easy. First, you'll have to modify your <a href="../databases#configuration-files">DatabaseUtils.props</a> file to reflect your database connection. Suppose you want to connect to a <a href="http://wwww.mysql.com/">MySQL</a> server that is running on the local machine on the default port <code>3306</code>. The MySQL JDBC driver is called <a href="http://dev.mysql.com/downloads/connector/j/">Connector/J</a>. (The driver class is <code>org.gjt.mm.mysql.Driver</code>.) The database where your target data resides is called <code>some_database</code>. Since you're only reading, you can use the default user <code>nobody</code> without a password. Your props file must contain the following lines:</p>
 <pre><code class="ini"> jdbcDriver=org.gjt.mm.mysql.Driver
  jdbcURL=jdbc:mysql://localhost:3306/some_database
 </code></pre>
@@ -862,7 +866,7 @@ For example, if you want to remove the <em>first</em> attribute of a dataset, yo
 <h1 id="see-also">See also</h1>
 <ul>
 <li><a href="../weka_examples/">Weka Examples</a> - pointer to collection of example classes</li>
-<li><a href="databases.md">Databases</a> - for more information about using databases in Weka (includes ODBC, e.g., for MS Access)</li>
+<li><a href="../databases/">Databases</a> - for more information about using databases in Weka (includes ODBC, e.g., for MS Access)</li>
 <li>[[weka_experiment_DatabaseUtils.props|weka/experiment/DatabaseUtils.props]] - the database setup file</li>
 <li><a href="../generating_cv_folds_java/">Generating cross-validation folds (Java approach)</a> - in case you want to run 10-fold cross-validation manually</li>
 <li>[[Generating classifier evaluation output manually]] - if you want to generate some of the evaluation statistics output manually</li>
@@ -919,7 +923,7 @@ For example, if you want to remove the <em>first</em> attribute of a dataset, yo
         <a href="../weka_examples/" class="btn btn-neutral float-right" title=" Weka Examples">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../plotting_multiple_roc_curves/" class="btn btn-neutral" title=" Plotting multiple ROC curves"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../databases/" class="btn btn-neutral" title=" Databases"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -945,7 +949,7 @@ For example, if you want to remove the <em>first</em> attribute of a dataset, yo
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../plotting_multiple_roc_curves/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../databases/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
         <span style="margin-left: 15px"><a href="../weka_examples/" style="color: #fcfcfc">Next &raquo;</a></span>
