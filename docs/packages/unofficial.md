@@ -4,13 +4,13 @@ Below is an (incomplete list) of packages that are available.
  
 # Preprocessing
 
-* [dataset-weights](https://github.com/fracpete/dataset-weights-weka-package dataset-weights) -- filters for setting attribute and instance weights using various methods.
+* [dataset-weights](https://github.com/fracpete/dataset-weights-weka-package) -- filters for setting attribute and instance weights using various methods.
 * [missing-values-imputation](https://github.com/fracpete/missing-values-imputation-weka-package) -- various methods for imputing missing values using a filter.
 * [mxexpression](https://github.com/fracpete/mxexpression-weka-package) -- filter for updating a target attribute using a mathematical expression.
 
 # Classification
 
-* [network package](https://github.com/amten/NeuralNetwork Java neural) -- Java (convolutional or fully-connected) neural network implementation with plugin for [Weka](http://www.cs.waikato.ac.nz/ml/weka/). Uses dropout and rectified linear units. Implementation is multithreaded and uses [MTJ](https://github.com/fommil/matrix-toolkits-java) matrix library with native libs for performance.
+* [Java neural network package](https://github.com/amten/NeuralNetwork) -- Java (convolutional or fully-connected) neural network implementation with plugin for [Weka](http://www.cs.waikato.ac.nz/ml/weka/). Uses dropout and rectified linear units. Implementation is multithreaded and uses [MTJ](https://github.com/fommil/matrix-toolkits-java) matrix library with native libs for performance.
 * [HMMWeka](http://doc.gold.ac.uk/~mas02mg/software/hmmweka/) -- This library makes Hidden Markov Model machine learning available in Weka.
 * [Collective classification](https://github.com/fracpete/collective-classification-weka-package) -- Algorithms around semi-supervised learning and collective classification.
 * [Bagging ensemble selection](http://www.quansun.com/bagging_es/) -- Bagging Ensemble Selection - a new ensemble learning strategy.
