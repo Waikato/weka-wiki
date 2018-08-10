@@ -28,7 +28,7 @@ Articles still to migrate:
 * Can I use WEKA from C-sharp_
 * Can I use WEKA from Groovy_
 * Can I use WEKA from Python_
-* Can I use WEKA in commercial applications_
+* ~~Can I use WEKA in commercial applications_~~
 * Changing the plot background
 * Classifiers
 * Classifying large datasets

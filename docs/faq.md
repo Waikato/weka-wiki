@@ -6,7 +6,7 @@
 * Can I check my CLASSPATH from within WEKA?
 * Where is my home directory located?
 * Can I check how much memory is available for WEKA?
-* Can I use WEKA in commercial applications?
+* [Can I use WEKA in commercial applications?](faqs/commercial_applications.md)
 
 
 # Basic usage
