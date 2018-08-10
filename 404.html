@@ -13,11 +13,12 @@
 
   <link rel="stylesheet" href="/Waikato/weka-wiki/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="/Waikato/weka-wiki/css/theme_extra.css" type="text/css" />
-  <link rel="stylesheet" href="/Waikato/weka-wiki/css/highlight.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
   
-  <script src="/Waikato/weka-wiki/js/jquery-2.1.1.min.js"></script>
-  <script src="/Waikato/weka-wiki/js/modernizr-2.8.3.min.js"></script>
-  <script type="text/javascript" src="/Waikato/weka-wiki/js/highlight.pack.js"></script> 
+  <script src="/Waikato/weka-wiki/js/jquery-2.1.1.min.js" defer></script>
+  <script src="/Waikato/weka-wiki/js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
   
 </head>
 
@@ -28,10 +29,10 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
       <div class="wy-side-nav-search">
-        <a href="/Waikato/weka-wiki/" class="icon icon-home"> Weka Wiki</a>
+        <a href="/Waikato/weka-wiki/." class="icon icon-home"> Weka Wiki</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="/Waikato/weka-wiki/search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
   </form>
 </div>
       </div>
@@ -42,7 +43,7 @@
           
             <li class="toctree-l1">
 		
-    <a class="" href="/Waikato/weka-wiki/">Home</a>
+    <span class="caption-text">Home</span>
 	    </li>
           
             <li class="toctree-l1">
@@ -51,43 +52,47 @@
     <ul class="subnav">
                 <li class="">
                     
-    <a class="" href="/Waikato/weka-wiki/faq/">FAQ</a>
+    <a class="" href="faq/">FAQ</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="/Waikato/weka-wiki/not_so_faq/">Not so FAQ</a>
+    <a class="" href="not_so_faq/">Not so FAQ</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="/Waikato/weka-wiki/troubleshooting/">Troubleshooting</a>
+    <a class="" href="troubleshooting/">Troubleshooting</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="/Waikato/weka-wiki/learning_resources/">Learning resources</a>
+    <a class="" href="learning_resources/">Learning resources</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="/Waikato/weka-wiki/using_the_api/">Using the API</a>
+    <a class="" href="using_the_api/">Using the API</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="/Waikato/weka-wiki/extending_weka/">Extending Weka</a>
+    <a class="" href="extending_weka/">Extending Weka</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="/Waikato/weka-wiki/arff/">ARFF Format</a>
+    <a class="" href="arff/">ARFF Format</a>
                 </li>
     </ul>
 	    </li>
           
             <li class="toctree-l1">
 		
-    <a class="" href="/Waikato/weka-wiki/packages/">Packages</a>
+    <a class="" href="packages/">Packages</a>
 	    </li>
           
             <li class="toctree-l1">
 		
-    <a class="" href="/Waikato/weka-wiki/mailing_list/">Mailing list</a>
+    <a class="" href="mailing_list/">Mailing list</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
 	    </li>
           
             <li class="toctree-l1">
@@ -272,7 +277,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="/Waikato/weka-wiki/">Weka Wiki</a>
+        <a href="/Waikato/weka-wiki/.">Weka Wiki</a>
       </nav>
 
       
@@ -280,7 +285,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href="/Waikato/weka-wiki/">Docs</a> &raquo;</li>
+    <li><a href="/Waikato/weka-wiki/.">Docs</a> &raquo;</li>
     
     
     <li class="wy-breadcrumbs-aside">
@@ -328,9 +333,8 @@
     </span>
 </div>
     <script>var base_url = '/Waikato/weka-wiki';</script>
-    <script src="/Waikato/weka-wiki/js/theme.js"></script>
-      <script src="/Waikato/weka-wiki/search/require.js"></script>
-      <script src="/Waikato/weka-wiki/search/search.js"></script>
+    <script src="/Waikato/weka-wiki/js/theme.js" defer></script>
+      <script src="/Waikato/weka-wiki/search/main.js" defer></script>
 
 </body>
 </html>
