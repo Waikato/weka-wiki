@@ -13,19 +13,18 @@
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  <link rel="stylesheet" href="../css/highlight.css">
   
   <script>
     // Current page data
     var mkdocs_page_name = " Use Weka in your Java code";
     var mkdocs_page_input_path = "use_weka_in_your_java_code.md";
-    var mkdocs_page_url = "/Waikato/weka-wiki/use_weka_in_your_java_code/";
+    var mkdocs_page_url = "/use_weka_in_your_java_code/";
   </script>
   
-  <script src="../js/jquery-2.1.1.min.js" defer></script>
-  <script src="../js/modernizr-2.8.3.min.js" defer></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script> 
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
   
 </head>
 
@@ -39,7 +38,7 @@
         <a href=".." class="icon icon-home"> Weka Wiki</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+    <input type="text" name="q" placeholder="Search docs" />
   </form>
 </div>
       </div>
@@ -50,7 +49,7 @@
           
             <li class="toctree-l1">
 		
-    <span class="caption-text">Home</span>
+    <a class="" href="..">Home</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -59,43 +58,43 @@
     <ul class="subnav">
                 <li class="">
                     
-    <a class="" href="faq/">FAQ</a>
+    <a class="" href="../faq/">FAQ</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="not_so_faq/">Not so FAQ</a>
+    <a class="" href="../not_so_faq/">Not so FAQ</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="troubleshooting/">Troubleshooting</a>
+    <a class="" href="../troubleshooting/">Troubleshooting</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="learning_resources/">Learning resources</a>
+    <a class="" href="../learning_resources/">Learning resources</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="using_the_api/">Using the API</a>
+    <a class="" href="../using_the_api/">Using the API</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="extending_weka/">Extending Weka</a>
+    <a class="" href="../extending_weka/">Extending Weka</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="arff/">ARFF Format</a>
+    <a class="" href="../arff/">ARFF Format</a>
                 </li>
     </ul>
 	    </li>
           
             <li class="toctree-l1">
 		
-    <a class="" href="packages/">Packages</a>
+    <a class="" href="../packages/">Packages</a>
 	    </li>
           
             <li class="toctree-l1">
 		
-    <a class="" href="mailing_list/">Mailing list</a>
+    <a class="" href="../mailing_list/">Mailing list</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -411,7 +410,7 @@
 </code></pre>
 
 <h2 id="database">Database</h2>
-<p>Reading from <a href="../databases/">Databases</a> is slightly more complicated, but still very easy. First, you'll have to modify your <a href="databases#configuration-files">DatabaseUtils.props</a> file to reflect your database connection. Suppose you want to connect to a <a href="http://wwww.mysql.com/">MySQL</a> server that is running on the local machine on the default port <code>3306</code>. The MySQL JDBC driver is called <a href="http://dev.mysql.com/downloads/connector/j/">Connector/J</a>. (The driver class is <code>org.gjt.mm.mysql.Driver</code>.) The database where your target data resides is called <code>some_database</code>. Since you're only reading, you can use the default user <code>nobody</code> without a password. Your props file must contain the following lines:</p>
+<p>Reading from <a href="../databases/">Databases</a> is slightly more complicated, but still very easy. First, you'll have to modify your <a href="../databases#configuration-files">DatabaseUtils.props</a> file to reflect your database connection. Suppose you want to connect to a <a href="http://wwww.mysql.com/">MySQL</a> server that is running on the local machine on the default port <code>3306</code>. The MySQL JDBC driver is called <a href="http://dev.mysql.com/downloads/connector/j/">Connector/J</a>. (The driver class is <code>org.gjt.mm.mysql.Driver</code>.) The database where your target data resides is called <code>some_database</code>. Since you're only reading, you can use the default user <code>nobody</code> without a password. Your props file must contain the following lines:</p>
 <pre><code class="ini"> jdbcDriver=org.gjt.mm.mysql.Driver
  jdbcURL=jdbc:mysql://localhost:3306/some_database
 </code></pre>
@@ -883,7 +882,7 @@ For example, if you want to remove the <em>first</em> attribute of a dataset, yo
 <p>The following are a few sample classes for using various parts of the Weka API:</p>
 <ul>
 <li>
-<p><a href="files/WekaDemo.jav">WekaDemo.java</a> (<a href="https://svn.cms.waikato.ac.nz/svn/weka/branches/stable-3-8/wekaexamples/src/main/java/wekaexamples/classifiers/WekaDemo.java">stable</a>, <a href="https://svn.cms.waikato.ac.nz/svn/weka/trunk/wekaexamples/src/main/java/wekaexamples/classifiers/WekaDemo.java">developer</a>) - little demo class that loads data from a file, runs it through a filter and trains/evaluates a classifier</p>
+<p><a href="../files/WekaDemo.jav">WekaDemo.java</a> (<a href="https://svn.cms.waikato.ac.nz/svn/weka/branches/stable-3-8/wekaexamples/src/main/java/wekaexamples/classifiers/WekaDemo.java">stable</a>, <a href="https://svn.cms.waikato.ac.nz/svn/weka/trunk/wekaexamples/src/main/java/wekaexamples/classifiers/WekaDemo.java">developer</a>) - little demo class that loads data from a file, runs it through a filter and trains/evaluates a classifier</p>
 </li>
 <li>
 <p><a href="../files/ClusteringDemo.java">ClusteringDemo.java</a> (<a href="https://svn.cms.waikato.ac.nz/svn/weka/branches/stable-3-8/wekaexamples/src/main/java/wekaexamples/clusterers/ClusteringDemo.java">stable</a>, <a href="https://svn.cms.waikato.ac.nz/svn/weka/trunk/wekaexamples/src/main/java/wekaexamples/clusterers/ClusteringDemo.java">developer</a>) - a basic example for using the clusterer API</p>
@@ -895,7 +894,7 @@ For example, if you want to remove the <em>first</em> attribute of a dataset, yo
 <p><a href="../files/AttributeSelectionTest.java">AttributeSelectionTest.java</a> (<a href="https://svn.cms.waikato.ac.nz/svn/weka/branches/stable-3-8/wekaexamples/src/main/java/wekaexamples/attributeSelection/AttributeSelectionTest.java">stable</a>, <a href="https://svn.cms.waikato.ac.nz/svn/weka/trunk/wekaexamples/src/main/java/wekaexamples/attributeSelection/AttributeSelectionTest.java">developer</a>) - example code for using the attribute selection API</p>
 </li>
 <li>
-<p><a href="files.M5PExample.java">M5PExample.java</a> (<a href="https://svn.cms.waikato.ac.nz/svn/weka/branches/stable-3-8/wekaexamples/src/main/java/wekaexamples/classifiers/M5PExample.java">stable</a>, <a href="https://svn.cms.waikato.ac.nz/svn/weka/trunk/wekaexamples/src/main/java/wekaexamples/classifiers/M5PExample.java">developer</a>) - example using M5P to obtain data from database, train model, serialize it to a file, and use this serialized model to make predictions again.</p>
+<p><a href="../files.M5PExample.java">M5PExample.java</a> (<a href="https://svn.cms.waikato.ac.nz/svn/weka/branches/stable-3-8/wekaexamples/src/main/java/wekaexamples/classifiers/M5PExample.java">stable</a>, <a href="https://svn.cms.waikato.ac.nz/svn/weka/trunk/wekaexamples/src/main/java/wekaexamples/classifiers/M5PExample.java">developer</a>) - example using M5P to obtain data from database, train model, serialize it to a file, and use this serialized model to make predictions again.</p>
 </li>
 <li>
 <p><a href="../files/OptionsToCode.java">OptionsToCode.java</a> (<a href="https://svn.cms.waikato.ac.nz/svn/weka/branches/stable-3-8/wekaexamples/src/main/java/wekaexamples/core/OptionsToCode.java">stable</a>, <a href="https://svn.cms.waikato.ac.nz/svn/weka/trunk/wekaexamples/src/main/java/wekaexamples/core/OptionsToCode.java">developer</a>) - turns a Weka command line for a scheme with options into Java code, correctly escaping quotes and backslashes.</p>
@@ -907,14 +906,14 @@ For example, if you want to remove the <em>first</em> attribute of a dataset, yo
 <p><a href="../files/IncrementalClassifier.java">IncrementalClassifier.java</a> (<a href="https://svn.cms.waikato.ac.nz/svn/weka/branches/stable-3-8/wekaexamples/src/main/java/wekaexamples/classifiers/IncrementalClassifier.java">stable</a>, <a href="https://svn.cms.waikato.ac.nz/svn/weka/trunk/wekaexamples/src/main/java/wekaexamples/classifiers/IncrementalClassifier.java">developer</a>) - Example class for how to train an incremental classifier (in this case, <code>weka.classifiers.bayes.NaiveBayesUpdateable</code>).</p>
 </li>
 <li>
-<p><a href="IncrementalClusterer.java">IncrementalClusterer.java</a> (<a href="https://svn.cms.waikato.ac.nz/svn/weka/branches/stable-3-8/wekaexamples/src/main/java/wekaexamples/clusterers/IncrementalClusterer.java">stable</a>, <a href="https://svn.cms.waikato.ac.nz/svn/weka/trunk/wekaexamples/src/main/java/wekaexamples/clusterers/IncrementalClusterer.java">developer</a>) - Example class for how to train an incremental clusterer (in this case, <code>weka.clusterers.Cobweb</code>).</p>
+<p><a href="../IncrementalClusterer.java">IncrementalClusterer.java</a> (<a href="https://svn.cms.waikato.ac.nz/svn/weka/branches/stable-3-8/wekaexamples/src/main/java/wekaexamples/clusterers/IncrementalClusterer.java">stable</a>, <a href="https://svn.cms.waikato.ac.nz/svn/weka/trunk/wekaexamples/src/main/java/wekaexamples/clusterers/IncrementalClusterer.java">developer</a>) - Example class for how to train an incremental clusterer (in this case, <code>weka.clusterers.Cobweb</code>).</p>
 </li>
 </ul>
 <h1 id="links">Links</h1>
 <ul>
 <li>Weka API<ul>
 <li><a href="http://weka.sourceforge.net/doc.stable/">Stable version</a></li>
-<li><a href="[http://weka.sourceforge.net/doc.dev/">Developer version</a></li>
+<li><a href="../[http://weka.sourceforge.net/doc.dev/">Developer version</a></li>
 </ul>
 </li>
 </ul>
@@ -962,8 +961,9 @@ For example, if you want to remove the <em>first</em> attribute of a dataset, yo
     </span>
 </div>
     <script>var base_url = '..';</script>
-    <script src="../js/theme.js" defer></script>
-      <script src="../search/main.js" defer></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/require.js"></script>
+      <script src="../search/search.js"></script>
 
 </body>
 </html>
