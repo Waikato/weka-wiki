@@ -545,15 +545,15 @@ Most machine learning schemes, like classifiers and clusterers, are susceptible 
 # Examples
 The following are a few sample classes for using various parts of the Weka API:
 
-* [WekaDemo.java](files/WekaDemo.jav) ([stable](https://svn.cms.waikato.ac.nz/svn/weka/branches/stable-3-8/wekaexamples/src/main/java/wekaexamples/classifiers/WekaDemo.java), [developer](https://svn.cms.waikato.ac.nz/svn/weka/trunk/wekaexamples/src/main/java/wekaexamples/classifiers/WekaDemo.java)) - little demo class that loads data from a file, runs it through a filter and trains/evaluates a classifier
+* [WekaDemo.java](files/WekaDemo.java) ([stable](https://svn.cms.waikato.ac.nz/svn/weka/branches/stable-3-8/wekaexamples/src/main/java/wekaexamples/classifiers/WekaDemo.java), [developer](https://svn.cms.waikato.ac.nz/svn/weka/trunk/wekaexamples/src/main/java/wekaexamples/classifiers/WekaDemo.java)) - little demo class that loads data from a file, runs it through a filter and trains/evaluates a classifier
 
 * [ClusteringDemo.java](files/ClusteringDemo.java) ([stable](https://svn.cms.waikato.ac.nz/svn/weka/branches/stable-3-8/wekaexamples/src/main/java/wekaexamples/clusterers/ClusteringDemo.java), [developer](https://svn.cms.waikato.ac.nz/svn/weka/trunk/wekaexamples/src/main/java/wekaexamples/clusterers/ClusteringDemo.java)) - a basic example for using the clusterer API
 
-* [ClassesToClusters.java](files/ClassesToClusters.java) ([stable](ttps://svn.cms.waikato.ac.nz/svn/weka/branches/stable-3-8/wekaexamples/src/main/java/wekaexamples/clusterers/ClassesToClusters.java), [developer](https://svn.cms.waikato.ac.nz/svn/weka/trunk/wekaexamples/src/main/java/wekaexamples/clusterers/ClassesToClusters.java)) - performs a *classes to clusters* evaluation like in the Explorer
+* [ClassesToClusters.java](files/ClassesToClusters.java) ([stable](https://svn.cms.waikato.ac.nz/svn/weka/branches/stable-3-8/wekaexamples/src/main/java/wekaexamples/clusterers/ClassesToClusters.java), [developer](https://svn.cms.waikato.ac.nz/svn/weka/trunk/wekaexamples/src/main/java/wekaexamples/clusterers/ClassesToClusters.java)) - performs a *classes to clusters* evaluation like in the Explorer
 
 * [AttributeSelectionTest.java](files/AttributeSelectionTest.java) ([stable](https://svn.cms.waikato.ac.nz/svn/weka/branches/stable-3-8/wekaexamples/src/main/java/wekaexamples/attributeSelection/AttributeSelectionTest.java), [developer](https://svn.cms.waikato.ac.nz/svn/weka/trunk/wekaexamples/src/main/java/wekaexamples/attributeSelection/AttributeSelectionTest.java)) - example code for using the attribute selection API
 
-* [M5PExample.java](files.M5PExample.java) ([stable](https://svn.cms.waikato.ac.nz/svn/weka/branches/stable-3-8/wekaexamples/src/main/java/wekaexamples/classifiers/M5PExample.java), [developer](https://svn.cms.waikato.ac.nz/svn/weka/trunk/wekaexamples/src/main/java/wekaexamples/classifiers/M5PExample.java)) - example using M5P to obtain data from database, train model, serialize it to a file, and use this serialized model to make predictions again.
+* [M5PExample.java](files/M5PExample.java) ([stable](https://svn.cms.waikato.ac.nz/svn/weka/branches/stable-3-8/wekaexamples/src/main/java/wekaexamples/classifiers/M5PExample.java), [developer](https://svn.cms.waikato.ac.nz/svn/weka/trunk/wekaexamples/src/main/java/wekaexamples/classifiers/M5PExample.java)) - example using M5P to obtain data from database, train model, serialize it to a file, and use this serialized model to make predictions again.
 
 * [OptionsToCode.java](files/OptionsToCode.java) ([stable](https://svn.cms.waikato.ac.nz/svn/weka/branches/stable-3-8/wekaexamples/src/main/java/wekaexamples/core/OptionsToCode.java), [developer](https://svn.cms.waikato.ac.nz/svn/weka/trunk/wekaexamples/src/main/java/wekaexamples/core/OptionsToCode.java)) - turns a Weka command line for a scheme with options into Java code, correctly escaping quotes and backslashes.
 
@@ -561,7 +561,7 @@ The following are a few sample classes for using various parts of the Weka API:
 
 * [IncrementalClassifier.java](files/IncrementalClassifier.java) ([stable](https://svn.cms.waikato.ac.nz/svn/weka/branches/stable-3-8/wekaexamples/src/main/java/wekaexamples/classifiers/IncrementalClassifier.java), [developer](https://svn.cms.waikato.ac.nz/svn/weka/trunk/wekaexamples/src/main/java/wekaexamples/classifiers/IncrementalClassifier.java)) - Example class for how to train an incremental classifier (in this case, `weka.classifiers.bayes.NaiveBayesUpdateable`).
 
-* [IncrementalClusterer.java](IncrementalClusterer.java) ([stable](https://svn.cms.waikato.ac.nz/svn/weka/branches/stable-3-8/wekaexamples/src/main/java/wekaexamples/clusterers/IncrementalClusterer.java), [developer](https://svn.cms.waikato.ac.nz/svn/weka/trunk/wekaexamples/src/main/java/wekaexamples/clusterers/IncrementalClusterer.java)) - Example class for how to train an incremental clusterer (in this case, `weka.clusterers.Cobweb`).
+* [IncrementalClusterer.java](files/IncrementalClusterer.java) ([stable](https://svn.cms.waikato.ac.nz/svn/weka/branches/stable-3-8/wekaexamples/src/main/java/wekaexamples/clusterers/IncrementalClusterer.java), [developer](https://svn.cms.waikato.ac.nz/svn/weka/trunk/wekaexamples/src/main/java/wekaexamples/clusterers/IncrementalClusterer.java)) - Example class for how to train an incremental clusterer (in this case, `weka.clusterers.Cobweb`).
 
 # Links
 * Weka API
