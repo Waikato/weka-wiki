@@ -11,3 +11,8 @@ Several articles describe certain aspects of using the Weka API:
 * [Generating ROC curve](generating_roc_curve.md)
 * [Visualizing ROC curve](visualizing_roc_curve.md)
 * [Serialization](serialization.md)
+
+It is possible to use Weka through [Jupyter notebooks](https://jupyter.org/) 
+as well, see the following article for more information:
+> [Jupyter notebooks](jupyter_notebooks.md)
+

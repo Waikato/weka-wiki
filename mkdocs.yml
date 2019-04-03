@@ -67,6 +67,7 @@ pages:
   - ' Generating ROC curve': generating_roc_curve.md
   - ' Visualizing ROC curve': visualizing_roc_curve.md
   - ' Serialization': serialization.md
+  - ' Jupyter Notebooks': jupyter_notebooks.md
   # extending Weka
   - ' Writing your own Classifier': writing_classifier.md
   - ' Writing your own Filter': writing_filter.md
