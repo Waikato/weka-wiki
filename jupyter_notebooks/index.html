@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title> Weka Examples - Weka Wiki</title>
+  <title> Jupyter Notebooks - Weka Wiki</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
@@ -17,9 +17,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = " Weka Examples";
-    var mkdocs_page_input_path = "weka_examples.md";
-    var mkdocs_page_url = "/weka_examples/";
+    var mkdocs_page_name = " Jupyter Notebooks";
+    var mkdocs_page_input_path = "jupyter_notebooks.md";
+    var mkdocs_page_url = "/jupyter_notebooks/";
   </script>
   
   <script src="../js/jquery-2.1.1.min.js"></script>
@@ -209,73 +209,73 @@
 		
 	    </li>
           
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
             <li class="toctree-l1 current">
 		
     <ul class="subnav">
             
-    <li class="toctree-l2"><a href="#snapshots">Snapshots</a></li>
+    <li class="toctree-l2"><a href="#installation-on-linux">Installation on Linux</a></li>
     
 
-    <li class="toctree-l2"><a href="#subversion">Subversion</a></li>
+    <li class="toctree-l2"><a href="#installation-on-windows-using-anaconda">Installation on Windows (using anaconda)</a></li>
     
 
     </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-	    </li>
-          
-            <li class="toctree-l1">
-		
-	    </li>
-          
-            <li class="toctree-l1">
-		
-	    </li>
-          
-            <li class="toctree-l1">
-		
-	    </li>
-          
-            <li class="toctree-l1">
-		
-	    </li>
-          
-            <li class="toctree-l1">
-		
-	    </li>
-          
-            <li class="toctree-l1">
-		
-	    </li>
-          
-            <li class="toctree-l1">
-		
-	    </li>
-          
-            <li class="toctree-l1">
-		
-	    </li>
-          
-            <li class="toctree-l1">
-		
-	    </li>
-          
-            <li class="toctree-l1">
-		
-	    </li>
-          
-            <li class="toctree-l1">
-		
-	    </li>
-          
-            <li class="toctree-l1">
-		
-	    </li>
-          
-            <li class="toctree-l1">
-		
 	    </li>
           
             <li class="toctree-l1">
@@ -308,7 +308,7 @@
     
       
     
-    <li> Weka Examples</li>
+    <li> Jupyter Notebooks</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -318,19 +318,80 @@
           <div role="main">
             <div class="section">
               
-                <p>The <em>Weka Examples</em> collection is a comprehensive collection of examples for the different versions of Weka in the form of an <a href="../ant/">ANT</a> project. You can access these examples as follows:</p>
-<h1 id="snapshots">Snapshots</h1>
-<p>Through <a href="../snapshots/">snapshots</a> or releases (they contain a separate ZIP file with the <a href="../ant/">ANT</a> project)</p>
-<h1 id="subversion">Subversion</h1>
-<p>Through <a href="../subversion/">subversion</a></p>
+                <p><a href="https://jupyter.org/">Jupyter notebooks</a> are extremely popular in the Python world,
+simply because it is great to combine documentation and code in a visually appealing
+way. Great tool for teaching!</p>
+<p>Thanks to the <a href="https://github.com/SpencerPark/IJava">IJava kernel</a> and the JDK 9+
+<em>JShell</em> feature, it is possible to run Java within Notebooks without compiling the
+code now as well.</p>
+<h1 id="installation-on-linux">Installation on Linux</h1>
+<p>The following worked on Linux Mint 18.2:</p>
 <ul>
 <li>
-<p>stable-3.8 version (3.8.x): </p>
-<p><a href="https://svn.cms.waikato.ac.nz/svn/weka/branches/stable-3-8/wekaexamples/">https://svn.cms.waikato.ac.nz/svn/weka/branches/stable-3-8/wekaexamples/</a></p>
+<p>create a directory called <code>weka-notebooks</code></p>
+<p><code>mkdir weka-notebooks</code></p>
 </li>
 <li>
-<p>developer version (3.9.x): </p>
-<p><a href="https://svn.cms.waikato.ac.nz/svn/weka/trunk/wekaexamples/">https://svn.cms.waikato.ac.nz/svn/weka/trunk/wekaexamples/</a></p>
+<p>change into the directory and create a Python virtual environment:</p>
+<p><code>cd weka-notebooks
+virtualenv -p /usr/bin/python3.5 venv</code></p>
+</li>
+<li>
+<p>install Jupyter notebooks and its dependencies:</p>
+<p><code>venv/bin/pip install jupyter</code></p>
+</li>
+<li>
+<p>then download the latest IJava <a href="https://github.com/SpencerPark/IJava/releases/">release</a> (at time of writing, this was <a href="https://github.com/SpencerPark/IJava/releases/download/v1.2.0/ijava-1.2.0.zip">1.20</a>) into this directory</p>
+</li>
+<li>
+<p>unzip the IJava archive:</p>
+<p><code>unzip -q ijava*.zip</code></p>
+</li>
+<li>
+<p>install the Java kernel into the virtual environment, using the IJava installer:</p>
+<p><code>venv/bin/python install.py --sys-prefix</code></p>
+</li>
+<li>
+<p>after that, fire up Jupyter using:</p>
+<p><code>venv/bin/jupyter-notebook</code></p>
+</li>
+<li>
+<p>now you can create new (Java) notebooks!</p>
+</li>
+</ul>
+<h1 id="installation-on-windows-using-anaconda">Installation on Windows (using anaconda)</h1>
+<ul>
+<li>open a command prompt</li>
+<li>
+<p>create a new environment using anaconda (e.g., for Python 3.5)</p>
+<p><code>conda create -n py35-ijava python=3.5</code></p>
+</li>
+<li>
+<p>activate environment </p>
+<p><code>activate py35-ijava</code></p>
+</li>
+<li>
+<p>install Jupyter</p>
+<p><code>pip install jupyter</code></p>
+</li>
+<li>
+<p>download the latest IJava <a href="https://github.com/SpencerPark/IJava/releases/">release</a> (at time of writing, this was <a href="https://github.com/SpencerPark/IJava/releases/download/v1.2.0/ijava-1.2.0.zip&gt;">1.20</a>)</p>
+</li>
+<li>unzip the IJava release (e.g., with your File browser or 7-Zip)</li>
+<li>
+<p>change into the directory where you extracted the release, containing the <code>install.py</code>, e.g.:</p>
+<p><code>cd C:\Users\fracpete\Downloads\ijava-1.2.0</code></p>
+</li>
+<li>
+<p>install the kernel</p>
+<p><code>python install.py --sys-prefix</code></p>
+</li>
+<li>
+<p>start Jupyter</p>
+<p><code>jupyter-notebook</code></p>
+</li>
+<li>
+<p>now you can create new (Java) notebooks!</p>
 </li>
 </ul>
               
@@ -340,10 +401,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../generating_cv_folds/" class="btn btn-neutral float-right" title=" Generating cross-validation folds">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../writing_classifier/" class="btn btn-neutral float-right" title=" Writing your own Classifier">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../use_weka_in_your_java_code/" class="btn btn-neutral" title=" Use Weka in your Java code"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../serialization/" class="btn btn-neutral" title=" Serialization"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -369,10 +430,10 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../use_weka_in_your_java_code/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../serialization/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../generating_cv_folds/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../writing_classifier/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

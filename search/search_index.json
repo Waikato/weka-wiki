@@ -117,7 +117,7 @@
         },
         {
             "location": "/using_the_api/",
-            "text": "Several articles describe certain aspects of using the Weka API:\n\n\n\n\nUse Weka in your Java code\n\n\nWeka Examples\n\n\nGenerating cross-validation folds\n\n\nCreating an ARFF file\n\n\nBinarize Attribute\n\n\nARFF files from Text Collections\n\n\nAdding attributes to a dataset\n\n\nSave Instances to an ARFF File\n\n\nGenerating ROC curve\n\n\nVisualizing ROC curve\n\n\nSerialization",
+            "text": "Several articles describe certain aspects of using the Weka API:\n\n\n\n\nUse Weka in your Java code\n\n\nWeka Examples\n\n\nGenerating cross-validation folds\n\n\nCreating an ARFF file\n\n\nBinarize Attribute\n\n\nARFF files from Text Collections\n\n\nAdding attributes to a dataset\n\n\nSave Instances to an ARFF File\n\n\nGenerating ROC curve\n\n\nVisualizing ROC curve\n\n\nSerialization\n\n\n\n\nIt is possible to use Weka through \nJupyter notebooks\n \nas well, see the following article for more information:\n\n\n\n\nJupyter notebooks",
             "title": "Using the API"
         },
         {
@@ -1249,6 +1249,21 @@
             "location": "/serialization/#links",
             "text": "Java Serialization Specifications",
             "title": "Links"
+        },
+        {
+            "location": "/jupyter_notebooks/",
+            "text": "Jupyter notebooks\n are extremely popular in the Python world,\nsimply because it is great to combine documentation and code in a visually appealing\nway. Great tool for teaching!\n\n\nThanks to the \nIJava kernel\n and the JDK 9+\n\nJShell\n feature, it is possible to run Java within Notebooks without compiling the\ncode now as well.\n\n\nInstallation on Linux\n\n\nThe following worked on Linux Mint 18.2:\n\n\n\n\n\n\ncreate a directory called \nweka-notebooks\n\n\nmkdir weka-notebooks\n\n\n\n\n\n\nchange into the directory and create a Python virtual environment:\n\n\ncd weka-notebooks\nvirtualenv -p /usr/bin/python3.5 venv\n\n\n\n\n\n\ninstall Jupyter notebooks and its dependencies:\n\n\nvenv/bin/pip install jupyter\n\n\n\n\n\n\nthen download the latest IJava \nrelease\n (at time of writing, this was \n1.20\n) into this directory\n\n\n\n\n\n\nunzip the IJava archive:\n\n\nunzip -q ijava*.zip\n\n\n\n\n\n\ninstall the Java kernel into the virtual environment, using the IJava installer:\n\n\nvenv/bin/python install.py --sys-prefix\n\n\n\n\n\n\nafter that, fire up Jupyter using:\n\n\nvenv/bin/jupyter-notebook\n\n\n\n\n\n\nnow you can create new (Java) notebooks!\n\n\n\n\n\n\nInstallation on Windows (using anaconda)\n\n\n\n\nopen a command prompt\n\n\n\n\ncreate a new environment using anaconda (e.g., for Python 3.5)\n\n\nconda create -n py35-ijava python=3.5\n\n\n\n\n\n\nactivate environment \n\n\nactivate py35-ijava\n\n\n\n\n\n\ninstall Jupyter\n\n\npip install jupyter\n\n\n\n\n\n\ndownload the latest IJava \nrelease\n (at time of writing, this was \n1.20\n)\n\n\n\n\nunzip the IJava release (e.g., with your File browser or 7-Zip)\n\n\n\n\nchange into the directory where you extracted the release, containing the \ninstall.py\n, e.g.:\n\n\ncd C:\\Users\\fracpete\\Downloads\\ijava-1.2.0\n\n\n\n\n\n\ninstall the kernel\n\n\npython install.py --sys-prefix\n\n\n\n\n\n\nstart Jupyter\n\n\njupyter-notebook\n\n\n\n\n\n\nnow you can create new (Java) notebooks!",
+            "title": " Jupyter Notebooks"
+        },
+        {
+            "location": "/jupyter_notebooks/#installation-on-linux",
+            "text": "The following worked on Linux Mint 18.2:    create a directory called  weka-notebooks  mkdir weka-notebooks    change into the directory and create a Python virtual environment:  cd weka-notebooks\nvirtualenv -p /usr/bin/python3.5 venv    install Jupyter notebooks and its dependencies:  venv/bin/pip install jupyter    then download the latest IJava  release  (at time of writing, this was  1.20 ) into this directory    unzip the IJava archive:  unzip -q ijava*.zip    install the Java kernel into the virtual environment, using the IJava installer:  venv/bin/python install.py --sys-prefix    after that, fire up Jupyter using:  venv/bin/jupyter-notebook    now you can create new (Java) notebooks!",
+            "title": "Installation on Linux"
+        },
+        {
+            "location": "/jupyter_notebooks/#installation-on-windows-using-anaconda",
+            "text": "open a command prompt   create a new environment using anaconda (e.g., for Python 3.5)  conda create -n py35-ijava python=3.5    activate environment   activate py35-ijava    install Jupyter  pip install jupyter    download the latest IJava  release  (at time of writing, this was  1.20 )   unzip the IJava release (e.g., with your File browser or 7-Zip)   change into the directory where you extracted the release, containing the  install.py , e.g.:  cd C:\\Users\\fracpete\\Downloads\\ijava-1.2.0    install the kernel  python install.py --sys-prefix    start Jupyter  jupyter-notebook    now you can create new (Java) notebooks!",
+            "title": "Installation on Windows (using anaconda)"
         },
         {
             "location": "/writing_classifier/",
