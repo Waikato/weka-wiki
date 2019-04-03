@@ -4,7 +4,7 @@
 * [Where can I get old versions of WEKA?](faqs/old_versions.md)
 * [How do I get the latest bugfixes?](faqs/latest_bugfixes.md)
 * [Can I check my CLASSPATH from within WEKA?](faqs/check_classpath_within_weka.md)
-* Where is my home directory located?
+* [Where is my home directory located?](faqs/home_directory_location.md)
 * Can I check how much memory is available for WEKA?
 * [Can I use WEKA in commercial applications?](faqs/commercial_applications.md)
 

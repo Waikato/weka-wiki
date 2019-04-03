@@ -47,6 +47,7 @@ pages:
   - ' Can I use WEKA in commercial applications?' : faqs/commercial_applications.md
   - ' Ubuntu 18:08 BLAS Warning' : faqs/ubuntu_1804_blas_warning.md
   - ' Can I check my CLASSPATH from within WEKA?' : faqs/check_classpath_within_weka.md
+  - ' Where is my home directory located?' : faqs/home_directory_location.md
   # just using weka
   - ' Command redirection': command_redirection.md
   - ' Area under the curve': auc.md
