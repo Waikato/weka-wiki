@@ -176,6 +176,16 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://github.com/Waikato/weka-wiki/faqs/check_memory_available/</loc>
+     <lastmod>2019-04-04</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://github.com/Waikato/weka-wiki/faqs/OutOfMemoryException/</loc>
+     <lastmod>2019-04-04</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://github.com/Waikato/weka-wiki/command_redirection/</loc>
      <lastmod>2019-04-04</lastmod>
      <changefreq>daily</changefreq>
