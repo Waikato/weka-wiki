@@ -44,6 +44,7 @@ pages:
   - ' Weka package manager does not start' : faqs/package_manager_doesnt_start.md
   - ' ARFF file does not load' : faqs/arff_does_not_load.md
   - ' Can I use WEKA in commercial applications?' : faqs/commercial_applications.md
+  - ' Ubuntu 18:08 BLAS Warning' : faqs/ubuntu_1804_blas_warning.md
   # just using weka
   - ' Command redirection': command_redirection.md
   - ' Area under the curve': auc.md

@@ -16,6 +16,7 @@ Click on one of the links for more information:
 * GUIChooser starts but not Experimenter or Explorer
 * KnowledgeFlow toolbars are empty
 * OSX Mountain Lion - Weka x-y-z is damaged and can't be installed. You should eject the disk image
+* [Ubuntu 18.04: WARNING: Failed to load implementation from: com.github.fommil.netlib.NativeSystemBLAS](faqs/ubuntu_1804_blas_warning.md)
 
 
 See also the [Frequently Asked Questions](faq.md). 
