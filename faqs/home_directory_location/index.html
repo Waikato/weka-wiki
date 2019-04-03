@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title> Where can I get old versions of WEKA? - Weka Wiki</title>
+  <title> Where is my home directory located? - Weka Wiki</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
@@ -17,9 +17,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = " Where can I get old versions of WEKA?";
-    var mkdocs_page_input_path = "faqs/old_versions.md";
-    var mkdocs_page_url = "/faqs/old_versions/";
+    var mkdocs_page_name = " Where is my home directory located?";
+    var mkdocs_page_input_path = "faqs/home_directory_location.md";
+    var mkdocs_page_url = "/faqs/home_directory_location/";
   </script>
   
   <script src="../../js/jquery-2.1.1.min.js"></script>
@@ -95,6 +95,38 @@
             <li class="toctree-l1">
 		
     <a class="" href="../../mailing_list/">Mailing list</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
 	    </li>
           
             <li class="toctree-l1">
@@ -264,38 +296,6 @@
 		
 	    </li>
           
-            <li class="toctree-l1">
-		
-	    </li>
-          
-            <li class="toctree-l1">
-		
-	    </li>
-          
-            <li class="toctree-l1">
-		
-	    </li>
-          
-            <li class="toctree-l1">
-		
-	    </li>
-          
-            <li class="toctree-l1">
-		
-	    </li>
-          
-            <li class="toctree-l1">
-		
-	    </li>
-          
-            <li class="toctree-l1">
-		
-	    </li>
-          
-            <li class="toctree-l1">
-		
-	    </li>
-          
         </ul>
       </div>
       &nbsp;
@@ -318,7 +318,7 @@
     
       
     
-    <li> Where can I get old versions of WEKA?</li>
+    <li> Where is my home directory located?</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -328,7 +328,36 @@
           <div role="main">
             <div class="section">
               
-                <p>If you need a specific version of WEKA, e.g., due to some third-party tools, go <a href="http://sourceforge.net/projects/weka/">WEKA's project page</a> on <a href="http://sourceforge.net/">Sourceforge.net</a>. In the <a href="https://sourceforge.net/projects/weka/files/">Files section</a> you have access to all the releases ever made.</p>
+                <p>Where a user's home directory is located varies from platform to platform and among the users on a single computer. But the actual location of the home directory is available through special environment variables:</p>
+<ul>
+<li>
+<p>Unix/Linux</p>
+<p><code>$HOME</code></p>
+</li>
+<li>
+<p>Windows</p>
+<p><code>%USERPROFILE%</code></p>
+</li>
+<li>
+<p>Cygwin</p>
+<p><code>$USERPROFILE</code></p>
+</li>
+</ul>
+<p>In order to find out where these environment variables actually point to, do the following:</p>
+<ul>
+<li>
+<p>on <strong>Unix/Linux</strong>, open a terminal and type the following command</p>
+<p><code>echo $HOME</code></p>
+</li>
+<li>
+<p>on <strong>Windows</strong>, open a command-prompt and type the following command</p>
+<p><code>echo %USERPROFILE%</code></p>
+</li>
+<li>
+<p>on <strong>Cygwin</strong>, open a bash and type the following command</p>
+<p><code>echo $USERPROFILE</code></p>
+</li>
+</ul>
               
             </div>
           </div>
@@ -336,10 +365,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../latest_bugfixes/" class="btn btn-neutral float-right" title=" How do I get the latest bugfixes?">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../../command_redirection/" class="btn btn-neutral float-right" title=" Command redirection">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../different_versions/" class="btn btn-neutral" title=" What are the principal release branches of Weka?"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../check_classpath_within_weka/" class="btn btn-neutral" title=" Can I check my CLASSPATH from within WEKA?"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -365,10 +394,10 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../different_versions/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../check_classpath_within_weka/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../latest_bugfixes/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../../command_redirection/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

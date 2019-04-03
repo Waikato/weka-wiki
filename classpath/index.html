@@ -7,24 +7,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   
-  <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title> Where can I get old versions of WEKA? - Weka Wiki</title>
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title> CLASSPATH - Weka Wiki</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
-  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
-  <link rel="stylesheet" href="../../css/highlight.css">
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
   
   <script>
     // Current page data
-    var mkdocs_page_name = " Where can I get old versions of WEKA?";
-    var mkdocs_page_input_path = "faqs/old_versions.md";
-    var mkdocs_page_url = "/faqs/old_versions/";
+    var mkdocs_page_name = " CLASSPATH";
+    var mkdocs_page_input_path = "classpath.md";
+    var mkdocs_page_url = "/classpath/";
   </script>
   
-  <script src="../../js/jquery-2.1.1.min.js"></script>
-  <script src="../../js/modernizr-2.8.3.min.js"></script>
-  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
   
 </head>
 
@@ -35,9 +35,9 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
       <div class="wy-side-nav-search">
-        <a href="../.." class="icon icon-home"> Weka Wiki</a>
+        <a href=".." class="icon icon-home"> Weka Wiki</a>
         <div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
   </form>
 </div>
@@ -49,7 +49,7 @@
           
             <li class="toctree-l1">
 		
-    <a class="" href="../..">Home</a>
+    <a class="" href="..">Home</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -58,71 +58,43 @@
     <ul class="subnav">
                 <li class="">
                     
-    <a class="" href="../../faq/">FAQ</a>
+    <a class="" href="../faq/">FAQ</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../not_so_faq/">Not so FAQ</a>
+    <a class="" href="../not_so_faq/">Not so FAQ</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../troubleshooting/">Troubleshooting</a>
+    <a class="" href="../troubleshooting/">Troubleshooting</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../learning_resources/">Learning resources</a>
+    <a class="" href="../learning_resources/">Learning resources</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../using_the_api/">Using the API</a>
+    <a class="" href="../using_the_api/">Using the API</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../extending_weka/">Extending Weka</a>
+    <a class="" href="../extending_weka/">Extending Weka</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../../arff/">ARFF Format</a>
+    <a class="" href="../arff/">ARFF Format</a>
                 </li>
     </ul>
 	    </li>
           
             <li class="toctree-l1">
 		
-    <a class="" href="../../packages/">Packages</a>
+    <a class="" href="../packages/">Packages</a>
 	    </li>
           
             <li class="toctree-l1">
 		
-    <a class="" href="../../mailing_list/">Mailing list</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-	    </li>
-          
-            <li class="toctree-l1">
-		
-	    </li>
-          
-            <li class="toctree-l1">
-		
-	    </li>
-          
-            <li class="toctree-l1">
-		
-	    </li>
-          
-            <li class="toctree-l1">
-		
-	    </li>
-          
-            <li class="toctree-l1">
-		
-	    </li>
-          
-            <li class="toctree-l1">
-		
+    <a class="" href="../mailing_list/">Mailing list</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -165,7 +137,48 @@
 		
     <ul class="subnav">
             
+    <li class="toctree-l2"><a href="#setting-the-classpath">Setting the CLASSPATH</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#windows">Windows</a></li>
+        
+            <li><a class="toctree-l3" href="#unixlinux">Unix/Linux</a></li>
+        
+            <li><a class="toctree-l3" href="#cygwin">Cygwin</a></li>
+        
+        </ul>
+    
+
     </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
 	    </li>
           
             <li class="toctree-l1">
@@ -306,7 +319,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../..">Weka Wiki</a>
+        <a href="..">Weka Wiki</a>
       </nav>
 
       
@@ -314,11 +327,11 @@
         <div class="rst-content">
           <div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href="../..">Docs</a> &raquo;</li>
+    <li><a href="..">Docs</a> &raquo;</li>
     
       
     
-    <li> Where can I get old versions of WEKA?</li>
+    <li> CLASSPATH</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -328,7 +341,43 @@
           <div role="main">
             <div class="section">
               
-                <p>If you need a specific version of WEKA, e.g., due to some third-party tools, go <a href="http://sourceforge.net/projects/weka/">WEKA's project page</a> on <a href="http://sourceforge.net/">Sourceforge.net</a>. In the <a href="https://sourceforge.net/projects/weka/files/">Files section</a> you have access to all the releases ever made.</p>
+                <p>The <code>CLASSPATH</code> environment variable tells Java where to look for classes. Since Java does the search in a ''first-come-first-serve'' kind of manner, you'll have to take care where and what to put in your CLASSPATH. I, personally, never use the environment variable, since I'm working often on a project in different versions in parallel. The CLASSPATH would just mess up things, if you're not careful (or just forget to remove an entry). [[ANT]] offers a nice way for building (and separating source code and class files) Java projects.
+But still, if you're only working on totally separate projects, it might be easiest for you to use the environment variable.</p>
+<h1 id="setting-the-classpath">Setting the CLASSPATH</h1>
+<p>In the following we add the <code>mysql-connector-java-5.1.6-bin.jar</code> to our <code>CLASSPATH</code> variable (this works for any other jar archive) to make it possible to access MySQL <a href="../databases/">Databases</a> via JDBC.</p>
+<h2 id="windows">Windows</h2>
+<p>We assume that the <code>mysql-connector-java-5.1.6-bin.jar</code> archive is located in the following directory:</p>
+<pre><code>C:\Program Files\Weka-3-8
+</code></pre>
+
+<p>In the <em>Control Panel</em> click on <em>System</em> (or right click on <em>This PC</em> and select <em>Properties</em>) and then go to the <em>Advanced</em> tab. There you will find a button called <em>Environment Variables</em>, click it.</p>
+<p>Depending on, whether you're the only person using this computer or it is a lab computer shared by many, you can either create a new system-wide (you are the only user) environment variable or a user dependent one (recommended for multi-user machines). Enter the following name for the variable</p>
+<pre><code>CLASSPATH
+</code></pre>
+
+<p>and add this value</p>
+<pre><code>C:\Program Files\Weka-3-8\mysql-connector-java-5.1.6-bin.jar
+</code></pre>
+
+<p>If you want to add additional jars, you'll have to separate them with the path separator, the semicolon <strong>;</strong> (no spaces!).</p>
+<h2 id="unixlinux">Unix/Linux</h2>
+<p>I assume, that the mysql jar is located in the following directory:</p>
+<pre><code>/home/johndoe/jars/
+</code></pre>
+
+<p>Open a shell and execute the following command, depending on the shell you're using:</p>
+<ul>
+<li>bash</li>
+</ul>
+<p><code>export CLASSPATH=$CLASSPATH:/home/johndoe/jars/mysql-connector-java-5.1.6-bin.jar</code></p>
+<ul>
+<li>c shell</li>
+</ul>
+<p><code>setenv CLASSPATH $CLASSPATH:/home/johndoe/jars/mysql-connector-java-5.1.6-bin.jar</code></p>
+<p>Unix/Linux uses the colon <strong>:</strong> as path separator, in contrast to Windows, which uses the semicolon <strong>;</strong>.</p>
+<p><strong>Note:</strong> the prefixing with <code>$CLASSPATH</code> adds the mysql jar at the end of the currently existing <code>CLASSPATH</code>.</p>
+<h2 id="cygwin">Cygwin</h2>
+<p>The process is like with Unix/Linux systems, but since the host system is Win32 and therefore the Java installation also a Windows application, you'll have to use the semicolon <strong>;</strong> as separator for several jars.</p>
               
             </div>
           </div>
@@ -336,10 +385,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../latest_bugfixes/" class="btn btn-neutral float-right" title=" How do I get the latest bugfixes?">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../packages/manager/" class="btn btn-neutral float-right" title=" Package manager">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../different_versions/" class="btn btn-neutral" title=" What are the principal release branches of Weka?"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../arff_syntax/" class="btn btn-neutral" title=" ARFF Syntax Highlighting"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -365,17 +414,17 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../different_versions/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../arff_syntax/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../latest_bugfixes/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../packages/manager/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
-    <script>var base_url = '../..';</script>
-    <script src="../../js/theme.js"></script>
-      <script src="../../search/require.js"></script>
-      <script src="../../search/search.js"></script>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/require.js"></script>
+      <script src="../search/search.js"></script>
 
 </body>
 </html>

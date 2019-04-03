@@ -96,6 +96,11 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://github.com/Waikato/weka-wiki/classpath/</loc>
+     <lastmod>2019-04-04</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://github.com/Waikato/weka-wiki/packages/manager/</loc>
      <lastmod>2019-04-04</lastmod>
      <changefreq>daily</changefreq>
@@ -157,6 +162,16 @@
     </url>
     <url>
      <loc>https://github.com/Waikato/weka-wiki/faqs/ubuntu_1804_blas_warning/</loc>
+     <lastmod>2019-04-04</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://github.com/Waikato/weka-wiki/faqs/check_classpath_within_weka/</loc>
+     <lastmod>2019-04-04</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://github.com/Waikato/weka-wiki/faqs/home_directory_location/</loc>
      <lastmod>2019-04-04</lastmod>
      <changefreq>daily</changefreq>
     </url>
