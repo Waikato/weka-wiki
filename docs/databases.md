@@ -1,5 +1,5 @@
 # CLASSPATH
-See the [[CLASSPATH]] article for how to set up your CLASSPATH environment variable, in order to make the JDBC driver available for Weka.
+See the [CLASSPATH](classpath.md) article for how to set up your CLASSPATH environment variable, in order to make the JDBC driver available for Weka.
 
 # Configuration files
 Thanks to JDBC it is easy to connect to Databases that provide a JDBC driver. Responsible for the setup is the following properties file, located in the `weka.experiment` package:
@@ -121,7 +121,7 @@ The following example creates a procedure called **emplyoee_name** that returns 
 # See also
 * [[weka_experiment_DatabaseUtils.props|weka/experiment/DatabaseUtils.props]]
 * [[Properties File]]
-* [[CLASSPATH]]
+* [CLASSPATH](classpath.md)
 
 # Links
 * HSQLDB
