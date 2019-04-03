@@ -92,7 +92,7 @@
         },
         {
             "location": "/troubleshooting/",
-            "text": "Click on one of the links for more information:\n\n\n\n\nWeka download problems\n\n\nOutOfMemoryException\n\n\nStackOverflowError\n\n\njust-in-time (JIT) compiler\n\n\nCSV file conversion\n\n\nARFF file doesn't load\n\n\nError message: nominal value not declared in header, read Token[X], line Y\n\n\nSpaces in labels of ARFF files\n\n\nSingle quotes in labels of ARFF files\n\n\nCLASSPATH problems\n\n\nInstance ID\n\n\nVisualization\n\n\nMemory consumption and Garbage collector\n\n\nGUIChooser starts but not Experimenter or Explorer\n\n\nKnowledgeFlow toolbars are empty\n\n\nOSX Mountain Lion - Weka x-y-z is damaged and can't be installed. You should eject the disk image\n\n\n\n\nSee also the \nFrequently Asked Questions\n.",
+            "text": "Click on one of the links for more information:\n\n\n\n\nWeka download problems\n\n\nOutOfMemoryException\n\n\nStackOverflowError\n\n\njust-in-time (JIT) compiler\n\n\nCSV file conversion\n\n\nARFF file doesn't load\n\n\nError message: nominal value not declared in header, read Token[X], line Y\n\n\nSpaces in labels of ARFF files\n\n\nSingle quotes in labels of ARFF files\n\n\nCLASSPATH problems\n\n\nInstance ID\n\n\nVisualization\n\n\nMemory consumption and Garbage collector\n\n\nGUIChooser starts but not Experimenter or Explorer\n\n\nKnowledgeFlow toolbars are empty\n\n\nOSX Mountain Lion - Weka x-y-z is damaged and can't be installed. You should eject the disk image\n\n\nUbuntu 18.04: WARNING: Failed to load implementation from: com.github.fommil.netlib.NativeSystemBLAS\n\n\n\n\nSee also the \nFrequently Asked Questions\n.",
             "title": "Troubleshooting"
         },
         {
@@ -659,6 +659,11 @@
             "location": "/faqs/commercial_applications/",
             "text": "WEKA is licensed under the GNU General Public license (\nGPL 2.0 for Weka 3.6\n) and (\nGPL 3.0 for Weka > 3.7.5\n). Any derivative work obtained under this license must be licensed under the GPL if this derivative work is distributed to a third party.\n\n\nFor commercial projects that require the ability to distribute WEKA code as part of a program that cannot be distributed under the GPL, it may be possible to purchase an appropriate license from the copyright holders listed in the corresponding Java classes.\n\n\nThe copyright for most WEKA code is owned by the University of Waikato. For information on licenses for this code please contact \nWaikatoLink\n , the commercialization unit of the \nUniversity of Waikato\n, by sending email to weka-enquiries at waikatolink.co.nz.",
             "title": " Can I use WEKA in commercial applications?"
+        },
+        {
+            "location": "/faqs/ubuntu_1804_blas_warning/",
+            "text": "When running Ubuntu 18.04, you might see the following warning message(s) in the console:\n\n\nApr 03, 2019 5:40:10 PM com.github.fommil.netlib.BLAS <clinit>\nWARNING: Failed to load implementation from: com.github.fommil.netlib.NativeSystemBLAS\nApr 03, 2019 5:40:10 PM com.github.fommil.netlib.BLAS <clinit>\nWARNING: Failed to load implementation from: com.github.fommil.netlib.NativeRefBLAS\nApr 03, 2019 5:40:10 PM com.github.fommil.netlib.LAPACK <clinit>\nWARNING: Failed to load implementation from: com.github.fommil.netlib.NativeSystemLAPACK\nApr 03, 2019 5:40:10 PM com.github.fommil.netlib.LAPACK <clinit>\nWARNING: Failed to load implementation from: com.github.fommil.netlib.NativeRefLAPACK\n\n\n\n\nYou can easily fix this by installing the missing dependencies with this command:\n\n\nsudo apt-get install libgfortran-6-dev",
+            "title": " Ubuntu 18:08 BLAS Warning"
         },
         {
             "location": "/command_redirection/",
