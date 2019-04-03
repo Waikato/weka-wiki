@@ -16,8 +16,8 @@ Articles still to migrate:
 * ~~Batch filtering~~
 * ~~Binarize Attribute~~
 * Can I change the colors (background, axes, etc.) of the plots in WEKA_
-* Can I check how much memory is available for WEKA_
-* Can I check my CLASSPATH from within WEKA_
+* ~~Can I check how much memory is available for WEKA_~~
+* ~~Can I check my CLASSPATH from within WEKA_~~
 * Can I compile WEKA into native code_
 * Can I make a screenshot of a plot or graph directly in WEKA_
 * Can I process UTF-8 datasets or files_
@@ -32,7 +32,7 @@ Articles still to migrate:
 * Changing the plot background
 * Classifiers
 * Classifying large datasets
-* CLASSPATH
+* ~~CLASSPATH~~
 * CLASSPATH problems
 * ~~Command redirection~~
 * ~~Compiling Weka~~
@@ -141,8 +141,8 @@ Articles still to migrate:
 * ~~Not So Frequently Asked Questions~~
 * Optimizing parameters
 * OSX Mountain Lion - Weka x-y-z is damaged and can't be installed. You should eject the disk image
-* OutOfMemory
-* OutOfMemoryException
+* ~~OutOfMemory~~
+* ~~OutOfMemoryException~~
 * ~~Packages~~
 * Paper References
 * Performing attribute selection
