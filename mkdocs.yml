@@ -48,6 +48,8 @@ pages:
   - ' Ubuntu 18:08 BLAS Warning' : faqs/ubuntu_1804_blas_warning.md
   - ' Can I check my CLASSPATH from within WEKA?' : faqs/check_classpath_within_weka.md
   - ' Where is my home directory located?' : faqs/home_directory_location.md
+  - ' Can I check how much memory is available for WEKA?' : faqs/check_memory_available.md
+  - ' OutOfMemoryException' : faqs/OutOfMemoryException.md
   # just using weka
   - ' Command redirection': command_redirection.md
   - ' Area under the curve': auc.md

@@ -5,7 +5,7 @@
 * [How do I get the latest bugfixes?](faqs/latest_bugfixes.md)
 * [Can I check my CLASSPATH from within WEKA?](faqs/check_classpath_within_weka.md)
 * [Where is my home directory located?](faqs/home_directory_location.md)
-* Can I check how much memory is available for WEKA?
+* [Can I check how much memory is available for WEKA?](faqs/check_memory_available.md)
 * [Can I use WEKA in commercial applications?](faqs/commercial_applications.md)
 
 
@@ -70,14 +70,14 @@
 * Can I use WEKA from Python?
 * Can I use WEKA from Groovy?
 * Serialization is nice, but what about generating actual Java code from WEKA classes?
-* How are packages structured for the package management system?
+* [How are packages structured for the package management system?](packages/index.md)
 * Pluggable evaluation metrics for classification/regression
 * [How can I contribute to WEKA?](faqs/contribution.md)
 
 
 # Windows
 
-* How do I modify the CLASSPATH?
+* [How do I modify the CLASSPATH?](classpath.md)
 * How do I modify the RunWeka.bat file?
 * Can I process UTF-8 datasets or files?
 * How do I run the Windows Weka installer in silent mode?
@@ -88,7 +88,7 @@
 * I have Weka download problems - what's going wrong?
 * [My ARFF file doesn't load - why?](faqs/arff_does_not_load.md)
 * What does nominal value not declared in header, read Token[X], line Y mean?
-* How do I get rid of this OutOfMemoryException?
+* [How do I get rid of this OutOfMemoryException?](faqs/OutOfMemoryException.md)
 * How do I deal with a StackOverflowError?
 * Why do I get the error message 'training and test set are not compatible'?
 * Couldn't read from database: unknown data type
