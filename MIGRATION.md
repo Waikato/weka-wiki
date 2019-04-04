@@ -23,7 +23,7 @@ Articles still to migrate:
 * Can I process UTF-8 datasets or files_
 * Can I run an experiment using clusterers in the Experimenter_
 * Can I tune the parameters of a classifier_
-* Can I use CSV files_
+* ~~Can I use CSV files_~~
 * Can I use WEKA for time series analysis_
 * Can I use WEKA from C-sharp_
 * Can I use WEKA from Groovy_

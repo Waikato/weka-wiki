@@ -11,7 +11,7 @@
 
 # Basic usage
 
-* Can I use CSV files?
+* [Can I use CSV files?](faqs/use_csv_files.md)
 * How do I perform CSV file conversion?
 * How do I divide a dataset into training and test set?
 * How do I generate compatible train and test sets that get processed with a filter?

@@ -50,6 +50,7 @@ pages:
   - ' Where is my home directory located?' : faqs/home_directory_location.md
   - ' Can I check how much memory is available for WEKA?' : faqs/check_memory_available.md
   - ' OutOfMemoryException' : faqs/OutOfMemoryException.md
+  - ' Can I use CSV files?' : faqs/use_csv_files.md
   # just using weka
   - ' Command redirection': command_redirection.md
   - ' Area under the curve': auc.md
