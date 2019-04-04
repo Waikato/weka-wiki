@@ -2,307 +2,312 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
      <loc>https://github.com/Waikato/weka-wiki/</loc>
-     <lastmod>2019-04-04</lastmod>
+     <lastmod>2019-04-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://github.com/Waikato/weka-wiki/faq/</loc>
-     <lastmod>2019-04-04</lastmod>
+     <lastmod>2019-04-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://github.com/Waikato/weka-wiki/not_so_faq/</loc>
-     <lastmod>2019-04-04</lastmod>
+     <lastmod>2019-04-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://github.com/Waikato/weka-wiki/troubleshooting/</loc>
-     <lastmod>2019-04-04</lastmod>
+     <lastmod>2019-04-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://github.com/Waikato/weka-wiki/learning_resources/</loc>
-     <lastmod>2019-04-04</lastmod>
+     <lastmod>2019-04-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://github.com/Waikato/weka-wiki/using_the_api/</loc>
-     <lastmod>2019-04-04</lastmod>
+     <lastmod>2019-04-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://github.com/Waikato/weka-wiki/extending_weka/</loc>
-     <lastmod>2019-04-04</lastmod>
+     <lastmod>2019-04-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://github.com/Waikato/weka-wiki/arff/</loc>
-     <lastmod>2019-04-04</lastmod>
+     <lastmod>2019-04-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://github.com/Waikato/weka-wiki/packages/</loc>
-     <lastmod>2019-04-04</lastmod>
+     <lastmod>2019-04-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://github.com/Waikato/weka-wiki/mailing_list/</loc>
-     <lastmod>2019-04-04</lastmod>
+     <lastmod>2019-04-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://github.com/Waikato/weka-wiki/subversion/</loc>
-     <lastmod>2019-04-04</lastmod>
+     <lastmod>2019-04-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://github.com/Waikato/weka-wiki/get_latest_bugfixes/</loc>
-     <lastmod>2019-04-04</lastmod>
+     <lastmod>2019-04-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://github.com/Waikato/weka-wiki/compiling_weka/</loc>
-     <lastmod>2019-04-04</lastmod>
+     <lastmod>2019-04-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://github.com/Waikato/weka-wiki/ant/</loc>
-     <lastmod>2019-04-04</lastmod>
+     <lastmod>2019-04-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://github.com/Waikato/weka-wiki/maven/</loc>
-     <lastmod>2019-04-04</lastmod>
+     <lastmod>2019-04-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://github.com/Waikato/weka-wiki/snapshots/</loc>
-     <lastmod>2019-04-04</lastmod>
+     <lastmod>2019-04-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://github.com/Waikato/weka-wiki/arff_stable/</loc>
-     <lastmod>2019-04-04</lastmod>
+     <lastmod>2019-04-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://github.com/Waikato/weka-wiki/arff_developer/</loc>
-     <lastmod>2019-04-04</lastmod>
+     <lastmod>2019-04-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://github.com/Waikato/weka-wiki/arff_syntax/</loc>
-     <lastmod>2019-04-04</lastmod>
+     <lastmod>2019-04-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://github.com/Waikato/weka-wiki/classpath/</loc>
-     <lastmod>2019-04-04</lastmod>
+     <lastmod>2019-04-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://github.com/Waikato/weka-wiki/packages/manager/</loc>
-     <lastmod>2019-04-04</lastmod>
+     <lastmod>2019-04-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://github.com/Waikato/weka-wiki/packages/unofficial/</loc>
-     <lastmod>2019-04-04</lastmod>
+     <lastmod>2019-04-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://github.com/Waikato/weka-wiki/packages/structure/</loc>
-     <lastmod>2019-04-04</lastmod>
+     <lastmod>2019-04-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://github.com/Waikato/weka-wiki/not_so_faq/gsp/</loc>
-     <lastmod>2019-04-04</lastmod>
+     <lastmod>2019-04-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://github.com/Waikato/weka-wiki/not_so_faq/j48_numbers/</loc>
-     <lastmod>2019-04-04</lastmod>
+     <lastmod>2019-04-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://github.com/Waikato/weka-wiki/faqs/different_versions/</loc>
-     <lastmod>2019-04-04</lastmod>
+     <lastmod>2019-04-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://github.com/Waikato/weka-wiki/faqs/old_versions/</loc>
-     <lastmod>2019-04-04</lastmod>
+     <lastmod>2019-04-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://github.com/Waikato/weka-wiki/faqs/latest_bugfixes/</loc>
-     <lastmod>2019-04-04</lastmod>
+     <lastmod>2019-04-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://github.com/Waikato/weka-wiki/faqs/contribution/</loc>
-     <lastmod>2019-04-04</lastmod>
+     <lastmod>2019-04-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://github.com/Waikato/weka-wiki/faqs/package_manager_doesnt_start/</loc>
-     <lastmod>2019-04-04</lastmod>
+     <lastmod>2019-04-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://github.com/Waikato/weka-wiki/faqs/arff_does_not_load/</loc>
-     <lastmod>2019-04-04</lastmod>
+     <lastmod>2019-04-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://github.com/Waikato/weka-wiki/faqs/commercial_applications/</loc>
-     <lastmod>2019-04-04</lastmod>
+     <lastmod>2019-04-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://github.com/Waikato/weka-wiki/faqs/ubuntu_1804_blas_warning/</loc>
-     <lastmod>2019-04-04</lastmod>
+     <lastmod>2019-04-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://github.com/Waikato/weka-wiki/faqs/check_classpath_within_weka/</loc>
-     <lastmod>2019-04-04</lastmod>
+     <lastmod>2019-04-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://github.com/Waikato/weka-wiki/faqs/home_directory_location/</loc>
-     <lastmod>2019-04-04</lastmod>
+     <lastmod>2019-04-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://github.com/Waikato/weka-wiki/faqs/check_memory_available/</loc>
-     <lastmod>2019-04-04</lastmod>
+     <lastmod>2019-04-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://github.com/Waikato/weka-wiki/faqs/OutOfMemoryException/</loc>
-     <lastmod>2019-04-04</lastmod>
+     <lastmod>2019-04-05</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://github.com/Waikato/weka-wiki/faqs/use_csv_files/</loc>
+     <lastmod>2019-04-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://github.com/Waikato/weka-wiki/command_redirection/</loc>
-     <lastmod>2019-04-04</lastmod>
+     <lastmod>2019-04-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://github.com/Waikato/weka-wiki/auc/</loc>
-     <lastmod>2019-04-04</lastmod>
+     <lastmod>2019-04-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://github.com/Waikato/weka-wiki/batch_filtering/</loc>
-     <lastmod>2019-04-04</lastmod>
+     <lastmod>2019-04-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://github.com/Waikato/weka-wiki/roc_curves/</loc>
-     <lastmod>2019-04-04</lastmod>
+     <lastmod>2019-04-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://github.com/Waikato/weka-wiki/plotting_multiple_roc_curves/</loc>
-     <lastmod>2019-04-04</lastmod>
+     <lastmod>2019-04-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://github.com/Waikato/weka-wiki/databases/</loc>
-     <lastmod>2019-04-04</lastmod>
+     <lastmod>2019-04-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://github.com/Waikato/weka-wiki/use_weka_in_your_java_code/</loc>
-     <lastmod>2019-04-04</lastmod>
+     <lastmod>2019-04-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://github.com/Waikato/weka-wiki/weka_examples/</loc>
-     <lastmod>2019-04-04</lastmod>
+     <lastmod>2019-04-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://github.com/Waikato/weka-wiki/generating_cv_folds/</loc>
-     <lastmod>2019-04-04</lastmod>
+     <lastmod>2019-04-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://github.com/Waikato/weka-wiki/generating_cv_folds_filter/</loc>
-     <lastmod>2019-04-04</lastmod>
+     <lastmod>2019-04-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://github.com/Waikato/weka-wiki/generating_cv_folds_java/</loc>
-     <lastmod>2019-04-04</lastmod>
+     <lastmod>2019-04-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://github.com/Waikato/weka-wiki/generating_cv_folds/</loc>
-     <lastmod>2019-04-04</lastmod>
+     <lastmod>2019-04-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://github.com/Waikato/weka-wiki/creating_arff_file/</loc>
-     <lastmod>2019-04-04</lastmod>
+     <lastmod>2019-04-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://github.com/Waikato/weka-wiki/creating_instances/</loc>
-     <lastmod>2019-04-04</lastmod>
+     <lastmod>2019-04-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://github.com/Waikato/weka-wiki/binarize_attribute/</loc>
-     <lastmod>2019-04-04</lastmod>
+     <lastmod>2019-04-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://github.com/Waikato/weka-wiki/arff_from_text_collections/</loc>
-     <lastmod>2019-04-04</lastmod>
+     <lastmod>2019-04-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://github.com/Waikato/weka-wiki/adding_attributes_to_dataset/</loc>
-     <lastmod>2019-04-04</lastmod>
+     <lastmod>2019-04-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://github.com/Waikato/weka-wiki/save_instances_to_arff/</loc>
-     <lastmod>2019-04-04</lastmod>
+     <lastmod>2019-04-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://github.com/Waikato/weka-wiki/generating_roc_curve/</loc>
-     <lastmod>2019-04-04</lastmod>
+     <lastmod>2019-04-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://github.com/Waikato/weka-wiki/visualizing_roc_curve/</loc>
-     <lastmod>2019-04-04</lastmod>
+     <lastmod>2019-04-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://github.com/Waikato/weka-wiki/serialization/</loc>
-     <lastmod>2019-04-04</lastmod>
+     <lastmod>2019-04-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://github.com/Waikato/weka-wiki/jupyter_notebooks/</loc>
-     <lastmod>2019-04-04</lastmod>
+     <lastmod>2019-04-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://github.com/Waikato/weka-wiki/writing_classifier/</loc>
-     <lastmod>2019-04-04</lastmod>
+     <lastmod>2019-04-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
      <loc>https://github.com/Waikato/weka-wiki/writing_filter/</loc>
-     <lastmod>2019-04-04</lastmod>
+     <lastmod>2019-04-05</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>
