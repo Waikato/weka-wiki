@@ -12,23 +12,23 @@
 # Basic usage
 
 * [Can I use CSV files?](faqs/use_csv_files.md)
-* How do I perform CSV file conversion?
-* How do I divide a dataset into training and test set?
-* How do I generate compatible train and test sets that get processed with a filter?
-* How do I perform attribute selection?
-* How do I perform clustering?
-* Where do I find visualization of classifiers, etc.?
-* How do I perform text classification?
-* How can I perform multi-instance learning in WEKA?
-* How do I perform cost-sensitive classification?
-* How do I make predictions with a trained model?
-* Why am I missing certain nominal or string values from sparse instances?
-* Can I use WEKA for time series analysis?
-* Does WEKA support multi-label classification?
-* How do I perform one-class classification?
-* Can I make a screenshot of a plot or graph directly in WEKA?
-* How do I use the package manager?
-* What do I do if the package manager does not start?
+* [How do I perform CSV file conversion?](faqs/csv_file_conversion.md)
+* [How do I divide a dataset into training and test set?](faqs/how_do_i_divide_a_dataset_into_training_and_test_set.md)
+* [How do I generate compatible train and test sets that get processed with a filter?](faqs/how_do_i_generate_compatible_train_and_test_sets_that_get_processed_with_a_filter.md)
+* [How do I perform attribute selection?](faqs/how_do_i_perform_attribute_selection.md)
+* [How do I perform clustering?](faqs/how_do_i_perform_clustering.md)
+* [Where do I find visualization of classifiers, etc.?](faqs/visualization.md)
+* [How do I perform text classification?](faqs/how_do_i_perform_text_classification.md)
+* [How can I perform multi-instance learning in WEKA?](faqs/how_can_i_perform_multi_instance_learning_in_weka.md)
+* [How do I perform cost-sensitive classification?](faqs/how_do_i_perform_cost_sensitive_classification.md)
+* [How do I make predictions with a trained model?](faqs/how_do_i_make_predictions_with_a_trained_model.md)
+* [Why am I missing certain nominal or string values from sparse instances?](faqs/why_am_i_missing_certain_nominal_or_string_values_from_sparse_instances.md)
+* [Can I use WEKA for time series analysis?](faqs/can_i_use_weka_for_time_series_analysis.md)
+* [Does WEKA support multi-label classification?](faqs/does_weka_support_multi_label_classification.md)
+* [How do I perform one-class classification?](faqs/how_do_i_perform_one_class_classification.md)
+* [Can I make a screenshot of a plot or graph directly in WEKA?](faqs/can_i_make_a_screenshot_of_a_plot_or_graph_directly_in_weka.md)
+* [How do I use the package manager?](packages/manager.md)
+* [What do I do if the package manager does not start?](faqs/package_manager_doesnt_start.md)
 
 
 # Advanced usage

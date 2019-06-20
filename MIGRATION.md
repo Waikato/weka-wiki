@@ -19,12 +19,12 @@ Articles still to migrate:
 * ~~Can I check how much memory is available for WEKA_~~
 * ~~Can I check my CLASSPATH from within WEKA_~~
 * Can I compile WEKA into native code_
-* Can I make a screenshot of a plot or graph directly in WEKA_
+* ~~Can I make a screenshot of a plot or graph directly in WEKA_~~
 * Can I process UTF-8 datasets or files_
 * Can I run an experiment using clusterers in the Experimenter_
 * Can I tune the parameters of a classifier_
 * ~~Can I use CSV files_~~
-* Can I use WEKA for time series analysis_
+* ~~Can I use WEKA for time series analysis_~~
 * Can I use WEKA from C-sharp_
 * Can I use WEKA from Groovy_
 * Can I use WEKA from Python_
@@ -39,19 +39,19 @@ Articles still to migrate:
 * ~~Compiling Weka with gcj~~
 * ~~Compiling Weka with gcj (book version)~~
 * ~~Compiling Weka with gcj (developer version)~~
-* Converting CSV to ARFF
+* ~~Converting CSV to ARFF~~
 * CostMatrix
 * CostSensitiveClassifier
 * Couldn't read from database - unknown data type
 * ~~Creating an ARFF file~~
 * ~~Creating Instances on-the-fly~~
-* CSV file conversion
+* ~~CSV file conversion~~
 * ~~Databases~~
 * Datasets
 * Discretizing datasets
 * Displaying results of cross-validation folds
 * Document classification
-* Does WEKA support multi-label classification_
+* ~~Does WEKA support multi-label classification_~~
 * ~~Eclipse~~
 * ~~Eclipse 3.4.x~~
 * ~~Eclipse 3.4.x (Subversion)~~
@@ -84,25 +84,25 @@ Articles still to migrate:
 * ~~home~~
 * ~~How are packages structured for the package management system_~~
 * How can I contribute to WEKA_
-* How can I perform multi-instance learning in WEKA_
+* ~~How can I perform multi-instance learning in WEKA_~~
 * How can I track instances in WEKA_
 * How can I use transactional data in Weka_
 * How can I use Weka with Matlab or Octave_
 * How do I add a new classifier, filter, kernel, etc
 * How do I compile WEKA_
 * How do I connect to a database_
-* How do I divide a dataset into training and test set_
-* How do I generate compatible train and test sets that get processed with a filter_
+* ~~How do I divide a dataset into training and test set_~~
+* ~~How do I generate compatible train and test sets that get processed with a filter_~~
 * How do I generate Learning curves_
 * How do I get the latest bugfixes_
-* How do I make predictions with a trained model_
+* ~~How do I make predictions with a trained model_~~
 * How do I modify the CLASSPATH_
 * How do I modify the RunWeka.bat file_
-* How do I perform attribute selection_
-* How do I perform clustering_
-* How do I perform cost-sensitive classification_
-* How do I perform one-class classification_
-* How do I perform text classification_
+* ~~How do I perform attribute selection_~~
+* ~~How do I perform clustering_~~
+* ~~How do I perform cost-sensitive classification_~~
+* ~~How do I perform one-class classification_~~
+* ~~How do I perform text classification_~~
 * How do I run the Windows Weka installer in silent mode_
 * How do I use ID attributes_
 * How do I use libsvm in WEKA_
@@ -197,7 +197,7 @@ Articles still to migrate:
 * Using Weka from Groovy
 * Using Weka from Jython
 * Using Weka via Jepp
-* Visualization
+* ~~Visualization~~
 * Visualizing a Tree
 * Visualizing cluster assignments
 * ~~Visualizing ROC curve~~

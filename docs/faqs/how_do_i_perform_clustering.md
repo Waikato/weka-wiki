@@ -1,0 +1,1 @@
+WEKA offers clustering capabilities not only as standalone schemes, but also as filters and classifiers. Check out the article about [Using cluster algorithms](../using_cluster_algorithms.md) more detailed information.

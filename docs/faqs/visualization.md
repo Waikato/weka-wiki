@@ -1,0 +1,1 @@
+Access to **visualization** from the *Classifier*, *Cluster* and *Attribute Selection* panel is available from a popup menu. Click the right mouse button over an entry in the Result list to bring up the menu. You will be presented with options for viewing or saving the text output and, depending on the scheme, further options for visualizing errors, clusters, trees etc.

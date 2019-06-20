@@ -1,0 +1,1 @@
+The article [Multi-instance classification](../multi_instance_classification.md) explains what classifiers can perform multi-instance classification and what format the data has to be in for these multi-instance classifiers.

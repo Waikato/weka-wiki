@@ -1,0 +1,1 @@
+No, WEKA only allows you to specify a single class attribute (which can be numeric or contain an arbitrary number of labels). There are other third-party frameworks available that can handle this type of data. One of them is [Mulan](http://mlkd.csd.auth.gr/multilabel.html), which is built on top of WEKA.
