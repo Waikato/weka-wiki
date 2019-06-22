@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title> WEKA experiment DatabaseUtils.props - Weka Wiki</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = " WEKA experiment DatabaseUtils.props";
+    var mkdocs_page_input_path = "weka_experiment_database_utils.props.md";
+    var mkdocs_page_url = "/weka_experiment_database_utils.props/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Weka Wiki</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Resources</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../faq/">FAQ</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../not_so_faq/">Not so FAQ</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../troubleshooting/">Troubleshooting</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../learning_resources/">Learning resources</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../using_the_api/">Using the API</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../extending_weka/">Extending Weka</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../arff/">ARFF Format</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../packages/">Packages</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../mailing_list/">Mailing list</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#file">File</a></li>
+    
+
+    <li class="toctree-l2"><a href="#description">Description</a></li>
+    
+
+    <li class="toctree-l2"><a href="#version">Version</a></li>
+    
+
+    <li class="toctree-l2"><a href="#fields">Fields</a></li>
+    
+
+    <li class="toctree-l2"><a href="#database-type-mapping">Database type mapping</a></li>
+    
+
+    <li class="toctree-l2"><a href="#see-also">See also</a></li>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Weka Wiki</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li> WEKA experiment DatabaseUtils.props</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="file">File</h1>
+<p><code>weka/experiment/DatabaseUtils.props</code></p>
+<h1 id="description">Description</h1>
+<p>Defines the <a href="../databases/">Databases</a> setup, i.e., JDBC driver information, JDBC URL, database type conversion, etc.</p>
+<h1 id="version">Version</h1>
+<ul>
+<li>
+<blockquote>
+<p>= 3.1.3</p>
+</blockquote>
+</li>
+</ul>
+<h1 id="fields">Fields</h1>
+<ul>
+<li>
+<p>General</p>
+<ul>
+<li>
+<p><code>jdbcDriver</code></p>
+<p>the comma-separated list of jdbc drivers to try loading</p>
+</li>
+<li>
+<p><code>jdbcURL</code></p>
+<p>the JDBC URL to the database</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Table creation</p>
+<ul>
+<li>
+<p><code>CREATE_STRING</code></p>
+<p>database specific datatype, e.g., <code>TEXT</code></p>
+</li>
+<li>
+<p><code>CREATE_INT</code></p>
+<p>database specific datatype, e.g., <code>INT</code></p>
+</li>
+<li>
+<p><code>CREATE_DOUBLE</code></p>
+<p>database specific datatype, e.g., <code>DOUBLE</code></p>
+</li>
+</ul>
+</li>
+<li>
+<p>Database flags</p>
+<ul>
+<li>
+<p><code>checkUpperCaseNames</code></p>
+<p>necessary if database turns column names into upper case ones, e.g., HSQLDB</p>
+</li>
+<li>
+<p><code>checkLowerCaseNames</code> (&gt; 3.5.3)</p>
+<p>necessary if database turns column names into lower case ones, e.g., PostgreSQL</p>
+</li>
+<li>
+<p><code>checkForTable</code> (&gt; 3.5.3)</p>
+<p>Checks whether the tables in the query are available in the meta-data of the JDBC Connection. Some tables, like <code>pg_tables</code>, exist but are not available through the meta-data</p>
+</li>
+<li>
+<p><code>setAutoCommit</code></p>
+<p>setting for <code>java.sql.Connection.setAutoCommit(boolean)</code></p>
+</li>
+<li>
+<p><code>createIndex</code></p>
+<p>whether to create a primary key <code>Key_IDX</code> in the results table of an experiment</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Special flags for DatabaseLoader/Saver (package <code>weka.core.converters</code>)</p>
+<ul>
+<li>
+<p><code>nominalToStringLimit</code> (&gt;= 3.4.1)</p>
+<p>beyond this limit, nominal columns are loaded as STRING attributes and no longer as NOMINAL ones</p>
+</li>
+<li>
+<p><code>idColumn</code> (&gt;= 3.4.1)</p>
+<p>unique key in table that allows ordering for incremental loading</p>
+</li>
+<li>
+<p><code>Keywords</code> (&gt; 3.5.8, &gt; 3.6.0)</p>
+<p>lists all the reserved keywords of the current database type</p>
+<p>default: <code>AND,ASC,BY,DESC,FROM,GROUP,INSERT,ORDER,SELECT,UPDATE,WHERE</code></p>
+</li>
+<li>
+<p><code>KeywordsMaskChar</code> (&gt; 3.5.8, &gt; 3.6.0)</p>
+<p>the character to append to attribute names/table names that would be interpreted as keywords by the database, in order to avoid exceptions when executing SQL commands
+defaut: <code>_</code></p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="database-type-mapping">Database type mapping</h1>
+<p>In order to import the data from database correctly into Weka, one has to specify what JDBC datatype corresponds to what Java SQL retrieval method. Here's an overview of how the Java types are mapped to Weka's attribute types:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Java type</strong></th>
+<th><strong>Java method</strong></th>
+<th><strong>Identifier</strong></th>
+<th><strong>Weka attribute type</strong></th>
+<th><strong>Version</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>String</td>
+<td>getString()</td>
+<td>0</td>
+<td>nominal</td>
+<td></td>
+</tr>
+<tr>
+<td>boolean</td>
+<td>getBoolean()</td>
+<td>1</td>
+<td>nominal</td>
+<td></td>
+</tr>
+<tr>
+<td>double</td>
+<td>getDouble()</td>
+<td>2</td>
+<td>numeric</td>
+<td></td>
+</tr>
+<tr>
+<td>byte</td>
+<td>getByte()</td>
+<td>3</td>
+<td>numeric</td>
+<td></td>
+</tr>
+<tr>
+<td>short</td>
+<td>getByte()</td>
+<td>4</td>
+<td>numeric</td>
+<td></td>
+</tr>
+<tr>
+<td>int</td>
+<td>getInteger()</td>
+<td>5</td>
+<td>numeric</td>
+<td></td>
+</tr>
+<tr>
+<td>long</td>
+<td>getLong()</td>
+<td>6</td>
+<td>numeric</td>
+<td></td>
+</tr>
+<tr>
+<td>float</td>
+<td>getFloat()</td>
+<td>7</td>
+<td>numeric</td>
+<td></td>
+</tr>
+<tr>
+<td>date</td>
+<td>getDate()</td>
+<td>8</td>
+<td>date</td>
+<td></td>
+</tr>
+<tr>
+<td>text</td>
+<td>getString()</td>
+<td>9</td>
+<td>string</td>
+<td>&gt;3.5.5</td>
+</tr>
+<tr>
+<td>time</td>
+<td>getTime()</td>
+<td>10</td>
+<td>string</td>
+<td>&gt;3.5.8</td>
+</tr>
+</tbody>
+</table>
+<p>In the props file one lists now the type names that the database returns and what Java type it represents (via the identifier), e.g.:</p>
+<pre><code class="ini"> CHAR=0
+ VARCHAR=0
+</code></pre>
+
+<p><code>CHAR</code> and <code>VARCHAR</code> are both String types, hence they are interpreted as <em>String</em> (identifier <strong>0</strong>)</p>
+<p><strong>Note:</strong> in case database types have blanks, one needs to replace those blanks with an underscore, e.g., <code>DOUBLE PRECISION</code> must be listed like this:</p>
+<pre><code class="ini"> DOUBLE_PRECISION=2
+</code></pre>
+
+<h1 id="see-also">See also</h1>
+<ul>
+<li><a href="../databases/">Databases</a></li>
+<li><a href="properties_file.md">Properties file</a></li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../subversion/" class="btn btn-neutral float-right" title=" Subversion">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../mailing_list/" class="btn btn-neutral" title="Mailing list"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../mailing_list/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../subversion/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/require.js"></script>
+      <script src="../search/search.js"></script>
+
+</body>
+</html>
