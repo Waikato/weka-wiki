@@ -33,17 +33,17 @@
 
 # Advanced usage
 
-* How can I track instances in WEKA?
-* How do I use ID attributes?
-* How do I connect to a database?
-* How do I use WEKA from command line?
-* Can I tune the parameters of a classifier?
-* How do I generate Learning curves?
-* Where can I find information regarding ROC curves?
-* I have unbalanced data - now what?
-* Can I run an experiment using clusterers in the Experimenter?
-* How can I use transactional data in Weka?
-* How can I use Weka with Matlab or Octave?
+* [How can I track instances in WEKA?](faqs/how_can_i_track_instances_in_weka.md)
+* [How do I use ID attributes?](faqs/how_do_i_use_id_attributes.md)
+* [How do I connect to a database?](faqs/how_do_i_connect_to_a_database.md)
+* [How do I use WEKA from the command line?](faqs/how_do_i_use_weka_from_the_command_line.md)
+* [Can I tune the parameters of a classifier?](faqs/can_i_tune_the_parameters_of_a_classifier.md)
+* [How do I generate Learning curves?](faqs/how_do_i_generate_learning_curves.md)
+* [Where can I find information regarding ROC curves?](faqs/where_can_i_find_information_regarding_roc_curves.md)
+* [I have unbalanced data - now what?](faqs/i_have_unbalanced_data_now_what.md)
+* [Can I run an experiment using clusterers in the Experimenter?](faqs/can_i_run_an_experiment_using_clusterers_in_the_experimenter.md)
+* [How can I use transactional data in Weka?](faqs/how_can_i_use_transactional_data_in_weka.md)
+* [How can I use Weka with Matlab or Octave?](faqs/how_can_i_use_weka_with_matlab_or_octave.md)
 
 
 # Customizing Weka

@@ -21,8 +21,8 @@ Articles still to migrate:
 * Can I compile WEKA into native code_
 * ~~Can I make a screenshot of a plot or graph directly in WEKA_~~
 * Can I process UTF-8 datasets or files_
-* Can I run an experiment using clusterers in the Experimenter_
-* Can I tune the parameters of a classifier_
+* ~~Can I run an experiment using clusterers in the Experimenter_~~
+* ~~Can I tune the parameters of a classifier_~~
 * ~~Can I use CSV files_~~
 * ~~Can I use WEKA for time series analysis_~~
 * Can I use WEKA from C-sharp_
@@ -85,15 +85,15 @@ Articles still to migrate:
 * ~~How are packages structured for the package management system_~~
 * How can I contribute to WEKA_
 * ~~How can I perform multi-instance learning in WEKA_~~
-* How can I track instances in WEKA_
-* How can I use transactional data in Weka_
-* How can I use Weka with Matlab or Octave_
+* ~~How can I track instances in WEKA_~~
+* ~~How can I use transactional data in Weka_~~
+* ~~How can I use Weka with Matlab or Octave_~~
 * How do I add a new classifier, filter, kernel, etc
 * How do I compile WEKA_
-* How do I connect to a database_
+* ~~How do I connect to a database_~~
 * ~~How do I divide a dataset into training and test set_~~
 * ~~How do I generate compatible train and test sets that get processed with a filter_~~
-* How do I generate Learning curves_
+* ~~How do I generate Learning curves_~~
 * How do I get the latest bugfixes_
 * ~~How do I make predictions with a trained model_~~
 * How do I modify the CLASSPATH_
@@ -104,17 +104,17 @@ Articles still to migrate:
 * ~~How do I perform one-class classification_~~
 * ~~How do I perform text classification_~~
 * How do I run the Windows Weka installer in silent mode_
-* How do I use ID attributes_
+* ~~How do I use ID attributes_~~
 * How do I use libsvm in WEKA_
 * How do I use the associator GeneralizedSequentialPatterns_
 * ~~How do I use the package manager_~~
-* How do I use WEKA from command line_
+* ~~How do I use WEKA from command line_~~
 * How do I use WEKA's classes in my own code_
 * How do I write a new classifier or filter_
 * How to get the latest bugfixes_
 * How to run Weka schemes from commandline
 * I cannot process large datasets - any ideas_
-* I have unbalanced data - now what_
+* ~~I have unbalanced data - now what_~~
 * IKVM with Weka tutorial
 * Instance ID
 * J48-Weighter patch
@@ -205,7 +205,7 @@ Articles still to migrate:
 * weka_core_logging_Logging.props
 * Weka download problems
 * ~~Weka Examples~~
-* weka_experiment_DatabaseUtils.props
+* ~~weka_experiment_DatabaseUtils.props~~
 * Weka For Newbies
 * weka_gui_beans_Beans.props
 * weka_gui_experiment_Experimenter.props
@@ -228,7 +228,7 @@ Articles still to migrate:
 * ~~What is CVS and what do I need to do to access it_~~
 * What is Subversion and what do I need to do to access it_
 * ~~What's the difference between book, stable-3.6 and developer version_~~
-* Where can I find information regarding ROC curves_
+* ~~Where can I find information regarding ROC curves_~~
 * ~~Where can I get old versions of WEKA_~~
 * Where can I get WEKA's source code_
 * Where does WEKA look for .props files_
