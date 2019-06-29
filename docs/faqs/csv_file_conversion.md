@@ -2,4 +2,4 @@ Either load the CSV file in the Explorer or use the CSV converter on the command
 ```bash
  java weka.core.converters.CSVLoader filename.csv > filename.arff
 ```
-See also the [Converting CSV to ARFF](../converting_csv_to_arff.md) article and FAQ [Can I use CSV files?](can_i_use_csv_files.md).
+See also the [Converting CSV to ARFF](../converting_csv_to_arff.md) article and FAQ [Can I use CSV files?](use_csv_files.md).

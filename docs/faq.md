@@ -48,30 +48,30 @@
 
 # Customizing Weka
 
-* Can I change the colors (background, axes, etc.) of the plots in WEKA?
-* How do I add a new classifier, filter, kernel, etc
+* [Can I change the colors (background, axes, etc.) of the plots in WEKA?](faqs/can_i_change_the_colors_background_axes_etc_of_the_plots_in_weka.md)
+* [How do I add a new classifier, filter, kernel, etc](faqs/how_do_i_add_a_new_classifier_filter_kernel_etc.md)
 
 
 # Using third-party tools
 
-* How do I use libsvm in WEKA?
-* The snowball stemmers don't work, what am I doing wrong?
+* [How do I use libsvm in WEKA?](faqs/how_do_i_use_libsvm_in_weka.md)
+* [The snowball stemmers don't work, what am I doing wrong?](faqs/the_snowball_stemmers_dont_work_what_am_i_doing_wrong.md)
 
 
 # Developing with WEKA
 
-* Where can I get WEKA's source code?
-* How do I compile WEKA?
-* What is Subversion and what do I need to do to access it?
-* How do I use WEKA's classes in my own code?
-* How do I write a new classifier or filter?
-* Can I compile WEKA into native code?
-* Can I use WEKA from C#?
-* Can I use WEKA from Python?
-* Can I use WEKA from Groovy?
-* Serialization is nice, but what about generating actual Java code from WEKA classes?
+* [Where can I get WEKA's source code?](faqs/where_can_i_get_wekas_source_code.md)
+* [How do I compile WEKA?](faqs/how_do_i_compile_weka.md)
+* [What is Subversion and what do I need to do to access it?](faqs/what_is_subversion_and_what_do_i_need_to_do_to_access_it.md)
+* [How do I use WEKA's classes in my own code?](faqs/how_do_i_use_wekas_classes_in_my_own_code.md)
+* [How do I write a new classifier or filter?](faqs/how_do_i_write_a_new_classifier_or_filter.md)
+* [Can I compile WEKA into native code?](faqs/can_i_compile_weka_into_native_code.md)
+* [Can I use WEKA from C#?](faqs/can_i_use_weka_from_c_sharp.md)
+* [Can I use WEKA from Python?](faqs/can_i_use_weka_from_python.md)
+* [Can I use WEKA from Groovy?](faqs/can_i_use_weka_from_groovy.md)
+* [Serialization is nice, but what about generating actual Java code from WEKA classes?](faqs/serialization_is_nice_but_what_about_generating_actual_java_code_from_weka_classes.md)
 * [How are packages structured for the package management system?](packages/index.md)
-* Pluggable evaluation metrics for classification/regression
+* [Pluggable evaluation metrics for classification/regression](faqs/pluggable_evaluation_metrics.md)
 * [How can I contribute to WEKA?](faqs/contribution.md)
 
 

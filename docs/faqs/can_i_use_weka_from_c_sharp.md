@@ -1,0 +1,1 @@
+Yes, you can. Read the [Use WEKA with the Microsoft .NET Framework](../use_weka_with_the_microsoft_net_framework.md) article for more information. There is also a tutorial for IKVM [available](../ikvm_with_weka_tutorial.md).

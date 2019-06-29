@@ -1,0 +1,1 @@
+Every WEKA release comes with a jar archive (this is just a simple ZIP archive) that contains the complete sources. It is called `weka-src.jar`. Alternatively, you can get WEKA's source code also from [Subversion](../subversion.md).

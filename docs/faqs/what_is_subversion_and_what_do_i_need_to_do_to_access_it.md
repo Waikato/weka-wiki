@@ -1,0 +1,1 @@
+[Subversion](http://en.wikipedia.org/wiki/subversion_%28software%29) is the [version control system](http://en.wikipedia.org/wiki/revision_control) that we use nowadays for WEKA's source code. See the [Subversion](../subversion.md) article from more information of how to access the repository and retrieve the source code from there.

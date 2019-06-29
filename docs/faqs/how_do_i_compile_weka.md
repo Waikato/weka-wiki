@@ -1,0 +1,1 @@
+You can compile the source code simply with any (Sun-compliant) java compiler, or use ant, or an IDE. Check out the article about [Compiling WEKA](../compiling_weka.md), which contains links to further articles, covering topics about [ant](../ant.md) and [IDEs](https://waikato.github.io/weka-wiki/search.html?q=ide) (e.g., [Eclipse](../eclipse.md) or [NetBeans](../netbeans.md)).

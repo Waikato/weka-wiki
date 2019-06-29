@@ -1,0 +1,1 @@
+When you're trying to use the Snowball stemmers in the StringToWordVector nothing happens and you get the message *Stemmer 'porter' unknown!* in the console. If this happens, you don't have the snowball classes in your classpath. Check out the article about the [Stemmers](../stemmers.md) for how to add the snowball stemmers to WEKA.

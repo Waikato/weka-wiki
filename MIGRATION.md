@@ -15,19 +15,19 @@ Articles still to migrate:
 * ~~AUC~~
 * ~~Batch filtering~~
 * ~~Binarize Attribute~~
-* Can I change the colors (background, axes, etc.) of the plots in WEKA_
+* ~~Can I change the colors (background, axes, etc.) of the plots in WEKA_~~
 * ~~Can I check how much memory is available for WEKA_~~
 * ~~Can I check my CLASSPATH from within WEKA_~~
-* Can I compile WEKA into native code_
+* ~~Can I compile WEKA into native code_~~
 * ~~Can I make a screenshot of a plot or graph directly in WEKA_~~
 * Can I process UTF-8 datasets or files_
 * ~~Can I run an experiment using clusterers in the Experimenter_~~
 * ~~Can I tune the parameters of a classifier_~~
 * ~~Can I use CSV files_~~
 * ~~Can I use WEKA for time series analysis_~~
-* Can I use WEKA from C-sharp_
-* Can I use WEKA from Groovy_
-* Can I use WEKA from Python_
+* ~~Can I use WEKA from C-sharp_~~
+* ~~Can I use WEKA from Groovy_~~
+* ~~Can I use WEKA from Python_~~
 * ~~Can I use WEKA in commercial applications_~~
 * Changing the plot background
 * Classifiers
@@ -83,13 +83,13 @@ Articles still to migrate:
 * GUIChooser starts but not Experimenter or Explorer
 * ~~home~~
 * ~~How are packages structured for the package management system_~~
-* How can I contribute to WEKA_
+* ~~How can I contribute to WEKA_~~
 * ~~How can I perform multi-instance learning in WEKA_~~
 * ~~How can I track instances in WEKA_~~
 * ~~How can I use transactional data in Weka_~~
 * ~~How can I use Weka with Matlab or Octave_~~
-* How do I add a new classifier, filter, kernel, etc
-* How do I compile WEKA_
+* ~~How do I add a new classifier, filter, kernel, etc~~
+* ~~How do I compile WEKA_~~
 * ~~How do I connect to a database_~~
 * ~~How do I divide a dataset into training and test set_~~
 * ~~How do I generate compatible train and test sets that get processed with a filter_~~
@@ -105,11 +105,11 @@ Articles still to migrate:
 * ~~How do I perform text classification_~~
 * How do I run the Windows Weka installer in silent mode_
 * ~~How do I use ID attributes_~~
-* How do I use libsvm in WEKA_
+* ~~How do I use libsvm in WEKA_~~
 * How do I use the associator GeneralizedSequentialPatterns_
 * ~~How do I use the package manager_~~
 * ~~How do I use WEKA from command line_~~
-* How do I use WEKA's classes in my own code_
+* ~~How do I use WEKA's classes in my own code_~~
 * How do I write a new classifier or filter_
 * How to get the latest bugfixes_
 * How to run Weka schemes from commandline
@@ -149,7 +149,7 @@ Articles still to migrate:
 * Piqle
 * Plotting error rate for incremental classifier
 * ~~Plotting multiple ROC curves~~
-* Pluggable evaluation metrics
+* ~~Pluggable evaluation metrics~~
 * Primer
 * ~~Programmatic Use~~
 * PROMPT
@@ -168,7 +168,7 @@ Articles still to migrate:
 * ~~Save Instances to an ARFF File~~
 * Saving and loading models
 * ~~Serialization~~
-* Serialization is nice, but what about generating actual Java code from WEKA classes_
+* ~~Serialization is nice, but what about generating actual Java code from WEKA classes_~~
 * Single quotes in labels of ARFF files
 * ~~Snapshot~~
 * ~~Snapshots~~
@@ -179,7 +179,7 @@ Articles still to migrate:
 * ~~Subversion~~
 * Text categorization with Weka
 * Text classification with Weka
-* The snowball stemmers don't work, what am I doing wrong_
+* ~~The snowball stemmers don't work, what am I doing wrong_~~
 * Transferring an ARFF file into a database
 * ~~Troubleshooting~~ **needs linking to articles, though**
 * Trying to add JDBC driver... - Error, not in CLASSPATH_
@@ -226,11 +226,11 @@ Articles still to migrate:
 * ~~Weka package manager does not start~~
 * ~~What do those numbers mean in a J48 tree_~~
 * ~~What is CVS and what do I need to do to access it_~~
-* What is Subversion and what do I need to do to access it_
+* ~~What is Subversion and what do I need to do to access it_~~
 * ~~What's the difference between book, stable-3.6 and developer version_~~
 * ~~Where can I find information regarding ROC curves_~~
 * ~~Where can I get old versions of WEKA_~~
-* Where can I get WEKA's source code_
+* ~~Where can I get WEKA's source code_~~
 * Where does WEKA look for .props files_
 * Where is my home directory located_
 * Why am I missing certain nominal or string values from sparse instances_
