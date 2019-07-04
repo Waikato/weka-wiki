@@ -12,7 +12,7 @@ pages:
     - 'FAQ': faq.md
     - 'Not so FAQ': not_so_faq.md
     - 'Troubleshooting': troubleshooting.md
-    - 'Learning resources': learning_resources2.md
+    - 'Learning resources': learning_resources.md
     - 'Using the API': using_the_api.md
     - 'Extending Weka': extending_weka.md
     - 'ARFF Format': arff.md
