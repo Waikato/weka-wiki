@@ -20,7 +20,7 @@ Articles still to migrate:
 * ~~Can I check my CLASSPATH from within WEKA_~~
 * ~~Can I compile WEKA into native code_~~
 * ~~Can I make a screenshot of a plot or graph directly in WEKA_~~
-* Can I process UTF-8 datasets or files_
+* ~~Can I process UTF-8 datasets or files_~~
 * ~~Can I run an experiment using clusterers in the Experimenter_~~
 * ~~Can I tune the parameters of a classifier_~~
 * ~~Can I use CSV files_~~
@@ -42,7 +42,7 @@ Articles still to migrate:
 * ~~Converting CSV to ARFF~~
 * CostMatrix
 * CostSensitiveClassifier
-* Couldn't read from database - unknown data type
+* ~~Couldn't read from database - unknown data type~~
 * ~~Creating an ARFF file~~
 * ~~Creating Instances on-the-fly~~
 * ~~CSV file conversion~~
@@ -97,13 +97,13 @@ Articles still to migrate:
 * How do I get the latest bugfixes_
 * ~~How do I make predictions with a trained model_~~
 * How do I modify the CLASSPATH_
-* How do I modify the RunWeka.bat file_
+* ~~How do I modify the RunWeka.bat file_~~
 * ~~How do I perform attribute selection_~~
 * ~~How do I perform clustering_~~
 * ~~How do I perform cost-sensitive classification_~~
 * ~~How do I perform one-class classification_~~
 * ~~How do I perform text classification_~~
-* How do I run the Windows Weka installer in silent mode_
+* ~~How do I run the Windows Weka installer in silent mode_~~
 * ~~How do I use ID attributes_~~
 * ~~How do I use libsvm in WEKA_~~
 * How do I use the associator GeneralizedSequentialPatterns_
@@ -113,7 +113,7 @@ Articles still to migrate:
 * How do I write a new classifier or filter_
 * How to get the latest bugfixes_
 * How to run Weka schemes from commandline
-* I cannot process large datasets - any ideas_
+* ~~I cannot process large datasets - any ideas_~~
 * ~~I have unbalanced data - now what_~~
 * IKVM with Weka tutorial
 * Instance ID
@@ -173,7 +173,7 @@ Articles still to migrate:
 * ~~Snapshot~~
 * ~~Snapshots~~
 * Spaces in labels of ARFF files
-* StackOverflowError
+* ~~StackOverflowError~~
 * Stemmers
 * Stop word filtering and attributes
 * ~~Subversion~~
@@ -182,7 +182,7 @@ Articles still to migrate:
 * ~~The snowball stemmers don't work, what am I doing wrong_~~
 * Transferring an ARFF file into a database
 * ~~Troubleshooting~~ **needs linking to articles, though**
-* Trying to add JDBC driver... - Error, not in CLASSPATH_
+* ~~Trying to add JDBC driver... - Error, not in CLASSPATH_~~
 * Tuning classifier parameters
 * ~~Unofficial packages for WEKA~~
 * ~~Unofficial packages for WEKA 3.7~~
@@ -203,7 +203,7 @@ Articles still to migrate:
 * ~~Visualizing ROC curve~~
 * weka_core_Capabilities.props
 * weka_core_logging_Logging.props
-* Weka download problems
+* ~~Weka download problems~~
 * ~~Weka Examples~~
 * ~~weka_experiment_DatabaseUtils.props~~
 * Weka For Newbies
@@ -234,7 +234,7 @@ Articles still to migrate:
 * Where does WEKA look for .props files_
 * Where is my home directory located_
 * Why am I missing certain nominal or string values from sparse instances_
-* Why do I get the error message 'training and test set are not compatible'_
+* ~~Why do I get the error message 'training and test set are not compatible'_~~
 * Windows Databases
 * ~~Writing your own Classifier~~
 * ~~Writing your own Classifier (post 3.5.2)~~

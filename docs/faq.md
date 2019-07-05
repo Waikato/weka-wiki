@@ -78,20 +78,20 @@
 # Windows
 
 * [How do I modify the CLASSPATH?](classpath.md)
-* How do I modify the RunWeka.bat file?
-* Can I process UTF-8 datasets or files?
-* How do I run the Windows Weka installer in silent mode?
+* [How do I modify the RunWeka.bat file?](faqs/how_do_i_modify_the_runwekabat_file.md)
+* [Can I process UTF-8 datasets or files?](faqs/can_i_process_utf8_datasets_or_files.md)
+* [How do I run the Windows Weka installer in silent mode?](faqs/how_do_i_run_the_windows_weka_installer_in_silent_mode.md)
 
 
 # Troubleshooting
 
-* I have Weka download problems - what's going wrong?
+* [I have Weka download problems - what's going wrong?](faqs/weka_download_problems.md)
 * [My ARFF file doesn't load - why?](faqs/arff_does_not_load.md)
-* What does nominal value not declared in header, read Token[X], line Y mean?
+* [What does nominal value not declared in header, read Token[X], line Y mean?](faqs/arff_does_not_load.md#nominalvalue%not%declared%in%header,%read%Token[X],%line%Y)
 * [How do I get rid of this OutOfMemoryException?](faqs/OutOfMemoryException.md)
-* How do I deal with a StackOverflowError?
-* Why do I get the error message 'training and test set are not compatible'?
-* Couldn't read from database: unknown data type
-* Trying to add JDBC driver: ... - Error, not in CLASSPATH?
-* I cannot process large datasets - any ideas?
+* [How do I deal with a StackOverflowError?](faqs/stack_overflow_error.md)
+* [Why do I get the error message 'training and test set are not compatible'?](faqs/why_do_i_get_the_error_message_training_and_test_set_are_not_compatible.md)
+* [Couldn't read from database: unknown data type](faqs/couldnt_read_from_database_unknown_data_type.md)
+* [Trying to add JDBC driver: ... - Error, not in CLASSPATH?](faqs/trying_to_add_jdbc_driver_error_not_in_classpath.md)
+* [I cannot process large datasets - any ideas?](faqs/i_cannot_process_large_datasets_any_ideas.md)
 * See [Troubleshooting](troubleshooting.md) article for more troubleshooting.

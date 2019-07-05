@@ -1,0 +1,2 @@
+When you **download WEKA**, make sure that the resulting file size is the same as the WEKA webpage. Otherwise things won't work properly. Apparently some web browsers have trouble downloading WEKA.
+Also note, that the WEKA homepage only links to the files that are hosted on [sourceforge.net](http://sourceforge.net/). This normally involves a redirect to a mirror from which you'll download the actual file.
