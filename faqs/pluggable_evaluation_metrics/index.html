@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title> Pluggable evaluation metrics for classification/regression - Weka Wiki</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = " Pluggable evaluation metrics for classification/regression";
+    var mkdocs_page_input_path = "faqs/pluggable_evaluation_metrics.md";
+    var mkdocs_page_url = "/faqs/pluggable_evaluation_metrics/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> Weka Wiki</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Resources</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../faq/">FAQ</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../not_so_faq/">Not so FAQ</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../troubleshooting/">Troubleshooting</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../learning_resources/">Learning resources</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../using_the_api/">Using the API</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../extending_weka/">Extending Weka</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../arff/">ARFF Format</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../packages/">Packages</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../mailing_list/">Mailing list</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#classes-and-interfaces">Classes and interfaces</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#wekaclassifiersevaluationstandardevaluationmetric">weka.classifiers.evaluation.StandardEvaluationMetric</a></li>
+        
+            <li><a class="toctree-l3" href="#wekaclassifiersevaluationinformationtheoreticevaluationmetric">weka.classifiers.evaluation.InformationTheoreticEvaluationMetric</a></li>
+        
+            <li><a class="toctree-l3" href="#wekaclassifiersevaluationinformationretrievalmetric">weka.classifiers.evaluation.InformationRetrievalMetric</a></li>
+        
+            <li><a class="toctree-l3" href="#wekaclassifiersevaluationintervalbasedevaluationmetric">weka.classifiers.evaluation.IntervalBasedEvaluationMetric</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">Weka Wiki</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li> Pluggable evaluation metrics for classification/regression</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p>WEKA 3.7.8 (and nightly snapshots of the developer branch of WEKA from 15-11-2012) has a mechanism to allow new classification and regression evaluation metrics to be added as plugins. The new metrics will be output, along with WEKA's standard set of evaluation metrics, in the output generated on the command line, in the Explorer's Classify panel and by the Knowledge Flow's ClassifierPerformanceEvaluator component. Furthermore, new plugin metrics are also available for analysis in the Experimenter.</p>
+<p>Previously, adding a new evaluation metric involved editing and recompiling the monolithic weka.classifiers.Evaluation class - a shudder-worthy undertaking at the best of times. With the new plugin mechanism it is easy to add a new metric and deploy it via the package management system. The "Additional configuration files" section of <a href="../../packages/structure/">How are packages structured for the package management system?</a> details how to tell the PluginManager class about your new plugin evaluation metric.</p>
+<h1 id="classes-and-interfaces">Classes and interfaces</h1>
+<p>The main base class for all new metrics is <code>weka.classifiers.evaluation.AbstractEvaluationMetric</code>. This class requires the following methods to be implemented by concrete sub classes:</p>
+<ul>
+<li><code>boolean appliesToNominalClass()</code> - true if the stats computed by this metric apply to nominal class problems</li>
+<li><code>boolean appliesToNumericClass()</code> - true if the stats computed by this metric apply to numeric class problems</li>
+<li><code>String getMetricName()</code> - return the name of the metric</li>
+<li><code>String getMetricDescription()</code> - return a short description of the metric</li>
+<li><code>List&lt;String&gt; getStatisticNames()</code> - return a list of statistics that this metric computes (e.g. a "correct" metric might return both the number correctly classified and the percentage correct)</li>
+<li><code>double getStatistic(String statName)</code> - get the computed value for the named statistic</li>
+</ul>
+<p>To facilitate computing statistics, the main Evaluation object (who's class now lives in weka.classifiers.evaluation) will pass a reference to itself to all plugin metrics when it is first constructed. Therefore, a plugin metric has access to all the protected fields in the Evaluation class, and can use these when computing it's own statistic(s).</p>
+<p>Beyond extending <code>AbstractEvaluationMetric</code>, a plugin metric will also need to implement one of the following interfaces:</p>
+<h2 id="wekaclassifiersevaluationstandardevaluationmetric"><code>weka.classifiers.evaluation.StandardEvaluationMetric</code></h2>
+<p>Interface for a "standard" evaluation metric - i.e. one that would be part of the normal output in WEKA without having to turn on specific display options.</p>
+<p>It defines the following methods</p>
+<ul>
+<li><code>String toSummaryString()</code> - return a formatted string (suitable for displaying in the console or GUI output) that contains all the statistics that this metric computes</li>
+<li><code>void updateStatsForClassifier(double[] predictedDistribution, Instance instance)</code> - updates the statistics about a classifiers performance for the current test instance. Gets called when the class is nominal. Implementers need only implement this method if it is not possible to compute their statistics from what is stored in the base Evaluation object.</li>
+<li><code>void updateStatsForPredictor(double predictedValue, Instance instance)</code> -  updates the statistics about a predictors performance for the current test instance. Gets called when the class is numeric. Implementers need only implement this method if it is not possible to compute their statistics from what is stored in the base Evaluation object.</li>
+</ul>
+<h2 id="wekaclassifiersevaluationinformationtheoreticevaluationmetric"><code>weka.classifiers.evaluation.InformationTheoreticEvaluationMetric</code></h2>
+<p>Interface for information theoretic evaluation metrics to implement. Allows the command line interface to display these metrics or not based on user-supplied options.</p>
+<p>It defines the following methods</p>
+<ul>
+<li><code>String toSummaryString()</code> - return a formatted string (suitable for displaying in the console or GUI output) that contains all the statistics that this metric computes</li>
+<li><code>void updateStatsForClassifier(double[] predictedDistribution, Instance instance)</code> - updates the statistics about a classifiers performance for the current test instance. Gets called when the class is nominal. Implementers need only implement this method if it is not possible to compute their statistics from what is stored in the base Evaluation object.</li>
+<li><code>void updateStatsForPredictor(double predictedValue, Instance instance)</code> -  updates the statistics about a predictors performance for the current test instance. Gets called when the class is numeric. Implementers need only implement this method if it is not possible to compute their statistics from what is stored in the base Evaluation object.</li>
+<li><code>void updateStatsForConditionalDensityEstimator(ConditionalDensityEstimator classifier, Instance classMissing, double classValue)</code> -  updates stats for conditional density estimator based on current test instance. Gets called when the class is numeric and the classifier is a ConditionalDensityEstimators. Implementers need only implement this method if it is not possible to compute their statistics from what is stored in the base Evaluation object.</li>
+</ul>
+<h2 id="wekaclassifiersevaluationinformationretrievalmetric"><code>weka.classifiers.evaluation.InformationRetrievalMetric</code></h2>
+<p>An interface for information retrieval evaluation metrics to implement. Allows the command line interface to display these metrics or not based on user-supplied options. These statistics will be displayed as new columns in the table of information retrieval statistics. As such, a toSummaryString() formatted representation is not required.</p>
+<p>It defines the following methods</p>
+<ul>
+<li><code>void updateStatsForClassifier(double[] predictedDistribution, Instance instance)</code> - updates the statistics about a classifiers performance for the current test instance. Gets called when the class is nominal. Implementers need only implement this method if it is not possible to compute their statistics from what is stored in the base Evaluation object.</li>
+<li><code>double getStatistic(String name, int classIndex)</code> - get the value of the named statistic for the given class index. If the implementing class is extending AbstractEvaluationMetric then the implementation of getStatistic(String statName) should just call this method with a classIndex of 0.</li>
+<li><code>double getClassWeightedAverageStatistic(String statName)</code> - get the weighted (by class) average for this statistic.</li>
+</ul>
+<h2 id="wekaclassifiersevaluationintervalbasedevaluationmetric"><code>weka.classifiers.evaluation.IntervalBasedEvaluationMetric</code></h2>
+<p>Primarily a marker interface for interval-based evaluation metrics to implement. Allows the command line interface to display these metrics or not based on user-supplied options.</p>
+<p>It defines the following methods</p>
+<ul>
+<li><code>String toSummaryString()</code> - return a formatted string (suitable for displaying in the console or GUI output) that contains all the statistics that this metric computes</li>
+<li><code>void updateStatsForIntervalEstimator(IntervalEstimator classifier, Instance instance, double classValue)</code> - updates stats for interval estimator based on current test instance. Implementers need only implement this method if it is not possible to compute their statistics from what is stored in the base Evaluation object.</li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../contribution/" class="btn btn-neutral float-right" title=" How can I contribute to WEKA?">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../../packages/" class="btn btn-neutral" title=" How are packages structured for the package management system?"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../../packages/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../contribution/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/require.js"></script>
+      <script src="../../search/search.js"></script>
+
+</body>
+</html>
