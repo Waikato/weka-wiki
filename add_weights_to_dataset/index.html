@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title> Add weights to dataset - Weka Wiki</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = " Add weights to dataset";
+    var mkdocs_page_input_path = "add_weights_to_dataset.md";
+    var mkdocs_page_url = "/add_weights_to_dataset/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Weka Wiki</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Resources</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../faq/">FAQ</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../not_so_faq/">Not so FAQ</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../troubleshooting/">Troubleshooting</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../learning_resources/">Learning resources</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../using_the_api/">Using the API</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../extending_weka/">Extending Weka</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../arff/">ARFF Format</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../packages/">Packages</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../mailing_list/">Mailing list</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#add-arbitrary-weights">Add arbitrary weights</a></li>
+    
+
+    <li class="toctree-l2"><a href="#add-weights-stored-in-an-external-file">Add weights stored in an external file</a></li>
+    
+
+    <li class="toctree-l2"><a href="#add-weights-stored-in-the-attribute">Add weights stored in the attribute</a></li>
+    
+
+    <li class="toctree-l2"><a href="#download">Download</a></li>
+    
+
+    <li class="toctree-l2"><a href="#see-also">See also</a></li>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Weka Wiki</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li> Add weights to dataset</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p>The following examples show how to add weights to normal datasets and save them in the new XRFF data format. A version of Weka later than 3.5.3 (or the code from <a href="../subversion/">Subversion</a>) is necessary for this code to work.</p>
+<h1 id="add-arbitrary-weights">Add arbitrary weights</h1>
+<pre><code class="java"> import weka.core.converters.ConverterUtils.DataSource;
+ import weka.core.converters.XRFFSaver;
+ import weka.core.Instances;
+
+ import java.io.File;
+
+ /**
+  * Loads file &quot;args[0]&quot;, sets class if necessary (in that case the last 
+  * attribute), adds some test weights and saves it as XRFF file
+  * under &quot;args[1]&quot;. E.g.: 
+&lt;br/&gt;
+  *   AddWeights anneal.arff anneal.xrff.gz
+  *
+  * @author FracPete (fracpete at waikato dot ac dot nz)
+  */
+ public class AddWeights {
+   public static void main(String[] args) throws Exception {
+     * load data
+     DataSource source = new DataSource(args[0]);
+     Instances data = source.getDataSet();
+     if (data.classIndex() == -1)
+       data.setClassIndex(data.numAttributes() - 1);
+
+     * set weights
+     double factor = 0.5  / (double) data.numInstances();
+     for (int i = 0; i &lt; data.numInstances(); i++) {
+       data.instance(i).setWeight(0.5 + factor*i);
+     }
+
+     // save data
+     XRFFSaver saver = new XRFFSaver();
+     saver.setFile(new File(args[1]));
+     saver.setInstances(data);
+     saver.writeBatch();
+   }
+ }
+</code></pre>
+
+<h1 id="add-weights-stored-in-an-external-file">Add weights stored in an external file</h1>
+<pre><code class="java"> import weka.core.converters.ConverterUtils.DataSource;
+ import weka.core.converters.XRFFSaver;
+ import weka.core.Instances;
+
+ import java.io.BufferedReader;
+ import java.io.File;
+ import java.io.FileReader;
+
+ /**
+  * Loads file &quot;args[0]&quot; (can be ARFF, CSV, C4.5, etc.), sets class if necessary
+  * (in that case the last attribute), adds weights from &quot;args[1]&quot; (one weight
+  * per line) and saves it as XRFF file under &quot;args[2]&quot;. E.g.: 
+&lt;br/&gt;
+  *   AddWeightsFromFile anneal.arff weights.txt anneal.xrff.gz
+  *
+  * @author FracPete (fracpete at waikato dot ac dot nz)
+  */
+ public class AddWeightsFromFile {
+   public static void main(String[] args) throws Exception {
+     * load data
+     DataSource source = new DataSource(args[0]);
+     Instances data = source.getDataSet();
+     if (data.classIndex() == -1)
+       data.setClassIndex(data.numAttributes() - 1);
+
+     * read and set weights
+     BufferedReader reader = new BufferedReader(new FileReader(args[1]));
+     for (int i = 0; i &lt; data.numInstances(); i++) {
+       String line = reader.readLine();
+       double weight = Double.parseDouble(line);
+       data.instance(i).setWeight(weight);
+     }
+     reader.close();
+
+     // save data
+     XRFFSaver saver = new XRFFSaver();
+     saver.setFile(new File(args[2]));
+     saver.setInstances(data);
+     saver.writeBatch();
+   }
+ }
+</code></pre>
+
+<h1 id="add-weights-stored-in-the-attribute">Add weights stored in the attribute</h1>
+<pre><code class="java"> import weka.core.converters.ConverterUtils.DataSource;
+ import weka.core.converters.XRFFSaver;
+ import weka.core.Instances; 
+
+ import java.io.File;
+
+ /**
+  * Loads file &quot;args[0]&quot;, Adds weight given in attribute with
+  * index &quot;args[1]&quot; - 1, deletes this attribute.
+  * sets class if necessary (in that case the last 
+  * attribute) and saves it as XRFF file
+  * under &quot;args[2]&quot;. E.g.: 
+&lt;br/&gt;
+  *   AddWeightsFromAtt file.arff 2 file.xrff.gz
+  *
+  * @author FracPete (fracpete at waikato dot ac dot nz)
+  * @author gabi (gs23 at waikato dot ac dot nz)
+  */
+ public class AddWeightsFromAtt {
+   public static void main(String[] args) throws Exception {
+     * load data
+     DataSource source = new DataSource(args[0]);
+     Instances data = source.getDataSet(); 
+
+     * get weight index
+     int wIndex = Integer.parseInt(args[1]) - 1;
+
+     * set weights
+     for (int i = 0; i &lt; data.numInstances(); i++) {
+       double weight = data.instance(i).value(wIndex);
+       data.instance(i).setWeight(weight);
+     }
+
+     * delete weight attribute and set class index
+     data.deleteAttributeAt(wIndex);
+     if (data.classIndex() == -1)
+       data.setClassIndex(data.numAttributes() - 1);
+
+     * save data
+     XRFFSaver saver = new XRFFSaver();
+     saver.setFile(new File(args[2]));
+     saver.setInstances(data);
+     saver.writeBatch();
+   }
+ }
+</code></pre>
+
+<h1 id="download">Download</h1>
+<ul>
+<li><a href="../files/AddWeights.java">AddWeights.java</a></li>
+<li><a href="../files/AddWeightsFromFile.java">AddWeightsFromFile.java</a></li>
+<li><a href="../files/AddWeightsFromAtt.java">AddWeightsFromAtt.java</a></li>
+</ul>
+<h1 id="see-also">See also</h1>
+<ul>
+<li><a href="../subversion/">Subversion</a></li>
+<li>The unofficial Weka package <a href="https://github.com/fracpete/dataset-weights-weka-package">dataset-weights</a> allows you to modify attribute/instance weights using filters - no coding required</li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../adding_tabs_in_the_explorer/" class="btn btn-neutral float-right" title=" Adding tabs in the Explorer">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../writing_filter/" class="btn btn-neutral" title=" Writing your own Filter"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../writing_filter/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../adding_tabs_in_the_explorer/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/require.js"></script>
+      <script src="../search/search.js"></script>
+
+</body>
+</html>

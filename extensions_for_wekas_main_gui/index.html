@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title> Extensions for WEKAs main GUI - Weka Wiki</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = " Extensions for WEKAs main GUI";
+    var mkdocs_page_input_path = "extensions_for_wekas_main_gui.md";
+    var mkdocs_page_url = "/extensions_for_wekas_main_gui/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Weka Wiki</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Resources</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../faq/">FAQ</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../not_so_faq/">Not so FAQ</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../troubleshooting/">Troubleshooting</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../learning_resources/">Learning resources</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../using_the_api/">Using the API</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../extending_weka/">Extending Weka</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../arff/">ARFF Format</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../packages/">Packages</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../mailing_list/">Mailing list</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#description">Description</a></li>
+    
+
+    <li class="toctree-l2"><a href="#version">Version</a></li>
+    
+
+    <li class="toctree-l2"><a href="#requirements">Requirements</a></li>
+    
+
+    <li class="toctree-l2"><a href="#examples">Examples</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#launching-a-browser">Launching a browser</a></li>
+        
+            <li><a class="toctree-l3" href="#sql-worksheet">SQL Worksheet</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l2"><a href="#downloads">Downloads</a></li>
+    
+
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Weka Wiki</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li> Extensions for WEKAs main GUI</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="description">Description</h1>
+<p>The main GUI (= <code>weka.gui.Main</code>) contains a plugin mechanism to add functionality to the main menu without having to modify the code of that class (the GUIChooser in the developer version as well). Thanks to the automatic class discovery, Weka will display all components that are found in packages listed in the <a href="weka_gui_genericpropertiescreator.props.md">GenericPropertiesCreator.props</a> file.</p>
+<h1 id="version">Version</h1>
+<blockquote>
+<p>3.5.5 (or <a href="../snapshots/">snapshot</a>/<a href="../subversion/">Subversion</a> after 25/05/2007)</p>
+</blockquote>
+<h1 id="requirements">Requirements</h1>
+<p>The are only <em>two</em> requirements for components to be listed in the main menu (under the <em>Extensions</em> menu):</p>
+<ul>
+<li>they have to implement the <code>weka.gui.MainMenuExtension</code> interface</li>
+<li>the packages they reside in must be listed in the <a href="weka_gui_genericpropertiescreator.props.md">GenericPropertiesCreator.props</a> under the <code>weka.gui.MainMenuExtension</code> entry</li>
+</ul>
+<h1 id="examples">Examples</h1>
+<p>In the following, I'll present two really simple examples of how to add <em>stuff</em> to the main menu. An item that gets added to the main menu either handles everything itself, i.e., creating frame and displaying it, or it needs a frame to place its GUI components in. In the first case, one only needs to let the <code>getActionListener(JFrame)</code> method return an <code>ActionListener</code> and implement the <code>fillFrame(Component)</code> method with an empty body. In the other case, one lets the <code>getActionListener(JFrame)</code> method return <code>null</code> and uses the <code>fillFrame(Component)</code> method to fill the frame with life.</p>
+<h2 id="launching-a-browser">Launching a browser</h2>
+<p>Launching a browser with the Weka homepage is a really example, since one only needs to use the <code>weka.gui.BrowserHelper</code> class to launch a browser with a specific URL. Since we don't need a frame for this, we don't add any functionality to the <code>fillFrame(Component)</code>, but only let the <code>getActionListener(JFrame)</code> method return an <code>ActionListener</code> that launches the browser with the Weka homepage. The <a href="../files/StartBrowser.java">StartBrowser.java</a> extension will be listed in the sub-menu <em>Internet</em> as <em>Start browser</em>.</p>
+<pre><code class="java">  public String getSubmenuTitle() {
+    return &quot;Internet&quot;;
+  }
+
+  public String getMenuTitle() {
+    return &quot;Start browser&quot;;
+  }
+
+  public ActionListener getActionListener(JFrame owner) {
+    final JFrame finalOwner = owner;
+
+    ActionListener result = new ActionListener() {
+      public void actionPerformed(ActionEvent evt) {
+    BrowserHelper.openURL(finalOwner, &quot;http://www.cs.waikato.ac.nz/~ml/weka/&quot;);
+      }
+    };
+
+    return result;
+  }
+
+  public void fillFrame(Component frame) {
+  }
+</code></pre>
+
+<p>Since the class is part of the <code>weka.gui.extensions</code> package, we must add this package to the <code>weka.gui.MainMenuExtension</code> entry of the <a href="weka_gui_genericpropertiescreator.props.md">GenericPropertiesCreator.props</a> file, e.g.:</p>
+<pre><code class="ini"> weka.gui.MainMenuExtension=\
+  weka.gui.extensions
+</code></pre>
+
+<h2 id="sql-worksheet">SQL Worksheet</h2>
+<p>The <a href="../files/SqlWorksheet.java">SqlWorksheet.java</a> mode, one needs to take care of to check for <code>JFrame</code> and <code>JInternalFrame</code> as ancestor of the frame that is being passed through. The method only instantiates an <code>SqlViewer</code> panel, places it in the center of the frame, resizes the frame to 800x600 and moves it into the center of the screen.</p>
+<pre><code class="java">  public String getSubmenuTitle() {
+    return null;
+  }
+
+  public String getMenuTitle() {
+    return &quot;SQL Worksheet&quot;;
+  }
+
+  public ActionListener getActionListener(JFrame owner) {
+    return null;
+  }
+
+  public void fillFrame(Component frame) {
+    SqlViewer sql = new SqlViewer(null);
+
+    * add sql viewer component
+    if (frame instanceof JFrame) {
+      JFrame f = (JFrame) frame;
+      f.setLayout(new BorderLayout());
+      f.add(sql, BorderLayout.CENTER);
+      f.pack();
+    }
+    else if (frame instanceof JInternalFrame) {
+      JInternalFrame f = (JInternalFrame) frame;
+      f.setLayout(new BorderLayout());
+      f.add(sql, BorderLayout.CENTER);
+      f.pack();
+    }
+
+    * size + location (= centered)
+    frame.setSize(800, 600);
+    frame.validate();
+    int screenHeight = frame.getGraphicsConfiguration().getBounds().height;
+    int screenWidth  = frame.getGraphicsConfiguration().getBounds().width;
+    frame.setLocation(
+      (screenWidth - frame.getBounds().width) / 2,
+      (screenHeight - frame.getBounds().height) / 2);
+  }
+</code></pre>
+
+<p>This class is part of the <code>weka.gui.extensions</code> package and we therefore must add this package to the <code>weka.gui.MainMenuExtension</code> entry of the <a href="weka_gui_genericpropertiescreator.props.md">GenericPropertiesCreator.props</a> file:</p>
+<pre><code class="ini"> weka.gui.MainMenuExtension=\
+  weka.gui.extensions
+</code></pre>
+
+<h1 id="downloads">Downloads</h1>
+<ul>
+<li><a href="../files/StartBrowser.java">StartBrowser.java</a></li>
+<li><a href="../files/SqlWorksheet.java">SqlWorksheet.java</a></li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../exporting_charts_from_the_knowledge_flow/" class="btn btn-neutral" title=" Exporting Charts from the Knowledge Flow"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../exporting_charts_from_the_knowledge_flow/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/require.js"></script>
+      <script src="../search/search.js"></script>
+
+</body>
+</html>
