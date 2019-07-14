@@ -17,7 +17,7 @@ Hi,
  2     5       5        7
 ```
 
-In WEKA 3.7.2 there is a package called [denormalize](@http://weka.sourceforge.net/packageMetaData/denormalize/index.html) that contains a filter for flattening transactional data. The first thing you'd have to do to your example above is to convert it into an ARFF file:
+In WEKA 3.7.2 there is a package called [denormalize](http://weka.sourceforge.net/packageMetaData/denormalize/index.html) that contains a filter for flattening transactional data. The first thing you'd have to do to your example above is to convert it into an ARFF file:
 
 ```text
 @relation test

@@ -20,4 +20,4 @@ For more details see the following articles:
 The following FAQs could be of interest as well:
 
 * [Couldn't read from database: unknown data type](couldnt_read_from_database_unknown_data_type.md)
-* [Trying to add JDBC driver: ... - Error, not in CLASSPATH?](trying_to_add_jdbc_driver..._error_not_in_classpath.md)
+* [Trying to add JDBC driver: ... - Error, not in CLASSPATH?](trying_to_add_jdbc_driver_error_not_in_classpath.md)

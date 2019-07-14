@@ -139,3 +139,25 @@ pages:
   - ' Writing your own Classifier': writing_classifier.md
   - ' Writing your own Filter': writing_filter.md
 
+
+  - ' Add weights to dataset' : add_weights_to_dataset.md
+  - ' Adding tabs in the Explorer' : adding_tabs_in_the_explorer.md
+  - ' Changing the plot background' : changing_the_plot_background.md
+  # - ' Classifiers' : classifiers.md
+  - ' Classifying large datasets' : classifying_large_datasets.md
+  - ' CLASSPATH problems' : classpath_problems.md
+  - ' CostMatrix' : cost_matrix.md
+  - ' CostSensitiveClassifier' : cost_sensitive_classifier.md
+  - ' Datasets' : datasets.md
+  - ' Discretizing Datasets' : discretizing_datasets.md
+  - ' Displaying results of cross-validation folds' : displaying_results_of_cross_validation_folds.md
+  - ' Document Classification' : document_classification.md
+  - ' Ensemble Selection' : ensemble_selection.md
+  - ' Explorer error visualization plugins' : explorer_error_visualization_plugins.md
+  - ' Explorer graph visualization plugins' : explorer_graph_visualization_plugins.md
+  - ' Explorer prediction visualization plugins' : explorer_prediction_visualization_plugins.md
+  - ' Explorer tree visualization plugins' : explorer_tree_visualization_plugins.md
+  - ' Explorer visualization plugins' : explorer_visualization_plugins.md
+  - ' Exporting Charts from the Knowledge Flow' : exporting_charts_from_the_knowledge_flow.md
+  - ' Extensions for WEKAs main GUI' : extensions_for_wekas_main_gui.md
+

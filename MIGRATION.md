@@ -1,8 +1,8 @@
 Articles still to migrate:
 
 * ~~Adding attributes to a dataset~~
-* Adding tabs in the Explorer
-* Add weights to dataset
+* ~~Adding tabs in the Explorer~~
+* ~~Add weights to dataset~~
 * ~~ANT~~
 * ~~Area under the curve~~
 * ~~ARFF~~
@@ -29,9 +29,9 @@ Articles still to migrate:
 * ~~Can I use WEKA from Groovy_~~
 * ~~Can I use WEKA from Python_~~
 * ~~Can I use WEKA in commercial applications_~~
-* Changing the plot background
-* Classifiers
-* Classifying large datasets
+* ~~Changing the plot background~~
+* Classifiers **Requires re-writing for Markdown and GitHub**
+* ~~Classifying large datasets~~
 * ~~CLASSPATH~~
 * CLASSPATH problems
 * ~~Command redirection~~
@@ -40,30 +40,30 @@ Articles still to migrate:
 * ~~Compiling Weka with gcj (book version)~~
 * ~~Compiling Weka with gcj (developer version)~~
 * ~~Converting CSV to ARFF~~
-* CostMatrix
-* CostSensitiveClassifier
+* ~~CostMatrix~~
+* ~~CostSensitiveClassifier~~
 * ~~Couldn't read from database - unknown data type~~
 * ~~Creating an ARFF file~~
 * ~~Creating Instances on-the-fly~~
 * ~~CSV file conversion~~
 * ~~Databases~~
-* Datasets
-* Discretizing datasets
-* Displaying results of cross-validation folds
-* Document classification
+* ~~Datasets~~
+* ~~Discretizing datasets~~
+* ~~Displaying results of cross-validation folds~~
+* ~~Document classification~~
 * ~~Does WEKA support multi-label classification_~~
 * ~~Eclipse~~
 * ~~Eclipse 3.4.x~~
 * ~~Eclipse 3.4.x (Subversion)~~
 * ~~Eclipse 3.4.x (weka-src.jar)~~
-* Ensemble Selection
-* Explorer error visualization plugins
-* Explorer graph visualization plugins
-* Explorer prediction visualization plugins
-* Explorer tree visualization plugins
-* Explorer visualization plugins
-* Exporting Charts from the Knowledge Flow
-* Extensions for Weka's main GUI
+* ~~Ensemble Selection~~
+* ~~Explorer error visualization plugins~~
+* ~~Explorer graph visualization plugins~~
+* ~~Explorer prediction visualization plugins~~
+* ~~Explorer tree visualization plugins~~
+* ~~Explorer visualization plugins~~
+* ~~Exporting Charts from the Knowledge Flow~~
+* ~~Extensions for Weka's main GUI
 * ~~FAQ~~
 * Feature extraction from images
 * FilteredClassifierUpdateable

@@ -567,4 +567,4 @@ The following are a few sample classes for using various parts of the Weka API:
 # Links
 * Weka API
     * [Stable version](http://weka.sourceforge.net/doc.stable/)
-    * [Developer version]([http://weka.sourceforge.net/doc.dev/)
+    * [Developer version](http://weka.sourceforge.net/doc.dev/)

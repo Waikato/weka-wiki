@@ -1,4 +1,4 @@
-The following example class adds a *nominal* and a *numeric* attribute to the dataset identified by the filename given as first parameter. The second parameter defines whether the data is manipulated via the [Add](ttp://weka.sourceforge.net/doc.dev/weka/filters/unsupervised/attribute/Add.html) filter (= `filter`) or through the Weka API directly (= `java`).
+The following example class adds a *nominal* and a *numeric* attribute to the dataset identified by the filename given as first parameter. The second parameter defines whether the data is manipulated via the [Add](http://weka.sourceforge.net/doc.dev/weka/filters/unsupervised/attribute/Add.html) filter (= `filter`) or through the Weka API directly (= `java`).
 
 Usage:
 
@@ -100,4 +100,4 @@ Source code:
 * [Save Instances to an ARFF File](save_instances_to_arff.md) - if you want to save the output to a file instead of printing them to stdout
 
 # Downloads
-* [AddAttribute.java](files/AddAttribute.java) ([stable](ttps://svn.cms.waikato.ac.nz/svn/weka/branches/stable-3-8/wekaexamples/src/main/java/wekaexamples/filters/AddAttribute.java), [developer](https://svn.cms.waikato.ac.nz/svn/weka/trunk/wekaexamples/src/main/java/wekaexamples/filters/AddAttribute.java))
+* [AddAttribute.java](files/AddAttribute.java) ([stable](https://svn.cms.waikato.ac.nz/svn/weka/branches/stable-3-8/wekaexamples/src/main/java/wekaexamples/filters/AddAttribute.java), [developer](https://svn.cms.waikato.ac.nz/svn/weka/trunk/wekaexamples/src/main/java/wekaexamples/filters/AddAttribute.java))
