@@ -140,7 +140,7 @@ pages:
   - ' Writing your own Filter': writing_filter.md
 
 
-  - ' Add weights to dataset' : add_weights_to_dataset.md
+  - ' Add weights to dataset' : add_weights_to_dataset.md 
   - ' Adding tabs in the Explorer' : adding_tabs_in_the_explorer.md
   - ' Changing the plot background' : changing_the_plot_background.md
   # - ' Classifiers' : classifiers.md
@@ -160,4 +160,13 @@ pages:
   - ' Explorer visualization plugins' : explorer_visualization_plugins.md
   - ' Exporting Charts from the Knowledge Flow' : exporting_charts_from_the_knowledge_flow.md
   - ' Extensions for WEKAs main GUI' : extensions_for_wekas_main_gui.md
+
+  - ' GUIChooser starts but not Experimenter or Explorer' : gui_chooser_starts_but_not_experimenter_or_explorer.md
+  - ' Instance ID' : instance_id.md
+  - ' just-in-time (JIT) compiler' : just_in_time_jit_compiler.md
+  - ' KnowledgeFlow toolbars are empty' : knowledge_flow_toolbars_are_empty.md
+  - ' Memory consumption and Garbage collector' : memory_consumption_and_garbage_collector.md
+  - ' OSX Mountain Lion - Weka x-y-z is damaged and cannot be installed. You should eject the disk image' : osx_mountain_lion_weka_x_y_z_is_damaged_and_cant_be_installed_you_should_eject_the_disk_image.md
+  - ' Single quotes in labels of ARFF files' : single_quotes_in_labels_of_arff_files.md
+  - ' Spaces in labels of ARFF files' : spaces_in_labels_of_arff_files.md
 

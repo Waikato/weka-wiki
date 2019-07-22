@@ -80,7 +80,7 @@ Articles still to migrate:
 * GenericObjectEditor (book version)
 * GenericObjectEditor (developer version)
 * GPGPU
-* GUIChooser starts but not Experimenter or Explorer
+* ~~GUIChooser starts but not Experimenter or Explorer~~
 * ~~home~~
 * ~~How are packages structured for the package management system_~~
 * ~~How can I contribute to WEKA_~~
@@ -116,19 +116,19 @@ Articles still to migrate:
 * ~~I cannot process large datasets - any ideas_~~
 * ~~I have unbalanced data - now what_~~
 * IKVM with Weka tutorial
-* Instance ID
+* ~~Instance ID~~
 * J48-Weighter patch
 * Java Virtual Machine
-* just-in-time (JIT) compiler
+* ~~just-in-time (JIT) compiler~~
 * JVM
-* KnowledgeFlow toolbars are empty
+* ~~KnowledgeFlow toolbars are empty~~
 * Learning curves
 * ~~Learning Resources~~
 * LibSVM
 * Load an XML BIF file
 * Making predictions
 * Mathematical functions
-* Memory consumption and Garbage collector
+* ~~Memory consumption and Garbage collector~~
 * MessageClassifier
 * MetaCost
 * MS SQL Server 2000 (Desktop Engine)
@@ -140,7 +140,7 @@ Articles still to migrate:
 * ~~Not so FAQ~~
 * ~~Not So Frequently Asked Questions~~
 * Optimizing parameters
-* OSX Mountain Lion - Weka x-y-z is damaged and can't be installed. You should eject the disk image
+* ~~OSX Mountain Lion - Weka x-y-z is damaged and can't be installed. You should eject the disk image~~
 * ~~OutOfMemory~~
 * ~~OutOfMemoryException~~
 * ~~Packages~~
@@ -169,10 +169,10 @@ Articles still to migrate:
 * Saving and loading models
 * ~~Serialization~~
 * ~~Serialization is nice, but what about generating actual Java code from WEKA classes_~~
-* Single quotes in labels of ARFF files
+* ~~Single quotes in labels of ARFF files~~
 * ~~Snapshot~~
 * ~~Snapshots~~
-* Spaces in labels of ARFF files
+* ~~Spaces in labels of ARFF files~~
 * ~~StackOverflowError~~
 * Stemmers
 * Stop word filtering and attributes
