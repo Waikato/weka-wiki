@@ -1,0 +1,1 @@
+Mac OS X 10.8 (Mountain Lion) introduced a new security feature that, by default, limits "acceptable" applications to only those downloaded from the Mac App store. Thankfully, you can alter this in the system preferences. Go to "Security & Privacy" and change the "Allow applications downloaded from:" to "Anywhere". Weka will launch successfully after this change.

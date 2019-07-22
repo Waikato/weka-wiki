@@ -1,0 +1,1 @@
+There is the ability to print **how much memory** is available in the Explorer and Experimenter and to run the garbage collector. Just right click over the Status area in the Explorer/Experimenter.

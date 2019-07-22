@@ -1,0 +1,1 @@
+For maximum enjoyment, use a virtual machine that incorporates a **just-in-time compiler**. This can speed things up quite significantly. Note also that there can be large differences in execution time between different virtual machines. The Sun JDK/JRE all include a JIT compiler ("hotspot").

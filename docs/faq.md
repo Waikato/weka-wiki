@@ -87,7 +87,7 @@
 
 * [I have Weka download problems - what's going wrong?](faqs/weka_download_problems.md)
 * [My ARFF file doesn't load - why?](faqs/arff_does_not_load.md)
-* [What does nominal value not declared in header, read Token[X], line Y mean?](faqs/arff_does_not_load.md)
+* [What does nominal value not declared in header, read Token[X], line Y mean?](faqs/arff_does_not_load.md#nominal-value-not-declared-in-header-read-tokenx-line-y))
 * [How do I get rid of this OutOfMemoryException?](faqs/OutOfMemoryException.md)
 * [How do I deal with a StackOverflowError?](faqs/stack_overflow_error.md)
 * [Why do I get the error message 'training and test set are not compatible'?](faqs/why_do_i_get_the_error_message_training_and_test_set_are_not_compatible.md)
