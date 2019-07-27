@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title> IKVM with Weka tutorial - Weka Wiki</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = " IKVM with Weka tutorial";
+    var mkdocs_page_input_path = "ikvm_with_weka_tutorial.md";
+    var mkdocs_page_url = "/ikvm_with_weka_tutorial/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Weka Wiki</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Resources</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../faq/">FAQ</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../not_so_faq/">Not so FAQ</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../troubleshooting/">Troubleshooting</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../learning_resources/">Learning resources</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../using_the_api/">Using the API</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../extending_weka/">Extending Weka</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../arff/">ARFF Format</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../packages/">Packages</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../mailing_list/">Mailing list</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#set-up-installation">Set up / Installation</a></li>
+    
+
+    <li class="toctree-l2"><a href="#conversion-from-java-to-a-net-dll">Conversion from Java to a .NET dll</a></li>
+    
+
+    <li class="toctree-l2"><a href="#use-the-dll-in-a-net-application">Use the dll in a .NET application</a></li>
+    
+
+    <li class="toctree-l2"><a href="#compile-and-run-it">Compile and run it</a></li>
+    
+
+    <li class="toctree-l2"><a href="#links">Links</a></li>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Weka Wiki</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li> IKVM with Weka tutorial</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p>This tutorial walks you through the creation of a <em>Microsoft C#</em> program that uses <em>Weka</em>, and some <em>Java</em> API classes, via <em>IKVM</em>. The process will be similar for other <em>.NET</em> languages.</p>
+<h1 id="set-up-installation">Set up / Installation</h1>
+<p>You will first need to install IKVM, which can be found <a href="http://www.ikvm.net/">here</a>. You will also need a C# compiler/VM - <a href="http://www.mono-project.com/">Mono</a> is an excellent open source solution for both linux and windows, or you could just use Microsoft Visual Studio .NET.</p>
+<h1 id="conversion-from-java-to-a-net-dll">Conversion from Java to a .NET dll</h1>
+<p>With that out of the way, the first thing you will want to do is to convert the Weka .jar file into a .NET dll. To do this, we will use <em>ikvmc</em>, which is the IKVM static compiler.
+On the console, go to the directory which contains weka.jar, and type:</p>
+<pre><code class="bash">&gt; ikvmc -target:library weka.jar
+</code></pre>
+
+<p>The <code>-target:library</code> call causes <em>ikvmc</em> to create a .dll library instead of an executable.</p>
+<p>Note that the IKVM tutorial tells you that you should add <code>-reference:/usr/lib/IKVM.GNU.Classpath.dll</code>(or appropriate path) to the above command, it tells IKVM where to find the GNU Classpath library. <strong>However, <code>IKVM.GNU.Classpath.dll</code> Is no longer included in the download package, and is from very old versions of IKVM. When Sun open sources Java, it got replaced by the IKVM.OpenJDK.*.dll files.</strong></p>
+<p>You should now have a file called "weka.dll", which is a .NET version of the entire weka API. That's exactly what we want!</p>
+<h1 id="use-the-dll-in-a-net-application">Use the dll in a .NET application</h1>
+<p>To try it out, lets use a small C# program that I wrote. The program simply runs the J48 classifier on the Iris dataset with a 66% test/data split, and prints out the correctness percentage. It also uses a few Java classes, and is already about 95% legal Java code.</p>
+<p>The code is here:</p>
+<pre><code class="csharp">//start of file Main.cs
+ using System;
+
+ class MainClass
+ {
+     public static void Main(string[] args)
+     {
+         Console.WriteLine(&quot;Hello Java, from C#!&quot;);
+         classifyTest();
+      }
+
+      const int percentSplit = 66;
+      public static void classifyTest()
+      {
+         try
+         {
+             weka.core.Instances insts = new weka.core.Instances(new java.io.FileReader(&quot;iris.arff&quot;));
+             insts.setClassIndex(insts.numAttributes() - 1);
+
+             weka.classifiers.Classifier cl = new weka.classifiers.trees.J48();
+             Console.WriteLine(&quot;Performing &quot; + percentSplit + &quot;% split evaluation.&quot;);
+
+             //randomize the order of the instances in the dataset.
+                         weka.filters.Filter myRandom = new weka.filters.unsupervised.instance.Randomize();
+             myRandom.setInputFormat(insts);
+                         insts = weka.filters.Filter.useFilter(insts, myRandom);
+
+             int trainSize = insts.numInstances() * percentSplit / 100;
+             int testSize = insts.numInstances() - trainSize;
+             weka.core.Instances train = new weka.core.Instances(insts, 0, trainSize);
+
+             cl.buildClassifier(train);
+             int numCorrect = 0;
+             for (int i = trainSize; i &lt; insts.numInstances(); i++)
+             {
+                 weka.core.Instance currentInst = insts.instance(i);
+                 double predictedClass = cl.classifyInstance(currentInst);
+                 if (predictedClass == insts.instance(i).classValue())
+                     numCorrect++;
+             }
+             Console.WriteLine(numCorrect + &quot; out of &quot; + testSize + &quot; correct (&quot; +
+                        (double)((double)numCorrect / (double)testSize * 100.0) + &quot;%)&quot;);
+         }
+         catch (java.lang.Exception ex)
+         {
+             ex.printStackTrace();
+         }
+     }
+
+ }
+ //end of file Main.cs
+</code></pre>
+
+<h1 id="compile-and-run-it">Compile and run it</h1>
+<p>Now we just need to compile it. If you are using MonoDevelop or Visual Studio, you will need to add references to weka.dll, and all of the IKVM.OpenJDK.*.dll files, and lastly IKVM.Runtime.dll into your project. Otherwise, on the command line, you can type:</p>
+<p><em>NOTE: 
+replace </em>IKVM.OpenJDK.<em>.dll with the remaining IKVM.openJDK files.</em></p>
+<pre><code class="bash">&gt;mcs Main.cs -r:weka.dll,IKVM.Runtime.dll,IKVM.OpenJDK.core.dll, IKVM.OpenJDK.*.dll
+</code></pre>
+
+<p>to run the Mono C# compiler with references to the appropriate dlls (according to the Mono documentation, the command line arguments for Visual Studio are the same).</p>
+<p>And there you go! Now you can run the program. But make sure that the Iris.arff dataset is in the same directory first.</p>
+<p>For mono:</p>
+<pre><code class="bash">&gt;mono Main.exe
+</code></pre>
+
+<p>or if you are using visual studio, just:</p>
+<pre><code class="bash">&gt;Main.exe
+</code></pre>
+
+<p>Hopefully you will get as output:</p>
+<pre><code> Hello Java, from C#!
+ Performing 66% split evaluation.
+ 49 out of 51 correct (96.078431372549%)
+</code></pre>
+
+<p>And there you have it. Now we have a working program that uses Weka classes, and some classes from the standard Java API, in a C# program for the .NET framework.</p>
+<h1 id="links">Links</h1>
+<ul>
+<li><a href="http://www.onjava.com/pub/a/onjava/2004/08/18/ikvm.html">An Introduction to IKVM</a></li>
+<li><a href="http://www.ikvm.net/">IKVM.NET</a></li>
+<li><a href="http://www.mono-project.com/">Mono</a></li>
+<li><a href="http://www.ikvm.net/userguide/tutorial.html">The official IKVM tutorial</a></li>
+<li><a href="use_weka_with_the_microsoft_net_framework.md">Use Weka with the Microsoft .NET Framework</a></li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../j48_weighter_patch/" class="btn btn-neutral float-right" title=" J48-Weighter patch">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../how_to_run_weka_schemes_from_commandline/" class="btn btn-neutral" title=" How to run Weka schemes from commandline"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../how_to_run_weka_schemes_from_commandline/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../j48_weighter_patch/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/require.js"></script>
+      <script src="../search/search.js"></script>
+
+</body>
+</html>
