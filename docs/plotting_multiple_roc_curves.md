@@ -31,5 +31,5 @@ The [VisualizeMultipleROC.java](files/VisualizeMultipleROC.java) class lets you 
 
 # Downloads
 * [Plotting_multiple_roc.kfml](files/Plotting_multiple_roc.kfml) - Example KnowledgeFlow layout file
-* [VisualizeMultipleROC.java](VisualizeMultipleROC.java) ([stable](https://svn.cms.waikato.ac.nz/svn/weka/branches/stable-3-8/wekaexamples/src/main/java/wekaexamples/gui/visualize/VisualizeMultipleROC.java), [developer](https://svn.cms.waikato.ac.nz/svn/weka/trunk/wekaexamples/src/main/java/wekaexamples/gui/visualize/VisualizeMultipleROC.java))
+* [VisualizeMultipleROC.java](files/VisualizeMultipleROC.java) ([stable](https://svn.cms.waikato.ac.nz/svn/weka/branches/stable-3-8/wekaexamples/src/main/java/wekaexamples/gui/visualize/VisualizeMultipleROC.java), [developer](https://svn.cms.waikato.ac.nz/svn/weka/trunk/wekaexamples/src/main/java/wekaexamples/gui/visualize/VisualizeMultipleROC.java))
 

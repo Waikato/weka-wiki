@@ -1,0 +1,1 @@
+The article [GeneralizedSequentialPatterns](not_so_faq/gsp.md) contains more information on this associator.

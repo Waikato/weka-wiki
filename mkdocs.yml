@@ -170,3 +170,24 @@ pages:
   - ' Single quotes in labels of ARFF files' : single_quotes_in_labels_of_arff_files.md
   - ' Spaces in labels of ARFF files' : spaces_in_labels_of_arff_files.md
 
+  - ' Feature extraction from images' : feature_extraction_from_images.md
+  - ' FilteredClassifierUpdateable' : filtered_classifier_updateable.md
+  - ' Generating and saving a precision-recall curve' : generating_and_saving_a_precision_recall_curve.md
+  - ' Generating classifier evaluation output manually' : generating_classifier_evaluation_output_manually.md
+  - ' Generating source code from Weka classes' : generating_source_code_from_weka_classes.md
+  - ' GenericObjectEditor' : generic_object_editor.md
+  - ' GenericObjectEditor (book version)' : generic_object_editor_book_version.md
+  - ' GenericObjectEditor (developer version)' : generic_object_editor_developer_version.md
+  - ' GPGPU' : gpgpu.md
+  - ' How do I modify the CLASSPATH?' : how_do_i_modify_the_classpath.md
+  - ' How do I use the associator GeneralizedSequentialPatterns?' : how_do_i_use_the_associator_generalized_sequential_patterns.md
+  - ' How to run Weka schemes from commandline' : how_to_run_weka_schemes_from_commandline.md
+  - ' IKVM with Weka tutorial' : ikvm_with_weka_tutorial.md
+  - ' J48-Weighter patch' : j48_weighter_patch.md
+  - ' Java Virtual Machine' : java_virtual_machine.md
+  - ' JVM' : jvm.md
+
+
+
+
+

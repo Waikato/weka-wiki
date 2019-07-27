@@ -33,7 +33,7 @@ Articles still to migrate:
 * Classifiers **Requires re-writing for Markdown and GitHub**
 * ~~Classifying large datasets~~
 * ~~CLASSPATH~~
-* CLASSPATH problems
+* ~~CLASSPATH problems~~
 * ~~Command redirection~~
 * ~~Compiling Weka~~
 * ~~Compiling Weka with gcj~~
@@ -65,21 +65,21 @@ Articles still to migrate:
 * ~~Exporting Charts from the Knowledge Flow~~
 * ~~Extensions for Weka's main GUI
 * ~~FAQ~~
-* Feature extraction from images
-* FilteredClassifierUpdateable
+* ~~Feature extraction from images~~
+* ~~FilteredClassifierUpdateable~~
 * ~~Frequently Asked Questions~~ -- **links need updating, though**
 * ~~GeneralizedSequentialPatterns~~
-* Generating and saving a precision-recall curve
-* Generating classifier evaluation output manually
+* ~~Generating and saving a precision-recall curve~~
+* ~~Generating classifier evaluation output manually~~
 * ~~Generating cross-validation folds~~
 * ~~Generating cross-validation folds (Filter approach)~~
 * ~~Generating cross-validation folds (Java approach)~~
 * ~~Generating ROC curve~~
-* Generating source code from Weka classes
-* GenericObjectEditor
-* GenericObjectEditor (book version)
-* GenericObjectEditor (developer version)
-* GPGPU
+* ~~Generating source code from Weka classes~~
+* ~~GenericObjectEditor~~
+* ~~GenericObjectEditor (book version)~~
+* ~~GenericObjectEditor (developer version)~~
+* ~~GPGPU~~
 * ~~GUIChooser starts but not Experimenter or Explorer~~
 * ~~home~~
 * ~~How are packages structured for the package management system_~~
@@ -94,9 +94,9 @@ Articles still to migrate:
 * ~~How do I divide a dataset into training and test set_~~
 * ~~How do I generate compatible train and test sets that get processed with a filter_~~
 * ~~How do I generate Learning curves_~~
-* How do I get the latest bugfixes_
+* ~~How do I get the latest bugfixes_~~
 * ~~How do I make predictions with a trained model_~~
-* How do I modify the CLASSPATH_
+* ~~How do I modify the CLASSPATH_~~
 * ~~How do I modify the RunWeka.bat file_~~
 * ~~How do I perform attribute selection_~~
 * ~~How do I perform clustering_~~
@@ -106,21 +106,21 @@ Articles still to migrate:
 * ~~How do I run the Windows Weka installer in silent mode_~~
 * ~~How do I use ID attributes_~~
 * ~~How do I use libsvm in WEKA_~~
-* How do I use the associator GeneralizedSequentialPatterns_
+* ~~How do I use the associator GeneralizedSequentialPatterns_~~
 * ~~How do I use the package manager_~~
 * ~~How do I use WEKA from command line_~~
 * ~~How do I use WEKA's classes in my own code_~~
-* How do I write a new classifier or filter_
-* How to get the latest bugfixes_
-* How to run Weka schemes from commandline
+* ~~How do I write a new classifier or filter_~~
+* ~~How to get the latest bugfixes_~~
+* ~~How to run Weka schemes from commandline~~
 * ~~I cannot process large datasets - any ideas_~~
 * ~~I have unbalanced data - now what_~~
-* IKVM with Weka tutorial
+* ~~IKVM with Weka tutorial~~
 * ~~Instance ID~~
-* J48-Weighter patch
-* Java Virtual Machine
+* ~~J48-Weighter patch~~
+* ~~Java Virtual Machine~~
 * ~~just-in-time (JIT) compiler~~
-* JVM
+* ~~JVM~~
 * ~~KnowledgeFlow toolbars are empty~~
 * Learning curves
 * ~~Learning Resources~~
