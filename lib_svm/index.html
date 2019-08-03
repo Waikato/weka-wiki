@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title> LibSVM - Weka Wiki</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = " LibSVM";
+    var mkdocs_page_input_path = "lib_svm.md";
+    var mkdocs_page_url = "/lib_svm/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Weka Wiki</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Resources</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../faq/">FAQ</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../not_so_faq/">Not so FAQ</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../troubleshooting/">Troubleshooting</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../learning_resources/">Learning resources</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../using_the_api/">Using the API</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../extending_weka/">Extending Weka</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../arff/">ARFF Format</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../packages/">Packages</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../mailing_list/">Mailing list</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#description">Description</a></li>
+    
+
+    <li class="toctree-l2"><a href="#reference-weka-368">Reference (Weka &lt;= 3.6.8)</a></li>
+    
+
+    <li class="toctree-l2"><a href="#package">Package</a></li>
+    
+
+    <li class="toctree-l2"><a href="#download">Download</a></li>
+    
+
+    <li class="toctree-l2"><a href="#classpath">CLASSPATH</a></li>
+    
+
+    <li class="toctree-l2"><a href="#troubleshooting">Troubleshooting</a></li>
+    
+
+    <li class="toctree-l2"><a href="#issues-with-libsvmjar">Issues with libsvm.jar</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#libsvmsvm-uses-mathrandom">libsvm.svm uses Math.random</a></li>
+        
+            <li><a class="toctree-l3" href="#classes-without-instances">Classes without instances</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Weka Wiki</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li> LibSVM</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="description">Description</h1>
+<p>Wrapper class for the <a href="http://www.csie.ntu.edu.tw/~cjlin/libsvm/">LibSVM</a> library by Chih-Chung Chang and Chih-Jen Lin. The original wrapper, named WLSVM, was developed by Yasser EL-Manzalawy. The current version is complete rewrite of the wrapper, using <a href="http://java.sun.com/docs/books/tutorial/reflect/">Reflection</a> in order to avoid compilation errors, in case the <code>libsvm.jar</code> is not in the <a href="../classpath/">CLASSPATH</a>.</p>
+<p><strong>Important note:</strong>
+From WEKA &gt;= 3.7.2 installation and use of LibSVM in WEKA has been simplified by the creation of a <a href="http://weka.sourceforge.net/doc.packages/LibSVM/weka/classifiers/functions/LibSVM.html">LibSVM</a> package that can be installed using either the graphical or command line <a href="../packages/manager/">package manager</a>.</p>
+<h1 id="reference-weka-368"><strong>Reference (Weka &lt;=</strong> <strong>3.6.8)</strong></h1>
+<ul>
+<li><a href="http://www.csie.ntu.edu.tw/~cjlin/libsvm/">LibSVM</a></li>
+<li><a href="https://perun.pmf.uns.ac.rs/radovanovic/dmsem/cd/install/LIBSVM/WLSVM/wlsvm.htm">WLSVM</a></li>
+</ul>
+<h1 id="package">Package</h1>
+<p><code>weka.classifiers.functions</code></p>
+<h1 id="download">Download</h1>
+<p>The wrapper class is part of WEKA since version 3.5.2. But <em>LibSVM</em>, as a third-party-tool needs to be downloaded separately. It is recommended to upgrade to a post-3.5.3 version (or <a href="../subversion/">Subversion</a>) for bug-fixes and extensions (contains now the <code>distributionForInstance</code> method).</p>
+<h1 id="classpath">CLASSPATH</h1>
+<p>Add the <code>libsvm.jar</code> from the LibSVM distribution to your <a href="../classpath/">CLASSPATH</a> to make it available.</p>
+<p><strong>Note:</strong> Do NOT start WEKA then with <code>java -jar weka.jar</code>. The <strong>-jar</strong> option <em>overwrites</em> the <a href="../classpath/">CLASSPATH</a>, not augments it (a very common trap to fall into). Instead use something like this on Linux:</p>
+<pre><code class="bash"> java -classpath $CLASSPATH:weka.jar:libsvm.jar weka.gui.GUIChooser
+</code></pre>
+
+<p>or this on Win32 (if you're starting it from commandline):</p>
+<pre><code class="bash"> java -classpath &quot;%CLASSPATH%;weka.jar;libsvm.jar&quot; weka.gui.GUIChooser
+</code></pre>
+
+<p>If you're starting WEKA from the Start Menu on Windows, you'll have to add the <code>libsvm.jar</code> to your <code>CLASSPATH</code> environment variable. The following steps are for <em>Windows XP</em> (unfortunately, the GUI changes among the different Windows versions):</p>
+<ul>
+<li>right-click on <em>My Computer</em> and select <em>Properties</em> from the menu</li>
+<li>choose the <em>Advanced</em> tab and click on <em>Environment variables</em> at the bottom</li>
+<li>either add or modify a variable called <code>CLASSPATH</code> and add the <code>libsvm.jar</code> with full path to it</li>
+</ul>
+<h1 id="troubleshooting">Troubleshooting</h1>
+<ul>
+<li><strong>LibSVM classes not in CLASSPATH!</strong><ul>
+<li>Check whether the <code>libsvm.jar</code> is really in your CLASSPATH. Execute the following command in the <strong>SimpleCLI</strong>:</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<blockquote>
+<p><code>java weka.core.SystemInfo</code></p>
+<p>The property <code>java.class.path</code> must list the <code>libsvm.jar</code>. If it is listed, check whether the path is correct.</p>
+<p>If you're on Windows and you find <code>%CLASSPATH%</code> there, see next bullet point to fix this.</p>
+</blockquote>
+</blockquote>
+<ul>
+<li>On Windows, if you added the <code>libsvm.jar</code> to your CLASSPATH environment variable, it can still happen that WEKA pops up the error message that the LibSVM classes are not in your CLASSPATH. This can happen where the <a href="http://support.microsoft.com/kb/329308"><code>%CLASSPATH%</code> does not get expanded</a> to its actual value in starting up WEKA. You can inspect your current CLASSPATH with which WEKA got started up with the <strong>SimpleCLI</strong> (see previous bullet point). If <code>%CLASSPATH%</code> is listed there, your system has the same problem. <a href="https://list.scms.waikato.ac.nz/mailman/htdig/wekalist/2007-march/009429.html">This</a> Wekalist post explains how to explicitly add the <code>mysql.jar</code> to <code>RunWeka.ini</code> (works the same for <code>libsvm.jar</code>).<blockquote>
+<blockquote>
+<p><strong>Note:</strong> <a href="https://list.scms.waikato.ac.nz/mailman/htdig/wekalist/2007-september/011268.html">backslashes have to be escaped</a>, not only once, but twice (they get interpreted by Java twice!). In other words, instead of <em>one</em> you have to use <em>four</em>: 
+<code>C:\some\where</code> then turns into <code>C:\\\\some\\\\where</code>.</p>
+</blockquote>
+</blockquote>
+</li>
+</ul>
+<h1 id="issues-with-libsvmjar">Issues with libsvm.jar</h1>
+<p>This section is based on <a href="https://list.scms.waikato.ac.nz/mailman/htdig/wekalist/2007-april/009671.html">this</a> Wekalist post.</p>
+<p>The following changes were not incorporated in WEKA, since it also means modifying the LibSVM Java code, which (I think) is autogenerated from the C code. The authors of LibSVM might have to consider that update. It's left to the reader to incorporate these changes.</p>
+<h2 id="libsvmsvm-uses-mathrandom">libsvm.svm uses Math.random</h2>
+<p>libsvm.svm calls Math.random so the model it returns is usually different for the same training set and svm parameters over time.</p>
+<p>Obviously, if you call libsvm.svm from weka.classifiers.functions.libsvm, and you call it again from libsvm.svm_train, the results are also different.</p>
+<p>You can use libsvm.svm_save_model to record the svms into files, and then compare the model file from WEKA LibSVM with the model file from libsvm.svm_predict. Then you can see that ProbA values use to be different.</p>
+<p>WEKA experimenter is based on using always the same random sequences in order to repeat experiments with the same results. So, I'm afraid some important design changes are required on libsvm.jar and weka.classifiers.functions.libsvm.class to keep such behaviour. We made a quick fix adding an static Random attribute to libsvm.svm class:</p>
+<pre><code class="java"> static java.util.Random ranGen = new Random(0);
+</code></pre>
+
+<p>We have changed all Math.random() invokations to ranGen.nextdouble(). Then we have obtained the same svm from weka LibSVM than from LibSVM train_svm.</p>
+<p>However, WEKA accuracy results on primary_tumor data were still worse, so there's something wrong when weka uses the svm model at testing step.</p>
+<h2 id="classes-without-instances">Classes without instances</h2>
+<p>ARFF format provides some meta-information (i.e. attributes name and type, set of possible values for nominal attributes), but LibSVM format doesn't. So if there are classes in the dataset with zero occurrences through all the instances, LibSVM thinks that these classes don't exist whereas WEKA knows they exist.</p>
+<p>For example, there is a class in primary tumor dataset that never appears. When WEKA experimenter makes testing, it calls to:</p>
+<pre><code class="java"> public static double svm_predict_probability(svm_model model, svm_node[] x, double[] prob_estimates)
+</code></pre>
+
+<p>passing the array prob_estimates plenty of zeros (array cells are initialized to zero). The size of the array is equal to the number of classes (= 22). On the other hand, if this method is invoked from libsvm.svm_predict, the class that never appears is ignored, so the array dimension is now equal to 21.</p>
+<p>So accuracy results are different depending on origin of svm_predict_probability method invocation. I think that better results are obtained if classes without instances are ignored, but I don't know if it is very fair. In fact, accuracies from weka.libsvm and from libsvm.predict_svm seem to be the same if the class that never appears is removed from ARFF file.</p>
+<p>Note that this problem only appears when testing, because the training code uses always the svm_group_classes method to compute the number of classes, so Instances.numClasses() value is never used for training. Moreover, maybe the mismatch between the training number of classes and the testing number of classes is the reason behind worse accuracy results when svm_predict_probability invocation is made from WEKA, but I haven't proved it yet.</p>
+<p>Note that this problem does also happen when you have a class with less examples than the number of folds. For some folds, the class will not have training examples.</p>
+<p>We also made a quick fix for this problem:</p>
+<ul>
+<li>Add this public method to libsvm.svm_model class<blockquote>
+<p><code>public int getNr_class(){return nr_class;}</code></p>
+</blockquote>
+</li>
+<li>Make the following changes into <code>distributionforInstance</code> Method at <code>weka.classifiers.functions.LibSVM</code><blockquote>
+<p>First line of the method:</p>
+</blockquote>
+</li>
+</ul>
+<pre><code class="java"> int[] labels = new int[instance.numClasses()];
+</code></pre>
+
+<blockquote>
+<p>could be changed to</p>
+</blockquote>
+<pre><code class="java"> int[] labels = new int[((svm_model) m_Model).getNr_class()];
+</code></pre>
+
+<blockquote>
+<p>Last line in "if(m_ProbablityEstimates)" block:</p>
+</blockquote>
+<pre><code class="java"> prob_estimates = new double[instance.numClasses()];
+</code></pre>
+
+<blockquote>
+<p>could be changed to</p>
+</blockquote>
+<pre><code class="java"> prob_estimates = new double[((svm_model) m_Model).getNr_class()];
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../load_an_xml_bif_file/" class="btn btn-neutral float-right" title=" Load an XML BIF file">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../learning_curves/" class="btn btn-neutral" title=" Learning curves"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../learning_curves/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../load_an_xml_bif_file/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/require.js"></script>
+      <script src="../search/search.js"></script>
+
+</body>
+</html>

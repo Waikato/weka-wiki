@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title> Making predictions - Weka Wiki</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = " Making predictions";
+    var mkdocs_page_input_path = "making_predictions.md";
+    var mkdocs_page_url = "/making_predictions/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Weka Wiki</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Resources</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../faq/">FAQ</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../not_so_faq/">Not so FAQ</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../troubleshooting/">Troubleshooting</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../learning_resources/">Learning resources</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../using_the_api/">Using the API</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../extending_weka/">Extending Weka</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../arff/">ARFF Format</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../packages/">Packages</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../mailing_list/">Mailing list</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#command-line">Command line</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#classifiers">Classifiers</a></li>
+        
+            <li><a class="toctree-l3" href="#filters">Filters</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l2"><a href="#gui">GUI</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#explorer">Explorer</a></li>
+        
+            <li><a class="toctree-l3" href="#knowledgeflow">KnowledgeFlow</a></li>
+        
+            <li><a class="toctree-l3" href="#using-the-predictionappender">Using the PredictionAppender</a></li>
+        
+            <li><a class="toctree-l3" href="#using-the-addclassification-filter">Using the AddClassification filter</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l2"><a href="#java">Java</a></li>
+    
+
+    <li class="toctree-l2"><a href="#see-also">See also</a></li>
+    
+
+    <li class="toctree-l2"><a href="#links">Links</a></li>
+    
+
+    <li class="toctree-l2"><a href="#version">Version</a></li>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Weka Wiki</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li> Making predictions</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="command-line">Command line</h1>
+<p>The following sections show how to obtain predictions/classifications without writing your own Java code via the command line.</p>
+<h2 id="classifiers">Classifiers</h2>
+<p>After a <a href="saving_and_loading_models.md">model has been saved</a>, one can make predictions for a test set, whether that set contains valid class values or not. The output will contain both the actual and predicted class. (Note that if the test class contains simply '?' for the class label for each instance, the "actual" class label for each instance will not contain useful information, but the predicted class label will.) The <code>-T &lt;test_set&gt;</code> command-line switch specifies the dataset of instances whose classes are to be predicted, while the <code>-p &lt;attribute_range&gt;</code> switch allows the user to write out a range of attributes (examples: "1-2" for the first and second attributes, or "0" for no attributes). Sample command line:</p>
+<pre><code class="bash"> java weka.classifiers.trees.J48 -T unclassified.arff -l j48.model -p 0
+</code></pre>
+
+<p>The format of the output is as follows:</p>
+<pre><code class="text">&lt;test_instance_index&gt; &lt;actual_class_index&gt;:&lt;actual_class_val&gt; &lt;pred_class_index&gt;:&lt;pred_class_val&gt; [+| ] &lt;prob_of_pred_class_val&gt;
+</code></pre>
+
+<p>where "+" occurs only for those items that were mispredicted. Note that if the actual class label is always "?" (i.e., the dataset does not include known class labels), the error column will always be empty.</p>
+<p>Sample output:</p>
+<pre><code class="text"> inst#     actual  predicted error prediction
+     1        1:?        1:0       0.757 
+     2        1:?        1:0       0.824 
+     3        1:?        1:0       0.807 
+     4        1:?        1:0       0.807 
+     5        1:?        1:0       0.79 
+     6        1:?        2:1       0.661 
+   ...
+</code></pre>
+
+<p>In this case, taken directly from a test dataset where all class attributes were marked by "?", the "actual" column, which can be ignored, simply states that each class belongs to an unknown class. The "predicted" column shows that instances 1 through 5 are predicted to be of class 1, whose value is 0, and instance 6 is predicted to be of class 2, whose value is 1. The error field is empty; if predictions were being performed on a labeled test set, each instance where the prediction failed to match the label would contain a "+". The probability that instance 1 actually belongs to class 0 is estimated at 0.757.</p>
+<p><strong>Notes:</strong></p>
+<ul>
+<li>Since Weka 3.5.4 you can also output the complete class distribution, not just the prediction, by using the parameter <code>-distribution</code> in conjunction with the -p option. In this case, "*" is placed beside the probability in the distribution that corresponds to the predicted class value.</li>
+<li>If you have an ID attribute in your dataset as first attribute (you can always add one with the <a href="http://weka.sourceforge.net/doc.dev/weka/filters/unsupervised/attribute/AddID.html">AddID</a> filter), you could output it with <code>-p 1</code> instead of using <code>-p 0</code>. This works only for explicit train/test sets, but you can use the Explorer for cross-validation.</li>
+</ul>
+<h2 id="filters">Filters</h2>
+<p>The <code>[AddClassification](http://weka.sourceforge.net/doc.dev/weka/filters/supervised/attribute/addclassification.html)</code> filter (package <code>weka.filters.supervised.attribute</code>) can either train a classifier on the input data and transform this or load a serialized model to transform the input data (even though the filter was introduced in 3.5.4, due to a bug in the commandline option handling, it is recommended to download a version &gt;3.5.5 or a snapshot from the Weka homepage).
+This filter can add the classification, class distribution and the error per row as extra attributes to the dataset.</p>
+<ul>
+<li>training the classifier, e.g., J48, on the input data and replacing the class values with the ones of the trained classifier:</li>
+</ul>
+<pre><code class="bash">   java \
+     weka.filters.supervised.attribute.AddClassification \
+     -W &quot;weka.classifiers.trees.J48&quot; \
+     -classification \
+     -remove-old-class \
+     -i train.arff \
+     -o train_classified.arff \
+     -c last
+</code></pre>
+
+<ul>
+<li>using a serialized model, e.g., a J48 model, to replace the class values with the ones predicted by the serialized model:</li>
+</ul>
+<pre><code class="bash">   java \
+     weka.filters.supervised.attribute.AddClassification \
+     -serialized /some/where/j48.model \
+     -classification \
+     -remove-old-class \
+     -i train.arff \
+     -o train_classified.arff \
+     -c last
+</code></pre>
+
+<h1 id="gui">GUI</h1>
+<p>The Weka GUI allows you as well to output predictions based on a previously saved model.</p>
+<h2 id="explorer">Explorer</h2>
+<p>See the <a href="../saving_and_loading_models#explorer.md">Explorer</a> section of the <a href="saving_and_loading_models.md">Saving and loading models</a> article to setup the Explorer. Additionally, you need to check the <em>Output predictions</em> options in the <em>More options</em> dialog. Righ-clicking on the respective results history item and selecting <em>Re-evaluate model on current test set</em> will output then the predictions as well (the statistics will be useless due to missing class values in the test set, so just ignore them). The output is similar to the one produced by the commandline.</p>
+<p>Example output for the <em>anneal</em> UCI dataset:</p>
+<pre><code class="text"> == Predictions on test set ==
+ inst#,    actual, predicted, error, probability distribution
+     1          ?        3:3      +   0      0     *1      0      0      0    
+     2          ?        3:3      +   0      0     *1      0      0      0    
+     3          ?        3:3      +   0      0     *1      0      0      0    
+    ...
+    17          ?        6:U      +   0      0      0      0      0     *1    
+    18          ?        6:U      +   0      0      0      0      0     *1    
+    19          ?        3:3      +   0      0     *1      0      0      0    
+    20          ?        3:3      +   0      0     *1      0      0      0    
+    ...
+</code></pre>
+
+<p><strong>Note:</strong> The developer version (&gt;3.5.6 or <a href="../snapshots/">snapshot</a>) can also output additional attributes like the commandline with the <code>-p</code> option. In the <em>More options...</em> dialog you can specify those attribute indices with <em>Output additional attributes</em>, e.g., <em>first</em> or <em>1-7</em>. In contrast to the commandline, this output also works for cross-validation.</p>
+<h2 id="knowledgeflow">KnowledgeFlow</h2>
+<h2 id="using-the-predictionappender">Using the PredictionAppender</h2>
+<p>With the <em>PredictionAppender</em> (from the <em>Evaluation</em> toolbar) you cannot use an already saved model, but you can train a classifier on a dataset and output an <a href="../arff/">ARFF</a> file with the predictions appended as additional attribute. Here's an example setup:</p>
+<pre><code class="text">               /---dataSet--&gt; TrainingSetMaker ---trainingSet--\
+ ArffLoader --&lt;                                                 &gt;--&gt; J48...
+               \---dataSet--&gt; TestSetMaker -------testSet------/
+
+ ...J48 --batchClassifier--&gt; PredictionAppender --testSet--&gt; ArffSaver
+</code></pre>
+
+<h2 id="using-the-addclassification-filter">Using the AddClassification filter</h2>
+<p>The AddClassification filter can be used in the KnowledgeFlow as well, either for training a model, or for using a serialized model to perform the predictions. An example setup could look like this:</p>
+<pre><code class="text"> ArffLoader --dataSet--&gt; ClassAssigner --dataSet--&gt; AddClassification --dataSet--&gt; ArffSaver
+</code></pre>
+
+<h1 id="java">Java</h1>
+<p>If you want to perform the classification within your own code, see the <a href="../use_weka_in_your_java_code/#classifying-instances">classifying instances</a> section of <a href="../use_weka_in_your_java_code/">this article</a>, explaining the Weka API in general.</p>
+<h1 id="see-also">See also</h1>
+<ul>
+<li><a href="saving_and_loading_models.md">Saving and loading models</a></li>
+<li><a href="../use_weka_in_your_java_code/">Use Weka in your Java code</a> - general information about using the Weka API</li>
+<li><a href="../troubleshooting/#instance-id">Using ID attributes</a></li>
+</ul>
+<h1 id="links">Links</h1>
+<ul>
+<li><a href="https://list.scms.waikato.ac.nz/mailman/htdig/wekalist/2007-april/009771.html">AddClassification</a> on the Wekalist</li>
+</ul>
+<h1 id="version">Version</h1>
+<p>The developer version shortly before the release of 3.5.6 was used as basis for this article.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../mathematical_functions/" class="btn btn-neutral float-right" title=" Mathematical functions">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../load_an_xml_bif_file/" class="btn btn-neutral" title=" Load an XML BIF file"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../load_an_xml_bif_file/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../mathematical_functions/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/require.js"></script>
+      <script src="../search/search.js"></script>
+
+</body>
+</html>

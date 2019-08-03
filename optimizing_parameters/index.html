@@ -1,0 +1,1142 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title> Optimizing parameters - Weka Wiki</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = " Optimizing parameters";
+    var mkdocs_page_input_path = "optimizing_parameters.md";
+    var mkdocs_page_url = "/optimizing_parameters/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Weka Wiki</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Resources</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../faq/">FAQ</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../not_so_faq/">Not so FAQ</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../troubleshooting/">Troubleshooting</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../learning_resources/">Learning resources</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../using_the_api/">Using the API</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../extending_weka/">Extending Weka</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../arff/">ARFF Format</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../packages/">Packages</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../mailing_list/">Mailing list</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#cvparameterselection">CVParameterSelection</a></li>
+    
+
+    <li class="toctree-l2"><a href="#gridsearch">GridSearch</a></li>
+    
+
+    <li class="toctree-l2"><a href="#multisearch">MultiSearch</a></li>
+    
+
+    <li class="toctree-l2"><a href="#auto-weka">Auto-WEKA</a></li>
+    
+
+    <li class="toctree-l2"><a href="#downloads">Downloads</a></li>
+    
+
+    <li class="toctree-l2"><a href="#see-also">See also</a></li>
+    
+
+    <li class="toctree-l2"><a href="#links">Links</a></li>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Weka Wiki</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li> Optimizing parameters</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p>Since finding the optimal parameters for a classifier can be a rather tedious process, Weka offers some ways of automating this process a bit. The following meta-classifiers allow you to optimize some parameters of your base classifier:</p>
+<ul>
+<li><code>weka.classifiers.meta.CVParameterSelection</code></li>
+<li><code>weka.classifiers.meta.GridSearch</code> (only developer version)</li>
+<li><code>weka.classifiers.meta.MultiSearch</code> (<a href="https://github.com/fracpete/multisearch-weka-package">external package</a> for 3.7.11+)</li>
+<li>Auto-WEKA (<a href="https://www.cs.ubc.ca/labs/beta/Projects/autoweka/">external package</a> package for 3.7.13+)</li>
+</ul>
+<p>After finding the best possible setup, the meta-classifiers then train an instance of the base classifier with these parameters and use it for subsequent predictions.</p>
+<h1 id="cvparameterselection">CVParameterSelection</h1>
+<p>This meta-classifier can optimize over an arbitrary number of parameters, with only one drawback (apart from the obvious explosion of possible parameter combinations): 
+one cannot optimize on nested options, only direct options of the base classifier. What does that mean? It means, that you can optimize the <em>C</em> parameter of <code>weka.classifiers.functions.SMO</code>, but not the <em>C</em> of an <code>weka.classifiers.functions.SMO</code> within a <code>weka.classifiers.meta.FilteredClassifier</code>.</p>
+<p>Here are a few examples:</p>
+<ul>
+<li>
+<p><strong>J48 and it's confidence interval ("-C")</strong></p>
+<ul>
+<li>load your dataset in the Explorer</li>
+<li>choose <code>weka.classifiers.meta.CVParameterSelection</code> as classifier</li>
+<li>select <code>weka.classifiers.trees.J48</code> as base classifier within <code>CVParameterSelection</code></li>
+<li>
+<p>open the ArrayEditor for <em>CVParameters</em> and enter the following string (and click on <em>Add</em>): <code>C 0.1 0.5 5</code> - This will test the confidence parameter from 0.1 to 0.5 with step size 0.1 (= 5 steps)</p>
+</li>
+<li>
+<p>close dialogs and start the classifier</p>
+</li>
+<li>you will get output similar to this one, with the best parameters found in bold:</li>
+</ul>
+</li>
+</ul>
+<pre><code> Cross-validated Parameter selection.
+ Classifier: 
+weka.classifiers.trees.J48
+ Cross-validation Parameter: 
+'-C' ranged from 0.1 to 0.5 with 5.0 steps
+ Classifier Options: 
+**-C 0.1** -M 2
+</code></pre>
+
+<ul>
+<li><strong>SMO and it's complexity parameter ("-C")</strong><ul>
+<li>load your dataset in the Explorer</li>
+<li>choose <code>weka.classifiers.meta.CVParameterSelection</code> as classifier</li>
+<li>select <code>weka.classifiers.functions.SMO</code> as base classifier within <code>CVParameterSelection</code> and modify its setup if necessary, e.g., RBF kernel</li>
+<li>open the ArrayEditor for <em>CVParameters</em> and enter the following string (and click on <em>Add</em>):</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p><code>C 2 8 4</code>
+This will test the complexity parameters 2, 4, 6 and 8 (= 4 steps)
+    * close dialogs and start the classifier
+    * you will get output similar to this one, with the best parameters found in bold:</p>
+</blockquote>
+<pre><code> Cross-validated Parameter selection.
+ Classifier: 
+weka.classifiers.functions.SMO
+ Cross-validation Parameter: 
+'-C' ranged from 2.0 to 8.0 with 4.0 steps
+ Classifier Options: 
+**-C 8** -L 0.0010 -P 1.0E-12 -N 0 -V -1 -W 1 -K &quot;weka.classifiers.functions.supportVector.RBFKernel -C 250007 -G 0.01&quot;
+</code></pre>
+
+<ul>
+<li><strong><a href="../lib_svm/">LibSVM</a> and the gamma parameter of the RBF kernel ("-G")</strong><ul>
+<li>load your dataset in the Explorer</li>
+<li>choose <code>weka.classifiers.meta.CVParameterSelection</code> as classifier</li>
+<li>select <code>[weka.classifiers.functions.LibSVM](lib_svm.md)</code> as base classifier within <code>CVParameterSelection</code> and modify its setup if necessary, e.g., RBF kernel</li>
+<li>open the ArrayEditor for <em>CVParameters</em> and enter the following string (and click on <em>Add</em>):</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p><code>G 0.01 0.1 10</code>
+This will iterate over the gamma parameter, using values from 0.01 to 0.1 (= 10 steps)
+    * close dialogs and start the classifier
+    * you will get output similar to this one, with the best parameters found in bold:</p>
+</blockquote>
+<pre><code> Cross-validated Parameter selection.
+ Classifier: 
+weka.classifiers.functions.LibSVM
+ Cross-validation Parameter: 
+'-G' ranged from 0.01 to 0.1 with 10.0 steps
+ Classifier Options: 
+**-G 0.09** -S 0 -K 2 -D 3 -R 0.0 -N 0.5 -M 40.0 -C 1.0 -E 0.0010 -P 0.1
+</code></pre>
+
+<h1 id="gridsearch">GridSearch</h1>
+<p><code>weka.classifiers.meta.GridSearch</code> is a meta-classifier for exploring 2 parameters, hence the <em>grid</em> in the name. If one turns the log on, the classifier will create output suitable for <a href="http://www.gnuplot.info/">gnuplot</a>, i.e., sections of the log will contain script and data sections. Instead of just using a classifier, one can specify a base classifier <strong>and</strong> a filter, which both of them can be optimized (one parameter each). In contrast to <code>CVParameterSelection</code>, <code>GridSearch</code> is not limited to first-level parameters of the base classifier, since it's using <a href="http://java.sun.com/docs/books/tutorial/javabeans/">Java Beans</a> <a href="http://java.sun.com/docs/books/tutorial/javabeans/introspection/">Introspection</a> and one can specify <em>paths</em> to the properties one wants to optimize. A <em>property</em> here is the string of the parameter displayed in the GenericObjectEditor (generated though Introspection), e.g., <code>bagSizePercent</code> or <code>classifier</code> of <code>weka.classifiers.meta.Bagging</code>.</p>
+<p>Due to some important bugfixes, one should obtain a version of Weka &gt;3.5.6 or a <a href="../snapshots/">snapshot</a> later than 11 Sept 2007.</p>
+<p>For each of the two axes, X and Y, one can specify the following parameters:</p>
+<ul>
+<li><strong>property</strong><blockquote>
+<p>The dot-separated path pointing to the property to be optimized. In order to distinguish between paths for the filter or the classifier, one needs to prefix the path either with <code>filter.</code> or <code>classifier.</code> for filter or classifier path respectively.</p>
+</blockquote>
+</li>
+<li><strong>expression</strong><blockquote>
+<p>The mathematical expression to generate the value for the property, processed with the <code>weka.core.MathematicalExpression</code> class, which supports the following functions: <code>abs</code>, <code>sqrt</code>, <code>log</code>, <code>exp</code>, <code>sin</code>, <code>cos</code>, <code>tan</code>, <code>rint</code>, <code>floor</code>, <code>pow</code>, <code>ceil</code>. These variables are available in the expression: 
+<code>BASE</code>, <code>FROM</code>, <code>TO</code>, <code>STEP</code>, <code>I</code>; with <code>I</code> ranging from <code>FROM</code> to <code>TO</code>.</p>
+</blockquote>
+</li>
+<li><strong>min</strong><blockquote>
+<p>The minimum value to start from.</p>
+</blockquote>
+</li>
+<li><strong>max</strong><blockquote>
+<p>The maximum value.</p>
+</blockquote>
+</li>
+<li><strong>step</strong><blockquote>
+<p>The step size used to get from <em>min</em> to <em>max</em>.</p>
+</blockquote>
+</li>
+<li><strong>base</strong><blockquote>
+<p>Used in <code>pow()</code> calculations.</p>
+</blockquote>
+</li>
+</ul>
+<p><code>GridSearch</code> can also optimized based on the following measures:</p>
+<ul>
+<li>Correlation coefficient (= CC)</li>
+<li>Root mean squared error (= RMSE)</li>
+<li>Root relative squared error (= RRSE)</li>
+<li>Mean absolute error (= MAE)</li>
+<li>Root absolute error (= RAE)</li>
+<li>Combined: 
+(1-abs(CC)) + RRSE + RAE</li>
+<li>Accuracy (= ACC)</li>
+<li>Kappa (= KAP) [only when using Weka packages]</li>
+</ul>
+<p>Note: 
+<em>Correlation coefficient</em> is only available for numeric classes and <em>Accuracy</em> only for nominal ones.</p>
+<p>Here are a some examples (taken from the Javadoc of the classifier):</p>
+<ul>
+<li><strong>Optimizing SMO with RBFKernel (C and gamma)</strong><ul>
+<li>Start the Explorer and load your dataset with nominal class.</li>
+<li>Set the evaluation to <em>Accuracy</em>.</li>
+<li>Set the filter to <code>weka.filters.AllFilter</code> since we don't need any special data processing and we don't optimize the filter in this case (data gets always passed through filter!).</li>
+<li>Set <code>weka.classifiers.functions.SMO</code> as classifier with <code>weka.classifiers.functions.supportVector.RBFKernel</code> as kernel.</li>
+<li>Set the<code>XProperty</code> to "classifier.c", <code>XMin</code> to "1", <code>XMax</code> to "16", <code>XStep</code> to "1" and the <code>XExpression</code> to "I". This will test the "C" parameter of <code>SMO</code> for the values from 1 to 16.</li>
+<li>Set the <code>YProperty</code> to "classifier.kernel.gamma", <code>YMin</code> to "-5", <code>YMax</code> to "2", <code>YStep</code> to "1", <code>YBase</code> to "10" and <code>YExpression</code> to "pow(BASE,I)". This will test the gamma of the RBFKernel with the values 10<sup>-5</sup>, 10<sup>-4</sup>,..,10<sup>2</sup>.</li>
+<li>Output will be similar to this one here:</li>
+</ul>
+</li>
+</ul>
+<pre><code> Filter: 
+weka.filters.AllFilter
+ Classifier: 
+weka.classifiers.functions.SMO -C 2.0 -L 0.0010 -P 1.0E-12 -N 0 -V -1 -W 1 -K &quot;weka.classifiers.functions.supportVector.RBFKernel -C 250007 -G 0.0&quot;
+
+ X property: 
+classifier.c
+ Y property: 
+classifier.kernel.gamma
+
+ Evaluation: 
+Accuracy
+ Coordinates: 
+[2.0, 0.0]
+ Values: 
+**2.0** (X coordinate), **1.0** (Y coordinate)
+</code></pre>
+
+<ul>
+<li><strong>Optimizing PLSFilter with LinearRegression (# of components and ridge)</strong> - default setup<ul>
+<li>Start the Explorer and load your dataset with numeric class.</li>
+<li>Set the evaluation to Correlation coefficient.</li>
+<li>Set the filter to <code>weka.filters.supervised.attribute.PLSFilter</code>.</li>
+<li>Set <code>weka.classifiers.functions.LinearRegression</code> as classifier and use <em>no attribute selection</em> and <em>no elimination of colinear attributes</em> (speeds up <code>LinearRegression</code> significantly!).</li>
+<li>Set the <code>XProperty</code> to "filter.numComponents", <code>XMin</code> to "5", <code>XMax</code> to "20" (this depends heavily on your dataset, should be no more than the number of attributes!), <code>XStep</code> to "1" and <code>XExpression</code> to "I". This will test the number of components the <code>PLSFilter</code> will produce from 5 to 20.</li>
+<li>Set the <code>YProperty</code> to "classifier.ridge", <code>XMin</code> to "-10", <code>XMax</code> to "5", <code>YStep</code> to "1" and <code>YExpression</code> to "pow(BASE,I)". This will try ridge parameters from 10<sup>-10</sup> to 10<sup>5</sup>.</li>
+<li>Output will be similar to this one:</li>
+</ul>
+</li>
+</ul>
+<pre><code> Filter: 
+weka.filters.supervised.attribute.PLSFilter -C 5 -M -A PLS1 -P center
+ Classifier: 
+weka.classifiers.functions.LinearRegression -S 1 -C -R 5.0
+
+ X property: 
+filter.numComponents
+ Y property: 
+classifier.ridge
+
+ Evaluation: 
+Correlation coefficient
+ Coordinates: 
+[5.0, 5.0]
+ Values: 
+**5.0** (X coordinate), **100000.0** (Y coordinate)
+</code></pre>
+
+<p><strong>Notes:</strong></p>
+<ul>
+<li>a property for the classifier starts with <strong>classifier.</strong></li>
+<li>a property for the filter starts with <strong>filter.</strong></li>
+<li>Arrays of objects are addressed with <strong>[<index>]</strong>, with the <em>index</em> being 0-based. E.g., using a <code>weka.filters.MultiFilter</code> in <code>GridSearch</code> consisting of a <code>ReplaceMissingValues</code> and a <code>PLSFilter</code> filter one can address the <em>numComponents</em> property of the <code>PLSFilter</code> with <em>filter.filter[1].numComponents</em></li>
+</ul>
+<h1 id="multisearch">MultiSearch</h1>
+<p><code>weka.classifiers.meta.MultiSearch</code> is available through <a href="https://github.com/fracpete/multisearch-weka-package">this</a> Weka package (requires Weka 3.7.11 or later; for downloads see the <em>Releases</em> section). MultiSearch is similar to GridSearch, more general and simpler at the same time. More general, because it allows the optimization of an arbitrary number of parameters, not just two. Simpler, because it does not offer any search space expansions or <a href="http://gnuplot.info/">gnuplot</a> output and less options.</p>
+<p>For each parameter to optimize, the user has to define a <em>search parameter</em>. There are two types of parameters available:</p>
+<ul>
+<li><code>MathParameter</code> - basically what <code>GridSearch</code> uses, with an expression to calculate the actual value using the min, max and step parameters</li>
+<li><code>ListParameter</code> - the blank-separated list of values is used as input for the optimization (useful, if values cannot be described by a mathematical function)</li>
+</ul>
+<p>Here is a setup for finding the best ridge parameter (property <code>classifier.ridge</code>) using the <code>MathParameter</code> search parameter using values from 10^-10 to 10^5:</p>
+<pre><code>weka.classifiers.meta.MultiSearch \
+  -E CC \
+  -search &quot;weka.core.setupgenerator.MathParameter -property classifier.ridge -min -10.0 -max 5.0 -step 1.0 -base 10.0 -expression pow(BASE,I)&quot; \
+  -sample-size 100.0 -initial-folds 2 -subsequent-folds 10 -num-slots 1 -S 1 \
+  -W weka.classifiers.functions.LinearRegression -- -S 1 -C -R 1.0E-8
+</code></pre>
+
+<p>And here using the <code>ListParameter</code> search parameter for evaluating values 0.001, 0.05, 0.1, 0.5, 0.75 and 1.0 for the ridge parameter (property <code>classifier.ridge</code>):</p>
+<pre><code>weka.classifiers.meta.MultiSearch \
+  -E CC \
+  -search &quot;weka.core.setupgenerator.ListParameter -property classifier.ridge -list \&quot;0.001 0.05 0.1 0.5 0.75 1.0\&quot;&quot; \
+  -sample-size 100.0 -initial-folds 2 -subsequent-folds 10 -num-slots 1 -S 1 \
+  -W weka.classifiers.functions.LinearRegression -- -S 1 -C -R 1.0E-8
+</code></pre>
+
+<p><code>MultiSearch</code> can be optimized based on the following measures:</p>
+<ul>
+<li>Correlation coefficient (= CC)</li>
+<li>Root mean squared error (= RMSE)</li>
+<li>Root relative squared error (= RRSE)</li>
+<li>Mean absolute error (= MAE)</li>
+<li>Root absolute error (= RAE)</li>
+<li>Combined: 
+(1-abs(CC)) + RRSE + RAE</li>
+<li>Accuracy (= ACC)</li>
+<li>Kappa (= KAP)</li>
+</ul>
+<h1 id="auto-weka">Auto-WEKA</h1>
+<p><a href="https://www.cs.ubc.ca/labs/beta/Projects/autoweka/">Auto-WEKA</a> is available as a package through the WEKA package manager. It provides the class <code>weka.classifiers.meta.AutoWEKAClassifier</code> and optimizes all parameters of all learners. It also automatically determines the best learner to use and the best attribute selection method for a given dataset. More information is available on the project website and the <a href="https://www.cs.ubc.ca/labs/beta/Projects/autoweka/manual.pdf">manual</a>.</p>
+<h1 id="downloads">Downloads</h1>
+<ul>
+<li><a href="../files/CVParam.java">CVParam.java</a> - optimizes J48's <code>-C</code> parameter</li>
+</ul>
+<h1 id="see-also">See also</h1>
+<ul>
+<li><a href="../lib_svm/">LibSVM</a> - you need additional jars in your <a href="../classpath/">CLASSPATH</a> to be able to use LibSVM</li>
+</ul>
+<h1 id="links">Links</h1>
+<ul>
+<li><a href="http://www.gnuplot.info/">gnuplot homepage</a></li>
+<li><a href="http://java.sun.com/docs/books/tutorial/javabeans/">Java Beans</a></li>
+<li><a href="http://java.sun.com/docs/books/tutorial/javabeans/introspection/">Introspection</a></li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../paper_references/" class="btn btn-neutral float-right" title=" Paper References">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../multi_instance_classification/" class="btn btn-neutral" title=" Multi-instance classification"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../multi_instance_classification/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../paper_references/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/require.js"></script>
+      <script src="../search/search.js"></script>
+
+</body>
+</html>
