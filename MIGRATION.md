@@ -122,40 +122,40 @@ Articles still to migrate:
 * ~~just-in-time (JIT) compiler~~
 * ~~JVM~~
 * ~~KnowledgeFlow toolbars are empty~~
-* Learning curves
+* ~~Learning curves~~
 * ~~Learning Resources~~
-* LibSVM
-* Load an XML BIF file
-* Making predictions
-* Mathematical functions
+* ~~LibSVM~~
+* ~~Load an XML BIF file~~
+* ~~Making predictions~~
+* ~~Mathematical functions~~
 * ~~Memory consumption and Garbage collector~~
-* MessageClassifier
-* MetaCost
-* MS SQL Server 2000 (Desktop Engine)
-* Multi-instance classification
+* ~~MessageClassifier~~
+* ~~MetaCost~~
+* ~~MS SQL Server 2000 (Desktop Engine)~~ **Not all links to MS articles or downloads work**
+* ~~Multi-instance classification~~
 * ~~NetBeans~~
 * ~~Netbeans 6.0~~
 * ~~Netbeans 6.0 (Subversion)~~
 * ~~Netbeans 6.0 (weka-src.jar)~~
 * ~~Not so FAQ~~
 * ~~Not So Frequently Asked Questions~~
-* Optimizing parameters
+* ~~Optimizing parameters~~
 * ~~OSX Mountain Lion - Weka x-y-z is damaged and can't be installed. You should eject the disk image~~
 * ~~OutOfMemory~~
 * ~~OutOfMemoryException~~
 * ~~Packages~~
-* Paper References
-* Performing attribute selection
-* Piqle
-* Plotting error rate for incremental classifier
+* ~~Paper References~~
+* ~~Performing attribute selection~~
+* ~~Piqle~~
+* ~~Plotting error rate for incremental classifier~~
 * ~~Plotting multiple ROC curves~~
 * ~~Pluggable evaluation metrics~~
-* Primer
+* ~~Primer~~
 * ~~Programmatic Use~~
-* PROMPT
-* Properties file
-* Props file
-* Prospectr
+* ~~PROMPT~~
+* ~~Properties file~~
+* ~~Props file~~
+* Prospectr **Dead link, cant find alternative online, not referenced by any other pages. Not migrated.**
 * Related Projects
 * Related Research Groups
 * Remote Experiment

@@ -187,7 +187,21 @@ pages:
   - ' Java Virtual Machine' : java_virtual_machine.md
   - ' JVM' : jvm.md
 
-
-
-
-
+  - ' Learning curves' : learning_curves.md
+  - ' LibSVM' : lib_svm.md
+  - ' Load an XML BIF file' : load_an_xml_bif_file.md
+  - ' Making predictions' : making_predictions.md
+  - ' Mathematical functions' : mathematical_functions.md
+  - ' MessageClassifier' : message_classifier.md
+  - ' MetaCost' : metacost.md
+  - ' MS SQL Server 2000 (Desktop Engine)' : ms_sql_server_2000_desktop_engine.md
+  - ' Multi-instance classification' : multi_instance_classification.md
+  - ' Optimizing parameters' : optimizing_parameters.md
+  - ' Paper References' : paper_references.md
+  - ' Performing attribute selection' : performing_attribute_selection.md
+  - ' Piqle' : piqle.md
+  - ' Plotting error rate for incremental classifier' : plotting_error_rate_for_incremental_classifier.md
+  - ' Primer' : primer.md
+  - ' PROMPT' : prompt.md
+  - ' Properties file' : properties_file.md
+  - ' Props file' : props_file.md
