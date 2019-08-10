@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title> Text categorization with Weka - Weka Wiki</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = " Text categorization with Weka";
+    var mkdocs_page_input_path = "text_categorization_with_weka.md";
+    var mkdocs_page_url = "/text_categorization_with_weka/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Weka Wiki</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Resources</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../faq/">FAQ</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../not_so_faq/">Not so FAQ</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../troubleshooting/">Troubleshooting</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../learning_resources/">Learning resources</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../using_the_api/">Using the API</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../extending_weka/">Extending Weka</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../arff/">ARFF Format</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../packages/">Packages</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../mailing_list/">Mailing list</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#import">Import</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#directories">Directories</a></li>
+        
+            <li><a class="toctree-l3" href="#csv-files">CSV files</a></li>
+        
+            <li><a class="toctree-l3" href="#third-party-tools">Third-party tools</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l2"><a href="#working-with-textual-data">Working with textual data</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#conversion">Conversion</a></li>
+        
+            <li><a class="toctree-l3" href="#stopwords">Stopwords</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l2"><a href="#utf-8">UTF-8</a></li>
+    
+
+    <li class="toctree-l2"><a href="#examples">Examples</a></li>
+    
+
+    <li class="toctree-l2"><a href="#see-also">See also</a></li>
+    
+
+    <li class="toctree-l2"><a href="#links">Links</a></li>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Weka Wiki</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li> Text categorization with Weka</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p>In the following one can find some information of how to use Weka for <a href="http://en.wikipedia.org/wiki/document_classification">text categorization</a>.</p>
+<h1 id="import">Import</h1>
+<p>Weka needs the data to be present in <a href="../arff/">ARFF</a> or <a href="xrff.md">XRFF</a> format in order to perform any classification tasks.</p>
+<h2 id="directories">Directories</h2>
+<p>One can transform the text files with the following tools into ARFF format (depending on the version of Weka you are using):</p>
+<ul>
+<li><strong><a href="../arff_from_text_collections/">TextDirectoryToArff</a></strong> tool (3.4.x and &gt;= 3.5.3)<blockquote>
+<p>this Java class transforms a directory of files into an ARFF file</p>
+</blockquote>
+</li>
+<li><strong><a href="http://weka.sourceforge.net/doc.dev/weka/core/converters/TextDirectoryLoader.html">TextDirectoryLoader</a></strong> converter (&gt; 3.5.3)<blockquote>
+<p>this converter is based on the <em><a href="../arff_from_text_collections/">TextDirectoryToArff</a></em> tool and located in the <code>weka.core.converters</code> package</p>
+</blockquote>
+</li>
+</ul>
+<p>Example directory layout for <strong>TextDirectoryLoader</strong>:</p>
+<pre><code> ...
+ |
+ +- text_example
+    |
+    +- class1
+    |  |
+    |  + file1.txt
+    |  |
+    |  + file2.txt
+    |  |
+    |  ...
+    |
+    +- class2
+    |  |
+    |  + another_file1.txt
+    |  |
+    |  + another_file2.txt
+    |  |
+    |  ...
+</code></pre>
+
+<p>The above directory structure can be turned into an ARFF file like this:</p>
+<pre><code class="bash">java weka.core.converters.TextDirectoryLoader -dir text_example &gt; text_example.arff
+</code></pre>
+
+<h2 id="csv-files">CSV files</h2>
+<p>CSV files can be imported in Weka easily via the Weka Explorer or via commandline via the <code>CSVLoader</code> class:</p>
+<pre><code class="bash"> java weka.core.converters.CSVLoader file.csv &gt; file.arff
+</code></pre>
+
+<p>By default, non-numerical attributes get imported as <em>NOMINAL</em> attributes, which is not necessarily desired for textual data, especially if one wants to use the <a href="http://weka.sourceforge.net/doc.dev/weka/filters/unsupervised/attribute/StringToWordVector.html">StringToWordVector</a> filter. In order to change the attribute to <em>STRING</em>, one can run the <code>NominalToString</code> filter (package <code>weka.filters.unsupervised.attribute</code>) on the data, specifying the attribute index or range of indices that should be converted (NB: 
+this filter does <strong>not</strong> exclude the class attribute from conversion!). In order to retain the attribute types, one needs to save the file in <a href="../arff/">ARFF</a> or <a href="xrff.md">XRFF</a> format (or in the compressed version of these formats).</p>
+<h2 id="third-party-tools">Third-party tools</h2>
+<ul>
+<li><a href="http://www.cs.cmu.edu/~cprose/TagHelper.html">TagHelper Tools</a>, which allows one to transform texts into vectors of stemmed or unstemmed unigrams, bigrams, part-of-speech bigrams, and some user defined features, and then saves this representation to <a href="../arff/">ARFF</a>. Currently processes English, German, and Chinese. Spanish and Portugese are in progress.</li>
+</ul>
+<h1 id="working-with-textual-data">Working with textual data</h1>
+<h2 id="conversion">Conversion</h2>
+<p>Most classifiers in Weka cannot handle <em>String</em> attributes. For these learning schemes one has to process the data with appropriate filters, e.g., the <a href="http://weka.sourceforge.net/doc.dev/weka/filters/unsupervised/attribute/StringToWordVector.html">StringToWordVector</a> filter which can perform <a href="http://en.wikipedia.org/wiki/tf%e2%80%93idf">TF/IDF transformation</a>.</p>
+<p>The <code>StringToWordVector</code> filter places the class attribute of the generated output data at the beginning. In case you'd to like to have it as last attribute again, you can use the <a href="http://weka.sourceforge.net/doc.dev/weka/filters/unsupervised/attribute/Reorder.html">Reorder</a> filter with the following setup:</p>
+<pre><code class="bash">weka.filters.unsupervised.attribute.Reorder -R 2-last,first
+</code></pre>
+
+<p>And with the <a href="http://weka.sourceforge.net/doc.dev/weka/filters/MultiFilter.html">MultiFilter</a> you can also apply both filters in one go, instead of subsequently. Makes it easier in the Explorer for instance.</p>
+<h2 id="stopwords">Stopwords</h2>
+<p>The <a href="http://weka.sourceforge.net/doc.dev/weka/filters/unsupervised/attribute/StringToWordVector.html">StringToWordVector</a> filter can also work with a different stopword list than the built-in one (based on the Rainbow system). One can use the <code>-stopwords</code> option to load the external stopwords file. The format for such a stopword file is one stopword per line, lines starting with '#' are interpreted as comments and ignored.</p>
+<p><strong>Note:</strong> There was a bug in Weka 3.5.6 (which introduced the support of external stopwords lists), which ignored the external stopwords list. Later versions or <a href="../snapshots/">snapshot</a>s from 21/07/2007 on will work correctly.</p>
+<h1 id="utf-8">UTF-8</h1>
+<p>In case you are working with text files containing non-ASCII characters, e.g., Arabic, you might encounter some display problems under Windows. Java was designed to display <a href="http://en.wikipedia.org/wiki/utf-8">UTF-8</a>, which should include arabic characters. By default, Java uses <a href="http://en.wikipedia.org/wiki/cp1252">code page 1252</a> under Windows, which garbles the display of other characters. In order to fix this, you will have to modify the java command-line with which you start up Weka (taken from <a href="https://list.scms.waikato.ac.nz/mailman/htdig/wekalist/2008-july/013981.html">this</a> post):</p>
+<pre><code class="bash">  java -Dfile.encoding=utf-8 -classpath ...
+</code></pre>
+
+<p>The <code>**-Dfile.encoding=utf-8**</code> tells Java to explicitly use <a href="http://en.wikipedia.org/wiki/utf-8">UTF-8</a> encoding instead of the default <a href="http://en.wikipedia.org/wiki/cp1252">CP1252</a>.
+If you are starting Weka via start menu and you use a recent version (at least 3.5.8 or 3.4.13), then you will just have to modify the <code>fileEncoding</code> placeholder in the <code>RunWeka.ini</code> accordingly.</p>
+<h1 id="examples">Examples</h1>
+<ul>
+<li><a href="../files/text_example.zip">text_example.zip</a> - contains a directory structure and example files that can be imported with the <code>TextDirectoryLoader</code> converter.</li>
+<li><a href="../files/TextCategorizationTest.java">TextCategorizationTest.java</a> - uses the <code>TextDirectoryLoader</code> converter to turn a directory structure into a dataset, applies the <code>StringToWordVector</code> and builds a classifier with the filtered data.</li>
+</ul>
+<h1 id="see-also">See also</h1>
+<ul>
+<li><a href="../batch_filtering/">Batch filtering</a> - for generating a test set with the same dictionary as the training set</li>
+<li><a href="https://waikato.github.io/weka-wiki/search.html?q=text+categorization">All text categorization articles</a></li>
+</ul>
+<h1 id="links">Links</h1>
+<ul>
+<li>Javadoc<ul>
+<li><a href="http://weka.sourceforge.net/doc.dev/weka/filters/unsupervised/attribute/StringToWordVector.html">StringToWordVector</a></li>
+<li><a href="http://weka.sourceforge.net/doc.dev/weka/core/converters/TextDirectoryLoader.html">TextDirectoryLoader</a></li>
+</ul>
+</li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../text_classification_with_weka/" class="btn btn-neutral float-right" title=" Text classification with Weka">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../stop_word_filtering_and_attributes/" class="btn btn-neutral" title=" Stop word filtering and attributes"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../stop_word_filtering_and_attributes/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../text_classification_with_weka/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/require.js"></script>
+      <script src="../search/search.js"></script>
+
+</body>
+</html>

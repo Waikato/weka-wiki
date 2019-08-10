@@ -826,6 +826,62 @@
 		
 	    </li>
           
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
         </ul>
       </div>
       &nbsp;
@@ -861,7 +917,7 @@
                 <h1 id="command-line">Command line</h1>
 <p>The following sections show how to obtain predictions/classifications without writing your own Java code via the command line.</p>
 <h2 id="classifiers">Classifiers</h2>
-<p>After a <a href="saving_and_loading_models.md">model has been saved</a>, one can make predictions for a test set, whether that set contains valid class values or not. The output will contain both the actual and predicted class. (Note that if the test class contains simply '?' for the class label for each instance, the "actual" class label for each instance will not contain useful information, but the predicted class label will.) The <code>-T &lt;test_set&gt;</code> command-line switch specifies the dataset of instances whose classes are to be predicted, while the <code>-p &lt;attribute_range&gt;</code> switch allows the user to write out a range of attributes (examples: "1-2" for the first and second attributes, or "0" for no attributes). Sample command line:</p>
+<p>After a <a href="../saving_and_loading_models/">model has been saved</a>, one can make predictions for a test set, whether that set contains valid class values or not. The output will contain both the actual and predicted class. (Note that if the test class contains simply '?' for the class label for each instance, the "actual" class label for each instance will not contain useful information, but the predicted class label will.) The <code>-T &lt;test_set&gt;</code> command-line switch specifies the dataset of instances whose classes are to be predicted, while the <code>-p &lt;attribute_range&gt;</code> switch allows the user to write out a range of attributes (examples: "1-2" for the first and second attributes, or "0" for no attributes). Sample command line:</p>
 <pre><code class="bash"> java weka.classifiers.trees.J48 -T unclassified.arff -l j48.model -p 0
 </code></pre>
 
@@ -919,7 +975,7 @@ This filter can add the classification, class distribution and the error per row
 <h1 id="gui">GUI</h1>
 <p>The Weka GUI allows you as well to output predictions based on a previously saved model.</p>
 <h2 id="explorer">Explorer</h2>
-<p>See the <a href="../saving_and_loading_models#explorer.md">Explorer</a> section of the <a href="saving_and_loading_models.md">Saving and loading models</a> article to setup the Explorer. Additionally, you need to check the <em>Output predictions</em> options in the <em>More options</em> dialog. Righ-clicking on the respective results history item and selecting <em>Re-evaluate model on current test set</em> will output then the predictions as well (the statistics will be useless due to missing class values in the test set, so just ignore them). The output is similar to the one produced by the commandline.</p>
+<p>See the <a href="../saving_and_loading_models#explorer.md">Explorer</a> section of the <a href="../saving_and_loading_models/">Saving and loading models</a> article to setup the Explorer. Additionally, you need to check the <em>Output predictions</em> options in the <em>More options</em> dialog. Righ-clicking on the respective results history item and selecting <em>Re-evaluate model on current test set</em> will output then the predictions as well (the statistics will be useless due to missing class values in the test set, so just ignore them). The output is similar to the one produced by the commandline.</p>
 <p>Example output for the <em>anneal</em> UCI dataset:</p>
 <pre><code class="text"> == Predictions on test set ==
  inst#,    actual, predicted, error, probability distribution
@@ -954,7 +1010,7 @@ This filter can add the classification, class distribution and the error per row
 <p>If you want to perform the classification within your own code, see the <a href="../use_weka_in_your_java_code/#classifying-instances">classifying instances</a> section of <a href="../use_weka_in_your_java_code/">this article</a>, explaining the Weka API in general.</p>
 <h1 id="see-also">See also</h1>
 <ul>
-<li><a href="saving_and_loading_models.md">Saving and loading models</a></li>
+<li><a href="../saving_and_loading_models/">Saving and loading models</a></li>
 <li><a href="../use_weka_in_your_java_code/">Use Weka in your Java code</a> - general information about using the Weka API</li>
 <li><a href="../troubleshooting/#instance-id">Using ID attributes</a></li>
 </ul>
