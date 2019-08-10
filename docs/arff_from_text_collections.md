@@ -99,7 +99,7 @@ public class TextDirectoryToArff {
 ```
 
 # See also
-* [[Text categorization with Weka]]
+* [Text categorization with Weka](text_categorization_with_weka.md)
 
 # Downloads
 * [TextDirectoryToArff.java](files/TextDirectoryToArff.java)

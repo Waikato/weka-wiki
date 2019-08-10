@@ -156,17 +156,17 @@ Articles still to migrate:
 * ~~Properties file~~
 * ~~Props file~~
 * Prospectr **Dead link, cant find alternative online, not referenced by any other pages. Not migrated.**
-* Related Projects
-* Related Research Groups
-* Remote Experiment
-* Remove Attributes
-* Removing misclassified instances from dataset
-* Rename Attribute Values
+* ~~Related Projects~~
+* ~~Related Research Groups~~
+* ~~Remote Experiment~~
+* ~~Remove Attributes~~
+* ~~Removing misclassified instances from dataset~~
+* ~~Rename Attribute Values~~
 * ~~ROC~~
 * ~~ROC curves~~
-* Running an Experiment Using Clusterers
+* ~~Running an Experiment Using Clusterers~~
 * ~~Save Instances to an ARFF File~~
-* Saving and loading models
+* ~~Saving and loading models~~
 * ~~Serialization~~
 * ~~Serialization is nice, but what about generating actual Java code from WEKA classes_~~
 * ~~Single quotes in labels of ARFF files~~
@@ -174,16 +174,16 @@ Articles still to migrate:
 * ~~Snapshots~~
 * ~~Spaces in labels of ARFF files~~
 * ~~StackOverflowError~~
-* Stemmers
-* Stop word filtering and attributes
+* ~~Stemmers~~
+* ~~Stop word filtering and attributes~~
 * ~~Subversion~~
-* Text categorization with Weka
-* Text classification with Weka
+* ~~Text categorization with Weka~~
+* ~~Text classification with Weka~~
 * ~~The snowball stemmers don't work, what am I doing wrong_~~
-* Transferring an ARFF file into a database
+* ~~Transferring an ARFF file into a database~~
 * ~~Troubleshooting~~ **needs linking to articles, though**
 * ~~Trying to add JDBC driver... - Error, not in CLASSPATH_~~
-* Tuning classifier parameters
+* ~~Tuning classifier parameters~~
 * ~~Unofficial packages for WEKA~~
 * ~~Unofficial packages for WEKA 3.7~~
 * ~~Use Weka in your Java code~~

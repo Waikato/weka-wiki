@@ -205,3 +205,19 @@ pages:
   - ' PROMPT' : prompt.md
   - ' Properties file' : properties_file.md
   - ' Props file' : props_file.md
+
+  - ' Related Projects' : related_projects.md
+  - ' Related Research Groups' : related_research_groups.md
+  - ' Remote Experiment' : remote_experiment.md
+  - ' Remove Attributes' : remove_attributes.md
+  - ' Removing misclassified instances from dataset' : removing_misclassified_instances_from_dataset.md
+  - ' Rename Attribute Values' : rename_attribute_values.md
+  - ' Running an Experiment Using Clusterers' : running_an_experiment_using_clusterers.md
+  - ' Saving and loading models' : saving_and_loading_models.md
+  - ' Stemmers' : stemmers.md
+  - ' Stop word filtering and attributes' : stop_word_filtering_and_attributes.md
+  - ' Text categorization with Weka' : text_categorization_with_weka.md
+  - ' Text classification with Weka' : text_classification_with_weka.md
+  - ' Transferring an ARFF file into a database' : transferring_an_arff_file_into_a_database.md
+  - ' Tuning classifier parameters' : tuning_classifier_parameters.md
+  
