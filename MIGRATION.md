@@ -188,18 +188,18 @@ Articles still to migrate:
 * ~~Unofficial packages for WEKA 3.7~~
 * ~~Use Weka in your Java code~~
 * ~~Use Weka in your Java code 2~~
-* Use Weka with the Microsoft .NET Framework
-* Using a new Java framework to create ARFF from JPA Entity
-* Using cluster algorithms
-* Using clusterers
-* Using the Experiment API
-* Using the MathExpression filter
-* Using Weka from Groovy
-* Using Weka from Jython
-* Using Weka via Jepp
+* ~~Use Weka with the Microsoft .NET Framework~~ **Almost all links in article are dead**
+* ~~Using a new Java framework to create ARFF from JPA Entity~~ **project source link broken**
+* ~~Using cluster algorithms~~
+* ~~Using clusterers~~
+* ~~Using the Experiment API~~
+* ~~Using the MathExpression filter~~
+* ~~Using Weka from Groovy~~
+* ~~Using Weka from Jython~~
+* ~~Using Weka via Jepp~~
 * ~~Visualization~~
-* Visualizing a Tree
-* Visualizing cluster assignments
+* ~~Visualizing a Tree~~
+* ~~Visualizing cluster assignments~~
 * ~~Visualizing ROC curve~~
 * weka_core_Capabilities.props
 * weka_core_logging_Logging.props

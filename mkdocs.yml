@@ -220,4 +220,16 @@ pages:
   - ' Text classification with Weka' : text_classification_with_weka.md
   - ' Transferring an ARFF file into a database' : transferring_an_arff_file_into_a_database.md
   - ' Tuning classifier parameters' : tuning_classifier_parameters.md
+
+  - ' Use Weka with the Microsoft .NET Framework' : use_weka_with_the_microsoft_net_framework.md
+  - ' Using a new Java framework to create ARFF from JPA Entity' : using_a_new_java_framework_to_create_arff_from_jpa_entity.md
+  - ' Using cluster algorithms' : using_cluster_algorithms.md
+  - ' Using clusterers' : using_clusterers.md
+  - ' Using the Experiment API' : using_the_experiment_api.md
+  - ' Using the MathExpression filter' : using_the_mathexpression_filter.md
+  - ' Using Weka from Groovy' : using_weka_from_groovy.md
+  - ' Using Weka from Jython' : using_weka_from_jython.md
+  - ' Using Weka via Jepp' : using_weka_via_jepp.md
+  - ' Visualizing a Tree' : visualizing_a_tree.md
+  - ' Visualizing cluster assignments' : visualizing_cluster_assignments.md
   
