@@ -1,0 +1,1185 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title> Using cluster algorithms - Weka Wiki</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = " Using cluster algorithms";
+    var mkdocs_page_input_path = "using_cluster_algorithms.md";
+    var mkdocs_page_url = "/using_cluster_algorithms/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Weka Wiki</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Resources</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../faq/">FAQ</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../not_so_faq/">Not so FAQ</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../troubleshooting/">Troubleshooting</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../learning_resources/">Learning resources</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../using_the_api/">Using the API</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../extending_weka/">Extending Weka</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../arff/">ARFF Format</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../packages/">Packages</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../mailing_list/">Mailing list</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#commandline">Commandline</a></li>
+    
+
+    <li class="toctree-l2"><a href="#filters">Filters</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#addcluster">AddCluster</a></li>
+        
+            <li><a class="toctree-l3" href="#clustermembership">ClusterMembership</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l2"><a href="#classifiers">Classifiers</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#classificationviaclustering">ClassificationViaClustering</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l2"><a href="#notes">Notes</a></li>
+    
+
+    <li class="toctree-l2"><a href="#see-also">See also</a></li>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Weka Wiki</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li> Using cluster algorithms</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p>This article discusses the use of cluster schemes in Weka from the commandline. This functionality is, of course, also available from the GUI, namely the Explorer and the KnowledgeFlow.</p>
+<h1 id="commandline">Commandline</h1>
+<p>Clusterers can be used in a similar fashion Weka's classifiers:</p>
+<ul>
+<li><code>-t &lt;file&gt;</code><blockquote>
+<p>specifies the training file</p>
+</blockquote>
+</li>
+<li><code>-T &lt;file&gt;</code><blockquote>
+<p>specifies the test file</p>
+</blockquote>
+</li>
+<li><code>-p &lt;attribute range&gt;</code><blockquote>
+<p>for outputting predictions (if a test file is present, then for this one, otherwise the train file)</p>
+</blockquote>
+</li>
+<li><code>-c &lt;index&gt;</code><blockquote>
+<p>performs a <em>classes to clusters</em> evaluation (during training, the class attribute will be automatically ignored)</p>
+</blockquote>
+</li>
+<li><code>-x &lt;folds&gt;</code><blockquote>
+<p>performs cross-validation for density-based clusterers (no <em>classes to clusters</em> evaluation possible!). With <code>weka.clusterers.MakeDensityBasedClusterer</code>, any clusterer can be turned into a density-based one.</p>
+</blockquote>
+</li>
+<li><code>-d &lt;file&gt; and -l &lt;file&gt;</code><blockquote>
+<p>for saving and loading <a href="../serialization/">serialized models</a></p>
+</blockquote>
+</li>
+</ul>
+<p>Some examples:</p>
+<ul>
+<li><code>EM</code> with train and test file:</li>
+</ul>
+<pre><code class="bash"> java weka.clusterers.EM \
+    -I 10 \             # only 10 iterations
+    -t train.arff \
+    -T test.arff
+</code></pre>
+
+<ul>
+<li><code>SimpleKMeans</code> with <em>classes to clusters</em> evaluation:</li>
+</ul>
+<pre><code class="bash"> java weka.clusterers.SimpleKMeans 
+   -t train.arff \
+   -c last             # the class attribute is the last
+</code></pre>
+
+<blockquote>
+<p>Sample output:</p>
+</blockquote>
+<pre><code class="text"> ...
+ Class attribute: 
+class
+ Classes to Clusters:
+
+
+    0   1  &lt;-- assigned to cluster
+  242 442 | 3
+   22  77 | 2
+
+ Cluster 0 &lt;-- 2
+ Cluster 1 &lt;-- 3
+
+ Incorrectly clustered instances : 
+      319.0    40.7407 %
+</code></pre>
+
+<ul>
+<li>running 2-fold cross-validation on <code>SimpleKMeans</code> (we need to use <code>MakeDensityBasedClusterer</code>, since <code>SimpleKMeans</code> is no density-based clusterer!):</li>
+</ul>
+<pre><code class="bash"> java weka.clusterers.MakeDensityBasedClusterer 
+    -W weka.clusterers.SimpleKMeans \
+    -t train.arff \
+    -x 2                # 2 folds
+</code></pre>
+
+<blockquote>
+<p>Sample output:</p>
+</blockquote>
+<pre><code class="text"> ...
+ 2 fold CV Log Likelihood: 
+-40.9751
+</code></pre>
+
+<h1 id="filters">Filters</h1>
+<p>Weka contains some filters that make life easier with the cluster algorithms.</p>
+<h2 id="addcluster">AddCluster</h2>
+<p>The filter <code>weka.filters.unsupervised.attribute.AddCluster</code> adds the cluster number as nominal attribute to the data processed by the filter. This makes the post-processing or analyzing of the cluster assignments easier than with the <code>-p X</code> option.</p>
+<p>Here's an example for the UCI <a href="../datasets/">dataset</a> <em>anneal</em> using <code>SimpleKMeans</code>:</p>
+<pre><code class="bash"> java weka.filters.unsupervised.attribute.AddCluster \
+    -W &quot;weka.clusterers.SimpleKMeans -N 6 -S 42&quot; \
+    -I last \                 # we want to ignore the class attribute
+    -i anneal.arff \
+    -o out.arff
+</code></pre>
+
+<p>And some example output:</p>
+<pre><code class="text"> @relation ...
+
+ @attribute family {'?',GB,GK,GS,TN,ZA,ZF,ZH,ZM,ZS}
+ @attribute product-type {C,H,G}
+ ...
+ @attribute class {1,2,3,4,5,U}
+ @attribute cluster {cluster1,cluster2,cluster3,cluster4,cluster5,cluster6}
+
+ @data
+ '?',C,A,8,0,'?',S,'?',0,'?','?',G,'?','?','?','?','?','?','?','?','?','?','?','?','?','?','?','?','?','?','?',COIL,0.7,610,0,'?',0,'?',3,cluster2
+ '?',C,R,0,0,'?',S,2,0,'?','?',E,'?','?','?','?','?','?','?','?','?','?','?','?','?','?','?',Y,'?','?','?',COIL,3.2,610,0,'?',0,'?',3,cluster2
+</code></pre>
+
+<h2 id="clustermembership">ClusterMembership</h2>
+<p>If you're more interested in the probability for each each cluster an instance gets assigned, you can use the filter <code>weka.filters.unsupervised.attribute.ClusterMembership</code>.</p>
+<p>Here's an example for the UCI <a href="../datasets/">dataset</a> <em>anneal</em> using <code>EM</code>:</p>
+<pre><code class="bash"> java weka.filters.unsupervised.attribute.ClusterMembership \
+    -W weka.clusterers.EM \
+    -I last \                 # we want to ignore the class attribute
+    -i anneal.arff \
+    -o out.arff \
+    -- \                      # additional options for EM follow after the --
+    -I 10
+</code></pre>
+
+<p>And some example output:</p>
+<pre><code class="text"> @relation ...
+
+ @attribute pCluster_0_0 numeric
+ @attribute pCluster_0_1 numeric
+ @attribute pCluster_0_2 numeric
+ @attribute pCluster_0_3 numeric
+ @attribute pCluster_0_4 numeric
+ @attribute pCluster_0_5 numeric
+
+ @data
+ 0.000147,0.009863,0,0.98999,0.000001,0
+ 0.00292,0.000002,0,0.997078,0,0
+ ...
+</code></pre>
+
+<h1 id="classifiers">Classifiers</h1>
+<h2 id="classificationviaclustering">ClassificationViaClustering</h2>
+<p>A new meta-classifier, <code>weka.classifiers.meta.ClassificationViaClustering</code>, got introduced in the developer version (&gt;3.5.6 or <a href="../snapshots/">snapshot</a>), which mimics the <em>clusters to classes</em> functionality of the <code>weka.core.ClusterEvaluation</code> class. A user defined cluster algorithm is built with the training data presented to the meta-classifier (after the class attribute got removed, of course) and then the mapping between classes and clusters is determined. This mapping is then used for predicting class labels of unseen instances.</p>
+<p>Here's an example for the UCI <a href="../datasets/">dataset</a> <em>balance-scale</em>:</p>
+<pre><code class="bash"> java weka.classifiers.meta.ClassificationViaClustering \
+    -t balance-scale.arff \
+    -W weka.clusterers.SimpleKMeans \
+    -- \
+    -N 3           # additional parameters for SimpleKMeans, since the dataset has 3 class labels
+</code></pre>
+
+<p>And some sample output:</p>
+<pre><code class="text"> ...
+ Clusters to classes mapping:
+
+   1. Cluster: 
+B (2)
+   2. Cluster: 
+R (3)
+   3. Cluster: 
+L (1)
+
+ Classes to clusters mapping:
+
+   1. Class (L): 
+3. Cluster
+   2. Class (B): 
+1. Cluster
+   3. Class (R): 
+2. Cluster
+ ...
+</code></pre>
+
+<p><strong>Note:</strong> In order to obtain a useful model, you have to make sure that the cluster algorithms are properly setup for the dataset you are using. E.g., <code>SimpleKMeans</code> has a fixed number of clusters that it should determine. Trying to determine 2 clusters on a dataset with 5 class labels isn't very useful.</p>
+<h1 id="notes">Notes</h1>
+<ul>
+<li>All examples are for a Linux bash. For Windows or the SimplCLI, just remove the backslashes and collapse all the lines into a single one.</li>
+<li>Comments in the examples follow a <strong>#</strong> and need to be removed, of course.</li>
+<li><strong>...</strong> denotes an omission of unnecessary content.</li>
+</ul>
+<h1 id="see-also">See also</h1>
+<ul>
+<li><a href="../use_weka_in_your_java_code/">Use Weka in your Java code</a>, section <em>Clustering</em> explains using the Weka API for clusterers</li>
+<li><a href="../batch_filtering/">Batch filtering</a> - shows how to use filters in batch mode</li>
+<li><a href="../serialization/">Serialization</a> - for using serialized/saved models</li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../using_clusterers/" class="btn btn-neutral float-right" title=" Using clusterers">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../using_a_new_java_framework_to_create_arff_from_jpa_entity/" class="btn btn-neutral" title=" Using a new Java framework to create ARFF from JPA Entity"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../using_a_new_java_framework_to_create_arff_from_jpa_entity/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../using_clusterers/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/require.js"></script>
+      <script src="../search/search.js"></script>
+
+</body>
+</html>
