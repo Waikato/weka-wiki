@@ -911,6 +911,70 @@
 		
 	    </li>
           
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
         </ul>
       </div>
       &nbsp;
@@ -944,7 +1008,7 @@
             <div class="section">
               
                 <h1 id="description">Description</h1>
-<p>The main GUI (= <code>weka.gui.Main</code>) contains a plugin mechanism to add functionality to the main menu without having to modify the code of that class (the GUIChooser in the developer version as well). Thanks to the automatic class discovery, Weka will display all components that are found in packages listed in the <a href="weka_gui_genericpropertiescreator.props.md">GenericPropertiesCreator.props</a> file.</p>
+<p>The main GUI (= <code>weka.gui.Main</code>) contains a plugin mechanism to add functionality to the main menu without having to modify the code of that class (the GUIChooser in the developer version as well). Thanks to the automatic class discovery, Weka will display all components that are found in packages listed in the <a href="../weka_gui_generic_properties_creator.props/">GenericPropertiesCreator.props</a> file.</p>
 <h1 id="version">Version</h1>
 <blockquote>
 <p>3.5.5 (or <a href="../snapshots/">snapshot</a>/<a href="../subversion/">Subversion</a> after 25/05/2007)</p>
@@ -953,7 +1017,7 @@
 <p>The are only <em>two</em> requirements for components to be listed in the main menu (under the <em>Extensions</em> menu):</p>
 <ul>
 <li>they have to implement the <code>weka.gui.MainMenuExtension</code> interface</li>
-<li>the packages they reside in must be listed in the <a href="weka_gui_genericpropertiescreator.props.md">GenericPropertiesCreator.props</a> under the <code>weka.gui.MainMenuExtension</code> entry</li>
+<li>the packages they reside in must be listed in the <a href="../weka_gui_generic_properties_creator.props/">GenericPropertiesCreator.props</a> under the <code>weka.gui.MainMenuExtension</code> entry</li>
 </ul>
 <h1 id="examples">Examples</h1>
 <p>In the following, I'll present two really simple examples of how to add <em>stuff</em> to the main menu. An item that gets added to the main menu either handles everything itself, i.e., creating frame and displaying it, or it needs a frame to place its GUI components in. In the first case, one only needs to let the <code>getActionListener(JFrame)</code> method return an <code>ActionListener</code> and implement the <code>fillFrame(Component)</code> method with an empty body. In the other case, one lets the <code>getActionListener(JFrame)</code> method return <code>null</code> and uses the <code>fillFrame(Component)</code> method to fill the frame with life.</p>
@@ -983,7 +1047,7 @@
   }
 </code></pre>
 
-<p>Since the class is part of the <code>weka.gui.extensions</code> package, we must add this package to the <code>weka.gui.MainMenuExtension</code> entry of the <a href="weka_gui_genericpropertiescreator.props.md">GenericPropertiesCreator.props</a> file, e.g.:</p>
+<p>Since the class is part of the <code>weka.gui.extensions</code> package, we must add this package to the <code>weka.gui.MainMenuExtension</code> entry of the <a href="../weka_gui_generic_properties_creator.props/">GenericPropertiesCreator.props</a> file, e.g.:</p>
 <pre><code class="ini"> weka.gui.MainMenuExtension=\
   weka.gui.extensions
 </code></pre>
@@ -1030,7 +1094,7 @@
   }
 </code></pre>
 
-<p>This class is part of the <code>weka.gui.extensions</code> package and we therefore must add this package to the <code>weka.gui.MainMenuExtension</code> entry of the <a href="weka_gui_genericpropertiescreator.props.md">GenericPropertiesCreator.props</a> file:</p>
+<p>This class is part of the <code>weka.gui.extensions</code> package and we therefore must add this package to the <code>weka.gui.MainMenuExtension</code> entry of the <a href="../weka_gui_generic_properties_creator.props/">GenericPropertiesCreator.props</a> file:</p>
 <pre><code class="ini"> weka.gui.MainMenuExtension=\
   weka.gui.extensions
 </code></pre>

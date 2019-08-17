@@ -162,7 +162,7 @@
         },
         {
             "location": "/weka_experiment_database_utils.props/",
-            "text": "File\n\n\nweka/experiment/DatabaseUtils.props\n\n\nDescription\n\n\nDefines the \nDatabases\n setup, i.e., JDBC driver information, JDBC URL, database type conversion, etc.\n\n\nVersion\n\n\n\n\n\n\n\n\n= 3.1.3\n\n\n\n\n\n\n\n\nFields\n\n\n\n\n\n\nGeneral\n\n\n\n\n\n\njdbcDriver\n\n\nthe comma-separated list of jdbc drivers to try loading\n\n\n\n\n\n\njdbcURL\n\n\nthe JDBC URL to the database\n\n\n\n\n\n\n\n\n\n\nTable creation\n\n\n\n\n\n\nCREATE_STRING\n\n\ndatabase specific datatype, e.g., \nTEXT\n\n\n\n\n\n\nCREATE_INT\n\n\ndatabase specific datatype, e.g., \nINT\n\n\n\n\n\n\nCREATE_DOUBLE\n\n\ndatabase specific datatype, e.g., \nDOUBLE\n\n\n\n\n\n\n\n\n\n\nDatabase flags\n\n\n\n\n\n\ncheckUpperCaseNames\n\n\nnecessary if database turns column names into upper case ones, e.g., HSQLDB\n\n\n\n\n\n\ncheckLowerCaseNames\n (> 3.5.3)\n\n\nnecessary if database turns column names into lower case ones, e.g., PostgreSQL\n\n\n\n\n\n\ncheckForTable\n (> 3.5.3)\n\n\nChecks whether the tables in the query are available in the meta-data of the JDBC Connection. Some tables, like \npg_tables\n, exist but are not available through the meta-data\n\n\n\n\n\n\nsetAutoCommit\n\n\nsetting for \njava.sql.Connection.setAutoCommit(boolean)\n\n\n\n\n\n\ncreateIndex\n\n\nwhether to create a primary key \nKey_IDX\n in the results table of an experiment\n\n\n\n\n\n\n\n\n\n\nSpecial flags for DatabaseLoader/Saver (package \nweka.core.converters\n)\n\n\n\n\n\n\nnominalToStringLimit\n (>= 3.4.1)\n\n\nbeyond this limit, nominal columns are loaded as STRING attributes and no longer as NOMINAL ones\n\n\n\n\n\n\nidColumn\n (>= 3.4.1)\n\n\nunique key in table that allows ordering for incremental loading\n\n\n\n\n\n\nKeywords\n (> 3.5.8, > 3.6.0)\n\n\nlists all the reserved keywords of the current database type\n\n\ndefault: \nAND,ASC,BY,DESC,FROM,GROUP,INSERT,ORDER,SELECT,UPDATE,WHERE\n\n\n\n\n\n\nKeywordsMaskChar\n (> 3.5.8, > 3.6.0)\n\n\nthe character to append to attribute names/table names that would be interpreted as keywords by the database, in order to avoid exceptions when executing SQL commands\ndefaut: \n_\n\n\n\n\n\n\n\n\n\n\nDatabase type mapping\n\n\nIn order to import the data from database correctly into Weka, one has to specify what JDBC datatype corresponds to what Java SQL retrieval method. Here's an overview of how the Java types are mapped to Weka's attribute types:\n\n\n\n\n\n\n\n\nJava type\n\n\nJava method\n\n\nIdentifier\n\n\nWeka attribute type\n\n\nVersion\n\n\n\n\n\n\n\n\n\n\nString\n\n\ngetString()\n\n\n0\n\n\nnominal\n\n\n\n\n\n\n\n\nboolean\n\n\ngetBoolean()\n\n\n1\n\n\nnominal\n\n\n\n\n\n\n\n\ndouble\n\n\ngetDouble()\n\n\n2\n\n\nnumeric\n\n\n\n\n\n\n\n\nbyte\n\n\ngetByte()\n\n\n3\n\n\nnumeric\n\n\n\n\n\n\n\n\nshort\n\n\ngetByte()\n\n\n4\n\n\nnumeric\n\n\n\n\n\n\n\n\nint\n\n\ngetInteger()\n\n\n5\n\n\nnumeric\n\n\n\n\n\n\n\n\nlong\n\n\ngetLong()\n\n\n6\n\n\nnumeric\n\n\n\n\n\n\n\n\nfloat\n\n\ngetFloat()\n\n\n7\n\n\nnumeric\n\n\n\n\n\n\n\n\ndate\n\n\ngetDate()\n\n\n8\n\n\ndate\n\n\n\n\n\n\n\n\ntext\n\n\ngetString()\n\n\n9\n\n\nstring\n\n\n>3.5.5\n\n\n\n\n\n\ntime\n\n\ngetTime()\n\n\n10\n\n\nstring\n\n\n>3.5.8\n\n\n\n\n\n\n\n\nIn the props file one lists now the type names that the database returns and what Java type it represents (via the identifier), e.g.:\n\n\n CHAR=0\n VARCHAR=0\n\n\n\n\nCHAR\n and \nVARCHAR\n are both String types, hence they are interpreted as \nString\n (identifier \n0\n)\n\n\nNote:\n in case database types have blanks, one needs to replace those blanks with an underscore, e.g., \nDOUBLE PRECISION\n must be listed like this:\n\n\n DOUBLE_PRECISION=2\n\n\n\n\nSee also\n\n\n\n\nDatabases\n\n\nProperties file",
+            "text": "File\n\n\nweka/experiment/DatabaseUtils.props\n\n\nDescription\n\n\nDefines the \nDatabases\n setup, i.e., JDBC driver information, JDBC URL, database type conversion, etc.\n\n\nVersion\n\n\n\n\n>= 3.1.3\n\n\n\n\nFields\n\n\n\n\n\n\nGeneral\n\n\n\n\n\n\njdbcDriver\n\n\nthe comma-separated list of jdbc drivers to try loading\n\n\n\n\n\n\njdbcURL\n\n\nthe JDBC URL to the database\n\n\n\n\n\n\n\n\n\n\nTable creation\n\n\n\n\n\n\nCREATE_STRING\n\n\ndatabase specific datatype, e.g., \nTEXT\n\n\n\n\n\n\nCREATE_INT\n\n\ndatabase specific datatype, e.g., \nINT\n\n\n\n\n\n\nCREATE_DOUBLE\n\n\ndatabase specific datatype, e.g., \nDOUBLE\n\n\n\n\n\n\n\n\n\n\nDatabase flags\n\n\n\n\n\n\ncheckUpperCaseNames\n\n\nnecessary if database turns column names into upper case ones, e.g., HSQLDB\n\n\n\n\n\n\ncheckLowerCaseNames\n (> 3.5.3)\n\n\nnecessary if database turns column names into lower case ones, e.g., PostgreSQL\n\n\n\n\n\n\ncheckForTable\n (> 3.5.3)\n\n\nChecks whether the tables in the query are available in the meta-data of the JDBC Connection. Some tables, like \npg_tables\n, exist but are not available through the meta-data\n\n\n\n\n\n\nsetAutoCommit\n\n\nsetting for \njava.sql.Connection.setAutoCommit(boolean)\n\n\n\n\n\n\ncreateIndex\n\n\nwhether to create a primary key \nKey_IDX\n in the results table of an experiment\n\n\n\n\n\n\n\n\n\n\nSpecial flags for DatabaseLoader/Saver (package \nweka.core.converters\n)\n\n\n\n\n\n\nnominalToStringLimit\n (>= 3.4.1)\n\n\nbeyond this limit, nominal columns are loaded as STRING attributes and no longer as NOMINAL ones\n\n\n\n\n\n\nidColumn\n (>= 3.4.1)\n\n\nunique key in table that allows ordering for incremental loading\n\n\n\n\n\n\nKeywords\n (> 3.5.8, > 3.6.0)\n\n\nlists all the reserved keywords of the current database type\n\n\ndefault: \nAND,ASC,BY,DESC,FROM,GROUP,INSERT,ORDER,SELECT,UPDATE,WHERE\n\n\n\n\n\n\nKeywordsMaskChar\n (> 3.5.8, > 3.6.0)\n\n\nthe character to append to attribute names/table names that would be interpreted as keywords by the database, in order to avoid exceptions when executing SQL commands\ndefaut: \n_\n\n\n\n\n\n\n\n\n\n\nDatabase type mapping\n\n\nIn order to import the data from database correctly into Weka, one has to specify what JDBC datatype corresponds to what Java SQL retrieval method. Here's an overview of how the Java types are mapped to Weka's attribute types:\n\n\n\n\n\n\n\n\nJava type\n\n\nJava method\n\n\nIdentifier\n\n\nWeka attribute type\n\n\nVersion\n\n\n\n\n\n\n\n\n\n\nString\n\n\ngetString()\n\n\n0\n\n\nnominal\n\n\n\n\n\n\n\n\nboolean\n\n\ngetBoolean()\n\n\n1\n\n\nnominal\n\n\n\n\n\n\n\n\ndouble\n\n\ngetDouble()\n\n\n2\n\n\nnumeric\n\n\n\n\n\n\n\n\nbyte\n\n\ngetByte()\n\n\n3\n\n\nnumeric\n\n\n\n\n\n\n\n\nshort\n\n\ngetByte()\n\n\n4\n\n\nnumeric\n\n\n\n\n\n\n\n\nint\n\n\ngetInteger()\n\n\n5\n\n\nnumeric\n\n\n\n\n\n\n\n\nlong\n\n\ngetLong()\n\n\n6\n\n\nnumeric\n\n\n\n\n\n\n\n\nfloat\n\n\ngetFloat()\n\n\n7\n\n\nnumeric\n\n\n\n\n\n\n\n\ndate\n\n\ngetDate()\n\n\n8\n\n\ndate\n\n\n\n\n\n\n\n\ntext\n\n\ngetString()\n\n\n9\n\n\nstring\n\n\n>3.5.5\n\n\n\n\n\n\ntime\n\n\ngetTime()\n\n\n10\n\n\nstring\n\n\n>3.5.8\n\n\n\n\n\n\n\n\nIn the props file one lists now the type names that the database returns and what Java type it represents (via the identifier), e.g.:\n\n\n CHAR=0\n VARCHAR=0\n\n\n\n\nCHAR\n and \nVARCHAR\n are both String types, hence they are interpreted as \nString\n (identifier \n0\n)\n\n\nNote:\n in case database types have blanks, one needs to replace those blanks with an underscore, e.g., \nDOUBLE PRECISION\n must be listed like this:\n\n\n DOUBLE_PRECISION=2\n\n\n\n\nSee also\n\n\n\n\nDatabases\n\n\nProperties file",
             "title": " WEKA experiment DatabaseUtils.props"
         },
         {
@@ -177,7 +177,7 @@
         },
         {
             "location": "/weka_experiment_database_utils.props/#version",
-            "text": "= 3.1.3",
+            "text": ">= 3.1.3",
             "title": "Version"
         },
         {
@@ -3989,6 +3989,536 @@
             "location": "/visualizing_cluster_assignments/#downloads",
             "text": "VisualizeClusterAssignments.java",
             "title": "Downloads"
+        },
+        {
+            "location": "/weka_core_capabilities.props/",
+            "text": "File\n\n\nweka/core/Capabilities.props\n\n\nDescription\n\n\nCustomization of the Capabilities support in Weka.\n\n\nCAUTION:\n disabling any of these properties can lead to unreliable results within Weka!\n\n\nVersion\n\n\n\n\n\n\n\n\n3.5.3\n\n\n\n\n\n\n\n\nFields\n\n\n\n\nTest\n\n\ngeneral \nswitch\n for Capabilities tests\n\n\n\n\n\n\nInstancesTest\n\n\nenable/disables tests that are based on the data\n\n\n\n\n\n\nAttributeTest\n\n\nenable/disables tests that work only on the type of attribute\n\n\n\n\n\n\nMissingValuesTest\n\n\ntest for missing values\n\n\n\n\n\n\nMissingClassValuesTest\n\n\ntest for missing class values\n\n\n\n\n\n\nMinimumNumberInstancesTest\n\n\ntest for minimum number of instances\n\n\n\n\n\n\n\n\nSee also\n\n\n\n\nProperties file\n\n\n\n\nLinks\n\n\n\n\nWekalist posts\n\n\nproblem\n\n\ninquiry\n\n\nfurther discussion",
+            "title": " weka/core/Capabilities.props"
+        },
+        {
+            "location": "/weka_core_capabilities.props/#file",
+            "text": "weka/core/Capabilities.props",
+            "title": "File"
+        },
+        {
+            "location": "/weka_core_capabilities.props/#description",
+            "text": "Customization of the Capabilities support in Weka.  CAUTION:  disabling any of these properties can lead to unreliable results within Weka!",
+            "title": "Description"
+        },
+        {
+            "location": "/weka_core_capabilities.props/#version",
+            "text": "3.5.3",
+            "title": "Version"
+        },
+        {
+            "location": "/weka_core_capabilities.props/#fields",
+            "text": "Test  general  switch  for Capabilities tests    InstancesTest  enable/disables tests that are based on the data    AttributeTest  enable/disables tests that work only on the type of attribute    MissingValuesTest  test for missing values    MissingClassValuesTest  test for missing class values    MinimumNumberInstancesTest  test for minimum number of instances",
+            "title": "Fields"
+        },
+        {
+            "location": "/weka_core_capabilities.props/#see-also",
+            "text": "Properties file",
+            "title": "See also"
+        },
+        {
+            "location": "/weka_core_capabilities.props/#links",
+            "text": "Wekalist posts  problem  inquiry  further discussion",
+            "title": "Links"
+        },
+        {
+            "location": "/weka_core_logging_logging.props/",
+            "text": "File\n\n\nweka/core/logging/Logging.props\n\n\nDescription\n\n\nDefines the type of logging Weka performs. The default is to log regular log messages from the GUI and everything that is output to \nstdout\n and \nstderr\n to \n$HOME/weka.log\n.\n\n\nVersion\n\n\n\n\n\n\n\n\n3.5.8\n\n\n\n\n\n\n\n\nFields\n\n\n\n\nLogger\n\n\nThe logger class to use for logging. See Javadoc of respective logger class (derived from \nweka.core.logging.Logger\n) for more information.\n\n\n\n\n\n\nMinLevel\n\n\nSets the minimum level a log messages needs to have in order to end up in the log. \nALL\n will log everything, \nOFF\n turns logging off.\n\n\n\n\n\n\n\n\nDateFormat\n\n\n\n\nThe \nISO-8601\n format of the date. Here is the default value:\n\nyyyy-MM-dd HH:mm:ss\n\n\n\n\n\n\n\n\nLogFile\n\n\n\n\nIn case a logger class logs to a file, like \nweka.core.logging.FileLogger\n and \nweka.core.logging.OutputLogger\n, this file will be used. These loggers clear the log-file everytime Weka is started.\n\n\n\n\n\n\n\n\nSee also\n\n\n\n\nProperties file\n\n\n\n\nLinks\n\n\n\n\nISO-8601",
+            "title": " weka/core/logging/Logging.props"
+        },
+        {
+            "location": "/weka_core_logging_logging.props/#file",
+            "text": "weka/core/logging/Logging.props",
+            "title": "File"
+        },
+        {
+            "location": "/weka_core_logging_logging.props/#description",
+            "text": "Defines the type of logging Weka performs. The default is to log regular log messages from the GUI and everything that is output to  stdout  and  stderr  to  $HOME/weka.log .",
+            "title": "Description"
+        },
+        {
+            "location": "/weka_core_logging_logging.props/#version",
+            "text": "3.5.8",
+            "title": "Version"
+        },
+        {
+            "location": "/weka_core_logging_logging.props/#fields",
+            "text": "Logger  The logger class to use for logging. See Javadoc of respective logger class (derived from  weka.core.logging.Logger ) for more information.    MinLevel  Sets the minimum level a log messages needs to have in order to end up in the log.  ALL  will log everything,  OFF  turns logging off.     DateFormat   The  ISO-8601  format of the date. Here is the default value: yyyy-MM-dd HH:mm:ss     LogFile   In case a logger class logs to a file, like  weka.core.logging.FileLogger  and  weka.core.logging.OutputLogger , this file will be used. These loggers clear the log-file everytime Weka is started.",
+            "title": "Fields"
+        },
+        {
+            "location": "/weka_core_logging_logging.props/#see-also",
+            "text": "Properties file",
+            "title": "See also"
+        },
+        {
+            "location": "/weka_core_logging_logging.props/#links",
+            "text": "ISO-8601",
+            "title": "Links"
+        },
+        {
+            "location": "/weka_gui_generic_object_editor.props/",
+            "text": "File\n\n\nweka/gui/GenericObjectEditor.props\n\n\nDescription\n\n\nHas been superceded by \nweka/gui/GenericPropertiesCreator.props\n which performs a dynamic discovery of classes.\nVersion 3.5.8 of Weka \nturned off\n the dynamic discovery of classes by default, i.e., one has to add the class in this file again or turn dynamic discovery on again.\n\n\nVersion\n\n\n\n\n>= 3.1.3\n\n\n\n\nSee also\n\n\n\n\nweka/gui/GenericPropertiesCreator.props\n\n\nGenericObjectEditor\n (explains how to add new schemes)\n\n\nProperties File",
+            "title": " weka/gui/GenericObjectEditor.props"
+        },
+        {
+            "location": "/weka_gui_generic_object_editor.props/#file",
+            "text": "weka/gui/GenericObjectEditor.props",
+            "title": "File"
+        },
+        {
+            "location": "/weka_gui_generic_object_editor.props/#description",
+            "text": "Has been superceded by  weka/gui/GenericPropertiesCreator.props  which performs a dynamic discovery of classes.\nVersion 3.5.8 of Weka  turned off  the dynamic discovery of classes by default, i.e., one has to add the class in this file again or turn dynamic discovery on again.",
+            "title": "Description"
+        },
+        {
+            "location": "/weka_gui_generic_object_editor.props/#version",
+            "text": ">= 3.1.3",
+            "title": "Version"
+        },
+        {
+            "location": "/weka_gui_generic_object_editor.props/#see-also",
+            "text": "weka/gui/GenericPropertiesCreator.props  GenericObjectEditor  (explains how to add new schemes)  Properties File",
+            "title": "See also"
+        },
+        {
+            "location": "/weka_gui_gui_editors.props/",
+            "text": "File\n\n\nweka/gui/GUIEditors.props\n\n\nDescription\n\n\nLists what classes are handled by which GUI editor. Formerly done statically (but centralized) by the class \nweka.gui.GenericObjectEditor\n or in versions older than 3.5.2 all over the place.\n\n\nVersion\n\n\n\n\n\n\n\n\n3.5.3\n\n\n\n\n\n\n\n\nFields\n\n\n\n\nFormat\n\n\n<class>=<editor>\n\n\n\n\ne.g., \njava.io.File=weka.gui.FileEditor\n\n\n\n\n\n\n\n\n<class[]>=<editor>\n (for arrays)\n\n\n\n\ne.g., \njava.lang.Object[]=weka.gui.GenericArrayEditor\n\n\n\n\n\n\n\n\n\n\n\n\nAvailable editors\n\n\nGeneral editors\n\n\nweka.gui.GenericObjectEditor\n\n\nweka.gui.GenericArrayEditor\n\n\n\n\n\n\nSpecialized editors\n\n\nweka.gui.CostMatrixEditor\n\n\nweka.gui.EnsembleSelectionLibraryEditor\n\n\nweka.gui.FileEditor\n\n\nweka.gui.SelectedTagEditor\n\n\nweka.gui.SimpleDateFormatEditor\n\n\n\n\n\n\n\n\n\n\n\n\nSee also\n\n\n\n\nGenericObjectEditor\n\n\nProperties File",
+            "title": " weka/gui/GUIEditors.props"
+        },
+        {
+            "location": "/weka_gui_gui_editors.props/#file",
+            "text": "weka/gui/GUIEditors.props",
+            "title": "File"
+        },
+        {
+            "location": "/weka_gui_gui_editors.props/#description",
+            "text": "Lists what classes are handled by which GUI editor. Formerly done statically (but centralized) by the class  weka.gui.GenericObjectEditor  or in versions older than 3.5.2 all over the place.",
+            "title": "Description"
+        },
+        {
+            "location": "/weka_gui_gui_editors.props/#version",
+            "text": "3.5.3",
+            "title": "Version"
+        },
+        {
+            "location": "/weka_gui_gui_editors.props/#fields",
+            "text": "Format  <class>=<editor>   e.g.,  java.io.File=weka.gui.FileEditor     <class[]>=<editor>  (for arrays)   e.g.,  java.lang.Object[]=weka.gui.GenericArrayEditor       Available editors  General editors  weka.gui.GenericObjectEditor  weka.gui.GenericArrayEditor    Specialized editors  weka.gui.CostMatrixEditor  weka.gui.EnsembleSelectionLibraryEditor  weka.gui.FileEditor  weka.gui.SelectedTagEditor  weka.gui.SimpleDateFormatEditor",
+            "title": "Fields"
+        },
+        {
+            "location": "/weka_gui_gui_editors.props/#see-also",
+            "text": "GenericObjectEditor  Properties File",
+            "title": "See also"
+        },
+        {
+            "location": "/weka_gui_generic_properties_creator.props/",
+            "text": "File\n\n\nweka/gui/GenericPropertiesCreator.props\n\n\nDescription\n\n\nLists all the packages to look in for subclasses of a certain superclass to be displayed in the \nGenericObjectEditor\n.\n\n\nNote:\n Weka 3.5.8 turned the automatic discovery off by default. In this case, the \nweka/gui/GenericObjectEditor.props\n is used again.\n\n\nVersion\n\n\n\n\n>= 3.4.4\n\n\n\n\nFields\n\n\n\n\nenable/disable dynamic discovery (> 3.5.5)\n\n\nUseDynamic=true|false\n\n\n\n\n\n\nFormat (a \nbackslash\n at the end continues the package list on the next line)\n\n\n<superclass>=<package>[,package[,...]]\n\n\n\n\n\n\nFilter example\n\n\n\n\n weka.filters.Filter= \\\n  weka.filters, \\\n  weka.filters.supervised.attribute, \\\n  weka.filters.supervised.instance, \\\n  weka.filters.unsupervised.attribute, \\\n  weka.filters.unsupervised.instance\n\n\n\n\n\n\nClassifier example\n\n\n\n\n weka.classifiers.Classifier=\\\n  weka.classifiers.bayes,\\\n  weka.classifiers.functions,\\\n  weka.classifiers.lazy,\\\n  weka.classifiers.meta,\\\n  weka.classifiers.meta.nestedDichotomies,\\\n  weka.classifiers.mi,\\\n  weka.classifiers.misc,\\\n  weka.classifiers.trees,\\\n  weka.classifiers.rules\n\n\n\n\nSee also\n\n\n\n\nGenericObjectEditor\n (explains how to add new schemes)\n\n\nProperties file",
+            "title": " weka/gui/GenericPropertiesCreator.props"
+        },
+        {
+            "location": "/weka_gui_generic_properties_creator.props/#file",
+            "text": "weka/gui/GenericPropertiesCreator.props",
+            "title": "File"
+        },
+        {
+            "location": "/weka_gui_generic_properties_creator.props/#description",
+            "text": "Lists all the packages to look in for subclasses of a certain superclass to be displayed in the  GenericObjectEditor .  Note:  Weka 3.5.8 turned the automatic discovery off by default. In this case, the  weka/gui/GenericObjectEditor.props  is used again.",
+            "title": "Description"
+        },
+        {
+            "location": "/weka_gui_generic_properties_creator.props/#version",
+            "text": ">= 3.4.4",
+            "title": "Version"
+        },
+        {
+            "location": "/weka_gui_generic_properties_creator.props/#fields",
+            "text": "enable/disable dynamic discovery (> 3.5.5)  UseDynamic=true|false    Format (a  backslash  at the end continues the package list on the next line)  <superclass>=<package>[,package[,...]]    Filter example    weka.filters.Filter= \\\n  weka.filters, \\\n  weka.filters.supervised.attribute, \\\n  weka.filters.supervised.instance, \\\n  weka.filters.unsupervised.attribute, \\\n  weka.filters.unsupervised.instance   Classifier example    weka.classifiers.Classifier=\\\n  weka.classifiers.bayes,\\\n  weka.classifiers.functions,\\\n  weka.classifiers.lazy,\\\n  weka.classifiers.meta,\\\n  weka.classifiers.meta.nestedDichotomies,\\\n  weka.classifiers.mi,\\\n  weka.classifiers.misc,\\\n  weka.classifiers.trees,\\\n  weka.classifiers.rules",
+            "title": "Fields"
+        },
+        {
+            "location": "/weka_gui_generic_properties_creator.props/#see-also",
+            "text": "GenericObjectEditor  (explains how to add new schemes)  Properties file",
+            "title": "See also"
+        },
+        {
+            "location": "/weka_gui_generic_properties_creator.excludes/",
+            "text": "File\n\n\nweka/gui/GenericPropertiesCreator.excludes\n\n\nDescription\n\n\nList classes for corresponding superclasses in \nGenericPropertiesCreator.props\n that shouldn't appear in the \nGenericObjectEditor\n popup tree.\n\n\nVersion\n\n\n\n\n>= 3.5.3\n\n\n\n\nFields\n\n\n\n\nFormat\n\n\n<key>=<prefix>:<class>[,<prefix>:<class>]\n\n\n\n\n\n\n<key>\n\n\n\n\nthe key from \nGenericPropertiesCreator.props\n (class or interface)\n\n\n\n\n\n\n\n\n<prefix>\n\n\nS\n (\"Superclass\"): \nany class derived from this one will be excluded\n\n\nI\n (\"Interface\"): \nany class implementing this interface will be excluded\n\n\nC\n (\"Class\"): \nexactly this class will be excluded\n\n\n\n\n\n\n\n\n\n\nExample\n\n\nweka.experiment.ResultListener=I:weka.experiment.ResultProducer\n\n\n\n\n\n\n\n\nSee also\n\n\n\n\nweka/gui/GenericPropertiesCreator.props\n\n\nGenericObjectEditor\n\n\nProperties file",
+            "title": " weka/gui/GenericPropertiesCreator.excludes"
+        },
+        {
+            "location": "/weka_gui_generic_properties_creator.excludes/#file",
+            "text": "weka/gui/GenericPropertiesCreator.excludes",
+            "title": "File"
+        },
+        {
+            "location": "/weka_gui_generic_properties_creator.excludes/#description",
+            "text": "List classes for corresponding superclasses in  GenericPropertiesCreator.props  that shouldn't appear in the  GenericObjectEditor  popup tree.",
+            "title": "Description"
+        },
+        {
+            "location": "/weka_gui_generic_properties_creator.excludes/#version",
+            "text": ">= 3.5.3",
+            "title": "Version"
+        },
+        {
+            "location": "/weka_gui_generic_properties_creator.excludes/#fields",
+            "text": "Format  <key>=<prefix>:<class>[,<prefix>:<class>]    <key>   the key from  GenericPropertiesCreator.props  (class or interface)     <prefix>  S  (\"Superclass\"): \nany class derived from this one will be excluded  I  (\"Interface\"): \nany class implementing this interface will be excluded  C  (\"Class\"): \nexactly this class will be excluded      Example  weka.experiment.ResultListener=I:weka.experiment.ResultProducer",
+            "title": "Fields"
+        },
+        {
+            "location": "/weka_gui_generic_properties_creator.excludes/#see-also",
+            "text": "weka/gui/GenericPropertiesCreator.props  GenericObjectEditor  Properties file",
+            "title": "See also"
+        },
+        {
+            "location": "/weka_gui_look_and_feel.props/",
+            "text": "File\n\n\nweka/gui/LookAndFeel.props\n\n\nDescription\n\n\nDefines with what theme Weka is displayed. By default Weka starts with the system default one, but under Java 5.0 and Linux/Gnome this can lead to a \ncrash\n due to a NullPointerException.\n\n\nVersion\n\n\n\n\n>= 3.4.5\n\n\n>= 3.5.0\n\n\n\n\nFields\n\n\n\n\nTheme\n\n\na few possible values\n\n\n\n\n\n\njavax.swing.plaf.metal.MetalLookAndFeel\n\n\nworks on all platforms\n\n\nfixes problem with Java 5/6 and Linux/Gnome\n\n\n\n\n\n\ncom.sun.java.swing.plaf.windows.WindowsLookAndFeel\n\n\ntheme for Win32\n\n\n\n\n\n\n...\n\n\n\n\n\n\n\n\nSee also\n\n\n\n\nTroubleshooting (GUIChooser starts but not Experimenter or Explorer)\n\n\nTroubleshooting (KnowledgeFlow toolbars are empty)\n\n\nProperties file\n\n\n\n\nLinks\n\n\n\n\nOriginal Wekalist post",
+            "title": " weka/gui/LookAndFeel.props"
+        },
+        {
+            "location": "/weka_gui_look_and_feel.props/#file",
+            "text": "weka/gui/LookAndFeel.props",
+            "title": "File"
+        },
+        {
+            "location": "/weka_gui_look_and_feel.props/#description",
+            "text": "Defines with what theme Weka is displayed. By default Weka starts with the system default one, but under Java 5.0 and Linux/Gnome this can lead to a  crash  due to a NullPointerException.",
+            "title": "Description"
+        },
+        {
+            "location": "/weka_gui_look_and_feel.props/#version",
+            "text": ">= 3.4.5  >= 3.5.0",
+            "title": "Version"
+        },
+        {
+            "location": "/weka_gui_look_and_feel.props/#fields",
+            "text": "Theme  a few possible values    javax.swing.plaf.metal.MetalLookAndFeel  works on all platforms  fixes problem with Java 5/6 and Linux/Gnome    com.sun.java.swing.plaf.windows.WindowsLookAndFeel  theme for Win32    ...",
+            "title": "Fields"
+        },
+        {
+            "location": "/weka_gui_look_and_feel.props/#see-also",
+            "text": "Troubleshooting (GUIChooser starts but not Experimenter or Explorer)  Troubleshooting (KnowledgeFlow toolbars are empty)  Properties file",
+            "title": "See also"
+        },
+        {
+            "location": "/weka_gui_look_and_feel.props/#links",
+            "text": "Original Wekalist post",
+            "title": "Links"
+        },
+        {
+            "location": "/weka_gui_memory_usage.props/",
+            "text": "File\n\n\nweka/gui/MemoryUsage.props\n\n\nDescription\n\n\nContains properties for the memory usage panel/frame, which can be launched from:\n\n\n\n\nweka.gui.Main\n\n\nFile -> Memory usage\n\n\n\n\n\n\nweka.gui.GUIChooser\n\n\nclick on the \nMemory usage\n button\n\n\n\n\n\n\n\n\nVersion\n\n\n\n\n\n\n\n\n3.5.7\n\n\n\n\n\n\n\n\nFields\n\n\n\n\nWidth\n\n\nthe width of the panel in pixel. The default is \n400\n.\n\n\n\n\n\n\nHeight\n\n\nthe height of the panel - normally not set, since the height of the garbage collector button is used\n\n\n\n\n\n\nLeft\n, \nTop\n\n\nspecify a fixed location on the screen in pixel. Both of these parameters have to be different from -1 to place the window. The default is \n-1\n for both, i.e., top-left corner of the screen.\n\n\n\n\n\n\nBackgroundColor\n\n\ndefines the background color of the panel, can either be the name of a \nstandard Java color\n or an RGB triplet (= \nR,G,B\n). Default is \nwhite\n.\n\n\n\n\n\n\nInterval\n\n\nthe refresh interval in milli-second. The default is \n1000\n.\n\n\n\n\n\n\nPercentages\n\n\ncomma-separated list of percentage number that indicate when to switch colors. E.g., \n70,80,90\n (which is the default) indicates to change the color of the bar from the default one (see \nDefaultColor\n) as soon as the percentage reaches this threshold. For example, if the percentage reaches 70 percent, then the color specified with the key \n70\n is used (default is \nyellow\n for \n70\n). If it reaches 80 or more then \norange\n is used (the default for \n80\n is \norange\n) and everything above and including \n90\n will be displayed \nred\n (\nred\n is the default for \n90\n).\n\n\n\n\n\n\nDefaultColor\n\n\nthe default color to display the percentage bar with, i.e., if the percentage is below the lowest percentage listed in \nPercentages\n.\n\n\n\n\n\n\n\n\nSee also\n\n\n\n\nProperties file",
+            "title": " weka/gui/MemoryUsage.props"
+        },
+        {
+            "location": "/weka_gui_memory_usage.props/#file",
+            "text": "weka/gui/MemoryUsage.props",
+            "title": "File"
+        },
+        {
+            "location": "/weka_gui_memory_usage.props/#description",
+            "text": "Contains properties for the memory usage panel/frame, which can be launched from:   weka.gui.Main  File -> Memory usage    weka.gui.GUIChooser  click on the  Memory usage  button",
+            "title": "Description"
+        },
+        {
+            "location": "/weka_gui_memory_usage.props/#version",
+            "text": "3.5.7",
+            "title": "Version"
+        },
+        {
+            "location": "/weka_gui_memory_usage.props/#fields",
+            "text": "Width  the width of the panel in pixel. The default is  400 .    Height  the height of the panel - normally not set, since the height of the garbage collector button is used    Left ,  Top  specify a fixed location on the screen in pixel. Both of these parameters have to be different from -1 to place the window. The default is  -1  for both, i.e., top-left corner of the screen.    BackgroundColor  defines the background color of the panel, can either be the name of a  standard Java color  or an RGB triplet (=  R,G,B ). Default is  white .    Interval  the refresh interval in milli-second. The default is  1000 .    Percentages  comma-separated list of percentage number that indicate when to switch colors. E.g.,  70,80,90  (which is the default) indicates to change the color of the bar from the default one (see  DefaultColor ) as soon as the percentage reaches this threshold. For example, if the percentage reaches 70 percent, then the color specified with the key  70  is used (default is  yellow  for  70 ). If it reaches 80 or more then  orange  is used (the default for  80  is  orange ) and everything above and including  90  will be displayed  red  ( red  is the default for  90 ).    DefaultColor  the default color to display the percentage bar with, i.e., if the percentage is below the lowest percentage listed in  Percentages .",
+            "title": "Fields"
+        },
+        {
+            "location": "/weka_gui_memory_usage.props/#see-also",
+            "text": "Properties file",
+            "title": "See also"
+        },
+        {
+            "location": "/weka_gui_simple_cli.props/",
+            "text": "File\n\n\nweka/gui/SimpleCLI.props\n\n\nDescription\n\n\nContains properties for the SimpleCLI, e.g., the command history. Whenever the user issues a command, the history gets saved in the user's home directory (\n$HOME/SimpleCLI.props\n on Linux or \n%USERPROFILE%/SimpleCLI.props\n on Windows).\n\n\nVersion\n\n\n\n\n\n\n\n\n3.5.6\n\n\n\n\n\n\n\n\nFields\n\n\n\n\nHistorySize\n\n\nthe maximum number of most recent commands to store in the properties file (in the user's home directory).\n\n\n\n\n\n\nCommand X\n\n\nlists command \nX\n of the history, with \nX\n being an integer starting from 0.\n\n\n\n\n\n\n\n\nSee also\n\n\n\n\nProperties file",
+            "title": " weka/gui/SimpleCLI.props"
+        },
+        {
+            "location": "/weka_gui_simple_cli.props/#file",
+            "text": "weka/gui/SimpleCLI.props",
+            "title": "File"
+        },
+        {
+            "location": "/weka_gui_simple_cli.props/#description",
+            "text": "Contains properties for the SimpleCLI, e.g., the command history. Whenever the user issues a command, the history gets saved in the user's home directory ( $HOME/SimpleCLI.props  on Linux or  %USERPROFILE%/SimpleCLI.props  on Windows).",
+            "title": "Description"
+        },
+        {
+            "location": "/weka_gui_simple_cli.props/#version",
+            "text": "3.5.6",
+            "title": "Version"
+        },
+        {
+            "location": "/weka_gui_simple_cli.props/#fields",
+            "text": "HistorySize  the maximum number of most recent commands to store in the properties file (in the user's home directory).    Command X  lists command  X  of the history, with  X  being an integer starting from 0.",
+            "title": "Fields"
+        },
+        {
+            "location": "/weka_gui_simple_cli.props/#see-also",
+            "text": "Properties file",
+            "title": "See also"
+        },
+        {
+            "location": "/weka_gui_beans_beans.props/",
+            "text": "File\n\n\nweka/gui/beans/Beans.props\n\n\nDescription\n\n\nProperties file that customizes the KnowledgeFlow.\n\n\nVersion\n\n\n\n\n>= 3.3.2\n\n\n\n\nFields\n\n\n\n\nweka.gui.beans.KnowledgeFlow.standardToolBars\n\n\nlist of standard toolbars (containing bean tools that do not wrap weka base class types)\n\n\n\n\n\n\n*.order\n\n\ntoolbar ordering information for wrapper types\n\n\n\n\n\n\n*.alias\n\n\ntoolbar naming aliases for weka algorithm classes\n\n\n\n\n\n\nGUI behavior (>= 3.5.1)\n\n\nScrollBarIncrementLayout\n\n\n\n\nthe increment for scrollbars using the mouse's scroll-wheel in the layout area\n\n\n\n\n\n\n\n\nScrollBarIncrementComponents\n\n\n\n\nthe increment for scrollbars using the mouse's scroll-wheel in the component area (i.e., the toolbars)\n\n\n\n\n\n\n\n\nFlowWidth\n\n\n\n\nthe size of the layout area\n\n\n\n\n\n\n\n\nFlowHeight\n\n\n\n\nthe size of the layout area\n\n\n\n\n\n\n\n\nPreferredExtension\n\n\n\n\nthe preferred file extension (and therefore format) for saving a flow layout\n\n\n\n\n\n\n\n\nUserComponentsInXML\n\n\n\n\nwhether the user components (\"meta\"-beans) are saved in XML (i.e., \n.kfml\n) or not\n\n\n\n\n\n\n\n\n\n\n\n\nColours (> 3.5.7)\n\n\nweka.gui.beans.StripChart.backgroundColour\n\n\n\n\nthe background color of the StripChart, default is \nblack\n (can use R,G,B format)\n\n\n\n\n\n\n\n\nweka.gui.beans.StripChart$LegendPanel.borderColour\n\n\n\n\nthe color of the text on the legend's border, default is \nblue\n (can use R,G,B format)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSee also\n\n\n\n\nProperties File",
+            "title": " weka/gui/beans/Beans.props"
+        },
+        {
+            "location": "/weka_gui_beans_beans.props/#file",
+            "text": "weka/gui/beans/Beans.props",
+            "title": "File"
+        },
+        {
+            "location": "/weka_gui_beans_beans.props/#description",
+            "text": "Properties file that customizes the KnowledgeFlow.",
+            "title": "Description"
+        },
+        {
+            "location": "/weka_gui_beans_beans.props/#version",
+            "text": ">= 3.3.2",
+            "title": "Version"
+        },
+        {
+            "location": "/weka_gui_beans_beans.props/#fields",
+            "text": "weka.gui.beans.KnowledgeFlow.standardToolBars  list of standard toolbars (containing bean tools that do not wrap weka base class types)    *.order  toolbar ordering information for wrapper types    *.alias  toolbar naming aliases for weka algorithm classes    GUI behavior (>= 3.5.1)  ScrollBarIncrementLayout   the increment for scrollbars using the mouse's scroll-wheel in the layout area     ScrollBarIncrementComponents   the increment for scrollbars using the mouse's scroll-wheel in the component area (i.e., the toolbars)     FlowWidth   the size of the layout area     FlowHeight   the size of the layout area     PreferredExtension   the preferred file extension (and therefore format) for saving a flow layout     UserComponentsInXML   whether the user components (\"meta\"-beans) are saved in XML (i.e.,  .kfml ) or not       Colours (> 3.5.7)  weka.gui.beans.StripChart.backgroundColour   the background color of the StripChart, default is  black  (can use R,G,B format)     weka.gui.beans.StripChart$LegendPanel.borderColour   the color of the text on the legend's border, default is  blue  (can use R,G,B format)",
+            "title": "Fields"
+        },
+        {
+            "location": "/weka_gui_beans_beans.props/#see-also",
+            "text": "Properties File",
+            "title": "See also"
+        },
+        {
+            "location": "/weka_gui_experiment_experimenter.props/",
+            "text": "File\n\n\nweka/gui/experiment/Experimenter.props\n\n\nDescription\n\n\nUsed for customizing the initial Experimenter settings.\n\n\nVersion\n\n\n\n\n>= 3.4.6\n\n\n>= 3.5.1\n\n\n\n\nFields\n\n\n\n\nExtension\n\n\nthe default extension in the file-dialog (and therefore format)\n\n\n\n\n\n\n.exp\n - uses Java \nSerialization\n\n\n[.xml](xml#serialization of experiments.md)\n\n\n[.koml](xml#serialization of experiments.md)\n\n\n\n\n\n\nDestination\n - \nsimple\n\n\nthe default destination\n\n\n\n\n\n\nARFF file\n\n\nCSV file\n\n\nJDBC database\n\n\n\n\n\n\nExperimentType\n - \nsimple\n\n\nthe experiment type\n\n\n\n\n\n\nCross-validation\n\n\nTrain/Test Percentage Split (data randomized)\n\n\nTrain/Test Percentage Split (order preserved)\n\n\n\n\n\n\nUseClassification\n - \nsimple\n\n\nwhether classification is the default (\ntrue\n) or regression (\nfalse\n)\n\n\n\n\n\n\nFolds\n - \nsimple\n\n\nthe default number of CV folds\n\n\n\n\n\n\nTrainPercentage\n - \nsimple\n\n\nthe default percentage for training (0 - 100)\n\n\n\n\n\n\nRepetitions\n - \nsimple\n\n\nthe default number of repetitions\n\n\n\n\n\n\nDatasetsFirst\n\n\nwhether datasets are first iterated (\ntrue\n) or the algorithms (\nfalse\n)\n\n\n\n\n\n\nInitialDatasetsDirectory\n\n\nthe initial datasets directory\nNote for Win32: \nthe path backslashes have to written as \"\\\"\n\n\n\n\n\n\nUseRelativePaths\n\n\nwhether to use relative paths (\ntrue\n) or absolute ones (\nfalse\n)\n\n\n\n\n\n\nTester\n\n\nthe default tester to use\n\n\n\n\n\n\nPaired T-Tester (corrected)\n\n\nPaired T-Tester\n\n\n\n\n\n\nRow\n\n\nthe row selection\n\n\n\n\n\n\nColumn\n\n\nthe column selection\n\n\n\n\n\n\nComparisonField\n\n\nthe default comparison field (lower case!), cf. combobox\n\n\n\n\n\n\nSignificance\n\n\nthe default significance (0.0 - 1.0)\n\n\n\n\n\n\nSorting\n\n\nthe default sorting, left empty means no sorting at all\n\n\n\n\n\n\nShowStdDev\n\n\nwhether stddevs are displayed by default\n\n\n\n\n\n\nShowAverage\n\n\nwhether the Average is displayed by default (prints an additional list in the results)\n\n\n\n\n\n\nMeanPrecision\n\n\nthe default precision for the mean\n\n\n\n\n\n\nStdDevPrecision\n\n\nthe default precision for the stdev\n\n\n\n\n\n\nOutputFormat\n\n\nthe classname of the ResultMatrix, responsible for the default output format (see \nweka.experiment\n package)\n\n\n\n\n\n\nRemoveFilterClassnames\n\n\nwhether filter classnames are removed by default\n\n\n\n\n\n\n\n\nNote:\n \nsimple\n means that this option is only available in the \nsimple\n version of the Experimenter, not the \nadvanced\n one\n\n\nSee also\n\n\n\n\nProperties File",
+            "title": " weka/gui/experiment/Experimenter.props"
+        },
+        {
+            "location": "/weka_gui_experiment_experimenter.props/#file",
+            "text": "weka/gui/experiment/Experimenter.props",
+            "title": "File"
+        },
+        {
+            "location": "/weka_gui_experiment_experimenter.props/#description",
+            "text": "Used for customizing the initial Experimenter settings.",
+            "title": "Description"
+        },
+        {
+            "location": "/weka_gui_experiment_experimenter.props/#version",
+            "text": ">= 3.4.6  >= 3.5.1",
+            "title": "Version"
+        },
+        {
+            "location": "/weka_gui_experiment_experimenter.props/#fields",
+            "text": "Extension  the default extension in the file-dialog (and therefore format)    .exp  - uses Java  Serialization  [.xml](xml#serialization of experiments.md)  [.koml](xml#serialization of experiments.md)    Destination  -  simple  the default destination    ARFF file  CSV file  JDBC database    ExperimentType  -  simple  the experiment type    Cross-validation  Train/Test Percentage Split (data randomized)  Train/Test Percentage Split (order preserved)    UseClassification  -  simple  whether classification is the default ( true ) or regression ( false )    Folds  -  simple  the default number of CV folds    TrainPercentage  -  simple  the default percentage for training (0 - 100)    Repetitions  -  simple  the default number of repetitions    DatasetsFirst  whether datasets are first iterated ( true ) or the algorithms ( false )    InitialDatasetsDirectory  the initial datasets directory\nNote for Win32: \nthe path backslashes have to written as \"\\\"    UseRelativePaths  whether to use relative paths ( true ) or absolute ones ( false )    Tester  the default tester to use    Paired T-Tester (corrected)  Paired T-Tester    Row  the row selection    Column  the column selection    ComparisonField  the default comparison field (lower case!), cf. combobox    Significance  the default significance (0.0 - 1.0)    Sorting  the default sorting, left empty means no sorting at all    ShowStdDev  whether stddevs are displayed by default    ShowAverage  whether the Average is displayed by default (prints an additional list in the results)    MeanPrecision  the default precision for the mean    StdDevPrecision  the default precision for the stdev    OutputFormat  the classname of the ResultMatrix, responsible for the default output format (see  weka.experiment  package)    RemoveFilterClassnames  whether filter classnames are removed by default     Note:   simple  means that this option is only available in the  simple  version of the Experimenter, not the  advanced  one",
+            "title": "Fields"
+        },
+        {
+            "location": "/weka_gui_experiment_experimenter.props/#see-also",
+            "text": "Properties File",
+            "title": "See also"
+        },
+        {
+            "location": "/weka_gui_explorer_explorer.props/",
+            "text": "File\n\n\nweka/gui/explorer/Explorer.props\n\n\nDescription\n\n\nThis props file determines what schemes and options are initially set in the Explorer.\n\n\nVersion\n\n\n\n\n\n\n\n\n3.5.3\n\n\n\n\n\n\n\n\nFields\n\n\nPreprocess panel\n\n\n\n\nInitGenericObjectEditorFilter\n\n\n\n\nif set to true the Capabilities filters in the GOE will be initialized based on the full dataset that has been loaded into the Explorer otherwise only the header\n\n\n\n\n\n\n\n\nTabs\n\n\n\n\nLists all the tabs that should be displayed in the Explorer. Apart from the Preprocess panel itself, all other panels are basically plugins.\nSee the \nAdding tabs in the Explorer\n article for more details on adding custom panels.\n\n\n\n\n\n\n\n\n\n\nInitialDirectory (> 3.6.0, developer version and \nsnapshots\n later than 07/02/2009)\n\n\n\n\n\n\nDefines the initial directory for opening datasets in the Preprocess panel.\nThe following placeholders are recognized (work across platforms):\n\n\n\n\n\n\n\n\n%t - the temp directory\n\n\n%h - the user's home directory\n\n\n%c - the current directory \n(the default setting)\n\n\n%% - gets replaced by a single percentage sign\n\n\n\n\n\n\n\n\nenableUndo (> 3.6.5, > 3.7.4 and \nsnapshots\n later than 09/01/2011)\n\n\n\n\n\n\nEnable/disable the creation of undo files (default is enabled)\n\n\n\n\n\n\n\n\n\n\nundoDirectory (> 3.6.5, > 3.7.4 and \nsnapshots\n later than 09/01/2011)\n\n\n\n\n\n\nSpecify the directory to use for saving undo files\nThe following placeholders are recognized (work across platforms):\n\n\n\n\n\n\n\n\n%t - the temp directory\n\n\n\n\n\n\n\n\nFilter\n\n\n\n\n\n\nthe filter to use, none if left empty\n\n\n\n\n\n\n\n\n\n\nClassify panel\n\n\n\n\nClassifier\n\n\n\n\nthe classifier to use\n\n\n\n\n\n\n\n\nClassifierTestMode\n\n\n\n\nthe default test mode in the classify tab\n\n\n\n\n\n\n\n\n1 - cross-validation (default)\n\n\n2 - percentage split\n\n\n3 - use training set\n\n\n4 - supplied test set\n\n\n\n\n\n\nClassifierCrossvalidationFolds\n\n\n\n\nthe default number of folds for CV\n\n\n\n\n\n\n\n\nClassifierCostSensitiveEval\n\n\n\n\nwhether the evaluation of the classifier is done cost-sensitively\na cost matrix still has to be provided!\n\n\n\n\n\n\n\n\nClassifierOutputConfusionMatrix\n\n\n\n\nwhether the confusion matrix is output\n\n\n\n\n\n\n\n\nClassifierOutputEntropyEvalMeasures\n\n\n\n\nwhether the entropy based evaluation measures of the classifier model are output\n\n\n\n\n\n\n\n\nClassifierOutputModel\n\n\n\n\nwhether the classifier model is output\n\n\n\n\n\n\n\n\nClassifierOutputPerClassStats\n\n\n\n\nwhether additional per-class stats of the classifier model are output\n\n\n\n\n\n\n\n\nClassifierOutputPredictions\n\n\n\n\nwhether the predictions of the classifier output as well\n\n\n\n\n\n\n\n\nClassifierPercentageSplit\n\n\n\n\nthe default percentage split in %\n\n\n\n\n\n\n\n\nClassifierPreserveOrder\n\n\n\n\nwhether the order is preserved in case of percentage split\n\n\n\n\n\n\n\n\nClassifierRandomSeed\n\n\n\n\nthe default random seed\n\n\n\n\n\n\n\n\nClassifierStorePredictionsForVis\n\n\n\n\nwhether the predictions of the classifier are stored for visulization purposes\n\n\n\n\n\n\n\n\nClassifierOutputSourceCode (> 3.5.5)\n\n\n\n\nwhether to output Java source code for classifiers that implement the weka.classifiers.Sourcable interface\n\n\n\n\n\n\n\n\nClassifierSourceCodeClass (> 3.5.5)\n\n\n\n\nthe default classname of the generated Java source code\n\n\n\n\n\n\n\n\nClassifierErrorsPlotInstances (> 3.7.0)\n\n\n\n\nthe default classname for the class generating the plot instances of the classifier errors\n\n\n\n\n\n\n\n\nClassifierErrorsMinimumPlotSizeNumeric (> 3.7.0)\n\n\n\n\nthe minimum size for the crosses that display the classifier errors for numeric class attributes\n\n\n\n\n\n\n\n\nClassifierErrorsMaximumPlotSizeNumeric (> 3.7.0)\n\n\n\n\nthe maximum size for the crosses that display the classifier errors for numeric class attributes\n\n\n\n\n\n\n\n\n\n\nCluster panel\n\n\n\n\nClusterer\n\n\n\n\nthe clusterer to use\n\n\n\n\n\n\n\n\nClustererTestMode\n\n\n\n\nthe default test mode\n\n\n\n\n\n\n\n\n2 - percentage split\n\n\n3 - use training set (default)\n\n\n4 - supplied test set\n\n\n5 - classes to clusters evaluation\n\n\n\n\n\n\nClustererStoreClustersForVis\n\n\n\n\nwhether the clusters are stored for visualization purposes\n\n\n\n\n\n\n\n\nAssociations panel\n\n\nAssociator\n\n\n\n\nthe default associator\n\n\n\n\n\n\n\n\nAttribute selection panel\n\n\nASEvaluation\n\n\n\n\nthe default attribute evaluator\n\n\n\n\n\n\n\n\nASSearch\n\n\n\n\nthe default attribute selection search scheme\n\n\n\n\n\n\n\n\nASTestMode\n\n\n\n\nthe default test mode\n\n\n\n\n\n\n\n\n0 - use full training set (default)\n\n\n1 - cross-validation\n\n\n\n\n\n\nASCrossvalidationFolds\n\n\n\n\nthe default number of folds for CV\n\n\n\n\n\n\n\n\nASRandomSeed\n\n\n\n\nthe default random seed\n\n\n\n\n\n\n\n\n\n\nSee also\n\n\n\n\nProperties File",
+            "title": " weka/gui/explorer/Explorer.props"
+        },
+        {
+            "location": "/weka_gui_explorer_explorer.props/#file",
+            "text": "weka/gui/explorer/Explorer.props",
+            "title": "File"
+        },
+        {
+            "location": "/weka_gui_explorer_explorer.props/#description",
+            "text": "This props file determines what schemes and options are initially set in the Explorer.",
+            "title": "Description"
+        },
+        {
+            "location": "/weka_gui_explorer_explorer.props/#version",
+            "text": "3.5.3",
+            "title": "Version"
+        },
+        {
+            "location": "/weka_gui_explorer_explorer.props/#fields",
+            "text": "",
+            "title": "Fields"
+        },
+        {
+            "location": "/weka_gui_explorer_explorer.props/#preprocess-panel",
+            "text": "InitGenericObjectEditorFilter   if set to true the Capabilities filters in the GOE will be initialized based on the full dataset that has been loaded into the Explorer otherwise only the header     Tabs   Lists all the tabs that should be displayed in the Explorer. Apart from the Preprocess panel itself, all other panels are basically plugins.\nSee the  Adding tabs in the Explorer  article for more details on adding custom panels.      InitialDirectory (> 3.6.0, developer version and  snapshots  later than 07/02/2009)    Defines the initial directory for opening datasets in the Preprocess panel.\nThe following placeholders are recognized (work across platforms):     %t - the temp directory  %h - the user's home directory  %c - the current directory  (the default setting)  %% - gets replaced by a single percentage sign     enableUndo (> 3.6.5, > 3.7.4 and  snapshots  later than 09/01/2011)    Enable/disable the creation of undo files (default is enabled)      undoDirectory (> 3.6.5, > 3.7.4 and  snapshots  later than 09/01/2011)    Specify the directory to use for saving undo files\nThe following placeholders are recognized (work across platforms):     %t - the temp directory     Filter    the filter to use, none if left empty",
+            "title": "Preprocess panel"
+        },
+        {
+            "location": "/weka_gui_explorer_explorer.props/#classify-panel",
+            "text": "Classifier   the classifier to use     ClassifierTestMode   the default test mode in the classify tab     1 - cross-validation (default)  2 - percentage split  3 - use training set  4 - supplied test set    ClassifierCrossvalidationFolds   the default number of folds for CV     ClassifierCostSensitiveEval   whether the evaluation of the classifier is done cost-sensitively\na cost matrix still has to be provided!     ClassifierOutputConfusionMatrix   whether the confusion matrix is output     ClassifierOutputEntropyEvalMeasures   whether the entropy based evaluation measures of the classifier model are output     ClassifierOutputModel   whether the classifier model is output     ClassifierOutputPerClassStats   whether additional per-class stats of the classifier model are output     ClassifierOutputPredictions   whether the predictions of the classifier output as well     ClassifierPercentageSplit   the default percentage split in %     ClassifierPreserveOrder   whether the order is preserved in case of percentage split     ClassifierRandomSeed   the default random seed     ClassifierStorePredictionsForVis   whether the predictions of the classifier are stored for visulization purposes     ClassifierOutputSourceCode (> 3.5.5)   whether to output Java source code for classifiers that implement the weka.classifiers.Sourcable interface     ClassifierSourceCodeClass (> 3.5.5)   the default classname of the generated Java source code     ClassifierErrorsPlotInstances (> 3.7.0)   the default classname for the class generating the plot instances of the classifier errors     ClassifierErrorsMinimumPlotSizeNumeric (> 3.7.0)   the minimum size for the crosses that display the classifier errors for numeric class attributes     ClassifierErrorsMaximumPlotSizeNumeric (> 3.7.0)   the maximum size for the crosses that display the classifier errors for numeric class attributes",
+            "title": "Classify panel"
+        },
+        {
+            "location": "/weka_gui_explorer_explorer.props/#cluster-panel",
+            "text": "Clusterer   the clusterer to use     ClustererTestMode   the default test mode     2 - percentage split  3 - use training set (default)  4 - supplied test set  5 - classes to clusters evaluation    ClustererStoreClustersForVis   whether the clusters are stored for visualization purposes     Associations panel  Associator   the default associator     Attribute selection panel  ASEvaluation   the default attribute evaluator     ASSearch   the default attribute selection search scheme     ASTestMode   the default test mode     0 - use full training set (default)  1 - cross-validation    ASCrossvalidationFolds   the default number of folds for CV     ASRandomSeed   the default random seed",
+            "title": "Cluster panel"
+        },
+        {
+            "location": "/weka_gui_explorer_explorer.props/#see-also",
+            "text": "Properties File",
+            "title": "See also"
+        },
+        {
+            "location": "/weka_gui_scripting_groovy.props/",
+            "text": "File\n\n\nweka/gui/scripting/Groovy.props\n\n\nDescription\n\n\nThis props file determines the look and feel of the minimalistic scripting IDE for \nGroovy\n.\n\n\nVersion\n\n\n\n\n\n\n\n\n3.5.8 or \nsnapshot\n later than 6/3/2009 (only developer version)\n\n\n\n\n\n\n\n\nFields\n\n\n\n\nFontName\n\n\nSpecifies the name of the font for displaying the code.\ndefault: \nmonospaced\n\n\n\n\n\n\nFontSize\n\n\nThe font size.\ndefault: \n12\n\n\n\n\n\n\nForegroundColor\n\n\nThe color of the font (if not comment or keyword). Can take R,G,B format.\ndefault: \nblack\n\n\n\n\n\n\nBackgroundColor\n\n\nThe background color. Can take R,G,B format.\ndefault: \nwhite\n\n\n\n\n\n\nKeywordColor\n\n\nThe color for keywords (see list in field \nKeywords\n). Can take R,G,B format.\ndefault: \nblue\n\n\n\n\n\n\nCommentColor\n\n\nThe color for comments (single-line and multi-line). Can take R,G,B format.\ndefault: \ngray\n\n\n\n\n\n\nStringColor\n\n\nThe color for strings (enclosed in single or double quotes). Can take R,G,B format.\ndefault: \nred\n\n\n\n\n\n\nSyntax\n\n\nWhether syntax highlighting is turned on or not (true|false)\ndefault: \ntrue\n\n\n\n\n\n\nIndentation\n\n\nThe number of spaces to use for indentation.\ndefault: \n2\n\n\n\n\n\n\nTabs\n\n\nThe number of spaces a tab represents.\ndefault: \n2\n\n\n\n\n\n\nUseBlanks\n\n\nWhether to use blanks instead of tabs (true|false).\ndefault: \ntrue\n\n\n\n\n\n\nDelimiters\n\n\nThe characters that define word limits.\ndefault: \n;:{}()[]+-/%<=>!&|^~*\n\n\n\n\n\n\nQuoteDelimiters\n\n\nThe characters that enclose a string.\ndefault: \n\"'\n\n\n\n\n\n\nQuoteEscape\n\n\nThe character to escape the \nQuoteDelimiters\n with.\ndefault: \n\\ (backslash)\n\n\n\n\n\n\nMultiLineComment\n\n\nWhether to enable multi-line comments (true|false).\ndefault: \ntrue\n\n\n\n\n\n\nMultiLineCommentStart\n\n\nThe character sequence that starts a multi-line comment.\ndefault: \n/*\n\n\n\n\n\n\nMultiLineCommentEnd\n\n\nThe character sequence that ends a multi-line comment.\ndefault: \n*/\n\n\n\n\n\n\nSingleLineCommentStart\n\n\nThe character sequence that starts a single-line comment.\ndefault: \n*\n\n\n\n\n\n\nAddMatchingBlockEnd\n\n\nWhether to automatically add matching block end character sequences while typing (true|false).\ndefault: \ntrue\n\n\n\n\n\n\nBlockStart\n\n\nThe character sequence that starts a block.\ndefault: \n{\n\n\n\n\n\n\nBlockEndd\n\n\nThe character sequence that ends a block.\ndefault: \n}\n\n\n\n\n\n\nKeywords\n\n\nComma-separated list of keywords to highlight.\n\n\n\n\n\n\n\n\nNotes\n\n\n\n\nRecognized \ncolor names\n\n\nblack\n\n\nblue\n\n\ncyan\n\n\ndarkGray\n\n\ngray\n\n\ngreen\n\n\nlightGray\n\n\nmagenta\n\n\norange\n\n\npink\n\n\nred\n\n\nwhite\n\n\nyellow\n\n\n\n\n\n\nR,G,B format\n\n\nThe RGB format is a comma-separated list three integer values (values ranging from 0-255) for RED, GREEN and BLUE.\n\n\n\n\n\n\n\n\nSee also\n\n\n\n\nProperties File\n\n\nUsing Weka from Groovy\n\n\n\n\nLinks\n\n\n\n\nGroovy homepage",
+            "title": " weka/gui/scripting/Groovy.props"
+        },
+        {
+            "location": "/weka_gui_scripting_groovy.props/#file",
+            "text": "weka/gui/scripting/Groovy.props",
+            "title": "File"
+        },
+        {
+            "location": "/weka_gui_scripting_groovy.props/#description",
+            "text": "This props file determines the look and feel of the minimalistic scripting IDE for  Groovy .",
+            "title": "Description"
+        },
+        {
+            "location": "/weka_gui_scripting_groovy.props/#version",
+            "text": "3.5.8 or  snapshot  later than 6/3/2009 (only developer version)",
+            "title": "Version"
+        },
+        {
+            "location": "/weka_gui_scripting_groovy.props/#fields",
+            "text": "FontName  Specifies the name of the font for displaying the code.\ndefault: \nmonospaced    FontSize  The font size.\ndefault: \n12    ForegroundColor  The color of the font (if not comment or keyword). Can take R,G,B format.\ndefault: \nblack    BackgroundColor  The background color. Can take R,G,B format.\ndefault: \nwhite    KeywordColor  The color for keywords (see list in field  Keywords ). Can take R,G,B format.\ndefault: \nblue    CommentColor  The color for comments (single-line and multi-line). Can take R,G,B format.\ndefault: \ngray    StringColor  The color for strings (enclosed in single or double quotes). Can take R,G,B format.\ndefault: \nred    Syntax  Whether syntax highlighting is turned on or not (true|false)\ndefault: \ntrue    Indentation  The number of spaces to use for indentation.\ndefault: \n2    Tabs  The number of spaces a tab represents.\ndefault: \n2    UseBlanks  Whether to use blanks instead of tabs (true|false).\ndefault: \ntrue    Delimiters  The characters that define word limits.\ndefault: \n;:{}()[]+-/%<=>!&|^~*    QuoteDelimiters  The characters that enclose a string.\ndefault: \n\"'    QuoteEscape  The character to escape the  QuoteDelimiters  with.\ndefault: \n\\ (backslash)    MultiLineComment  Whether to enable multi-line comments (true|false).\ndefault: \ntrue    MultiLineCommentStart  The character sequence that starts a multi-line comment.\ndefault: \n/*    MultiLineCommentEnd  The character sequence that ends a multi-line comment.\ndefault: \n*/    SingleLineCommentStart  The character sequence that starts a single-line comment.\ndefault: \n*    AddMatchingBlockEnd  Whether to automatically add matching block end character sequences while typing (true|false).\ndefault: \ntrue    BlockStart  The character sequence that starts a block.\ndefault: \n{    BlockEndd  The character sequence that ends a block.\ndefault: \n}    Keywords  Comma-separated list of keywords to highlight.",
+            "title": "Fields"
+        },
+        {
+            "location": "/weka_gui_scripting_groovy.props/#notes",
+            "text": "Recognized  color names  black  blue  cyan  darkGray  gray  green  lightGray  magenta  orange  pink  red  white  yellow    R,G,B format  The RGB format is a comma-separated list three integer values (values ranging from 0-255) for RED, GREEN and BLUE.",
+            "title": "Notes"
+        },
+        {
+            "location": "/weka_gui_scripting_groovy.props/#see-also",
+            "text": "Properties File  Using Weka from Groovy",
+            "title": "See also"
+        },
+        {
+            "location": "/weka_gui_scripting_groovy.props/#links",
+            "text": "Groovy homepage",
+            "title": "Links"
+        },
+        {
+            "location": "/weka_gui_scripting_jython.props/",
+            "text": "File\n\n\nweka/gui/scripting/Jython.props\n\n\nDescription\n\n\nThis props file determines the look and feel of the minimalistic scripting IDE for \nJython\n.\n\n\nVersion\n\n\n\n\n\n\n\n\n3.5.8 or \nsnapshot\n later than 6/3/2009 (only developer version)\n\n\n\n\n\n\n\n\nFields\n\n\n\n\nFontName\n\n\nSpecifies the name of the font for displaying the code.\ndefault: \nmonospaced\n\n\n\n\n\n\nFontSize\n\n\nThe font size.\ndefault: \n12\n\n\n\n\n\n\nForegroundColor\n\n\nThe color of the font (if not comment or keyword). Can take R,G,B format.\ndefault: \nblack\n\n\n\n\n\n\nBackgroundColor\n\n\nThe background color. Can take R,G,B format.\ndefault: \nwhite\n\n\n\n\n\n\nKeywordColor\n\n\nThe color for keywords (see list in field \nKeywords\n). Can take R,G,B format.\ndefault: \nblue\n\n\n\n\n\n\nCommentColor\n\n\nThe color for comments (single-line and multi-line). Can take R,G,B format.\ndefault: \ngray\n\n\n\n\n\n\nStringColor\n\n\nThe color for strings (enclosed in single or double quotes). Can take R,G,B format.\ndefault: \nred\n\n\n\n\n\n\nSyntax\n\n\nWhether syntax highlighting is turned on or not (true|false)\ndefault: \ntrue\n\n\n\n\n\n\nIndentation\n\n\nThe number of spaces to use for indentation.\ndefault: \n4\n\n\n\n\n\n\nTabs\n\n\nThe number of spaces a tab represents.\ndefault: \n4\n\n\n\n\n\n\nUseBlanks\n\n\nWhether to use blanks instead of tabs (true|false).\ndefault: \ntrue\n\n\n\n\n\n\nDelimiters\n\n\nThe characters that define word limits.\ndefault: \n;:{}()[]+-/%<=>!&|^~*\n\n\n\n\n\n\nQuoteDelimiters\n\n\nThe characters that enclose a string.\ndefault: \n\"'\n\n\n\n\n\n\nQuoteEscape\n\n\nThe character to escape the \nQuoteDelimiters\n with.\ndefault: \n\\ (backslash)\n\n\n\n\n\n\nMultiLineComment\n\n\nWhether to enable multi-line comments (true|false).\ndefault: \ntrue\n\n\n\n\n\n\nMultiLineCommentStart\n\n\nThe character sequence that starts a multi-line comment.\ndefault: \n\"\"\"\n\n\n\n\n\n\nMultiLineCommentEnd\n\n\nThe character sequence that ends a multi-line comment.\ndefault: \n\"\"\"\n\n\n\n\n\n\nSingleLineCommentStart\n\n\nThe character sequence that starts a single-line comment.\ndefault: \n\n\n\n\n\n\n\n\n\n\n\n\nAddMatchingBlockEnd\n\n\nWhether to automatically add matching block end character sequences while typing (true|false).\ndefault: \nfalse\n\n\n\n\n\n\nBlockStart\n\n\nThe character sequence that starts a block.\ndefault: \n\n-none-\n\n\n\n\n\n\nBlockEndd\n\n\nThe character sequence that ends a block.\ndefault: \n\n-none-\n\n\n\n\n\n\nKeywords\n\n\nComma-separated list of keywords to highlight.\n\n\n\n\n\n\n\n\nNotes\n\n\n\n\nRecognized \ncolor names\n\n\nblack\n\n\nblue\n\n\ncyan\n\n\ndarkGray\n\n\ngray\n\n\ngreen\n\n\nlightGray\n\n\nmagenta\n\n\norange\n\n\npink\n\n\nred\n\n\nwhite\n\n\nyellow\n\n\n\n\n\n\nR,G,B format\n\n\nThe RGB format is a comma-separated list three integer values (values ranging from 0-255) for RED, GREEN and BLUE.\n\n\n\n\n\n\n\n\nSee also\n\n\n\n\nProperties File\n\n\nUsing Weka from Jython\n\n\n\n\nLinks\n\n\n\n\nJython homepage",
+            "title": " weka/gui/scripting/Jython.props"
+        },
+        {
+            "location": "/weka_gui_scripting_jython.props/#file",
+            "text": "weka/gui/scripting/Jython.props",
+            "title": "File"
+        },
+        {
+            "location": "/weka_gui_scripting_jython.props/#description",
+            "text": "This props file determines the look and feel of the minimalistic scripting IDE for  Jython .",
+            "title": "Description"
+        },
+        {
+            "location": "/weka_gui_scripting_jython.props/#version",
+            "text": "3.5.8 or  snapshot  later than 6/3/2009 (only developer version)",
+            "title": "Version"
+        },
+        {
+            "location": "/weka_gui_scripting_jython.props/#fields",
+            "text": "FontName  Specifies the name of the font for displaying the code.\ndefault: \nmonospaced    FontSize  The font size.\ndefault: \n12    ForegroundColor  The color of the font (if not comment or keyword). Can take R,G,B format.\ndefault: \nblack    BackgroundColor  The background color. Can take R,G,B format.\ndefault: \nwhite    KeywordColor  The color for keywords (see list in field  Keywords ). Can take R,G,B format.\ndefault: \nblue    CommentColor  The color for comments (single-line and multi-line). Can take R,G,B format.\ndefault: \ngray    StringColor  The color for strings (enclosed in single or double quotes). Can take R,G,B format.\ndefault: \nred    Syntax  Whether syntax highlighting is turned on or not (true|false)\ndefault: \ntrue    Indentation  The number of spaces to use for indentation.\ndefault: \n4    Tabs  The number of spaces a tab represents.\ndefault: \n4    UseBlanks  Whether to use blanks instead of tabs (true|false).\ndefault: \ntrue    Delimiters  The characters that define word limits.\ndefault: \n;:{}()[]+-/%<=>!&|^~*    QuoteDelimiters  The characters that enclose a string.\ndefault: \n\"'    QuoteEscape  The character to escape the  QuoteDelimiters  with.\ndefault: \n\\ (backslash)    MultiLineComment  Whether to enable multi-line comments (true|false).\ndefault: \ntrue    MultiLineCommentStart  The character sequence that starts a multi-line comment.\ndefault: \n\"\"\"    MultiLineCommentEnd  The character sequence that ends a multi-line comment.\ndefault: \n\"\"\"    SingleLineCommentStart  The character sequence that starts a single-line comment.\ndefault:",
+            "title": "Fields"
+        },
+        {
+            "location": "/weka_gui_scripting_jython.props/#notes",
+            "text": "Recognized  color names  black  blue  cyan  darkGray  gray  green  lightGray  magenta  orange  pink  red  white  yellow    R,G,B format  The RGB format is a comma-separated list three integer values (values ranging from 0-255) for RED, GREEN and BLUE.",
+            "title": "Notes"
+        },
+        {
+            "location": "/weka_gui_scripting_jython.props/#see-also",
+            "text": "Properties File  Using Weka from Jython",
+            "title": "See also"
+        },
+        {
+            "location": "/weka_gui_scripting_jython.props/#links",
+            "text": "Jython homepage",
+            "title": "Links"
+        },
+        {
+            "location": "/weka_gui_tree_visualizer_tree_visualizes.props/",
+            "text": "File\n\n\nweka/gui/treevisualizer/TreeVisualizer.props\n\n\nDescription\n\n\nCustomizes the TreeVisualizer display. The TreeVisualizer is used in the Explorer to display trees, e.g., generated by J48.\n\n\nVersion\n\n\n\n\n\n\n\n\n3.6.0 (stable-3.6 version)\n\n\n\n\n\n\n\n\n\n\n3.5.8 (developer version)\n\n\n\n\n\n\n\n\nFields\n\n\n\n\nFontColor\n (can use R,G,B format)\n\n\nThe color of the text being displayed, node and edge labels.\n\n\n\n\n\n\nBackgroundColor\n (can use R,G,B format)\n\n\nThe background color, by default empty in order to use the platforms default background color.\n\nNote:\n on Mac OS X, this \nseems to result\n in BLACK when saving the tree to an image file. Mac OS X users should fill in a color.\n\n\n\n\n\n\nNodeColor\n (can use R,G,B format)\n\n\nThe color in which the node boxes are painted.\n\n\n\n\n\n\nLineColor\n (can use R,G,B format)\n\n\nThe color of the edges.\n\n\n\n\n\n\nZoomBoxColor\n (can use R,G,B format)\n\n\nThe color of the zoom box.\n\n\n\n\n\n\nZoomBoxXORColor\n (can use R,G,B format)\n\n\nThe XOR color of the zoom box.\n\n\n\n\n\n\nShowBorder\n\n\nIndicates whether to show the border around the graph (labeled \"Tree View\") or not.\n\n\n\n\n\n\n\n\nSee also\n\n\n\n\nProperties File",
+            "title": " weka/gui/treevisualizer/TreeVisualizer.props"
+        },
+        {
+            "location": "/weka_gui_tree_visualizer_tree_visualizes.props/#file",
+            "text": "weka/gui/treevisualizer/TreeVisualizer.props",
+            "title": "File"
+        },
+        {
+            "location": "/weka_gui_tree_visualizer_tree_visualizes.props/#description",
+            "text": "Customizes the TreeVisualizer display. The TreeVisualizer is used in the Explorer to display trees, e.g., generated by J48.",
+            "title": "Description"
+        },
+        {
+            "location": "/weka_gui_tree_visualizer_tree_visualizes.props/#version",
+            "text": "3.6.0 (stable-3.6 version)      3.5.8 (developer version)",
+            "title": "Version"
+        },
+        {
+            "location": "/weka_gui_tree_visualizer_tree_visualizes.props/#fields",
+            "text": "FontColor  (can use R,G,B format)  The color of the text being displayed, node and edge labels.    BackgroundColor  (can use R,G,B format)  The background color, by default empty in order to use the platforms default background color. Note:  on Mac OS X, this  seems to result  in BLACK when saving the tree to an image file. Mac OS X users should fill in a color.    NodeColor  (can use R,G,B format)  The color in which the node boxes are painted.    LineColor  (can use R,G,B format)  The color of the edges.    ZoomBoxColor  (can use R,G,B format)  The color of the zoom box.    ZoomBoxXORColor  (can use R,G,B format)  The XOR color of the zoom box.    ShowBorder  Indicates whether to show the border around the graph (labeled \"Tree View\") or not.",
+            "title": "Fields"
+        },
+        {
+            "location": "/weka_gui_tree_visualizer_tree_visualizes.props/#see-also",
+            "text": "Properties File",
+            "title": "See also"
+        },
+        {
+            "location": "/weka_gui_visualize_visualize.props/",
+            "text": "File\n\n\nweka/gui/visualize/Visualize.props\n\n\nDescription\n\n\nCustomizes display of plots and certain curves in the GUI.\n\n\nVersion\n\n\n\n\n>= 3.1.9\n\n\n\n\nFields\n\n\n\n\nweka.gui.visualize.precision\n\n\nMaximum precision for numeric values\n\n\n\n\n\n\nweka.gui.visualize.Plot2D.axisColour\n\n\nColour for the axis in the 2D plot (can use R,G,B format)\n\n\n\n\n\n\nweka.gui.visualize.Plot2D.backgroundColour\n\n\nColour for the background of the 2D plot (can use R,G,B format)\n\n\n\n\n\n\nweka.gui.visualize.VisualizePanel.displayAttributeBars\n\n\nDisplay the list of one dimensional attribute visualizations\n\n\n\n\n\n\nweka.gui.visualize.AttributePanel.barColour\n\n\nColour for the background of the attribute bars in the AttributePanel (can use R,G,B format)\n\n\n\n\n\n\nweka.gui.visualize.Plot2D.instanceInfoFrame\n (developer version later than 3.5.8 or \nsnapshot\n, not in stable-3.6)\n\n\nLists the classname for displaying the instance info, e.g., when visualizing the classifier errors in the Explorer. Custom classes only need to be derived from \njavax.swing.JFrame\n and implement the \nweka.gui.visualize.InstanceInfo\n interface.\n\n\n\n\n\n\nThreshold curve plots\n\n\nweka.gui.visualize.ThresholdVisualizePanel.ThresholdCurve.XDimension\n\n\nweka.gui.visualize.ThresholdVisualizePanel.ThresholdCurve.YDimension\n\n\nweka.gui.visualize.ThresholdVisualizePanel.ThresholdCurve.ColourDimension\n\n\n\n\n\n\nCost curve plots\n\n\nweka.gui.visualize.VisualizePanel.CostCurve.XDimension\n\n\nweka.gui.visualize.VisualizePanel.CostCurve.YDimension\n\n\nweka.gui.visualize.VisualizePanel.CostCurve.ColourDimension\n\n\n\n\n\n\nMargin curve plots\n\n\nweka.gui.visualize.VisualizePanel.MarginCurve.XDimension\n\n\nweka.gui.visualize.VisualizePanel.MarginCurve.YDimension\n\n\nweka.gui.visualize.VisualizePanel.MarginCurve.ColourDimension\n\n\n\n\n\n\n\n\nNotes\n\n\n\n\nRecognized \ncolor names\n\n\nblack\n\n\nblue\n\n\ncyan\n\n\ndarkGray\n\n\ngray\n\n\ngreen\n\n\nlightGray\n\n\nmagenta\n\n\norange\n\n\npink\n\n\nred\n\n\nwhite\n\n\nyellow\n\n\n\n\n\n\nR,G,B format\n\n\nThe RGB format is a comma-separated list three integer values (values ranging from 0-255) for RED, GREEN and BLUE.\n\n\n\n\n\n\n\n\nSee also\n\n\n\n\nProperties File",
+            "title": " weka/gui/visualize/Visualize.props"
+        },
+        {
+            "location": "/weka_gui_visualize_visualize.props/#file",
+            "text": "weka/gui/visualize/Visualize.props",
+            "title": "File"
+        },
+        {
+            "location": "/weka_gui_visualize_visualize.props/#description",
+            "text": "Customizes display of plots and certain curves in the GUI.",
+            "title": "Description"
+        },
+        {
+            "location": "/weka_gui_visualize_visualize.props/#version",
+            "text": ">= 3.1.9",
+            "title": "Version"
+        },
+        {
+            "location": "/weka_gui_visualize_visualize.props/#fields",
+            "text": "weka.gui.visualize.precision  Maximum precision for numeric values    weka.gui.visualize.Plot2D.axisColour  Colour for the axis in the 2D plot (can use R,G,B format)    weka.gui.visualize.Plot2D.backgroundColour  Colour for the background of the 2D plot (can use R,G,B format)    weka.gui.visualize.VisualizePanel.displayAttributeBars  Display the list of one dimensional attribute visualizations    weka.gui.visualize.AttributePanel.barColour  Colour for the background of the attribute bars in the AttributePanel (can use R,G,B format)    weka.gui.visualize.Plot2D.instanceInfoFrame  (developer version later than 3.5.8 or  snapshot , not in stable-3.6)  Lists the classname for displaying the instance info, e.g., when visualizing the classifier errors in the Explorer. Custom classes only need to be derived from  javax.swing.JFrame  and implement the  weka.gui.visualize.InstanceInfo  interface.    Threshold curve plots  weka.gui.visualize.ThresholdVisualizePanel.ThresholdCurve.XDimension  weka.gui.visualize.ThresholdVisualizePanel.ThresholdCurve.YDimension  weka.gui.visualize.ThresholdVisualizePanel.ThresholdCurve.ColourDimension    Cost curve plots  weka.gui.visualize.VisualizePanel.CostCurve.XDimension  weka.gui.visualize.VisualizePanel.CostCurve.YDimension  weka.gui.visualize.VisualizePanel.CostCurve.ColourDimension    Margin curve plots  weka.gui.visualize.VisualizePanel.MarginCurve.XDimension  weka.gui.visualize.VisualizePanel.MarginCurve.YDimension  weka.gui.visualize.VisualizePanel.MarginCurve.ColourDimension",
+            "title": "Fields"
+        },
+        {
+            "location": "/weka_gui_visualize_visualize.props/#notes",
+            "text": "Recognized  color names  black  blue  cyan  darkGray  gray  green  lightGray  magenta  orange  pink  red  white  yellow    R,G,B format  The RGB format is a comma-separated list three integer values (values ranging from 0-255) for RED, GREEN and BLUE.",
+            "title": "Notes"
+        },
+        {
+            "location": "/weka_gui_visualize_visualize.props/#see-also",
+            "text": "Properties File",
+            "title": "See also"
         }
     ]
 }

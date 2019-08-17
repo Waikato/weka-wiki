@@ -903,6 +903,70 @@
 		
 	    </li>
           
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
         </ul>
       </div>
       &nbsp;
@@ -964,14 +1028,14 @@
 <p>If WEKA encounters those files it only supplements the properties, never overrides them. In other words, a property in the property file of the current directory has a higher precedence than the one in the user's home directory.</p>
 <p><strong>Note:</strong> Under <a href="http://cygwin.com/">Cywgin</a>, the home directory is still the Windows one, since the java installation will be still one for Windows.</p>
 <h1 id="how-to-modify-a-props-file">How to modify a .props file?</h1>
-<p>It is quite possible, that the default setup of WEKA is not to your liking and that you want to tweak it a little bit. The use of <code>.props</code> files instead of hard-coding makes it quite easy to modify WEKA's behavior. As example, we are modifying the background color of the 2D plots in the Explorer, changing it to <em>dark gray</em>. The responsible <code>.props</code> file is <a href="weka_gui_visualize_visualize.props.md">weka/gui/visualize/Visualize.props</a>.
+<p>It is quite possible, that the default setup of WEKA is not to your liking and that you want to tweak it a little bit. The use of <code>.props</code> files instead of hard-coding makes it quite easy to modify WEKA's behavior. As example, we are modifying the background color of the 2D plots in the Explorer, changing it to <em>dark gray</em>. The responsible <code>.props</code> file is <a href="../weka_gui_visualize_visualize.props/">weka/gui/visualize/Visualize.props</a>.
 These are the necessary steps:</p>
 <ul>
 <li>close WEKA</li>
 <li>extract the <code>.props</code> file from the <code>weka.jar</code>, using an archive manager that can handle ZIP files (e.g., <a href="http://7-zip.org/">7-Zip</a> under Windows)</li>
 <li>place this <code>.props</code> file in your home directory (see FAQ <a href="../where is my home directory located?.md">Where is my home directory located?</a> on how to determine your home directory), or for Weka 3.7.2 or higher place this <code>.props</code> file in $WEKA_HOME/props (the default value of WEKA_HOME is user's home directory/wekafiles)</li>
 <li>open this <code>.props</code> with a text editor (<strong>NB:</strong> Notepad under Windows might not handle the Unix line-endings correctly!)</li>
-<li>navigate to the property <code>weka.gui.visualize.Plot2D.backgroundColour</code> and change the color after the equal sign ("=") to <code>darkGray</code> (the article about <a href="weka_gui_visualize_visualize.props.md">weka/gui/visualize/Visualize.props</a> lists all possible colors)</li>
+<li>navigate to the property <code>weka.gui.visualize.Plot2D.backgroundColour</code> and change the color after the equal sign ("=") to <code>darkGray</code> (the article about <a href="../weka_gui_visualize_visualize.props/">weka/gui/visualize/Visualize.props</a> lists all possible colors)</li>
 <li>save the file and restart WEKA</li>
 </ul>
 <h1 id="notes">Notes</h1>
@@ -985,23 +1049,23 @@ E.g., "is\this" will be interpreted as "is<TAB>his". Correctly escaped, this wou
 <h1 id="see-also">See also</h1>
 <p>Further information about specific props files:</p>
 <ul>
-<li><a href="weka_core_capabilities.props.md">weka/core/Capabilities.props</a></li>
-<li><a href="weka_core_logging_logging.props.md">weka/core/logging/Logging.props</a></li>
+<li><a href="../weka_core_capabilities.props/">weka/core/Capabilities.props</a></li>
+<li><a href="../weka_core_logging_logging.props/">weka/core/logging/Logging.props</a></li>
 <li><a href="../weka_experiment_database_utils.props/">weka/experiment/DatabaseUtils.props</a></li>
-<li><a href="weka_gui_generic_object_editor.props.md">weka/gui/GenericObjectEditor.props</a></li>
-<li><a href="weka_gui_gui_editors.props.md">weka/gui/GUIEditors.props</a></li>
-<li><a href="weka_gui_generic_properties_creator.props.md">weka/gui/GenericPropertiesCreator.props</a></li>
-<li><a href="weka_gui_generic_propertiesc_reator.excludes.md">weka/gui/GenericPropertiesCreator.excludes</a></li>
-<li><a href="weka_gui_look_and_feel.props.md">weka/gui/LookAndFeel.props</a></li>
-<li><a href="weka_gui_memory_usage.props.md">weka/gui/MemoryUsage.props</a></li>
-<li><a href="weka_gui_simple_cli.props.md">weka/gui/SimpleCLI.props</a></li>
-<li><a href="weka_gui_beans_beans.props.md">weka/gui/beans/Beans.props</a></li>
-<li><a href="weka_gui_experiment_experimenter.props.md">weka/gui/experiment/Experimenter.props</a></li>
-<li><a href="weka_gui_explorer_explorer.props.md">weka/gui/explorer/Explorer.props</a></li>
-<li><a href="weka_gui_scripting_groovy.props.md">weka/gui/scripting/Groovy.props</a></li>
-<li><a href="weka_gui_scripting_jython.props.md">weka/gui/scripting/Jython.props</a></li>
-<li><a href="weka_gui_tree_visualizer_tree_visualizes.props.md">weka/gui/treevisualizer/TreeVisualizer.props</a></li>
-<li><a href="weka_gui_visualize_visualize.props.md">weka/gui/visualize/Visualize.props</a></li>
+<li><a href="../weka_gui_generic_object_editor.props/">weka/gui/GenericObjectEditor.props</a></li>
+<li><a href="../weka_gui_gui_editors.props/">weka/gui/GUIEditors.props</a></li>
+<li><a href="../weka_gui_generic_properties_creator.props/">weka/gui/GenericPropertiesCreator.props</a></li>
+<li><a href="../weka_gui_generic_properties_creator.excludes/">weka/gui/GenericPropertiesCreator.excludes</a></li>
+<li><a href="../weka_gui_look_and_feel.props/">weka/gui/LookAndFeel.props</a></li>
+<li><a href="../weka_gui_memory_usage.props/">weka/gui/MemoryUsage.props</a></li>
+<li><a href="../weka_gui_simple_cli.props/">weka/gui/SimpleCLI.props</a></li>
+<li><a href="../weka_gui_beans_beans.props/">weka/gui/beans/Beans.props</a></li>
+<li><a href="../weka_gui_experiment_experimenter.props/">weka/gui/experiment/Experimenter.props</a></li>
+<li><a href="../weka_gui_explorer_explorer.props/">weka/gui/explorer/Explorer.props</a></li>
+<li><a href="../weka_gui_scripting_groovy.props/">weka/gui/scripting/Groovy.props</a></li>
+<li><a href="../weka_gui_scripting_jython.props/">weka/gui/scripting/Jython.props</a></li>
+<li><a href="../weka_gui_tree_visualizer_tree_visualizes.props/">weka/gui/treevisualizer/TreeVisualizer.props</a></li>
+<li><a href="../weka_gui_visualize_visualize.props/">weka/gui/visualize/Visualize.props</a></li>
 </ul>
               
             </div>
