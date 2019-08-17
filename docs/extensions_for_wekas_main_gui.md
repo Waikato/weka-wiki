@@ -1,6 +1,6 @@
 
 # Description
-The main GUI (= `weka.gui.Main`) contains a plugin mechanism to add functionality to the main menu without having to modify the code of that class (the GUIChooser in the developer version as well). Thanks to the automatic class discovery, Weka will display all components that are found in packages listed in the [GenericPropertiesCreator.props](weka_gui_genericpropertiescreator.props.md) file.
+The main GUI (= `weka.gui.Main`) contains a plugin mechanism to add functionality to the main menu without having to modify the code of that class (the GUIChooser in the developer version as well). Thanks to the automatic class discovery, Weka will display all components that are found in packages listed in the [GenericPropertiesCreator.props](weka_gui_generic_properties_creator.props.md) file.
 
 # Version
 >3.5.5 (or [snapshot](snapshots.md)/[Subversion](subversion.md) after 25/05/2007)
@@ -9,7 +9,7 @@ The main GUI (= `weka.gui.Main`) contains a plugin mechanism to add functionalit
 The are only *two* requirements for components to be listed in the main menu (under the *Extensions* menu):
 
 * they have to implement the `weka.gui.MainMenuExtension` interface
-* the packages they reside in must be listed in the [GenericPropertiesCreator.props](weka_gui_genericpropertiescreator.props.md) under the `weka.gui.MainMenuExtension` entry
+* the packages they reside in must be listed in the [GenericPropertiesCreator.props](weka_gui_generic_properties_creator.props.md) under the `weka.gui.MainMenuExtension` entry
 
 # Examples
 In the following, I'll present two really simple examples of how to add *stuff* to the main menu. An item that gets added to the main menu either handles everything itself, i.e., creating frame and displaying it, or it needs a frame to place its GUI components in. In the first case, one only needs to let the `getActionListener(JFrame)` method return an `ActionListener` and implement the `fillFrame(Component)` method with an empty body. In the other case, one lets the `getActionListener(JFrame)` method return `null` and uses the `fillFrame(Component)` method to fill the frame with life.
@@ -40,7 +40,7 @@ Launching a browser with the Weka homepage is a really example, since one only n
   public void fillFrame(Component frame) {
   }
 ```
-Since the class is part of the `weka.gui.extensions` package, we must add this package to the `weka.gui.MainMenuExtension` entry of the [GenericPropertiesCreator.props](weka_gui_genericpropertiescreator.props.md) file, e.g.:
+Since the class is part of the `weka.gui.extensions` package, we must add this package to the `weka.gui.MainMenuExtension` entry of the [GenericPropertiesCreator.props](weka_gui_generic_properties_creator.props.md) file, e.g.:
 
 ```ini
  weka.gui.MainMenuExtension=\
@@ -89,7 +89,7 @@ The [SqlWorksheet.java](files/SqlWorksheet.java) mode, one needs to take care of
 	  (screenHeight - frame.getBounds().height) / 2);
   }
 ```
-This class is part of the `weka.gui.extensions` package and we therefore must add this package to the `weka.gui.MainMenuExtension` entry of the [GenericPropertiesCreator.props](weka_gui_genericpropertiescreator.props.md) file:
+This class is part of the `weka.gui.extensions` package and we therefore must add this package to the `weka.gui.MainMenuExtension` entry of the [GenericPropertiesCreator.props](weka_gui_generic_properties_creator.props.md) file:
 
 ```ini
  weka.gui.MainMenuExtension=\

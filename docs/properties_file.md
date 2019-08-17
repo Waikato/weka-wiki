@@ -57,7 +57,7 @@ Further information about specific props files:
 * [weka/gui/GenericObjectEditor.props](weka_gui_generic_object_editor.props.md)
 * [weka/gui/GUIEditors.props](weka_gui_gui_editors.props.md)
 * [weka/gui/GenericPropertiesCreator.props](weka_gui_generic_properties_creator.props.md)
-* [weka/gui/GenericPropertiesCreator.excludes](weka_gui_generic_propertiesc_reator.excludes.md)
+* [weka/gui/GenericPropertiesCreator.excludes](weka_gui_generic_properties_creator.excludes.md)
 * [weka/gui/LookAndFeel.props](weka_gui_look_and_feel.props.md)
 * [weka/gui/MemoryUsage.props](weka_gui_memory_usage.props.md)
 * [weka/gui/SimpleCLI.props](weka_gui_simple_cli.props.md)

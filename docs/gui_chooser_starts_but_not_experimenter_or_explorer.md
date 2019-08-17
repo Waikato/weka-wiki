@@ -24,4 +24,4 @@ With this content:
 ```ini
  Theme=javax.swing.plaf.metal.MetalLookAndFeel
 ```
-More information can be found in [this Weka list post](https://list.scms.waikato.ac.nz/mailman/htdig/wekalist/2005-october/005304.html) or [here](weka_gui_lookandfeel.props.md).
+More information can be found in [this Weka list post](https://list.scms.waikato.ac.nz/mailman/htdig/wekalist/2005-october/005304.html) or [here](weka_gui_look_and_feel.props.md).

@@ -10,7 +10,7 @@ As of Weka version >3.5.8 (only developer version, not stable-3.6 branch) one ca
 > `weka.gui.visualize.plugins.ErrorVisualizePlugin`
 * the class must **either** reside in the following **package** (visualization classes are automatically discovered during run-time)
 > `weka.gui.visualize.plugins`
-* or the class' package must be listed in the `weka.gui.visualize.plugins.ErrorVisualizePlugin` key of the [weka/gui/GenericPropertiesCreator.props](weka_gui_genericpropertiescreator.props) file.
+* or the class' package must be listed in the `weka.gui.visualize.plugins.ErrorVisualizePlugin` key of the [weka/gui/GenericPropertiesCreator.props](weka_gui_generic_properties_creator.props.md) file.
 
 # Implementation
 The visualization interface contains the following four methods

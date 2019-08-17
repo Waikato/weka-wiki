@@ -6,7 +6,7 @@ Defines the [Databases](databases.md) setup, i.e., JDBC driver information, JDBC
 
 # Version
 
-* >= 3.1.3
+* \>= 3.1.3
 
 # Fields
 

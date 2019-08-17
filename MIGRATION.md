@@ -201,26 +201,26 @@ Articles still to migrate:
 * ~~Visualizing a Tree~~
 * ~~Visualizing cluster assignments~~
 * ~~Visualizing ROC curve~~
-* weka_core_Capabilities.props
-* weka_core_logging_Logging.props
+* ~~weka_core_Capabilities.props~~
+* ~~weka_core_logging_Logging.props~~
 * ~~Weka download problems~~
 * ~~Weka Examples~~
 * ~~weka_experiment_DatabaseUtils.props~~
 * Weka For Newbies
-* weka_gui_beans_Beans.props
-* weka_gui_experiment_Experimenter.props
-* weka_gui_explorer_Explorer.props
-* weka_gui_GenericObjectEditor.props
-* weka_gui_GenericPropertiesCreator.excludes
-* weka_gui_GenericPropertiesCreator.props
-* weka_gui_GUIEditors.props
-* weka_gui_LookAndFeel.props
-* weka_gui_MemoryUsage.props
-* weka_gui_scripting_Groovy.props
-* weka_gui_scripting_Jython.props
-* weka_gui_SimpleCLI.props
-* weka_gui_treevisualizer_TreeVisualizes.props
-* weka_gui_visualize_Visualize.props
+* ~~weka_gui_beans_Beans.props~~
+* ~~weka_gui_experiment_Experimenter.props~~
+* ~~weka_gui_explorer_Explorer.props~~
+* ~~weka_gui_GenericObjectEditor.props~~
+* ~~weka_gui_GenericPropertiesCreator.excludes~~
+* ~~weka_gui_GenericPropertiesCreator.props~~
+* ~~weka_gui_GUIEditors.props~~
+* ~~weka_gui_LookAndFeel.props~~
+* ~~weka_gui_MemoryUsage.props~~
+* ~~weka_gui_scripting_Groovy.props~~
+* ~~weka_gui_scripting_Jython.props~~
+* ~~weka_gui_SimpleCLI.props~~
+* ~~weka_gui_treevisualizer_TreeVisualizes.props~~
+* ~~weka_gui_visualize_Visualize.props~~
 * ~~Weka Mailing List~~
 * Weka on a memory stick
 * ~~Weka package manager does not start~~
