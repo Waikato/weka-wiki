@@ -988,6 +988,42 @@
 		
 	    </li>
           
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
         </ul>
       </div>
       &nbsp;
@@ -1022,7 +1058,7 @@
               
                 <p>In the following one can find some information of how to use Weka for <a href="http://en.wikipedia.org/wiki/document_classification">text categorization</a>.</p>
 <h1 id="import">Import</h1>
-<p>Weka needs the data to be present in <a href="../arff/">ARFF</a> or <a href="xrff.md">XRFF</a> format in order to perform any classification tasks.</p>
+<p>Weka needs the data to be present in <a href="../arff/">ARFF</a> or <a href="../xrff/">XRFF</a> format in order to perform any classification tasks.</p>
 <h2 id="directories">Directories</h2>
 <p>One can transform the text files with the following tools into ARFF format (depending on the version of Weka you are using):</p>
 <ul>
@@ -1067,7 +1103,7 @@
 </code></pre>
 
 <p>By default, non-numerical attributes get imported as <em>NOMINAL</em> attributes, which is not necessarily desired for textual data, especially if one wants to use the <a href="http://weka.sourceforge.net/doc.dev/weka/filters/unsupervised/attribute/StringToWordVector.html">StringToWordVector</a> filter. In order to change the attribute to <em>STRING</em>, one can run the <code>NominalToString</code> filter (package <code>weka.filters.unsupervised.attribute</code>) on the data, specifying the attribute index or range of indices that should be converted (NB: 
-this filter does <strong>not</strong> exclude the class attribute from conversion!). In order to retain the attribute types, one needs to save the file in <a href="../arff/">ARFF</a> or <a href="xrff.md">XRFF</a> format (or in the compressed version of these formats).</p>
+this filter does <strong>not</strong> exclude the class attribute from conversion!). In order to retain the attribute types, one needs to save the file in <a href="../arff/">ARFF</a> or <a href="../xrff/">XRFF</a> format (or in the compressed version of these formats).</p>
 <h2 id="third-party-tools">Third-party tools</h2>
 <ul>
 <li><a href="http://www.cs.cmu.edu/~cprose/TagHelper.html">TagHelper Tools</a>, which allows one to transform texts into vectors of stemmed or unstemmed unigrams, bigrams, part-of-speech bigrams, and some user defined features, and then saves this representation to <a href="../arff/">ARFF</a>. Currently processes English, German, and Chinese. Spanish and Portugese are in progress.</li>
