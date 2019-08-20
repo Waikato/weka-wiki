@@ -206,7 +206,7 @@ Articles still to migrate:
 * ~~Weka download problems~~
 * ~~Weka Examples~~
 * ~~weka_experiment_DatabaseUtils.props~~
-* Weka For Newbies
+* ~~Weka For Newbies~~ **Numerous dead links**
 * ~~weka_gui_beans_Beans.props~~
 * ~~weka_gui_experiment_Experimenter.props~~
 * ~~weka_gui_explorer_Explorer.props~~
@@ -222,7 +222,7 @@ Articles still to migrate:
 * ~~weka_gui_treevisualizer_TreeVisualizes.props~~
 * ~~weka_gui_visualize_Visualize.props~~
 * ~~Weka Mailing List~~
-* Weka on a memory stick
+* ~~Weka on a memory stick~~
 * ~~Weka package manager does not start~~
 * ~~What do those numbers mean in a J48 tree_~~
 * ~~What is CVS and what do I need to do to access it_~~
@@ -231,11 +231,11 @@ Articles still to migrate:
 * ~~Where can I find information regarding ROC curves_~~
 * ~~Where can I get old versions of WEKA_~~
 * ~~Where can I get WEKA's source code_~~
-* Where does WEKA look for .props files_
-* Where is my home directory located_
-* Why am I missing certain nominal or string values from sparse instances_
+* ~~Where does WEKA look for .props files_~~
+* ~~Where is my home directory located_~~
+* ~~Why am I missing certain nominal or string values from sparse instances_~~
 * ~~Why do I get the error message 'training and test set are not compatible'_~~
-* Windows Databases
+* ~~Windows Databases~~ **Written for windows 2000**
 * ~~Writing your own Classifier~~
 * ~~Writing your own Classifier (post 3.5.2)~~
 * ~~Writing your own Classifier (up to 3.5.2)~~
@@ -243,6 +243,6 @@ Articles still to migrate:
 * ~~Writing your own Filter (default)~~
 * ~~Writing your own Filter (post 3.5.3)~~
 * ~~Writing your own Filter (up to 3.5.3)~~
-* XML
-* XRFF
-* ZeroR
+* ~~XML~~ **koml links are dead**
+* ~~XRFF~~
+* ~~ZeroR~~

@@ -233,6 +233,16 @@ pages:
   - ' Visualizing a Tree' : visualizing_a_tree.md
   - ' Visualizing cluster assignments' : visualizing_cluster_assignments.md
   
+  - ' Weka For Newbies' : weka_for_newbies.md
+  - ' Weka on a memory stick' : weka_on_a_memory_stick.md
+  - ' Where does WEKA look for .props files?' : where_does_weka_look_for_props_files.md
+  - ' Where is my home directory located?' : where_is_my_home_directory_located.md
+  - ' Why am I missing certain nominal or string values from sparse instances?' : why_am_i_missing_certain_nominal_or_string_values_from_sparse_instances.md
+  - ' Windows Databases' : windows_databases.md
+  - ' XML' : xml.md
+  - ' XRFF' : xrff.md
+  - ' ZeroR' : zero_r.md
+
   - ' weka/core/Capabilities.props' : weka_core_capabilities.props.md
   - ' weka/core/logging/Logging.props' : weka_core_logging_logging.props.md
   - ' weka/gui/GenericObjectEditor.props' : weka_gui_generic_object_editor.props.md
@@ -249,4 +259,3 @@ pages:
   - ' weka/gui/scripting/Jython.props' : weka_gui_scripting_jython.props.md
   - ' weka/gui/treevisualizer/TreeVisualizer.props' : weka_gui_tree_visualizer_tree_visualizes.props.md
   - ' weka/gui/visualize/Visualize.props' : weka_gui_visualize_visualize.props.md
-  
