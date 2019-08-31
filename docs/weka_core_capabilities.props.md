@@ -30,6 +30,6 @@ Customization of the Capabilities support in Weka.
 
 # Links
 * Wekalist posts
-	* [problem](https://list.scms.waikato.ac.nz/mailman/htdig/wekalist/2006-july/007628.html)
-	* [inquiry](https://list.scms.waikato.ac.nz/mailman/htdig/wekalist/2006-july/007660.html)
-	* [further discussion](https://list.scms.waikato.ac.nz/mailman/htdig/wekalist/2006-july/007696.html)
+	* [problem](https://list.waikato.ac.nz/pipermail/wekalist/2006-July/007637.html)
+	* [inquiry](https://list.waikato.ac.nz/pipermail/wekalist/2006-July/007706.html)
+	* [further discussion](https://list.waikato.ac.nz/pipermail/wekalist/2006-July/007707.html)

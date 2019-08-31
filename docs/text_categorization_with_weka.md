@@ -81,12 +81,12 @@ The [StringToWordVector](http://weka.sourceforge.net/doc.dev/weka/filters/unsupe
 
 # UTF-8
 
-In case you are working with text files containing non-ASCII characters, e.g., Arabic, you might encounter some display problems under Windows. Java was designed to display [UTF-8](http://en.wikipedia.org/wiki/utf-8), which should include arabic characters. By default, Java uses [code page 1252](http://en.wikipedia.org/wiki/cp1252) under Windows, which garbles the display of other characters. In order to fix this, you will have to modify the java command-line with which you start up Weka (taken from [this](https://list.scms.waikato.ac.nz/mailman/htdig/wekalist/2008-july/013981.html) post):
+In case you are working with text files containing non-ASCII characters, e.g., Arabic, you might encounter some display problems under Windows. Java was designed to display [UTF-8](http://en.wikipedia.org/wiki/utf-8), which should include arabic characters. By default, Java uses [code page 1252](http://en.wikipedia.org/wiki/cp1252) under Windows, which garbles the display of other characters. In order to fix this, you will have to modify the java command-line with which you start up Weka (taken from [this](https://list.waikato.ac.nz/pipermail/wekalist/2008-July/013981.html) post):
 
 ```bash
   java -Dfile.encoding=utf-8 -classpath ...
 ```
-The `**-Dfile.encoding=utf-8**` tells Java to explicitly use [UTF-8](http://en.wikipedia.org/wiki/utf-8) encoding instead of the default [CP1252](http://en.wikipedia.org/wiki/cp1252).
+The `-Dfile.encoding=utf-8` tells Java to explicitly use [UTF-8](http://en.wikipedia.org/wiki/utf-8) encoding instead of the default [CP1252](http://en.wikipedia.org/wiki/cp1252).
 If you are starting Weka via start menu and you use a recent version (at least 3.5.8 or 3.4.13), then you will just have to modify the `fileEncoding` placeholder in the `RunWeka.ini` accordingly.
 
 # Examples

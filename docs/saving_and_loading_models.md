@@ -24,7 +24,7 @@ You can load the previously saved model with the following steps:
 * right-click in the *Results list*, select *Load model* and choose `/other/place/j48.model`
 * select *Re-evaluate model on current test set*
 
-Based on [this](https://list.scms.waikato.ac.nz/mailman/htdig/wekalist/2006-august/007711.html) [Weka Mailing List](mailing_list.md) post.
+Based on [this](https://list.waikato.ac.nz/pipermail/wekalist/2006-August/007720.html) [Weka Mailing List](mailing_list.md) post.
 
 ## Making Predictions with your model without retraining
 

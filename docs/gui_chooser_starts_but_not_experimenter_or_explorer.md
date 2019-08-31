@@ -1,8 +1,7 @@
 The GUIChooser starts, but Explorer and Experimenter don't start and output an Exception like this in the terminal:
 
 ```text
- /usr/share/themes/Mist/gtk-2.0/gtkrc:48: 
-Engine "mist" is unsupported, ignoring
+ /usr/share/themes/Mist/gtk-2.0/gtkrc:48: Engine "mist" is unsupported, ignoring
  ---Registering Weka Editors---
  java.lang.NullPointerException
         at weka.gui.explorer.PreprocessPanel.addPropertyChangeListener(PreprocessPanel.java:519)
@@ -24,4 +23,4 @@ With this content:
 ```ini
  Theme=javax.swing.plaf.metal.MetalLookAndFeel
 ```
-More information can be found in [this Weka list post](https://list.scms.waikato.ac.nz/mailman/htdig/wekalist/2005-october/005304.html) or [here](weka_gui_look_and_feel.props.md).
+More information can be found in [this Weka list post](https://list.waikato.ac.nz/pipermail/wekalist/2005-April/003914.html) or [here](weka_gui_look_and_feel.props.md).

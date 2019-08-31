@@ -15,7 +15,7 @@ Customizes the TreeVisualizer display. The TreeVisualizer is used in the Explore
 > The color of the text being displayed, node and edge labels.
 * `BackgroundColor` (can use R,G,B format)
 > The background color, by default empty in order to use the platforms default background color.
-> **Note:** on Mac OS X, this [seems to result](https://list.scms.waikato.ac.nz/mailman/htdig/wekalist/2009-january/015661.html) in BLACK when saving the tree to an image file. Mac OS X users should fill in a color.
+> **Note:** on Mac OS X, this [seems to result](https://list.waikato.ac.nz/pipermail/wekalist/2009-January/015667.html) in BLACK when saving the tree to an image file. Mac OS X users should fill in a color.
 * `NodeColor` (can use R,G,B format)
 > The color in which the node boxes are painted.
 * `LineColor` (can use R,G,B format)

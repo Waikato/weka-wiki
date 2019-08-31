@@ -23,7 +23,7 @@ This patch addresses two separate but related issues:
 
 * The proposed filter "Weighter" allows one to specify a numeric attribute to be used as an instance weight.
 * As mentioned on Wekalist, tests using weighted sample-survey data indicated possible problems in the J48 decision tree algorithm: 
-[wekalist/2004-December/003135](https://list.scms.waikato.ac.nz/mailman/htdig/wekalist/2004-december/003135.html)
+[wekalist/2004-December/003135](https://list.waikato.ac.nz/pipermail/wekalist/2004-December/003135.html)
 
 ## The Weighter filter
 Weighter is a general-purpose filter independent of J48 or other

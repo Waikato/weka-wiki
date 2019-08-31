@@ -4,7 +4,7 @@
 `weka/gui/LookAndFeel.props`
 
 # Description
-Defines with what theme Weka is displayed. By default Weka starts with the system default one, but under Java 5.0 and Linux/Gnome this can lead to a [crash](https://list.scms.waikato.ac.nz/mailman/htdig/wekalist/2005-april/003906.html) due to a NullPointerException.
+Defines with what theme Weka is displayed. By default Weka starts with the system default one, but under Java 5.0 and Linux/Gnome this can lead to a [crash](https://list.waikato.ac.nz/pipermail/wekalist/2005-April/003914.html) due to a NullPointerException.
 
 # Version
 * \>= 3.4.5
@@ -26,4 +26,4 @@ Defines with what theme Weka is displayed. By default Weka starts with the syste
 * [Properties file](properties_file.md)
 
 # Links
-* [Original Wekalist post](https://list.scms.waikato.ac.nz/mailman/htdig/wekalist/2005-april/003906.html)
+* [Original Wekalist post](https://list.waikato.ac.nz/pipermail/wekalist/2005-April/003914.html)

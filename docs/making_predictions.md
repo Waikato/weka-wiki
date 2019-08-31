@@ -120,7 +120,7 @@ If you want to perform the classification within your own code, see the [classif
 * [Using ID attributes](troubleshooting.md#instance-id)
 
 # Links
-* [AddClassification](https://list.scms.waikato.ac.nz/mailman/htdig/wekalist/2007-april/009771.html) on the Wekalist
+* [AddClassification](https://list.waikato.ac.nz/pipermail/wekalist/2007-April/009904.html) on the Wekalist
 
 # Version
 The developer version shortly before the release of 3.5.6 was used as basis for this article.

@@ -103,7 +103,6 @@ For any addition to this page, you can either create an account & edit it yourse
 	* Evaluation 
 		* <http://blog.gmane.org/gmane.comp.ai.weka/month=20140301> - **dead**
 		* <http://weka.8497.n7.nabble.com/Evaluating-a-classifier-using-a-log-loss-function-td30182.html>
-		* <http://list.waikato.ac.nz/pipermail/wekalist/2014-March/060079.html> - **dead**
 
 # Weka Server Usage and Development
 * [http://wiki.pentaho.com/display/DATAMINING/Weka+Server](http://wiki.pentaho.com/display/datamining/weka+server)
@@ -125,7 +124,6 @@ For any addition to this page, you can either create an account & edit it yourse
 
 # Weka & Attribute Selection
 * <https://waikato.github.io/weka-wiki/performing_attribute_selection/>
-* <http://list.waikato.ac.nz/pipermail/wekalist/2014-March/060075.html> - **dead**
 
 # Weka & Clustering
 * <http://micans.org/mcl/>

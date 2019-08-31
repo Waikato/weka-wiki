@@ -128,7 +128,7 @@ Now we will configure the experiment:
 # Multi-core support
 If you want to utilize all the cores on a multi-core machine, then you can do so with Weka version 3.6.x and developer versions later than 3.5.7. All you have to do, is define the port alongside the hostname in the Experimenter (format: 
 `hostname:port`) and then start the `RemoteEngine` with the `-p` option, specifying the port to listen on.
-See also [this](https://list.scms.waikato.ac.nz/mailman/htdig/wekalist/2009-march/016310.html) post on the [Wekalist](mailing_list.md).
+See also [this](https://list.waikato.ac.nz/pipermail/wekalist/2009-March/016310.html) post on the [Wekalist](mailing_list.md).
 
 # Troubleshooting
 * If you get an error at the start of an experiment that looks a bit like this:
