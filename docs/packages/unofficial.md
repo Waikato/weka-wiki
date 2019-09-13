@@ -4,6 +4,7 @@ Below is an (incomplete list) of packages that are available.
  
 # Preprocessing
 
+* [data-dumper](https://github.com/fracpete/data-dumper-weka-package) -- meta-filter/-classifier/-clusterer that allow listening to the data being used, eg within filter pipelines (aka MultiFilter).
 * [dataset-weights](https://github.com/fracpete/dataset-weights-weka-package) -- filters for setting attribute and instance weights using various methods.
 * [missing-values-imputation](https://github.com/fracpete/missing-values-imputation-weka-package) -- various methods for imputing missing values using a filter.
 * [mxexpression](https://github.com/fracpete/mxexpression-weka-package) -- filter for updating a target attribute using a mathematical expression.
