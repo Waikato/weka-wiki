@@ -10,10 +10,10 @@ You can use the `renameAttributeValue(...)` method of the `weka.core.Instances` 
  for (int n = 0; n < att.numValues(); n++) {
     arff.renameAttributeValue(att, att.value(n), "" + n);
 ```
-The [Rename.java](files/Rename.java) like mentioned above.
+The [Rename.java](../files/Rename.java) like mentioned above.
 
 # See also
-* [Use Weka in your Java code](use_weka_in_your_java_code.md)
+* [Use Weka in your Java code](../use_weka_in_your_java_code.md)
 
 # Downloads
-* [Rename.java](files/Rename.java)
+* [Rename.java](../files/Rename.java)

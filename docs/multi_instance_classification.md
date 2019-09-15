@@ -4,7 +4,7 @@ Multi-instance (MI) classification is a supervised learning technique, but diffe
 * only one class label is observable for all the instances in an example
 
 # Classifiers
-Multi-instance classifiers were originally available through a separate software package, [Multi-Instance Learning Kit](http://www.cs.waikato.ac.nz/~ml/milk/) (= MILK). But due to the introduction of the relational attribute in the [ARFF](arff.md) format, they became part of Weka in version 3.5.3 (developer version only). These classifiers can now be found in the following package:
+Multi-instance classifiers were originally available through a separate software package, [Multi-Instance Learning Kit](http://www.cs.waikato.ac.nz/~ml/milk/) (= MILK). But due to the introduction of the relational attribute in the [ARFF](formats_and_processing/arff.md) format, they became part of Weka in version 3.5.3 (developer version only). These classifiers can now be found in the following package:
 
 ```text
  weka.classifiers.mi
@@ -25,7 +25,7 @@ Weka offers two filters to convert from flat file format (or propositional forma
 Here is an example of the *musk1* UCI dataset, used quite often in publications covering MI learning (Note: **...** denotes omission):
 
 * **propositional format:**
-> This [ARFF](arff.md) file lists all the attributes, *molecule_name* (which is the bag-id), *f1* to *f166* (containing the actual data of the instances) and the *class* attribute.
+> This [ARFF](formats_and_processing/arff.md) file lists all the attributes, *molecule_name* (which is the bag-id), *f1* to *f166* (containing the actual data of the instances) and the *class* attribute.
 ```text
  @relation musk1
  
@@ -69,7 +69,7 @@ Here is an example of the *musk1* UCI dataset, used quite often in publications 
 
 # See also
 * [Use Weka in your Java code](use_weka_in_your_java_code.md) - general article about using the Weka API
-* [Creating an ARFF file](creating_arff_file.md) - explains how to create an ARFF file from within Java, incl. relational attributes
+* [Creating an ARFF file](formats_and_processing/creating_arff_file.md) - explains how to create an ARFF file from within Java, incl. relational attributes
 
 # Links
 * Xin Xu. *Statistical learning in multiple instance problem.* Master's thesis, University of Waikato, Hamilton, NZ, 2003. 0657.594. [Download](http://www.cs.waikato.ac.nz/~ml/publications/2003/xinxu_thesis.ps.gz)

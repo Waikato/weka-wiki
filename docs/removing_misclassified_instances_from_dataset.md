@@ -63,7 +63,7 @@ Source code:
 
 # See also
 * [Use Weka in your Java code](use_weka_in_your_java_code.md) - for general use of the Weka API
-* [Save Instances to an ARFF File](save_instances_to_arff.md) - for saving an Instances object to a file
+* [Save Instances to an ARFF File](formats_and_processing/save_instances_to_arff.md) - for saving an Instances object to a file
 
 # Downloads
 * [RemoveMisclassifiedTest.java](files/RemoveMisclassifiedTest.java)

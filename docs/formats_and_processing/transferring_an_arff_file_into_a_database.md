@@ -1,5 +1,5 @@
 
-This example transfers a dataset stored in an [ARFF](arff.md) file into the MySQL [database](databases.md) *weka_test* on the MySQL server running on the same machine. In order to make this work, the MySQL JDBC driver must be in the [CLASSPATH](classpath.md) and the [DatabaseUtils.props](weka_experiment_database_utils.props.md) file must be configured accordingly.
+This example transfers a dataset stored in an [ARFF](arff.md) file into the MySQL [database](../databases.md) *weka_test* on the MySQL server running on the same machine. In order to make this work, the MySQL JDBC driver must be in the [CLASSPATH](../classpath.md) and the [DatabaseUtils.props](../weka_experiment_database_utils.props.md) file must be configured accordingly.
 
 Usage:
 
@@ -49,12 +49,12 @@ import weka.core.*;
 ```
 
 # See also
-* [Databases](databases.md) - explains how to use databases within Weka
-* [weka/experiment/DatabaseUtils.props](weka_experiment_database_utils.props.md) - the properties file explained in detail
+* [Databases](../databases.md) - explains how to use databases within Weka
+* [weka/experiment/DatabaseUtils.props](../weka_experiment_database_utils.props.md) - the properties file explained in detail
 
 # Downloads
-* [Arff2Database.java](files/Arff2Database.java)
-* The [Weka Examples](weka_examples.md) collection contains several example classes:
+* [Arff2Database.java](../files/Arff2Database.java)
+* The [Weka Examples](../weka_examples.md) collection contains several example classes:
 
 	* `SaveDataToDbBatch.java` ([book](https://svn.cms.waikato.ac.nz/svn/weka/branches/book2ndEd-branch/wekaexamples/src/main/java/wekaexamples/core/converters/SaveDataToDbBatch.java), [stable-3.6](https://svn.cms.waikato.ac.nz/svn/weka/branches/stable-3-6/wekaexamples/src/main/java/wekaexamples/core/converters/SaveDataToDbBatch.java), [developer](https://svn.cms.waikato.ac.nz/svn/weka/trunk/wekaexamples/src/main/java/wekaexamples/core/converters/SaveDataToDbBatch.java))
 	* `SaveDataToDbIncremental.java` ([book](https://svn.cms.waikato.ac.nz/svn/weka/branches/book2ndEd-branch/wekaexamples/src/main/java/wekaexamples/core/converters/SaveDataToDbIncremental.java), [stable-3.6](https://svn.cms.waikato.ac.nz/svn/weka/branches/stable-3-6/wekaexamples/src/main/java/wekaexamples/core/converters/SaveDataToDbIncremental.java), [developer](https://svn.cms.waikato.ac.nz/svn/weka/trunk/wekaexamples/src/main/java/wekaexamples/core/converters/SaveDataToDbIncremental.java))

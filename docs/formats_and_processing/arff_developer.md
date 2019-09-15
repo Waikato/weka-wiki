@@ -234,11 +234,11 @@ For a sparse instance, this example would look like:
 Note that any instance without a weight value specified is assumed to have a weight of 1 for backwards compatibility.
 
 # See also
-* [[Add weights to dataset]]
+* [Add weights to dataset](../add_weights_to_dataset.md)
 * [ARFF Syntax Highlighting](arff_syntax.md) for various editors
 
 # Links
 * [ISO 8601](http://www.iso.org/iso/en/prods-services/popstds/datesandtime.html)
 * Javadoc of [java.text.SimpleDateFormat](https://docs.oracle.com/javase/8/docs/api/java/text/SimpleDateFormat.html) (lists the supported character patterns)
-* ANTLR syntax by Staal A. Vinterbo [arff.g](files/arff.g)
+* ANTLR syntax by Staal A. Vinterbo [arff.g](../files/arff.g)
 

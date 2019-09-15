@@ -33,7 +33,7 @@ Here is the snippet :
 **Notes:** 
 
 * using the converter approach, one can easily swap the `ArffSaver` with another saver, e.g., the `CSVSaver` to output the data in a different format.
-* The [Weka Examples](weka_examples.md) collection dedicates quite a few examples to the use of converters in the `wekaexamples.core.converters` package ([stable](https://svn.cms.waikato.ac.nz/svn/weka/branches/stable-3-6/wekaexamples/src/main/java/wekaexamples/core/converters/), [developer](https://svn.cms.waikato.ac.nz/svn/weka/trunk/wekaexamples/src/main/java/wekaexamples/core/converters/))
+* The [Weka Examples](../weka_examples.md) collection dedicates quite a few examples to the use of converters in the `wekaexamples.core.converters` package ([stable](https://svn.cms.waikato.ac.nz/svn/weka/branches/stable-3-6/wekaexamples/src/main/java/wekaexamples/core/converters/), [developer](https://svn.cms.waikato.ac.nz/svn/weka/trunk/wekaexamples/src/main/java/wekaexamples/core/converters/))
 
 # Java I/O
 You can also save the `weka.core.Instances` object directly using Java I/O classes:

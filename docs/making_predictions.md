@@ -94,7 +94,7 @@ Example output for the *anneal* UCI dataset:
 
 ## KnowledgeFlow
 ## Using the PredictionAppender
-With the *PredictionAppender* (from the *Evaluation* toolbar) you cannot use an already saved model, but you can train a classifier on a dataset and output an [ARFF](arff.md) file with the predictions appended as additional attribute. Here's an example setup:
+With the *PredictionAppender* (from the *Evaluation* toolbar) you cannot use an already saved model, but you can train a classifier on a dataset and output an [ARFF](formats_and_processing/arff.md) file with the predictions appended as additional attribute. Here's an example setup:
 
 ```text
                /---dataSet--> TrainingSetMaker ---trainingSet--\

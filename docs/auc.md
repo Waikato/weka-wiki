@@ -3,10 +3,10 @@ AUC = the **A**rea **U**nder the ROC **C**urve.
 Weka uses the [Mann Whitney statistic](http://en.wikipedia.org/wiki/Mann-Whitney_U) to calculate the AUC via the [weka.classifiers.evaluation.ThresholdCurve](http://weka.sourceforge.net/doc.dev/weka/classifiers/evaluation/ThresholdCurve.html) class.
 
 # Explorer
-See [[ROC curves]].
+See [ROC curves](roc_curves.md).
 
 # KnowledgeFlow
-See [[ROC curves]].
+See [ROC curves](roc_curves.md).
 
 # Commandline
 Classifiers can output the AUC if the *-i* option is provided. The *-i* option provides detailed information per class. 
@@ -29,7 +29,7 @@ produces this output:
 ```
 
 # See also
-* [[ROC curves]]
+* [ROC curves](roc_curves.md)
 * [Mann Whitney statistic](http://en.wikipedia.org/wiki/Mann-Whitney_U) on WikiPedia
 
 # Links

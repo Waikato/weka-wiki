@@ -139,9 +139,9 @@ By default, a new double array will be initialized with 0s. In case you want to 
     ```
 
 # Downloads
-* [AttTest.java](files/AttTest.java) ([stable](https://svn.cms.waikato.ac.nz/svn/weka/branches/stable-3-8/wekaexamples/src/main/java/wekaexamples/core/CreateInstances.java), [developer](https://svn.cms.waikato.ac.nz/svn/weka/trunk/wekaexamples/src/main/java/wekaexamples/core/CreateInstances.java)) - the above class
+* [AttTest.java](../files/AttTest.java) ([stable](https://svn.cms.waikato.ac.nz/svn/weka/branches/stable-3-8/wekaexamples/src/main/java/wekaexamples/core/CreateInstances.java), [developer](https://svn.cms.waikato.ac.nz/svn/weka/trunk/wekaexamples/src/main/java/wekaexamples/core/CreateInstances.java)) - the above class
 
 # See also
 * [Save Instances to an ARFF File](save_instances_to_arff.md) - if you want to save the data to a file instead of printing it to stdout
-* [Adding attributes to a dataset](adding_attributes_to_dataset.md) - shows how to add attributes to an existing dataset
+* [Adding attributes to a dataset](../adding_attributes_to_dataset.md) - shows how to add attributes to an existing dataset
 * [ARFF](arff.md) format

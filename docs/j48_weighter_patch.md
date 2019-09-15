@@ -30,7 +30,7 @@ Weighter is a general-purpose filter independent of J48 or other
 classifiers, but to preserve the weight assignment it initially had to
 be run under FilteredClassifier.  To make weights persistent via .arff
 files, some changes were made in Instances and Instance, while retaining
-compatibility with the existing [ARFF](arff.md) format.
+compatibility with the existing [ARFF](formats_and_processing/arff.md) format.
 
 Briefly, if Weighter is applied to an attribute, e.g. "fnlwgt" in the
 "adult" dataset from the UCI repository, that attribute is removed and
@@ -43,7 +43,7 @@ name.  The special case of invoking Weighter without an attribute
 argument restores the unweighted dataset, with an appended attribute
 named as above.
 
-**Note:** the [XRFF](xrff.md) format, introduced in 3.5.4, stores instance and attribute weights, as opposed to the default [ARFF](arff.md) format.
+**Note:** the [XRFF](formats_and_processing/xrff.md) format, introduced in 3.5.4, stores instance and attribute weights, as opposed to the default [ARFF](formats_and_processing/arff.md) format.
 
 ## J48 with instance weights
 The simple rescaling inserted in weka.classifiers.trees.j48.Stats is

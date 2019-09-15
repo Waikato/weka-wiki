@@ -3,17 +3,17 @@ In the following one can find some information of how to use Weka for [text cate
 
 # Import
 
-Weka needs the data to be present in [ARFF](arff.md) or [XRFF](xrff.md) format in order to perform any classification tasks.
+Weka needs the data to be present in [ARFF](formats_and_processing/arff.md) or [XRFF](formats_and_processing/xrff.md) format in order to perform any classification tasks.
 
 
 ## Directories
 
 One can transform the text files with the following tools into ARFF format (depending on the version of Weka you are using):
 
-* **[TextDirectoryToArff](arff_from_text_collections.md)** tool (3.4.x and >= 3.5.3)
+* **[TextDirectoryToArff](formats_and_processing/arff_from_text_collections.md)** tool (3.4.x and >= 3.5.3)
 > this Java class transforms a directory of files into an ARFF file
 * **[TextDirectoryLoader](http://weka.sourceforge.net/doc.dev/weka/core/converters/TextDirectoryLoader.html)** converter (> 3.5.3)
-> this converter is based on the *[TextDirectoryToArff](arff_from_text_collections.md)* tool and located in the `weka.core.converters` package
+> this converter is based on the *[TextDirectoryToArff](formats_and_processing/arff_from_text_collections.md)* tool and located in the `weka.core.converters` package
 
 Example directory layout for **TextDirectoryLoader**:
 
@@ -53,11 +53,11 @@ CSV files can be imported in Weka easily via the Weka Explorer or via commandlin
 ```
 
 By default, non-numerical attributes get imported as *NOMINAL* attributes, which is not necessarily desired for textual data, especially if one wants to use the [StringToWordVector](http://weka.sourceforge.net/doc.dev/weka/filters/unsupervised/attribute/StringToWordVector.html) filter. In order to change the attribute to *STRING*, one can run the `NominalToString` filter (package `weka.filters.unsupervised.attribute`) on the data, specifying the attribute index or range of indices that should be converted (NB: 
-this filter does **not** exclude the class attribute from conversion!). In order to retain the attribute types, one needs to save the file in [ARFF](arff.md) or [XRFF](xrff.md) format (or in the compressed version of these formats).
+this filter does **not** exclude the class attribute from conversion!). In order to retain the attribute types, one needs to save the file in [ARFF](formats_and_processing/arff.md) or [XRFF](formats_and_processing/xrff.md) format (or in the compressed version of these formats).
 
 ## Third-party tools
 
-* [TagHelper Tools](http://www.cs.cmu.edu/~cprose/TagHelper.html), which allows one to transform texts into vectors of stemmed or unstemmed unigrams, bigrams, part-of-speech bigrams, and some user defined features, and then saves this representation to [ARFF](arff.md). Currently processes English, German, and Chinese. Spanish and Portugese are in progress.
+* [TagHelper Tools](http://www.cs.cmu.edu/~cprose/TagHelper.html), which allows one to transform texts into vectors of stemmed or unstemmed unigrams, bigrams, part-of-speech bigrams, and some user defined features, and then saves this representation to [ARFF](formats_and_processing/arff.md). Currently processes English, German, and Chinese. Spanish and Portugese are in progress.
 
 # Working with textual data
 

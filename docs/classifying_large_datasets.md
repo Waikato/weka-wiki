@@ -20,7 +20,7 @@ See the respective Javadoc for more information ([book version](http://weka.sour
 Most classifiers need to see all the data before they can be trained, e.g., J48 or SMO. But there are also schemes that can be trained in an incremental fashion, not just in batch mode. All classifiers implementing the `weka.classifiers.UpdateableClassifier` interface are able to process data in such a way.
 
 Running such a classifier from commandline will load the dataset incrementally (NB: 
-not all data formats can be loaded incrementally; [XRFF](xrff.md) is one of them, [ARFF](arff.md) on the other hand can be read incrementally) and feed the data instance by instance to the classifier.
+not all data formats can be loaded incrementally; [XRFF](formats_and_processing/xrff.md) is one of them, [ARFF](formats_and_processing/arff.md) on the other hand can be read incrementally) and feed the data instance by instance to the classifier.
 
 Check out the Javadoc of the `UpdateableClassifier` interface to see what schemes implement it ([book version](http://weka.sourceforge.net/doc.stable/weka/classifiers/UpdateableClassifier.html), [developer version](http://weka.sourceforge.net/doc.dev/weka/classifiers/UpdateableClassifier.html)).
 

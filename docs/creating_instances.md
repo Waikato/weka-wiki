@@ -1,1 +1,1 @@
-see [Creating an ARFF file](creating_arff_file.md)
+see [Creating an ARFF file](formats_and_processing/creating_arff_file.md)

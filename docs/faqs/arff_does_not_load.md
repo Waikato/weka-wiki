@@ -1,4 +1,4 @@
-One way to figure out why [ARFF](../arff.md) files are failing to load is to give them to the `weka.core.Instances` class. In the SimpleCLI or in the terminal, type the following:
+One way to figure out why [ARFF](../formats_and_processing/arff.md) files are failing to load is to give them to the `weka.core.Instances` class. In the SimpleCLI or in the terminal, type the following:
 
 ```
  java weka.core.Instances filename.arff

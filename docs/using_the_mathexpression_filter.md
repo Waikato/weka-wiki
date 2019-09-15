@@ -56,6 +56,6 @@ Here's an example:
    -R 1
 ```
 
-* *optional:* if one wants to rename those labels, one can use the class listed in the [Rename Attribute Values](rename_attribute_values.md) article for that
+* *optional:* if one wants to rename those labels, one can use the class listed in the [Rename Attribute Values](formats_and_processing/rename_attribute_values.md) article for that
 
 **Note:** the "\" at the end of the lines tell a *nix [bash](http://en.wikipedia.org/wiki/bash) to continue on the next line.

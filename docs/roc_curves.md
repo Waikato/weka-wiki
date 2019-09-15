@@ -38,7 +38,7 @@ The Weka Explorer enables you to plot the ROC (*Receiver operating characteristi
 ## Saving 
 You can save the ROC curve in two ways:
 
-* as an [ARFF](arff.md) file, containing the data points (can be displayed again)
+* as an [ARFF](formats_and_processing/arff.md) file, containing the data points (can be displayed again)
 * as an **image** (using *Alt+Shift+Left click* to bring up a save dialog)
 
 ## Loading

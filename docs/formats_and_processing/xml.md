@@ -108,7 +108,7 @@ into XML:
 **Responsible Class(es):**
 `weka.core.xml.XMLOptions`
 
-**Example(s):** [commandline.xml](files/commandline.xml)
+**Example(s):** [commandline.xml](../files/commandline.xml)
 
 # Serialization of Experiments
 It is now possible to serialize the Experiments from the *WEKA Experimenter* not only in the proprietary binary format Java offers with serialization (with this you run into problems trying to read old experiments with a newer WEKA version, due to different SerialUIDs), but also in XML. There are currently two different ways to do this:
@@ -152,7 +152,7 @@ It is now possible to serialize the Experiments from the *WEKA Experimenter* not
 >  `weka.core.xml.XMLSerialization`
 >  `weka.core.xml.XMLBasicSerialization`
 
->  **Example(s):** [serialization.xml](files/serialization.xml)
+>  **Example(s):** [serialization.xml](../files/serialization.xml)
 
 * **[KOML](http://old.koalateam.com/xml/serialization/)**
 >  The Koala Object Markup Language (KOML) is published under the [LGPL](http://www.gnu.org/copyleft/lgpl.html) and is an alternative way of serializing and derserializing Java Objects in an XML file. Like the normal serialization it serializes everything into XML via an ObjectOutputStream, including the SerialUID of each class. Even though we have the same problems with mismatching SerialUIDs it is at least possible edit the XML files by hand and replace the offending IDs with the new ones.
@@ -164,7 +164,7 @@ It is now possible to serialize the Experiments from the *WEKA Experimenter* not
 >  **Responsible Class(es):**
 >  `weka.core.xml.KOML`
 
->  **Example(s):** [serialization.koml](files/serialization.koml)
+>  **Example(s):** [serialization.koml](../files/serialization.koml)
 
 The experiment class can of course read those XML files if passed as input or output file (see options of `weka.experiment.Experiment` and `weka.experiment.RemoteExperiment`).
 
@@ -187,7 +187,7 @@ it returns only a flat String-Array and not a tree structure.
 `weka.core.xml.KOML`
 `weka.classifiers.xml.XMLClassifier`
 
-**Example(s):** [commandline_inputmodel.xml](files/commandline_inputmodel.xml)
+**Example(s):** [commandline_inputmodel.xml](../files/commandline_inputmodel.xml)
 
 # Bayesian Networks
 The GraphVisualizer (`weka.gui.graphvisualizer.GraphVisualizer`) can save graphs into the [Interchange Format](http://sites.poli.usp.br/p/fabio.cozman/Research/InterchangeFormat/index.html) for Bayesian Networks (BIF). If started from command line with an XML filename as first parameter and not from the Explorer it can display the given file directly.
@@ -218,15 +218,15 @@ The DTD for BIF is this:
 `weka.classifiers.bayes.net.BIFReader`
 `weka.gui.graphvisualizer.BIFParser`
 
-**Example(s):** [bif.xml](files/bif.xml)
+**Example(s):** [bif.xml](../files/bif.xml)
 
 # Tools
 * **Experimenter options**
-> The XSLT script [options.xsl](files/options.xsl) parses an XML file for the experimenter and outputs the options in two ways:
+> The XSLT script [options.xsl](../files/options.xsl) parses an XML file for the experimenter and outputs the options in two ways:
 
 	* in an array-like fashion, i.e., each option on a separate line; the class is output first.
 	* commandline-like, i.e., the class followed by all its parameters; at each end of a line a "\" is appended. (works only on *nix and [Cygwin](http://www.cygwin.com/))
->  (Use [options_single.xsl](files/options_single.xsl)
+>  (Use [options_single.xsl](../files/options_single.xsl)
 >  **Usage:**
 ```bash
  xsltproc options.xsl <xml file>
@@ -236,6 +236,6 @@ you can use any XSLT processor, e.g., xt; xsltproc is just one.*
 
 # Downloads
 * KOML
-	* [koml12.dtd](files/koml12.dtd) - local copy of the KOML DTD 1.2
-	* [koml_bin.zip](files/koml_bin.zip)
-	* [koml_sources.zip](files/koml_sources.zip) - the KOML source code 
+	* [koml12.dtd](../files/koml12.dtd) - local copy of the KOML DTD 1.2
+	* [koml_bin.zip](../files/koml_bin.zip)
+	* [koml_sources.zip](../files/koml_sources.zip) - the KOML source code 
