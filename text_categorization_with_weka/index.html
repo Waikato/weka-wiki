@@ -82,7 +82,15 @@
                 </li>
                 <li class="">
                     
-    <a class="" href="../arff/">ARFF Format</a>
+    <a class="" href="../formats_and_processing/arff/">ARFF Format</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../primer/">Primer</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../datasets/">Datasets</a>
                 </li>
     </ul>
 	    </li>
@@ -95,54 +103,6 @@
             <li class="toctree-l1">
 		
     <a class="" href="../mailing_list/">Mailing list</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-	    </li>
-          
-            <li class="toctree-l1">
-		
-	    </li>
-          
-            <li class="toctree-l1">
-		
-	    </li>
-          
-            <li class="toctree-l1">
-		
-	    </li>
-          
-            <li class="toctree-l1">
-		
-	    </li>
-          
-            <li class="toctree-l1">
-		
-	    </li>
-          
-            <li class="toctree-l1">
-		
-	    </li>
-          
-            <li class="toctree-l1">
-		
-	    </li>
-          
-            <li class="toctree-l1">
-		
-	    </li>
-          
-            <li class="toctree-l1">
-		
-	    </li>
-          
-            <li class="toctree-l1">
-		
-	    </li>
-          
-            <li class="toctree-l1">
-		
 	    </li>
           
             <li class="toctree-l1">
@@ -1018,6 +978,75 @@
           
             <li class="toctree-l1">
 		
+    <a class="" href="../properties_file/">Properties File</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
+	    </li>
+          
+            <li class="toctree-l1">
+		
 	    </li>
           
             <li class="toctree-l1">
@@ -1058,16 +1087,16 @@
               
                 <p>In the following one can find some information of how to use Weka for <a href="http://en.wikipedia.org/wiki/document_classification">text categorization</a>.</p>
 <h1 id="import">Import</h1>
-<p>Weka needs the data to be present in <a href="../arff/">ARFF</a> or <a href="../xrff/">XRFF</a> format in order to perform any classification tasks.</p>
+<p>Weka needs the data to be present in <a href="../formats_and_processing/arff/">ARFF</a> or <a href="../formats_and_processing/xrff/">XRFF</a> format in order to perform any classification tasks.</p>
 <h2 id="directories">Directories</h2>
 <p>One can transform the text files with the following tools into ARFF format (depending on the version of Weka you are using):</p>
 <ul>
-<li><strong><a href="../arff_from_text_collections/">TextDirectoryToArff</a></strong> tool (3.4.x and &gt;= 3.5.3)<blockquote>
+<li><strong><a href="../formats_and_processing/arff_from_text_collections/">TextDirectoryToArff</a></strong> tool (3.4.x and &gt;= 3.5.3)<blockquote>
 <p>this Java class transforms a directory of files into an ARFF file</p>
 </blockquote>
 </li>
 <li><strong><a href="http://weka.sourceforge.net/doc.dev/weka/core/converters/TextDirectoryLoader.html">TextDirectoryLoader</a></strong> converter (&gt; 3.5.3)<blockquote>
-<p>this converter is based on the <em><a href="../arff_from_text_collections/">TextDirectoryToArff</a></em> tool and located in the <code>weka.core.converters</code> package</p>
+<p>this converter is based on the <em><a href="../formats_and_processing/arff_from_text_collections/">TextDirectoryToArff</a></em> tool and located in the <code>weka.core.converters</code> package</p>
 </blockquote>
 </li>
 </ul>
@@ -1103,10 +1132,10 @@
 </code></pre>
 
 <p>By default, non-numerical attributes get imported as <em>NOMINAL</em> attributes, which is not necessarily desired for textual data, especially if one wants to use the <a href="http://weka.sourceforge.net/doc.dev/weka/filters/unsupervised/attribute/StringToWordVector.html">StringToWordVector</a> filter. In order to change the attribute to <em>STRING</em>, one can run the <code>NominalToString</code> filter (package <code>weka.filters.unsupervised.attribute</code>) on the data, specifying the attribute index or range of indices that should be converted (NB: 
-this filter does <strong>not</strong> exclude the class attribute from conversion!). In order to retain the attribute types, one needs to save the file in <a href="../arff/">ARFF</a> or <a href="../xrff/">XRFF</a> format (or in the compressed version of these formats).</p>
+this filter does <strong>not</strong> exclude the class attribute from conversion!). In order to retain the attribute types, one needs to save the file in <a href="../formats_and_processing/arff/">ARFF</a> or <a href="../formats_and_processing/xrff/">XRFF</a> format (or in the compressed version of these formats).</p>
 <h2 id="third-party-tools">Third-party tools</h2>
 <ul>
-<li><a href="http://www.cs.cmu.edu/~cprose/TagHelper.html">TagHelper Tools</a>, which allows one to transform texts into vectors of stemmed or unstemmed unigrams, bigrams, part-of-speech bigrams, and some user defined features, and then saves this representation to <a href="../arff/">ARFF</a>. Currently processes English, German, and Chinese. Spanish and Portugese are in progress.</li>
+<li><a href="http://www.cs.cmu.edu/~cprose/TagHelper.html">TagHelper Tools</a>, which allows one to transform texts into vectors of stemmed or unstemmed unigrams, bigrams, part-of-speech bigrams, and some user defined features, and then saves this representation to <a href="../formats_and_processing/arff/">ARFF</a>. Currently processes English, German, and Chinese. Spanish and Portugese are in progress.</li>
 </ul>
 <h1 id="working-with-textual-data">Working with textual data</h1>
 <h2 id="conversion">Conversion</h2>
