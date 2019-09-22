@@ -7,24 +7,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   
-  <link rel="shortcut icon" href="../img/favicon.ico">
-  <title> Plotting error rate for incremental classifier - Weka Wiki</title>
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title> Visualizing cluster assignments - Weka Wiki</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
-  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
-  <link rel="stylesheet" href="../css/highlight.css">
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
   
   <script>
     // Current page data
-    var mkdocs_page_name = " Plotting error rate for incremental classifier";
-    var mkdocs_page_input_path = "plotting_error_rate_for_incremental_classifier.md";
-    var mkdocs_page_url = "/plotting_error_rate_for_incremental_classifier/";
+    var mkdocs_page_name = " Visualizing cluster assignments";
+    var mkdocs_page_input_path = "visualization/visualizing_cluster_assignments.md";
+    var mkdocs_page_url = "/visualization/visualizing_cluster_assignments/";
   </script>
   
-  <script src="../js/jquery-2.1.1.min.js"></script>
-  <script src="../js/modernizr-2.8.3.min.js"></script>
-  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script> 
   
 </head>
 
@@ -35,9 +35,9 @@
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
       <div class="wy-side-nav-search">
-        <a href=".." class="icon icon-home"> Weka Wiki</a>
+        <a href="../.." class="icon icon-home"> Weka Wiki</a>
         <div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
   </form>
 </div>
@@ -49,7 +49,7 @@
           
             <li class="toctree-l1">
 		
-    <a class="" href="..">Home</a>
+    <a class="" href="../..">Home</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -58,51 +58,51 @@
     <ul class="subnav">
                 <li class="">
                     
-    <a class="" href="../faq/">FAQ</a>
+    <a class="" href="../../faq/">FAQ</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../not_so_faq/">Not so FAQ</a>
+    <a class="" href="../../not_so_faq/">Not so FAQ</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../troubleshooting/">Troubleshooting</a>
+    <a class="" href="../../troubleshooting/">Troubleshooting</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../learning_resources/">Learning resources</a>
+    <a class="" href="../../learning_resources/">Learning resources</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../using_the_api/">Using the API</a>
+    <a class="" href="../../using_the_api/">Using the API</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../extending_weka/">Extending Weka</a>
+    <a class="" href="../../extending_weka/">Extending Weka</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../formats_and_processing/arff/">ARFF Format</a>
+    <a class="" href="../../formats_and_processing/arff/">ARFF Format</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../primer/">Primer</a>
+    <a class="" href="../../primer/">Primer</a>
                 </li>
                 <li class="">
                     
-    <a class="" href="../datasets/">Datasets</a>
+    <a class="" href="../../datasets/">Datasets</a>
                 </li>
     </ul>
 	    </li>
           
             <li class="toctree-l1">
 		
-    <a class="" href="../packages/">Packages</a>
+    <a class="" href="../../packages/">Packages</a>
 	    </li>
           
             <li class="toctree-l1">
 		
-    <a class="" href="../mailing_list/">Mailing list</a>
+    <a class="" href="../../mailing_list/">Mailing list</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -719,10 +719,7 @@
           
             <li class="toctree-l1">
 		
-	    </li>
-          
-            <li class="toctree-l1">
-		
+    <a class="" href="../../visualization_articles/">Visualization Articles</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -733,19 +730,10 @@
 		
     <ul class="subnav">
             
-    <li class="toctree-l2"><a href="#setup">Setup</a></li>
+    <li class="toctree-l2"><a href="#source-code">Source code</a></li>
     
 
-    <li class="toctree-l2"><a href="#displaying-the-chart">Displaying the chart</a></li>
-    
-
-    <li class="toctree-l2"><a href="#exporting-the-chart">Exporting the chart</a></li>
-    
-
-    <li class="toctree-l2"><a href="#see-also">See also</a></li>
-    
-
-    <li class="toctree-l2"><a href="#links">Links</a></li>
+    <li class="toctree-l2"><a href="#downloads">Downloads</a></li>
     
 
     </ul>
@@ -957,7 +945,11 @@
           
             <li class="toctree-l1">
 		
-    <a class="" href="../properties_file/">Properties File</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../properties_file/">Properties File</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -1042,7 +1034,7 @@
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="..">Weka Wiki</a>
+        <a href="../..">Weka Wiki</a>
       </nav>
 
       
@@ -1050,11 +1042,11 @@
         <div class="rst-content">
           <div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href="..">Docs</a> &raquo;</li>
+    <li><a href="../..">Docs</a> &raquo;</li>
     
       
     
-    <li> Plotting error rate for incremental classifier</li>
+    <li> Visualizing cluster assignments</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -1064,45 +1056,97 @@
           <div role="main">
             <div class="section">
               
-                <p>The KnowledgeFlow enables one to plot the error rate (= RMSE, root mean squared error) and the accuracy of an incremental classifier. An <em>incremental classifier</em> is a classifier that does not need to see the whole data at once, but can be trained instance by instance. All classifiers implementing the interface <code>[weka.classifiers.UpdateableClassifier](http://weka.sourceforge.net/doc.dev/weka/classifiers/updateableclassifier.html)</code> are incremental ones.</p>
-<h1 id="setup">Setup</h1>
-<p>The most basic setup for an incremental classifier is show below, using the classifier <code>NaiveBayesUpdateable</code>:</p>
-<pre><code class="text"> ArffLoader
-   --instance--&gt; NaiveBayesUpdateable
-   --incrementalClassifier--&gt; IncrementalClassifierEvaluator
-   --chart--&gt; StripChart
+                <p>The following code sample (<a href="../../files/VisualizeClusterAssignments.java">VisualizeClusterAssignments.java</a>) displays the cluster assignments of a clusterer on a particular dataset.</p>
+<p>This is the same functionality as you get with the right-click menu in the Explorer, choosing <em>Visualize cluster assignments</em>.</p>
+<p>Example command-line:</p>
+<pre><code class="bash">java -classpath .:weka.jar VisualizeClusterAssignments -t /some/where/data.arff -W &quot;weka.clusterers.EM -I 50&quot;
 </code></pre>
 
-<p>Here is a screenshot of the setup:</p>
-<p><img alt="Screenshot" src="../img/KnowledgeFlow-incremental_classifier-Setup.png" /></p>
-<p>You can also download <a href="../files/KnowledgeFlow-incremental_classifier.kfml">KnowledgeFlow-incremental_classifier.kfml</a>, an XML version of this setup.</p>
-<h1 id="displaying-the-chart">Displaying the chart</h1>
-<ul>
-<li>select a dataset that you want to train the classifier with, via <em>Configure...</em> from the <code>ArffLoader's</code> context menu, e.g., the UCI dataset <em>anneal</em>.</li>
-<li>select <em>Show chart</em> from the <code>StripChart's</code> context menu (the chart will <strong>only</strong> be updated if visible!)</li>
-<li>select <em>Start loading</em> from the <code>ArffLoader's</code> context menu.</li>
-<li>bring the chart back to front and you should get a graph similar to this one (click to enlarge):</li>
-</ul>
-<p><img alt="Screenshot" src="../img/KnowledgeFlow-incremental_classifier-StripChart.png" /></p>
-<h1 id="exporting-the-chart">Exporting the chart</h1>
-<p>As of 08/07/2008 (or Weka &gt;3.5.7), the chart can be exported to several file formats using the developer version of Weka. The <em>magic</em> key for bringing up the export dialog is <code>&lt;Ctrl+Alt+Shift&gt;&lt;Left-Click&gt;</code>.</p>
-<p>Since the default black background is not very practical if one wants to embed the chart in a document, one can change the background color via the following property of the <a href="../weka_gui_beans_beans.props/">Beans.props</a> <a href="../properties_file/">properties file</a> (and set it to <em>white</em>):</p>
-<pre><code class="text"> weka.gui.beans.StripChart.backgroundColour
+<p><strong>Note:</strong> The command above is for Linux/Unix. For the Windows platform, you have to use semicolons in the <a href="../../classpath/">CLASSPATH</a> and backlashes instead of forward slashes in the paths.</p>
+<h1 id="source-code">Source code</h1>
+<pre><code class="java">import weka.clusterers.*;
+import weka.core.*;
+import weka.core.converters.ConverterUtils.*;
+import weka.gui.explorer.ClustererPanel;
+import weka.gui.visualize.*;
+
+import java.awt.*;
+import java.io.*;
+import java.text.*;
+import java.util.*;
+
+import javax.swing.*;
+
+/**
+ * Runs a clusterer on a dataset and visualizes the cluster assignments, 
+ * like with right-click menu in Explorer.
+ * &lt;p/&gt;
+ * Takes two arguments:
+ * &lt;ol&gt;
+ *   &lt;li&gt;-t dataset&lt;/li&gt;
+ *   &lt;li&gt;-W cluster algorithm with options&lt;/li&gt;
+ * &lt;/ol&gt;
+ *
+ * Note: code should work with Weka 3.6.0 and 3.5.8.
+ * 
+ * @author FracPete (fracpete at waikato dot ac dot nz)
+ */
+public class VisualizeClusterAssignments {
+  public static void main(String[] args) throws Exception {
+    // load data
+    Instances train = DataSource.read(Utils.getOption('t', args));
+    // some data formats store the class attribute information as well
+    if (train.classIndex() != -1)
+      throw new IllegalArgumentException(&quot;Data cannot have class attribute!&quot;);
+
+    // instantiate clusterer
+    String[] options = Utils.splitOptions(Utils.getOption('W', args));
+    String classname = options[0];
+    options[0] = &quot;&quot;;
+    Clusterer clusterer = AbstractClusterer.forName(classname, options);
+
+    // evaluate clusterer
+    clusterer.buildClusterer(train);
+    ClusterEvaluation eval = new ClusterEvaluation();
+    eval.setClusterer(clusterer);
+    eval.evaluateClusterer(train);
+
+    // setup visualization
+    // taken from: ClustererPanel.startClusterer()
+    PlotData2D predData = ClustererPanel.setUpVisualizableInstances(train, eval);
+    String name = (new SimpleDateFormat(&quot;HH:mm:ss - &quot;)).format(new Date());
+    String cname = clusterer.getClass().getName();
+    if (cname.startsWith(&quot;weka.clusterers.&quot;))
+      name += cname.substring(&quot;weka.clusterers.&quot;.length());
+    else
+      name += cname;
+
+    VisualizePanel vp = new VisualizePanel();
+    vp.setName(name + &quot; (&quot; + train.relationName() + &quot;)&quot;);
+    predData.setPlotName(name + &quot; (&quot; + train.relationName() + &quot;)&quot;);
+    vp.addPlot(predData);
+
+    // display data
+    // taken from: ClustererPanel.visualizeClusterAssignments(VisualizePanel)
+    String plotName = vp.getName();
+    final javax.swing.JFrame jf = 
+      new javax.swing.JFrame(&quot;Weka Clusterer Visualize: &quot; + plotName);
+    jf.setSize(500,400);
+    jf.getContentPane().setLayout(new BorderLayout());
+    jf.getContentPane().add(vp, BorderLayout.CENTER);
+    jf.addWindowListener(new java.awt.event.WindowAdapter() {
+      public void windowClosing(java.awt.event.WindowEvent e) {
+        jf.dispose();
+      }
+    });
+    jf.setVisible(true);
+  }
+}
 </code></pre>
 
-<p>The text color of the legend can be modified via the following property (and set it to <em>black</em>):</p>
-<pre><code class="text"> weka.gui.beans.StripChart$LegendPanel.borderColour
-</code></pre>
-
-<p><strong>Note:</strong> Due to the design of the StripChart (nested JPanels), the EPS export does not work properly. But one can always export it as PNG and then convert it under Linux via the <code>pngtopnm/pnmtops/ps2epsi</code> chain. See commandline help of those tools for more details.</p>
-<h1 id="see-also">See also</h1>
+<h1 id="downloads">Downloads</h1>
 <ul>
-<li><a href="../properties_file/">Properties File</a></li>
-<li><a href="../weka_gui_beans_beans.props/">weka/gui/beans/Beans.props</a></li>
-</ul>
-<h1 id="links">Links</h1>
-<ul>
-<li><a href="../files/KnowledgeFlow-incremental_classifier.kfml">KnowledgeFlow-incremental_classifier.kfml</a></li>
+<li><a href="../../files/VisualizeClusterAssignments.java">VisualizeClusterAssignments.java</a></li>
 </ul>
               
             </div>
@@ -1111,10 +1155,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../explorer_error_visualization_plugins/" class="btn btn-neutral float-right" title=" Explorer error visualization plugins">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../visualizing_roc_curve/" class="btn btn-neutral float-right" title=" Visualizing ROC curve">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../visualizing_cluster_assignments/" class="btn btn-neutral" title=" Visualizing cluster assignments"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../visualizing_a_tree/" class="btn btn-neutral" title=" Visualizing a Tree"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -1140,17 +1184,17 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../visualizing_cluster_assignments/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../visualizing_a_tree/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../explorer_error_visualization_plugins/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../visualizing_roc_curve/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
-    <script>var base_url = '..';</script>
-    <script src="../js/theme.js"></script>
-      <script src="../search/require.js"></script>
-      <script src="../search/search.js"></script>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/require.js"></script>
+      <script src="../../search/search.js"></script>
 
 </body>
 </html>

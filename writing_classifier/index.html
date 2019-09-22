@@ -790,6 +790,7 @@
           
             <li class="toctree-l1">
 		
+    <a class="" href="../visualization_articles/">Visualization Articles</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -1196,7 +1197,7 @@
 <li><code>weka.core.MultiInstanceCapabilitiesHandler</code> (for multi-instance classifiers)</li>
 </ul>
 <h1 id="paper-references">Paper reference(s)</h1>
-<p>In order to make it easy to generate a bibliography of all the algorithms in Weka, the [[paper references]] located so far in the Javadoc were extracted and placed in the code.</p>
+<p>In order to make it easy to generate a bibliography of all the algorithms in Weka, the <a href="../paper_references/">paper references</a> located so far in the Javadoc were extracted and placed in the code.</p>
 <p>Classes that are based on some technical paper should implement the <code>TechnicalInformationHandler</code> interface and return a customized <code>TechnicalInformation</code> instance. The format used is based on <a href="http://en.wikipedia.org/wiki/BibTeX">BibTeX</a> and the <code>TechnicalInformation</code> class can either return a plain text string via the <code>toString()</code> method or a real <a href="http://en.wikipedia.org/wiki/BibTeX">BibTeX</a> entry via the <code>toBibTex()</code> method. This two methods are then used to automatically update the Javadoc (see <a href="./#javadoc">Javadoc</a> further down) of a class.</p>
 <p>Relevant classes:</p>
 <ul>
@@ -1268,7 +1269,7 @@
 </ul>
 <h1 id="integration">Integration</h1>
 <p>After finishing the coding stage, it's time to integrate your classifier in the Weka framework, i.e., to make it available in the Explorer, Experimenter, etc.</p>
-<p>The [[GenericObjectEditor]] article shows you how to tell Weka where to find your classifier and therefore displaying it in the <em>GenericObjectEditor</em>.</p>
+<p>The <a href="../generic_object_editor/">GenericObjectEditor</a> article shows you how to tell Weka where to find your classifier and therefore displaying it in the <em>GenericObjectEditor</em>.</p>
 <h1 id="revisions">Revisions</h1>
 <p>Classifiers also implement the <code>weka.core.RevisionHandler</code> interface. This provides the functionality of obtaining the <a href="../subversion/">Subversion</a> revision from within Java. Classifiers that are not part of the official Weka distribution will have to implement the method <code>getRevision()</code> as follows, which will return a dummy revision of <em>1.0</em>:</p>
 <pre><code class="java">  /**
@@ -1328,8 +1329,8 @@
 <p>How to check out the unit test framework, you can find <a href="../subversion/#junit">here</a>.</p>
 <h1 id="see-also">See also</h1>
 <ul>
-<li>[[GenericObjectEditor|GenericObjectEditor/GenericPropertiesCreator]]</li>
-<li>[[Paper References|HOWTO extract paper references]]</li>
+<li><a href="../generic_object_editor/">GenericObjectEditor</a></li>
+<li><a href="../paper_references/">Paper References</a></li>
 </ul>
 <h1 id="links">Links</h1>
 <ul>

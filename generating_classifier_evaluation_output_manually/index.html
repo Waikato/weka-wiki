@@ -719,6 +719,7 @@
           
             <li class="toctree-l1">
 		
+    <a class="" href="../visualization_articles/">Visualization Articles</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -1073,7 +1074,7 @@
  System.out.println(cls);
 </code></pre>
 
-<p><strong>NB:</strong> Weka always outputs the model based on the <em>full</em> training set (provided with the option <code>-t</code>), no matter whether cross-validation is used or a designated test set (via <code>-T</code>). The 10 models generated during a 10-fold cross-validation run are never output. If you want to output these models you have to simulate the <code>crossValidateModel</code> method yourself, use the KnowledgeFlow (see article <a href="../displaying_results_of_cross_validation_folds/">Displaying results of cross-validation folds</a>).</p>
+<p><strong>NB:</strong> Weka always outputs the model based on the <em>full</em> training set (provided with the option <code>-t</code>), no matter whether cross-validation is used or a designated test set (via <code>-T</code>). The 10 models generated during a 10-fold cross-validation run are never output. If you want to output these models you have to simulate the <code>crossValidateModel</code> method yourself, use the KnowledgeFlow (see article <a href="../visualization/displaying_results_of_cross_validation_folds/">Displaying results of cross-validation folds</a>).</p>
 <h1 id="statistics">Statistics</h1>
 <p>The statistics, also called the summary of an evaluation, can be be generated via the <code>toSummaryString</code> methods. Here is an example of the summary from a cross-validated J48:</p>
 <pre><code class="java"> Classifier cls = new J48();

@@ -779,6 +779,7 @@
           
             <li class="toctree-l1">
 		
+    <a class="" href="../../visualization_articles/">Visualization Articles</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -1175,7 +1176,7 @@ Maintainer:Weka team &lt;wekalist@list.scms.waikato.ac.nz&gt;
 </ul>
 <p>The <code>uninstall-package</code> command will uninstall the named package. Of course, the named package has to be installed for this command to have any effect!</p>
 <h2 id="running-installed-learning-algorithms">Running installed learning algorithms</h2>
-<p>Running learning algorithms that come with the main weka distribution (i.e. are contained in the weka.jar file) was covered earlier in the [[Primer]]. But what about algorithms from packages that you’ve installed using the package manager? We don’t want to have to add a ton of jar files to our classpath every time we wan’t to run a particular algorithm. Fortunately, we don’t have to. Weka has a mechanism to load installed packages dynamically at run time. This means that newly installed packages are available in Weka's GUIs immediately.</p>
+<p>Running learning algorithms that come with the main weka distribution (i.e. are contained in the weka.jar file) was covered earlier in the <a href="../../primer/">Primer</a>. But what about algorithms from packages that you’ve installed using the package manager? We don’t want to have to add a ton of jar files to our classpath every time we wan’t to run a particular algorithm. Fortunately, we don’t have to. Weka has a mechanism to load installed packages dynamically at run time. This means that newly installed packages are available in Weka's GUIs immediately.</p>
 <p>What about running algorithms from packages on the command line I hear you ask? We can run a named algorithm by using the Run command:</p>
 <pre><code> java weka.Run
 </code></pre>
@@ -1243,7 +1244,7 @@ Maintainer:Weka team &lt;wekalist@list.scms.waikato.ac.nz&gt;
 <pre><code>weka.core.wekaPackageRepositoryURL=http://some.mirror.somewhere
 </code></pre>
 
-<p>This can either be set when starting Weka from the command line with the <code>-D</code> flag, or it can be placed into a file called “PackageRepository.props” in <code>$WEKA_HOME/props</code>. The default value of <code>WEKA_HOME</code> is <code>user.home/wekafiles</code>, where <code>user.home</code> is the user’s home directory. More information on how and where Weka stores configuration information is given in the [[How are packages structured for the package management system?|how are package structured for the package management system?]] article.</p>
+<p>This can either be set when starting Weka from the command line with the <code>-D</code> flag, or it can be placed into a file called “PackageRepository.props” in <code>$WEKA_HOME/props</code>. The default value of <code>WEKA_HOME</code> is <code>user.home/wekafiles</code>, where <code>user.home</code> is the user’s home directory. More information on how and where Weka stores configuration information is given in the <a href="../structure/">Package Structure</a> article.</p>
 <h1 id="package-manager-property-file">Package manager property file</h1>
 <p>As mentioned in the previous section, an alternative package meta data repository can be specified by placing an entry in the PackageRepository.props file in <code>$WEKA_HOME/props</code>. From Weka 3.7.8 (and snapshot builds after 24 September 2012), the package manager also looks for properties placed in <code>$WEKA_HOME/props/PackageManager.props</code>. The current set of properties that can be set are:</p>
 <pre><code>weka.core.wekaPackageRepositoryURL=http://some.mirror.somewhere

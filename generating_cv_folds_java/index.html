@@ -743,6 +743,7 @@
           
             <li class="toctree-l1">
 		
+    <a class="" href="../visualization_articles/">Visualization Articles</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -1103,11 +1104,12 @@
 <p><strong>Note:</strong></p>
 <ul>
 <li>the above code is used by the <code>weka.filters.supervised.instance.StratifiedRemoveFolds</code> filter</li>
-<li>the <code>weka.classifiers.Evaluation</code> class and the Explorer/Experimenter would use this method for obtaining the train set:
-[[code format="java"]]
- Instances train = randData.trainCV(folds, n, rand);
-[[code]]</li>
+<li>the <code>weka.classifiers.Evaluation</code> class and the Explorer/Experimenter would use this method for obtaining the train set:</li>
+<li></li>
 </ul>
+<pre><code class="java"> Instances train = randData.trainCV(folds, n, rand);
+</code></pre>
+
 <h2 id="multiple-runs">Multiple runs</h2>
 <p>The example above only performs one run of a cross-validation. In case you want to run 10 runs of 10-fold cross-validation, use the following loop:</p>
 <pre><code class="java"> Instances data = ...;  // our dataset again, obtained from somewhere

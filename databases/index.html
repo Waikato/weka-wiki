@@ -760,6 +760,7 @@
           
             <li class="toctree-l1">
 		
+    <a class="" href="../visualization_articles/">Visualization Articles</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -1107,7 +1108,7 @@
 <li><code>DatabaseUtils.props.postgresql</code> - PostgreSQL 7.4</li>
 <li><code>DatabaseUtils.props.sqlite3</code> - sqlite 3.x</li>
 </ul>
-<p>The easiest way is just to place the extracted properties file into your HOME directory. For more information on how property files are processed, check out [[Properties File|this]] article.</p>
+<p>The easiest way is just to place the extracted properties file into your HOME directory. For more information on how property files are processed, check out <a href="../properties_file/">this</a> article.</p>
 <p><strong>Note:</strong> Weka <em>only</em> looks for the <code>DatabaseUtils.props</code> file. If you take one of the example files listed above, you need to rename it first.</p>
 <h1 id="setup">Setup</h1>
 <p>Under normal circumstances you only have to edit the following two properties:</p>
@@ -1165,7 +1166,7 @@
 <pre><code> BLOB=0
 </code></pre>
 
-<p>The article [[weka_experiment_DatabaseUtils.props|weka/experiment/DatabaseUtils.props]] contains more details on this topic.</p>
+<p>The article <a href="../weka_experiment_database_utils.props/">weka/experiment/DatabaseUtils.props</a> contains more details on this topic.</p>
 <h1 id="stored-procedures">Stored Procedures</h1>
 <p>Let's say you're tired of typing the same query over and over again. A good way to shorten that, is to create a stored procedure.</p>
 <h2 id="postgresql-74x">PostgreSQL 7.4.x</h2>
@@ -1189,7 +1190,7 @@
 <h1 id="troubleshooting">Troubleshooting</h1>
 <ul>
 <li>In case you're experiencing problems connecting to your database, check out the <a href="../mailing_list/">mailing list</a>. It is possible that somebody else encountered the same problem as you and you'll find a post containing the solution to your problem.</li>
-<li>Specific [[MS SQL Server 2000 (Desktop Engine)#Troubleshooting|MS SQL Server 2000]] Troubleshooting</li>
+<li>Specific  <a href="../ms_sql_server_2000_desktop_engine/#TroubleShooting">MS SQL Server 2000</a> Troubleshooting</li>
 <li>
 <p>MS SQL Server 2005: TCP/IP is not enabled for SQL Server, or the server or port number specified is incorrect.Verify that SQL Server is listening with TCP/IP on the specified server and port. This might be reported with an exception similar to: "The login has failed. The TCP/IP connection to the host has failed." This indicates one of the following:</p>
 <ul>
@@ -1204,16 +1205,16 @@
 <li>
 <p>The error message <strong>No suitable driver</strong> can be caused by the following:</p>
 <ul>
-<li>The JDBC driver you are attempting to load is not in the [[CLASSPATH]] (Note: using <strong>-jar</strong> in the java commandline <strong>overwrites</strong> the CLASSPATH environment variable!). Open the SimpleCLI, run the command <code>java weka.core.SystemInfo</code> and check whether the property <code>java.class.path</code> lists your database jar. If not correct your [[CLASSPATH]] or the Java call you start Weka with.</li>
-<li>The JDBC driver class is misspelled in the <code>jdbcDriver</code> property or you have multiple entries of <code>jdbcDriver</code> ([[properties file]]s need <em>unique</em> keys!)</li>
-<li>The <code>jdbcURL</code> property has a spelling error and tries to use a non-existing protocol or you listed it multiple times, which doesn't work either (remember, [[properties file]]s need <em>unique</em> keys!)</li>
+<li>The JDBC driver you are attempting to load is not in the <a href="../classpath/">CLASSPATH</a> (Note: using <strong>-jar</strong> in the java commandline <strong>overwrites</strong> the CLASSPATH environment variable!). Open the SimpleCLI, run the command <code>java weka.core.SystemInfo</code> and check whether the property <code>java.class.path</code> lists your database jar. If not correct your <a href="../classpath/">CLASSPATH</a> or the Java call you start Weka with.</li>
+<li>The JDBC driver class is misspelled in the <code>jdbcDriver</code> property or you have multiple entries of <code>jdbcDriver</code> (<a href="../properties_file/">properties file</a>s need <em>unique</em> keys!)</li>
+<li>The <code>jdbcURL</code> property has a spelling error and tries to use a non-existing protocol or you listed it multiple times, which doesn't work either (remember, <a href="../properties_file/">properties file</a>s need <em>unique</em> keys!)</li>
 </ul>
 </li>
 </ul>
 <h1 id="see-also">See also</h1>
 <ul>
-<li>[[weka_experiment_DatabaseUtils.props|weka/experiment/DatabaseUtils.props]]</li>
-<li>[[Properties File]]</li>
+<li><a href="../weka_experiment_database_utils.props/">weka/experiment/DatabaseUtils.props</a></li>
+<li><a href="../properties_file/">properties file</a></li>
 <li><a href="../classpath/">CLASSPATH</a></li>
 </ul>
 <h1 id="links">Links</h1>

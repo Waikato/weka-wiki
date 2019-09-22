@@ -802,6 +802,7 @@
           
             <li class="toctree-l1">
 		
+    <a class="" href="../visualization_articles/">Visualization Articles</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -1173,7 +1174,7 @@
 
 <p><strong>Notes:</strong>
 <em> Don't forget to add the JDBC driver to your <code>CLASSPATH</code>.
-</em> For MS Access, you must use the JDBC-ODBC-bridge that is part of a JDK. The [[Windows databases]] article explains how to do this.
+</em> For MS Access, you must use the JDBC-ODBC-bridge that is part of a JDK. The <a href="../windows_databases/">Windows databases</a> article explains how to do this.
 * InstanceQuery automatically converts VARCHAR database columns to NOMINAL attributes, and long TEXT database columns to STRING attributes. So if you use InstanceQuery to do text mining against text that appears in a VARCHAR column, Weka will regard such text as nominal values. Thus it will fail to tokenize and mine that text. Use the <code>NominalToString</code> or <code>StringToNominal</code> filter (package <code>weka.filters.unsupervised.attribute</code>) to convert the attributes into the correct type.</p>
 <h1 id="option-handling">Option handling</h1>
 <p>Weka schemes that implement the <code>weka.core.OptionHandler</code> interface, such as classifiers, clusterers, and filters, offer the following methods for setting and retrieving options:</p>
@@ -1396,7 +1397,7 @@ For example, if you want to remove the <em>first</em> attribute of a dataset, yo
 </code></pre>
 
 <h3 id="roc-curvesauc">ROC curves/AUC</h3>
-<p>You can also generate ROC curves/AUC with the predictions Weka recorded during testing. You can access these predictions via the <code>predictions()</code> method of the <code>Evaluation</code> class. See the [[Generating ROC curve]] article for a full example of how to generate ROC curves.</p>
+<p>You can also generate ROC curves/AUC with the predictions Weka recorded during testing. You can access these predictions via the <code>predictions()</code> method of the <code>Evaluation</code> class. See the <a href="../generating_roc_curve/">Generating ROC curve</a> article for a full example of how to generate ROC curves.</p>
 <h2 id="classifying-instances">Classifying instances</h2>
 <p>In case you have an unlabeled dataset that you want to classify with your newly trained classifier, you can use the following code snippet. It loads the file <code>/some/where/unlabeled.arff</code>, uses the previously built classifier <code>tree</code> to label the instances, and saves the labeled data as <code>/some/where/labeled.arff</code>.</p>
 <pre><code class="java"> import java.io.BufferedReader;
@@ -1614,12 +1615,12 @@ For example, if you want to remove the <em>first</em> attribute of a dataset, yo
 <ul>
 <li><a href="../weka_examples/">Weka Examples</a> - pointer to collection of example classes</li>
 <li><a href="../databases/">Databases</a> - for more information about using databases in Weka (includes ODBC, e.g., for MS Access)</li>
-<li>[[weka_experiment_DatabaseUtils.props|weka/experiment/DatabaseUtils.props]] - the database setup file</li>
+<li><a href="../weka_experiment_database_utils.props/">weka/experiment/DatabaseUtils.props</a> - the database setup file</li>
 <li><a href="../generating_cv_folds_java/">Generating cross-validation folds (Java approach)</a> - in case you want to run 10-fold cross-validation manually</li>
-<li>[[Generating classifier evaluation output manually]] - if you want to generate some of the evaluation statistics output manually</li>
+<li><a href="../generating_classifier_evaluation_output_manually/">Generating classifier evaluation output manually</a> - if you want to generate some of the evaluation statistics output manually</li>
 <li><a href="../formats_and_processing/creating_arff_file/">Creating Instances on-the-fly</a> - explains how to generate a <code>weka.core.Instances</code> object from scratch</li>
-<li>[[Save Instances to an ARFF File]] - shows how to output a dataset</li>
-<li>[[Using the Experiment API]]</li>
+<li><a href="../formats_and_processing/save_instances_to_arff/">Save Instances to an ARFF File</a> - shows how to output a dataset</li>
+<li><a href="../using_the_experiment_api/">Using the Experiment API</a></li>
 </ul>
 <h1 id="examples">Examples</h1>
 <p>The following are a few sample classes for using various parts of the Weka API:</p>
