@@ -5,4 +5,4 @@ The Explorer offers various possibilities to add custom plugins:
 * [graphs](explorer_graph_visualization_plugins.md)
 * [trees](explorer_tree_visualization_plugins.md)
 
-**Note:** This is also covered in chapter *Extending WEKA* of the WEKA manual in versions later than 3.6.1/3.7.0 or [snapshots](snapshots.md) of the stable-3.6/developer version later than 10/01/2010.
+**Note:** This is also covered in chapter *Extending WEKA* of the WEKA manual in versions later than 3.6.1/3.7.0 or [snapshots](../snapshots.md) of the stable-3.6/developer version later than 10/01/2010.

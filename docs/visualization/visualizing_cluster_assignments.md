@@ -1,5 +1,5 @@
 
-The following code sample ([VisualizeClusterAssignments.java](files/VisualizeClusterAssignments.java) displays the cluster assignments of a clusterer on a particular dataset.
+The following code sample ([VisualizeClusterAssignments.java](../files/VisualizeClusterAssignments.java)) displays the cluster assignments of a clusterer on a particular dataset.
 
 This is the same functionality as you get with the right-click menu in the Explorer, choosing *Visualize cluster assignments*.
 
@@ -9,7 +9,7 @@ Example command-line:
 java -classpath .:weka.jar VisualizeClusterAssignments -t /some/where/data.arff -W "weka.clusterers.EM -I 50"
 ```
 
-**Note:** The command above is for Linux/Unix. For the Windows platform, you have to use semicolons in the [CLASSPATH](classpath.md) and backlashes instead of forward slashes in the paths.
+**Note:** The command above is for Linux/Unix. For the Windows platform, you have to use semicolons in the [CLASSPATH](../classpath.md) and backlashes instead of forward slashes in the paths.
 
 # Source code
 ```java
@@ -94,4 +94,4 @@ public class VisualizeClusterAssignments {
 ```
 
 # Downloads
-* [VisualizeClusterAssignments.java](files/VisualizeClusterAssignments.java)
+* [VisualizeClusterAssignments.java](../files/VisualizeClusterAssignments.java)

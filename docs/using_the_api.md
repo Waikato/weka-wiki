@@ -9,7 +9,7 @@ Several articles describe certain aspects of using the Weka API:
 * [Adding attributes to a dataset](adding_attributes_to_dataset.md)
 * [Save Instances to an ARFF File](formats_and_processing/save_instances_to_arff.md)
 * [Generating ROC curve](generating_roc_curve.md)
-* [Visualizing ROC curve](visualizing_roc_curve.md)
+* [Visualizing ROC curve](visualization/visualizing_roc_curve.md)
 * [Serialization](serialization.md)
 
 It is possible to use Weka through [Jupyter notebooks](https://jupyter.org/) 

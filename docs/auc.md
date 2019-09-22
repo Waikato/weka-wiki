@@ -11,7 +11,7 @@ See [ROC curves](roc_curves.md).
 # Commandline
 Classifiers can output the AUC if the *-i* option is provided. The *-i* option provides detailed information per class. 
 
-Running the J48 classifier on the iris UCI [[Datasets|dataset]] with the following commandline:
+Running the J48 classifier on the iris UCI [Dataset](datasets.md) with the following commandline:
 
 ```
  java [CLASSPATH|-classpath <your-classpath>] weka.classifiers.trees.J48 -t /some/where/iris.arff -i

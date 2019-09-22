@@ -177,7 +177,6 @@ pages:
   - ' Piqle' : piqle.md
 
   # Questions, Troubleshooting
-  - ' Where is my home directory located?' : where_is_my_home_directory_located.md
   - ' Why am I missing certain nominal or string values from sparse instances?' : why_am_i_missing_certain_nominal_or_string_values_from_sparse_instances.md
   - ' How do I use the associator GeneralizedSequentialPatterns?' : how_do_i_use_the_associator_generalized_sequential_patterns.md
   - ' How to run Weka schemes from commandline' : how_to_run_weka_schemes_from_commandline.md
@@ -202,19 +201,21 @@ pages:
   - ' Adding tabs in the Explorer' : adding_tabs_in_the_explorer.md  
   
   # Visualization
-  - ' Visualizing a Tree' : visualizing_a_tree.md
-  - ' Visualizing cluster assignments' : visualizing_cluster_assignments.md
-  - ' Plotting error rate for incremental classifier' : plotting_error_rate_for_incremental_classifier.md
-  - ' Explorer error visualization plugins' : explorer_error_visualization_plugins.md
-  - ' Explorer graph visualization plugins' : explorer_graph_visualization_plugins.md
-  - ' Explorer prediction visualization plugins' : explorer_prediction_visualization_plugins.md
-  - ' Explorer tree visualization plugins' : explorer_tree_visualization_plugins.md
-  - ' Explorer visualization plugins' : explorer_visualization_plugins.md
-  - ' Exporting Charts from the Knowledge Flow' : exporting_charts_from_the_knowledge_flow.md
-  - ' Extensions for WEKAs main GUI' : extensions_for_wekas_main_gui.md  
-  - ' Displaying results of cross-validation folds' : displaying_results_of_cross_validation_folds.md  
-  - ' Changing the plot background' : changing_the_plot_background.md  
-  - ' Visualizing ROC curve': visualizing_roc_curve.md
+  - 'Visualization Articles' : visualization_articles.md
+  - ' Visualizing a Tree' : visualization/visualizing_a_tree.md
+  - ' Visualizing cluster assignments' : visualization/visualizing_cluster_assignments.md
+  - ' Visualizing ROC curve': visualization/visualizing_roc_curve.md
+  - ' Changing the plot background' : visualization/changing_the_plot_background.md 
+  - ' Displaying results of cross-validation folds' : visualization/displaying_results_of_cross_validation_folds.md
+  - ' Explorer error visualization plugins' : visualization/explorer_error_visualization_plugins.md
+  - ' Explorer graph visualization plugins' : visualization/explorer_graph_visualization_plugins.md
+  - ' Explorer prediction visualization plugins' : visualization/explorer_prediction_visualization_plugins.md
+  - ' Explorer tree visualization plugins' : visualization/explorer_tree_visualization_plugins.md
+  - ' Explorer visualization plugins' : visualization/explorer_visualization_plugins.md
+  - ' Exporting Charts from the Knowledge Flow' : visualization/exporting_charts_from_the_knowledge_flow.md
+  - ' Extensions for WEKAs main GUI' : visualization/extensions_for_wekas_main_gui.md      
+  - ' Plotting error rate for incremental classifier' : visualization/plotting_error_rate_for_incremental_classifier.md  
+
 
   # Classification and Tools
   # - ' Classifiers' : classifiers.md  

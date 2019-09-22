@@ -100,7 +100,7 @@ Due to this behavior, the Capabilities depend (normally) only on the currently c
 * `weka.core.MultiInstanceCapabilitiesHandler` (for multi-instance classifiers)
 
 # Paper reference(s)
-In order to make it easy to generate a bibliography of all the algorithms in Weka, the [[paper references]] located so far in the Javadoc were extracted and placed in the code.
+In order to make it easy to generate a bibliography of all the algorithms in Weka, the [paper references](paper_references.md) located so far in the Javadoc were extracted and placed in the code.
 
 Classes that are based on some technical paper should implement the `TechnicalInformationHandler` interface and return a customized `TechnicalInformation` instance. The format used is based on [BibTeX](http://en.wikipedia.org/wiki/BibTeX) and the `TechnicalInformation` class can either return a plain text string via the `toString()` method or a real [BibTeX](http://en.wikipedia.org/wiki/BibTeX) entry via the `toBibTex()` method. This two methods are then used to automatically update the Javadoc (see [Javadoc](writing_classifier.md#javadoc) further down) of a class.
 
@@ -182,7 +182,7 @@ To place the commandline options, use the following comment tags:
 # Integration
 After finishing the coding stage, it's time to integrate your classifier in the Weka framework, i.e., to make it available in the Explorer, Experimenter, etc.
 
-The [[GenericObjectEditor]] article shows you how to tell Weka where to find your classifier and therefore displaying it in the *GenericObjectEditor*.
+The [GenericObjectEditor](generic_object_editor.md) article shows you how to tell Weka where to find your classifier and therefore displaying it in the *GenericObjectEditor*.
 
 # Revisions
 Classifiers also implement the `weka.core.RevisionHandler` interface. This provides the functionality of obtaining the [Subversion](subversion.md) revision from within Java. Classifiers that are not part of the official Weka distribution will have to implement the method `getRevision()` as follows, which will return a dummy revision of *1.0*:
@@ -261,8 +261,8 @@ In order to make sure that your classifier applies to the Weka criteria, you sho
 How to check out the unit test framework, you can find [here](subversion.md#junit).
 
 # See also
-* [[GenericObjectEditor|GenericObjectEditor/GenericPropertiesCreator]]
-* [[Paper References|HOWTO extract paper references]]
+* [GenericObjectEditor](generic_object_editor.md)
+* [Paper References](paper_references.md)
 
 # Links
 * [Build_classifier.pdf](files/Build_classifier.pdf) - MindMap for implementing a new classifier

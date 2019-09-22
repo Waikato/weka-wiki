@@ -49,7 +49,7 @@ Secondly, your Java code needs to look like this to load the data from the datab
 
 **Notes:**
 * Don't forget to add the JDBC driver to your `CLASSPATH`.
-* For MS Access, you must use the JDBC-ODBC-bridge that is part of a JDK. The [[Windows databases]] article explains how to do this.
+* For MS Access, you must use the JDBC-ODBC-bridge that is part of a JDK. The [Windows databases](windows_databases.md) article explains how to do this.
 * InstanceQuery automatically converts VARCHAR database columns to NOMINAL attributes, and long TEXT database columns to STRING attributes. So if you use InstanceQuery to do text mining against text that appears in a VARCHAR column, Weka will regard such text as nominal values. Thus it will fail to tokenize and mine that text. Use the `NominalToString` or `StringToNominal` filter (package `weka.filters.unsupervised.attribute`) to convert the attributes into the correct type.
 
 # Option handling
@@ -294,7 +294,7 @@ If you want to have the exact same behavior as from the command line, use this c
 ```
 
 ### ROC curves/AUC
-You can also generate ROC curves/AUC with the predictions Weka recorded during testing. You can access these predictions via the `predictions()` method of the `Evaluation` class. See the [[Generating ROC curve]] article for a full example of how to generate ROC curves.
+You can also generate ROC curves/AUC with the predictions Weka recorded during testing. You can access these predictions via the `predictions()` method of the `Evaluation` class. See the [Generating ROC curve](generating_roc_curve.md) article for a full example of how to generate ROC curves.
 
 ## Classifying instances
 In case you have an unlabeled dataset that you want to classify with your newly trained classifier, you can use the following code snippet. It loads the file `/some/where/unlabeled.arff`, uses the previously built classifier `tree` to label the instances, and saves the labeled data as `/some/where/labeled.arff`.
@@ -536,12 +536,12 @@ Most machine learning schemes, like classifiers and clusterers, are susceptible 
 # See also
 * [Weka Examples](weka_examples.md) - pointer to collection of example classes
 * [Databases](databases.md) - for more information about using databases in Weka (includes ODBC, e.g., for MS Access)
-* [[weka_experiment_DatabaseUtils.props|weka/experiment/DatabaseUtils.props]] - the database setup file
+* [weka/experiment/DatabaseUtils.props](weka_experiment_database_utils.props.md) - the database setup file
 * [Generating cross-validation folds (Java approach)](generating_cv_folds_java.md) - in case you want to run 10-fold cross-validation manually
-* [[Generating classifier evaluation output manually]] - if you want to generate some of the evaluation statistics output manually
+* [Generating classifier evaluation output manually](generating_classifier_evaluation_output_manually.md) - if you want to generate some of the evaluation statistics output manually
 * [Creating Instances on-the-fly](formats_and_processing/creating_arff_file.md) - explains how to generate a `weka.core.Instances` object from scratch
-* [[Save Instances to an ARFF File]] - shows how to output a dataset
-* [[Using the Experiment API]]
+* [Save Instances to an ARFF File](formats_and_processing/save_instances_to_arff.md) - shows how to output a dataset
+* [Using the Experiment API](using_the_experiment_api.md)
 
 # Examples
 The following are a few sample classes for using various parts of the Weka API:

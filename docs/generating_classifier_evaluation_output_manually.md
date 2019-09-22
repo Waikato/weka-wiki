@@ -11,7 +11,7 @@ A classifier's model, if that classifier supports the output of it, can be simpl
  cls.buildClassifier(data);
  System.out.println(cls);
 ```
-**NB:** Weka always outputs the model based on the *full* training set (provided with the option `-t`), no matter whether cross-validation is used or a designated test set (via `-T`). The 10 models generated during a 10-fold cross-validation run are never output. If you want to output these models you have to simulate the `crossValidateModel` method yourself, use the KnowledgeFlow (see article [Displaying results of cross-validation folds](displaying_results_of_cross_validation_folds.md)).
+**NB:** Weka always outputs the model based on the *full* training set (provided with the option `-t`), no matter whether cross-validation is used or a designated test set (via `-T`). The 10 models generated during a 10-fold cross-validation run are never output. If you want to output these models you have to simulate the `crossValidateModel` method yourself, use the KnowledgeFlow (see article [Displaying results of cross-validation folds](visualization/displaying_results_of_cross_validation_folds.md)).
 
 # Statistics
 The statistics, also called the summary of an evaluation, can be be generated via the `toSummaryString` methods. Here is an example of the summary from a cross-validated J48:

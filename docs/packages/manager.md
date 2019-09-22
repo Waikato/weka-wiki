@@ -83,7 +83,7 @@ The `uninstall-package` command will uninstall the named package. Of course, the
 
  
 ## Running installed learning algorithms
-Running learning algorithms that come with the main weka distribution (i.e. are contained in the weka.jar file) was covered earlier in the [[Primer]]. But what about algorithms from packages that you’ve installed using the package manager? We don’t want to have to add a ton of jar files to our classpath every time we wan’t to run a particular algorithm. Fortunately, we don’t have to. Weka has a mechanism to load installed packages dynamically at run time. This means that newly installed packages are available in Weka's GUIs immediately.
+Running learning algorithms that come with the main weka distribution (i.e. are contained in the weka.jar file) was covered earlier in the [Primer](../primer.md). But what about algorithms from packages that you’ve installed using the package manager? We don’t want to have to add a ton of jar files to our classpath every time we wan’t to run a particular algorithm. Fortunately, we don’t have to. Weka has a mechanism to load installed packages dynamically at run time. This means that newly installed packages are available in Weka's GUIs immediately.
 
   What about running algorithms from packages on the command line I hear you ask? We can run a named algorithm by using the Run command:
 
@@ -188,7 +188,7 @@ An alternative repository can be specified by setting a Java property:
 weka.core.wekaPackageRepositoryURL=http://some.mirror.somewhere
 ```
 
-This can either be set when starting Weka from the command line with the `-D` flag, or it can be placed into a file called “PackageRepository.props” in `$WEKA_HOME/props`. The default value of `WEKA_HOME` is `user.home/wekafiles`, where `user.home` is the user’s home directory. More information on how and where Weka stores configuration information is given in the [[How are packages structured for the package management system?|how are package structured for the package management system?]] article.
+This can either be set when starting Weka from the command line with the `-D` flag, or it can be placed into a file called “PackageRepository.props” in `$WEKA_HOME/props`. The default value of `WEKA_HOME` is `user.home/wekafiles`, where `user.home` is the user’s home directory. More information on how and where Weka stores configuration information is given in the [Package Structure](structure.md) article.
 
  
 # Package manager property file

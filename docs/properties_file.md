@@ -24,7 +24,7 @@ weka.filters.Filter= \
 The Weka property files (extension *.props*) are searched for in the following order:
 
 * current directory
-* (< Weka 3.7.2) the user's home directory (see FAQ [Where is my home directory located?](where_is_my_home_directory_located.md) for more information)
+* (< Weka 3.7.2) the user's home directory (see FAQ [Where is my home directory located?](faqs/home_directory_location.md) for more information)
 * (>= Weka 3.7.2) $WEKA_HOME/props (the default value for WEKA_HOME is user's home directory/wekafiles).
 * the class path (normally the `weka.jar` file) 
 

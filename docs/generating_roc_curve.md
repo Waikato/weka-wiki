@@ -78,7 +78,7 @@ Source code:
 
 # See also
 * [ROC curves](roc_curves.md)
-* [Visualizing ROC curve](visualizing_roc_curve.md)
+* [Visualizing ROC curve](visualization/visualizing_roc_curve.md)
 * [Plotting multiple ROC curves](plotting_multiple_roc_curves.md)
 
 # Downloads

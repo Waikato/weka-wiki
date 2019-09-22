@@ -3,7 +3,7 @@
 # Introduction
 As of Weka version >3.5.2 one can easily add visualization plugins in the Explorer (Classify panel). This makes it easy to implement custom visualizations, if the ones Weka offers are not sufficient.
 
-**Note:** This is also covered in chapter *Extending WEKA* of the WEKA manual in versions later than 3.6.1/3.7.0 or [snapshots](snapshots.md) of the stable-3.6/developer version later than 10/01/2010.
+**Note:** This is also covered in chapter *Extending WEKA* of the WEKA manual in versions later than 3.6.1/3.7.0 or [snapshots](../snapshots.md) of the stable-3.6/developer version later than 10/01/2010.
 
 # Requirements
 * custom visualization class must implement the following **interface**
@@ -26,21 +26,21 @@ The visualization interface contains the following four methods
 
 # Examples
 ## Table with predictions
-The [PredictionTable.java](files/PredictionTable.java) example simply displays the *actual* class label and the one predicted by the classifier. In addition to that, it lists whether it was an incorrect prediction and the class probability for the correct class label.
+The [PredictionTable.java](../files/PredictionTable.java) example simply displays the *actual* class label and the one predicted by the classifier. In addition to that, it lists whether it was an incorrect prediction and the class probability for the correct class label.
 
-![Screenshot](img/PredictionTable.png)
+![Screenshot](../img/PredictionTable.png)
 
 ## Bar plot with probabilities
-The [PredictionError.java](files/PredictionError.java) to display a simple bar plot of the predictions. The correct predictions are displayed in *blue*, the incorrect ones in *red*. In both cases the class probability that the classifier returned for the correct class label is displayed on the y axis. The x axis is simply the index of the prediction starting with 0.
+The [PredictionError.java](../files/PredictionError.java) to display a simple bar plot of the predictions. The correct predictions are displayed in *blue*, the incorrect ones in *red*. In both cases the class probability that the classifier returned for the correct class label is displayed on the y axis. The x axis is simply the index of the prediction starting with 0.
 
-![Screenshot](img/PredictionError.png)
+![Screenshot](../img/PredictionError.png)
 
 # Downloads
-* [PredictionTable.java](files/PredictionTable.java)
-* [PredictionError.java](files/PredictionError.java)
+* [PredictionTable.java](../files/PredictionTable.java)
+* [PredictionError.java](../files/PredictionError.java)
 
 # See also
-* [Use Weka in your Java code](use_weka_in_your_java_code.md) - general overview of the basic Weka API
+* [Use Weka in your Java code](../use_weka_in_your_java_code.md) - general overview of the basic Weka API
 * [Explorer visualization plugins](explorer_visualization_plugins.md)
 
 # Links

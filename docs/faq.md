@@ -8,7 +8,6 @@
 * [Can I check how much memory is available for WEKA?](faqs/check_memory_available.md)
 * [Can I use WEKA in commercial applications?](faqs/commercial_applications.md)
 
-
 # Basic usage
 
 * [Can I use CSV files?](faqs/use_csv_files.md)

@@ -22,7 +22,7 @@ Weka comes with example files for a wide range of databases:
 * `DatabaseUtils.props.postgresql` - PostgreSQL 7.4
 * `DatabaseUtils.props.sqlite3` - sqlite 3.x
 
-The easiest way is just to place the extracted properties file into your HOME directory. For more information on how property files are processed, check out [[Properties File|this]] article.
+The easiest way is just to place the extracted properties file into your HOME directory. For more information on how property files are processed, check out [this](properties_file.md) article.
 
 **Note:** Weka *only* looks for the `DatabaseUtils.props` file. If you take one of the example files listed above, you need to rename it first.
 
@@ -74,7 +74,7 @@ Sometimes (e.g. with MySQL) it can happen that a column type cannot be interpret
  BLOB=0
 ```
 
-The article [[weka_experiment_DatabaseUtils.props|weka/experiment/DatabaseUtils.props]] contains more details on this topic.
+The article [weka/experiment/DatabaseUtils.props](weka_experiment_database_utils.props.md) contains more details on this topic.
 
 # Stored Procedures
 Let's say you're tired of typing the same query over and over again. A good way to shorten that, is to create a stored procedure.
@@ -104,7 +104,7 @@ The following example creates a procedure called **emplyoee_name** that returns 
 
 # Troubleshooting
 * In case you're experiencing problems connecting to your database, check out the [mailing list](mailing_list.md). It is possible that somebody else encountered the same problem as you and you'll find a post containing the solution to your problem.
-* Specific [[MS SQL Server 2000 (Desktop Engine)#Troubleshooting|MS SQL Server 2000]] Troubleshooting
+* Specific  [MS SQL Server 2000](ms_sql_server_2000_desktop_engine.md#TroubleShooting) Troubleshooting
 * MS SQL Server 2005: TCP/IP is not enabled for SQL Server, or the server or port number specified is incorrect.Verify that SQL Server is listening with TCP/IP on the specified server and port. This might be reported with an exception similar to: "The login has failed. The TCP/IP connection to the host has failed." This indicates one of the following:
 
     * SQL Server is installed but TCP/IP has not been installed as a network protocol for SQL Server by using the SQL Server Network Utility for SQL Server 2000, or the SQL Server Configuration Manager for SQL Server 2005
@@ -114,13 +114,13 @@ The following example creates a procedure called **emplyoee_name** that returns 
 * The **Added driver: ...** output on the commandline does not mean that the actual class was found, but only that Weka will *attempt* to load the class later on in order to establish a database connection.
 * The error message **No suitable driver** can be caused by the following:
 
-    * The JDBC driver you are attempting to load is not in the [[CLASSPATH]] (Note: using **-jar** in the java commandline **overwrites** the CLASSPATH environment variable!). Open the SimpleCLI, run the command `java weka.core.SystemInfo` and check whether the property `java.class.path` lists your database jar. If not correct your [[CLASSPATH]] or the Java call you start Weka with.
-    * The JDBC driver class is misspelled in the `jdbcDriver` property or you have multiple entries of `jdbcDriver` ([[properties file]]s need *unique* keys!)
-    * The `jdbcURL` property has a spelling error and tries to use a non-existing protocol or you listed it multiple times, which doesn't work either (remember, [[properties file]]s need *unique* keys!)
+    * The JDBC driver you are attempting to load is not in the [CLASSPATH](classpath.md) (Note: using **-jar** in the java commandline **overwrites** the CLASSPATH environment variable!). Open the SimpleCLI, run the command `java weka.core.SystemInfo` and check whether the property `java.class.path` lists your database jar. If not correct your [CLASSPATH](classpath.md) or the Java call you start Weka with.
+    * The JDBC driver class is misspelled in the `jdbcDriver` property or you have multiple entries of `jdbcDriver` ([properties file](properties_file.md)s need *unique* keys!)
+    * The `jdbcURL` property has a spelling error and tries to use a non-existing protocol or you listed it multiple times, which doesn't work either (remember, [properties file](properties_file.md)s need *unique* keys!)
 
 # See also
-* [[weka_experiment_DatabaseUtils.props|weka/experiment/DatabaseUtils.props]]
-* [[Properties File]]
+* [weka/experiment/DatabaseUtils.props](weka_experiment_database_utils.props.md)
+* [properties file](properties_file.md)
 * [CLASSPATH](classpath.md)
 
 # Links

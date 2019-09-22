@@ -545,7 +545,7 @@ Filters also implement the `weka.core.RevisionHandler` interface. This provides 
 # Integration
 After finishing the coding stage, it's time to integrate your filter in the Weka framework, i.e., to make it available in the Explorer, Experimenter, etc.
 
-The [[GenericObjectEditor]] article shows you how to tell Weka where to find your filter and therefore displaying it in the *GenericObjectEditor* (filters work in the same fashion as classifiers, regarding the discovery).
+The [GenericObjectEditor](generic_object_editor.md) article shows you how to tell Weka where to find your filter and therefore displaying it in the *GenericObjectEditor* (filters work in the same fashion as classifiers, regarding the discovery).
 
 # Testing
 Weka provides already a test framework to ensure the basic functionality of a filter. It is essential for the filter to pass these tests.
@@ -595,7 +595,7 @@ How to check out the unit test framework, you can find [here](subversion.md#juni
 
 
 # See also
-* [[GenericObjectEditor|GenericObjectEditor/GenericPropertiesCreator]]
+* [GenericObjectEditor](generic_object_editor.md) 
 
 # Links 
 * [junit](http://www.junit.org/)

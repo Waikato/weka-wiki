@@ -8,4 +8,4 @@ The following KnowledgeFlow setup outputs the cross-validation models for each t
 ```
 
 # Links
-* [Cross-validation_folds_output.kfml](files/Cross-validation_folds_output.kfml) - Example KnowledgeFlow layout file
+* [Cross-validation_folds_output.kfml](../files/Cross-validation_folds_output.kfml) - Example KnowledgeFlow layout file

@@ -3,7 +3,7 @@
 # Introduction
 As of Weka version >3.5.8 (only developer version, not stable-3.6 branch) one can easily add graph visualization plugins in the Explorer (Classify panel). This makes it easy to implement custom visualizations, if the ones Weka offers are not sufficient. *graph* is referring to graphs generated, for instance, by the `weka.classifiers.bayes.BayesNet` classifier.
 
-**Note:** This is also covered in chapter *Extending WEKA* of the WEKA manual in versions later than 3.7.0 or [snapshots](snapshots.md) of the developer version later than 10/01/2010.
+**Note:** This is also covered in chapter *Extending WEKA* of the WEKA manual in versions later than 3.7.0 or [snapshots](../snapshots.md) of the developer version later than 10/01/2010.
 
 # Requirements
 * custom visualization class must implement the following **interface**
@@ -26,19 +26,19 @@ The visualization interface contains the following four methods
 
 # Examples
 ## Prefuse visualization toolkit
-The [PrefuseGraph.java](files/PrefuseGraph.java). It is based on the `prefuse.demos.GraphView` demo class.
+The [PrefuseGraph.java](../files/PrefuseGraph.java). It is based on the `prefuse.demos.GraphView` demo class.
 
 The following screenshot was generated using *BayesNet* on the UCI dataset *anneal* with the following parametrization:
 
 > `weka.classifiers.bayes.BayesNet -D -Q weka.classifiers.bayes.net.search.local.K2 -- -P 3 -S BAYES -E weka.classifiers.bayes.net.estimate.SimpleEstimator -- -A 0.5`
 
-![Screenshot](img/PrefuseGraph.png)
+![Screenshot](../img/PrefuseGraph.png)
 
 # Downloads
-* [PrefuseGraph.java](files/PrefuseGraph.java)
+* [PrefuseGraph.java](../files/PrefuseGraph.java)
 
 # See also
-* [Use Weka in your Java code](use_weka_in_your_java_code.md) - general overview of the basic Weka API
+* [Use Weka in your Java code](../use_weka_in_your_java_code.md) - general overview of the basic Weka API
 * [Explorer visualization plugins](explorer_visualization_plugins.md)
 * [Explorer tree visualization plugins](explorer_tree_visualization_plugins.md)
 

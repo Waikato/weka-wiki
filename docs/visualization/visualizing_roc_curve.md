@@ -1,6 +1,6 @@
-The following class lets you display a previously saved [[ROC curves|ROC curve]], which also displays the [AUC](auc.md).
+The following class lets you display a previously saved [ROC curve](../roc_curves.md), which also displays the [AUC](../auc.md).
 
-If you don't need the [AUC](auc.md), then you can also use this command to display the curve:
+If you don't need the [AUC](../auc.md), then you can also use this command to display the curve:
 
 ```bash
  java [CLASSPATH|-classpath <your-classpath>] weka.gui.visualize.VisualizePanel <file>
@@ -72,9 +72,9 @@ Source code:
 ```
 
 # See also
-* [ROC curves](roc_curves.md)
-* [Plotting multiple ROC curves](plotting_multiple_roc_curves.md) - also contains a Java example of plotting multiple ROC curves in a single plot
+* [ROC curves](../roc_curves.md)
+* [Plotting multiple ROC curves](../plotting_multiple_roc_curves.md) - also contains a Java example of plotting multiple ROC curves in a single plot
 
 # Downloads
-* [VisualizeROC.java](files/VisualizeROC.java) ([stable](https://svn.cms.waikato.ac.nz/svn/weka/branches/stable-3-6/wekaexamples/src/main/java/wekaexamples/gui/visualize/VisualizeROC.java), [developer](https://svn.cms.waikato.ac.nz/svn/weka/trunk/wekaexamples/src/main/java/wekaexamples/gui/visualize/VisualizeROC.java))
+* [VisualizeROC.java](../files/VisualizeROC.java) ([stable](https://svn.cms.waikato.ac.nz/svn/weka/branches/stable-3-6/wekaexamples/src/main/java/wekaexamples/gui/visualize/VisualizeROC.java), [developer](https://svn.cms.waikato.ac.nz/svn/weka/trunk/wekaexamples/src/main/java/wekaexamples/gui/visualize/VisualizeROC.java))
 

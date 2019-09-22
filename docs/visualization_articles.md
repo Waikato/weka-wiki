@@ -1,0 +1,15 @@
+Several articles are listed below that relate to visualizing results or customizing visual elements of WEKA:
+
+* [Visualizing a Tree](visualization/visualizing_a_tree.md)
+* [Visualizing cluster assignments](visualization/visualizing_cluster_assignments.md)
+* [Visualizing ROC curve](visualization/visualizing_roc_curve.md)
+* [Changing the plot background](visualization/changing_the_plot_background.md )
+* [Displaying results of cross-validation folds](visualization/displaying_results_of_cross_validation_folds.md)
+* [Explorer error visualization plugins](visualization/explorer_error_visualization_plugins.md)
+* [Explorer graph visualization plugins](visualization/explorer_graph_visualization_plugins.md)
+* [Explorer prediction visualization plugins](visualization/explorer_prediction_visualization_plugins.md)
+* [Explorer tree visualization plugins](visualization/explorer_tree_visualization_plugins.md)
+* [Explorer visualization plugins](visualization/explorer_visualization_plugins.md)
+* [Exporting Charts from the Knowledge Flow](visualization/exporting_charts_from_the_knowledge_flow.md)
+* [Extensions for WEKAs main GUI](visualization/extensions_for_wekas_main_gui.md)
+* [Plotting error rate for incremental classifier](visualization/plotting_error_rate_for_incremental_classifier.md)

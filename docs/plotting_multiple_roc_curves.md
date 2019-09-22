@@ -22,11 +22,11 @@ This setup can be easily extended to host several classifiers, which illustrates
 
 # Java
 ## Description
-The [VisualizeMultipleROC.java](files/VisualizeMultipleROC.java) class lets you display several ROC curves in a single plot. The data it is using for display is from previously saved ROC curves. This example class is just a modified version of the [VisualizeROC.java](files/VisualizeROC.java) class, which displays only a single ROC curve (see [Visualizing ROC curve](visualizing_roc_curve.md) article).
+The [VisualizeMultipleROC.java](files/VisualizeMultipleROC.java) class lets you display several ROC curves in a single plot. The data it is using for display is from previously saved ROC curves. This example class is just a modified version of the [VisualizeROC.java](files/VisualizeROC.java) class, which displays only a single ROC curve (see [Visualizing ROC curve](visualization/visualizing_roc_curve.md) article).
 
 # See also
 * [Wikipedia article on ROC curve](http://en.wikipedia.org/wiki/ROC_Curve)
-* [Visualizing ROC curve](visualizing_roc_curve.md)
+* [Visualizing ROC curve](visualization/visualizing_roc_curve.md)
 * [ROC curves](roc_curves.md)
 
 # Downloads

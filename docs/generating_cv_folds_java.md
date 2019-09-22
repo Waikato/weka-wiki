@@ -42,9 +42,10 @@ Next thing that we have to do is creating the train and the test set:
 
 * the above code is used by the `weka.filters.supervised.instance.StratifiedRemoveFolds` filter
 * the `weka.classifiers.Evaluation` class and the Explorer/Experimenter would use this method for obtaining the train set:
-[[code format="java"]]
+* 
+```java
  Instances train = randData.trainCV(folds, n, rand);
-[[code]]
+```
 
 ## Multiple runs
 The example above only performs one run of a cross-validation. In case you want to run 10 runs of 10-fold cross-validation, use the following loop:
