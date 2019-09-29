@@ -7,7 +7,7 @@ For varying the number of instances a classifier is trained on, we use the `Filt
 
 * start the Experimenter (class `weka.gui.experiment.Experimenter`)
 * select the configuration mode *Advanced* in the *Setup* panel
-* choose as *Destination* either an ARFF file (= `InstancesResultListener`) or a [database](databases.md) (= `DatabaseResultListener`) and configure the listener to your needs
+* choose as *Destination* either an ARFF file (= `InstancesResultListener`) or a [database](../databases.md) (= `DatabaseResultListener`) and configure the listener to your needs
 * choose as *Result generator* the `CrossValidationResultProducer` (or leave the `RandomSplitResultProducer`)
 * open the options dialog of the `CrossValidationResultProducer` by left-clicking on the edit field
 * in case of regression datasets, choose the `RegressionSplitEvaluator` instead of the `ClassifierSplitEvaluator` (the latter is used for classification problems)
@@ -35,7 +35,7 @@ This example shows how to generate a learning curve that does not vary on the nu
 
 * start the Experimenter (class `weka.gui.experiment.Experimenter`)
 * select the configuration mode *Advanced* in the *Setup* panel
-* choose as *Destination* either an ARFF file (= `InstancesResultListener`) or a [database](databases.md) (= `DatabaseResultListener`) and configure the listener to your needs
+* choose as *Destination* either an ARFF file (= `InstancesResultListener`) or a [database](../databases.md) (= `DatabaseResultListener`) and configure the listener to your needs
 * choose as *Result generator* the `CrossValidationResultProducer` (or leave the `RandomSplitResultProducer`)
 * open the options dialog of the `CrossValidationResultProducer` by left-clicking on the edit field
 * in case of regression datasets, choose the `RegressionSplitEvaluator` instead of the `ClassifierSplitEvaluator` (the latter is used for classification problems)
@@ -59,4 +59,4 @@ This example shows how to generate a learning curve that does not vary on the nu
 * after the experiment has finished, select the *Analyse* panel and perform your analysis on the results
 
 # See also
-* [Databases](databases.md)
+* [Databases](../databases.md)

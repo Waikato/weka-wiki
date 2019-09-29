@@ -6,7 +6,7 @@ theme:
     custom_dir: weka_theme/
 # if page names start with a blank, eg ' Some name', then they get 
 # excluded from the navigation on the left-hand side
-pages:
+nav:
   - 'Home': index.md
   - 'Resources':
     - 'FAQ': faq.md
@@ -18,16 +18,16 @@ pages:
     - 'ARFF Format': formats_and_processing/arff.md
     - 'Primer' : primer.md
     - 'Datasets' : datasets.md
+    - 'Visualization Articles' : visualization_articles.md
+    - 'Properties File' : properties_file.md
   - 'Packages': packages/index.md
+  - 'Experimenter' : experimenter/experimenter.md
   - 'Mailing list': mailing_list.md
-  # unlisted pages
-  - ' WEKA experiment DatabaseUtils.props' : weka_experiment_database_utils.props.md
+  - 'Academic or Related Projects' : academic/academic_or_related_projects.md
   # general
   - ' Subversion': subversion.md
   - ' Get latest Bugfixes': get_latest_bugfixes.md
   - ' Compiling Weka': compiling_weka.md
-  - ' Ant': ant.md
-  - ' Maven': maven.md
   - ' Snapsnots': snapshots.md
   - ' CLASSPATH': classpath.md
   # packages
@@ -37,6 +37,7 @@ pages:
   - ' How are packages structured for the package management system?' : packages/index.md  
   # not so faq
   - ' Generalized Sequential Patterns': not_so_faq/gsp.md
+  - ' How do I use the associator GeneralizedSequentialPatterns?' : how_do_i_use_the_associator_generalized_sequential_patterns.md
   - ' What do those numbers mean in a J48 tree?': not_so_faq/j48_numbers.md
   # faq - general
   - ' What are the principal release branches of Weka?': faqs/different_versions.md
@@ -95,8 +96,8 @@ pages:
   - ' Can I use WEKA from Python?' : faqs/can_i_use_weka_from_python.md
   - ' Can I use WEKA from Groovy?' : faqs/can_i_use_weka_from_groovy.md
   - ' Serialization is nice, but what about generating actual Java code from WEKA classes?' : faqs/serialization_is_nice_but_what_about_generating_actual_java_code_from_weka_classes.md
-  - ' How are packages structured for the package management system?': packages/structure.md
-  - ' How are packages structured for the package management system?' : packages/index.md  
+  - ' How are packages structured for the package management system?': packages/structure.md # duplicate entry
+  - ' How are packages structured for the package management system?' : packages/index.md # duplicate entry
   - ' Pluggable evaluation metrics for classification/regression' : faqs/pluggable_evaluation_metrics.md
   - ' How can I contribute to WEKA?' : faqs/contribution.md
   # faq - Windows
@@ -117,6 +118,10 @@ pages:
   - ' I cannot process large datasets - any ideas?' : faqs/i_cannot_process_large_datasets_any_ideas.md
   - ' Ubuntu 18:08 BLAS Warning' : faqs/ubuntu_1804_blas_warning.md
   - ' OutOfMemoryException' : faqs/OutOfMemoryException.md
+  - ' KnowledgeFlow toolbars are empty' : knowledge_flow_toolbars_are_empty.md
+  - ' OSX Mountain Lion - Weka x-y-z is damaged and cannot be installed. You should eject the disk image' : osx_mountain_lion_weka_x_y_z_is_damaged_and_cant_be_installed_you_should_eject_the_disk_image.md
+  - ' GUIChooser starts but not Experimenter or Explorer' : gui_chooser_starts_but_not_experimenter_or_explorer.md
+  - ' CLASSPATH problems' : classpath_problems.md
 
   # just using weka
   - ' Command redirection': command_redirection.md
@@ -125,100 +130,32 @@ pages:
   - ' ROC Curves': roc_curves.md
   - ' Plotting multiple ROC curves': plotting_multiple_roc_curves.md
   - ' Databases': databases.md
-  - ' Converting CSV to ARFF' : formats_and_processing/converting_csv_to_arff.md
+  - ' Converting CSV to ARFF' : formats_and_processing/converting_csv_to_arff.md # duplicate entry
   - ' Making predictions' : making_predictions.md
   - ' Use Weka with the Microsoft .NET Framework' : use_weka_with_the_microsoft_net_framework.md
   - ' Using a new Java framework to create ARFF from JPA Entity' : using_a_new_java_framework_to_create_arff_from_jpa_entity.md
   - ' Using cluster algorithms' : using_cluster_algorithms.md
   - ' Using clusterers' : using_clusterers.md
-  - ' Using the Experiment API' : using_the_experiment_api.md
+  - ' Using the Experiment API' : experimenter/using_the_experiment_api.md # duplicate entry
   - ' Using the MathExpression filter' : using_the_mathexpression_filter.md
   - ' Using Weka from Groovy' : using_weka_from_groovy.md
   - ' Using Weka from Jython' : using_weka_from_jython.md
   - ' Using Weka via Jepp' : using_weka_via_jepp.md
+  
   # using the API
   - ' Use Weka in your Java code': use_weka_in_your_java_code.md
   - ' Weka Examples': weka_examples.md
   - ' Generating cross-validation folds': generating_cv_folds.md
   - ' Generating cross-validation folds (Filter approach)': generating_cv_folds_filter.md
   - ' Generating cross-validation folds (Java approach)': generating_cv_folds_java.md
-  - ' Generating cross-validation folds': generating_cv_folds.md
   - ' Creating Instances on-the-fly': creating_instances.md
   - ' Binarize Attribute': binarize_attribute.md
   - ' Adding attributes to a dataset': adding_attributes_to_dataset.md
   - ' Generating ROC curve': generating_roc_curve.md
   - ' Serialization': serialization.md
-  - ' Jupyter Notebooks': jupyter_notebooks.md
   - ' GenericObjectEditor' : generic_object_editor.md
   - ' GenericObjectEditor (book version)' : generic_object_editor_book_version.md
   - ' GenericObjectEditor (developer version)' : generic_object_editor_developer_version.md
-  # extending Weka
-  - ' Writing your own Classifier': writing_classifier.md
-  - ' Writing your own Filter': writing_filter.md
-
-  # Technical Reference
-  - ' GPGPU' : gpgpu.md
-  - ' Java Virtual Machine' : java_virtual_machine.md
-  - ' JVM' : jvm.md
-  - ' just-in-time (JIT) compiler' : just_in_time_jit_compiler.md
-  - ' Memory consumption and Garbage collector' : memory_consumption_and_garbage_collector.md  
-
-  # Experimenter
-  - ' Learning curves' : learning_curves.md
-  - ' Remote Experiment' : remote_experiment.md
-  - ' Running an Experiment Using Clusterers' : running_an_experiment_using_clusterers.md
-  - ' Using the Experiment API' : using_the_experiment_api.md
-
-  # Academic or other projects
-  - ' Related Projects' : related_projects.md
-  - ' Related Research Groups' : related_research_groups.md
-  - ' Paper References' : paper_references.md
-  - ' PROMPT' : prompt.md
-  - ' Piqle' : piqle.md
-
-  # Questions, Troubleshooting
-  - ' Why am I missing certain nominal or string values from sparse instances?' : why_am_i_missing_certain_nominal_or_string_values_from_sparse_instances.md
-  - ' How do I use the associator GeneralizedSequentialPatterns?' : how_do_i_use_the_associator_generalized_sequential_patterns.md
-  - ' How to run Weka schemes from commandline' : how_to_run_weka_schemes_from_commandline.md
-  - ' KnowledgeFlow toolbars are empty' : knowledge_flow_toolbars_are_empty.md
-  - ' OSX Mountain Lion - Weka x-y-z is damaged and cannot be installed. You should eject the disk image' : osx_mountain_lion_weka_x_y_z_is_damaged_and_cant_be_installed_you_should_eject_the_disk_image.md
-  - ' GUIChooser starts but not Experimenter or Explorer' : gui_chooser_starts_but_not_experimenter_or_explorer.md
-  - ' CLASSPATH problems' : classpath_problems.md
-
-  # Guides
-  - ' Windows Databases' : windows_databases.md
-  - ' MS SQL Server 2000 (Desktop Engine)' : ms_sql_server_2000_desktop_engine.md
-  - ' Transferring an ARFF file into a database' : formats_and_processing/transferring_an_arff_file_into_a_database.md
-  - ' Weka For Newbies' : weka_for_newbies.md
-  - ' Weka on a memory stick' : weka_on_a_memory_stick.md
-  - ' Remote Experiment' : remote_experiment.md
-  - ' Running an Experiment Using Clusterers' : running_an_experiment_using_clusterers.md
-  - ' IKVM with Weka tutorial' : ikvm_with_weka_tutorial.md
-  - ' Feature extraction from images' : feature_extraction_from_images.md  
-  - ' Ensemble Selection' : ensemble_selection.md
-  - ' Document Classification' : document_classification.md  
-  - ' Classifying large datasets' : classifying_large_datasets.md  
-  - ' Adding tabs in the Explorer' : adding_tabs_in_the_explorer.md  
-  
-  # Visualization
-  - 'Visualization Articles' : visualization_articles.md
-  - ' Visualizing a Tree' : visualization/visualizing_a_tree.md
-  - ' Visualizing cluster assignments' : visualization/visualizing_cluster_assignments.md
-  - ' Visualizing ROC curve': visualization/visualizing_roc_curve.md
-  - ' Changing the plot background' : visualization/changing_the_plot_background.md 
-  - ' Displaying results of cross-validation folds' : visualization/displaying_results_of_cross_validation_folds.md
-  - ' Explorer error visualization plugins' : visualization/explorer_error_visualization_plugins.md
-  - ' Explorer graph visualization plugins' : visualization/explorer_graph_visualization_plugins.md
-  - ' Explorer prediction visualization plugins' : visualization/explorer_prediction_visualization_plugins.md
-  - ' Explorer tree visualization plugins' : visualization/explorer_tree_visualization_plugins.md
-  - ' Explorer visualization plugins' : visualization/explorer_visualization_plugins.md
-  - ' Exporting Charts from the Knowledge Flow' : visualization/exporting_charts_from_the_knowledge_flow.md
-  - ' Extensions for WEKAs main GUI' : visualization/extensions_for_wekas_main_gui.md      
-  - ' Plotting error rate for incremental classifier' : visualization/plotting_error_rate_for_incremental_classifier.md  
-
-
-  # Classification and Tools
-  # - ' Classifiers' : classifiers.md  
   - ' ZeroR' : zero_r.md
   - ' Stemmers' : stemmers.md
   - ' Stop word filtering and attributes' : stop_word_filtering_and_attributes.md
@@ -246,6 +183,52 @@ pages:
   - ' Classifying large datasets' : classifying_large_datasets.md  
   - ' Add weights to dataset' : add_weights_to_dataset.md 
 
+  # Technical Reference
+  - ' Ant': ant.md
+  - ' Maven': maven.md
+  - ' Jupyter Notebooks': jupyter_notebooks.md  
+  - ' GPGPU' : gpgpu.md
+  - ' Java Virtual Machine' : java_virtual_machine.md
+  - ' JVM' : jvm.md
+  - ' just-in-time (JIT) compiler' : just_in_time_jit_compiler.md
+  - ' Memory consumption and Garbage collector' : memory_consumption_and_garbage_collector.md  
+
+  # Experimenter
+  #- 'Experimenter' : experimenter/experimenter.md
+  - ' Learning curves' : experimenter/learning_curves.md
+  - ' Remote Experiment' : experimenter/remote_experiment.md
+  - ' Running an Experiment Using Clusterers' : experimenter/running_an_experiment_using_clusterers.md
+  - ' Using the Experiment API' : experimenter/using_the_experiment_api.md
+
+  # Academic or Related Projects
+  #- 'Academic or Related Projects' : academic/academic_or_related_projects.md
+  - ' Related Projects' : academic/related_projects.md
+  - ' Related Research Groups' : academic/related_research_groups.md
+  - ' Paper References' : academic/paper_references.md
+  - ' PROMPT' : academic/prompt.md
+  - ' Piqle' : academic/piqle.md
+
+  # Guides
+    # extending Weka
+  - ' Writing your own Classifier': writing_classifier.md
+  - ' Writing your own Filter': writing_filter.md
+  - ' Writing your own Classifier Article' : writing_classifier_article.md  
+    # General
+  - ' Windows Databases' : windows_databases.md
+  - ' MS SQL Server 2000 (Desktop Engine)' : ms_sql_server_2000_desktop_engine.md
+  - ' Transferring an ARFF file into a database' : formats_and_processing/transferring_an_arff_file_into_a_database.md # duplicate entry
+  - ' Weka For Newbies' : weka_for_newbies.md
+  - ' Weka on a memory stick' : weka_on_a_memory_stick.md
+  - ' Remote Experiment' : experimenter/remote_experiment.md # duplicate entry
+  - ' Running an Experiment Using Clusterers' : experimenter/running_an_experiment_using_clusterers.md # duplicate entry
+  - ' IKVM with Weka tutorial' : ikvm_with_weka_tutorial.md
+  - ' Feature extraction from images' : feature_extraction_from_images.md  
+  - ' Ensemble Selection' : ensemble_selection.md
+  - ' Document Classification' : document_classification.md  
+  - ' Classifying large datasets' : classifying_large_datasets.md # duplicate entry
+  - ' Adding tabs in the Explorer' : adding_tabs_in_the_explorer.md  
+  - ' How to run Weka schemes from commandline' : how_to_run_weka_schemes_from_commandline.md
+
   # Formats and Processing
   - ' ARFF (stable version)': formats_and_processing/arff_stable.md
   - ' ARFF (developer version)': formats_and_processing/arff_developer.md
@@ -264,9 +247,10 @@ pages:
   - ' Spaces in labels of ARFF files' : formats_and_processing/spaces_in_labels_of_arff_files.md  
 
   # Props Files
-  - 'Properties File' : properties_file.md
+  #- 'Properties File' : properties_file.md
   - ' Props file' : props_file.md
   - ' Where does WEKA look for .props files?' : where_does_weka_look_for_props_files.md  
+  - ' WEKA experiment DatabaseUtils.props' : weka_experiment_database_utils.props.md  
   - ' weka/core/Capabilities.props' : weka_core_capabilities.props.md
   - ' weka/core/logging/Logging.props' : weka_core_logging_logging.props.md
   - ' weka/gui/GenericObjectEditor.props' : weka_gui_generic_object_editor.props.md
@@ -283,3 +267,19 @@ pages:
   - ' weka/gui/scripting/Jython.props' : weka_gui_scripting_jython.props.md
   - ' weka/gui/treevisualizer/TreeVisualizer.props' : weka_gui_tree_visualizer_tree_visualizes.props.md
   - ' weka/gui/visualize/Visualize.props' : weka_gui_visualize_visualize.props.md
+
+  # Visualization
+  #- 'Visualization Articles' : visualization_articles.md
+  - ' Visualizing a Tree' : visualization/visualizing_a_tree.md
+  - ' Visualizing cluster assignments' : visualization/visualizing_cluster_assignments.md
+  - ' Visualizing ROC curve': visualization/visualizing_roc_curve.md
+  - ' Changing the plot background' : visualization/changing_the_plot_background.md 
+  - ' Displaying results of cross-validation folds' : visualization/displaying_results_of_cross_validation_folds.md
+  - ' Explorer error visualization plugins' : visualization/explorer_error_visualization_plugins.md
+  - ' Explorer graph visualization plugins' : visualization/explorer_graph_visualization_plugins.md
+  - ' Explorer prediction visualization plugins' : visualization/explorer_prediction_visualization_plugins.md
+  - ' Explorer tree visualization plugins' : visualization/explorer_tree_visualization_plugins.md
+  - ' Explorer visualization plugins' : visualization/explorer_visualization_plugins.md
+  - ' Exporting Charts from the Knowledge Flow' : visualization/exporting_charts_from_the_knowledge_flow.md
+  - ' Extensions for WEKAs main GUI' : visualization/extensions_for_wekas_main_gui.md      
+  - ' Plotting error rate for incremental classifier' : visualization/plotting_error_rate_for_incremental_classifier.md  

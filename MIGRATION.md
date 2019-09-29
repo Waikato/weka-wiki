@@ -30,7 +30,7 @@ Articles still to migrate:
 * ~~Can I use WEKA from Python_~~
 * ~~Can I use WEKA in commercial applications_~~
 * ~~Changing the plot background~~
-* Classifiers **Requires re-writing for Markdown and GitHub**
+* ~~Classifiers~~
 * ~~Classifying large datasets~~
 * ~~CLASSPATH~~
 * ~~CLASSPATH problems~~
@@ -67,7 +67,7 @@ Articles still to migrate:
 * ~~FAQ~~
 * ~~Feature extraction from images~~
 * ~~FilteredClassifierUpdateable~~
-* ~~Frequently Asked Questions~~ -- **links need updating, though**
+* ~~Frequently Asked Questions~~ 
 * ~~GeneralizedSequentialPatterns~~
 * ~~Generating and saving a precision-recall curve~~
 * ~~Generating classifier evaluation output manually~~

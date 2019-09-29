@@ -128,7 +128,7 @@ Now we will configure the experiment:
 # Multi-core support
 If you want to utilize all the cores on a multi-core machine, then you can do so with Weka version 3.6.x and developer versions later than 3.5.7. All you have to do, is define the port alongside the hostname in the Experimenter (format: 
 `hostname:port`) and then start the `RemoteEngine` with the `-p` option, specifying the port to listen on.
-See also [this](https://list.waikato.ac.nz/pipermail/wekalist/2009-March/016310.html) post on the [Wekalist](mailing_list.md).
+See also [this](https://list.waikato.ac.nz/pipermail/wekalist/2009-March/016310.html) post on the [Wekalist](../mailing_list.md).
 
 # Troubleshooting
 * If you get an error at the start of an experiment that looks a bit like this:
@@ -144,12 +144,12 @@ See also [this](https://list.waikato.ac.nz/pipermail/wekalist/2009-March/016310.
 
 
 * If you serialized an experiment and then modify your `DatabaseUtils.props` file due to an error (e.g., a missing type-mapping), the Experimenter will use the `DatabaseUtils.props` you had at the time you serialized the experiment. Keep in mind that the serialization process also serializes the DatabaseUtils class and therefore stored your props-file! This is another reason for storing your experiments as XML and not in the properietary binary format the Java serialization produces.
-* Using a corrupt or incomplete `DatabaseUtils.props` file can cause peculiar interface errors, for example disabling the use of the *User* button alongside the database URL. If in doubt copy a clean `DatabaseUtils.props` from [Subversion](subversion.md).
+* Using a corrupt or incomplete `DatabaseUtils.props` file can cause peculiar interface errors, for example disabling the use of the *User* button alongside the database URL. If in doubt copy a clean `DatabaseUtils.props` from [Subversion](../subversion.md).
 * If you get `NullPointerException at java.util.Hashtable.get()` in the Remote Engine do not be alarmed. This will have no effect on the results of your experiment.
 
 # Links 
-* [Databases](databases.md)
-* [weka/experiment/DatabaseUtils.props](weka_experiment_database_utils.props.md)
-* [Subversion](subversion.md)
+* [Databases](../databases.md)
+* [weka/experiment/DatabaseUtils.props](../weka_experiment_database_utils.props.md)
+* [Subversion](../subversion.md)
 * [HSQLDB](http://hsqldb.sourceforge.net/)
 * [MySQL](http://www.mysql.com/)

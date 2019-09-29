@@ -302,7 +302,7 @@ it can be used to obtain statistical sound results for a specific classifier/dat
 * Since this plugin is rather bulky, we omit the implementation details, but the following can be said:
 
 ** based on the `weka.gui.explorer.ClassifierPanel`
-** the *actual* code doing the work follows the example in [Using the Experiment API](using_the_experiment_api.md) article
+** the *actual* code doing the work follows the example in [Using the Experiment API](experimenter/using_the_experiment_api.md) article
 * In order to add our `ExperimentPanel` to the list of tabs displayed in the Explorer, we need to modify the `Explorer.props` file (just extract it from the `weka.jar` and place it in your home directory). The *Tabs* property must look like this:
 
 ```text

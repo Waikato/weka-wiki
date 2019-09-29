@@ -1,6 +1,6 @@
 
 # General
-The [ExperimentDemo.java](files/ExperimentDemo.java) class demonstrates the use of the Experiment API (stable 3.6 or developer version):
+The [ExperimentDemo.java](../files/ExperimentDemo.java) class demonstrates the use of the Experiment API (stable 3.6 or developer version):
 
 * setting up an experiment
 	* one classifier
@@ -113,7 +113,7 @@ And the associated output:
 ```
 
 # See also
-* [Use Weka in your Java code](use_weka_in_your_java_code.md) - for general use of the Weka API
+* [Use Weka in your Java code](../use_weka_in_your_java_code.md) - for general use of the Weka API
 
 # Downloads
-* [ExperimentDemo.java](files/ExperimentDemo.java)
+* [ExperimentDemo.java](../files/ExperimentDemo.java)

@@ -106,7 +106,7 @@ For any addition to this page, you can either create an account & edit it yourse
 
 # Weka Server Usage and Development
 * [http://wiki.pentaho.com/display/DATAMINING/Weka+Server](http://wiki.pentaho.com/display/datamining/weka+server)
-* [https://waikato.github.io/weka-wiki/remote_experiment/](remote_experiment.md)
+* [https://waikato.github.io/weka-wiki/remote_experiment/](experimenter/remote_experiment.md)
 * [http://khusainr.myweb.port.ac.uk/weka/gweka-howto.html](http://khusainr.myweb.port.ac.uk/weka/gweka-howto.html) - **dead**
 * [http://forums.pentaho.com/showthread.php?143747-weka-server](http://forums.pentaho.com/showthread.php?143747-weka-server)
 

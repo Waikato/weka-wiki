@@ -1,7 +1,6 @@
 It's not that hard to use WEKA classes in your own code, the following articles give a good overview of how to do that:
 
 * [Use WEKA in your Java code](../use_weka_in_your_java_code.md)
-* [Programmatic Use](../programmatic_use.md)
 * In general, the articles tagged as "[source code](https://waikato.github.io/weka-wiki/search.html?q=source+code)".
 
 Further resources:

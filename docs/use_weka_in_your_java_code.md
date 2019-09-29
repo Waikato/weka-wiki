@@ -541,7 +541,7 @@ Most machine learning schemes, like classifiers and clusterers, are susceptible 
 * [Generating classifier evaluation output manually](generating_classifier_evaluation_output_manually.md) - if you want to generate some of the evaluation statistics output manually
 * [Creating Instances on-the-fly](formats_and_processing/creating_arff_file.md) - explains how to generate a `weka.core.Instances` object from scratch
 * [Save Instances to an ARFF File](formats_and_processing/save_instances_to_arff.md) - shows how to output a dataset
-* [Using the Experiment API](using_the_experiment_api.md)
+* [Using the Experiment API](experimenter/using_the_experiment_api.md)
 
 # Examples
 The following are a few sample classes for using various parts of the Weka API:

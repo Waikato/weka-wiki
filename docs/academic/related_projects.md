@@ -1,6 +1,6 @@
 There are many software projects that are related to Weka because they use it in some form. An incomplete list can be found below. Perhaps particularly noteworthy are RWeka, which provides an interface to Weka from R, python-weka-wrapper, which provides a wrapper for using Weka from Python, and ADAMS, which provides a workflow environment integrating Weka.
 
-You may also want to take a look at the (incomplete) list of ["unofficial" packages for WEKA 3.7](packages/unofficial.md).
+You may also want to take a look at the (incomplete) list of ["unofficial" packages for WEKA 3.7](../packages/unofficial.md).
 
 # Active links
 
@@ -25,7 +25,7 @@ You may also want to take a look at the (incomplete) list of ["unofficial" packa
 * [Graph RAT](http://graph-rat.sourceforge.net/) - A framework for combining graph and non-graph algorithms.
 * [GroovyLab](http://code.google.com/p/jlabgroovy/) - Groovy based Matlab-like interface to Weka's algorithms.
 * [http://sourceforge.net/projects/wekainterfacetranslator/](https://sourceforge.net/projects/wekainterfacetranslator/) - A translation tool to facilitate the creation of message.properties files for Weka 3.6. Courtesy of the University of Jordan.
-* [Java Framework to crate ARFF from JPA Entity](using_a_new_java_framework_to_create_arff_from_jpa_entity.md) - Use the JPA Entities to create automatically you ARFF file.
+* [Java Framework to crate ARFF from JPA Entity](../using_a_new_java_framework_to_create_arff_from_jpa_entity.md) - Use the JPA Entities to create automatically you ARFF file.
 * [Kea](http://www.nzdl.org/kea/) - automatic keyphrase extraction.
 * [KeplerWeka](https://sourceforge.net/projects/keplerweka/) - Weka module for the [Kepler](https://kepler-project.org/) workflow environment.
 * [Learning Vector Quanization](http://sourceforge.net/projects/wekaclassalgos/) - and more with Weka.
