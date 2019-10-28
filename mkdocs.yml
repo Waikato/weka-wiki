@@ -122,7 +122,6 @@ nav:
   - ' OSX Mountain Lion - Weka x-y-z is damaged and cannot be installed. You should eject the disk image' : osx_mountain_lion_weka_x_y_z_is_damaged_and_cant_be_installed_you_should_eject_the_disk_image.md
   - ' GUIChooser starts but not Experimenter or Explorer' : gui_chooser_starts_but_not_experimenter_or_explorer.md
   - ' CLASSPATH problems' : classpath_problems.md
-
   # just using weka
   - ' Command redirection': command_redirection.md
   - ' Area under the curve': auc.md
@@ -141,7 +140,6 @@ nav:
   - ' Using Weka from Groovy' : using_weka_from_groovy.md
   - ' Using Weka from Jython' : using_weka_from_jython.md
   - ' Using Weka via Jepp' : using_weka_via_jepp.md
-  
   # using the API
   - ' Use Weka in your Java code': use_weka_in_your_java_code.md
   - ' Weka Examples': weka_examples.md
@@ -182,7 +180,6 @@ nav:
   - ' CostSensitiveClassifier' : cost_sensitive_classifier.md  
   - ' Classifying large datasets' : classifying_large_datasets.md  
   - ' Add weights to dataset' : add_weights_to_dataset.md 
-
   # Technical Reference
   - ' Ant': ant.md
   - ' Maven': maven.md
@@ -192,14 +189,12 @@ nav:
   - ' JVM' : jvm.md
   - ' just-in-time (JIT) compiler' : just_in_time_jit_compiler.md
   - ' Memory consumption and Garbage collector' : memory_consumption_and_garbage_collector.md  
-
   # Experimenter
   #- 'Experimenter' : experimenter/experimenter.md
   - ' Learning curves' : experimenter/learning_curves.md
   - ' Remote Experiment' : experimenter/remote_experiment.md
   - ' Running an Experiment Using Clusterers' : experimenter/running_an_experiment_using_clusterers.md
   - ' Using the Experiment API' : experimenter/using_the_experiment_api.md
-
   # Academic or Related Projects
   #- 'Academic or Related Projects' : academic/academic_or_related_projects.md
   - ' Related Projects' : academic/related_projects.md
@@ -207,7 +202,6 @@ nav:
   - ' Paper References' : academic/paper_references.md
   - ' PROMPT' : academic/prompt.md
   - ' Piqle' : academic/piqle.md
-
   # Guides
     # extending Weka
   - ' Writing your own Classifier': writing_classifier.md
@@ -228,7 +222,6 @@ nav:
   - ' Classifying large datasets' : classifying_large_datasets.md # duplicate entry
   - ' Adding tabs in the Explorer' : adding_tabs_in_the_explorer.md  
   - ' How to run Weka schemes from commandline' : how_to_run_weka_schemes_from_commandline.md
-
   # Formats and Processing
   - ' ARFF (stable version)': formats_and_processing/arff_stable.md
   - ' ARFF (developer version)': formats_and_processing/arff_developer.md
@@ -245,7 +238,6 @@ nav:
   - ' Transferring an ARFF file into a database' : formats_and_processing/transferring_an_arff_file_into_a_database.md
   - ' Single quotes in labels of ARFF files' : formats_and_processing/single_quotes_in_labels_of_arff_files.md
   - ' Spaces in labels of ARFF files' : formats_and_processing/spaces_in_labels_of_arff_files.md  
-
   # Props Files
   #- 'Properties File' : properties_file.md
   - ' Props file' : props_file.md
@@ -267,7 +259,6 @@ nav:
   - ' weka/gui/scripting/Jython.props' : weka_gui_scripting_jython.props.md
   - ' weka/gui/treevisualizer/TreeVisualizer.props' : weka_gui_tree_visualizer_tree_visualizes.props.md
   - ' weka/gui/visualize/Visualize.props' : weka_gui_visualize_visualize.props.md
-
   # Visualization
   #- 'Visualization Articles' : visualization_articles.md
   - ' Visualizing a Tree' : visualization/visualizing_a_tree.md
