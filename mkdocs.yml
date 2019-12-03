@@ -8,6 +8,7 @@ theme:
 # excluded from the navigation on the left-hand side
 nav:
   - 'Home': index.md
+  - 'Downloading Weka': downloading_weka.md
   - 'Resources':
     - 'FAQ': faq.md
     - 'Not so FAQ': not_so_faq.md
