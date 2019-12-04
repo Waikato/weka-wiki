@@ -66,7 +66,7 @@ Author:Eibe Frank
 PackageName:isotonicRegression
 Title:Learns an isotonic regression model.
 Date:2009-09-10
-URL:http://weka.sourceforge.net/doc.dev/weka/classifiers/IsotonicRegression.html
+URL:https://weka.sourceforge.io/doc.dev/weka/classifiers/IsotonicRegression.html
 Category:Regression
 Depends:weka (>=3.7.1)
 License:GPL 2.0

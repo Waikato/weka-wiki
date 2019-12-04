@@ -1,6 +1,6 @@
 AUC = the **A**rea **U**nder the ROC **C**urve. 
 
-Weka uses the [Mann Whitney statistic](http://en.wikipedia.org/wiki/Mann-Whitney_U) to calculate the AUC via the [weka.classifiers.evaluation.ThresholdCurve](http://weka.sourceforge.net/doc.dev/weka/classifiers/evaluation/ThresholdCurve.html) class.
+Weka uses the [Mann Whitney statistic](http://en.wikipedia.org/wiki/Mann-Whitney_U) to calculate the AUC via the [weka.classifiers.evaluation.ThresholdCurve](https://weka.sourceforge.io/doc.stable-3-8/weka/classifiers/evaluation/ThresholdCurve.html) class.
 
 # Explorer
 See [ROC curves](roc_curves.md).
@@ -34,5 +34,5 @@ produces this output:
 
 # Links
 * [University of Nebraska Medical Center, Interpreting Diagnostic Tests](http://gim.unmc.edu/dxtests/roc3.htm)
-* [weka.classifiers.evaluation.ThresholdCurve](http://weka.sourceforge.net/doc.dev/weka/classifiers/evaluation/ThresholdCurve.html)
+* [weka.classifiers.evaluation.ThresholdCurve](https://weka.sourceforge.io/doc.stable-3-8/weka/classifiers/evaluation/ThresholdCurve.html)
 

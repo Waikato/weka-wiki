@@ -1,6 +1,6 @@
 # DataSink
 The easiest way to save an `weka.core.Instances` object to a file is by using
-the [weka.core.converters.ConverterUtils.DataSink](http://weka.sourceforge.net/doc.dev/weka/core/converters/ConverterUtils.DataSink.html) class.
+the [weka.core.converters.ConverterUtils.DataSink](https:/weka.sourceforge.io/doc.dev/weka/core/converters/ConverterUtils.DataSink.html) class.
 
 ```java
  import weka.core.converters.ConverterUtils.DataSink;

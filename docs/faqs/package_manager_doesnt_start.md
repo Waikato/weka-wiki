@@ -22,7 +22,7 @@ This should allow the package manager to connect to the website that hosts the p
 
 Then, you can download package .zip files manually via your web browser, by navigating to
 
-[http://weka.sourceforge.net/packageMetaData/](http://weka.sourceforge.net/packageMetaData/)
+[https://weka.sourceforge.io/packageMetaData/](https://weka.sourceforge.io/packageMetaData/)
 
 clicking on the link for the package you want to install, then clicking on *Latest*, and finally clicking on the URL given next to *PackageURL*.
 
@@ -30,7 +30,7 @@ Once you have downloaded the package .zip file, open the WEKA package manager, a
 
 If you are running Weka in *offline* mode, and the packages you are installing have some dependencies on one another, then there can still be some problems due to Weka not being able to verify the dependencies by checking against the central repository. This is usually a problem in the case where Weka has never been able to connect to the internet and thus has not downloaded and established a cache of the central package metadata repository. Fortunately there is a simple work-around to this, as long as you can access the internet via a web browser:
 
-1. Using your web browser, download [http://weka.sourceforge.net/packageMetaData/repo.zip](http://weka.sourceforge.net/packageMetaData/repo.zip)
+1. Using your web browser, download [https://weka.sourceforge.io/packageMetaData/repo.zip](https://weka.sourceforge.io/packageMetaData/repo.zip)
 2. If it doesn't already exist, create the directory `~/wekafiles/repCache`
 3. Copy the downloaded `repo.zip` into `~/wekafiles/repCache` and unzip it there
 4. Start Weka (use the `weka.packageManager.offline=true` property to speed up the startup process; see [http://weka.wikispaces.com/How+do+I+use+the+package+manager%3F#Package%20manager%20property%20file] for info)

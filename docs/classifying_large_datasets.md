@@ -14,7 +14,7 @@ WEKA offers several filters for re-sampling a dataset and generating a new datas
 * `weka.filters.supervised.instance.SpreadSubsample`
 > It allows you to specify the maximum "spread" between the rarest and most common class.
 
-See the respective Javadoc for more information ([book version](http://weka.sourceforge.net/doc.stable/), [developer version](http://weka.sourceforge.net/doc.dev/)).
+See the respective Javadoc for more information ([book version](https://weka.sourceforge.io/doc.stable-3-8/), [developer version](https://weka.sourceforge.io/doc.dev/)).
 
 # Incremental classifiers
 Most classifiers need to see all the data before they can be trained, e.g., J48 or SMO. But there are also schemes that can be trained in an incremental fashion, not just in batch mode. All classifiers implementing the `weka.classifiers.UpdateableClassifier` interface are able to process data in such a way.
@@ -22,7 +22,7 @@ Most classifiers need to see all the data before they can be trained, e.g., J48 
 Running such a classifier from commandline will load the dataset incrementally (NB: 
 not all data formats can be loaded incrementally; [XRFF](formats_and_processing/xrff.md) is one of them, [ARFF](formats_and_processing/arff.md) on the other hand can be read incrementally) and feed the data instance by instance to the classifier.
 
-Check out the Javadoc of the `UpdateableClassifier` interface to see what schemes implement it ([book version](http://weka.sourceforge.net/doc.stable/weka/classifiers/UpdateableClassifier.html), [developer version](http://weka.sourceforge.net/doc.dev/weka/classifiers/UpdateableClassifier.html)).
+Check out the Javadoc of the `UpdateableClassifier` interface to see what schemes implement it ([book version](https://weka.sourceforge.io/doc.stable-3-8/weka/classifiers/UpdateableClassifier.html), [developer version](https://weka.sourceforge.io/doc.dev/weka/classifiers/UpdateableClassifier.html)).
 
 # Other tools
 * [MOA - Massive Online Analysis](http://sourceforge.net/projects/moa-datastream/)

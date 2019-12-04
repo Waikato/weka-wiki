@@ -12,7 +12,7 @@ One can transform the text files with the following tools into ARFF format (depe
 
 * **[TextDirectoryToArff](formats_and_processing/arff_from_text_collections.md)** tool (3.4.x and >= 3.5.3)
 > this Java class transforms a directory of files into an ARFF file
-* **[TextDirectoryLoader](http://weka.sourceforge.net/doc.dev/weka/core/converters/TextDirectoryLoader.html)** converter (> 3.5.3)
+* **[TextDirectoryLoader](https://weka.sourceforge.io/doc.stable-3-8/weka/core/converters/TextDirectoryLoader.html)** converter (> 3.5.3)
 > this converter is based on the *[TextDirectoryToArff](formats_and_processing/arff_from_text_collections.md)* tool and located in the `weka.core.converters` package
 
 Example directory layout for **TextDirectoryLoader**:
@@ -52,7 +52,7 @@ CSV files can be imported in Weka easily via the Weka Explorer or via commandlin
  java weka.core.converters.CSVLoader file.csv > file.arff
 ```
 
-By default, non-numerical attributes get imported as *NOMINAL* attributes, which is not necessarily desired for textual data, especially if one wants to use the [StringToWordVector](http://weka.sourceforge.net/doc.dev/weka/filters/unsupervised/attribute/StringToWordVector.html) filter. In order to change the attribute to *STRING*, one can run the `NominalToString` filter (package `weka.filters.unsupervised.attribute`) on the data, specifying the attribute index or range of indices that should be converted (NB: 
+By default, non-numerical attributes get imported as *NOMINAL* attributes, which is not necessarily desired for textual data, especially if one wants to use the [StringToWordVector](https://weka.sourceforge.io/doc.stable-3-8/weka/filters/unsupervised/attribute/StringToWordVector.html) filter. In order to change the attribute to *STRING*, one can run the `NominalToString` filter (package `weka.filters.unsupervised.attribute`) on the data, specifying the attribute index or range of indices that should be converted (NB: 
 this filter does **not** exclude the class attribute from conversion!). In order to retain the attribute types, one needs to save the file in [ARFF](formats_and_processing/arff.md) or [XRFF](formats_and_processing/xrff.md) format (or in the compressed version of these formats).
 
 ## Third-party tools
@@ -63,19 +63,19 @@ this filter does **not** exclude the class attribute from conversion!). In order
 
 ## Conversion
 
-Most classifiers in Weka cannot handle *String* attributes. For these learning schemes one has to process the data with appropriate filters, e.g., the [StringToWordVector](http://weka.sourceforge.net/doc.dev/weka/filters/unsupervised/attribute/StringToWordVector.html) filter which can perform [TF/IDF transformation](http://en.wikipedia.org/wiki/tf%e2%80%93idf).
+Most classifiers in Weka cannot handle *String* attributes. For these learning schemes one has to process the data with appropriate filters, e.g., the [StringToWordVector](https://weka.sourceforge.io/doc.stable-3-8/weka/filters/unsupervised/attribute/StringToWordVector.html) filter which can perform [TF/IDF transformation](http://en.wikipedia.org/wiki/tf%e2%80%93idf).
 
-The `StringToWordVector` filter places the class attribute of the generated output data at the beginning. In case you'd to like to have it as last attribute again, you can use the [Reorder](http://weka.sourceforge.net/doc.dev/weka/filters/unsupervised/attribute/Reorder.html) filter with the following setup:
+The `StringToWordVector` filter places the class attribute of the generated output data at the beginning. In case you'd to like to have it as last attribute again, you can use the [Reorder](https://weka.sourceforge.io/doc.stable-3-8/weka/filters/unsupervised/attribute/Reorder.html) filter with the following setup:
 
 ```bash
 weka.filters.unsupervised.attribute.Reorder -R 2-last,first
 ```
 
-And with the [MultiFilter](http://weka.sourceforge.net/doc.dev/weka/filters/MultiFilter.html) you can also apply both filters in one go, instead of subsequently. Makes it easier in the Explorer for instance.
+And with the [MultiFilter](https://weka.sourceforge.io/doc.stable-3-8/weka/filters/MultiFilter.html) you can also apply both filters in one go, instead of subsequently. Makes it easier in the Explorer for instance.
 
 ## Stopwords
 
-The [StringToWordVector](http://weka.sourceforge.net/doc.dev/weka/filters/unsupervised/attribute/StringToWordVector.html) filter can also work with a different stopword list than the built-in one (based on the Rainbow system). One can use the `-stopwords` option to load the external stopwords file. The format for such a stopword file is one stopword per line, lines starting with '#' are interpreted as comments and ignored.
+The [StringToWordVector](https://weka.sourceforge.io/doc.stable-3-8/weka/filters/unsupervised/attribute/StringToWordVector.html) filter can also work with a different stopword list than the built-in one (based on the Rainbow system). One can use the `-stopwords` option to load the external stopwords file. The format for such a stopword file is one stopword per line, lines starting with '#' are interpreted as comments and ignored.
 
 **Note:** There was a bug in Weka 3.5.6 (which introduced the support of external stopwords lists), which ignored the external stopwords list. Later versions or [snapshot](snapshots.md)s from 21/07/2007 on will work correctly.
 
@@ -102,5 +102,5 @@ If you are starting Weka via start menu and you use a recent version (at least 3
 # Links
 
 * Javadoc
-	* [StringToWordVector](http://weka.sourceforge.net/doc.dev/weka/filters/unsupervised/attribute/StringToWordVector.html)
-	* [TextDirectoryLoader](http://weka.sourceforge.net/doc.dev/weka/core/converters/TextDirectoryLoader.html)
+	* [StringToWordVector](https://weka.sourceforge.io/doc.stable-3-8/weka/filters/unsupervised/attribute/StringToWordVector.html)
+	* [TextDirectoryLoader](https://weka.sourceforge.io/doc.stable-3-8/weka/core/converters/TextDirectoryLoader.html)

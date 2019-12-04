@@ -1,4 +1,4 @@
-The KnowledgeFlow enables one to plot the error rate (= RMSE, root mean squared error) and the accuracy of an incremental classifier. An *incremental classifier* is a classifier that does not need to see the whole data at once, but can be trained instance by instance. All classifiers implementing the interface `[weka.classifiers.UpdateableClassifier](http://weka.sourceforge.net/doc.dev/weka/classifiers/updateableclassifier.html)` are incremental ones.
+The KnowledgeFlow enables one to plot the error rate (= RMSE, root mean squared error) and the accuracy of an incremental classifier. An *incremental classifier* is a classifier that does not need to see the whole data at once, but can be trained instance by instance. All classifiers implementing the interface `[weka.classifiers.UpdateableClassifier](https://weka.sourceforge.io/doc.dev/weka/classifiers/updateableclassifier.html)` are incremental ones.
 
 # Setup
 The most basic setup for an incremental classifier is show below, using the classifier `NaiveBayesUpdateable`:

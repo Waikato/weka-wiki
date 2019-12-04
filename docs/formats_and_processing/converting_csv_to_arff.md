@@ -1,10 +1,10 @@
 
-For converting CSV (comma separated value) files into [ARFF](arff.md) files you need the following two [converters](http://weka.sourceforge.net/doc.dev/weka/core/converters/package-frame.html):
+For converting CSV (comma separated value) files into [ARFF](arff.md) files you need the following two [converters](https:/weka.sourceforge.io/doc.dev/weka/core/converters/package-frame.html):
 
-- [CSVLoader](http://weka.sourceforge.net/doc.dev/weka/core/converters/CSVLoader.html) for loading the CSV file into an [Instances](http://weka.sourceforge.net/doc.dev/weka/core/Instances.html) object
-- [ArffSaver](http://weka.sourceforge.net/doc.dev/weka/core/converters/ArffSaver.html) to save the [Instances](http://weka.sourceforge.net/doc.dev/weka/core/Instances.html) as an ARFF file
+- [CSVLoader](https:/weka.sourceforge.io/doc.dev/weka/core/converters/CSVLoader.html) for loading the CSV file into an [Instances](https:/weka.sourceforge.io/doc.dev/weka/core/Instances.html) object
+- [ArffSaver](https:/weka.sourceforge.io/doc.dev/weka/core/converters/ArffSaver.html) to save the [Instances](https:/weka.sourceforge.io/doc.dev/weka/core/Instances.html) as an ARFF file
 
-In the following you'll find some example code to show you how to use the [converters](http://weka.sourceforge.net/doc.dev/weka/core/converters/package-frame.html). The class takes 2 arguments:
+In the following you'll find some example code to show you how to use the [converters](https:/weka.sourceforge.io/doc.dev/weka/core/converters/package-frame.html). The class takes 2 arguments:
 
 - the *input* CSV file
 - the *output* [ARFF](arff.md) file

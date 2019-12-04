@@ -6,7 +6,7 @@ The most common components you might want to use are
 * *Evaluating* - how good is the classifier/clusterer?
 * *Attribute selection* - removing irrelevant attributes from your data
 
-The following sections explain how to use them in your own code. A link to an **example class** can be found at the end of this page, under the [Links](#links) section. The classifiers and filters always list their options in the Javadoc API ([stable](http://weka.sourceforge.net/doc.stable/), [developer](http://weka.sourceforge.net/doc.dev/) version) specification.
+The following sections explain how to use them in your own code. A link to an **example class** can be found at the end of this page, under the [Links](#links) section. The classifiers and filters always list their options in the Javadoc API ([stable](https://weka.sourceforge.io/doc.stable-3-8/), [developer](https://weka.sourceforge.io/doc.dev/) version) specification.
 
 A comprehensive source of information is the chapter *Using the API* of the Weka manual.
 
@@ -131,7 +131,7 @@ If you have an `Instances` object, called `data`, you can create and apply the f
 ```
 
 ## Filtering on-the-fly
-The [FilteredClassifer](http://weka.sourceforge.net/doc.dev/weka/classifiers/meta/FilteredClassifier.html) meta-classifier is an easy way of filtering data on the fly. It removes the necessity of filtering the data before the classifier can be trained. Also, the data need not be passed through the trained filter again at prediction time. The following is an example of using this meta-classifier with the `Remove` filter and `J48` for getting rid of a numeric ID attribute in the data:
+The [FilteredClassifer](https://weka.sourceforge.io/doc.stable-3-8/weka/classifiers/meta/FilteredClassifier.html) meta-classifier is an easy way of filtering data on the fly. It removes the necessity of filtering the data before the classifier can be trained. Also, the data need not be passed through the trained filter again at prediction time. The following is an example of using this meta-classifier with the `Remove` filter and `J48` for getting rid of a numeric ID attribute in the data:
 
 ```java
  import weka.classifiers.meta.FilteredClassifier;
@@ -162,8 +162,8 @@ The [FilteredClassifer](http://weka.sourceforge.net/doc.dev/weka/classifiers/met
 
 Other handy meta-schemes in Weka:
 
-* [weka.clusterers.FilteredClusterer](http://weka.sourceforge.net/doc.dev/weka/clusterers/FilteredClusterer.html)
-* [weka.assocations.FilteredAssociator](http://weka.sourceforge.net/doc.dev/weka/associations/FilteredAssociator.html)
+* [weka.clusterers.FilteredClusterer](https://weka.sourceforge.io/doc.stable-3-8/weka/clusterers/FilteredClusterer.html)
+* [weka.assocations.FilteredAssociator](https://weka.sourceforge.io/doc.stable-3-8/weka/associations/FilteredAssociator.html)
 
 
 ## Batch filtering
@@ -403,7 +403,7 @@ For evaluating a clusterer, you can use the `ClusterEvaluation` class. In this e
  System.out.println("# of clusters: " + eval.getNumClusters());  // output # of clusters
 ```
 
-Or, in the case of [DensityBasedClusterer](http://weka.sourceforge.net/doc/weka/clusterers/DensityBasedClusterer.html), you can cross-validate the clusterer (Note: with [MakeDensityBasedClusterer](http://weka.sourceforge.net/doc/weka/clusterers/MakeDensityBasedClusterer.html) you can turn any clusterer into a density-based one):
+Or, in the case of [DensityBasedClusterer](https://weka.sourceforge.io/doc.stable-3-8/weka/clusterers/DensityBasedClusterer.html), you can cross-validate the clusterer (Note: with [MakeDensityBasedClusterer](https://weka.sourceforge.io/doc.stable-3-8/weka/clusterers/MakeDensityBasedClusterer.html) you can turn any clusterer into a density-based one):
 
 ```java
  import weka.clusterers.ClusterEvaluation;
@@ -566,5 +566,5 @@ The following are a few sample classes for using various parts of the Weka API:
 
 # Links
 * Weka API
-    * [Stable version](http://weka.sourceforge.net/doc.stable/)
-    * [Developer version](http://weka.sourceforge.net/doc.dev/)
+    * [Stable version](https://weka.sourceforge.io/doc.stable-3-8/)
+    * [Developer version](https://weka.sourceforge.io/doc.dev/)

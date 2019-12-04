@@ -267,7 +267,7 @@ How to check out the unit test framework, you can find [here](subversion.md#juni
 
 # Links
 * [Build_classifier.pdf](files/Build_classifier.pdf) - MindMap for implementing a new classifier
-* Weka API ([stable](http://weka.sourceforge.net/doc/), [developer](http://weka.sourceforge.net/doc.dev))
+* Weka API ([stable](https://weka.sourceforge.io/doc.stable-3-8), [developer](https://weka.sourceforge.io/doc.dev))
 * [Freemind](http://freemind.sourceforge.net/)
 * [junit](http://www.junit.org/)
 

@@ -1,6 +1,4 @@
 
-# Downloading and installing Weka
-
 There are two versions of Weka: Weka 3.8 is the latest stable version
 and Weka 3.9 is the development version. New releases of these two versions
 are normally made once or twice a year. For the bleeding edge, it is

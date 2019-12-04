@@ -4,7 +4,7 @@
 Wrapper class for the [LibSVM](http://www.csie.ntu.edu.tw/~cjlin/libsvm/) library by Chih-Chung Chang and Chih-Jen Lin. The original wrapper, named WLSVM, was developed by Yasser EL-Manzalawy. The current version is complete rewrite of the wrapper, using [Reflection](http://java.sun.com/docs/books/tutorial/reflect/) in order to avoid compilation errors, in case the `libsvm.jar` is not in the [CLASSPATH](classpath.md).
 
 **Important note:**
-From WEKA >= 3.7.2 installation and use of LibSVM in WEKA has been simplified by the creation of a [LibSVM](http://weka.sourceforge.net/doc.packages/LibSVM/weka/classifiers/functions/LibSVM.html) package that can be installed using either the graphical or command line [package manager](packages/manager.md).
+From WEKA >= 3.7.2 installation and use of LibSVM in WEKA has been simplified by the creation of a [LibSVM](https://weka.sourceforge.io/doc.packages/LibSVM/weka/classifiers/functions/LibSVM.html) package that can be installed using either the graphical or command line [package manager](packages/manager.md).
 
 # **Reference (Weka <=** **3.6.8)** 
 * [LibSVM](http://www.csie.ntu.edu.tw/~cjlin/libsvm/)

@@ -1,6 +1,6 @@
 
 
-In the following some code snippets that explain how to generate the output Weka generates when one runs a classifier from the commandline. When referring to the `Evaluation` class, the [weka.classifiers.Evaluation](http://weka.sourceforge.net/doc.dev/weka/classifiers/Evaluation.html) class is meant. This article provides only a quick overview, for more details, please see the [Javadoc](http://weka.sourceforge.net/doc.dev/) of the [Evaluation](http://weka.sourceforge.net/doc.dev/weka/classifiers/Evaluation.html) class.
+In the following some code snippets that explain how to generate the output Weka generates when one runs a classifier from the commandline. When referring to the `Evaluation` class, the [weka.classifiers.Evaluation](https://weka.sourceforge.io/doc.stable-3-8/weka/classifiers/Evaluation.html) class is meant. This article provides only a quick overview, for more details, please see the [Javadoc](https://weka.sourceforge.io/doc.stable-3-8/) of the [Evaluation](https://weka.sourceforge.io/doc.stable-3-8/weka/classifiers/Evaluation.html) class.
 
 # Model
 A classifier's model, if that classifier supports the output of it, can be simply output by using the `toString()` method after it got trained:

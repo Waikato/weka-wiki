@@ -96,7 +96,7 @@ The following example creates a procedure called **emplyoee_name** that returns 
     SELECT * FROM employee_name()
     ```
 
-* Retrieve data via [InstanceQuery](http://weka.sourceforge.net/doc.dev/weka/experiment/InstanceQuery.html)
+* Retrieve data via [InstanceQuery](https://weka.sourceforge.io/doc.stable-3-8/weka/experiment/InstanceQuery.html)
 
     ```
     java weka.experiment.InstanceQuery -Q "SELECT * FROM employee_name()" -U <user> -P <password>

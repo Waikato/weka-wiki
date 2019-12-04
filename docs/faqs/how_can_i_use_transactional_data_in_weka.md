@@ -1,4 +1,4 @@
-Transactional data is often stored in databases by having a table with the transaction ID as the primary key. Individual items or elements of a given transaction may be split up over multiple rows in the table (each with the same ID). Data in this format needs to be converted to one row per transaction before it can be used to learn classifiers, association rules, clusterers etc. in WEKA. From WEKA 3.7.2 there is a package called [denormalize](http://weka.sourceforge.net/packageMetaData/denormalize/index.html) that contains a filter that can perform this kind of "flattening" process. The filter requires **1) that the data contains an ID field that uniquely identifies each separate transaction**, and **2) the data is already sorted in order of this ID field**. Here is an example scenario taken from the WEKA mailing list:
+Transactional data is often stored in databases by having a table with the transaction ID as the primary key. Individual items or elements of a given transaction may be split up over multiple rows in the table (each with the same ID). Data in this format needs to be converted to one row per transaction before it can be used to learn classifiers, association rules, clusterers etc. in WEKA. From WEKA 3.7.2 there is a package called [denormalize](https://weka.sourceforge.io/packageMetaData/denormalize/index.html) that contains a filter that can perform this kind of "flattening" process. The filter requires **1) that the data contains an ID field that uniquely identifies each separate transaction**, and **2) the data is already sorted in order of this ID field**. Here is an example scenario taken from the WEKA mailing list:
 
 ```text
 Hi,
@@ -17,7 +17,7 @@ Hi,
  2     5       5        7
 ```
 
-In WEKA 3.7.2 there is a package called [denormalize](http://weka.sourceforge.net/packageMetaData/denormalize/index.html) that contains a filter for flattening transactional data. The first thing you'd have to do to your example above is to convert it into an ARFF file:
+In WEKA 3.7.2 there is a package called [denormalize](https://weka.sourceforge.io/packageMetaData/denormalize/index.html) that contains a filter for flattening transactional data. The first thing you'd have to do to your example above is to convert it into an ARFF file:
 
 ```text
 @relation test

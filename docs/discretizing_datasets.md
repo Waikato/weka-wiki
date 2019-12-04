@@ -120,5 +120,5 @@ The same can be achieved from the commandline with this command (**[batch filter
 # Links
 
 * Javadoc
-    * [Discretize (supervised)](http://weka.sourceforge.net/doc.stable/weka/filters/supervised/attribute/Discretize.html)
-    * [Discretize (unsupervised)](http://weka.sourceforge.net/doc.stable/weka/filters/unsupervised/attribute/Discretize.html)
+    * [Discretize (supervised)](https://weka.sourceforge.io/doc.stable-3-8/weka/filters/supervised/attribute/Discretize.html)
+    * [Discretize (unsupervised)](https://weka.sourceforge.io/doc.stable-3-8/weka/filters/unsupervised/attribute/Discretize.html)

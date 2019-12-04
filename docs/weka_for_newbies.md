@@ -69,8 +69,8 @@ For any addition to this page, you can either create an account & edit it yourse
 * <https://waikato.github.io/weka-wiki/use_weka_in_your_java_code/>
 * APIs
 	* <https://waikato.github.io/weka-wiki/use_weka_in_your_java_code/>
-	* <http://weka.sourceforge.net/doc.stable/>
-	* <http://weka.sourceforge.net/doc.dev/>
+	* <https://weka.sourceforge.io/doc.stable-3-8/>
+	* <https://weka.sourceforge.io/doc.dev/>
 * Code Examples
     * A Simple Text Classifier in Java with WEKA presents and discuses two little programs as examples of how to integrate WEKA into your Java code for text mining: <http://jmgomezhidalgo.blogspot.com.es/2013/04/a-simple-text-classifier-in-java-with.html>
 	* Language Identification as Text Classification with WEKA explains how to build an automated language guesser for texts as a complete example of a Text Mining process with WEKA, and in order to demonstrate a more advanced usage of the StringToWordVector class: <http://jmgomezhidalgo.blogspot.com.es/2013/05/language-identification-as-text.html>
@@ -91,7 +91,7 @@ For any addition to this page, you can either create an account & edit it yourse
 	* Weka Configuration Files
 		* <https://waikato.github.io/weka-wiki/weka_gui_explorer_explorer.props>
 	* Weka & Excel (you should really use "flat" files like CSVs!)
-		* <http://weka.sourceforge.net/packageMetaData/WekaExcel/index.html>
+		* <https://weka.sourceforge.io/packageMetaData/WekaExcel/index.html>
 	* Weka & CSV
 		* <https://waikato.github.io/weka-wiki/faqs/csv_file_conversion/>
 		* <https://waikato.github.io/weka-wiki/converting_csv_to_arff/>

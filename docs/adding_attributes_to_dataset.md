@@ -1,4 +1,4 @@
-The following example class adds a *nominal* and a *numeric* attribute to the dataset identified by the filename given as first parameter. The second parameter defines whether the data is manipulated via the [Add](http://weka.sourceforge.net/doc.dev/weka/filters/unsupervised/attribute/Add.html) filter (= `filter`) or through the Weka API directly (= `java`).
+The following example class adds a *nominal* and a *numeric* attribute to the dataset identified by the filename given as first parameter. The second parameter defines whether the data is manipulated via the [Add](https://weka.sourceforge.io/doc.stable-3-8/weka/filters/unsupervised/attribute/Add.html) filter (= `filter`) or through the Weka API directly (= `java`).
 
 Usage:
 

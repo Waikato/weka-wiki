@@ -4,7 +4,7 @@ After discretizing an attribute you might want to rename the values of the newly
 ```text
  '1-15','16-18','29-100'
 ```
-You can use the `renameAttributeValue(...)` method of the `weka.core.Instances` class (see [API](http://weka.sourceforge.net/doc.stable/weka/core/Instances.html)) to rename this values into, e.g., 0, 1 and 2. Here's a code snippet how to do this (`arff` is an Instances object, `att` is an attribute of the same instances object):
+You can use the `renameAttributeValue(...)` method of the `weka.core.Instances` class (see [API](https:/weka.sourceforge.io/doc.stable/weka/core/Instances.html)) to rename this values into, e.g., 0, 1 and 2. Here's a code snippet how to do this (`arff` is an Instances object, `att` is an attribute of the same instances object):
 
 ```java
  for (int n = 0; n < att.numValues(); n++) {

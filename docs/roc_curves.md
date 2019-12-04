@@ -3,7 +3,7 @@
 # General
 Weka just varies the threshold on the class probability estimates in each case. What does that mean? In case of a classifier that does not return proper class probabilities (like SMO with the -M option, or IB1), you will end up with only two points in the curve. Using a classifier that returns proper distributions, like BayesNet, J48 or SMO with -M option for building logistic models, you will get nice curves.
 
-The class used for calculating the ROC and also the [AUC](auc.md) (= area under the curve) is [weka.classifiers.evaluation.ThresholdCurve](http://weka.sourceforge.net/doc.dev/weka/classifiers/evaluation/ThresholdCurve.html).
+The class used for calculating the ROC and also the [AUC](auc.md) (= area under the curve) is [weka.classifiers.evaluation.ThresholdCurve](https://weka.sourceforge.io/doc.stable-3-8/weka/classifiers/evaluation/ThresholdCurve.html).
 
 # Commandline
 You can output the data for the ROC curves with the following options:
@@ -61,5 +61,5 @@ See [Plotting multiple ROC curves](plotting_multiple_roc_curves.md).
 
 # Links
 * [WikiPedia article on ROC curve](http://en.wikipedia.org/wiki/ROC_Curve)
-* [weka.classifiers.evaluation.ThresholdCurve](http://weka.sourceforge.net/doc.dev/weka/classifiers/evaluation/ThresholdCurve.html)
+* [weka.classifiers.evaluation.ThresholdCurve](https://weka.sourceforge.io/doc.stable-3-8/weka/classifiers/evaluation/ThresholdCurve.html)
 

@@ -56,7 +56,7 @@ Desired output:
  not_sunny,71,91,TRUE,no
 ```
 
-The Weka filter [NominalToBinary](http://weka.sourceforge.net/doc.dev/weka/filters/unsupervised/attribute/NominalToBinary.html) cannot be used directly, since it generates a new attribute for each value of the nominal attribute. As a postprocessing step one could delete all the attributes that are of no interest, but this is quite cumbersome.
+The Weka filter [NominalToBinary](https://weka.sourceforge.io/doc.stable-3-8/weka/filters/unsupervised/attribute/NominalToBinary.html) cannot be used directly, since it generates a new attribute for each value of the nominal attribute. As a postprocessing step one could delete all the attributes that are of no interest, but this is quite cumbersome.
 
 The [Binarize.java](files/Binarize.java) class on the other hand generates directly several [ARFF](formats_and_processing/arff.md) out of a given one in the desired format.
 
