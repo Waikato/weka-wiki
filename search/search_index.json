@@ -461,6 +461,71 @@
             "title": "Document classification"
         },
         {
+            "location": "/downloading_weka/",
+            "text": "Downloading and installing Weka\n\n\nThere are two versions of Weka: Weka 3.8 is the latest stable version\nand Weka 3.9 is the development version. New releases of these two versions\nare normally made once or twice a year. For the bleeding edge, it is\nalso possible to download nightly snapshots of these two versions. \n\n\nThe stable version receives only bug fixes and feature upgrades that\ndo not break compatibility with its earlier releases, while the\ndevelopment version may receive new features that break compatibility\nwith its earlier releases.\n\n\nWeka 3.8 and 3.9 feature a package management system that makes it\neasy for the Weka community to add new functionality to Weka. The\npackage management system requires an internet connection in order to\ndownload and install packages.\n\n\nSnapshots\n\n\nEvery night, a snapshot of the Subversion repository with the Weka\nsource code is taken, compiled, and put together in ZIP files. This\nhappens for both the development branch of the software and the stable\nbranch.  Those who want the latest bug fixes before the next official\nrelease is made can download these\n\nsnapshots\n.\n\n\nStable version\n\n\nWeka 3.8 is the latest stable version of Weka. This branch of Weka\nonly receives bug fixes and upgrades that do not break compatibility\nwith earlier 3.8 releases, although major new features may become\navailable in packages.  There are different options for downloading\nand installing it on your system:\n\n\nWindows\n\n\n\n\n\n\nClick\n\nhere\n\nto download a self-extracting executable for 64-bit Windows that\nincludes Oracle's 64-bit Java VM 1.8 (weka-3-8-3jre-x64.exe; 120.3 MB)\n\n\n\n\n\n\nClick\n\nhere\n to\ndownload a self-extracting executable for 64-bit Windows without a\nJava VM (weka-3-8-3-x64.exe; 51 MB)\n\n\n\n\n\n\nClick\n\nhere\n to\ndownload a self-extracting executable for 32-bit Windows that includes\nOracle's 32-bit Java VM 1.8 (weka-3-8-3jre.exe; 113.4 MB)\n\n\n\n\n\n\nClick \nhere\n\nto download a self-extracting executable for 32-bit Windows without a\nJava VM (weka-3-8-3.exe; 51 MB)\n\n\n\n\n\n\nThese executables will install Weka in your Program Menu.\nDownload the version without the Java VM if you already have Java 1.8 (or\nlater) on your system.\n\n\nMac OS\n\n\n\n\nClick\n\nhere\n\nto download a disk image for Mac OS that contains a\nMac application including Amazon's Corretto Java 1.8\nJVM (weka-3-8-3-corretto-jvm.dmg; 112.9 MB)\n\n\n\n\nOther platforms (Linux, etc.)\n\n\n\n\nClick \nhere\n\n to download a zip archive containing Weka (weka-3-8-3.zip; 51.4 MB)\n\n\n\n\nFirst unzip the zip file. This will create a new directory called\nweka-3-8-3. To run Weka, change into that directory and type\n\n\njava -jar weka.jar\n\n\n\n\nNote that Java needs to be installed on your system for this to\nwork. Also note that using \n-jar\n will override your current\nCLASSPATH variable and only use the \nweka.jar\n.\n\n\nDeveloper version\n\n\nThis is the main development trunk of Weka and continues from the stable Weka 3.8 code line. It\nmay receive new features that break backwards compatibility.\n\n\nWindows\n\n\n\n\n\n\nClick\n\nhere\n\nto download a self-extracting executable for 64-bit Windows that\nincludes Oracle's 64-bit Java VM 1.8 (weka-3-9-3jre-x64.exe; 120.1 MB)\n\n\n\n\n\n\nClick\n\nhere\n to\ndownload a self-extracting executable for 64-bit Windows without a\nJava VM (weka-3-9-3-x64.exe; 50.9 MB)\n\n\n\n\n\n\nClick\n\nhere\n to\ndownload a self-extracting executable for 32-bit Windows that includes\nOracle's 32-bit Java VM 1.8 (weka-3-9-3jre.exe; 113.2 MB)\n\n\n\n\n\n\nClick \nhere\n\nto download a self-extracting executable for 32-bit Windows without a\nJava VM (weka-3-9-3.exe; 50.9 MB)\n\n\n\n\n\n\nThese executables will install Weka in your Program Menu.\nDownload the version without the Java VM if you already have Java 1.8 (or\nlater) on your system.\n\n\nMac OS\n\n\n\n\nClick\n\nhere\n\nto download a disk image for Mac OS that contains a\nMac application including Amazon's Corretto Java 1.8\nJVM (weka-3-9-3-corretto-jvm.dmg; 142.1 MB)\n\n\n\n\nOther platforms (Linux, etc.)\n\n\n\n\nClick \nhere\n\n to download a zip archive containing Weka (weka-3-9-3.zip; 51.3 MB)\n\n\n\n\nFirst unzip the zip file. This will create a new directory called\nweka-3-9-3. To run Weka, change into that directory and type\n\n\njava -jar weka.jar\n\n\n\n\nNote that Java needs to be installed on your system for this to\nwork. Also note, that using \n-jar\n will override your current\nCLASSPATH variable and only use the \nweka.jar\n.\n\n\nOld versions\n\n\nAll old versions of Weka are available from the \nSourceforge\nwebsite\n.\n\n\nUpgrading from Weka 3.7\n\n\nIn case you are upgrading an existing Weka 3.7 installation, if the\nWeka 3.8 package manager does not start up, please delete the file\n\ninstalledPackageCache.ser\n in the \npackages\n folder that resides in\nthe \nwekafiles\n folder in your user home. Also, serialized Weka models\ncreated in 3.7 are incompatible with 3.8. The \nmodel\nmigrator\n\ntool can migrate some models to 3.8 (a known\nexception is RandomForest). Usage is as follows:\n\n\njava -cp <path to modelMigrator.jar>:<path to weka.jar> weka.core.ModelMigrator -i <path to old serialized weka mode> -o <upgraded model file name>",
+            "title": "Downloading and installing Weka"
+        },
+        {
+            "location": "/downloading_weka/#downloading-and-installing-weka",
+            "text": "There are two versions of Weka: Weka 3.8 is the latest stable version\nand Weka 3.9 is the development version. New releases of these two versions\nare normally made once or twice a year. For the bleeding edge, it is\nalso possible to download nightly snapshots of these two versions.   The stable version receives only bug fixes and feature upgrades that\ndo not break compatibility with its earlier releases, while the\ndevelopment version may receive new features that break compatibility\nwith its earlier releases.  Weka 3.8 and 3.9 feature a package management system that makes it\neasy for the Weka community to add new functionality to Weka. The\npackage management system requires an internet connection in order to\ndownload and install packages.",
+            "title": "Downloading and installing Weka"
+        },
+        {
+            "location": "/downloading_weka/#snapshots",
+            "text": "Every night, a snapshot of the Subversion repository with the Weka\nsource code is taken, compiled, and put together in ZIP files. This\nhappens for both the development branch of the software and the stable\nbranch.  Those who want the latest bug fixes before the next official\nrelease is made can download these snapshots .",
+            "title": "Snapshots"
+        },
+        {
+            "location": "/downloading_weka/#stable-version",
+            "text": "Weka 3.8 is the latest stable version of Weka. This branch of Weka\nonly receives bug fixes and upgrades that do not break compatibility\nwith earlier 3.8 releases, although major new features may become\navailable in packages.  There are different options for downloading\nand installing it on your system:",
+            "title": "Stable version"
+        },
+        {
+            "location": "/downloading_weka/#windows",
+            "text": "Click here \nto download a self-extracting executable for 64-bit Windows that\nincludes Oracle's 64-bit Java VM 1.8 (weka-3-8-3jre-x64.exe; 120.3 MB)    Click here  to\ndownload a self-extracting executable for 64-bit Windows without a\nJava VM (weka-3-8-3-x64.exe; 51 MB)    Click here  to\ndownload a self-extracting executable for 32-bit Windows that includes\nOracle's 32-bit Java VM 1.8 (weka-3-8-3jre.exe; 113.4 MB)    Click  here \nto download a self-extracting executable for 32-bit Windows without a\nJava VM (weka-3-8-3.exe; 51 MB)    These executables will install Weka in your Program Menu.\nDownload the version without the Java VM if you already have Java 1.8 (or\nlater) on your system.",
+            "title": "Windows"
+        },
+        {
+            "location": "/downloading_weka/#mac-os",
+            "text": "Click here \nto download a disk image for Mac OS that contains a\nMac application including Amazon's Corretto Java 1.8\nJVM (weka-3-8-3-corretto-jvm.dmg; 112.9 MB)",
+            "title": "Mac OS"
+        },
+        {
+            "location": "/downloading_weka/#other-platforms-linux-etc",
+            "text": "Click  here \n to download a zip archive containing Weka (weka-3-8-3.zip; 51.4 MB)   First unzip the zip file. This will create a new directory called\nweka-3-8-3. To run Weka, change into that directory and type  java -jar weka.jar  Note that Java needs to be installed on your system for this to\nwork. Also note that using  -jar  will override your current\nCLASSPATH variable and only use the  weka.jar .",
+            "title": "Other platforms (Linux, etc.)"
+        },
+        {
+            "location": "/downloading_weka/#developer-version",
+            "text": "This is the main development trunk of Weka and continues from the stable Weka 3.8 code line. It\nmay receive new features that break backwards compatibility.",
+            "title": "Developer version"
+        },
+        {
+            "location": "/downloading_weka/#windows_1",
+            "text": "Click here \nto download a self-extracting executable for 64-bit Windows that\nincludes Oracle's 64-bit Java VM 1.8 (weka-3-9-3jre-x64.exe; 120.1 MB)    Click here  to\ndownload a self-extracting executable for 64-bit Windows without a\nJava VM (weka-3-9-3-x64.exe; 50.9 MB)    Click here  to\ndownload a self-extracting executable for 32-bit Windows that includes\nOracle's 32-bit Java VM 1.8 (weka-3-9-3jre.exe; 113.2 MB)    Click  here \nto download a self-extracting executable for 32-bit Windows without a\nJava VM (weka-3-9-3.exe; 50.9 MB)    These executables will install Weka in your Program Menu.\nDownload the version without the Java VM if you already have Java 1.8 (or\nlater) on your system.",
+            "title": "Windows"
+        },
+        {
+            "location": "/downloading_weka/#mac-os_1",
+            "text": "Click here \nto download a disk image for Mac OS that contains a\nMac application including Amazon's Corretto Java 1.8\nJVM (weka-3-9-3-corretto-jvm.dmg; 142.1 MB)",
+            "title": "Mac OS"
+        },
+        {
+            "location": "/downloading_weka/#other-platforms-linux-etc_1",
+            "text": "Click  here \n to download a zip archive containing Weka (weka-3-9-3.zip; 51.3 MB)   First unzip the zip file. This will create a new directory called\nweka-3-9-3. To run Weka, change into that directory and type  java -jar weka.jar  Note that Java needs to be installed on your system for this to\nwork. Also note, that using  -jar  will override your current\nCLASSPATH variable and only use the  weka.jar .",
+            "title": "Other platforms (Linux, etc.)"
+        },
+        {
+            "location": "/downloading_weka/#old-versions",
+            "text": "All old versions of Weka are available from the  Sourceforge\nwebsite .",
+            "title": "Old versions"
+        },
+        {
+            "location": "/downloading_weka/#upgrading-from-weka-37",
+            "text": "In case you are upgrading an existing Weka 3.7 installation, if the\nWeka 3.8 package manager does not start up, please delete the file installedPackageCache.ser  in the  packages  folder that resides in\nthe  wekafiles  folder in your user home. Also, serialized Weka models\ncreated in 3.7 are incompatible with 3.8. The  model\nmigrator \ntool can migrate some models to 3.8 (a known\nexception is RandomForest). Usage is as follows:  java -cp <path to modelMigrator.jar>:<path to weka.jar> weka.core.ModelMigrator -i <path to old serialized weka mode> -o <upgraded model file name>",
+            "title": "Upgrading from Weka 3.7"
+        },
+        {
             "location": "/ensemble_selection/",
             "text": "Notes\n\n\n\n\nThis bug has now been fixed. (12/2014)\n\n\nThere is a bug in the code to build a library -- trying to build any model specification with three layers (e.g., Bagging a REPTree) causes the form to freeze up and/or crash.\n\n\n\n\n\n\n\n\nThe documentation on how to run from the command line is outdated. Some corrections:\n\n\n\n\nThe \"-D\" option no longer exists.\n\n\nThe command shown for training a library from the command line:\n\n\n\n\n\n\njava weka.classifiers.meta.EnsembleSelection -no-cv -v -L path/to/your/mode/list/file.model.xml -W /path/to/your/working/directory -A library -X 5 -S 1 -O -t yourTrainingInstances.arff\n\n\nfails for me with an exception that \"Folds 1 and 5 are not equal.\" A command line that works is to set the folds to 1:\n\n\njava weka.classifiers.meta.EnsembleSelection -no-cv -v -L path/to/your/mode/list/file.model.xml -W /path/to/your/working/directory -A library -X 1 -S 1 -O -t yourTrainingInstances.arff\n\n\n\n\n\n\n\n\nLinks\n\n\n\n\nEnsemble_selection.pdf\n - Documentation on how to use Ensemble Selection in Weka\n\n\nEnsemble Selection from Libraries of Models, ICML'04",
             "title": "Notes"

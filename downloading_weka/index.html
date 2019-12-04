@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Batch filtering - Weka Wiki</title>
+  <title>Downloading and installing Weka - Weka Wiki</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
@@ -17,9 +17,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Batch filtering";
-    var mkdocs_page_input_path = "batch_filtering.md";
-    var mkdocs_page_url = "/batch_filtering/";
+    var mkdocs_page_name = "Downloading and installing Weka";
+    var mkdocs_page_input_path = "downloading_weka.md";
+    var mkdocs_page_url = "/downloading_weka/";
   </script>
   
   <script src="../js/jquery-2.1.1.min.js"></script>
@@ -77,15 +77,9 @@
     <a class="" href="../auc/">Auc</a>
 	    </li>
           
-            <li class="toctree-l1 current">
+            <li class="toctree-l1">
 		
-    <a class="current" href="./">Batch filtering</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l2"><a href="#see-also">See also</a></li>
-    
-
-    </ul>
+    <a class="" href="../batch_filtering/">Batch filtering</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -110,7 +104,7 @@
           
             <li class="toctree-l1">
 		
-    <a class="" href="../command_redirection/">Command redirection</a>
+    <a class="" href="../command_redirection/">Console</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -120,7 +114,7 @@
           
             <li class="toctree-l1">
 		
-    <a class="" href="../cost_matrix/">Cost matrix</a>
+    <a class="" href="../cost_matrix/">Format</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -135,7 +129,7 @@
           
             <li class="toctree-l1">
 		
-    <a class="" href="../databases/">Databases</a>
+    <a class="" href="../databases/">CLASSPATH</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -153,9 +147,53 @@
     <a class="" href="../document_classification/">Document classification</a>
 	    </li>
           
-            <li class="toctree-l1">
+            <li class="toctree-l1 current">
 		
-    <a class="" href="../downloading_weka/">Downloading weka</a>
+    <a class="current" href="./">Downloading and installing Weka</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#downloading-and-installing-weka">Downloading and installing Weka</a></li>
+    
+
+    <li class="toctree-l2"><a href="#snapshots">Snapshots</a></li>
+    
+
+    <li class="toctree-l2"><a href="#stable-version">Stable version</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#windows">Windows</a></li>
+        
+            <li><a class="toctree-l3" href="#mac-os">Mac OS</a></li>
+        
+            <li><a class="toctree-l3" href="#other-platforms-linux-etc">Other platforms (Linux, etc.)</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l2"><a href="#developer-version">Developer version</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#windows_1">Windows</a></li>
+        
+            <li><a class="toctree-l3" href="#mac-os_1">Mac OS</a></li>
+        
+            <li><a class="toctree-l3" href="#other-platforms-linux-etc_1">Other platforms (Linux, etc.)</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l2"><a href="#old-versions">Old versions</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#upgrading-from-weka-37">Upgrading from Weka 3.7</a></li>
+        
+        </ul>
+    
+
+    </ul>
 	    </li>
           
             <li class="toctree-l1">
@@ -1150,7 +1188,7 @@
     
       
     
-    <li>Batch filtering</li>
+    <li>Downloading and installing Weka</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -1160,23 +1198,149 @@
           <div role="main">
             <div class="section">
               
-                <p><em>Batch filtering</em> is used if a second dataset, normally the test set, needs to be processed with the same statistics as the the first dataset, normally the training set.</p>
-<p>For example, performing standardization with the <code>Standardize</code> filter on two datasets separately will most certainly create two differently standardized output files, since the mean and the standard deviation are based on the input data (and those will differ if the datasets are different). The same applies to the <code>StringToWordVector</code>: here the word dictionary will change, since word occurrences will differ in training and test set. The generated output will be two incompatible files.</p>
-<p>In order to create compatible train and test set, batch filtering is necessary. Here, the first input/output pair (<code>-i</code>/<code>-o</code>) initializes the filter's statistics and the second input/output pair (<code>-r</code>/<code>-s</code>) gets processed according to those statistics. To enable batch filtering, one has to provide the additional parameter <strong><code>-b</code></strong> on the commandline.</p>
-<p>Here is an example Java call:</p>
-<pre><code> java weka.filters.unsupervised.attribute.Standardize \
-   -b \
-   -i train.arff \
-   -o train_std.arff \
-   -r test.arff \
-   -s test_std.arff
+                <h1 id="downloading-and-installing-weka">Downloading and installing Weka</h1>
+<p>There are two versions of Weka: Weka 3.8 is the latest stable version
+and Weka 3.9 is the development version. New releases of these two versions
+are normally made once or twice a year. For the bleeding edge, it is
+also possible to download nightly snapshots of these two versions. </p>
+<p>The stable version receives only bug fixes and feature upgrades that
+do not break compatibility with its earlier releases, while the
+development version may receive new features that break compatibility
+with its earlier releases.</p>
+<p>Weka 3.8 and 3.9 feature a package management system that makes it
+easy for the Weka community to add new functionality to Weka. The
+package management system requires an internet connection in order to
+download and install packages.</p>
+<h1 id="snapshots">Snapshots</h1>
+<p>Every night, a snapshot of the Subversion repository with the Weka
+source code is taken, compiled, and put together in ZIP files. This
+happens for both the development branch of the software and the stable
+branch.  Those who want the latest bug fixes before the next official
+release is made can download these
+<a href="https://www.cs.waikato.ac.nz/~ml/weka/snapshots/weka_snapshots.html">snapshots</a>.</p>
+<h1 id="stable-version">Stable version</h1>
+<p>Weka 3.8 is the latest stable version of Weka. This branch of Weka
+only receives bug fixes and upgrades that do not break compatibility
+with earlier 3.8 releases, although major new features may become
+available in packages.  There are different options for downloading
+and installing it on your system:</p>
+<h3 id="windows">Windows</h3>
+<ul>
+<li>
+<p>Click
+<a href="https://prdownloads.sourceforge.net/weka/weka-3-8-3jre-x64.exe">here</a>
+to download a self-extracting executable for 64-bit Windows that
+includes Oracle's 64-bit Java VM 1.8 (weka-3-8-3jre-x64.exe; 120.3 MB)</p>
+</li>
+<li>
+<p>Click
+<a href="https://prdownloads.sourceforge.net/weka/weka-3-8-3-x64.exe">here</a> to
+download a self-extracting executable for 64-bit Windows without a
+Java VM (weka-3-8-3-x64.exe; 51 MB)</p>
+</li>
+<li>
+<p>Click
+<a href="https://prdownloads.sourceforge.net/weka/weka-3-8-3jre.exe">here</a> to
+download a self-extracting executable for 32-bit Windows that includes
+Oracle's 32-bit Java VM 1.8 (weka-3-8-3jre.exe; 113.4 MB)</p>
+</li>
+<li>
+<p>Click <a href="https://prdownloads.sourceforge.net/weka/weka-3-8-3.exe">here</a>
+to download a self-extracting executable for 32-bit Windows without a
+Java VM (weka-3-8-3.exe; 51 MB)</p>
+</li>
+</ul>
+<p>These executables will install Weka in your Program Menu.
+Download the version without the Java VM if you already have Java 1.8 (or
+later) on your system.</p>
+<h3 id="mac-os">Mac OS</h3>
+<ul>
+<li>Click
+<a href="https://prdownloads.sourceforge.net/weka/weka-3-8-3-corretto-jvm.dmg">here</a>
+to download a disk image for Mac OS that contains a
+Mac application including Amazon's Corretto Java 1.8
+JVM (weka-3-8-3-corretto-jvm.dmg; 112.9 MB)</li>
+</ul>
+<h3 id="other-platforms-linux-etc">Other platforms (Linux, etc.)</h3>
+<ul>
+<li>Click <a href="https://prdownloads.sourceforge.net/weka/weka-3-8-3.zip">here</a>
+ to download a zip archive containing Weka (weka-3-8-3.zip; 51.4 MB)</li>
+</ul>
+<p>First unzip the zip file. This will create a new directory called
+weka-3-8-3. To run Weka, change into that directory and type</p>
+<pre><code class="bash">java -jar weka.jar
 </code></pre>
 
-<p><strong>Note:</strong> The commandline outlined above is for a Linux/Unix bash (the backslash tells the shell that the command isn't finished yet and continues on the next line). In case of Windows or the SimpleCLI, just remove those backslashes and put everything on one line.</p>
-<h1 id="see-also">See also</h1>
+<p>Note that Java needs to be installed on your system for this to
+work. Also note that using <code>-jar</code> will override your current
+CLASSPATH variable and only use the <code>weka.jar</code>.</p>
+<h1 id="developer-version">Developer version</h1>
+<p>This is the main development trunk of Weka and continues from the stable Weka 3.8 code line. It
+may receive new features that break backwards compatibility.</p>
+<h3 id="windows_1">Windows</h3>
 <ul>
-<li>See section <a href="../use_weka_in_your_java_code/#batch-filtering">Batch filtering</a> in the article <a href="../use_weka_in_your_java_code/">Use Weka in your Java code</a>, in case you need to perform batch filtering from within your own code</li>
+<li>
+<p>Click
+<a href="https://prdownloads.sourceforge.net/weka/weka-3-9-3jre-x64.exe">here</a>
+to download a self-extracting executable for 64-bit Windows that
+includes Oracle's 64-bit Java VM 1.8 (weka-3-9-3jre-x64.exe; 120.1 MB)</p>
+</li>
+<li>
+<p>Click
+<a href="https://prdownloads.sourceforge.net/weka/weka-3-9-3-x64.exe">here</a> to
+download a self-extracting executable for 64-bit Windows without a
+Java VM (weka-3-9-3-x64.exe; 50.9 MB)</p>
+</li>
+<li>
+<p>Click
+<a href="https://prdownloads.sourceforge.net/weka/weka-3-9-3jre.exe">here</a> to
+download a self-extracting executable for 32-bit Windows that includes
+Oracle's 32-bit Java VM 1.8 (weka-3-9-3jre.exe; 113.2 MB)</p>
+</li>
+<li>
+<p>Click <a href="https://prdownloads.sourceforge.net/weka/weka-3-9-3.exe">here</a>
+to download a self-extracting executable for 32-bit Windows without a
+Java VM (weka-3-9-3.exe; 50.9 MB)</p>
+</li>
 </ul>
+<p>These executables will install Weka in your Program Menu.
+Download the version without the Java VM if you already have Java 1.8 (or
+later) on your system.</p>
+<h3 id="mac-os_1">Mac OS</h3>
+<ul>
+<li>Click
+<a href="https://prdownloads.sourceforge.net/weka/weka-3-9-3-corretto-jvm.dmg">here</a>
+to download a disk image for Mac OS that contains a
+Mac application including Amazon's Corretto Java 1.8
+JVM (weka-3-9-3-corretto-jvm.dmg; 142.1 MB)</li>
+</ul>
+<h3 id="other-platforms-linux-etc_1">Other platforms (Linux, etc.)</h3>
+<ul>
+<li>Click <a href="https://prdownloads.sourceforge.net/weka/weka-3-9-3.zip">here</a>
+ to download a zip archive containing Weka (weka-3-9-3.zip; 51.3 MB)</li>
+</ul>
+<p>First unzip the zip file. This will create a new directory called
+weka-3-9-3. To run Weka, change into that directory and type</p>
+<pre><code class="bash">java -jar weka.jar
+</code></pre>
+
+<p>Note that Java needs to be installed on your system for this to
+work. Also note, that using <code>-jar</code> will override your current
+CLASSPATH variable and only use the <code>weka.jar</code>.</p>
+<h1 id="old-versions">Old versions</h1>
+<p>All old versions of Weka are available from the <a href="https://sourceforge.net/projects/weka/">Sourceforge
+website</a>.</p>
+<h3 id="upgrading-from-weka-37">Upgrading from Weka 3.7</h3>
+<p>In case you are upgrading an existing Weka 3.7 installation, if the
+Weka 3.8 package manager does not start up, please delete the file
+<code>installedPackageCache.ser</code> in the <code>packages</code> folder that resides in
+the <code>wekafiles</code> folder in your user home. Also, serialized Weka models
+created in 3.7 are incompatible with 3.8. The <a href="https://www.cs.waikato.ac.nz/~ml/weka/modelMigrator.jar">model
+migrator</a>
+tool can migrate some models to 3.8 (a known
+exception is RandomForest). Usage is as follows:</p>
+<pre><code class="bash">java -cp &lt;path to modelMigrator.jar&gt;:&lt;path to weka.jar&gt; weka.core.ModelMigrator -i &lt;path to old serialized weka mode&gt; -o &lt;upgraded model file name&gt;
+</code></pre>
               
             </div>
           </div>
@@ -1184,10 +1348,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../binarize_attribute/" class="btn btn-neutral float-right" title="Binarize attribute">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../ensemble_selection/" class="btn btn-neutral float-right" title="Ensemble selection">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../auc/" class="btn btn-neutral" title="Auc"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../document_classification/" class="btn btn-neutral" title="Document classification"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -1213,10 +1377,10 @@
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../auc/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../document_classification/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../binarize_attribute/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../ensemble_selection/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
