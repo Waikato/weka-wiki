@@ -41,6 +41,11 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://github.com/Waikato/weka-wiki/citing_weka/</loc>
+     <lastmod>2019-12-04</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://github.com/Waikato/weka-wiki/classifying_large_datasets/</loc>
      <lastmod>2019-12-04</lastmod>
      <changefreq>daily</changefreq>
@@ -97,6 +102,11 @@
     </url>
     <url>
      <loc>https://github.com/Waikato/weka-wiki/document_classification/</loc>
+     <lastmod>2019-12-04</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://github.com/Waikato/weka-wiki/documentation/</loc>
      <lastmod>2019-12-04</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -186,6 +196,11 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://github.com/Waikato/weka-wiki/getting_help/</loc>
+     <lastmod>2019-12-04</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://github.com/Waikato/weka-wiki/gpgpu/</loc>
      <lastmod>2019-12-04</lastmod>
      <changefreq>daily</changefreq>
@@ -257,6 +272,11 @@
     </url>
     <url>
      <loc>https://github.com/Waikato/weka-wiki/lib_svm/</loc>
+     <lastmod>2019-12-04</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://github.com/Waikato/weka-wiki/literature/</loc>
      <lastmod>2019-12-04</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -347,6 +367,11 @@
     </url>
     <url>
      <loc>https://github.com/Waikato/weka-wiki/removing_misclassified_instances_from_dataset/</loc>
+     <lastmod>2019-12-04</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://github.com/Waikato/weka-wiki/requirements/</loc>
      <lastmod>2019-12-04</lastmod>
      <changefreq>daily</changefreq>
     </url>

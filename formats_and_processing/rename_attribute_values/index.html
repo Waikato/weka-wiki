@@ -89,6 +89,11 @@
           
             <li class="toctree-l1">
 		
+    <a class="" href="../../citing_weka/">Citing weka</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
     <a class="" href="../../classifying_large_datasets/">Classifying large datasets</a>
 	    </li>
           
@@ -149,7 +154,12 @@
           
             <li class="toctree-l1">
 		
-    <a class="" href="../../downloading_weka/">Downloading and installing Weka</a>
+    <a class="" href="../../documentation/">Documentation</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../downloading_weka/">Downloading weka</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -234,6 +244,11 @@
           
             <li class="toctree-l1">
 		
+    <a class="" href="../../getting_help/">Getting help</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
     <a class="" href="../../gpgpu/">Gpgpu</a>
 	    </li>
           
@@ -305,6 +320,11 @@
             <li class="toctree-l1">
 		
     <a class="" href="../../lib_svm/">Lib svm</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../literature/">Literature</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -395,6 +415,11 @@
             <li class="toctree-l1">
 		
     <a class="" href="../../removing_misclassified_instances_from_dataset/">Removing misclassified instances from dataset</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../requirements/">Requirements</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -1171,7 +1196,7 @@
 <pre><code class="text"> '1-15','16-18','29-100'
 </code></pre>
 
-<p>You can use the <code>renameAttributeValue(...)</code> method of the <code>weka.core.Instances</code> class (see <a href="http://weka.sourceforge.net/doc.stable/weka/core/Instances.html">API</a>) to rename this values into, e.g., 0, 1 and 2. Here's a code snippet how to do this (<code>arff</code> is an Instances object, <code>att</code> is an attribute of the same instances object):</p>
+<p>You can use the <code>renameAttributeValue(...)</code> method of the <code>weka.core.Instances</code> class (see <a href="https:/weka.sourceforge.io/doc.stable/weka/core/Instances.html">API</a>) to rename this values into, e.g., 0, 1 and 2. Here's a code snippet how to do this (<code>arff</code> is an Instances object, <code>att</code> is an attribute of the same instances object):</p>
 <pre><code class="java"> for (int n = 0; n &lt; att.numValues(); n++) {
     arff.renameAttributeValue(att, att.value(n), &quot;&quot; + n);
 </code></pre>

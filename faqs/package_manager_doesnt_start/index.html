@@ -89,6 +89,11 @@
           
             <li class="toctree-l1">
 		
+    <a class="" href="../../citing_weka/">Citing weka</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
     <a class="" href="../../classifying_large_datasets/">Classifying large datasets</a>
 	    </li>
           
@@ -149,7 +154,12 @@
           
             <li class="toctree-l1">
 		
-    <a class="" href="../../downloading_weka/">Downloading and installing Weka</a>
+    <a class="" href="../../documentation/">Documentation</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../downloading_weka/">Downloading weka</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -234,6 +244,11 @@
           
             <li class="toctree-l1">
 		
+    <a class="" href="../../getting_help/">Getting help</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
     <a class="" href="../../gpgpu/">Gpgpu</a>
 	    </li>
           
@@ -305,6 +320,11 @@
             <li class="toctree-l1">
 		
     <a class="" href="../../lib_svm/">Lib svm</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../literature/">Literature</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -395,6 +415,11 @@
             <li class="toctree-l1">
 		
     <a class="" href="../../removing_misclassified_instances_from_dataset/">Removing misclassified instances from dataset</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../requirements/">Requirements</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -1176,12 +1201,12 @@
 </code></pre>
 
 <p>Then, you can download package .zip files manually via your web browser, by navigating to</p>
-<p><a href="http://weka.sourceforge.net/packageMetaData/">http://weka.sourceforge.net/packageMetaData/</a></p>
+<p><a href="https://weka.sourceforge.io/packageMetaData/">https://weka.sourceforge.io/packageMetaData/</a></p>
 <p>clicking on the link for the package you want to install, then clicking on <em>Latest</em>, and finally clicking on the URL given next to <em>PackageURL</em>.</p>
 <p>Once you have downloaded the package .zip file, open the WEKA package manager, and click on the <em>File/URL</em> button in the top-right corner of the package manager window (in the <em>Unofficial</em> panel). Then navigate to your package .zip file and install it.</p>
 <p>If you are running Weka in <em>offline</em> mode, and the packages you are installing have some dependencies on one another, then there can still be some problems due to Weka not being able to verify the dependencies by checking against the central repository. This is usually a problem in the case where Weka has never been able to connect to the internet and thus has not downloaded and established a cache of the central package metadata repository. Fortunately there is a simple work-around to this, as long as you can access the internet via a web browser:</p>
 <ol>
-<li>Using your web browser, download <a href="http://weka.sourceforge.net/packageMetaData/repo.zip">http://weka.sourceforge.net/packageMetaData/repo.zip</a></li>
+<li>Using your web browser, download <a href="https://weka.sourceforge.io/packageMetaData/repo.zip">https://weka.sourceforge.io/packageMetaData/repo.zip</a></li>
 <li>If it doesn't already exist, create the directory <code>~/wekafiles/repCache</code></li>
 <li>Copy the downloaded <code>repo.zip</code> into <code>~/wekafiles/repCache</code> and unzip it there</li>
 <li>Start Weka (use the <code>weka.packageManager.offline=true</code> property to speed up the startup process; see [http://weka.wikispaces.com/How+do+I+use+the+package+manager%3F#Package%20manager%20property%20file] for info)</li>

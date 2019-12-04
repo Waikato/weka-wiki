@@ -89,6 +89,11 @@
           
             <li class="toctree-l1">
 		
+    <a class="" href="../citing_weka/">Citing weka</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
     <a class="" href="../classifying_large_datasets/">Classifying large datasets</a>
 	    </li>
           
@@ -149,7 +154,12 @@
           
             <li class="toctree-l1">
 		
-    <a class="" href="../downloading_weka/">Downloading and installing Weka</a>
+    <a class="" href="../documentation/">Documentation</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../downloading_weka/">Downloading weka</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -234,6 +244,11 @@
           
             <li class="toctree-l1">
 		
+    <a class="" href="../getting_help/">Getting help</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
     <a class="" href="../gpgpu/">Gpgpu</a>
 	    </li>
           
@@ -305,6 +320,11 @@
             <li class="toctree-l1">
 		
     <a class="" href="../lib_svm/">Lib svm</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../literature/">Literature</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -395,6 +415,11 @@
             <li class="toctree-l1">
 		
     <a class="" href="../removing_misclassified_instances_from_dataset/">Removing misclassified instances from dataset</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../requirements/">Requirements</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -1245,7 +1270,7 @@
 <li><em>Evaluating</em> - how good is the classifier/clusterer?</li>
 <li><em>Attribute selection</em> - removing irrelevant attributes from your data</li>
 </ul>
-<p>The following sections explain how to use them in your own code. A link to an <strong>example class</strong> can be found at the end of this page, under the <a href="#links">Links</a> section. The classifiers and filters always list their options in the Javadoc API (<a href="http://weka.sourceforge.net/doc.stable/">stable</a>, <a href="http://weka.sourceforge.net/doc.dev/">developer</a> version) specification.</p>
+<p>The following sections explain how to use them in your own code. A link to an <strong>example class</strong> can be found at the end of this page, under the <a href="#links">Links</a> section. The classifiers and filters always list their options in the Javadoc API (<a href="https://weka.sourceforge.io/doc.stable-3-8/">stable</a>, <a href="https://weka.sourceforge.io/doc.dev/">developer</a> version) specification.</p>
 <p>A comprehensive source of information is the chapter <em>Using the API</em> of the Weka manual.</p>
 <h1 id="instances">Instances</h1>
 <h2 id="datasets">Datasets</h2>
@@ -1354,7 +1379,7 @@ For example, if you want to remove the <em>first</em> attribute of a dataset, yo
 </code></pre>
 
 <h2 id="filtering-on-the-fly">Filtering on-the-fly</h2>
-<p>The <a href="http://weka.sourceforge.net/doc.dev/weka/classifiers/meta/FilteredClassifier.html">FilteredClassifer</a> meta-classifier is an easy way of filtering data on the fly. It removes the necessity of filtering the data before the classifier can be trained. Also, the data need not be passed through the trained filter again at prediction time. The following is an example of using this meta-classifier with the <code>Remove</code> filter and <code>J48</code> for getting rid of a numeric ID attribute in the data:</p>
+<p>The <a href="https://weka.sourceforge.io/doc.stable-3-8/weka/classifiers/meta/FilteredClassifier.html">FilteredClassifer</a> meta-classifier is an easy way of filtering data on the fly. It removes the necessity of filtering the data before the classifier can be trained. Also, the data need not be passed through the trained filter again at prediction time. The following is an example of using this meta-classifier with the <code>Remove</code> filter and <code>J48</code> for getting rid of a numeric ID attribute in the data:</p>
 <pre><code class="java"> import weka.classifiers.meta.FilteredClassifier;
  import weka.classifiers.trees.J48;
  import weka.filters.unsupervised.attribute.Remove;
@@ -1383,8 +1408,8 @@ For example, if you want to remove the <em>first</em> attribute of a dataset, yo
 
 <p>Other handy meta-schemes in Weka:</p>
 <ul>
-<li><a href="http://weka.sourceforge.net/doc.dev/weka/clusterers/FilteredClusterer.html">weka.clusterers.FilteredClusterer</a></li>
-<li><a href="http://weka.sourceforge.net/doc.dev/weka/associations/FilteredAssociator.html">weka.assocations.FilteredAssociator</a></li>
+<li><a href="https://weka.sourceforge.io/doc.stable-3-8/weka/clusterers/FilteredClusterer.html">weka.clusterers.FilteredClusterer</a></li>
+<li><a href="https://weka.sourceforge.io/doc.stable-3-8/weka/associations/FilteredAssociator.html">weka.assocations.FilteredAssociator</a></li>
 </ul>
 <h2 id="batch-filtering">Batch filtering</h2>
 <p>On the command line, you can enable a second input/output pair (via <code>-r</code> and <code>-s</code>) with the <code>-b</code> option, in order to process the second file with the same filter setup as the first one. Necessary, if you're using attribute selection or standardization - otherwise you end up with incompatible datasets. This is done fairly easy, since one initializes the filter only once with the <code>setInputFormat(Instances)</code> method, namely with the training set, and then applies the filter subsequently to the training set <em>and</em> the test set. The following example shows how to apply the <code>Standardize</code> filter to a train and a test set.</p>
@@ -1601,7 +1626,7 @@ For example, if you want to remove the <em>first</em> attribute of a dataset, yo
  System.out.println(&quot;# of clusters: &quot; + eval.getNumClusters());  // output # of clusters
 </code></pre>
 
-<p>Or, in the case of <a href="http://weka.sourceforge.net/doc/weka/clusterers/DensityBasedClusterer.html">DensityBasedClusterer</a>, you can cross-validate the clusterer (Note: with <a href="http://weka.sourceforge.net/doc/weka/clusterers/MakeDensityBasedClusterer.html">MakeDensityBasedClusterer</a> you can turn any clusterer into a density-based one):</p>
+<p>Or, in the case of <a href="https://weka.sourceforge.io/doc.stable-3-8/weka/clusterers/DensityBasedClusterer.html">DensityBasedClusterer</a>, you can cross-validate the clusterer (Note: with <a href="https://weka.sourceforge.io/doc.stable-3-8/weka/clusterers/MakeDensityBasedClusterer.html">MakeDensityBasedClusterer</a> you can turn any clusterer into a density-based one):</p>
 <pre><code class="java"> import weka.clusterers.ClusterEvaluation;
  import weka.clusterers.DensityBasedClusterer;
  import weka.core.Instances;
@@ -1763,8 +1788,8 @@ For example, if you want to remove the <em>first</em> attribute of a dataset, yo
 <h1 id="links">Links</h1>
 <ul>
 <li>Weka API<ul>
-<li><a href="http://weka.sourceforge.net/doc.stable/">Stable version</a></li>
-<li><a href="http://weka.sourceforge.net/doc.dev/">Developer version</a></li>
+<li><a href="https://weka.sourceforge.io/doc.stable-3-8/">Stable version</a></li>
+<li><a href="https://weka.sourceforge.io/doc.dev/">Developer version</a></li>
 </ul>
 </li>
 </ul>
