@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Cost sensitive classifier - Weka Wiki</title>
+  <title>Development - Weka Wiki</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
@@ -17,9 +17,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Cost sensitive classifier";
-    var mkdocs_page_input_path = "cost_sensitive_classifier.md";
-    var mkdocs_page_url = "/cost_sensitive_classifier/";
+    var mkdocs_page_name = "Development";
+    var mkdocs_page_input_path = "development.md";
+    var mkdocs_page_url = "/development/";
   </script>
   
   <script src="../js/jquery-2.1.1.min.js"></script>
@@ -122,15 +122,9 @@
     <a class="" href="../cost_matrix/">Format</a>
 	    </li>
           
-            <li class="toctree-l1 current">
+            <li class="toctree-l1">
 		
-    <a class="current" href="./">Cost sensitive classifier</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l2"><a href="#see-also">See also</a></li>
-    
-
-    </ul>
+    <a class="" href="../cost_sensitive_classifier/">Cost sensitive classifier</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -140,7 +134,7 @@
           
             <li class="toctree-l1">
 		
-    <a class="" href="../databases/">Databases</a>
+    <a class="" href="../databases/">CLASSPATH</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -148,9 +142,18 @@
     <a class="" href="../datasets/">Datasets</a>
 	    </li>
           
-            <li class="toctree-l1">
+            <li class="toctree-l1 current">
 		
-    <a class="" href="../development/">Development</a>
+    <a class="current" href="./">Development</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#source-code-repository">Source code repository</a></li>
+    
+
+    <li class="toctree-l2"><a href="#code-credits">Code credits</a></li>
+    
+
+    </ul>
 	    </li>
           
             <li class="toctree-l1">
@@ -1185,7 +1188,7 @@
     
       
     
-    <li>Cost sensitive classifier</li>
+    <li>Development</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -1195,33 +1198,65 @@
           <div role="main">
             <div class="section">
               
-                <p>A meta classifier that makes its base classifier cost-sensitive. Two methods can be used to introduce cost-sensitivity: 
-reweighting training instances according to the total cost assigned to each class; or predicting the class with minimum expected misclassification cost (rather than the most likely class). Performance can often be improved by using a Bagged classifier to improve the probability estimates of the base classifier.</p>
-<p>Since the classifier <em>normalizes</em> the cost matrix before applying it, it <a href="https://list.waikato.ac.nz/pipermail/wekalist/2006-November/008569.html">makes it hard</a> coming up with a cost matrix, e.g., to balance out imbalanced data. Here's an example:</p>
-<ul>
-<li>input cost matrix</li>
-</ul>
-<pre><code> -3  1  1
-  1 -6  1
-  0  0  0
-</code></pre>
-
-<ul>
-<li>normalized cost matrix</li>
-</ul>
-<pre><code> 0 7 1
- 4 0 1
- 3 6 0
-</code></pre>
-
-<p>But still, according to <a href="https://list.waikato.ac.nz/pipermail/wekalist/2006-November/008589.html">Weka users</a>, one can set <em>the cost as to equalize the class distributions (i.e.</em>
-<em>achieving a 1:1 class distribution afterward)</em>. But this could be limited to 2-class problems.</p>
-<p>The application of the <a href="../cost_matrix/">cost matrix</a> in <a href="../metacost/">MetaCost</a> is more intuitive.</p>
-<h1 id="see-also">See also</h1>
-<ul>
-<li><a href="../metacost/">MetaCost</a></li>
-<li><a href="../cost_matrix/">CostMatrix</a></li>
-</ul>
+                <p>We are following the Linux model of releases, where an even second
+digit of a release number indicates a "stable" release and an odd
+second digit indicates a "development" release (e.g., 3.0.x is a
+stable release and 3.1.x is a developmental release). If you are
+using a developmental release, there may be new features, but it is
+entirely possible that these features will be transient and/or
+unstable, and backward compatibility of the API and/or models is not
+guaranteed. If you require stability for teaching or deployment in
+applications, it is best to use a stable release of Weka.</p>
+<h1 id="source-code-repository">Source code repository</h1>
+<p>Weka's source code for a particular release is included in the
+distribution when you download it, in a .jar file (a form of .zip
+file) called <code>weka-src.jar</code>. However, it is also possible to read source
+code directly from the <a href="../subversion/">Subversion source code
+repository</a> for Weka, and there is also <a href="https://svn.cms.waikato.ac.nz/svn/weka/">web-based
+access to the repository</a>. </p>
+<p>If you like to use Git rather than Subversion for software
+development, there is a <a href="https://github.com/Waikato/weka-3.8">Git mirror of the Subversion repository's
+branch for Weka 3.8</a> and a
+corresponding one for <a href="https://github.com/Waikato/weka-trunk">the main development trunk of
+Weka</a>. Note that these mirrors
+are read-only, and we continue to use Subversion to commit changes to
+the software, not Git.</p>
+<h1 id="code-credits">Code credits</h1>
+<p>The Weka developers would like to thank <a href="http://www.mathworks.com/">The
+MathWorks</a> and the <a href="http://www.nist.gov/">National Institute of
+Standards and Technology (NIST)</a> for developing
+the <a href="http://math.nist.gov/javanumerics/jama/">Jama Matrix package</a> and
+releasing it to the public domain, and to <a href="http://www.cern.ch/">CERN (European Organization
+for Nuclear Research)</a> for statistics-related
+code from their Jet libraries (now part of
+<a href="http://dsd.lbl.gov/~hoschek/colt/">COLT</a>).</p>
+<p>The core Weka distributions include third-party library code from the
+<a href="https://github.com/fommil/matrix-toolkits-java">MTJ project</a> for fast
+matrix algebra in Java, the <a href="http://www2.cs.tum.edu/projects/cup/index.php">Java CUP
+project</a> for generating
+parsers, the authentication dialog from the <a href="http://www.edankert.com/bounce/index.html">Bounce
+project</a>, and the <a href="http://commons.apache.org/proper/commons-compress/">Apache
+Commons Compress</a>
+library. For more information, see the lib folder of the source code
+repository.</p>
+<p>Weka, including the early non-Java predecessors of Weka 3, was
+developed at the <a href="https://www.cs.waikato.ac.nz/">Department of Computer
+Science</a> of the <a href="https://www.waikato.ac.nz">University of
+Waikato</a> in
+<a href="https://en.wikipedia.org/wiki/Hamilton,_New_Zealand">Hamilton</a>, <a href="https://en.wikipedia.org/wiki/New_Zealand">New
+Zealand</a>. Most of Weka 3
+was written by Eibe Frank, Mark Hall, Peter Reutemann, and Len Trigg,
+but many others have made significant contributions, in particular,
+Remco Bouckaert, Richard Kirkby, Ashraf Kibriya, Xin Xu, and Malcolm
+Ware. For complete info on the contributors, check the Javadoc
+extracted from the source code of Weka, which is part of the available
+<a href="../documentation/">documentation</a>.</p>
+<p>Weka's package manager provides access to a large collection of
+optional libraries, many of which have been contributed by developers
+from other institutions. For information on the authors of these
+packages and the third-party libraries used within those Weka
+packages, please consult the Javadoc for the relevant package and the
+corresponding package lib folder.</p>
               
             </div>
           </div>
@@ -1229,10 +1264,10 @@ reweighting training instances according to the total cost assigned to each clas
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../creating_instances/" class="btn btn-neutral float-right" title="Creating instances">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../discretizing_datasets/" class="btn btn-neutral float-right" title="Discretizing datasets">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../cost_matrix/" class="btn btn-neutral" title="Format"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../datasets/" class="btn btn-neutral" title="Datasets"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -1258,10 +1293,10 @@ reweighting training instances according to the total cost assigned to each clas
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../cost_matrix/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../datasets/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../creating_instances/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../discretizing_datasets/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

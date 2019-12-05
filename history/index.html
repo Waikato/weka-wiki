@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Cost sensitive classifier - Weka Wiki</title>
+  <title>History - Weka Wiki</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../css/theme.css" type="text/css" />
@@ -17,9 +17,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Cost sensitive classifier";
-    var mkdocs_page_input_path = "cost_sensitive_classifier.md";
-    var mkdocs_page_url = "/cost_sensitive_classifier/";
+    var mkdocs_page_name = "History";
+    var mkdocs_page_input_path = "history.md";
+    var mkdocs_page_url = "/history/";
   </script>
   
   <script src="../js/jquery-2.1.1.min.js"></script>
@@ -122,15 +122,9 @@
     <a class="" href="../cost_matrix/">Format</a>
 	    </li>
           
-            <li class="toctree-l1 current">
+            <li class="toctree-l1">
 		
-    <a class="current" href="./">Cost sensitive classifier</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l2"><a href="#see-also">See also</a></li>
-    
-
-    </ul>
+    <a class="" href="../cost_sensitive_classifier/">Cost sensitive classifier</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -140,7 +134,7 @@
           
             <li class="toctree-l1">
 		
-    <a class="" href="../databases/">Databases</a>
+    <a class="" href="../databases/">CLASSPATH</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -175,7 +169,7 @@
           
             <li class="toctree-l1">
 		
-    <a class="" href="../ensemble_selection/">Ensemble selection</a>
+    <a class="" href="../ensemble_selection/">Notes</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -185,7 +179,7 @@
           
             <li class="toctree-l1">
 		
-    <a class="" href="../faq/">Faq</a>
+    <a class="" href="../faq/">General</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -195,7 +189,7 @@
           
             <li class="toctree-l1">
 		
-    <a class="" href="../filtered_classifier_updateable/">Filtered classifier updateable</a>
+    <a class="" href="../filtered_classifier_updateable/">Description</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -240,12 +234,12 @@
           
             <li class="toctree-l1">
 		
-    <a class="" href="../generic_object_editor_book_version/">Generic object editor book version</a>
+    <a class="" href="../generic_object_editor_book_version/">Introduction</a>
 	    </li>
           
             <li class="toctree-l1">
 		
-    <a class="" href="../generic_object_editor_developer_version/">Generic object editor developer version</a>
+    <a class="" href="../generic_object_editor_developer_version/">Introduction</a>
 	    </li>
           
             <li class="toctree-l1">
@@ -268,9 +262,12 @@
     <a class="" href="../gui_chooser_starts_but_not_experimenter_or_explorer/">Gui chooser starts but not experimenter or explorer</a>
 	    </li>
           
-            <li class="toctree-l1">
+            <li class="toctree-l1 current">
 		
-    <a class="" href="../history/">History</a>
+    <a class="current" href="./">History</a>
+    <ul class="subnav">
+            
+    </ul>
 	    </li>
           
             <li class="toctree-l1">
@@ -1185,7 +1182,7 @@
     
       
     
-    <li>Cost sensitive classifier</li>
+    <li>History</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -1195,33 +1192,404 @@
           <div role="main">
             <div class="section">
               
-                <p>A meta classifier that makes its base classifier cost-sensitive. Two methods can be used to introduce cost-sensitivity: 
-reweighting training instances according to the total cost assigned to each class; or predicting the class with minimum expected misclassification cost (rather than the most likely class). Performance can often be improved by using a Bagged classifier to improve the probability estimates of the base classifier.</p>
-<p>Since the classifier <em>normalizes</em> the cost matrix before applying it, it <a href="https://list.waikato.ac.nz/pipermail/wekalist/2006-November/008569.html">makes it hard</a> coming up with a cost matrix, e.g., to balance out imbalanced data. Here's an example:</p>
-<ul>
-<li>input cost matrix</li>
-</ul>
-<pre><code> -3  1  1
-  1 -6  1
-  0  0  0
-</code></pre>
-
-<ul>
-<li>normalized cost matrix</li>
-</ul>
-<pre><code> 0 7 1
- 4 0 1
- 3 6 0
-</code></pre>
-
-<p>But still, according to <a href="https://list.waikato.ac.nz/pipermail/wekalist/2006-November/008589.html">Weka users</a>, one can set <em>the cost as to equalize the class distributions (i.e.</em>
-<em>achieving a 1:1 class distribution afterward)</em>. But this could be limited to 2-class problems.</p>
-<p>The application of the <a href="../cost_matrix/">cost matrix</a> in <a href="../metacost/">MetaCost</a> is more intuitive.</p>
-<h1 id="see-also">See also</h1>
-<ul>
-<li><a href="../metacost/">MetaCost</a></li>
-<li><a href="../cost_matrix/">CostMatrix</a></li>
-</ul>
+                <table>
+<thead>
+<tr>
+<th>Book 1st<br> ed. version<br> (3.0)</th>
+<th>Old GUI<br> version<br> (3.2)</th>
+<th>Stable/Book <br>2nd ed. version<br> (3.4)</th>
+<th>Stable/Book<br> 3rd ed. version<br> (3.6)</th>
+<th>Stable/Book<br> 4th ed. version<br> (3.8)</th>
+<th>Development<br> version<br> (3.9)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-8-3">3.8.3</a> <a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG_PACKAGES-3-8-3">(pkgs)</a></td>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-9-3">3.9.3</a> <a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG_PACKAGES-3-9-3">(pkgs)</a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-8-2">3.8.2</a> <a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG_PACKAGES-3-8-2">(pkgs)</a></td>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-9-2">3.9.2</a> <a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG_PACKAGES-3-9-2">(pkgs)</a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-6-15">3.6.15</a></td>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-8-1">3.8.1</a> <a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG_PACKAGES-3-8-1">(pkgs)</a></td>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-9-1">3.9.1</a> <a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG_PACKAGES-3-9-1">(pkgs)</a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-6-14">3.6.14</a></td>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-8-0">3.8.0</a> <a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG_PACKAGES-3-8-0">(pkgs)</a></td>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-9-0">3.9.0</a> <a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG_PACKAGES-3-9-0">(pkgs)</a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-6-13">3.6.13</a></td>
+<td></td>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-7-13">3.7.13</a> <a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG_PACKAGES-3-7-13">(pkgs)</a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-6-12">3.6.12</a></td>
+<td></td>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-7-12">3.7.12</a> <a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG_PACKAGES-3-7-12">(pkgs)</a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-6-11">3.6.11</a></td>
+<td></td>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-7-11">3.7.11</a> <a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG_PACKAGES-3-7-11">(pkgs)</a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-6-10">3.6.10</a></td>
+<td></td>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-7-10">3.7.10</a> <a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG_PACKAGES-3-7-10">(pkgs)</a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-7-9">3.7.9</a> <a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG_PACKAGES-3-7-9">(pkgs)</a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-6-9">3.6.9</a></td>
+<td></td>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-7-8">3.7.8</a> <a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG_PACKAGES-3-7-8">(pkgs)</a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-6-8">3.6.8</a></td>
+<td></td>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-7-7">3.7.7</a> <a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG_PACKAGES-3-7-7">(pkgs)</a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-6-7">3.6.7</a></td>
+<td></td>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-7-6">3.7.6</a> <a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG_PACKAGES-3-7-6">(pkgs)</a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-6-6">3.6.6</a></td>
+<td></td>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-7-5">3.7.5</a> <a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG_PACKAGES-3-7-5">(pkgs)</a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-4-19">3.4.19</a></td>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-6-5">3.6.5</a></td>
+<td></td>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-7-4">3.7.4</a> <a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG_PACKAGES-3-7-4">(pkgs)</a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-4-18">3.4.18</a></td>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-6-4">3.6.4</a></td>
+<td></td>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-7-3">3.7.3</a> <a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG_PACKAGES-3-7-3">(pkgs)</a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-4-17">3.4.17</a></td>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-6-3">3.6.3</a></td>
+<td></td>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-7-2">3.7.2</a> <a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG_PACKAGES-3-7-2">(pkgs)</a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-4-16">3.4.16</a></td>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-6-2">3.6.2</a></td>
+<td></td>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-7-1">3.7.1</a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-4-15">3.4.15</a></td>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-6-1">3.6.1</a></td>
+<td></td>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-7-0">3.7.0</a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-4-14">3.4.14</a></td>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-6-0">3.6.0</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-4-13.html">3.4.13</a></td>
+<td></td>
+<td></td>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-5-8.html">3.5.8</a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-4-12.html">3.4.12</a></td>
+<td></td>
+<td></td>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-5-7.html">3.5.7</a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-4-11.html">3.4.11</a></td>
+<td></td>
+<td></td>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-5-6.html">3.5.6</a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-4-10.html">3.4.10</a></td>
+<td></td>
+<td></td>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-5-5.html">3.5.5</a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-4-9.html">3.4.9</a></td>
+<td></td>
+<td></td>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-5-4.html">3.5.4</a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-4-8.html">3.4.8</a></td>
+<td></td>
+<td></td>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-5-3.html">3.5.3</a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-4-7.html">3.4.7</a></td>
+<td></td>
+<td></td>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-5-2.html">3.5.2</a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-4-6.html">3.4.6</a></td>
+<td></td>
+<td></td>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-5-1.html">3.5.1</a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-4-5.html">3.4.5</a></td>
+<td></td>
+<td></td>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-5-0.html">3.5.0</a></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-4-4.html">3.4.4</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-4-3">3.4.3</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-4-2">3.4.2</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-4-1">3.4.1</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-4">3.4</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-3-6">3.3.6</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-3-5">3.3.5</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-3-4">3.3.4</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-3-3">3.3.3</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-2-3">3.2.3</a></td>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-3-2">3.3.2</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3.0.6">3.0.6</a></td>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-2-2">3.2.2</a></td>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-3-1">3.3.1</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3.0.5">3.0.5</a></td>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-2-1">3.2.1</a></td>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-3">3.3</a></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3.0.4">3.0.4</a></td>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-2">3.2</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3.0.3">3.0.3</a></td>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-1-9">3.1.9</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3.0.2">3.0.2</a></td>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-1-8">3.1.8</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3.0.1">3.0.1</a></td>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-1-7">3.1.7</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3.0">3.0</a></td>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-1-6">3.1.6</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-PRE6">Prerelease 6</a></td>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-1-5">3.1.5</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-PRE5">Prerelease 5</a></td>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-1-4">3.1.4</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-PRE4">Prerelease 4</a></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
               
             </div>
           </div>
@@ -1229,10 +1597,10 @@ reweighting training instances according to the total cost assigned to each clas
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../creating_instances/" class="btn btn-neutral float-right" title="Creating instances">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../how_do_i_modify_the_classpath/" class="btn btn-neutral float-right" title="How do i modify the classpath">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../cost_matrix/" class="btn btn-neutral" title="Format"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../gui_chooser_starts_but_not_experimenter_or_explorer/" class="btn btn-neutral" title="Gui chooser starts but not experimenter or explorer"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -1258,10 +1626,10 @@ reweighting training instances according to the total cost assigned to each clas
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
-        <span><a href="../cost_matrix/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../gui_chooser_starts_but_not_experimenter_or_explorer/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../creating_instances/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../how_do_i_modify_the_classpath/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
