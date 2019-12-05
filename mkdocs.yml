@@ -14,6 +14,8 @@ nav:
   - 'Getting help': getting_help.md
   - 'Citing Weka': citing_weka.md
   - 'Literature': literature.md
+  - 'Development': development.md
+  - 'History': history.md
   - 'Resources':
     - 'FAQ': faq.md
     - 'Not so FAQ': not_so_faq.md
