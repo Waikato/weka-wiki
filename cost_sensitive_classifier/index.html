@@ -111,10 +111,6 @@
                 </li>
                 <li class="">
                     
-    <a class="" href="../learning_resources/">Learning resources</a>
-                </li>
-                <li class="">
-                    
     <a class="" href="../using_the_api/">Using the API</a>
                 </li>
                 <li class="">
@@ -141,27 +137,15 @@
                     
     <a class="" href="../properties_file/">Properties File</a>
                 </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
+                <li class="">
+                    
     <a class="" href="../packages/">Packages</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
+                </li>
+                <li class="">
+                    
     <a class="" href="../experimenter/experimenter/">Experimenter</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../mailing_list/">Mailing list</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../academic/academic_or_related_projects/">Academic or Related Projects</a>
+                </li>
+    </ul>
 	    </li>
           
         </ul>
@@ -196,9 +180,17 @@
           <div role="main">
             <div class="section">
               
-                <p>A meta classifier that makes its base classifier cost-sensitive. Two methods can be used to introduce cost-sensitivity: 
-reweighting training instances according to the total cost assigned to each class; or predicting the class with minimum expected misclassification cost (rather than the most likely class). Performance can often be improved by using a Bagged classifier to improve the probability estimates of the base classifier.</p>
-<p>Since the classifier <em>normalizes</em> the cost matrix before applying it, it <a href="https://list.waikato.ac.nz/pipermail/wekalist/2006-November/008569.html">makes it hard</a> coming up with a cost matrix, e.g., to balance out imbalanced data. Here's an example:</p>
+                <p>A meta classifier that makes its base classifier cost-sensitive. Two
+methods can be used to introduce cost-sensitivity: reweighting
+training instances according to the total cost assigned to each class;
+or predicting the class with minimum expected misclassification cost
+(rather than the most likely class). Performance can often be improved
+by using a bagged classifier to improve the probability estimates of
+the base classifier.</p>
+<p>Since the classifier, in default mode (i.e., when using the
+reweighting method), <em>normalizes</em> the cost matrix before applying it,
+it can be hard coming up with a cost matrix, e.g., one that balances
+out imbalanced data. Here is an example:</p>
 <ul>
 <li>input cost matrix</li>
 </ul>
@@ -215,9 +207,9 @@ reweighting training instances according to the total cost assigned to each clas
  3 6 0
 </code></pre>
 
-<p>But still, according to <a href="https://list.waikato.ac.nz/pipermail/wekalist/2006-November/008589.html">Weka users</a>, one can set <em>the cost as to equalize the class distributions (i.e.</em>
-<em>achieving a 1:1 class distribution afterward)</em>. But this could be limited to 2-class problems.</p>
-<p>The application of the <a href="../cost_matrix/">cost matrix</a> in <a href="../metacost/">MetaCost</a> is more intuitive.</p>
+<p>The application of a <a href="../cost_matrix/">cost matrix</a> using the second,
+minimum-expected cost approach, which is also used by
+<a href="../metacost/">MetaCost</a>, is more intuitive.</p>
 <h1 id="see-also">See also</h1>
 <ul>
 <li><a href="../metacost/">MetaCost</a></li>

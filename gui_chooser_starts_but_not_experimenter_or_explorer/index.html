@@ -111,10 +111,6 @@
                 </li>
                 <li class="">
                     
-    <a class="" href="../learning_resources/">Learning resources</a>
-                </li>
-                <li class="">
-                    
     <a class="" href="../using_the_api/">Using the API</a>
                 </li>
                 <li class="">
@@ -141,27 +137,15 @@
                     
     <a class="" href="../properties_file/">Properties File</a>
                 </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
+                <li class="">
+                    
     <a class="" href="../packages/">Packages</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
+                </li>
+                <li class="">
+                    
     <a class="" href="../experimenter/experimenter/">Experimenter</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../mailing_list/">Mailing list</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../academic/academic_or_related_projects/">Academic or Related Projects</a>
+                </li>
+    </ul>
 	    </li>
           
         </ul>
@@ -196,7 +180,7 @@
           <div role="main">
             <div class="section">
               
-                <p>The GUIChooser starts, but Explorer and Experimenter don't start and output an Exception like this in the terminal:</p>
+                <p>The GUIChooser starts, but the Explorer and Experimenter do not start and output an Exception like this in the terminal:</p>
 <pre><code class="text"> /usr/share/themes/Mist/gtk-2.0/gtkrc:48: Engine &quot;mist&quot; is unsupported, ignoring
  ---Registering Weka Editors---
  java.lang.NullPointerException
@@ -209,15 +193,13 @@
 </code></pre>
 
 <p>This behavior happens only under Java 5/6 and Gnome/Linux, KDE doesn't produce this error. The reason for this is, that  Weka tries to look more "native" and therefore sets a platform-specific Swing theme. Unfortunately, this doesn't seem to be working correctly in Java 5/6 together with Gnome. A workaround for this is to set the cross-platform <em>Metal</em> theme. </p>
-<p>In order to use another theme one only has to create the following properties file in ones home directory:</p>
+<p>In order to use another theme one only has to create the following properties file:</p>
 <pre><code class="text"> LookAndFeel.props
 </code></pre>
 
-<p>With this content:</p>
+<p>with this content:</p>
 <pre><code class="ini"> Theme=javax.swing.plaf.metal.MetalLookAndFeel
 </code></pre>
-
-<p>More information can be found in <a href="https://list.waikato.ac.nz/pipermail/wekalist/2005-April/003914.html">this Weka list post</a> or <a href="../weka_gui_look_and_feel.props/">here</a>.</p>
               
             </div>
           </div>

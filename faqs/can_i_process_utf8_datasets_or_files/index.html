@@ -111,10 +111,6 @@
                 </li>
                 <li class="">
                     
-    <a class="" href="../../learning_resources/">Learning resources</a>
-                </li>
-                <li class="">
-                    
     <a class="" href="../../using_the_api/">Using the API</a>
                 </li>
                 <li class="">
@@ -141,27 +137,15 @@
                     
     <a class="" href="../../properties_file/">Properties File</a>
                 </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
+                <li class="">
+                    
     <a class="" href="../../packages/">Packages</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
+                </li>
+                <li class="">
+                    
     <a class="" href="../../experimenter/experimenter/">Experimenter</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../../mailing_list/">Mailing list</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../../academic/academic_or_related_projects/">Academic or Related Projects</a>
+                </li>
+    </ul>
 	    </li>
           
         </ul>
@@ -196,15 +180,14 @@
           <div role="main">
             <div class="section">
               
-                <p>Java can process UTF-8 files without any problems, it is just that Java uses a different encoding for displaying them under Windows (= "Cp1252"). If you change the file encoding to "utf-8" you'll be fine (discussed in <a href="https://list.waikato.ac.nz/pipermail/wekalist/2008-July/013981.html">this</a> WEKAlist post).</p>
-<p>If you are running WEKA directly from the commandline, just add the following parameter to your commandline:</p>
+                <p>Java can process UTF-8 files without any problems, it is just that Java uses a different encoding for displaying them under Windows (= "Cp1252"). If you change the file encoding to "utf-8" everything should be fine. If you are running WEKA directly from the commandline, just add the following parameter to your commandline:</p>
 <blockquote>
 <p><code>-Dfile.encoding=utf-8</code></p>
 </blockquote>
 <p>If you are starting WEKA from the Start menu, then edit the <code>RunWEKA.ini</code> file:</p>
 <ul>
 <li>If a <code>fileEncoding</code> placeholder already exists, then just change the value from "Cp1252" to "utf-8" (without the quotes of course).</li>
-<li>If there isn't a <code>fileEncoding</code> yet, just the <code>-Dfile.encoding=utf-8</code> parameter to all the <code>java</code>/<code>javaw</code> commands (see example <code>RunWEKA.ini</code> in <a href="https://list.waikato.ac.nz/pipermail/wekalist/2008-July/013981.html">this</a> post).</li>
+<li>If there isn't a <code>fileEncoding</code> yet, just add the <code>-Dfile.encoding=utf-8</code> parameter to all the <code>java</code>/<code>javaw</code> commands).</li>
 </ul>
               
             </div>

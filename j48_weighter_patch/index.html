@@ -111,10 +111,6 @@
                 </li>
                 <li class="">
                     
-    <a class="" href="../learning_resources/">Learning resources</a>
-                </li>
-                <li class="">
-                    
     <a class="" href="../using_the_api/">Using the API</a>
                 </li>
                 <li class="">
@@ -141,27 +137,15 @@
                     
     <a class="" href="../properties_file/">Properties File</a>
                 </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
+                <li class="">
+                    
     <a class="" href="../packages/">Packages</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
+                </li>
+                <li class="">
+                    
     <a class="" href="../experimenter/experimenter/">Experimenter</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../mailing_list/">Mailing list</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../academic/academic_or_related_projects/">Academic or Related Projects</a>
+                </li>
+    </ul>
 	    </li>
           
         </ul>
@@ -215,8 +199,7 @@ Modification of J48 for Weighted Data.</p>
 <p>This patch addresses two separate but related issues:</p>
 <ul>
 <li>The proposed filter "Weighter" allows one to specify a numeric attribute to be used as an instance weight.</li>
-<li>As mentioned on Wekalist, tests using weighted sample-survey data indicated possible problems in the J48 decision tree algorithm: 
-<a href="https://list.waikato.ac.nz/pipermail/wekalist/2004-December/003135.html">wekalist/2004-December/003135</a></li>
+<li>As mentioned on Wekalist, tests using weighted sample-survey data indicated possible problems in the J48 decision tree algorithm.</li>
 </ul>
 <h2 id="the-weighter-filter">The Weighter filter</h2>
 <p>Weighter is a general-purpose filter independent of J48 or other
@@ -233,7 +216,6 @@ the .arff file inverts the Save process, transparent to the user.</p>
 name.  The special case of invoking Weighter without an attribute
 argument restores the unweighted dataset, with an appended attribute
 named as above.</p>
-<p><strong>Note:</strong> the <a href="../formats_and_processing/xrff/">XRFF</a> format, introduced in 3.5.4, stores instance and attribute weights, as opposed to the default <a href="../formats_and_processing/arff/">ARFF</a> format.</p>
 <h2 id="j48-with-instance-weights">J48 with instance weights</h2>
 <p>The simple rescaling inserted in weka.classifiers.trees.j48.Stats is
 intended to:</p>

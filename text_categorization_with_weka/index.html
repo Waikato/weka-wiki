@@ -111,10 +111,6 @@
                 </li>
                 <li class="">
                     
-    <a class="" href="../learning_resources/">Learning resources</a>
-                </li>
-                <li class="">
-                    
     <a class="" href="../using_the_api/">Using the API</a>
                 </li>
                 <li class="">
@@ -141,27 +137,15 @@
                     
     <a class="" href="../properties_file/">Properties File</a>
                 </li>
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
+                <li class="">
+                    
     <a class="" href="../packages/">Packages</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
+                </li>
+                <li class="">
+                    
     <a class="" href="../experimenter/experimenter/">Experimenter</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../mailing_list/">Mailing list</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../academic/academic_or_related_projects/">Academic or Related Projects</a>
+                </li>
+    </ul>
 	    </li>
           
         </ul>
@@ -260,7 +244,7 @@ this filter does <strong>not</strong> exclude the class attribute from conversio
 <p>The <a href="https://weka.sourceforge.io/doc.stable-3-8/weka/filters/unsupervised/attribute/StringToWordVector.html">StringToWordVector</a> filter can also work with a different stopword list than the built-in one (based on the Rainbow system). One can use the <code>-stopwords</code> option to load the external stopwords file. The format for such a stopword file is one stopword per line, lines starting with '#' are interpreted as comments and ignored.</p>
 <p><strong>Note:</strong> There was a bug in Weka 3.5.6 (which introduced the support of external stopwords lists), which ignored the external stopwords list. Later versions or <a href="../snapshots/">snapshot</a>s from 21/07/2007 on will work correctly.</p>
 <h1 id="utf-8">UTF-8</h1>
-<p>In case you are working with text files containing non-ASCII characters, e.g., Arabic, you might encounter some display problems under Windows. Java was designed to display <a href="http://en.wikipedia.org/wiki/utf-8">UTF-8</a>, which should include arabic characters. By default, Java uses <a href="http://en.wikipedia.org/wiki/cp1252">code page 1252</a> under Windows, which garbles the display of other characters. In order to fix this, you will have to modify the java command-line with which you start up Weka (taken from <a href="https://list.waikato.ac.nz/pipermail/wekalist/2008-July/013981.html">this</a> post):</p>
+<p>In case you are working with text files containing non-ASCII characters, e.g., Arabic, you might encounter some display problems under Windows. Java was designed to display <a href="http://en.wikipedia.org/wiki/utf-8">UTF-8</a>, which should include arabic characters. By default, Java uses <a href="http://en.wikipedia.org/wiki/cp1252">code page 1252</a> under Windows, which garbles the display of other characters. In order to fix this, you will have to modify the java command-line with which you start up Weka:</p>
 <pre><code class="bash">  java -Dfile.encoding=utf-8 -classpath ...
 </code></pre>
 
