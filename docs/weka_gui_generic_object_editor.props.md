@@ -5,7 +5,6 @@
 
 ## Description
 Has been superceded by [weka/gui/GenericPropertiesCreator.props](weka_gui_generic_properties_creator.props.md) which performs a dynamic discovery of classes.
-Version 3.5.8 of Weka [turned off](https://list.waikato.ac.nz/pipermail/wekalist/2008-July/014057.html) the dynamic discovery of classes by default, i.e., one has to add the class in this file again or turn dynamic discovery on again.
 
 ## Version
 * \>= 3.1.3

@@ -20,7 +20,6 @@ nav:
     - 'FAQ': faq.md
     - 'Not so FAQ': not_so_faq.md
     - 'Troubleshooting': troubleshooting.md
-    - 'Learning resources': learning_resources.md
     - 'Using the API': using_the_api.md
     - 'Extending Weka': extending_weka.md
     - 'ARFF Format': formats_and_processing/arff.md
@@ -28,7 +27,5 @@ nav:
     - 'Datasets' : datasets.md
     - 'Visualization Articles' : visualization_articles.md
     - 'Properties File' : properties_file.md
-  - 'Packages': packages/index.md
-  - 'Experimenter' : experimenter/experimenter.md
-  - 'Mailing list': mailing_list.md
-  - 'Academic or Related Projects' : academic/academic_or_related_projects.md
+    - 'Packages': packages/index.md
+    - 'Experimenter' : experimenter/experimenter.md

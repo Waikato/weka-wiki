@@ -29,7 +29,3 @@ Customization of the Capabilities support in Weka.
 * [Properties file](properties_file.md)
 
 # Links
-* Wekalist posts
-	* [problem](https://list.waikato.ac.nz/pipermail/wekalist/2006-July/007637.html)
-	* [inquiry](https://list.waikato.ac.nz/pipermail/wekalist/2006-July/007706.html)
-	* [further discussion](https://list.waikato.ac.nz/pipermail/wekalist/2006-July/007707.html)

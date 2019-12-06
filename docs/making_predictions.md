@@ -119,8 +119,5 @@ If you want to perform the classification within your own code, see the [classif
 * [Use Weka in your Java code](use_weka_in_your_java_code.md) - general information about using the Weka API
 * [Using ID attributes](troubleshooting.md#instance-id)
 
-# Links
-* [AddClassification](https://list.waikato.ac.nz/pipermail/wekalist/2007-April/009904.html) on the Wekalist
-
 # Version
 The developer version shortly before the release of 3.5.6 was used as basis for this article.

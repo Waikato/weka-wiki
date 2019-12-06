@@ -1,10 +1,8 @@
 <img style="float: right;" src="img/Waikato_coat_of_arms.jpg">
 
-**Please note, the migration from the old wiki in this new format is still work in progress!**
-
 # New to Weka?
-Have a look at the [Frequently Asked Questions](faq.md) (= FAQ), the [Troubleshooting](troubleshooting.md) article or search the [mailing list archives](mailing_list.md).
-Don't forget to check out the documentation on the [Weka homepage](http://www.cs.waikato.ac.nz/ml/weka/) and the
+Have a look at the [Frequently Asked Questions](faq.md) (FAQ), the [Troubleshooting](troubleshooting.md) article or search the [mailing list archives](mailing_list.md).
+Don't forget to check out the documentation on the [Weka homepage](https://cs.waikato.ac.nz/ml/weka/) and the
 [Learning Resources](learning_resources.md).
 
 # You have questions regarding Weka?
@@ -28,7 +26,7 @@ following information will help tracking things down:
 * operating system (e.g., Windows 10 or Ubuntu 16.04 64bit)
 * Java version (e.g., 1.8.0_162 64bit)
 
-You can also run the following command in the SimpleCLI and attach the generate output as text file to your post:
+You can also run the following command in the SimpleCLI and attach the generated output as a text file to your post:
 
 ```
     java weka.core.SystemInfo

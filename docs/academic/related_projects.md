@@ -79,7 +79,7 @@ You may also want to take a look at the (incomplete) list of ["unofficial" packa
 * [MARFF](http://www.cs.bris.ac.uk/%7efarrand/marff/) - extension of ARFF for Multi-Relational Applications.
 * [Mathematica interface](http://www.unisoftwareplus.com/products/weka/) for Weka.
 * [maxdView](http://bioinf.man.ac.uk/microarray/maxd/maxdview/) visualisation tool for microarray data.
-* [Mobile Data Mining](http://mega.ist.utl.pt/%7ejpcr/tfc/) (in portuguese) - more in [this post](https://list.waikato.ac.nz/pipermail/wekalist/2006-October/008378.html).
+* [Mobile Data Mining](http://mega.ist.utl.pt/%7ejpcr/tfc/) (in portuguese) - software for mobile data mining
 * [OlexSuite](https://www.mat.unical.it/olexsuite/about.html) - Text classification methods.
 * [OpenSubspace](http://dme.rwth-aachen.de/en/opensubspace) - Subspace-clustering for Weka.
 * [Rarff](http://rubyforge.org/projects/rarff/) - A Ruby library for manipulating ARFF files.

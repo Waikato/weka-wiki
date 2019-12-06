@@ -4,7 +4,7 @@
 `weka/gui/LookAndFeel.props`
 
 # Description
-Defines with what theme Weka is displayed. By default Weka starts with the system default one, but under Java 5.0 and Linux/Gnome this can lead to a [crash](https://list.waikato.ac.nz/pipermail/wekalist/2005-April/003914.html) due to a NullPointerException.
+Defines with what theme Weka is displayed. By default Weka starts with the system default one but sometimes it can help to change this to get Weka going or present user interfaces more nicely.
 
 # Version
 * \>= 3.4.5
@@ -25,5 +25,3 @@ Defines with what theme Weka is displayed. By default Weka starts with the syste
 * [Troubleshooting (KnowledgeFlow toolbars are empty)](knowledge_flow_toolbars_are_empty.md)
 * [Properties file](properties_file.md)
 
-# Links
-* [Original Wekalist post](https://list.waikato.ac.nz/pipermail/wekalist/2005-April/003914.html)

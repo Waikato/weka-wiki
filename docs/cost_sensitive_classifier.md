@@ -1,7 +1,15 @@
-A meta classifier that makes its base classifier cost-sensitive. Two methods can be used to introduce cost-sensitivity: 
-reweighting training instances according to the total cost assigned to each class; or predicting the class with minimum expected misclassification cost (rather than the most likely class). Performance can often be improved by using a Bagged classifier to improve the probability estimates of the base classifier.
+A meta classifier that makes its base classifier cost-sensitive. Two
+methods can be used to introduce cost-sensitivity: reweighting
+training instances according to the total cost assigned to each class;
+or predicting the class with minimum expected misclassification cost
+(rather than the most likely class). Performance can often be improved
+by using a bagged classifier to improve the probability estimates of
+the base classifier.
 
-Since the classifier *normalizes* the cost matrix before applying it, it [makes it hard](https://list.waikato.ac.nz/pipermail/wekalist/2006-November/008569.html) coming up with a cost matrix, e.g., to balance out imbalanced data. Here's an example:
+Since the classifier, in default mode (i.e., when using the
+reweighting method), *normalizes* the cost matrix before applying it,
+it can be hard coming up with a cost matrix, e.g., one that balances
+out imbalanced data. Here is an example:
 
 * input cost matrix
 ```
@@ -15,10 +23,10 @@ Since the classifier *normalizes* the cost matrix before applying it, it [makes 
  4 0 1
  3 6 0
 ```
-But still, according to [Weka users](https://list.waikato.ac.nz/pipermail/wekalist/2006-November/008589.html), one can set *the cost as to equalize the class distributions (i.e.*
-*achieving a 1:1 class distribution afterward)*. But this could be limited to 2-class problems.
 
-The application of the [cost matrix](cost_matrix.md) in [MetaCost](metacost.md) is more intuitive.
+The application of a [cost matrix](cost_matrix.md) using the second,
+minimum-expected cost approach, which is also used by
+[MetaCost](metacost.md), is more intuitive.
 
 # See also
 
