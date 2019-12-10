@@ -2,8 +2,7 @@
 
 # New to Weka?
 Have a look at the [Frequently Asked Questions](faq.md) (FAQ), the [Troubleshooting](troubleshooting.md) article or search the [mailing list archives](mailing_list.md).
-Don't forget to check out the documentation on the [Weka homepage](https://cs.waikato.ac.nz/ml/weka/) and the
-[Learning Resources](learning_resources.md).
+Don't forget to check out the [documentation](documentation.md) and [the online courses](https://cs.waikato.ac.nz/ml/weka/courses.html).
 
 # You have questions regarding Weka?
 You can post questions to the [Weka mailing list](mailing_list.md). Please keep
