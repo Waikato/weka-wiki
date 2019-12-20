@@ -69,7 +69,9 @@
         
             <li><a class="toctree-l3" href="#mac-os">Mac OS</a></li>
         
-            <li><a class="toctree-l3" href="#other-platforms-linux-etc">Other platforms (Linux, etc.)</a></li>
+            <li><a class="toctree-l3" href="#linux">Linux</a></li>
+        
+            <li><a class="toctree-l3" href="#other-platforms">Other platforms</a></li>
         
         </ul>
     
@@ -82,7 +84,9 @@
         
             <li><a class="toctree-l3" href="#mac-os_1">Mac OS</a></li>
         
-            <li><a class="toctree-l3" href="#other-platforms-linux-etc_1">Other platforms (Linux, etc.)</a></li>
+            <li><a class="toctree-l3" href="#linux_1">Linux</a></li>
+        
+            <li><a class="toctree-l3" href="#other-platforms_1">Other platforms</a></li>
         
         </ul>
     
@@ -248,45 +252,37 @@ available in packages.  There are different options for downloading
 and installing it on your system:</p>
 <h3 id="windows">Windows</h3>
 <ul>
-<li>
-<p>Click
-<a href="https://prdownloads.sourceforge.net/weka/weka-3-8-3jre-x64.exe">here</a>
+<li>Click
+<a href="https://prdownloads.sourceforge.net/weka/weka-3-8-4-azul-zulu-windows.exe">here</a>
 to download a self-extracting executable for 64-bit Windows that
-includes Oracle's 64-bit Java VM 1.8 (weka-3-8-3jre-x64.exe; 120.3 MB)</p>
-</li>
-<li>
-<p>Click
-<a href="https://prdownloads.sourceforge.net/weka/weka-3-8-3-x64.exe">here</a> to
-download a self-extracting executable for 64-bit Windows without a
-Java VM (weka-3-8-3-x64.exe; 51 MB)</p>
-</li>
-<li>
-<p>Click
-<a href="https://prdownloads.sourceforge.net/weka/weka-3-8-3jre.exe">here</a> to
-download a self-extracting executable for 32-bit Windows that includes
-Oracle's 32-bit Java VM 1.8 (weka-3-8-3jre.exe; 113.4 MB)</p>
-</li>
-<li>
-<p>Click <a href="https://prdownloads.sourceforge.net/weka/weka-3-8-3.exe">here</a>
-to download a self-extracting executable for 32-bit Windows without a
-Java VM (weka-3-8-3.exe; 51 MB)</p>
-</li>
+includes Azul's 64-bit OpenJDK Java VM 11 (weka-3-8-4-azul-zulu-windows.exe; 118 MB)</li>
 </ul>
-<p>These executables will install Weka in your Program Menu.
-Download the version without the Java VM if you already have Java 1.8 (or
-later) on your system.</p>
+<p>This executable will install Weka in your Program Menu. Launching via the Program
+Menu or shortcuts will automatically use the included JVM to run Weka.</p>
 <h3 id="mac-os">Mac OS</h3>
 <ul>
 <li>Click
-<a href="https://prdownloads.sourceforge.net/weka/weka-3-8-3-corretto-jvm.dmg">here</a>
+<a href="https://prdownloads.sourceforge.net/weka/weka-3-8-4-azul-zulu-osx.dmg">here</a>
 to download a disk image for Mac OS that contains a
-Mac application including Amazon's Corretto Java 1.8
-JVM (weka-3-8-3-corretto-jvm.dmg; 112.9 MB)</li>
+Mac application including Azul's 64-bit OpenJDK Java VM 11
+(weka-3-8-4-azul-zulu-osx.dmg; 144 MB)</li>
 </ul>
-<h3 id="other-platforms-linux-etc">Other platforms (Linux, etc.)</h3>
+<h3 id="linux">Linux</h3>
 <ul>
-<li>Click <a href="https://prdownloads.sourceforge.net/weka/weka-3-8-3.zip">here</a>
- to download a zip archive containing Weka (weka-3-8-3.zip; 51.4 MB)</li>
+<li>Click
+<a href="https://prdownloads.sourceforge.net/weka/weka-3-8-4-azul-zulu-linux.zip">here</a>
+to download a zip archive for Linux that includes Azul's 64-bit OpenJDK Java VM 11
+(weka-3-8-4-azul-zulu-linux.zip; 129 MB)</li>
+</ul>
+<p>First unzip the the zip file. This will create a new directory called
+weka-3-8-4. To run Weka, change into that directory and type</p>
+<pre><code class="bash">./weka.sh
+</code></pre>
+
+<h3 id="other-platforms">Other platforms</h3>
+<ul>
+<li>Click <a href="https://prdownloads.sourceforge.net/weka/weka-3-8-4.zip">here</a>
+ to download a zip archive containing Weka (weka-3-8-4.zip; 53 MB)</li>
 </ul>
 <p>First unzip the zip file. This will create a new directory called
 weka-3-8-3. To run Weka, change into that directory and type</p>
@@ -301,48 +297,40 @@ CLASSPATH variable and only use the <code>weka.jar</code>.</p>
 may receive new features that break backwards compatibility.</p>
 <h3 id="windows_1">Windows</h3>
 <ul>
-<li>
-<p>Click
-<a href="https://prdownloads.sourceforge.net/weka/weka-3-9-3jre-x64.exe">here</a>
+<li>Click
+<a href="https://prdownloads.sourceforge.net/weka/weka-3-9-4-azul-zulu-windows.exe">here</a>
 to download a self-extracting executable for 64-bit Windows that
-includes Oracle's 64-bit Java VM 1.8 (weka-3-9-3jre-x64.exe; 120.1 MB)</p>
-</li>
-<li>
-<p>Click
-<a href="https://prdownloads.sourceforge.net/weka/weka-3-9-3-x64.exe">here</a> to
-download a self-extracting executable for 64-bit Windows without a
-Java VM (weka-3-9-3-x64.exe; 50.9 MB)</p>
-</li>
-<li>
-<p>Click
-<a href="https://prdownloads.sourceforge.net/weka/weka-3-9-3jre.exe">here</a> to
-download a self-extracting executable for 32-bit Windows that includes
-Oracle's 32-bit Java VM 1.8 (weka-3-9-3jre.exe; 113.2 MB)</p>
-</li>
-<li>
-<p>Click <a href="https://prdownloads.sourceforge.net/weka/weka-3-9-3.exe">here</a>
-to download a self-extracting executable for 32-bit Windows without a
-Java VM (weka-3-9-3.exe; 50.9 MB)</p>
-</li>
+includes Azul's 64-bit OpenJDK Java VM 11 (weka-3-9-4-azul-zulu-windows.exe; 117 MB)</li>
 </ul>
-<p>These executables will install Weka in your Program Menu.
-Download the version without the Java VM if you already have Java 1.8 (or
-later) on your system.</p>
+<p>This executable will install Weka in your Program Menu. Launching via the Program
+Menu or shortcuts will automatically use the included JVM to run Weka.</p>
 <h3 id="mac-os_1">Mac OS</h3>
 <ul>
 <li>Click
-<a href="https://prdownloads.sourceforge.net/weka/weka-3-9-3-corretto-jvm.dmg">here</a>
+<a href="https://prdownloads.sourceforge.net/weka/weka-3-9-4-azul-zulu-osx.dmg">here</a>
 to download a disk image for Mac OS that contains a
-Mac application including Amazon's Corretto Java 1.8
-JVM (weka-3-9-3-corretto-jvm.dmg; 142.1 MB)</li>
+Mac application including Azul's 64-bit OpenJDK Java VM 11
+JVM (weka-3-9-4-azul-zulu-osx.dmg; 143 MB)</li>
 </ul>
-<h3 id="other-platforms-linux-etc_1">Other platforms (Linux, etc.)</h3>
+<h3 id="linux_1">Linux</h3>
 <ul>
-<li>Click <a href="https://prdownloads.sourceforge.net/weka/weka-3-9-3.zip">here</a>
- to download a zip archive containing Weka (weka-3-9-3.zip; 51.3 MB)</li>
+<li>Click
+<a href="https://prdownloads.sourceforge.net/weka/weka-3-9-4-azul-zulu-linux.zip">here</a>
+to download a zip archive for Linux that includes Azul's 64-bit OpenJDK Java VM 11
+(weka-3-9-4-azul-zulu-linux.zip; 128 MB)</li>
+</ul>
+<p>First unzip the the zip file. This will create a new directory called
+weka-3-9-4. To run Weka, change into that directory and type</p>
+<pre><code class="bash">./weka.sh
+</code></pre>
+
+<h3 id="other-platforms_1">Other platforms</h3>
+<ul>
+<li>Click <a href="https://prdownloads.sourceforge.net/weka/weka-3-9-4.zip">here</a>
+ to download a zip archive containing Weka (weka-3-9-4.zip; 52 MB)</li>
 </ul>
 <p>First unzip the zip file. This will create a new directory called
-weka-3-9-3. To run Weka, change into that directory and type</p>
+weka-3-9-4. To run Weka, change into that directory and type</p>
 <pre><code class="bash">java -jar weka.jar
 </code></pre>
 
