@@ -69,7 +69,7 @@ weka-3-8-4. To run Weka, change into that directory and type
  to download a zip archive containing Weka (weka-3-8-4.zip; 53 MB)
 
 First unzip the zip file. This will create a new directory called
-weka-3-8-3. To run Weka, change into that directory and type
+weka-3-8-4. To run Weka, change into that directory and type
 
 ``` bash
 java -jar weka.jar
