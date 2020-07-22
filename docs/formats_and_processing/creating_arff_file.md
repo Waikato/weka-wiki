@@ -12,9 +12,11 @@ Example class **AttTest**:
 
 ```java
  import weka.core.Attribute;
+ import weka.core.DenseInstance;
  import weka.core.FastVector;
  import weka.core.Instance;
  import weka.core.Instances;
+ import weka.core.Utils;
 
  /**
   * Generates a little ARFF file with different attribute types.
@@ -78,15 +80,15 @@ Example class **AttTest**:
      valsRel = new double[2];
      valsRel[0] = Math.PI + 1;
      valsRel[1] = attValsRel.indexOf("val5.3");
-     dataRel.add(new Instance(1.0, valsRel));
+     dataRel.add(new DenseInstance(1.0, valsRel));
      // -- second instance
      valsRel = new double[2];
      valsRel[0] = Math.PI + 2;
      valsRel[1] = attValsRel.indexOf("val5.2");
-     dataRel.add(new Instance(1.0, valsRel));
+     dataRel.add(new DenseInstance(1.0, valsRel));
      vals[4] = data.attribute(4).addRelation(dataRel);
      // add
-     data.add(new Instance(1.0, vals));
+     data.add(new DenseInstance(1.0, vals));
 
      // second instance
      vals = new double[data.numAttributes()];  // important: needs NEW array!
@@ -104,15 +106,15 @@ Example class **AttTest**:
      valsRel = new double[2];
      valsRel[0] = Math.E + 1;
      valsRel[1] = attValsRel.indexOf("val5.4");
-     dataRel.add(new Instance(1.0, valsRel));
+     dataRel.add(new DenseInstance(1.0, valsRel));
      // -- second instance
      valsRel = new double[2];
      valsRel[0] = Math.E + 2;
      valsRel[1] = attValsRel.indexOf("val5.1");
-     dataRel.add(new Instance(1.0, valsRel));
+     dataRel.add(new DenseInstance(1.0, valsRel));
      vals[4] = data.attribute(4).addRelation(dataRel);
      // add
-     data.add(new Instance(1.0, vals));
+     data.add(new DenseInstance(1.0, vals));
 
      // 4. output data
      System.out.println(data);
@@ -121,20 +123,20 @@ Example class **AttTest**:
 ```
 
 # Missing values
-By default, a new double array will be initialized with 0s. In case you want to be a value missing at a certain position, you have to explicitly set the *missing value* via the `missingValue()` method of the `weka.core.Instance` class. In Weka > 3.7.1 Instance is an interface, so `missingValue()` moved into `weka.core.Utils`. In case you already have an existing `weka.core.Instance` object, then you use its `setMissing(int)` method, which sets a missing value at the given position. Here are examples, which set the **third** attribute to missing:
+By default, a new double array will be initialized with 0s. In case you want to be a value missing at a certain position, you have to explicitly set the *missing value* via the `missingValue()` method of the `weka.core.Utils` class. In case you already have an existing `weka.core.Instance` object, then you use its `setMissing(int)` method, which sets a missing value at the given position. Here are examples, which set the **third** attribute to missing:
 
 * double array:
 
     ```
     double[] vals = ...  // from somewhere, e.g., from AttTest.java example
-    vals[2] = Instance.missingValue(); // or ... = Utils.missingValue() for Weka > 3.7.1
+    vals[2] = Utils.missingValue();
     ```
 
 * `weka.core.Instance` object:
 
     ```
     double[] vals = ... // from somewhere, e.g., from AttTest.java example
-    Instance inst = new Instance(1.0, vals);
+    Instance inst = new DenseInstance(1.0, vals);
     inst.setMissing(2);
     ```
 
