@@ -34,9 +34,9 @@ and installing it on your system:
 ### Windows
 
 * Click
-[here](https://prdownloads.sourceforge.net/weka/weka-3-8-4-azul-zulu-windows.exe)
+[here](https://prdownloads.sourceforge.net/weka/weka-3-8-5-azul-zulu-windows.exe)
 to download a self-extracting executable for 64-bit Windows that
-includes Azul's 64-bit OpenJDK Java VM 11 (weka-3-8-4-azul-zulu-windows.exe; 118 MB)
+includes Azul's 64-bit OpenJDK Java VM 11 (weka-3-8-5-azul-zulu-windows.exe; 124.6 MB)
 
 This executable will install Weka in your Program Menu. Launching via the Program
 Menu or shortcuts will automatically use the included JVM to run Weka.
@@ -44,20 +44,20 @@ Menu or shortcuts will automatically use the included JVM to run Weka.
 ### Mac OS
                   
 * Click
-[here](https://prdownloads.sourceforge.net/weka/weka-3-8-4-azul-zulu-osx.dmg)
+[here](https://prdownloads.sourceforge.net/weka/weka-3-8-5-azul-zulu-osx.dmg)
 to download a disk image for Mac OS that contains a
 Mac application including Azul's 64-bit OpenJDK Java VM 11
-(weka-3-8-4-azul-zulu-osx.dmg; 144 MB)
+(weka-3-8-5-azul-zulu-osx.dmg; 151.8 MB)
 
 ### Linux
 
 * Click
-[here](https://prdownloads.sourceforge.net/weka/weka-3-8-4-azul-zulu-linux.zip)
+[here](https://prdownloads.sourceforge.net/weka/weka-3-8-5-azul-zulu-linux.zip)
 to download a zip archive for Linux that includes Azul's 64-bit OpenJDK Java VM 11
-(weka-3-8-4-azul-zulu-linux.zip; 129 MB)
+(weka-3-8-5-azul-zulu-linux.zip; 137.4 MB)
 
 First unzip the the zip file. This will create a new directory called
-weka-3-8-4. To run Weka, change into that directory and type
+weka-3-8-5. To run Weka, change into that directory and type
 
 ``` bash
 ./weka.sh
@@ -65,11 +65,11 @@ weka-3-8-4. To run Weka, change into that directory and type
 
 ### Other platforms
 
-* Click [here](https://prdownloads.sourceforge.net/weka/weka-3-8-4.zip)
- to download a zip archive containing Weka (weka-3-8-4.zip; 53 MB)
+* Click [here](https://prdownloads.sourceforge.net/weka/weka-3-8-5.zip)
+ to download a zip archive containing Weka (weka-3-8-5.zip; 55.4 MB)
 
 First unzip the zip file. This will create a new directory called
-weka-3-8-4. To run Weka, change into that directory and type
+weka-3-8-5. To run Weka, change into that directory and type
 
 ``` bash
 java -jar weka.jar
@@ -87,9 +87,9 @@ may receive new features that break backwards compatibility.
 ### Windows
 
 * Click
-[here](https://prdownloads.sourceforge.net/weka/weka-3-9-4-azul-zulu-windows.exe)
+[here](https://prdownloads.sourceforge.net/weka/weka-3-9-5-azul-zulu-windows.exe)
 to download a self-extracting executable for 64-bit Windows that
-includes Azul's 64-bit OpenJDK Java VM 11 (weka-3-9-4-azul-zulu-windows.exe; 117 MB)
+includes Azul's 64-bit OpenJDK Java VM 11 (weka-3-9-5-azul-zulu-windows.exe; 124.4 MB)
 
 This executable will install Weka in your Program Menu. Launching via the Program
 Menu or shortcuts will automatically use the included JVM to run Weka.
@@ -97,20 +97,20 @@ Menu or shortcuts will automatically use the included JVM to run Weka.
 ### Mac OS
                   
 * Click
-[here](https://prdownloads.sourceforge.net/weka/weka-3-9-4-azul-zulu-osx.dmg)
+[here](https://prdownloads.sourceforge.net/weka/weka-3-9-5-azul-zulu-osx.dmg)
 to download a disk image for Mac OS that contains a
 Mac application including Azul's 64-bit OpenJDK Java VM 11
-JVM (weka-3-9-4-azul-zulu-osx.dmg; 143 MB)
+JVM (weka-3-9-5-azul-zulu-osx.dmg; 151.6 MB)
 
 ### Linux
 
 * Click
-[here](https://prdownloads.sourceforge.net/weka/weka-3-9-4-azul-zulu-linux.zip)
+[here](https://prdownloads.sourceforge.net/weka/weka-3-9-5-azul-zulu-linux.zip)
 to download a zip archive for Linux that includes Azul's 64-bit OpenJDK Java VM 11
-(weka-3-9-4-azul-zulu-linux.zip; 128 MB)
+(weka-3-9-5-azul-zulu-linux.zip; 137.2 MB)
 
 First unzip the the zip file. This will create a new directory called
-weka-3-9-4. To run Weka, change into that directory and type
+weka-3-9-5. To run Weka, change into that directory and type
 
 ``` bash
 ./weka.sh
@@ -118,11 +118,11 @@ weka-3-9-4. To run Weka, change into that directory and type
 
 ### Other platforms
 
-* Click [here](https://prdownloads.sourceforge.net/weka/weka-3-9-4.zip)
- to download a zip archive containing Weka (weka-3-9-4.zip; 52 MB)
+* Click [here](https://prdownloads.sourceforge.net/weka/weka-3-9-5.zip)
+ to download a zip archive containing Weka (weka-3-9-5.zip; 55.2 MB)
 
 First unzip the zip file. This will create a new directory called
-weka-3-9-4. To run Weka, change into that directory and type
+weka-3-9-5. To run Weka, change into that directory and type
 
 ``` bash
 java -jar weka.jar
