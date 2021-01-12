@@ -1,7 +1,12 @@
 There are a number of packages for WEKA 3.8 on the internet that are not listed in the "official" WEKA package repository. These packages can nevertheless be easily installed via the package manager in WEKA 3.8 (available via the Tools menu in WEKA's GUIChooser) by providing the URL for the package .zip file.
 
 Below is an (incomplete list) of packages that are available.
- 
+
+# Input/outout
+
+* [common-csv](https://github.com/fracpete/common-csv-weka-package) -- loader/saver for various common CSV formats, using the [Apache Commons CSV](https://commons.apache.org/proper/commons-csv/) library.
+* [matlab](https://github.com/fracpete/matlab-weka-package) -- loader/saver for binary Matlab .mat files, using the [MFL](https://github.com/HebiRobotics/MFL) library.
+
 # Preprocessing
 
 * [dataset-weights](https://github.com/fracpete/dataset-weights-weka-package) -- filters for setting attribute and instance weights using various methods.
