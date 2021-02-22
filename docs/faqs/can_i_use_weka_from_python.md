@@ -4,12 +4,7 @@ An approach making use of the `javax.script` package (new in Java 6) is [Jepp](h
 
 Another solution, to access Java from within Python applications is [JPype](http://jpype.sourceforge.net/), but It's still not fully matured.
 
-Finally, you can use the **python-weka-wrapper** Python 2.7 library to access most of the non-GUI functionality of Weka (3.9.x):
-
-* [pypi](https://pypi.python.org/pypi/python-weka-wrapper) 
-* [github](https://github.com/fracpete/python-weka-wrapper) 
-
-For Python3, use the **python-weka-wrapper3** Python library:
+Finally, you can use the **python-weka-wrapper3** Python 3 library to access most of the non-GUI functionality of Weka (3.9.x):
 
 * [pypi](https://pypi.python.org/pypi/python-weka-wrapper3) 
 * [github](https://github.com/fracpete/python-weka-wrapper3) 
