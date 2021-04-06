@@ -41,13 +41,21 @@ includes Azul's 64-bit OpenJDK Java VM 11 (weka-3-8-5-azul-zulu-windows.exe; 124
 This executable will install Weka in your Program Menu. Launching via the Program
 Menu or shortcuts will automatically use the included JVM to run Weka.
 
-### Mac OS
+### Mac OS - Intel processors
                   
 * Click
 [here](https://prdownloads.sourceforge.net/weka/weka-3-8-5-azul-zulu-osx.dmg)
 to download a disk image for Mac OS that contains a
-Mac application including Azul's 64-bit OpenJDK Java VM 11
+Mac application including Azul's 64-bit OpenJDK Java VM 11 for Intel Macs.
 (weka-3-8-5-azul-zulu-osx.dmg; 151.8 MB)
+
+### Mac OS - ARM processors
+                  
+* Click
+[here](https://prdownloads.sourceforge.net/weka/weka-3-8-5-azul-zulu-arm-osx.dmg)
+to download a disk image for Mac OS that contains a
+Mac application including Azul's 64-bit OpenJDK Java VM 11 for ARM Macs.
+(weka-3-8-5-azul-zulu-arm-osx.dmg; 144 MB)
 
 ### Linux
 
@@ -94,13 +102,22 @@ includes Azul's 64-bit OpenJDK Java VM 11 (weka-3-9-5-azul-zulu-windows.exe; 124
 This executable will install Weka in your Program Menu. Launching via the Program
 Menu or shortcuts will automatically use the included JVM to run Weka.
 
-### Mac OS
+
+### Mac OS - Intel processors
                   
 * Click
 [here](https://prdownloads.sourceforge.net/weka/weka-3-9-5-azul-zulu-osx.dmg)
 to download a disk image for Mac OS that contains a
-Mac application including Azul's 64-bit OpenJDK Java VM 11
-JVM (weka-3-9-5-azul-zulu-osx.dmg; 151.6 MB)
+Mac application including Azul's 64-bit OpenJDK Java VM 11 for Intel Macs.
+(weka-3-9-5-azul-zulu-osx.dmg; 151.6 MB)
+
+### Mac OS - ARM processors
+                  
+* Click
+[here](https://prdownloads.sourceforge.net/weka/weka-3-9-5-azul-zulu-arm-osx.dmg)
+to download a disk image for Mac OS that contains a
+Mac application including Azul's 64-bit OpenJDK Java VM 11 for ARM Macs.
+(weka-3-9-5-azul-zulu-arm-osx.dmg; 145 MB)
 
 ### Linux
 
