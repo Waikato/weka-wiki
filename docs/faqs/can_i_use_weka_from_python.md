@@ -1,3 +1,4 @@
+There are several ways of using Weka in Python or Python-like environment.
 
 # Jython
 If you're starting from scratch, you might want to consider [Jython](http://www.jython.org/), a rewrite of [Python](http://www.python.org/) to seamlessly integrate with Java. The drawback is, that you can only use the libraries that Jython implements, not others like [NumPy](http://numpy.scipy.org/) or [SciPy](http://www.scipy.org/). The article [Using WEKA from Jython](../using_weka_from_jython.md) explains how to use WEKA classes from Jython and how to implement a new classifier in Jython, with an example of ZeroR implemented in Jython.
