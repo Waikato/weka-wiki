@@ -4,7 +4,7 @@ Multi-instance (MI) classification is a supervised learning technique, but diffe
 * only one class label is observable for all the instances in an example
 
 # Classifiers
-Multi-instance classifiers were originally available through a separate software package, [Multi-Instance Learning Kit](http://www.cs.waikato.ac.nz/~ml/milk/) (= MILK). Weka handles relational attributes now natively since 3.5.3 and the multi-instance classifiers are available through the [multiInstanceLearning](https://weka.sourceforge.io/doc.packages/multiInstanceLearning/) package. Once the package has been installed, the classifiers can be found in the following package:
+Multi-instance classifiers were originally available through a separate software package, [Multi-Instance Learning Kit](http://www.cs.waikato.ac.nz/~ml/milk/) (= MILK). Weka handles relational attributes now natively since 3.5.3 and the multi-instance classifiers are available through the [multiInstanceLearning](https://weka.sourceforge.io/doc.packages/multiInstanceLearning/) package and filters through the [multiInstanceFilters](https://weka.sourceforge.io/doc.packages/multiInstanceFilters/). Once the packages have been installed, the classifiers can be found in the following package:
 
 ```text
  weka.classifiers.mi
@@ -75,3 +75,4 @@ Here is an example of the *musk1* UCI dataset, used quite often in publications 
 * Xin Xu. *Statistical learning in multiple instance problem.* Master's thesis, University of Waikato, Hamilton, NZ, 2003. 0657.594. [Download](http://www.cs.waikato.ac.nz/~ml/publications/2003/xinxu_thesis.ps.gz)
 * [MILK homepage](http://www.cs.waikato.ac.nz/~ml/milk/)
 * [multiInstanceLearning Javadoc](https://weka.sourceforge.io/doc.packages/multiInstanceLearning/)
+* [multiInstanceFilters Javadoc](https://weka.sourceforge.io/doc.packages/multiInstanceFilters/)
