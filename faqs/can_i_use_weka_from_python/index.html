@@ -8,7 +8,7 @@
   
   
   <link rel="shortcut icon" href="../../img/favicon.ico">
-  <title>Jython - Weka Wiki</title>
+  <title>Can i use weka from python - Weka Wiki</title>
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
@@ -17,7 +17,7 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Jython";
+    var mkdocs_page_name = "Can i use weka from python";
     var mkdocs_page_input_path = "faqs/can_i_use_weka_from_python.md";
     var mkdocs_page_url = "/Waikato/weka-wiki/faqs/can_i_use_weka_from_python/";
   </script>
@@ -170,7 +170,7 @@
     
       
     
-    <li>Jython</li>
+    <li>Can i use weka from python</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -180,7 +180,8 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="jython">Jython</h1>
+                <p>There are several ways of using Weka in Python or Python-like environment.</p>
+<h1 id="jython">Jython</h1>
 <p>If you're starting from scratch, you might want to consider <a href="http://www.jython.org/">Jython</a>, a rewrite of <a href="http://www.python.org/">Python</a> to seamlessly integrate with Java. The drawback is, that you can only use the libraries that Jython implements, not others like <a href="http://numpy.scipy.org/">NumPy</a> or <a href="http://www.scipy.org/">SciPy</a>. The article <a href="../../using_weka_from_jython/">Using WEKA from Jython</a> explains how to use WEKA classes from Jython and how to implement a new classifier in Jython, with an example of ZeroR implemented in Jython.</p>
 <h1 id="jepp">Jepp</h1>
 <p>An approach making use of the <code>javax.script</code> package (new in Java 6) is <a href="http://jepp.sourceforge.net/">Jepp</a>, <em>Java embedded Python</em>. Jepp seems to have the same limitations as Jython, not being able to import Scipy or Numpy, but one can import pure Python libraries. The arcticle <a href="../../using_weka_via_jepp/">Using WEKA via Jepp</a> contains more information and examples.</p>
