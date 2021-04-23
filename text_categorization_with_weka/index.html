@@ -7,13 +7,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   
+  <link rel="canonical" href="https://github.com/Waikato/weka-wiki/text_categorization_with_weka/">
   <link rel="shortcut icon" href="../img/favicon.ico">
   <title>Text categorization with weka - Weka Wiki</title>
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
-  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
   
   <script>
     // Current page data
@@ -24,7 +25,7 @@
   
   <script src="../js/jquery-2.1.1.min.js" defer></script>
   <script src="../js/modernizr-2.8.3.min.js" defer></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script> 
   
 </head>
@@ -35,6 +36,7 @@
 
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
         <a href=".." class="icon icon-home"> Weka Wiki</a>
         <div role="search">
@@ -45,112 +47,71 @@
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-	<ul class="current">
-	  
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="..">Home</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../downloading_weka/">Downloading and installing Weka</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../requirements/">Requirements</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../documentation/">Documentation</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../getting_help/">Getting help</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../citing_weka/">Citing Weka</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../literature/">Literature</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../development/">Development</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../history/">History</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Resources</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../faq/">FAQ</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../not_so_faq/">Not so FAQ</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../troubleshooting/">Troubleshooting</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../using_the_api/">Using the API</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../extending_weka/">Extending Weka</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../formats_and_processing/arff/">ARFF Format</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../primer/">Primer</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../datasets/">Datasets</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../visualization_articles/">Visualization Articles</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../properties_file/">Properties File</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../packages/">Packages</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../experimenter/experimenter/">Experimenter</a>
-                </li>
-    </ul>
-	    </li>
-          
-        </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../downloading_weka/">Downloading and installing Weka</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../requirements/">Requirements</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../documentation/">Documentation</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../getting_help/">Getting help</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../citing_weka/">Citing Weka</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../literature/">Literature</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../development/">Development</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../history/">History</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Resources</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../faq/">FAQ</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../not_so_faq/">Not so FAQ</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../troubleshooting/">Troubleshooting</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../using_the_api/">Using the API</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../extending_weka/">Extending Weka</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../formats_and_processing/arff/">ARFF Format</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../primer/">Primer</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../datasets/">Datasets</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../visualization_articles/">Visualization Articles</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../properties_file/">Properties File</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../packages/">Packages</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../experimenter/experimenter/">Experimenter</a>
+                    </li>
+                </ul>
       </div>
-      &nbsp;
+    </div>
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
@@ -175,6 +136,7 @@
       
     </li>
   </ul>
+  
   <hr/>
 </div>
           <div role="main">
@@ -216,16 +178,13 @@
     |  |
     |  ...
 </code></pre>
-
 <p>The above directory structure can be turned into an ARFF file like this:</p>
-<pre><code class="bash">java weka.core.converters.TextDirectoryLoader -dir text_example &gt; text_example.arff
+<pre><code class="language-bash">java weka.core.converters.TextDirectoryLoader -dir text_example &gt; text_example.arff
 </code></pre>
-
 <h2 id="csv-files">CSV files</h2>
 <p>CSV files can be imported in Weka easily via the Weka Explorer or via commandline via the <code>CSVLoader</code> class:</p>
-<pre><code class="bash"> java weka.core.converters.CSVLoader file.csv &gt; file.arff
+<pre><code class="language-bash"> java weka.core.converters.CSVLoader file.csv &gt; file.arff
 </code></pre>
-
 <p>By default, non-numerical attributes get imported as <em>NOMINAL</em> attributes, which is not necessarily desired for textual data, especially if one wants to use the <a href="https://weka.sourceforge.io/doc.stable-3-8/weka/filters/unsupervised/attribute/StringToWordVector.html">StringToWordVector</a> filter. In order to change the attribute to <em>STRING</em>, one can run the <code>NominalToString</code> filter (package <code>weka.filters.unsupervised.attribute</code>) on the data, specifying the attribute index or range of indices that should be converted (NB: 
 this filter does <strong>not</strong> exclude the class attribute from conversion!). In order to retain the attribute types, one needs to save the file in <a href="../formats_and_processing/arff/">ARFF</a> or <a href="../formats_and_processing/xrff/">XRFF</a> format (or in the compressed version of these formats).</p>
 <h2 id="third-party-tools">Third-party tools</h2>
@@ -236,18 +195,16 @@ this filter does <strong>not</strong> exclude the class attribute from conversio
 <h2 id="conversion">Conversion</h2>
 <p>Most classifiers in Weka cannot handle <em>String</em> attributes. For these learning schemes one has to process the data with appropriate filters, e.g., the <a href="https://weka.sourceforge.io/doc.stable-3-8/weka/filters/unsupervised/attribute/StringToWordVector.html">StringToWordVector</a> filter which can perform <a href="http://en.wikipedia.org/wiki/tf%e2%80%93idf">TF/IDF transformation</a>.</p>
 <p>The <code>StringToWordVector</code> filter places the class attribute of the generated output data at the beginning. In case you'd to like to have it as last attribute again, you can use the <a href="https://weka.sourceforge.io/doc.stable-3-8/weka/filters/unsupervised/attribute/Reorder.html">Reorder</a> filter with the following setup:</p>
-<pre><code class="bash">weka.filters.unsupervised.attribute.Reorder -R 2-last,first
+<pre><code class="language-bash">weka.filters.unsupervised.attribute.Reorder -R 2-last,first
 </code></pre>
-
 <p>And with the <a href="https://weka.sourceforge.io/doc.stable-3-8/weka/filters/MultiFilter.html">MultiFilter</a> you can also apply both filters in one go, instead of subsequently. Makes it easier in the Explorer for instance.</p>
 <h2 id="stopwords">Stopwords</h2>
 <p>The <a href="https://weka.sourceforge.io/doc.stable-3-8/weka/filters/unsupervised/attribute/StringToWordVector.html">StringToWordVector</a> filter can also work with a different stopword list than the built-in one (based on the Rainbow system). One can use the <code>-stopwords</code> option to load the external stopwords file. The format for such a stopword file is one stopword per line, lines starting with '#' are interpreted as comments and ignored.</p>
 <p><strong>Note:</strong> There was a bug in Weka 3.5.6 (which introduced the support of external stopwords lists), which ignored the external stopwords list. Later versions or <a href="../snapshots/">snapshot</a>s from 21/07/2007 on will work correctly.</p>
 <h1 id="utf-8">UTF-8</h1>
 <p>In case you are working with text files containing non-ASCII characters, e.g., Arabic, you might encounter some display problems under Windows. Java was designed to display <a href="http://en.wikipedia.org/wiki/utf-8">UTF-8</a>, which should include arabic characters. By default, Java uses <a href="http://en.wikipedia.org/wiki/cp1252">code page 1252</a> under Windows, which garbles the display of other characters. In order to fix this, you will have to modify the java command-line with which you start up Weka:</p>
-<pre><code class="bash">  java -Dfile.encoding=utf-8 -classpath ...
+<pre><code class="language-bash">  java -Dfile.encoding=utf-8 -classpath ...
 </code></pre>
-
 <p>The <code>-Dfile.encoding=utf-8</code> tells Java to explicitly use <a href="http://en.wikipedia.org/wiki/utf-8">UTF-8</a> encoding instead of the default <a href="http://en.wikipedia.org/wiki/cp1252">CP1252</a>.
 If you are starting Weka via start menu and you use a recent version (at least 3.5.8 or 3.4.13), then you will just have to modify the <code>fileEncoding</code> placeholder in the <code>RunWeka.ini</code> accordingly.</p>
 <h1 id="examples">Examples</h1>
@@ -281,7 +238,7 @@ If you are starting Weka via start menu and you use a recent version (at least 3
     
   </div>
 
-  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
       
         </div>
@@ -291,7 +248,7 @@ If you are starting Weka via start menu and you use a recent version (at least 3
 
   </div>
 
-  <div class="rst-versions" role="note" style="cursor: pointer">
+  <div class="rst-versions" role="note" aria-label="versions">
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
@@ -301,6 +258,11 @@ If you are starting Weka via start menu and you use a recent version (at least 3
     <script>var base_url = '..';</script>
     <script src="../js/theme.js" defer></script>
       <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
 
 </body>
 </html>

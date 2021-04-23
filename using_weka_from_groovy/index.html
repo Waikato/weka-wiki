@@ -7,13 +7,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   
+  <link rel="canonical" href="https://github.com/Waikato/weka-wiki/using_weka_from_groovy/">
   <link rel="shortcut icon" href="../img/favicon.ico">
   <title>Using weka from groovy - Weka Wiki</title>
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
-  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
   
   <script>
     // Current page data
@@ -24,7 +25,7 @@
   
   <script src="../js/jquery-2.1.1.min.js" defer></script>
   <script src="../js/modernizr-2.8.3.min.js" defer></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script> 
   
 </head>
@@ -35,6 +36,7 @@
 
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
         <a href=".." class="icon icon-home"> Weka Wiki</a>
         <div role="search">
@@ -45,112 +47,71 @@
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-	<ul class="current">
-	  
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="..">Home</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../downloading_weka/">Downloading and installing Weka</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../requirements/">Requirements</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../documentation/">Documentation</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../getting_help/">Getting help</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../citing_weka/">Citing Weka</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../literature/">Literature</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../development/">Development</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../history/">History</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Resources</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../faq/">FAQ</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../not_so_faq/">Not so FAQ</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../troubleshooting/">Troubleshooting</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../using_the_api/">Using the API</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../extending_weka/">Extending Weka</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../formats_and_processing/arff/">ARFF Format</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../primer/">Primer</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../datasets/">Datasets</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../visualization_articles/">Visualization Articles</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../properties_file/">Properties File</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../packages/">Packages</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../experimenter/experimenter/">Experimenter</a>
-                </li>
-    </ul>
-	    </li>
-          
-        </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../downloading_weka/">Downloading and installing Weka</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../requirements/">Requirements</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../documentation/">Documentation</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../getting_help/">Getting help</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../citing_weka/">Citing Weka</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../literature/">Literature</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../development/">Development</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../history/">History</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Resources</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../faq/">FAQ</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../not_so_faq/">Not so FAQ</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../troubleshooting/">Troubleshooting</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../using_the_api/">Using the API</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../extending_weka/">Extending Weka</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../formats_and_processing/arff/">ARFF Format</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../primer/">Primer</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../datasets/">Datasets</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../visualization_articles/">Visualization Articles</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../properties_file/">Properties File</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../packages/">Packages</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../experimenter/experimenter/">Experimenter</a>
+                    </li>
+                </ul>
       </div>
-      &nbsp;
+    </div>
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
@@ -175,6 +136,7 @@
       
     </li>
   </ul>
+  
   <hr/>
 </div>
           <div role="main">
@@ -242,7 +204,7 @@
 </ul>
 <h2 id="implementation">Implementation</h2>
 <p>If your Groovy CLASSPATH has been setup correctly, you can use all those classes in Groovy straight away. E.g., after including the <code>weka.jar</code>, I can run the following little script (<a href="../files/UsingJ48.groovy">UsingJ48.groovy</a> to train J48 on a supplied dataset and output its model:</p>
-<pre><code class="groovy">import weka.classifiers.trees.J48
+<pre><code class="language-groovy">import weka.classifiers.trees.J48
 import weka.core.converters.ConverterUtils.DataSource
 import weka.core.Instances
 
@@ -262,7 +224,6 @@ j48.buildClassifier(data)
 // print out the built model
 println j48
 </code></pre>
-
 <p>A slightly more elaborate example can be found in <a href="../files/UsingJ48Ext.groovy">UsingJ48Ext.groovy</a>, which uses more methods of the <code>weka.classifiers.Evaluation</code> class.</p>
 <p><strong>NB:</strong> The example <code>UsingJ48Ext.groovy</code> needs Weka 3.6.x (or a snapshot of the developer version) to run, due to some changes in the API.</p>
 <h1 id="implementing-a-groovy-classifier">Implementing a Groovy classifier</h1>
@@ -274,34 +235,31 @@ println j48
 <h2 id="implementation_1">Implementation</h2>
 <p>Implementing a Groovy classifier is pretty straight-forward, since the syntax is almost the same and Java classes are imported/used in Groovy just like in Java. The <a href="../files/GeroR.groovy">GeroR.groovy</a> file re-implements the <code>weka.classifiers.rules.ZeroR</code> classifier as Groovy script.</p>
 <p>The class declaration for <code>GeroR.groovy</code> looks like this, for instance:</p>
-<pre><code class="groovy">class GeroR
+<pre><code class="language-groovy">class GeroR
   extends Classifier
   implements WeightedInstancesHandler {
     ...
 }
 </code></pre>
-
 <p>For more information on implementing classifiers, see the <a href="../writing_classifier/">Writing your own Classifier</a> article.</p>
 <h2 id="execution">Execution</h2>
 <h3 id="groovy">Groovy</h3>
 <p>As long as you have the <code>weka.jar</code> in your Groovy environment, you can directly run these scripts using the <code>groovy</code> command.
 Here is an example, executing the <code>FunkyClassifier.groovy</code> script in a Linux bash:</p>
-<pre><code class="bash">groovy -classpath weka.jar \
+<pre><code class="language-bash">groovy -classpath weka.jar \
   /some/where/FunkyClassifier.groovy \
   -t /my/datasets/data.arff \
   &lt;more options for the Groovy script&gt;
 </code></pre>
-
 <h3 id="weka">Weka</h3>
 <p>In order to execute classifiers written in Groovy, you have to use the <code>weka.classifiers.scripting.GroovyClassifier</code> classifier.
 Here is an example, executing the <code>FunkyClassifier.groovy</code> script in a Linux bash:</p>
-<pre><code class="bash">java weka.jar:groovy-all-1.5.7.jar \
+<pre><code class="language-bash">java weka.jar:groovy-all-1.5.7.jar \
   weka.classifiers.scripting.GroovyClassifier \
   -t /my/datasets/data.arff \
   -G /some/where/FunkyClassifier.groovy \
   -- &lt;more options for the Groovy script&gt;
 </code></pre>
-
 <h1 id="downloads">Downloads</h1>
 <ul>
 <li><a href="../files/UsingJ48.groovy">UsingJ48.groovy</a> - simple example for using J48 in a Groovy script</li>
@@ -335,7 +293,7 @@ Here is an example, executing the <code>FunkyClassifier.groovy</code> script in 
     
   </div>
 
-  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
       
         </div>
@@ -345,7 +303,7 @@ Here is an example, executing the <code>FunkyClassifier.groovy</code> script in 
 
   </div>
 
-  <div class="rst-versions" role="note" style="cursor: pointer">
+  <div class="rst-versions" role="note" aria-label="versions">
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
@@ -355,6 +313,11 @@ Here is an example, executing the <code>FunkyClassifier.groovy</code> script in 
     <script>var base_url = '..';</script>
     <script src="../js/theme.js" defer></script>
       <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
 
 </body>
 </html>

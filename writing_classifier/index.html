@@ -7,13 +7,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   
+  <link rel="canonical" href="https://github.com/Waikato/weka-wiki/writing_classifier/">
   <link rel="shortcut icon" href="../img/favicon.ico">
   <title>Writing classifier - Weka Wiki</title>
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
-  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
   
   <script>
     // Current page data
@@ -24,7 +25,7 @@
   
   <script src="../js/jquery-2.1.1.min.js" defer></script>
   <script src="../js/modernizr-2.8.3.min.js" defer></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script> 
   
 </head>
@@ -35,6 +36,7 @@
 
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
         <a href=".." class="icon icon-home"> Weka Wiki</a>
         <div role="search">
@@ -45,112 +47,71 @@
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-	<ul class="current">
-	  
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="..">Home</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../downloading_weka/">Downloading and installing Weka</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../requirements/">Requirements</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../documentation/">Documentation</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../getting_help/">Getting help</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../citing_weka/">Citing Weka</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../literature/">Literature</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../development/">Development</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../history/">History</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Resources</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../faq/">FAQ</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../not_so_faq/">Not so FAQ</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../troubleshooting/">Troubleshooting</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../using_the_api/">Using the API</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../extending_weka/">Extending Weka</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../formats_and_processing/arff/">ARFF Format</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../primer/">Primer</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../datasets/">Datasets</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../visualization_articles/">Visualization Articles</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../properties_file/">Properties File</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../packages/">Packages</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../experimenter/experimenter/">Experimenter</a>
-                </li>
-    </ul>
-	    </li>
-          
-        </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../downloading_weka/">Downloading and installing Weka</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../requirements/">Requirements</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../documentation/">Documentation</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../getting_help/">Getting help</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../citing_weka/">Citing Weka</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../literature/">Literature</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../development/">Development</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../history/">History</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Resources</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../faq/">FAQ</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../not_so_faq/">Not so FAQ</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../troubleshooting/">Troubleshooting</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../using_the_api/">Using the API</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../extending_weka/">Extending Weka</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../formats_and_processing/arff/">ARFF Format</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../primer/">Primer</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../datasets/">Datasets</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../visualization_articles/">Visualization Articles</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../properties_file/">Properties File</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../packages/">Packages</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../experimenter/experimenter/">Experimenter</a>
+                    </li>
+                </ul>
       </div>
-      &nbsp;
+    </div>
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
@@ -175,6 +136,7 @@
       
     </li>
   </ul>
+  
   <hr/>
 </div>
           <div role="main">
@@ -185,7 +147,6 @@
 <p>The base classifiers are all located in the following package:</p>
 <pre><code> weka.classifiers
 </code></pre>
-
 <p><strong>Note:</strong> This is also covered in chapter <em>Extending WEKA</em> of the WEKA manual.</p>
 <h1 id="packages">Packages</h1>
 <p>A few comments about the different classifier sub-packages:</p>
@@ -209,7 +170,7 @@
 <h2 id="base-classifier">Base-classifier</h2>
 <p>Normal classifiers only state what kind of attributes and what kind of classes they can handle.</p>
 <p>The <code>getCapabilities()</code> method of <code>weka.classifiers.trees.RandomTree</code>, for instance, looks like this:</p>
-<pre><code class="java">  public Capabilities getCapabilities() {
+<pre><code class="language-java">  public Capabilities getCapabilities() {
     Capabilities result = super.getCapabilities();   // returns the object from weka.classifiers.Classifier
 
     // attributes
@@ -225,7 +186,6 @@
     return result;
   }
 </code></pre>
-
 <p><strong>Special cases:</strong></p>
 <ul>
 <li>
@@ -247,11 +207,10 @@
 <p>Meta-classifiers, by default, just return the capabilities of their base classifiers - in case of descendants of the <code>weka.classifier.MultipleClassifiersCombiner</code>, an <strong>AND</strong> over all the Capabilities of the base classifiers is returned.</p>
 <p>Due to this behavior, the Capabilities depend (normally) only on the currently configured base classifier(s). To <em>soften</em> filtering for certain behavior, meta-classifiers also define so-called <em>Dependencies</em> on a per-Capability basis. These dependencies tell the filter that even though a certain capability is not supported right now, it is possible that it will be supported with a different base classifier. By default, all Capabilities are initialized as Dependencies. </p>
 <p><code>weka.classifiers.meta.LogitBoost</code>, e.g., is restricted to nominal classes. For that reason it disables the Dependencies for the class:</p>
-<pre><code class="java">    result.disableAllClasses();               // disable all class types
+<pre><code class="language-java">    result.disableAllClasses();               // disable all class types
     result.disableAllClassDependencies();     // no dependencies!
     result.enable(Capability.NOMINAL_CLASS);  // only nominal classes allowed
 </code></pre>
-
 <h2 id="relevant-classes">Relevant classes</h2>
 <ul>
 <li><code>weka.core.Capabilities</code></li>
@@ -293,35 +252,30 @@
 </ul>
 <h2 id="general">General</h2>
 <p>The general description for all classes displayed in the GenericObjectEditor was already in place, with the following method:</p>
-<pre><code class="java"> globalInfo()
+<pre><code class="language-java"> globalInfo()
 </code></pre>
-
 <p>The return value can be placed in the Javadoc, surrounded by the following comment tags:</p>
 <pre><code> &lt;!-- globalinfo-start --&gt;
  will be automatically replaced
  &lt;!-- globalinfo-end --&gt;
 </code></pre>
-
 <h2 id="paper-references_1">Paper reference(s)</h2>
 <p>If available, the paper reference should also be listed in the Javadoc. Since the <code>globalInfo()</code> method should return a short version of the reference, it is sufficient to list the full <a href="http://en.wikipedia.org/wiki/BibTeX">BibTeX</a> documentation:</p>
 <pre><code> &lt;!-- technical-bibtex-start --&gt;
  will be automatically replaced
  &lt;!-- technical-bibtex-end --&gt;
 </code></pre>
-
 <p>In case it is necessary to list the short, plain text version, too, one can use the following tags:</p>
 <pre><code> &lt;!-- technical-plaintext-start --&gt;
  will be automatically replaced
  &lt;!-- technical-plaintext-end --&gt;
 </code></pre>
-
 <h2 id="options">Options</h2>
 <p>To place the commandline options, use the following comment tags:</p>
 <pre><code> &lt;!-- options-start --&gt;
  will be automatically replaced
  &lt;!-- options-end --&gt;
 </code></pre>
-
 <h2 id="relevant-classes_1">Relevant classes</h2>
 <ul>
 <li><code>weka.core.AllJavadoc</code> - executes all Javadoc-producing classes</li>
@@ -334,7 +288,7 @@
 <p>The <a href="../generic_object_editor/">GenericObjectEditor</a> article shows you how to tell Weka where to find your classifier and therefore displaying it in the <em>GenericObjectEditor</em>.</p>
 <h1 id="revisions">Revisions</h1>
 <p>Classifiers also implement the <code>weka.core.RevisionHandler</code> interface. This provides the functionality of obtaining the <a href="../subversion/">Subversion</a> revision from within Java. Classifiers that are not part of the official Weka distribution will have to implement the method <code>getRevision()</code> as follows, which will return a dummy revision of <em>1.0</em>:</p>
-<pre><code class="java">  /**
+<pre><code class="language-java">  /**
    * Returns the revision string.
    * 
    * @return        the revision
@@ -343,7 +297,6 @@
     return RevisionUtils.extract(&quot;$Revision: 1.0 $&quot;);
   }
 </code></pre>
-
 <h1 id="testing">Testing</h1>
 <p>Weka provides already a test framework to ensure the basic functionality of a classifier. It is essential for the classifier to pass these tests.</p>
 <h2 id="commandline-test">Commandline test</h2>
@@ -351,7 +304,6 @@
 <p>Use the CheckClassifier class to test your classifier from commandline:</p>
 <pre><code> weka.classifiers.CheckClassifier -W classname [-- additional parameters]
 </code></pre>
-
 <p>Only the following tests may have "no" as result, the others must have a "no (OK error message)" or "yes":</p>
 <ul>
 <li>options</li>
@@ -363,28 +315,24 @@
 <p>Additionally, check the <strong>option handling</strong> of your classifier with the following tool from commandline:</p>
 <pre><code> weka.core.CheckOptionHandler -W classname [-- additional parameters]
 </code></pre>
-
 <p>All tests need to return <em>yes</em>.</p>
 <h2 id="genericobjecteditor">GenericObjectEditor</h2>
 <p>The <code>CheckGOE</code> class checks whether all the properties available in the GUI have a tooltip accompanying them and whether the <code>globalInfo()</code> method is declared:</p>
 <pre><code> weka.core.CheckGOE -W classname [-- additional parameters]
 </code></pre>
-
 <p>All tests, once again, need to return <em>yes</em>.</p>
 <h2 id="source-code">Source code</h2>
 <p>Classifiers that implement the <code>weka.classifiers.Sourcable</code> interface can output Java code of their model. In order to check the generated code, one should not only compile the code, but also test it with the following test class:</p>
 <pre><code> weka.classifiers.CheckSource
 </code></pre>
-
 <p>This class takes the original Weka classifier, the generated code and the dataset used for generating the source code as parameters. It builds the Weka classifier on the dataset and compares the predictions, the ones from the Weka classifier and the ones from the generated source code, whether they are the same.</p>
 <p>Here's an example call for <code>weka.classifiers.trees.Id3</code> and the generated class <code>weka.classifiers.WekaWrapper</code> (it wraps the actual generated code in a pseudo-classifier):</p>
-<pre><code class="bash"> java weka.classifiers.CheckSource \
+<pre><code class="language-bash"> java weka.classifiers.CheckSource \
     -W &quot;weka.classifiers.trees.Id3&quot; \
     -S weka.classifiers.WekaWrapper \
     -t data.arff \
     -c last
 </code></pre>
-
 <p>It needs to return <em>Tests OK!</em>.</p>
 <h2 id="unit-tests">Unit tests</h2>
 <p>In order to make sure that your classifier applies to the Weka criteria, you should add your classifier to the <a href="http://www.junit.org/">junit</a> unit test framework, i.e., by creating a Test class derived from <code>AbstractClassifierTest</code>. This class uses the <code>CheckClassifier</code>, <code>CheckOptionHandler</code> and <code>CheckGOE</code> class to run a battery of tests.</p>
@@ -415,7 +363,7 @@
     
   </div>
 
-  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
       
         </div>
@@ -425,7 +373,7 @@
 
   </div>
 
-  <div class="rst-versions" role="note" style="cursor: pointer">
+  <div class="rst-versions" role="note" aria-label="versions">
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
@@ -435,6 +383,11 @@
     <script>var base_url = '..';</script>
     <script src="../js/theme.js" defer></script>
       <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
 
 </body>
 </html>
