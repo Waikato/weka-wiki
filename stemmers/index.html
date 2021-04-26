@@ -142,12 +142,12 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="introduction">Introduction</h1>
+                <h3 id="introduction">Introduction</h3>
 <p>Weka supports stemming algorithms in the developer version. The stemming algorithms are located in the following package:</p>
 <pre><code> weka.core.stemmers
 </code></pre>
 <p>Currently, the Lovins Stemmer (+ iterated version) and support for the Snowball stemmers are included.</p>
-<h1 id="snowball-stemmers">Snowball stemmers</h1>
+<h3 id="snowball-stemmers">Snowball stemmers</h3>
 <p>Weka contains a wrapper class for the <a href="http://snowball.tartarus.org/">Snowball</a> stemmers (containing the Porter stemmer and several other stemmers for different languages). The relevant class is weka.core.stemmers.SnowballStemmer.</p>
 <p>The Snowball classes are not included, they only have to be present in the classpath. The reason for this is, that the Weka team doesn't have to watch out for new versions of the stemmers and update them.</p>
 <p>There are <strong>three</strong> ways of getting hold of the Snowball stemmers:</p>
@@ -163,7 +163,7 @@
 </blockquote>
 </li>
 </ul>
-<h1 id="ptstemmer">PTStemmer</h1>
+<h3 id="ptstemmer">PTStemmer</h3>
 <p><a href="http://code.google.com/p/ptstemmer/">PTStemmer</a> is a stemmer library for Portuguese developed by Pedro Oliveira.</p>
 <p>In order to use this library:</p>
 <ul>
@@ -173,13 +173,13 @@
 <p>The source code of the wrapper project is also available: 
 <a href="../files/ptstemmer-weka-src-20091105.tar.gz">ptstemmer-weka-src-20091105.tar.gz</a>.
 <strong>NB:</strong> the source code and the resulting jars are based on version 1.0 of the PTStemmer library.</p>
-<h1 id="using-stemmers">Using stemmers</h1>
+<h3 id="using-stemmers">Using stemmers</h3>
 <p>The stemmers can either be used:</p>
 <ul>
 <li>from commandline</li>
 <li>within the <code>StringToWordVector</code> (package <code>weka.filters.unsupervised.attribute</code>)</li>
 </ul>
-<h2 id="commandline">Commandline</h2>
+<h4 id="commandline">Commandline</h4>
 <p>All stemmers support the following options:</p>
 <ul>
 <li><code>-h</code><blockquote>
@@ -199,15 +199,15 @@
 </blockquote>
 </li>
 </ul>
-<h2 id="stringtowordvector">StringToWordVector</h2>
+<h4 id="stringtowordvector">StringToWordVector</h4>
 <p>Just use the <a href="../generic_object_editor/">GenericObjectEditor</a> to choose the right stemmer and the desired options (if the stemmer offers these).</p>
-<h1 id="adding-new-stemmers">Adding new stemmers</h1>
+<h3 id="adding-new-stemmers">Adding new stemmers</h3>
 <p>You can easily add new stemmers, if you follow these guidelines (for use in the <a href="../generic_object_editor/">GenericObjectEditor</a>):</p>
 <ul>
 <li>they should be located in the <code>weka.core.stemmers</code> package and</li>
 <li>they must implement the interface <code>weka.core.stemmers.Stemmer</code>.</li>
 </ul>
-<h1 id="links">Links</h1>
+<h3 id="links">Links</h3>
 <ul>
 <li><a href="http://snowball.tartarus.org/">Snowball homepage</a></li>
 <li><a href="http://ant.apache.org/">ANT homepage</a></li>

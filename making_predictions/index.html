@@ -142,9 +142,9 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="command-line">Command line</h1>
+                <h3 id="command-line">Command line</h3>
 <p>The following sections show how to obtain predictions/classifications without writing your own Java code via the command line.</p>
-<h2 id="classifiers">Classifiers</h2>
+<h4 id="classifiers">Classifiers</h4>
 <p>After a <a href="../saving_and_loading_models/">model has been saved</a>, one can make predictions for a test set, whether that set contains valid class values or not. The output will contain both the actual and predicted class. (Note that if the test class contains simply '?' for the class label for each instance, the "actual" class label for each instance will not contain useful information, but the predicted class label will.) The <code>-T &lt;test_set&gt;</code> command-line switch specifies the dataset of instances whose classes are to be predicted, while the <code>-p &lt;attribute_range&gt;</code> switch allows the user to write out a range of attributes (examples: "1-2" for the first and second attributes, or "0" for no attributes). Sample command line:</p>
 <pre><code class="language-bash"> java weka.classifiers.trees.J48 -T unclassified.arff -l j48.model -p 0
 </code></pre>
@@ -168,7 +168,7 @@
 <li>Since Weka 3.5.4 you can also output the complete class distribution, not just the prediction, by using the parameter <code>-distribution</code> in conjunction with the -p option. In this case, "*" is placed beside the probability in the distribution that corresponds to the predicted class value.</li>
 <li>If you have an ID attribute in your dataset as first attribute (you can always add one with the <a href="https://weka.sourceforge.io/doc.stable-3-8/weka/filters/unsupervised/attribute/AddID.html">AddID</a> filter), you could output it with <code>-p 1</code> instead of using <code>-p 0</code>. This works only for explicit train/test sets, but you can use the Explorer for cross-validation.</li>
 </ul>
-<h2 id="filters">Filters</h2>
+<h4 id="filters">Filters</h4>
 <p>The <code>[AddClassification](https://weka.sourceforge.io/doc.stable-3-8/weka/filters/supervised/attribute/addclassification.html)</code> filter (package <code>weka.filters.supervised.attribute</code>) can either train a classifier on the input data and transform this or load a serialized model to transform the input data (even though the filter was introduced in 3.5.4, due to a bug in the commandline option handling, it is recommended to download a version &gt;3.5.5 or a snapshot from the Weka homepage).
 This filter can add the classification, class distribution and the error per row as extra attributes to the dataset.</p>
 <ul>
@@ -195,9 +195,9 @@ This filter can add the classification, class distribution and the error per row
      -o train_classified.arff \
      -c last
 </code></pre>
-<h1 id="gui">GUI</h1>
+<h3 id="gui">GUI</h3>
 <p>The Weka GUI allows you as well to output predictions based on a previously saved model.</p>
-<h2 id="explorer">Explorer</h2>
+<h4 id="explorer">Explorer</h4>
 <p>See the <a href="saving_and_loading_models#explorer.md">Explorer</a> section of the <a href="../saving_and_loading_models/">Saving and loading models</a> article to setup the Explorer. Additionally, you need to check the <em>Output predictions</em> options in the <em>More options</em> dialog. Righ-clicking on the respective results history item and selecting <em>Re-evaluate model on current test set</em> will output then the predictions as well (the statistics will be useless due to missing class values in the test set, so just ignore them). The output is similar to the one produced by the commandline.</p>
 <p>Example output for the <em>anneal</em> UCI dataset:</p>
 <pre><code class="language-text"> == Predictions on test set ==
@@ -213,8 +213,8 @@ This filter can add the classification, class distribution and the error per row
     ...
 </code></pre>
 <p><strong>Note:</strong> The developer version (&gt;3.5.6 or <a href="../snapshots/">snapshot</a>) can also output additional attributes like the commandline with the <code>-p</code> option. In the <em>More options...</em> dialog you can specify those attribute indices with <em>Output additional attributes</em>, e.g., <em>first</em> or <em>1-7</em>. In contrast to the commandline, this output also works for cross-validation.</p>
-<h2 id="knowledgeflow">KnowledgeFlow</h2>
-<h2 id="using-the-predictionappender">Using the PredictionAppender</h2>
+<h4 id="knowledgeflow">KnowledgeFlow</h4>
+<h4 id="using-the-predictionappender">Using the PredictionAppender</h4>
 <p>With the <em>PredictionAppender</em> (from the <em>Evaluation</em> toolbar) you cannot use an already saved model, but you can train a classifier on a dataset and output an <a href="../formats_and_processing/arff/">ARFF</a> file with the predictions appended as additional attribute. Here's an example setup:</p>
 <pre><code class="language-text">               /---dataSet--&gt; TrainingSetMaker ---trainingSet--\
  ArffLoader --&lt;                                                 &gt;--&gt; J48...
@@ -222,19 +222,19 @@ This filter can add the classification, class distribution and the error per row
 
  ...J48 --batchClassifier--&gt; PredictionAppender --testSet--&gt; ArffSaver
 </code></pre>
-<h2 id="using-the-addclassification-filter">Using the AddClassification filter</h2>
+<h4 id="using-the-addclassification-filter">Using the AddClassification filter</h4>
 <p>The AddClassification filter can be used in the KnowledgeFlow as well, either for training a model, or for using a serialized model to perform the predictions. An example setup could look like this:</p>
 <pre><code class="language-text"> ArffLoader --dataSet--&gt; ClassAssigner --dataSet--&gt; AddClassification --dataSet--&gt; ArffSaver
 </code></pre>
-<h1 id="java">Java</h1>
+<h3 id="java">Java</h3>
 <p>If you want to perform the classification within your own code, see the <a href="../use_weka_in_your_java_code/#classifying-instances">classifying instances</a> section of <a href="../use_weka_in_your_java_code/">this article</a>, explaining the Weka API in general.</p>
-<h1 id="see-also">See also</h1>
+<h3 id="see-also">See also</h3>
 <ul>
 <li><a href="../saving_and_loading_models/">Saving and loading models</a></li>
 <li><a href="../use_weka_in_your_java_code/">Use Weka in your Java code</a> - general information about using the Weka API</li>
 <li><a href="../troubleshooting/#instance-id">Using ID attributes</a></li>
 </ul>
-<h1 id="version">Version</h1>
+<h3 id="version">Version</h3>
 <p>The developer version shortly before the release of 3.5.6 was used as basis for this article.</p>
               
             </div>

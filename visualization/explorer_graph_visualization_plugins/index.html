@@ -142,10 +142,10 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="introduction">Introduction</h1>
+                <h3 id="introduction">Introduction</h3>
 <p>As of Weka version &gt;3.5.8 (only developer version, not stable-3.6 branch) one can easily add graph visualization plugins in the Explorer (Classify panel). This makes it easy to implement custom visualizations, if the ones Weka offers are not sufficient. <em>graph</em> is referring to graphs generated, for instance, by the <code>weka.classifiers.bayes.BayesNet</code> classifier.</p>
 <p><strong>Note:</strong> This is also covered in chapter <em>Extending WEKA</em> of the WEKA manual in versions later than 3.7.0 or <a href="../../snapshots/">snapshots</a> of the developer version later than 10/01/2010.</p>
-<h1 id="requirements">Requirements</h1>
+<h3 id="requirements">Requirements</h3>
 <ul>
 <li>custom visualization class must implement the following <strong>interface</strong><blockquote>
 <p><code>weka.gui.visualize.plugins.GraphVisualizePlugin</code></p>
@@ -157,7 +157,7 @@
 </li>
 <li>or the class' package must be listed in the <code>weka.gui.visualize.plugins.GraphVisualizePlugin</code> key of the <code>[weka/gui/GenericPropertiesCreator.props](weka_gui_genericpropertiescreator.props.md)</code> file.</li>
 </ul>
-<h1 id="implementation">Implementation</h1>
+<h3 id="implementation">Implementation</h3>
 <p>The visualization interface contains the following four methods</p>
 <ul>
 <li><strong>getMinVersion</strong><blockquote>
@@ -177,25 +177,25 @@
 </blockquote>
 </li>
 </ul>
-<h1 id="examples">Examples</h1>
-<h2 id="prefuse-visualization-toolkit">Prefuse visualization toolkit</h2>
+<h3 id="examples">Examples</h3>
+<h4 id="prefuse-visualization-toolkit">Prefuse visualization toolkit</h4>
 <p>The <a href="../../files/PrefuseGraph.java">PrefuseGraph.java</a>. It is based on the <code>prefuse.demos.GraphView</code> demo class.</p>
 <p>The following screenshot was generated using <em>BayesNet</em> on the UCI dataset <em>anneal</em> with the following parametrization:</p>
 <blockquote>
 <p><code>weka.classifiers.bayes.BayesNet -D -Q weka.classifiers.bayes.net.search.local.K2 -- -P 3 -S BAYES -E weka.classifiers.bayes.net.estimate.SimpleEstimator -- -A 0.5</code></p>
 </blockquote>
 <p><img alt="Screenshot" src="../../img/PrefuseGraph.png" /></p>
-<h1 id="downloads">Downloads</h1>
+<h3 id="downloads">Downloads</h3>
 <ul>
 <li><a href="../../files/PrefuseGraph.java">PrefuseGraph.java</a></li>
 </ul>
-<h1 id="see-also">See also</h1>
+<h3 id="see-also">See also</h3>
 <ul>
 <li><a href="../../use_weka_in_your_java_code/">Use Weka in your Java code</a> - general overview of the basic Weka API</li>
 <li><a href="../explorer_visualization_plugins/">Explorer visualization plugins</a></li>
 <li><a href="../explorer_tree_visualization_plugins/">Explorer tree visualization plugins</a></li>
 </ul>
-<h1 id="links">Links</h1>
+<h3 id="links">Links</h3>
 <ul>
 <li><a href="http://prefuse.org/">Prefuse homepage</a></li>
 <li><a href="http://goosebumps4all.net/34all/bb/forumdisplay.php?fid=18">PAP - prefuse assistance pool</a></li>

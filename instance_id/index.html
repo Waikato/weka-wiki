@@ -143,7 +143,7 @@
             <div class="section">
               
                 <p>People often want to <strong>tag</strong> their <strong>instances with identifiers</strong>, so they can keep track of them and the predictions made on them.</p>
-<h2 id="adding-the-id">Adding the ID</h2>
+<h4 id="adding-the-id">Adding the ID</h4>
 <p>A new ID attribute is added real easy: one only needs to run the <code>AddID</code> filter over the dataset and it's done. Here's an example (at a DOS/Unix command prompt):</p>
 <pre><code class="language-bash"> java weka.filters.unsupervised.attribute.AddID
    -i data_without_id.arff
@@ -151,7 +151,7 @@
 </code></pre>
 <p>(all on a single line)</p>
 <p><strong>Note:</strong> the AddID filter adds a numeric attribute, not a String attribute to the dataset. If you want to remove this ID attribute for the classifier in a <code>FilteredClassifier</code> environment again, use the <code>Remove</code> filter instead of the <code>RemoveType</code> filter (same package).</p>
-<h2 id="removing-the-id">Removing the ID</h2>
+<h4 id="removing-the-id">Removing the ID</h4>
 <p>If you run from the command line you can use the <code>-p</code> option to output predictions plus any other attributes you are interested in. So it is possible to have a string attribute in your data that acts as an identifier. A problem is that most classifiers don't like String attributes, but you can get around this by using the <code>RemoveType</code> (this removes <em>String</em> attributes by default).</p>
 <p>Here's an example. Lets say you have a training file named <code>train.arff</code>, a testing file named <code>test.arff</code>, and they have an identifier String attribute as their 5th attribute. You can get the predictions from <code>J48</code> along with the identifier strings by issuing the following command (at a DOS/Unix command prompt):</p>
 <pre><code class="language-bash"> java weka.classifiers.meta.FilteredClassifier

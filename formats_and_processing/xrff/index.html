@@ -143,7 +143,7 @@
             <div class="section">
               
                 <p>The <strong>XRFF</strong> (e<strong>X</strong>tensible attribute-<strong>R</strong>elation <strong>F</strong>ile <strong>F</strong>ormat) is an XML-based extension of the <a href="../arff/">ARFF</a> format.</p>
-<h1 id="file-extensions">File extensions</h1>
+<h3 id="file-extensions">File extensions</h3>
 <ul>
 <li><strong>.xrff</strong><blockquote>
 <p>the default extension of <em>XRFF</em> files</p>
@@ -154,8 +154,8 @@
 </blockquote>
 </li>
 </ul>
-<h1 id="comparison">Comparison</h1>
-<h1 id="arff">ARFF</h1>
+<h3 id="comparison">Comparison</h3>
+<h3 id="arff">ARFF</h3>
 <p>In the following a snippet of the UCI dataset <em>iris</em> in <strong>ARFF</strong> format:</p>
 <pre><code class="language-text"> @relation iris
 
@@ -170,7 +170,7 @@
  4.9,3,1.4,0.2,Iris-setosa
  ...
 </code></pre>
-<h2 id="xrff">XRFF</h2>
+<h4 id="xrff">XRFF</h4>
 <p>And the same dataset represented as <strong>XRFF</strong> file:</p>
 <pre><code class="language-xml"> &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
 
@@ -244,7 +244,7 @@
     &lt;/body&gt;
  &lt;/dataset&gt;
 </code></pre>
-<h1 id="sparse-format">Sparse format</h1>
+<h3 id="sparse-format">Sparse format</h3>
 <p>The <em>XRFF</em> format also supports a sparse data representation. Even though the iris dataset does not contain sparse data, the above example will be used here to illustrate the sparse format:</p>
 <pre><code class="language-xml"> ...
  &lt;instances&gt;
@@ -272,22 +272,22 @@
 <p>And each <em>value</em> tag needs to specify the <em>index</em> attribute, which contains the 1-based index of this value. </p>
 <pre><code class="language-xml"> &lt;value index=&quot;1&quot;&gt;5.1&lt;/value&gt;
 </code></pre>
-<h1 id="compression">Compression</h1>
+<h3 id="compression">Compression</h3>
 <p>Since the XML representation takes up considerably more space than the rather compact <em><a href="../arff/">ARFF</a></em> format, one can also compress the data via <strong>gzip</strong>. Weka automatically recognizes a file being gzip compressed, if the file's extension is <em>.xrff.gz</em> instead of <em>.xrff</em>.</p>
 <p>The Weka Explorer now allows to load/save compressed and uncompressed XRFF files (this applies also to <a href="../arff/">ARFF</a> files).</p>
-<h1 id="additional-features">Additional features</h1>
+<h3 id="additional-features">Additional features</h3>
 <p>In addition to all the features of the <a href="../arff/">ARFF</a> format, the <em>XRFF</em> format contains the following additional features:</p>
 <ul>
 <li>class attribute specification</li>
 <li>attribute weights</li>
 <li>instance weights</li>
 </ul>
-<h2 id="class-attribute-specification">Class attribute specification</h2>
+<h4 id="class-attribute-specification">Class attribute specification</h4>
 <p>Via the <code>class="yes"</code> attribute in the attribute specification in the header, one can define which attribute should act as class attribute. A feature that can be used on the command line as well as in the Experimenter, which now can also load other data formats, and removing the limitation of the class attribute always having to be the last one.</p>
 <p>Snippet from the iris dataset:</p>
 <pre><code class="language-xml"> &lt;attribute **class=&quot;yes&quot;** name=&quot;class&quot; type=&quot;nominal&quot;&gt;
 </code></pre>
-<h2 id="attribute-weights">Attribute weights</h2>
+<h4 id="attribute-weights">Attribute weights</h4>
 <p>Attribute weights are stored in an attributes meta-data tag (in the <em>header</em> section). Here's an example of the <em>petalwidth</em> attribute with a weight of 0.9:</p>
 <pre><code class="language-xml"> &lt;attribute name=&quot;petalwidth&quot; type=&quot;numeric&quot;&gt;
      &lt;metadata&gt;
@@ -295,7 +295,7 @@
      &lt;/metadata&gt;
  &lt;/attribute&gt;
 </code></pre>
-<h2 id="instance-weights">Instance weights</h2>
+<h4 id="instance-weights">Instance weights</h4>
 <p>Instance weights are defined via the <em>weight</em> attribute in each <em>instance</em> tag. By default, the weight is 1. Here's an example:</p>
 <pre><code class="language-xml"> &lt;instance weight=&quot;0.75&quot;&gt;
     &lt;value&gt;5.1&lt;/value&gt;

@@ -151,7 +151,7 @@
 </ul>
 <p>Site About Project: <a href="http://socialsla.github.io/Weka-JPA-Persistence">http://socialsla.github.io/Weka-JPA-Persistence</a></p>
 <p>Source on GitHub: <a href="https://github.com/SocialSLA/Weka-JPA-Persistence">https://github.com/SocialSLA/Weka-JPA-Persistence</a></p>
-<h1 id="how-code">How code</h1>
+<h3 id="how-code">How code</h3>
 <pre><code>try {
   Weka2JPAHelper l_helper; // inject with CDI or create a class with new Weka2JPAHelper(Logger,EntityManager);
 
@@ -195,7 +195,7 @@
     }catch{IOException e){}
 
 </code></pre>
-<h3 id="entity-example">Entity Example</h3>
+<h5 id="entity-example">Entity Example</h5>
 <p>The Entity class with name Entity2Weka is a Entity Base used to get attributes and make header file:</p>
 <pre><code>@Entity
 public class Entity2Weka {
@@ -245,7 +245,7 @@ public class Classification {
     }
 }
 </code></pre>
-<h3 id="result-this-arff">Result this ARFF</h3>
+<h5 id="result-this-arff">Result this ARFF</h5>
 <pre><code>@relation Entity2Weka
 
 @attribute post string
@@ -270,7 +270,7 @@ public class Classification {
 'Post numero 8 para teste do helper',?
 'Post numero 9 para teste do helper',?
 </code></pre>
-<h2 id="download-source">Download source</h2>
+<h4 id="download-source">Download source</h4>
 <p>Download this two pakages:</p>
 <ul>
 <li><a href="https://github.com/socialsla/weka-jpa-persistence/archive/0.0.4.zip">WEKA JPA Persistence - V0.0.4</a></li>

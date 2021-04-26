@@ -142,7 +142,7 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="introduction">Introduction</h1>
+                <h3 id="introduction">Introduction</h3>
 <p>As of version 3.4.4 it is possible for WEKA to <a href="./#class-discovery">dynamically discover classes at runtime</a> (rather than using only those specified in the <code>GenericObjectEditor.props</code> (GOE) file). In some versions (3.5.8, 3.6.0) this facility was not enabled by default as it is a bit slower than the GOE file approach, and, furthermore, does not function in environments that do not have a CLASSPATH (e.g., application servers). Later versions (3.6.1, 3.7.0) enabled the dynamic discovery again, as WEKA can now distinguish between being a standalone Java application or being run in a non-CLASSPATH environment.</p>
 <p>If you wish to enable or disable dynamic class discovery, the relevant file to edit is <code>GenericPropertiesCreator.props</code> (GPC). You can obtain this file either from the <code>weka.jar</code> or <code>weka-src.jar</code> archive. Open one of these files with an archive manager that can handle ZIP files (for Windows users, you can use <a href="http://7-zip.org/">7-Zip</a> for this) and navigate to the <code>weka/gui</code> directory, where the GPC file is located. All that is required, is to change the <code>UseDynamic</code> property in this file from <code>false</code> to <code>true</code> (for enabling it) or the other way round (for disabling it). After changing the file, you just place it in your home directory. In order to find out the location of your home directory, do the following:</p>
 <ul>
@@ -198,7 +198,7 @@
 </li>
 </ul>
 <p>A limitation of the GOE prior to 3.4.4 was, that additional classifiers, filters, etc., had to fit into the same package structure as the already existing ones, i.e., all had to be located below <code>weka</code>. WEKA can now display multiple class hierarchies in the GUI, which makes adding new functionality quite easy as we will see later in an example (it is not restricted to classifiers only, but also works with all the other entries in the GPC file).</p>
-<h1 id="file-structure">File Structure</h1>
+<h3 id="file-structure">File Structure</h3>
 <p>The structure of the GOE so far was a key-value-pair, separated by an <em>equals</em>-sign. The <em>value</em> is a comma separated list of classes that are all derived from the superclass/superinterface <em>key</em>. The GPC is slightly different, instead of declaring all the classes/interfaces one need only to specify all the packages descendants are located in (only non-abstract ones are then listed). E.g., the <code>weka.classifiers.Classifier</code> entry in the GOE file looks like this:</p>
 <pre><code class="language-ini"> weka.classifiers.Classifier=\
   weka.classifiers.bayes.AODE,\
@@ -222,7 +222,7 @@
   weka.classifiers.trees,\
   weka.classifiers.rules
 </code></pre>
-<h1 id="exclusion">Exclusion</h1>
+<h3 id="exclusion">Exclusion</h3>
 <p>It may not always be desired to list all the classes that can be found along the <a href="../classpath/">CLASSPATH</a>. Sometimes, classes cannot be declared <code>abstract</code> but still shouldn't be listed in the GOE. For that reason one can list classes, interfaces, superclasses for certain packages to be excluded from display. This exclusion is done with the following file:</p>
 <pre><code class="language-text"> weka/gui/GenericPropertiesCreator.excludes
 </code></pre>
@@ -255,12 +255,12 @@
    C:weka.classifiers.trees.J48,\
    S:weka.classifiers.SingleClassifierEnhancer
 </code></pre>
-<h1 id="class-discovery">Class Discovery</h1>
+<h3 id="class-discovery">Class Discovery</h3>
 <p>Unlike the <code>Class.forName(String)</code> method that grabs the first class it can find in the <a href="../classpath/">CLASSPATH</a>, and therefore fixes the location of the package it found the class in, the dynamic discovery examines the complete <a href="../classpath/">CLASSPATH</a> you're starting the <a href="../java_virtual_machine/">Java Virtual Machine</a> (JVM) with. This means that you can have several parallel directories with the same WEKA package structure, e.g. the standard release of WEKA in one directory (<code>/distribution/weka.jar</code>) and another one with your own classes (<code>/development/weka/...</code>), and display all of the classifiers in the GUI. In case of a name conflict, i.e. two directories contain the same class, the first one that can be found is used. In a nutshell, your <code>java</code> call of the GUIChooser could look like this:</p>
 <pre><code class="language-bash"> java -classpath &quot;/development:/distribution/weka.jar&quot; weka.gui.GUIChooser
 </code></pre>
 <p><em>Note:</em> Windows users have to replace the ":" with ";" and the forward slashes with backslashes.</p>
-<h1 id="multiple-class-hierarchies">Multiple Class Hierarchies</h1>
+<h3 id="multiple-class-hierarchies">Multiple Class Hierarchies</h3>
 <p>In case you're developing your own framework, but still want to use your classifiers within WEKA that wasn't possible so far. With the release <strong>3.4.4</strong> it is possible to have multiple class hierarchies being displayed in the GUI. If you've developed a modified version of J48, let's call it <em>MyJ48</em> and it's located in the package <code>dummy.classifiers</code> then you'll have to add this package to the classifiers list in the GPC file like this:</p>
 <pre><code class="language-ini"> weka.classifiers.Classifier=\
   weka.classifiers.bayes,\
@@ -276,11 +276,11 @@
 </code></pre>
 <p><em>Note:</em> Windows users have to replace the ":" with ";" and the forward slashes with backslashes.</p>
 <p>Starting up the GUI you'll now have another root node in the tree view of the classifiers, called <em>root</em>, and below it the <em>weka</em> and the <em>dummy</em> package hierarchy as you can see here:</p>
-<h1 id="capabilities">Capabilities</h1>
+<h3 id="capabilities">Capabilities</h3>
 <p>Version <strong>3.5.3</strong> of Weka introduces the notion of <em>Capabilities</em>. Capabilities basically list what kind of data a certain object can handle, e.g., one classifier can handle numeric classes, but another cannot. In case a class supports capabilities the additional buttons <strong>Filter...</strong> and <strong>Remove filter</strong> will be available in the GOE. The <strong>Filter...</strong> button pops up a dialog which lists all available Capabilities:</p>
 <p>One can then choose those capabilities an object, e.g., a classifier, should have. If one is looking for classification problem, then the <em>Nominal class</em> Capability can be selected. On the other hand, if one needs a regression scheme, then the Capability <em>Numeric class</em> can be selected. This filtering mechanism makes the search for an appropriate learning scheme easier. After applying that filter, the tree with the objects will be displayed again and lists all objects that can handle all the selected Capabilities <strong>black</strong>, the ones that cannot <strong>red</strong> (starting with 3.5.8: 
 <strong>silver</strong>) and the ones that might be able to handle them <strong>blue</strong> (e.g., meta classifiers which depend on their base classifier(s)).</p>
-<h1 id="links">Links</h1>
+<h3 id="links">Links</h3>
 <ul>
 <li><a href="../generic_object_editor_book_version/">GenericObjectEditor (book version)</a></li>
 <li><a href="../classpath/">CLASSPATH</a></li>

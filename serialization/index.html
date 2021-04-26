@@ -146,7 +146,7 @@
 In <a href="http://en.wikipedia.org/wiki/Java_programming_language">Java</a>, an object can be serialized if it imports the <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html">java.io.Serializable</a> interface. </p>
 <p>Members of an object that are not supposed to be serialized, need to be prefixed with the keyword <strong>transient</strong>.</p>
 <p>In the following you'll find some Java code snippets for serializing and deserializing a <code>J48</code> classifier. Of course, serialization is not limited to classifiers. Most schemes in Weka, like clusterers and filters, are also serializable.</p>
-<h1 id="serializing">Serializing</h1>
+<h3 id="serializing">Serializing</h3>
 <p>Here we create a J48 classifier <code>cls</code>, train it with a dataset <code>/some/where/data.arff</code>, and save the built model to a file <code>/some/where/j48.model</code>.</p>
 <pre><code class="language-java"> // create J48
  Classifier cls = new J48();
@@ -169,7 +169,7 @@ In <a href="http://en.wikipedia.org/wiki/Java_programming_language">Java</a>, an
 <pre><code class="language-java"> // serialize model
  weka.core.SerializationHelper.write(&quot;/some/where/j48.model&quot;, cls);
 </code></pre>
-<h1 id="deserializing">Deserializing</h1>
+<h3 id="deserializing">Deserializing</h3>
 <p>Here the previously saved model is deserialized as <code>cls</code> and again available for classification.</p>
 <pre><code class="language-java"> // deserialize model
  ObjectInputStream ois = new ObjectInputStream(
@@ -181,14 +181,14 @@ In <a href="http://en.wikipedia.org/wiki/Java_programming_language">Java</a>, an
 <pre><code class="language-java"> // deserialize model
  Classifier cls = (Classifier) weka.core.SerializationHelper.read(&quot;/some/where/j48.model&quot;);
 </code></pre>
-<h1 id="serialization-in-weka">Serialization in Weka</h1>
+<h3 id="serialization-in-weka">Serialization in Weka</h3>
 <p>The Explorer serializes the classifier and the training header together. This makes it easy to test whether a dataset is compatible with the dataset the classifier was trained with. The commandline option <strong>-d <file></strong> of the <em>developer version</em> stores the training header as well.</p>
 <p>In order to read serialized models that contain the header information as well, you can use the <code>readAll</code> method of the <code>weka.core.SerializationHelper</code>. For serializing models with their datasets, use <code>writeAll</code>.</p>
-<h1 id="see-also">See also</h1>
+<h3 id="see-also">See also</h3>
 <ul>
 <li><a href="../use_weka_in_your_java_code/">Use Weka in your Java code</a></li>
 </ul>
-<h1 id="links">Links</h1>
+<h3 id="links">Links</h3>
 <ul>
 <li><a href="https://docs.oracle.com/javase/8/docs/platform/serialization/spec/serialTOC.html">Java Serialization Specifications</a></li>
 </ul>

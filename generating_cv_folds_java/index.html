@@ -148,7 +148,7 @@
  int seed = ...;          // the seed for randomizing the data
  int folds = ...;         // the number of folds to generate, &gt;=2
 </code></pre>
-<h1 id="randomize-the-data">Randomize the data</h1>
+<h3 id="randomize-the-data">Randomize the data</h3>
 <p>First, randomize your data:</p>
 <pre><code class="language-java"> Random rand = new Random(seed);   // create seeded number generator
  randData = new Instances(data);   // create copy of original data
@@ -157,8 +157,8 @@
 <p>In case your data has a nominal class and you wanna perform stratified cross-validation:</p>
 <pre><code class="language-java"> randData.stratify(folds);
 </code></pre>
-<h1 id="generate-the-folds">Generate the folds</h1>
-<h1 id="single-run">Single run</h1>
+<h3 id="generate-the-folds">Generate the folds</h3>
+<h3 id="single-run">Single run</h3>
 <p>Next thing that we have to do is creating the train and the test set:</p>
 <pre><code class="language-java"> for (int n = 0; n &lt; folds; n++) {
    Instances train = randData.trainCV(folds, n, rand);
@@ -176,7 +176,7 @@
 </ul>
 <pre><code class="language-java"> Instances train = randData.trainCV(folds, n, rand);
 </code></pre>
-<h2 id="multiple-runs">Multiple runs</h2>
+<h4 id="multiple-runs">Multiple runs</h4>
 <p>The example above only performs one run of a cross-validation. In case you want to run 10 runs of 10-fold cross-validation, use the following loop:</p>
 <pre><code class="language-java"> Instances data = ...;  // our dataset again, obtained from somewhere
  int runs = 10;
@@ -190,11 +190,11 @@
    ...
  }
 </code></pre>
-<h1 id="see-also">See also</h1>
+<h3 id="see-also">See also</h3>
 <ul>
 <li><a href="../use_weka_in_your_java_code/">Use Weka in your Java code</a> - for general use of the Weka API</li>
 </ul>
-<h1 id="downloads">Downloads</h1>
+<h3 id="downloads">Downloads</h3>
 <ul>
 <li><a href="../files/CrossValidationSingleRun.java">CrossValidationSingleRun.java</a> (<a href="https://svn.cms.waikato.ac.nz/svn/weka/branches/stable-3-8/wekaexamples/src/main/java/wekaexamples/classifiers/CrossValidationSingleRun.java">stable</a>, <a href="https://svn.cms.waikato.ac.nz/svn/weka/trunk/wekaexamples/src/main/java/wekaexamples/classifiers/CrossValidationSingleRun.java">developer</a>) - simulates a single run of 10-fold cross-validation</li>
 <li><a href="../files/CrossValidationSingleRunVariant.java">CrossValidationSingleRunVariant.java</a> (<a href="https://svn.cms.waikato.ac.nz/svn/weka/branches/stable-3-8/wekaexamples/src/main/java/wekaexamples/classifiers/CrossValidationSingleRunVariant.java">stable</a>, <a href="https://svn.cms.waikato.ac.nz/svn/weka/trunk/wekaexamples/src/main/java/wekaexamples/classifiers/CrossValidationSingleRunVariant.java">developer</a>) - simulates a single run of 10-fold cross-validation, but outputs the confusion matrices for each single train/test pair as well.</li>

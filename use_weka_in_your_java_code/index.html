@@ -152,8 +152,8 @@
 </ul>
 <p>The following sections explain how to use them in your own code. A link to an <strong>example class</strong> can be found at the end of this page, under the <a href="#links">Links</a> section. The classifiers and filters always list their options in the Javadoc API (<a href="https://weka.sourceforge.io/doc.stable-3-8/">stable</a>, <a href="https://weka.sourceforge.io/doc.dev/">developer</a> version) specification.</p>
 <p>A comprehensive source of information is the chapter <em>Using the API</em> of the Weka manual.</p>
-<h1 id="instances">Instances</h1>
-<h2 id="datasets">Datasets</h2>
+<h3 id="instances">Instances</h3>
+<h4 id="datasets">Datasets</h4>
 <p>The <code>DataSource</code> class is not limited to ARFF files. It can also read CSV files and other formats (basically all file formats that Weka can import via its converters; it uses the file extension to determine the associated loader).</p>
 <pre><code class="language-java"> import weka.core.converters.ConverterUtils.DataSource;
  ...
@@ -164,7 +164,7 @@
  if (data.classIndex() == -1)
    data.setClassIndex(data.numAttributes() - 1);
 </code></pre>
-<h2 id="database">Database</h2>
+<h4 id="database">Database</h4>
 <p>Reading from <a href="../databases/">Databases</a> is slightly more complicated, but still very easy. First, you'll have to modify your <a href="databases#configuration-files">DatabaseUtils.props</a> file to reflect your database connection. Suppose you want to connect to a <a href="http://wwww.mysql.com/">MySQL</a> server that is running on the local machine on the default port <code>3306</code>. The MySQL JDBC driver is called <a href="http://dev.mysql.com/downloads/connector/j/">Connector/J</a>. (The driver class is <code>org.gjt.mm.mysql.Driver</code>.) The database where your target data resides is called <code>some_database</code>. Since you're only reading, you can use the default user <code>nobody</code> without a password. Your props file must contain the following lines:</p>
 <pre><code class="language-ini"> jdbcDriver=org.gjt.mm.mysql.Driver
  jdbcURL=jdbc:mysql://localhost:3306/some_database
@@ -185,7 +185,7 @@
 * Don't forget to add the JDBC driver to your <code>CLASSPATH</code>.
 * For MS Access, you must use the JDBC-ODBC-bridge that is part of a JDK. The <a href="../windows_databases/">Windows databases</a> article explains how to do this.
 * InstanceQuery automatically converts VARCHAR database columns to NOMINAL attributes, and long TEXT database columns to STRING attributes. So if you use InstanceQuery to do text mining against text that appears in a VARCHAR column, Weka will regard such text as nominal values. Thus it will fail to tokenize and mine that text. Use the <code>NominalToString</code> or <code>StringToNominal</code> filter (package <code>weka.filters.unsupervised.attribute</code>) to convert the attributes into the correct type.</p>
-<h1 id="option-handling">Option handling</h1>
+<h3 id="option-handling">Option handling</h3>
 <p>Weka schemes that implement the <code>weka.core.OptionHandler</code> interface, such as classifiers, clusterers, and filters, offer the following methods for setting and retrieving options:</p>
 <ul>
 <li><code>void setOptions(String[] options)</code></li>
@@ -216,7 +216,7 @@
  scheme.setOptions(weka.core.Utils.splitOptions(&quot;-C 1.0 -L 0.0010 -P 1.0E-12 -N 0 -V -1 -W 1 -K \&quot;weka.classifiers.functions.supportVector.PolyKernel -C 250007 -E 1.0\&quot;&quot;));
 </code></pre>
 <p>Also, the <a href="../files/OptionTree.java">OptionTree.java</a> tool allows you to view a nested options string, e.g., used at the command line, as a tree. This can help you spot nesting errors.</p>
-<h1 id="filter">Filter</h1>
+<h3 id="filter">Filter</h3>
 <p>A filter has two different properties:</p>
 <ul>
 <li>
@@ -248,7 +248,7 @@ For example, if you want to remove the <em>first</em> attribute of a dataset, yo
  remove.setInputFormat(data);                          // inform filter about dataset **AFTER** setting options
  Instances newData = Filter.useFilter(data, remove);   // apply filter
 </code></pre>
-<h2 id="filtering-on-the-fly">Filtering on-the-fly</h2>
+<h4 id="filtering-on-the-fly">Filtering on-the-fly</h4>
 <p>The <a href="https://weka.sourceforge.io/doc.stable-3-8/weka/classifiers/meta/FilteredClassifier.html">FilteredClassifer</a> meta-classifier is an easy way of filtering data on the fly. It removes the necessity of filtering the data before the classifier can be trained. Also, the data need not be passed through the trained filter again at prediction time. The following is an example of using this meta-classifier with the <code>Remove</code> filter and <code>J48</code> for getting rid of a numeric ID attribute in the data:</p>
 <pre><code class="language-java"> import weka.classifiers.meta.FilteredClassifier;
  import weka.classifiers.trees.J48;
@@ -280,7 +280,7 @@ For example, if you want to remove the <em>first</em> attribute of a dataset, yo
 <li><a href="https://weka.sourceforge.io/doc.stable-3-8/weka/clusterers/FilteredClusterer.html">weka.clusterers.FilteredClusterer</a></li>
 <li><a href="https://weka.sourceforge.io/doc.stable-3-8/weka/associations/FilteredAssociator.html">weka.assocations.FilteredAssociator</a></li>
 </ul>
-<h2 id="batch-filtering">Batch filtering</h2>
+<h4 id="batch-filtering">Batch filtering</h4>
 <p>On the command line, you can enable a second input/output pair (via <code>-r</code> and <code>-s</code>) with the <code>-b</code> option, in order to process the second file with the same filter setup as the first one. Necessary, if you're using attribute selection or standardization - otherwise you end up with incompatible datasets. This is done fairly easy, since one initializes the filter only once with the <code>setInputFormat(Instances)</code> method, namely with the training set, and then applies the filter subsequently to the training set <em>and</em> the test set. The following example shows how to apply the <code>Standardize</code> filter to a train and a test set.</p>
 <pre><code class="language-java"> Instances train = ...   // from somewhere
  Instances test = ...    // from somewhere
@@ -289,14 +289,14 @@ For example, if you want to remove the <em>first</em> attribute of a dataset, yo
  Instances newTrain = Filter.useFilter(train, filter);  // configures the Filter based on train instances and returns filtered instances
  Instances newTest = Filter.useFilter(test, filter);    // create new test set
 </code></pre>
-<h2 id="calling-conventions">Calling conventions</h2>
+<h4 id="calling-conventions">Calling conventions</h4>
 <p>The <code>setInputFormat(Instances)</code> method <strong>always</strong> has to be the last call before the filter is applied, e.g., with <code>Filter.useFilter(Instances,Filter)</code>. <em>Why?</em> First, it is the convention for using filters and, secondly, lots of filters generate the header of the output format in the <code>setInputFormat(Instances)</code> method with the currently set options (setting otpions <em>after</em> this call doesn't have any effect any more).</p>
-<h1 id="classification">Classification</h1>
+<h3 id="classification">Classification</h3>
 <p>The necessary classes can be found in this package:</p>
 <pre><code> weka.classifiers
 </code></pre>
-<h2 id="building-a-classifier">Building a Classifier</h2>
-<h3 id="batch">Batch</h3>
+<h4 id="building-a-classifier">Building a Classifier</h4>
+<h5 id="batch">Batch</h5>
 <p>A Weka classifier is rather simple to train on a given dataset. E.g., we can train an unpruned C4.5 tree algorithm on a given dataset <em>data</em>. The training is done via the <code>buildClassifier(Instances)</code> method.</p>
 <pre><code class="language-java"> import weka.classifiers.trees.J48;
  ...
@@ -306,7 +306,7 @@ For example, if you want to remove the <em>first</em> attribute of a dataset, yo
  tree.setOptions(options);     // set the options
  tree.buildClassifier(data);   // build classifier
 </code></pre>
-<h3 id="incremental">Incremental</h3>
+<h5 id="incremental">Incremental</h5>
 <p>Classifiers implementing the <code>weka.classifiers.UpdateableClassifier</code> interface can be trained incrementally. This conserves memory, since the data doesn't have to be loaded into memory all at once. See the Javadoc of this interface to see what classifiers are implementing it.</p>
 <p>The actual process of training an incremental classifier is fairly simple:</p>
 <ul>
@@ -328,8 +328,8 @@ For example, if you want to remove the <em>first</em> attribute of a dataset, yo
    nb.updateClassifier(current);
 </code></pre>
 <p>A working example is <a href="../files/IncrementalClassifier.java">IncrementalClassifier.java</a>.</p>
-<h2 id="evaluating">Evaluating</h2>
-<h3 id="cross-validation">Cross-validation</h3>
+<h4 id="evaluating">Evaluating</h4>
+<h5 id="cross-validation">Cross-validation</h5>
 <p>If you only have a training set and no test you might want to evaluate the classifier by using 10 times 10-fold cross-validation. This can be easily done via the <code>Evaluation</code> class. Here we <em>seed</em> the random selection of our folds for the CV with <em>1</em>. Check out the <code>Evaluation</code> class for more information about the statistics it produces.</p>
 <pre><code class="language-java"> import weka.classifiers.Evaluation;
  import java.util.Random;
@@ -338,7 +338,7 @@ For example, if you want to remove the <em>first</em> attribute of a dataset, yo
  eval.crossValidateModel(tree, newData, 10, new Random(1));
 </code></pre>
 <p><strong>Note:</strong> The classifier (in our example <em>tree</em>) should not be trained when handed over to the <code>crossValidateModel</code> method. <strong>Why?</strong> If the classifier does not abide to the Weka convention that a classifier must be re-initialized every time the <code>buildClassifier</code> method is called (in other words: subsequent calls to the <code>buildClassifier</code> method always return the same results), you will get inconsistent and worthless results. The <code>crossValidateModel</code> takes care of training and evaluating the classifier. (It creates a copy of the original classifier that you hand over to the <code>crossValidateModel</code> for each run of the cross-validation.)</p>
-<h3 id="traintest-set">Train/test set</h3>
+<h5 id="traintest-set">Train/test set</h5>
 <p>In case you have a dedicated test set, you can train the classifier and then evaluate it on this test set. In the following example, a J48 is instantiated, trained and then evaluated. Some statistics are printed to <code>stdout</code>:</p>
 <pre><code class="language-java"> import weka.core.Instances;
  import weka.classifiers.Evaluation;
@@ -354,7 +354,7 @@ For example, if you want to remove the <em>first</em> attribute of a dataset, yo
  eval.evaluateModel(cls, test);
  System.out.println(eval.toSummaryString(&quot;\nResults\n======\n&quot;, false));
 </code></pre>
-<h3 id="statistics">Statistics</h3>
+<h5 id="statistics">Statistics</h5>
 <p>Some methods for retrieving the results from the evaluation:</p>
 <ul>
 <li>
@@ -390,9 +390,9 @@ For example, if you want to remove the <em>first</em> attribute of a dataset, yo
  options[1] = &quot;/some/where/somefile.arff&quot;;
  System.out.println(Evaluation.evaluateModel(new J48(), options));
 </code></pre>
-<h3 id="roc-curvesauc">ROC curves/AUC</h3>
+<h5 id="roc-curvesauc">ROC curves/AUC</h5>
 <p>You can also generate ROC curves/AUC with the predictions Weka recorded during testing. You can access these predictions via the <code>predictions()</code> method of the <code>Evaluation</code> class. See the <a href="../generating_roc_curve/">Generating ROC curve</a> article for a full example of how to generate ROC curves.</p>
-<h2 id="classifying-instances">Classifying instances</h2>
+<h4 id="classifying-instances">Classifying instances</h4>
 <p>In case you have an unlabeled dataset that you want to classify with your newly trained classifier, you can use the following code snippet. It loads the file <code>/some/where/unlabeled.arff</code>, uses the previously built classifier <code>tree</code> to label the instances, and saves the labeled data as <code>/some/where/labeled.arff</code>.</p>
 <pre><code class="language-java"> import java.io.BufferedReader;
  import java.io.BufferedWriter;
@@ -431,12 +431,12 @@ For example, if you want to remove the <em>first</em> attribute of a dataset, yo
 </ul>
 <pre><code class="language-java">System.out.println(clsLabel + &quot; -&gt; &quot; + unlabeled.classAttribute().value((int) clsLabel));
 </code></pre>
-<h1 id="clustering">Clustering</h1>
+<h3 id="clustering">Clustering</h3>
 <p>Clustering is similar to classification. The necessary classes can be found in this package:</p>
 <pre><code> weka.clusterers
 </code></pre>
-<h2 id="building-a-clusterer">Building a Clusterer</h2>
-<h3 id="batch_1">Batch</h3>
+<h4 id="building-a-clusterer">Building a Clusterer</h4>
+<h5 id="batch_1">Batch</h5>
 <p>A clusterer is built in much the same way as a classifier, but the <code>buildClusterer(Instances)</code> method instead of <code>buildClassifier(Instances)</code>. The following code snippet shows how to build an <code>EM</code> clusterer with a maximum of <code>100</code> iterations.</p>
 <pre><code class="language-java"> import weka.clusterers.EM;
  ...
@@ -447,7 +447,7 @@ For example, if you want to remove the <em>first</em> attribute of a dataset, yo
  clusterer.setOptions(options);     // set the options
  clusterer.buildClusterer(data);    // build the clusterer
 </code></pre>
-<h3 id="incremental_1">Incremental</h3>
+<h5 id="incremental_1">Incremental</h5>
 <p>Clusterers implementing the <code>weka.clusterers.UpdateableClusterer</code> interface can be trained incrementally. This conserves memory, since the data doesn't have to be loaded into memory all at once. See the Javadoc for this interface to see which clusterers implement it.</p>
 <p>The actual process of training an incremental clusterer is fairly simple:</p>
 <ul>
@@ -470,7 +470,7 @@ For example, if you want to remove the <em>first</em> attribute of a dataset, yo
  cw.updateFinished();
 </code></pre>
 <p>A working example is <a href="../files/IncrementalClusterer.java">IncrementalClusterer.java</a>.</p>
-<h2 id="evaluating_1">Evaluating</h2>
+<h4 id="evaluating_1">Evaluating</h4>
 <p>For evaluating a clusterer, you can use the <code>ClusterEvaluation</code> class. In this example, the number of clusters found is written to output:</p>
 <pre><code class="language-java"> import weka.clusterers.ClusterEvaluation;
  import weka.clusterers.Clusterer;
@@ -504,9 +504,9 @@ For example, if you want to remove the <em>first</em> attribute of a dataset, yo
  options[1] = &quot;/some/where/somefile.arff&quot;;
  System.out.println(ClusterEvaluation.evaluateClusterer(new EM(), options));
 </code></pre>
-<h2 id="clustering-instances">Clustering instances</h2>
+<h4 id="clustering-instances">Clustering instances</h4>
 <p>The only difference with regard to classification is the method name. Instead of <code>classifyInstance(Instance)</code>, it is now <code>clusterInstance(Instance)</code>. The method for obtaining the distribution is still the same, i.e., <code>distributionForInstance(Instance)</code>.</p>
-<h2 id="classes-to-clusters-evaluation">Classes to clusters evaluation</h2>
+<h4 id="classes-to-clusters-evaluation">Classes to clusters evaluation</h4>
 <p>If your data contains a class attribute and you want to check how well the generated clusters fit the classes, you can perform a so-called <em>classes to clusters</em> evaluation. The Weka Explorer offers this functionality, and it's quite easy to implement. These are the necessary steps (complete source code: <a href="../files/ClassesToClusters.java">ClassesToClusters.java</a>):</p>
 <ul>
 <li>load the data and set the class attribute</li>
@@ -541,9 +541,9 @@ For example, if you want to remove the <em>first</em> attribute of a dataset, yo
 </ul>
 <pre><code class="language-java"> System.out.println(eval.clusterResultsToString());
 </code></pre>
-<h1 id="attribute-selection">Attribute selection</h1>
+<h3 id="attribute-selection">Attribute selection</h3>
 <p>There is no real need to use the attribute selection classes directly in your own code, since there are already a meta-classifier and a filter available for applying attribute selection, but the low-level approach is still listed for the sake of completeness. The following examples all use <code>CfsSubsetEval</code> and <code>GreedyStepwise</code> (backwards). The code listed below is taken from the <a href="../files/AttributeSelectionTest.java">AttributeSelectionTest.java</a>.</p>
-<h2 id="meta-classifier">Meta-Classifier</h2>
+<h4 id="meta-classifier">Meta-Classifier</h4>
 <p>The following meta-classifier performs a preprocessing step of attribute selection before the data gets presented to the base classifier (in the example here, this is <code>J48</code>).</p>
 <pre><code class="language-java">  Instances data = ...  // from somewhere
   AttributeSelectedClassifier classifier = new AttributeSelectedClassifier();
@@ -559,7 +559,7 @@ For example, if you want to remove the <em>first</em> attribute of a dataset, yo
   evaluation.crossValidateModel(classifier, data, 10, new Random(1));
   System.out.println(evaluation.toSummaryString());
 </code></pre>
-<h2 id="filter_1">Filter</h2>
+<h4 id="filter_1">Filter</h4>
 <p>The filter approach is straightforward: after setting up the filter, one just filters the data through the filter and obtains the reduced dataset.</p>
 <pre><code class="language-java">  Instances data = ...  // from somewhere
   AttributeSelection filter = new AttributeSelection();  // package weka.filters.supervised.attribute!
@@ -573,7 +573,7 @@ For example, if you want to remove the <em>first</em> attribute of a dataset, yo
   Instances newData = Filter.useFilter(data, filter);
   System.out.println(newData);
 </code></pre>
-<h2 id="low-level">Low-level</h2>
+<h4 id="low-level">Low-level</h4>
 <p>If neither the meta-classifier nor filter approach is suitable for your purposes, you can use the attribute selection classes themselves.</p>
 <pre><code class="language-java">  Instances data = ...  // from somewhere
   AttributeSelection attsel = new AttributeSelection();  // package weka.attributeSelection!
@@ -587,9 +587,9 @@ For example, if you want to remove the <em>first</em> attribute of a dataset, yo
   int[] indices = attsel.selectedAttributes();
   System.out.println(Utils.arrayToString(indices));
 </code></pre>
-<h1 id="note-on-randomization">Note on randomization</h1>
+<h3 id="note-on-randomization">Note on randomization</h3>
 <p>Most machine learning schemes, like classifiers and clusterers, are susceptible to the ordering of the data. Using a different seed for randomizing the data will most likely produce a different result. For example, the Explorer, or a classifier/clusterer run from the command line, uses only a seeded <code>java.util.Random</code> number generator, whereas the <code>weka.core.Instances.getRandomNumberGenerator(int)</code> (which the <a href="../files/WekaDemo.java">WekaDemo.java</a> uses) also takes the data into account for seeding. Unless one runs 10-fold cross-validation 10 times and averages the results, one will most likely get different results.</p>
-<h1 id="see-also">See also</h1>
+<h3 id="see-also">See also</h3>
 <ul>
 <li><a href="../weka_examples/">Weka Examples</a> - pointer to collection of example classes</li>
 <li><a href="../databases/">Databases</a> - for more information about using databases in Weka (includes ODBC, e.g., for MS Access)</li>
@@ -600,7 +600,7 @@ For example, if you want to remove the <em>first</em> attribute of a dataset, yo
 <li><a href="../formats_and_processing/save_instances_to_arff/">Save Instances to an ARFF File</a> - shows how to output a dataset</li>
 <li><a href="../experimenter/using_the_experiment_api/">Using the Experiment API</a></li>
 </ul>
-<h1 id="examples">Examples</h1>
+<h3 id="examples">Examples</h3>
 <p>The following are a few sample classes for using various parts of the Weka API:</p>
 <ul>
 <li>
@@ -631,7 +631,7 @@ For example, if you want to remove the <em>first</em> attribute of a dataset, yo
 <p><a href="../files/IncrementalClusterer.java">IncrementalClusterer.java</a> (<a href="https://svn.cms.waikato.ac.nz/svn/weka/branches/stable-3-8/wekaexamples/src/main/java/wekaexamples/clusterers/IncrementalClusterer.java">stable</a>, <a href="https://svn.cms.waikato.ac.nz/svn/weka/trunk/wekaexamples/src/main/java/wekaexamples/clusterers/IncrementalClusterer.java">developer</a>) - Example class for how to train an incremental clusterer (in this case, <code>weka.clusterers.Cobweb</code>).</p>
 </li>
 </ul>
-<h1 id="links">Links</h1>
+<h3 id="links">Links</h3>
 <ul>
 <li>Weka API<ul>
 <li><a href="https://weka.sourceforge.io/doc.stable-3-8/">Stable version</a></li>

@@ -143,7 +143,7 @@
             <div class="section">
               
                 <p>In the following you'll find some information about the MessageClassifier from the <strong>2nd</strong> edition of the <a href="http://www.cs.waikato.ac.nz/~ml/weka/book.html">Data Mining</a> book by Witten and Frank.</p>
-<h1 id="source-code">Source code</h1>
+<h3 id="source-code">Source code</h3>
 <p>Depending on the version of the book, download the corresponding version (this article is based on the <strong>2nd</strong> edition):</p>
 <ul>
 <li>1st Edition: 
@@ -151,7 +151,7 @@
 <li>2nd Edition: 
 <a href="https://www.cs.waikato.ac.nz/~ml/weka/example_code/2ed/MessageClassifier.java">MessageClassifier</a> (<a href="https://svn.cms.waikato.ac.nz/svn/weka/branches/book2ndEd-branch/wekaexamples/src/main/java/wekaexamples/book/MessageClassifier.java">book</a>, <a href="https://svn.cms.waikato.ac.nz/svn/weka/branches/stable-3-6/wekaexamples/src/main/java/wekaexamples/book/MessageClassifier.java">stable-3.6</a>, <a href="https://svn.cms.waikato.ac.nz/svn/weka/trunk/wekaexamples/src/main/java/wekaexamples/book/MessageClassifier.java">developer</a>)</li>
 </ul>
-<h1 id="compiling">Compiling</h1>
+<h3 id="compiling">Compiling</h3>
 <ul>
 <li>compile the source code like this, if the <code>weka.jar</code> is already in your <a href="../classpath/">CLASSPATH</a> environment variable:</li>
 </ul>
@@ -163,13 +163,13 @@
 <pre><code class="language-java"> javac -classpath /path/to/weka.jar MessageClassifier.java
 </code></pre>
 <p><strong>Note:</strong> The classpath handling is omitted from here on.</p>
-<h1 id="training">Training</h1>
+<h3 id="training">Training</h3>
 <p>If you run the <code>MessageClassifier</code> for the first time, you need to provide labeled examples to build a classifier from, i.e., messages ("<code>-m</code>") and the corresponding classes ("<code>-c</code>"). Since the data and the model are kept for future use, one has to specify a filename, where the <code>MessageClassifier</code> is serialized to ("<code>-t</code>").</p>
 <p>Here's an example, that labels the message <em>email1.txt</em> as <em>miss</em>:</p>
 <pre><code class="language-bash"> java MessageClassifier -m email1.txt -c miss -t messageclassifier.model
 </code></pre>
 <p>Repeat this for all the messages you want to have classified.</p>
-<h1 id="classifying">Classifying</h1>
+<h3 id="classifying">Classifying</h3>
 <p>Classifying an unseen message is quite straight-forward, one just omits the class option ("<code>-c</code>"). The following call</p>
 <pre><code class="language-bash"> java MessageClassifier -m email1023.txt -t messageclassifier.model
 </code></pre>

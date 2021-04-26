@@ -156,20 +156,20 @@ with its earlier releases.</p>
 easy for the Weka community to add new functionality to Weka. The
 package management system requires an internet connection in order to
 download and install packages.</p>
-<h1 id="snapshots">Snapshots</h1>
+<h3 id="snapshots">Snapshots</h3>
 <p>Every night, a snapshot of the Subversion repository with the Weka
 source code is taken, compiled, and put together in ZIP files. This
 happens for both the development branch of the software and the stable
 branch.  Those who want the latest bug fixes before the next official
 release is made can download these
 <a href="https://www.cs.waikato.ac.nz/~ml/weka/snapshots/weka_snapshots.html">snapshots</a>.</p>
-<h1 id="stable-version">Stable version</h1>
+<h3 id="stable-version">Stable version</h3>
 <p>Weka 3.8 is the latest stable version of Weka. This branch of Weka
 only receives bug fixes and upgrades that do not break compatibility
 with earlier 3.8 releases, although major new features may become
 available in packages.  There are different options for downloading
 and installing it on your system:</p>
-<h3 id="windows">Windows</h3>
+<h5 id="windows">Windows</h5>
 <ul>
 <li>Click
 <a href="https://prdownloads.sourceforge.net/weka/weka-3-8-5-azul-zulu-windows.exe">here</a>
@@ -178,7 +178,7 @@ includes Azul's 64-bit OpenJDK Java VM 11 (weka-3-8-5-azul-zulu-windows.exe; 124
 </ul>
 <p>This executable will install Weka in your Program Menu. Launching via the Program
 Menu or shortcuts will automatically use the included JVM to run Weka.</p>
-<h3 id="mac-os-intel-processors">Mac OS - Intel processors</h3>
+<h5 id="mac-os-intel-processors">Mac OS - Intel processors</h5>
 <ul>
 <li>Click
 <a href="https://prdownloads.sourceforge.net/weka/weka-3-8-5-azul-zulu-osx.dmg">here</a>
@@ -186,7 +186,7 @@ to download a disk image for Mac OS that contains a
 Mac application including Azul's 64-bit OpenJDK Java VM 11 for Intel Macs.
 (weka-3-8-5-azul-zulu-osx.dmg; 151.8 MB)</li>
 </ul>
-<h3 id="mac-os-arm-processors">Mac OS - ARM processors</h3>
+<h5 id="mac-os-arm-processors">Mac OS - ARM processors</h5>
 <ul>
 <li>Click
 <a href="https://prdownloads.sourceforge.net/weka/weka-3-8-5-azul-zulu-arm-osx.dmg">here</a>
@@ -194,7 +194,7 @@ to download a disk image for Mac OS that contains a
 Mac application including Azul's 64-bit OpenJDK Java VM 11 for ARM Macs.
 (weka-3-8-5-azul-zulu-arm-osx.dmg; 144 MB)</li>
 </ul>
-<h3 id="linux">Linux</h3>
+<h5 id="linux">Linux</h5>
 <ul>
 <li>Click
 <a href="https://prdownloads.sourceforge.net/weka/weka-3-8-5-azul-zulu-linux.zip">here</a>
@@ -205,7 +205,7 @@ to download a zip archive for Linux that includes Azul's 64-bit OpenJDK Java VM 
 weka-3-8-5. To run Weka, change into that directory and type</p>
 <pre><code class="language-bash">./weka.sh
 </code></pre>
-<h3 id="other-platforms">Other platforms</h3>
+<h5 id="other-platforms">Other platforms</h5>
 <ul>
 <li>Click <a href="https://prdownloads.sourceforge.net/weka/weka-3-8-5.zip">here</a>
  to download a zip archive containing Weka (weka-3-8-5.zip; 55.4 MB)</li>
@@ -217,10 +217,10 @@ weka-3-8-5. To run Weka, change into that directory and type</p>
 <p>Note that Java needs to be installed on your system for this to
 work. Also note that using <code>-jar</code> will override your current
 CLASSPATH variable and only use the <code>weka.jar</code>.</p>
-<h1 id="developer-version">Developer version</h1>
+<h3 id="developer-version">Developer version</h3>
 <p>This is the main development trunk of Weka and continues from the stable Weka 3.8 code line. It
 may receive new features that break backwards compatibility.</p>
-<h3 id="windows_1">Windows</h3>
+<h5 id="windows_1">Windows</h5>
 <ul>
 <li>Click
 <a href="https://prdownloads.sourceforge.net/weka/weka-3-9-5-azul-zulu-windows.exe">here</a>
@@ -229,7 +229,7 @@ includes Azul's 64-bit OpenJDK Java VM 11 (weka-3-9-5-azul-zulu-windows.exe; 124
 </ul>
 <p>This executable will install Weka in your Program Menu. Launching via the Program
 Menu or shortcuts will automatically use the included JVM to run Weka.</p>
-<h3 id="mac-os-intel-processors_1">Mac OS - Intel processors</h3>
+<h5 id="mac-os-intel-processors_1">Mac OS - Intel processors</h5>
 <ul>
 <li>Click
 <a href="https://prdownloads.sourceforge.net/weka/weka-3-9-5-azul-zulu-osx.dmg">here</a>
@@ -237,7 +237,7 @@ to download a disk image for Mac OS that contains a
 Mac application including Azul's 64-bit OpenJDK Java VM 11 for Intel Macs.
 (weka-3-9-5-azul-zulu-osx.dmg; 151.6 MB)</li>
 </ul>
-<h3 id="mac-os-arm-processors_1">Mac OS - ARM processors</h3>
+<h5 id="mac-os-arm-processors_1">Mac OS - ARM processors</h5>
 <ul>
 <li>Click
 <a href="https://prdownloads.sourceforge.net/weka/weka-3-9-5-azul-zulu-arm-osx.dmg">here</a>
@@ -245,7 +245,7 @@ to download a disk image for Mac OS that contains a
 Mac application including Azul's 64-bit OpenJDK Java VM 11 for ARM Macs.
 (weka-3-9-5-azul-zulu-arm-osx.dmg; 145 MB)</li>
 </ul>
-<h3 id="linux_1">Linux</h3>
+<h5 id="linux_1">Linux</h5>
 <ul>
 <li>Click
 <a href="https://prdownloads.sourceforge.net/weka/weka-3-9-5-azul-zulu-linux.zip">here</a>
@@ -256,7 +256,7 @@ to download a zip archive for Linux that includes Azul's 64-bit OpenJDK Java VM 
 weka-3-9-5. To run Weka, change into that directory and type</p>
 <pre><code class="language-bash">./weka.sh
 </code></pre>
-<h3 id="other-platforms_1">Other platforms</h3>
+<h5 id="other-platforms_1">Other platforms</h5>
 <ul>
 <li>Click <a href="https://prdownloads.sourceforge.net/weka/weka-3-9-5.zip">here</a>
  to download a zip archive containing Weka (weka-3-9-5.zip; 55.2 MB)</li>
@@ -268,10 +268,10 @@ weka-3-9-5. To run Weka, change into that directory and type</p>
 <p>Note that Java needs to be installed on your system for this to
 work. Also note, that using <code>-jar</code> will override your current
 CLASSPATH variable and only use the <code>weka.jar</code>.</p>
-<h1 id="old-versions">Old versions</h1>
+<h3 id="old-versions">Old versions</h3>
 <p>All old versions of Weka are available from the <a href="https://sourceforge.net/projects/weka/">Sourceforge
 website</a>.</p>
-<h3 id="upgrading-from-weka-37">Upgrading from Weka 3.7</h3>
+<h5 id="upgrading-from-weka-37">Upgrading from Weka 3.7</h5>
 <p>In case you are upgrading an existing Weka 3.7 installation, if the
 Weka 3.8 package manager does not start up, please delete the file
 <code>installedPackageCache.ser</code> in the <code>packages</code> folder that resides in

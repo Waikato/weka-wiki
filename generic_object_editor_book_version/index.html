@@ -142,7 +142,7 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="introduction">Introduction</h1>
+                <h3 id="introduction">Introduction</h3>
 <p>As of version 3.4.4 it is possible for WEKA to <a href="./#class-discovery">dynamically discover classes at runtime</a> (rather than using only those specified in the <code>GenericObjectEditor.props</code> (GOE) file).</p>
 <p>If dynamic class discovery is too slow, e.g., due to an enormous CLASSPATH, you can generate a new <code>GenericObjectEditor.props</code> file and then turn dynamic class discovery off. It is assumed that you already placed the <code>GenericPropertiesCreator.props</code> (GPC) file in your home directory (this file is located in directory <code>weka/gui</code> of either the <code>weka.jar</code> or <code>weka-src.jar</code> ZIP archive) and that the <code>weka.jar</code> jar archive with the WEKA classes is in your CLASSPATH (otherwise you have to add it to the <code>java</code> call using the <code>-classpath</code> option).</p>
 <p>For generating the GOE file, execute the following steps:</p>
@@ -174,7 +174,7 @@
 </ul>
 <p>For disabling dynamic class discovery, you need to set the boolean constant <code>USE_DYNAMIC</code> of the <code>weka.gui.GenericObjectEditor</code> class to <code>false</code>. See article <a href="../compiling_weka/">Compiling WEKA</a> for more information on how to compile a modified version of WEKA.</p>
 <p>A limitation of the GOE prior to 3.4.4 was, that additional classifiers, filters, etc., had to fit into the same package structure as the already existing ones, i.e., all had to be located below <code>weka</code>. WEKA can now display multiple class hierarchies in the GUI, which makes adding new functionality quite easy as we will see later in an example (it is not restricted to classifiers only, but also works with all the other entries in the GPC file).</p>
-<h1 id="file-structure">File Structure</h1>
+<h3 id="file-structure">File Structure</h3>
 <p>The structure of the GOE so far was a key-value-pair, separated by an <em>equals</em>-sign. The <em>value</em> is a comma separated list of classes that are all derived from the superclass/superinterface <em>key</em>. The GPC is slightly different, instead of declaring all the classes/interfaces one need only to specify all the packages descendants are located in (only non-abstract ones are then listed). E.g., the <code>weka.classifiers.Classifier</code> entry in the GOE file looks like this:</p>
 <pre><code class="language-ini"> weka.classifiers.Classifier=\
   weka.classifiers.bayes.AODE,\
@@ -198,12 +198,12 @@
   weka.classifiers.trees,\
   weka.classifiers.rules
 </code></pre>
-<h1 id="class-discovery">Class Discovery</h1>
+<h3 id="class-discovery">Class Discovery</h3>
 <p>Unlike the <code>Class.forName(String)</code> method that grabs the first class it can find in the <a href="../classpath/">CLASSPATH</a>, and therefore fixes the location of the package it found the class in, the dynamic discovery examines the complete <a href="../classpath/">CLASSPATH</a> you're starting the <a href="../java_virtual_machine/">Java Virtual Machine</a> (JVM) with. This means that you can have several parallel directories with the same WEKA package structure, e.g. the standard release of WEKA in one directory ( <code>/distribution/weka.jar</code>) and another one with your own classes (<code>/development/weka/...</code>), and display all of the classifiers in the GUI. In case of a name conflict, i.e. two directories contain the same class, the first one that can be found is used. In a nutshell, your <code>java</code> call of the GUIChooser could look like this:</p>
 <pre><code class="language-bash"> java -classpath &quot;/development:/distribution/weka.jar&quot; weka.gui.GUIChooser
 </code></pre>
 <p><em>Note:</em> Windows users have to replace the ":" with ";" and the forward slashes with backslashes.</p>
-<h1 id="multiple-class-hierarchies">Multiple Class Hierarchies</h1>
+<h3 id="multiple-class-hierarchies">Multiple Class Hierarchies</h3>
 <p>In case you're developing your own framework, but still want to use your classifiers within WEKA that wasn't possible so far. With the release <strong>3.4.4</strong> it is possible to have multiple class hierarchies being displayed in the GUI. If you've developed a modified version of J48, let's call it <em>MyJ48</em> and it's located in the package <code>dummy.classifiers</code> then you'll have to add this package to the classifiers list in the GPC file like this:</p>
 <pre><code class="language-ini"> weka.classifiers.Classifier=\
   weka.classifiers.bayes,\
@@ -219,7 +219,7 @@
 </code></pre>
 <p><em>Note:</em> Windows users have to replace the ":" with ";" and the forward slashes with backslashes.</p>
 <p>Starting up the GUI you'll now have another root node in the tree view of the classifiers, called <em>root</em>, and below it the <em>weka</em> and the <em>dummy</em> package hierarchy as you can see here:</p>
-<h1 id="links">Links</h1>
+<h3 id="links">Links</h3>
 <ul>
 <li><a href="../generic_object_editor_developer_version/">GenericObjectEditor (developer version)</a></li>
 <li><a href="../classpath/">CLASSPATH</a></li>

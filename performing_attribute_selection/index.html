@@ -153,7 +153,7 @@
 <li>The commandlines outlined in this article are for a Linux/Unix bash (the backslash tells the shell that the command isn't finished yet and continues on the next line). In case of Windows or the SimpleCLI, just remove those backslashes and put everything on one line.</li>
 <li>The Explorer in the developer version (&gt;= 3.5.4) also outputs the commandline setups to its log. Just click on the <em>Log</em> button to display the log and copy/paste the commandlines (you will need to add the appropriate <code>java</code> call and dataset files, of course).</li>
 </ul>
-<h1 id="native">Native</h1>
+<h3 id="native">Native</h3>
 <p>Using the attribute selection classes directly outputs some additional useful information, like number of subsets evaluated/best merit (for subset evaluators), ranked output with merit per attribute (for ranking based setups). The attribute selection classes are located in the following package:</p>
 <pre><code class="language-text"> weka.attributeSelection
 </code></pre>
@@ -163,7 +163,7 @@
     -s &quot;weka.attributeSelection.BestFirst -D 1 -N 5&quot; \
     -i &lt;file.arff&gt;
 </code></pre>
-<h1 id="meta-classifier">Meta-classifier</h1>
+<h3 id="meta-classifier">Meta-classifier</h3>
 <p>Weka also offers a meta-classifier that takes a search algorithm and evaluator next to the base classifier. This makes the attribute selection process completely transparent and the base classifier receives only the reduced dataset. This is the full classname of the meta-classifier:</p>
 <pre><code class="language-text"> weka.classifiers.meta.AttributeSelectedClassifier
 </code></pre>
@@ -176,7 +176,7 @@
    -- \
    -C 0.25 -M 2
 </code></pre>
-<h1 id="filter">Filter</h1>
+<h3 id="filter">Filter</h3>
 <p>In case you want to obtain the reduced/ranked data and not just output the selected/ranked attributes or using it internally in a classifier, you can use the filter approach. The following filter offers attribute selection:</p>
 <pre><code class="language-text">  weka.filters.supervised.attribute.AttributeSelection
 </code></pre>
@@ -191,7 +191,7 @@
     -s &lt;output2.arff&gt;
 </code></pre>
 <p><strong>Note:</strong> batch mode is not available from the Explorer.</p>
-<h1 id="see-also">See also</h1>
+<h3 id="see-also">See also</h3>
 <ul>
 <li><a href="../batch_filtering/">Batch filtering</a> - general information about batch filtering</li>
 <li><a href="../use_weka_in_your_java_code/">Use Weka in your Java code</a>, section <a href="../use_weka_in_your_java_code/#attribute-selection">Attribute selection</a> - if you want to use attribute selection from your own code.</li>

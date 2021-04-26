@@ -142,7 +142,7 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="datasink">DataSink</h1>
+                <h3 id="datasink">DataSink</h3>
 <p>The easiest way to save an <code>weka.core.Instances</code> object to a file is by using
 the <a href="https:/weka.sourceforge.io/doc.dev/weka/core/converters/ConverterUtils.DataSink.html">weka.core.converters.ConverterUtils.DataSink</a> class.</p>
 <pre><code class="language-java"> import weka.core.converters.ConverterUtils.DataSink;
@@ -158,7 +158,7 @@ the <a href="https:/weka.sourceforge.io/doc.dev/weka/core/converters/ConverterUt
    e.printStackTrace();
  }
 </code></pre>
-<h1 id="converter">Converter</h1>
+<h3 id="converter">Converter</h3>
 <p>You can use the <code>ArffSaver</code> class (<code>weka.core.converters.ArffSaver</code>) for saving a <code>weka.core.Instances</code> object to a file.</p>
 <p>Here is the snippet :</p>
 <pre><code class="language-java"> Instances dataSet = ...
@@ -172,7 +172,7 @@ the <a href="https:/weka.sourceforge.io/doc.dev/weka/core/converters/ConverterUt
 <li>using the converter approach, one can easily swap the <code>ArffSaver</code> with another saver, e.g., the <code>CSVSaver</code> to output the data in a different format.</li>
 <li>The <a href="../../weka_examples/">Weka Examples</a> collection dedicates quite a few examples to the use of converters in the <code>wekaexamples.core.converters</code> package (<a href="https://svn.cms.waikato.ac.nz/svn/weka/branches/stable-3-6/wekaexamples/src/main/java/wekaexamples/core/converters/">stable</a>, <a href="https://svn.cms.waikato.ac.nz/svn/weka/trunk/wekaexamples/src/main/java/wekaexamples/core/converters/">developer</a>)</li>
 </ul>
-<h1 id="java-io">Java I/O</h1>
+<h3 id="java-io">Java I/O</h3>
 <p>You can also save the <code>weka.core.Instances</code> object directly using Java I/O classes:</p>
 <pre><code class="language-java"> import java.io.BufferedWriter;
  import java.io.FileWriter;

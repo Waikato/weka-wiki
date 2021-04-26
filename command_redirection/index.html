@@ -142,7 +142,7 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="console">Console</h1>
+                <h3 id="console">Console</h3>
 <p>With command redirection one can redirect <a href="http://en.wikipedia.org/wiki/Standard_streams">standard streams</a> like <em>stdin</em>, <em>stdout</em> and <em>stderr</em> to user-specified locations. Quite often it is useful to redirect the output of a program to a text file.</p>
 <ul>
 <li>
@@ -167,12 +167,12 @@ someProgram &gt;c:\some\where\output.txt 2&gt;&amp;1   (Windows command prompt)<
 <p>or if one already has a trained model:</p>
 <pre><code> java weka.classifiers.trees.J48 -l j48.model -T test.arff -p 0 2&gt; j48.txt
 </code></pre>
-<h1 id="simplecli">SimpleCLI</h1>
+<h3 id="simplecli">SimpleCLI</h3>
 <p>One can perform a basic redirection also in the SimpleCLI, e.g.:</p>
 <pre><code> java weka.classifiers.trees.J48 -t test.arff &gt; j48.txt
 </code></pre>
 <p><strong>Note:</strong> the <strong>&gt;</strong> must be preceded and followed by a <em>space</em>, otherwise it is not recognized as redirection, but part of another parameter.</p>
-<h1 id="links">Links</h1>
+<h3 id="links">Links</h3>
 <ul>
 <li>
 <p>Linux</p>

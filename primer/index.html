@@ -155,8 +155,8 @@
                 <p><a href="http://www.cs.waikato.ac.nz/%7eml/weka/">WEKA</a> is a comprehensive workbench for machine learning and data mining. Its main strengths lie in the classification area, where many of the main machine learning approaches have been implemented within a clean, object-oriented Java class hierarchy. Regression, association rule mining, time series prediction, and clustering algorithms have also been implemented.</p>
 <p>This document serves as a brief introduction to using WEKA from the command line interface. We will begin by describing <a href="./#basic-concepts">basic concepts</a> and ideas. Then, we will describe the <a href="./#weka-filters">weka.filters</a> package, which is used to transform input data, e.g., for preprocessing, transformation, feature generation and so on. Following that, we will consider some <a href="./#classifier">machine learning algorithms</a> that generate classification models. Afterwards, some practical examples are given.</p>
 <p>Note that, in the doc directory of the WEKA installation directory, you can find documentation of all Java classes in WEKA. Prepare to use it since this introduction is not intended to be complete. If you want to know exactly what is going on, take a look at the source code, which can be found in weka-src.jar and can be extracted via the jar utility from the Java Development Kit.</p>
-<h1 id="basic-concepts">Basic concepts</h1>
-<h2 id="dataset">Dataset</h2>
+<h3 id="basic-concepts">Basic concepts</h3>
+<h4 id="dataset">Dataset</h4>
 <p>A set of data items, the dataset, is a very basic concept of machine learning. A dataset is roughly equivalent to a two-dimensional spreadsheet or database table. In WEKA, it is implemented by the <a href="https://weka.sourceforge.io/doc.stable-3-8/weka/core/Instances.html">Instances</a> class. A dataset is a collection of examples, each one of class <a href="https://weka.sourceforge.io/doc.stable-3-8/weka/core/Instance.html">Instance</a>. Each Instance consists of a number of attributes, any of which can be nominal (= one of a predefined list of values), numeric (= a real or integer number) or a string (= an arbitrary long list of characters, enclosed in "double quotes"). WEKA also supports date attributes and relational attributes. The external representation of an Instances class is an ARFF file, which consists of a header describing the attribute types and the data as comma-separated list. Here is a short, commented example. A complete description of the ARFF file format can be found <a href="../formats_and_processing/arff/">here</a>.</p>
 <pre><code>% This is a toy example, the UCI weather dataset.
 % Any relation to real weather is purely coincidental.
@@ -192,7 +192,7 @@ rainy,FALSE,68,80,yes
 <pre><code class="language-bash"> java weka.core.converters.CSVLoader data.csv &gt; data.arff
  java weka.core.converters.C45Loader c45_filestem &gt; data.arff
 </code></pre>
-<h2 id="classifier">Classifier</h2>
+<h4 id="classifier">Classifier</h4>
 <p>Any classification or regression algorithm in WEKA is derived from the abstract <a href="https://weka.sourceforge.io/doc.stable-3-8/weka/classifiers/Classifier.html">Classifier</a> class. Surprisingly little is needed for a basic classifier: 
 a routine which generates a classifier model from a training dataset (= <code>buildClassifier</code>) and another routine which produces a classification for a given instance (= <code>classifyInstance</code>), or generates a probability distribution for all classes of the instance (= <code>distributionForInstance</code>).</p>
 <p>A classifier model is an arbitrary complex mapping from predictor attributes to the class attribute. The specific form and creation of this mapping, or model, differs from classifier to classifier. For example, <a href="https://weka.sourceforge.io/doc.stable-3-8/weka/classifiers/rules/ZeroR.html">ZeroR's</a> model just consists of a single value: 
@@ -204,12 +204,12 @@ the most common class in the case of classification problems, or the median of a
 <p>There are various approaches to determine the performance of classifiers. It can most simply be measured by counting the proportion of correctly predicted examples in a test dataset. This value is the <em>classification</em> <em>accuracy</em>, which is also <em>1-ErrorRate</em>. Both terms are used in literature.</p>
 <p>The simplest case for evaluation is when we use a training set and a test set which are mutually independent. This is referred to as hold-out estimate. To estimate variance in these performance estimates, hold-out estimates may be computed by repeatedly by resampling the same dataset -- i.e., randomly shuffling it and then splitting it into training and test sets with a specific proportion of the examples, collecting all estimates on the test sets and computing average and standard deviation of accuracy.</p>
 <p>A more elaborate method is <em>k</em>-fold cross-validation. Here, a number of folds <em>k</em> is specified. The dataset is randomly shuffled and then split into <em>k</em> folds of equal size. In each iteration, one fold is used for testing and the other <em>k-1</em> folds are used for training the classifier. The test results are collected and pooled (or averaged) over all folds. This gives the cross-validation estimate of accuracy. The folds can be purely random or slightly modified to create the same class distributions in each fold as in the complete dataset. In the latter case the cross-validation is called <em>stratified</em>. Leave-one-out (loo) cross-validation signifies that <em>k</em> is equal to the number of examples. Out of necessity, loo cv has to be non-stratified, i.e., the class distributions in the test sets are not the same as those in the training data. Therefore loo CV can produce misleading results in rare cases. However it is still quite useful in dealing with small datasets since it utilizes the greatest amount of training data from the dataset.</p>
-<h1 id="weka-filters">weka filters</h1>
+<h3 id="weka-filters">weka filters</h3>
 <p>The <a href="https://weka.sourceforge.io/doc.stable-3-8/weka/filters/Filter.html">weka.filters</a> package contains Java classes that transform datasets -- by removing or adding attributes, resampling the dataset, removing examples and so on. This package offers useful support for data preprocessing, which is an important step in machine learning.</p>
 <p>All filters offer the command-line option <em>-i</em> for specifying the input dataset, and the option <em>-o</em> for specifying the output dataset. If any of these parameters is not given, this specifies standard input resp. output for use within pipes. Other parameters are specific to each filter and can be found out via -<em>h</em>, as with any other class. The weka.filters package is organized into supervised and unsupervised filtering, both of which are again subdivided into instance and attribute filtering. We will discuss each of the four subsection separately.</p>
-<h2 id="wekafilterssupervised">weka.filters.supervised</h2>
+<h4 id="wekafilterssupervised">weka.filters.supervised</h4>
 <p>Classes below weka.filters.supervised in WEKA's Java class hierarchy are for supervised filtering, i.e., taking advantage of the class information. For those filters, a class must be assigned by providing the index of the class attribute via <em>-c</em>.</p>
-<h2 id="attribute">attribute</h2>
+<h4 id="attribute">attribute</h4>
 <p><a href="https://weka.sourceforge.io/doc.stable-3-8/weka/filters/supervised/attribute/Discretize.html">Discretize</a> is used to discretize numeric attributes into nominal ones, based on the class information, via Fayyad &amp; Irani's MDL method, or optionally with Kononeko's MDL method. Some learning schemes or classifiers can only process nominal data, e.g., <a href="https://weka.sourceforge.io/doc.packages/simpleEducationalLearningSchemes/weka/classifiers/rules/Prism.html">rules.Prism</a>; and in some cases discretization may also reduce learning time and help combat overfitting.</p>
 <pre><code class="language-bash"> java weka.filters.supervised.attribute.Discretize -i data/iris.arff -o iris-nom.arff -c last
  java weka.filters.supervised.attribute.Discretize -i data/cpu.arff -o cpu-classvendor-nom.arff -c first
@@ -218,7 +218,7 @@ the most common class in the case of classification problems, or the median of a
 <pre><code class="language-bash"> java weka.filters.supervised.attribute.NominalToBinary -i data/contact-lenses.arff -o contact-lenses-bin.arff -c last
 </code></pre>
 <p>Note that most classifiers in WEKA utilize transformation filters internally, e.g., Logistic and SMO, so you may not have to use these filters explicity.</p>
-<h2 id="instance">instance</h2>
+<h4 id="instance">instance</h4>
 <p><a href="https://weka.sourceforge.io/doc.stable-3-8/weka/filters/supervised/instance/Resample.html">Resample</a> creates a stratified subsample of the given dataset. This means that overall class distributions are approximately retained within the sample. A bias towards uniform class distribution can be specified via -<em>B</em>.</p>
 <pre><code class="language-bash"> java weka.filters.supervised.instance.Resample -i data/soybean.arff -o soybean-5%.arff -c last -Z 5
  java weka.filters.supervised.instance.Resample -i data/soybean.arff -o soybean-uniform-5%.arff -c last -Z 5 -B 1
@@ -229,16 +229,16 @@ the most common class in the case of classification problems, or the median of a
  java weka.filters.supervised.instance.StratifiedRemoveFolds -i data/soybean.arff -o soybean-test.arff \
    -c last -N 4 -F 1
 </code></pre>
-<h2 id="wekafiltersunsupervised">weka.filters.unsupervised</h2>
+<h4 id="wekafiltersunsupervised">weka.filters.unsupervised</h4>
 <p>Classes below <code>weka.filters.unsupervised</code> in WEKA's Java class hierarchy are for unsupervised filtering, e.g., the non-stratified version of Resample. A class should not be assigned here.</p>
-<h2 id="attribute_1">attribute</h2>
+<h4 id="attribute_1">attribute</h4>
 <p><a href="https://weka.sourceforge.io/doc.stable-3-8/weka/filters/unsupervised/attribute/StringToWordVector.html">StringToWordVector</a> transforms string attributes into a word vectors, e.g., creating one attribute for each word that either encodes presence or word count (<em>-C</em>) within the string. <em>-W</em> can be used to set an approximate limit on the number of words. When a class is assigned, the limit applies to each class separately. This filter is useful for text mining.</p>
 <p><a href="https://weka.sourceforge.io/doc.stable-3-8/weka/filters/unsupervised/attribute/Obfuscate.html">Obfuscate</a> renames the dataset name, all attribute names and nominal attribute values. This is intended for exchanging sensitive datasets without giving away restricted information.</p>
 <p><a href="https://weka.sourceforge.io/doc.stable-3-8/weka/filters/unsupervised/attribute/Remove.html">Remove</a> is intended for explicit deletion of attributes from a dataset, e.g. for removing attributes of the iris dataset:</p>
 <pre><code class="language-bash"> java weka.filters.unsupervised.attribute.Remove -R 1-2 -i data/iris.arff -o iris-simplified.arff
  java weka.filters.unsupervised.attribute.Remove -V -R 3-last -i data/iris.arff -o iris-simplified.arff
 </code></pre>
-<h2 id="instance_1">instance</h2>
+<h4 id="instance_1">instance</h4>
 <p><a href="https://weka.sourceforge.io/doc.stable-3-8/weka/filters/unsupervised/instance/Resample.html">Resample</a> creates a non-stratified subsample of the given dataset. It performs random sampling without regard to the class information. Otherwise it is equivalent to its supervised variant.</p>
 <pre><code class="language-bash"> java weka.filters.unsupervised.instance.Resample -i data/soybean.arff -o soybean-5%.arff -Z 5
 </code></pre>
@@ -250,7 +250,7 @@ the most common class in the case of classification problems, or the median of a
 <pre><code class="language-bash"> java weka.filters.unsupervised.instance.RemoveWithValues -i data/soybean.arff \
    -o soybean-without_herbicide_injury.arff -V -C last -L 19
 </code></pre>
-<h1 id="wekaclassifiers">weka.classifiers</h1>
+<h3 id="wekaclassifiers">weka.classifiers</h3>
 <p>Classifiers are at the core of WEKA. There are a lot of common options for classifiers, most of which are related to evaluation purposes. We will focus on the most important ones. All others including classifier-specific parameters can be found via -<em>h</em>, as usual.</p>
 <table>
 <thead>

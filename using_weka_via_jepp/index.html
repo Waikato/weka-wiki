@@ -144,15 +144,15 @@
               
                 <p>Jepp embeds <a href="http://www.python.org/">CPython</a> in Java. It is safe to use in a heavily threaded environment, it is quite fast and its stability is a main feature and goal. </p>
 <p><em>--taken from the <a href="http://jepp.sourceforge.net/">Jepp homepage</a></em></p>
-<h1 id="prerequisites">Prerequisites</h1>
+<h3 id="prerequisites">Prerequisites</h3>
 <ul>
 <li>Java 6 (jepp makes use of the <code>javax.script</code> package)</li>
 <li>Jepp 2.2 or higher</li>
 <li><a href="http://sourceforge.net/forum/message.php?msg_id=4706583">suggested fix</a> for the <em>missing sys.argv</em> problem</li>
 </ul>
-<h1 id="limitations">Limitations</h1>
+<h3 id="limitations">Limitations</h3>
 <p>Jepp doesn't seem to be able to import third-party libraries like <code>scipy</code>, <code>numpy</code> or <code>wx</code> (pure Python modules can be imported, though).</p>
-<h1 id="accessing-weka-classes-within-jepp">Accessing Weka classes within Jepp</h1>
+<h3 id="accessing-weka-classes-within-jepp">Accessing Weka classes within Jepp</h3>
 <p>Java classes are imported in one's Python script as follows:</p>
 <pre><code class="language-python"> from &lt;package&gt; import &lt;class&gt;
 </code></pre>
@@ -187,12 +187,12 @@
 <p>The script can be started like this (you will have to adjust the paths for the jars and the Python script):</p>
 <pre><code class="language-bash"> java -classpath jep.jar:weka.jar some_script.py
 </code></pre>
-<h1 id="see-also">See also</h1>
+<h3 id="see-also">See also</h3>
 <ul>
 <li><a href="../use_weka_in_your_java_code/">Use Weka in your Java code</a> - for general information on how to use the Weka API</li>
 <li><a href="../using_weka_from_jython/">Using Weka from Jython</a></li>
 </ul>
-<h1 id="links">Links</h1>
+<h3 id="links">Links</h3>
 <ul>
 <li><a href="http://jepp.sourceforge.net/">Jepp homepage</a></li>
 <li><a href="http://www.python.org/">Python homepage</a></li>

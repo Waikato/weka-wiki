@@ -142,21 +142,21 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="description">Description</h1>
+                <h3 id="description">Description</h3>
 <p>The main GUI (= <code>weka.gui.Main</code>) contains a plugin mechanism to add functionality to the main menu without having to modify the code of that class (the GUIChooser in the developer version as well). Thanks to the automatic class discovery, Weka will display all components that are found in packages listed in the <a href="../../weka_gui_generic_properties_creator.props/">GenericPropertiesCreator.props</a> file.</p>
-<h1 id="version">Version</h1>
+<h3 id="version">Version</h3>
 <blockquote>
 <p>3.5.5 (or <a href="../../snapshots/">snapshot</a>/<a href="../../subversion/">Subversion</a> after 25/05/2007)</p>
 </blockquote>
-<h1 id="requirements">Requirements</h1>
+<h3 id="requirements">Requirements</h3>
 <p>The are only <em>two</em> requirements for components to be listed in the main menu (under the <em>Extensions</em> menu):</p>
 <ul>
 <li>they have to implement the <code>weka.gui.MainMenuExtension</code> interface</li>
 <li>the packages they reside in must be listed in the <a href="../../weka_gui_generic_properties_creator.props/">GenericPropertiesCreator.props</a> under the <code>weka.gui.MainMenuExtension</code> entry</li>
 </ul>
-<h1 id="examples">Examples</h1>
+<h3 id="examples">Examples</h3>
 <p>In the following, I'll present two really simple examples of how to add <em>stuff</em> to the main menu. An item that gets added to the main menu either handles everything itself, i.e., creating frame and displaying it, or it needs a frame to place its GUI components in. In the first case, one only needs to let the <code>getActionListener(JFrame)</code> method return an <code>ActionListener</code> and implement the <code>fillFrame(Component)</code> method with an empty body. In the other case, one lets the <code>getActionListener(JFrame)</code> method return <code>null</code> and uses the <code>fillFrame(Component)</code> method to fill the frame with life.</p>
-<h2 id="launching-a-browser">Launching a browser</h2>
+<h4 id="launching-a-browser">Launching a browser</h4>
 <p>Launching a browser with the Weka homepage is a really example, since one only needs to use the <code>weka.gui.BrowserHelper</code> class to launch a browser with a specific URL. Since we don't need a frame for this, we don't add any functionality to the <code>fillFrame(Component)</code>, but only let the <code>getActionListener(JFrame)</code> method return an <code>ActionListener</code> that launches the browser with the Weka homepage. The <a href="../../files/StartBrowser.java">StartBrowser.java</a> extension will be listed in the sub-menu <em>Internet</em> as <em>Start browser</em>.</p>
 <pre><code class="language-java">  public String getSubmenuTitle() {
     return &quot;Internet&quot;;
@@ -185,7 +185,7 @@
 <pre><code class="language-ini"> weka.gui.MainMenuExtension=\
   weka.gui.extensions
 </code></pre>
-<h2 id="sql-worksheet">SQL Worksheet</h2>
+<h4 id="sql-worksheet">SQL Worksheet</h4>
 <p>The <a href="../../files/SqlWorksheet.java">SqlWorksheet.java</a> mode, one needs to take care of to check for <code>JFrame</code> and <code>JInternalFrame</code> as ancestor of the frame that is being passed through. The method only instantiates an <code>SqlViewer</code> panel, places it in the center of the frame, resizes the frame to 800x600 and moves it into the center of the screen.</p>
 <pre><code class="language-java">  public String getSubmenuTitle() {
     return null;
@@ -230,7 +230,7 @@
 <pre><code class="language-ini"> weka.gui.MainMenuExtension=\
   weka.gui.extensions
 </code></pre>
-<h1 id="downloads">Downloads</h1>
+<h3 id="downloads">Downloads</h3>
 <ul>
 <li><a href="../../files/StartBrowser.java">StartBrowser.java</a></li>
 <li><a href="../../files/SqlWorksheet.java">SqlWorksheet.java</a></li>

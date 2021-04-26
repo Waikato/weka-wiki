@@ -142,14 +142,14 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="description">Description</h1>
+                <h3 id="description">Description</h3>
 <p>This article explains how to add extra tabs in the Explorer in order to add new functionality without the hassle of having to dig into the Explorer code oneself. With the new plugin-architecture of the Explorer it is fairly easy making your extensions available in the GUI.</p>
 <p><strong>Note:</strong> This is also covered in chapter <em>Extending WEKA</em> of the WEKA manual in versions later than 3.6.1/3.7.0 or <a href="../snapshots/">snapshots</a> of the stable-3.6/developer version later than 10/01/2010.</p>
-<h1 id="version">Version</h1>
+<h3 id="version">Version</h3>
 <blockquote>
 <p>3.5.5 or <a href="../snapshots/">Snapshot</a></p>
 </blockquote>
-<h1 id="requirements">Requirements</h1>
+<h3 id="requirements">Requirements</h3>
 <p>Here is roughly what is required in order to add a new tab (the examples go into more detail):</p>
 <ul>
 <li>your class must be derived from <code>javax.swing.JPanel</code></li>
@@ -171,13 +171,13 @@
 </li>
 <li>adding the classname of your class to the <em>Tabs</em> property in the <code>Explorer.props</code> file</li>
 </ul>
-<h1 id="examples">Examples</h1>
+<h3 id="examples">Examples</h3>
 <p>The following examples demonstrate the new plugin architecture (a bold term for such a simple extension mechanism). Only the necessary details are discussed, as the full source code is available for download as well.</p>
-<h2 id="sql-worksheet">SQL worksheet</h2>
-<h3 id="purpose">Purpose</h3>
+<h4 id="sql-worksheet">SQL worksheet</h4>
+<h5 id="purpose">Purpose</h5>
 <p>Displaying the <strong>SqlViewer</strong> as a tab in the Explorer instead of using it either via the <em>Open DB...</em> button or as standalone application. Uses the existing components already available in Weka and just assembles them in a <code>JPanel</code>. Since this tab does not rely on a dataset being loaded into the Explorer, it will be used as a  <em>standalone</em> one.</p>
 <p>Useful for people who are working a lot with databases and would like to have an SQL worksheet available all the time instead of clicking on a button every time to open up a database dialog.</p>
-<h3 id="implementation">Implementation</h3>
+<h5 id="implementation">Implementation</h5>
 <ul>
 <li>class is derived from <code>javax.swing.JPanel</code> and implements the <code>weka.gui.explorer.Explorer.ExplorerPanel</code> interface (the full source code also imports the <code>weka.gui.explorer.Explorer.LogHandler</code> interface, but that is only additional functionality):</li>
 </ul>
@@ -287,16 +287,16 @@
       weka.gui.explorer.AttributeSelectionPanel,\
       weka.gui.explorer.VisualizePanel
 </code></pre>
-<h3 id="screenshot">Screenshot</h3>
+<h5 id="screenshot">Screenshot</h5>
 <p><img alt="Screenshot" src="../img/SqlPanel.png" /></p>
-<h3 id="source">Source</h3>
+<h5 id="source">Source</h5>
 <ul>
 <li><a href="../files/SqlPanel.java">SqlPanel.java</a> (<a href="https://svn.cms.waikato.ac.nz/svn/weka/branches/stable-3-6/wekaexamples/src/main/java/wekaexamples/gui/explorer/SqlPanel.java">stable-3.6</a>, <a href="https://svn.cms.waikato.ac.nz/svn/weka/trunk/wekaexamples/src/main/java/wekaexamples/gui/explorer/SqlPanel.java">developer</a>)</li>
 </ul>
-<h2 id="artificial-data-generation">Artificial data generation</h2>
-<h3 id="purpose_1">Purpose</h3>
+<h4 id="artificial-data-generation">Artificial data generation</h4>
+<h5 id="purpose_1">Purpose</h5>
 <p>Instead of only having a <em>Generate...</em> button in the PreprocessPanel or using it from commandline, this example creates a new panel to be displayed as extra tab in the Explorer. This tab will be available regardless whether a dataset is already loaded or not (= <em>standalone</em>).</p>
-<h3 id="implementation_1">Implementation</h3>
+<h5 id="implementation_1">Implementation</h5>
 <ul>
 <li>class is derived from <code>javax.swing.JPanel</code> and implements the <code>weka.gui.Explorer.ExplorerPanel</code> interface (the full source code also imports the <code>weka.gui.Explorer.LogHandler</code> interface, but that is only additional functionality):</li>
 </ul>
@@ -437,17 +437,17 @@
 <blockquote>
 <p><strong>Note:</strong> the <em>standalone</em> option is used to make the tab available without requiring the preprocess panel to load a dataset first.</p>
 </blockquote>
-<h3 id="screenshot_1">Screenshot</h3>
+<h5 id="screenshot_1">Screenshot</h5>
 <p><img alt="Screenshot" src="../img/GeneratorPanel.png" /></p>
-<h3 id="source_1">Source</h3>
+<h5 id="source_1">Source</h5>
 <ul>
 <li><a href="../files/GeneratorPanel.java">GeneratorPanel.java</a> (<a href="https://svn.cms.waikato.ac.nz/svn/weka/branches/stable-3-6/wekaexamples/src/main/java/wekaexamples/gui/explorer/GeneratorPanel.java">stable-3.6</a>, <a href="https://svn.cms.waikato.ac.nz/svn/weka/trunk/wekaexamples/src/main/java/wekaexamples/gui/explorer/GeneratorPanel.java">developer</a>)</li>
 </ul>
-<h2 id="experimenter-light">Experimenter "light"</h2>
-<h3 id="purpose_2">Purpose</h3>
+<h4 id="experimenter-light">Experimenter "light"</h4>
+<h5 id="purpose_2">Purpose</h5>
 <p>By default the <em>Classify</em> panel only performs 1 run of 10-fold cross-validation. Since most classifiers are rather sensitive to the order of the data being presented to them, those results can be too optimistic or pessimistic. Averaging the results over 10 runs with differently randomized train/test pairs returns more reliable results. And this is where this plugin comes in: 
 it can be used to obtain statistical sound results for a specific classifier/dataset combination, without having to setup a whole experiment in the Experimenter. </p>
-<h3 id="implementation_2">Implementation</h3>
+<h5 id="implementation_2">Implementation</h5>
 <ul>
 <li>Since this plugin is rather bulky, we omit the implementation details, but the following can be said:</li>
 </ul>
@@ -461,9 +461,9 @@ it can be used to obtain statistical sound results for a specific classifier/dat
       weka.gui.explorer.AttributeSelectionPanel,\
       weka.gui.explorer.VisualizePanel
 </code></pre>
-<h3 id="screenshot_2">Screenshot</h3>
+<h5 id="screenshot_2">Screenshot</h5>
 <p><img alt="Screenshot" src="../img/ExperimentPanel.png" /></p>
-<h3 id="source_2">Source</h3>
+<h5 id="source_2">Source</h5>
 <ul>
 <li><a href="../files/ExperimentPanel.java">ExperimentPanel.java</a> (<a href="https://svn.cms.waikato.ac.nz/svn/weka/branches/stable-3-6/wekaexamples/src/main/java/wekaexamples/gui/explorer/ExperimentPanel.java">stable-3.6</a>, <a href="https://svn.cms.waikato.ac.nz/svn/weka/trunk/wekaexamples/src/main/java/wekaexamples/gui/explorer/ExperimentPanel.java">developer</a>)</li>
 </ul>

@@ -148,7 +148,7 @@
 <pre><code> weka.classifiers
 </code></pre>
 <p><strong>Note:</strong> This is also covered in chapter <em>Extending WEKA</em> of the WEKA manual.</p>
-<h1 id="packages">Packages</h1>
+<h3 id="packages">Packages</h3>
 <p>A few comments about the different classifier sub-packages:</p>
 <ul>
 <li><code>bayes</code> - contains bayesian classifiers, e.g. NaiveBayes</li>
@@ -161,13 +161,13 @@
 <li><code>rules</code> - rule-based classifiers, e.g. ZeroR</li>
 <li><code>trees</code> - tree classifiers, like decision trees</li>
 </ul>
-<h1 id="coding">Coding</h1>
+<h3 id="coding">Coding</h3>
 <p>In the following you'll find notes about certain implementation parts listed in the Mindmap, which need a bit more explanation.</p>
-<h2 id="random-number-generators">Random number generators</h2>
+<h4 id="random-number-generators">Random number generators</h4>
 <p>In order to get repeatable experiments, one is not allowed to use <em>unseeded</em> random number generators like <code>Math.random()</code>. Instead, one has to instantiate a <code>java.util.Random</code> object in the <code>buildClassifier(Instances)</code> method with a specific seed value. The seed value can be user supplied, of course, which all the <code>Randomizable...</code> abstract classifiers already implement.</p>
-<h2 id="capabilities">Capabilities</h2>
+<h4 id="capabilities">Capabilities</h4>
 <p>In old versions of Weka (up to version 3.5.2), all classifiers could handle basically every kind of data by default, unless they were throwing an Exception (in the <code>buildClassifier(Instances)</code> method). Since this behavior makes it cumbersome to introduce new attribute types, for instance (<em>all</em> classifiers have to be modified, which can't handle the new attribute type!), the general <code>Capabilities</code> were introduced.</p>
-<h2 id="base-classifier">Base-classifier</h2>
+<h4 id="base-classifier">Base-classifier</h4>
 <p>Normal classifiers only state what kind of attributes and what kind of classes they can handle.</p>
 <p>The <code>getCapabilities()</code> method of <code>weka.classifiers.trees.RandomTree</code>, for instance, looks like this:</p>
 <pre><code class="language-java">  public Capabilities getCapabilities() {
@@ -203,7 +203,7 @@
 <p><code>result.enable(Capability.NO_CLASS);</code></p>
 </li>
 </ul>
-<h2 id="meta-classifier">Meta-classifier</h2>
+<h4 id="meta-classifier">Meta-classifier</h4>
 <p>Meta-classifiers, by default, just return the capabilities of their base classifiers - in case of descendants of the <code>weka.classifier.MultipleClassifiersCombiner</code>, an <strong>AND</strong> over all the Capabilities of the base classifiers is returned.</p>
 <p>Due to this behavior, the Capabilities depend (normally) only on the currently configured base classifier(s). To <em>soften</em> filtering for certain behavior, meta-classifiers also define so-called <em>Dependencies</em> on a per-Capability basis. These dependencies tell the filter that even though a certain capability is not supported right now, it is possible that it will be supported with a different base classifier. By default, all Capabilities are initialized as Dependencies. </p>
 <p><code>weka.classifiers.meta.LogitBoost</code>, e.g., is restricted to nominal classes. For that reason it disables the Dependencies for the class:</p>
@@ -211,13 +211,13 @@
     result.disableAllClassDependencies();     // no dependencies!
     result.enable(Capability.NOMINAL_CLASS);  // only nominal classes allowed
 </code></pre>
-<h2 id="relevant-classes">Relevant classes</h2>
+<h4 id="relevant-classes">Relevant classes</h4>
 <ul>
 <li><code>weka.core.Capabilities</code></li>
 <li><code>weka.core.CapabilitiesHandler</code></li>
 <li><code>weka.core.MultiInstanceCapabilitiesHandler</code> (for multi-instance classifiers)</li>
 </ul>
-<h1 id="paper-references">Paper reference(s)</h1>
+<h3 id="paper-references">Paper reference(s)</h3>
 <p>In order to make it easy to generate a bibliography of all the algorithms in Weka, the <a href="../academic/paper_references/">paper references</a> located so far in the Javadoc were extracted and placed in the code.</p>
 <p>Classes that are based on some technical paper should implement the <code>TechnicalInformationHandler</code> interface and return a customized <code>TechnicalInformation</code> instance. The format used is based on <a href="http://en.wikipedia.org/wiki/BibTeX">BibTeX</a> and the <code>TechnicalInformation</code> class can either return a plain text string via the <code>toString()</code> method or a real <a href="http://en.wikipedia.org/wiki/BibTeX">BibTeX</a> entry via the <code>toBibTex()</code> method. This two methods are then used to automatically update the Javadoc (see <a href="./#javadoc">Javadoc</a> further down) of a class.</p>
 <p>Relevant classes:</p>
@@ -225,7 +225,7 @@
 <li><code>weka.core.TechnicalInformation</code></li>
 <li><code>weka.core.TechnicalInformationHandler</code></li>
 </ul>
-<h2 id="javadoc">Javadoc</h2>
+<h4 id="javadoc">Javadoc</h4>
 <p>Open-source software is only as good as its documentation. Hence, correct and up-to-date documentation is vital. So far most of the Javadoc was maintained manually, which made it hard to maintain, e.g., as soon as new options were added the Javadoc had to be changed accordingly, too. And that normally in several places:</p>
 <ul>
 <li>Class description</li>
@@ -250,7 +250,7 @@
 </ol>
 </li>
 </ul>
-<h2 id="general">General</h2>
+<h4 id="general">General</h4>
 <p>The general description for all classes displayed in the GenericObjectEditor was already in place, with the following method:</p>
 <pre><code class="language-java"> globalInfo()
 </code></pre>
@@ -259,7 +259,7 @@
  will be automatically replaced
  &lt;!-- globalinfo-end --&gt;
 </code></pre>
-<h2 id="paper-references_1">Paper reference(s)</h2>
+<h4 id="paper-references_1">Paper reference(s)</h4>
 <p>If available, the paper reference should also be listed in the Javadoc. Since the <code>globalInfo()</code> method should return a short version of the reference, it is sufficient to list the full <a href="http://en.wikipedia.org/wiki/BibTeX">BibTeX</a> documentation:</p>
 <pre><code> &lt;!-- technical-bibtex-start --&gt;
  will be automatically replaced
@@ -270,23 +270,23 @@
  will be automatically replaced
  &lt;!-- technical-plaintext-end --&gt;
 </code></pre>
-<h2 id="options">Options</h2>
+<h4 id="options">Options</h4>
 <p>To place the commandline options, use the following comment tags:</p>
 <pre><code> &lt;!-- options-start --&gt;
  will be automatically replaced
  &lt;!-- options-end --&gt;
 </code></pre>
-<h2 id="relevant-classes_1">Relevant classes</h2>
+<h4 id="relevant-classes_1">Relevant classes</h4>
 <ul>
 <li><code>weka.core.AllJavadoc</code> - executes all Javadoc-producing classes</li>
 <li><code>weka.core.GlobalInfoJavadoc</code> - updates the globalInfo tags</li>
 <li><code>weka.core.OptionHandlerJavadoc</code> - updates the option tags</li>
 <li><code>weka.core.TechnicalInformationHandlerJavadoc</code> - updates the technical tags (plain text and <a href="http://en.wikipedia.org/wiki/BibTeX">BibTeX</a>)</li>
 </ul>
-<h1 id="integration">Integration</h1>
+<h3 id="integration">Integration</h3>
 <p>After finishing the coding stage, it's time to integrate your classifier in the Weka framework, i.e., to make it available in the Explorer, Experimenter, etc.</p>
 <p>The <a href="../generic_object_editor/">GenericObjectEditor</a> article shows you how to tell Weka where to find your classifier and therefore displaying it in the <em>GenericObjectEditor</em>.</p>
-<h1 id="revisions">Revisions</h1>
+<h3 id="revisions">Revisions</h3>
 <p>Classifiers also implement the <code>weka.core.RevisionHandler</code> interface. This provides the functionality of obtaining the <a href="../subversion/">Subversion</a> revision from within Java. Classifiers that are not part of the official Weka distribution will have to implement the method <code>getRevision()</code> as follows, which will return a dummy revision of <em>1.0</em>:</p>
 <pre><code class="language-java">  /**
    * Returns the revision string.
@@ -297,10 +297,10 @@
     return RevisionUtils.extract(&quot;$Revision: 1.0 $&quot;);
   }
 </code></pre>
-<h1 id="testing">Testing</h1>
+<h3 id="testing">Testing</h3>
 <p>Weka provides already a test framework to ensure the basic functionality of a classifier. It is essential for the classifier to pass these tests.</p>
-<h2 id="commandline-test">Commandline test</h2>
-<h2 id="general_1">General</h2>
+<h4 id="commandline-test">Commandline test</h4>
+<h4 id="general_1">General</h4>
 <p>Use the CheckClassifier class to test your classifier from commandline:</p>
 <pre><code> weka.classifiers.CheckClassifier -W classname [-- additional parameters]
 </code></pre>
@@ -311,17 +311,17 @@
 <li>weighted instances classifier</li>
 <li>multi-instance classifier</li>
 </ul>
-<h2 id="option-handling">Option handling</h2>
+<h4 id="option-handling">Option handling</h4>
 <p>Additionally, check the <strong>option handling</strong> of your classifier with the following tool from commandline:</p>
 <pre><code> weka.core.CheckOptionHandler -W classname [-- additional parameters]
 </code></pre>
 <p>All tests need to return <em>yes</em>.</p>
-<h2 id="genericobjecteditor">GenericObjectEditor</h2>
+<h4 id="genericobjecteditor">GenericObjectEditor</h4>
 <p>The <code>CheckGOE</code> class checks whether all the properties available in the GUI have a tooltip accompanying them and whether the <code>globalInfo()</code> method is declared:</p>
 <pre><code> weka.core.CheckGOE -W classname [-- additional parameters]
 </code></pre>
 <p>All tests, once again, need to return <em>yes</em>.</p>
-<h2 id="source-code">Source code</h2>
+<h4 id="source-code">Source code</h4>
 <p>Classifiers that implement the <code>weka.classifiers.Sourcable</code> interface can output Java code of their model. In order to check the generated code, one should not only compile the code, but also test it with the following test class:</p>
 <pre><code> weka.classifiers.CheckSource
 </code></pre>
@@ -334,16 +334,16 @@
     -c last
 </code></pre>
 <p>It needs to return <em>Tests OK!</em>.</p>
-<h2 id="unit-tests">Unit tests</h2>
+<h4 id="unit-tests">Unit tests</h4>
 <p>In order to make sure that your classifier applies to the Weka criteria, you should add your classifier to the <a href="http://www.junit.org/">junit</a> unit test framework, i.e., by creating a Test class derived from <code>AbstractClassifierTest</code>. This class uses the <code>CheckClassifier</code>, <code>CheckOptionHandler</code> and <code>CheckGOE</code> class to run a battery of tests.</p>
 <p>How to check out the unit test framework, you can find <a href="../subversion/#junit">here</a>.</p>
-<h1 id="see-also">See also</h1>
+<h3 id="see-also">See also</h3>
 <ul>
 <li><a href="../generic_object_editor/">GenericObjectEditor</a></li>
 <li><a href="../academic/paper_references/">Paper References</a></li>
 <li><a href="../writing_classifier_article/">Writing your own Classifier Article</a></li>
 </ul>
-<h1 id="links">Links</h1>
+<h3 id="links">Links</h3>
 <ul>
 <li><a href="../files/Build_classifier.pdf">Build_classifier.pdf</a> - MindMap for implementing a new classifier</li>
 <li>Weka API (<a href="https://weka.sourceforge.io/doc.stable-3-8">stable</a>, <a href="https://weka.sourceforge.io/doc.dev">developer</a>)</li>

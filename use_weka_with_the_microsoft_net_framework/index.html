@@ -144,13 +144,13 @@
               
                 <p>So you want to use Weka with your existing Microsoft .NET code?  Or you want to use your .NET components in a Java-based system that uses Weka?  Achieving .NET and Java interoperability is possible, but there is no 'one size fits all' solution.  The sheer number of different ways to attempt this should give an indication of the difficulty of the problem.</p>
 <p>That said, here is a summary of some of the possibilities that you can try.</p>
-<h1 id="direct-interoperability">Direct Interoperability</h1>
-<h2 id="ikvm">IKVM</h2>
+<h3 id="direct-interoperability">Direct Interoperability</h3>
+<h4 id="ikvm">IKVM</h4>
 <p><a href="http://www.ikvm.net/">IKVM</a> is an implementation of Java for .NET.  It allows you to call your Java classes from directly from your .NET code, and via the <a href="http://www.gnu.org/software/classpath/classpath.html">GNU Classpath</a> provides most of the standard Java API for use in .NET.  It also provides a .NET version of the Java Virtual Machine.</p>
 <p>In other words, with this software you can now use almost any Java class in your .NET code!  You could even develop for .NET using Java, and then easily import your classes into your .NET system.</p>
 <p>Even better, IKVM is Open Source software and is freely available.  The only disadvantage is that its functionality is limited to the extent of the GNU Classpath; however this now covers most of the API, and is rapidly expanding.  It also doesn't appear to have any functionality in the other direction - you can't run .NET code in Java.</p>
 <p>For use with Weka, IKVM has successfully been tested on a simple C# program that runs a classifier on a dataset.  The GUI will not load at the time of writing, but I suspect that most of the Weka API will work fine.  Because of this, IKVM is recommended for use in small Open Source research projects using Weka.  See this <a href="../ikvm_with_weka_tutorial/">IKVM with Weka tutorial</a> for more detail.</p>
-<h2 id="bridging-software">Bridging Software</h2>
+<h4 id="bridging-software">Bridging Software</h4>
 <p>Bridging software allows you to use your Java classes in your .NET code, and your .NET classes in your java code.  This works by running both the .NET and Java Virtual Machines simultaneously, and creating proxy classes that 'stand in' for each class in the alternative framework.</p>
 <p>Runtime bridges are relatively computationally-efficient, and provide seamless and flexible interoperability solutions.  The main disadvantage with this method is that the software tools that facilitate this are generally expensive third-party programs that must be purchased.</p>
 <p>Some .NET / Java bridging tools:</p>
@@ -179,11 +179,11 @@
 </blockquote>
 </li>
 </ul>
-<h1 id="indirect-interoperability">Indirect Interoperability</h1>
-<h2 id="interoperability-using-a-database">Interoperability using a Database</h2>
+<h3 id="indirect-interoperability">Indirect Interoperability</h3>
+<h4 id="interoperability-using-a-database">Interoperability using a Database</h4>
 <p>If both your .NET components and your Java components only need to asynchronously interface with a database, interoperability is very simple.  The components from the different frameworks do not have to know about each other - they just interact with the database as they normally would.  For more detail, see
 <a href="http://www.devx.com/interop/article/19952/0/page/2">Database Interoperability</a>.</p>
-<h2 id="using-enterprise-messaging-services">Using Enterprise Messaging Services</h2>
+<h4 id="using-enterprise-messaging-services">Using Enterprise Messaging Services</h4>
 <p>Messaging services are used to facilitate asynchronous communication between different components in a system.  They provide an API for sending messages between components, and provide security, data integrity checking and error handling to ensure reliable information transfer.  To use these systems for interoperability between .NET and Java, you may need a messaging system for each framework that has the capability of talking to messaging systems from the other framework.</p>
 <p>The disadvantage of this type of system is that it may be expensive and difficult to set up.  However, if you already have such a system in place, it makes sense to use it for interoperability purposes.</p>
 <p><strong>.NET Enterprise Messaging Services</strong></p>
@@ -195,12 +195,12 @@
 <li><a href="http://www-306.ibm.com/software/integration/wmq/features/">IBM Websphere MQ</a></li>
 <li><a href="http://www.fiorano.com/products/fmq/overview.htm">Fiorano MQ</a></li>
 </ul>
-<h2 id="web-services">Web Services</h2>
+<h4 id="web-services">Web Services</h4>
 <p>Web Services are a common method used for achieving interoperability.  The main attractions are that web-based systems are both platform and language independant, and there exist standard protocols to facilitate the communication.</p>
 <p>A Web Services based approach generally involves setting up a web server, and some proxy classes in each framework to communicate with this server.  Communication is generally achieved through XML-based protocols such as SOAP.  The problem with this method is that serialization to XML can create large files that must be sent to the web server, so there may be efficiency issues.</p>
 <p><a href="http://msdn.microsoft.com/webservices/webservices/building/wse/">Microsoft WSE</a> and <a href="http://java.sun.com/webservices/jwsdp/index.jsp">JWSDP</a> are freely available extensions to .NET and Java respectively, for the purposes of developing web-server based solutions.</p>
 <p>Tutorials for using this method for interoperability can be found <a href="http://msdn.microsoft.com/webservices/webservices/building/interop/default.aspx?pull=/library/en-us/dnwse/html/wsejavainterop.asp">here</a>, <a href="http://www.devhood.com/tutorials/tutorial_details.aspx?tutorial_id=178">here</a> and <a href="http://msdn.microsoft.com/webservices/webservices/building/interop/default.aspx?pull=/library/en-us/dnbda/html/interopsun.asp">here</a>.</p>
-<h1 id="other-useful-links">Other Useful Links</h1>
+<h3 id="other-useful-links">Other Useful Links</h3>
 <ul>
 <li><a href="http://www.onjava.com/pub/a/onjava/2004/08/18/ikvm.html">An introduction to IKVM</a> - This article supplies a code example of Java/.NET interoperability using IKVM.</li>
 <li><a href="http://www.ikvm.net/">IKVM.NET</a> - An open source implementation of Java for .NET (Highly recommended).</li>

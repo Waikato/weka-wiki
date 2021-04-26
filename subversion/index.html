@@ -142,7 +142,7 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="general">General</h1>
+                <h3 id="general">General</h3>
 <p>The Weka <a href="http://en.wikipedia.org/wiki/Subversion_%28software%29">Subversion</a> repository is accessible and browseable via the following URL:</p>
 <ul>
 <li>https://svn.cms.waikato.ac.nz/svn/weka/</li>
@@ -157,12 +157,12 @@
   +- branches
 </code></pre>
 <p>Where <code>trunk</code> contains the <code>main trunk</code> of the development, <code>tags</code> snapshots in time of the repository (e.g., when a new version got released) and <code>branches</code> development branches that forked off the main trunk at some stage (e.g., legacy versions that still get bugfixed).</p>
-<h1 id="source-code">Source code</h1>
+<h3 id="source-code">Source code</h3>
 <p>The latest version of the Weka source code can be obtained with this URL:</p>
 <p>https://svn.cms.waikato.ac.nz/svn/weka/trunk/weka</p>
 <p>If you want to obtain the source code of the book version, use this URL:</p>
 <p>https://svn.cms.waikato.ac.nz/svn/weka/branches/stable-3-8/</p>
-<h1 id="specific-version">Specific version</h1>
+<h3 id="specific-version">Specific version</h3>
 <p>Whenever a release of Weka is generated, the repository gets <a href="http://en.wikipedia.org/wiki/Revision_tag">tagged</a>:</p>
 <p><code>dev-X-Y-Z</code></p>
 <p>the tag for a release of the developer version, e.g., <code>dev-3-9-2</code> for Weka 3.9.2</p>
@@ -170,9 +170,9 @@
 <p><code>stable-X-Y-Z</code></p>
 <p>the tag for a release of a stable version. The book version is one of those stable versions, e.g., <code>stable-3-8-2</code> for Weka 3.8.2.</p>
 <p>https://svn.cms.waikato.ac.nz/svn/weka/tags/stable-3-8-2</p>
-<h1 id="junit">JUnit</h1>
+<h3 id="junit">JUnit</h3>
 <p>Weka's JUnit tests are no longer a separate module (as it was the case before the migration to Subversion). They are now located in the <code>src/test</code> directory of the Weka source code tree.</p>
-<h1 id="commandline">Commandline</h1>
+<h3 id="commandline">Commandline</h3>
 <p>Modern Linux distributions already come with Subversion either pre-installed or easily installed via the package manager of the distribution. If that shouldn't be case, or if you are using Windows, you have to download the appropriate client from [http://subversion.tigris.org/ Subversion's homepage].</p>
 <p>A checkout of the current developer version of Weka looks like this:</p>
 <pre><code>svn co https://svn.cms.waikato.ac.nz/svn/weka/trunk/weka
@@ -180,7 +180,7 @@
 <p>You can also obtain the source code for a specific date. The <code>-r</code> option of the <code>svn</code> command-line client can also take dates (format: YYYYMMDD) instead of only revision numbers. In order to distinguish the dates from revision numbers, you have to enclose the date within curly brackets:</p>
 <pre><code>svn co -r {20180616} https://svn.cms.waikato.ac.nz/svn/weka/trunk/weka
 </code></pre>
-<h1 id="links">Links</h1>
+<h3 id="links">Links</h3>
 <ul>
 <li><a href="http://en.wikipedia.org/wiki/Subversion_%28software%29">Subversion on WikiPedia</a></li>
 <li><a href="https://subversion.apache.org/">Subversion homepage</a></li>

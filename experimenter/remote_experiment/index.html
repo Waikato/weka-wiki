@@ -143,7 +143,7 @@
             <div class="section">
               
                 <p>Remote experiments enable you to distribute the computing load across multiple computers. In the following we will discuss the setup and operation for <a href="http://hsqldb.sourceforge.net/">HSQLDB</a> and <a href="http://www.mysql.com/">MySQL</a>.</p>
-<h1 id="preparation">Preparation</h1>
+<h3 id="preparation">Preparation</h3>
 <p>To run a remote experiment you will need:</p>
 <ul>
 <li>A database server.</li>
@@ -160,7 +160,7 @@
 <li>The directory for the datasets is <code>/home/johndoe/datasets</code>.</li>
 </ul>
 <p><strong>Note:</strong> The example policy file <code>remote.policy.example</code> is using this setup (available in <code>weka/experiment</code>). </p>
-<h1 id="database-server-setup">Database Server Setup</h1>
+<h3 id="database-server-setup">Database Server Setup</h3>
 <ul>
 <li>HSQLDB
 <strong> Download the JDBC driver for HSQLDB, extract the <code>hsqldb.jar</code> and place it in the directory <code>/home/johndoe/jars</code>.
@@ -182,7 +182,7 @@
 </strong> Start the MySQL server.
 <strong> Create a database - for our example we will use experiment as database name.
 </strong> Download the appropriate JDBC driver, extract the JDBC jar and place it as <code>mysql.jar</code> in <code>/home/johndoe/jars</code>.</p>
-<h1 id="remote-engine-setup">Remote Engine Setup</h1>
+<h3 id="remote-engine-setup">Remote Engine Setup</h3>
 <ul>
 <li>First, set up a directory for scripts and policy files:</li>
 </ul>
@@ -239,7 +239,7 @@
 </ul>
 </li>
 </ul>
-<h1 id="configuring-the-experimenter">Configuring the Experimenter</h1>
+<h3 id="configuring-the-experimenter">Configuring the Experimenter</h3>
 <p>Now we will run the Experimenter:</p>
 <ul>
 <li>HSQLDB<ul>
@@ -300,11 +300,11 @@
 <li>Now start your experiment as you would do normally.</li>
 <li>Check your results in the <em>Analyse</em> tab by clicking either the <em>Database</em> or <em>Experiment</em> buttons.</li>
 </ul>
-<h1 id="multi-core-support">Multi-core support</h1>
+<h3 id="multi-core-support">Multi-core support</h3>
 <p>If you want to utilize all the cores on a multi-core machine, then you can do so with Weka version 3.6.x and developer versions later than 3.5.7. All you have to do, is define the port alongside the hostname in the Experimenter (format: 
 <code>hostname:port</code>) and then start the <code>RemoteEngine</code> with the <code>-p</code> option, specifying the port to listen on.
 See also <a href="https://list.waikato.ac.nz/pipermail/wekalist/2009-March/016310.html">this</a> post on the <a href="../../mailing_list/">Wekalist</a>.</p>
-<h1 id="troubleshooting">Troubleshooting</h1>
+<h3 id="troubleshooting">Troubleshooting</h3>
 <ul>
 <li>If you get an error at the start of an experiment that looks a bit like this:</li>
 </ul>
@@ -322,7 +322,7 @@ See also <a href="https://list.waikato.ac.nz/pipermail/wekalist/2009-March/01631
 <li>Using a corrupt or incomplete <code>DatabaseUtils.props</code> file can cause peculiar interface errors, for example disabling the use of the <em>User</em> button alongside the database URL. If in doubt copy a clean <code>DatabaseUtils.props</code> from <a href="../../subversion/">Subversion</a>.</li>
 <li>If you get <code>NullPointerException at java.util.Hashtable.get()</code> in the Remote Engine do not be alarmed. This will have no effect on the results of your experiment.</li>
 </ul>
-<h1 id="links">Links</h1>
+<h3 id="links">Links</h3>
 <ul>
 <li><a href="../../databases/">Databases</a></li>
 <li><a href="../../weka_experiment_database_utils.props/">weka/experiment/DatabaseUtils.props</a></li>

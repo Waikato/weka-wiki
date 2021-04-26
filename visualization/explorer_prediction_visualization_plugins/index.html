@@ -142,10 +142,10 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="introduction">Introduction</h1>
+                <h3 id="introduction">Introduction</h3>
 <p>As of Weka version &gt;3.5.2 one can easily add visualization plugins in the Explorer (Classify panel). This makes it easy to implement custom visualizations, if the ones Weka offers are not sufficient.</p>
 <p><strong>Note:</strong> This is also covered in chapter <em>Extending WEKA</em> of the WEKA manual in versions later than 3.6.1/3.7.0 or <a href="../../snapshots/">snapshots</a> of the stable-3.6/developer version later than 10/01/2010.</p>
-<h1 id="requirements">Requirements</h1>
+<h3 id="requirements">Requirements</h3>
 <ul>
 <li>custom visualization class must implement the following <strong>interface</strong><blockquote>
 <p><code>weka.gui.visualize.plugins.VisualizePlugin</code></p>
@@ -157,7 +157,7 @@
 </li>
 <li>or the class' package must be listed in the <code>weka.gui.visualize.plugins.VisualizePlugin</code> key of the <code>[weka/gui/GenericPropertiesCreator.props](weka_gui_genericpropertiescreator.props.md)</code> file (only available in 3.5.7 or later).</li>
 </ul>
-<h1 id="implementation">Implementation</h1>
+<h3 id="implementation">Implementation</h3>
 <p>The visualization interface contains the following four methods</p>
 <ul>
 <li><strong>getMinVersion</strong><blockquote>
@@ -177,24 +177,24 @@
 </blockquote>
 </li>
 </ul>
-<h1 id="examples">Examples</h1>
-<h2 id="table-with-predictions">Table with predictions</h2>
+<h3 id="examples">Examples</h3>
+<h4 id="table-with-predictions">Table with predictions</h4>
 <p>The <a href="../../files/PredictionTable.java">PredictionTable.java</a> example simply displays the <em>actual</em> class label and the one predicted by the classifier. In addition to that, it lists whether it was an incorrect prediction and the class probability for the correct class label.</p>
 <p><img alt="Screenshot" src="../../img/PredictionTable.png" /></p>
-<h2 id="bar-plot-with-probabilities">Bar plot with probabilities</h2>
+<h4 id="bar-plot-with-probabilities">Bar plot with probabilities</h4>
 <p>The <a href="../../files/PredictionError.java">PredictionError.java</a> to display a simple bar plot of the predictions. The correct predictions are displayed in <em>blue</em>, the incorrect ones in <em>red</em>. In both cases the class probability that the classifier returned for the correct class label is displayed on the y axis. The x axis is simply the index of the prediction starting with 0.</p>
 <p><img alt="Screenshot" src="../../img/PredictionError.png" /></p>
-<h1 id="downloads">Downloads</h1>
+<h3 id="downloads">Downloads</h3>
 <ul>
 <li><a href="../../files/PredictionTable.java">PredictionTable.java</a></li>
 <li><a href="../../files/PredictionError.java">PredictionError.java</a></li>
 </ul>
-<h1 id="see-also">See also</h1>
+<h3 id="see-also">See also</h3>
 <ul>
 <li><a href="../../use_weka_in_your_java_code/">Use Weka in your Java code</a> - general overview of the basic Weka API</li>
 <li><a href="../explorer_visualization_plugins/">Explorer visualization plugins</a></li>
 </ul>
-<h1 id="links">Links</h1>
+<h3 id="links">Links</h3>
 <ul>
 <li><a href="http://jmathtools.sourceforge.net/">JMathTools homepage</a></li>
 </ul>

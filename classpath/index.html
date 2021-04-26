@@ -144,9 +144,9 @@
               
                 <p>The <code>CLASSPATH</code> environment variable tells Java where to look for classes. Since Java does the search in a ''first-come-first-serve'' kind of manner, you'll have to take care where and what to put in your CLASSPATH. I, personally, never use the environment variable, since I'm working often on a project in different versions in parallel. The CLASSPATH would just mess up things, if you're not careful (or just forget to remove an entry). <a href="../ant/">ANT</a> offers a nice way for building (and separating source code and class files) Java projects.
 But still, if you're only working on totally separate projects, it might be easiest for you to use the environment variable.</p>
-<h1 id="setting-the-classpath">Setting the CLASSPATH</h1>
+<h3 id="setting-the-classpath">Setting the CLASSPATH</h3>
 <p>In the following we add the <code>mysql-connector-java-5.1.6-bin.jar</code> to our <code>CLASSPATH</code> variable (this works for any other jar archive) to make it possible to access MySQL <a href="../databases/">Databases</a> via JDBC.</p>
-<h2 id="windows">Windows</h2>
+<h4 id="windows">Windows</h4>
 <p>We assume that the <code>mysql-connector-java-5.1.6-bin.jar</code> archive is located in the following directory:</p>
 <pre><code>C:\Program Files\Weka-3-8
 </code></pre>
@@ -158,7 +158,7 @@ But still, if you're only working on totally separate projects, it might be easi
 <pre><code>C:\Program Files\Weka-3-8\mysql-connector-java-5.1.6-bin.jar
 </code></pre>
 <p>If you want to add additional jars, you'll have to separate them with the path separator, the semicolon <strong>;</strong> (no spaces!).</p>
-<h2 id="unixlinux">Unix/Linux</h2>
+<h4 id="unixlinux">Unix/Linux</h4>
 <p>I assume, that the mysql jar is located in the following directory:</p>
 <pre><code>/home/johndoe/jars/
 </code></pre>
@@ -173,7 +173,7 @@ But still, if you're only working on totally separate projects, it might be easi
 <p><code>setenv CLASSPATH $CLASSPATH:/home/johndoe/jars/mysql-connector-java-5.1.6-bin.jar</code></p>
 <p>Unix/Linux uses the colon <strong>:</strong> as path separator, in contrast to Windows, which uses the semicolon <strong>;</strong>.</p>
 <p><strong>Note:</strong> the prefixing with <code>$CLASSPATH</code> adds the mysql jar at the end of the currently existing <code>CLASSPATH</code>.</p>
-<h2 id="cygwin">Cygwin</h2>
+<h4 id="cygwin">Cygwin</h4>
 <p>The process is like with Unix/Linux systems, but since the host system is Win32 and therefore the Java installation also a Windows application, you'll have to use the semicolon <strong>;</strong> as separator for several jars.</p>
               
             </div>
