@@ -4,6 +4,9 @@ site_description: Documention on Weka that can also be found in the manual and t
 theme:
     name: readthedocs
 #    custom_dir: weka_theme/
+markdown_extensions:
+    - toc:
+        baselevel: 3
 # if page names start with a blank, eg ' Some name', then they get 
 # excluded from the navigation on the left-hand side
 nav:
