@@ -64,7 +64,7 @@ Mac application including Azul's 64-bit OpenJDK Java VM 11 for ARM Macs.
 to download a zip archive for Linux that includes Azul's 64-bit OpenJDK Java VM 11
 (weka-3-8-5-azul-zulu-linux.zip; 137.4 MB)
 
-First unzip the the zip file. This will create a new directory called
+First unzip the zip file. This will create a new directory called
 weka-3-8-5. To run Weka, change into that directory and type
 
 ``` bash
@@ -126,7 +126,7 @@ Mac application including Azul's 64-bit OpenJDK Java VM 11 for ARM Macs.
 to download a zip archive for Linux that includes Azul's 64-bit OpenJDK Java VM 11
 (weka-3-9-5-azul-zulu-linux.zip; 137.2 MB)
 
-First unzip the the zip file. This will create a new directory called
+First unzip the zip file. This will create a new directory called
 weka-3-9-5. To run Weka, change into that directory and type
 
 ``` bash
