@@ -18,7 +18,7 @@ etiquette](https://www.cs.waikato.ac.nz/~ml/weka/mailinglist_etiquette.html).
 
 * Consider searching the [archive of the Weka mailing list
   (wekalist)](https://list.waikato.ac.nz/hyperkitty/list/wekalist@list.waikato.ac.nz/)
-  or its mirrors at [nabble.com](https://weka.8497.n7.nabble.com) or [marc.info](https://marc.info/?l=wekalist).
+  or its mirror [marc.info](https://marc.info/?l=wekalist).
 	  
 # Forums offering help
 
