@@ -6,3 +6,4 @@ Here are some pointers for using and developing packages:
 * [How do I use the package manager?](manager.md)
 * [Unofficial packages](unofficial.md)
 * [How are packages structured for the package management system?](structure.md)
+* [List of available packages](https://weka.sourceforge.io/packageMetaData/)
