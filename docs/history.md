@@ -1,5 +1,6 @@
 |Book 1st<br> ed. version<br> (3.0)|Old GUI<br> version<br> (3.2)|Stable/Book <br>2nd ed. version<br> (3.4)|Stable/Book<br> 3rd ed. version<br> (3.6)|Stable/Book<br> 4th ed. version<br> (3.8)|Development<br> version<br> (3.9)|
 |--- |--- |--- |--- |--- |--- |
+|||||[3.8.6](http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-8-6) [(pkgs)](http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG_PACKAGES-3-8-6)|[3.9.6](http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-9-6) [(pkgs)](http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG_PACKAGES-3-9-6)|
 |||||[3.8.5](http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-8-5) [(pkgs)](http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG_PACKAGES-3-8-5)|[3.9.5](http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-9-5) [(pkgs)](http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG_PACKAGES-3-9-5)|
 |||||[3.8.4](http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-8-4) [(pkgs)](http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG_PACKAGES-3-8-4)|[3.9.4](http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-9-4) [(pkgs)](http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG_PACKAGES-3-9-4)|
 |||||[3.8.3](http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-8-3) [(pkgs)](http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG_PACKAGES-3-8-3)|[3.9.3](http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG-3-9-3) [(pkgs)](http://www.cs.waikato.ac.nz/~ml/weka/CHANGELOG_PACKAGES-3-9-3)|
