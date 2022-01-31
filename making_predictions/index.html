@@ -205,6 +205,7 @@
 <ul>
 <li>Since Weka 3.5.4 you can also output the complete class distribution, not just the prediction, by using the parameter <code>-distribution</code> in conjunction with the -p option. In this case, "*" is placed beside the probability in the distribution that corresponds to the predicted class value.</li>
 <li>If you have an ID attribute in your dataset as first attribute (you can always add one with the <a href="https://weka.sourceforge.io/doc.stable-3-8/weka/filters/unsupervised/attribute/AddID.html">AddID</a> filter), you could output it with <code>-p 1</code> instead of using <code>-p 0</code>. This works only for explicit train/test sets, but you can use the Explorer for cross-validation.</li>
+<li>Using the <code>-classifications</code> option instead of <code>-p ...</code> you can also use different output formats, like <a href="https://weka.sourceforge.io/doc.stable-3-8/weka/classifiers/evaluation/output/prediction/CSV.html">CSV</a>: <code>-classifications "weka.classifiers.evaluation.output.prediction.CSV -p ..."</code> (the <code>-p</code> option takes the indices of the additional attributes to output).</li>
 </ul>
 <h4 id="filters">Filters</h4>
 <p>The <a href="https://weka.sourceforge.io/doc.stable-3-8/weka/filters/supervised/attribute/AddClassification.html">AddClassification</a> filter (package <code>weka.filters.supervised.attribute</code>) can either train a classifier on the input data and transform this or load a serialized model to transform the input data (even though the filter was introduced in 3.5.4, due to a bug in the commandline option handling, it is recommended to download a version &gt;3.5.5 or a snapshot from the Weka homepage).
@@ -236,7 +237,7 @@ This filter can add the classification, class distribution and the error per row
 <h3 id="gui">GUI</h3>
 <p>The Weka GUI allows you as well to output predictions based on a previously saved model.</p>
 <h4 id="explorer">Explorer</h4>
-<p>See the <a href="saving_and_loading_models#explorer.md">Explorer</a> section of the <a href="../saving_and_loading_models/">Saving and loading models</a> article to setup the Explorer. Additionally, you need to check the <em>Output predictions</em> options in the <em>More options</em> dialog. Righ-clicking on the respective results history item and selecting <em>Re-evaluate model on current test set</em> will output then the predictions as well (the statistics will be useless due to missing class values in the test set, so just ignore them). The output is similar to the one produced by the commandline.</p>
+<p>See the <a href="saving_and_loading_models#explorer.md">Explorer</a> section of the <a href="../saving_and_loading_models/">Saving and loading models</a> article to setup the Explorer. Additionally, you need to check the <em>Output predictions</em> options in the <em>More options</em> dialog. Right-clicking on the respective results history item and selecting <em>Re-evaluate model on current test set</em> will output then the predictions as well (the statistics will be useless due to missing class values in the test set, so just ignore them). The output is similar to the one produced by the commandline.</p>
 <p>Example output for the <em>anneal</em> UCI dataset:</p>
 <pre><code class="language-text"> == Predictions on test set ==
  inst#,    actual, predicted, error, probability distribution
