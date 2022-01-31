@@ -41,7 +41,7 @@ In this case, taken directly from a test dataset where all class attributes were
 * If you have an ID attribute in your dataset as first attribute (you can always add one with the [AddID](https://weka.sourceforge.io/doc.stable-3-8/weka/filters/unsupervised/attribute/AddID.html) filter), you could output it with `-p 1` instead of using `-p 0`. This works only for explicit train/test sets, but you can use the Explorer for cross-validation.
 
 ## Filters
-The `[AddClassification](https://weka.sourceforge.io/doc.stable-3-8/weka/filters/supervised/attribute/addclassification.html)` filter (package `weka.filters.supervised.attribute`) can either train a classifier on the input data and transform this or load a serialized model to transform the input data (even though the filter was introduced in 3.5.4, due to a bug in the commandline option handling, it is recommended to download a version >3.5.5 or a snapshot from the Weka homepage).
+The [AddClassification](https://weka.sourceforge.io/doc.stable-3-8/weka/filters/supervised/attribute/AddClassification.html) filter (package `weka.filters.supervised.attribute`) can either train a classifier on the input data and transform this or load a serialized model to transform the input data (even though the filter was introduced in 3.5.4, due to a bug in the commandline option handling, it is recommended to download a version >3.5.5 or a snapshot from the Weka homepage).
 This filter can add the classification, class distribution and the error per row as extra attributes to the dataset.
 
 * training the classifier, e.g., J48, on the input data and replacing the class values with the ones of the trained classifier:
