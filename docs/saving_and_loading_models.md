@@ -22,6 +22,8 @@ You can load the previously saved model with the following steps:
 
 * load your test data `/some/where/test.arff` via the *Supplied test set* button
 * right-click in the *Results list*, select *Load model* and choose `/other/place/j48.model`
+* in the *More options* dialog, change the *Output predictions* to *CSV* or another format (and specify a file in the 
+  options of the output format), if you want to store the predictions in a file rather than having to copy/paste them
 * select *Re-evaluate model on current test set*
 
 Based on [this](https://list.waikato.ac.nz/pipermail/wekalist/2006-August/007720.html) [Weka Mailing List](mailing_list.md) post.
