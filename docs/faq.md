@@ -43,6 +43,8 @@
 * [Can I run an experiment using clusterers in the Experimenter?](faqs/can_i_run_an_experiment_using_clusterers_in_the_experimenter.md)
 * [How can I use transactional data in Weka?](faqs/how_can_i_use_transactional_data_in_weka.md)
 * [How can I use Weka with Matlab or Octave?](faqs/how_can_i_use_weka_with_matlab_or_octave.md)
+* [How can I speed up Weka?](faqs/how_can_i_speed_up_weka.md)
+* [Can I use GPUs to speed up Weka?](faqs/can_i_use_gpus_to_speed_up_weka.md)
 
 
 # Customizing Weka
