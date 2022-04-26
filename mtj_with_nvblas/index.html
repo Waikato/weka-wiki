@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Mtj with nvblas - Weka Wiki</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Mtj with nvblas";
+    var mkdocs_page_input_path = "mtj_with_nvblas.md";
+    var mkdocs_page_url = "/Waikato/weka-wiki/mtj_with_nvblas/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Weka Wiki</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../downloading_weka/">Downloading and installing Weka</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../requirements/">Requirements</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../documentation/">Documentation</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../getting_help/">Getting help</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../citing_weka/">Citing Weka</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../literature/">Literature</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../development/">Development</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../history/">History</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Resources</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../faq/">FAQ</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../not_so_faq/">Not so FAQ</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../troubleshooting/">Troubleshooting</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../using_the_api/">Using the API</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../extending_weka/">Extending Weka</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../formats_and_processing/arff/">ARFF Format</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../primer/">Primer</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../datasets/">Datasets</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../visualization_articles/">Visualization Articles</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../properties_file/">Properties File</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../packages/">Packages</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../experimenter/experimenter/">Experimenter</a>
+                </li>
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Weka Wiki</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Mtj with nvblas</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <p>(The following is based on a <a href="https://list.waikato.ac.nz/hyperkitty/list/wekalist@list.waikato.ac.nz/message/TJIEPO2CYGBJE5NFYPIP26SL4WFMWEZC/">post</a> 
+from Eibe Frank on the Weka mailing list.)</p>
+<p>Here is an example of running MTJ with NVBLAS (NVIDIA's BLAS wrapper) on Ubuntu:</p>
+<ol>
+<li>
+<p>Installed</p>
+<p><a href="https://prdownloads.sourceforge.net/weka/weka-3-8-6-azul-zulu-linux.zip">https://prdownloads.sourceforge.net/weka/weka-3-8-6-azul-zulu-linux.zip</a></p>
+<p>in</p>
+<p><code>/home/eibe/Desktop</code></p>
+</li>
+<li>
+<p>Ran</p>
+<p><code>~/Desktop/weka-3-8-6/weka.sh -main weka.core.WekaPackageManager -install-package netlibNativeLinux</code></p>
+</li>
+<li>
+<p>To install CPU-based system BLAS/LAPACK, ran</p>
+<p><code>sudo apt-get install libblas-dev liblapack-dev
+sudo ln -s /usr/lib/x86_64-linux-gnu/libblas.so.3 /usr/lib/libblas.so.3
+sudo ln -s /usr/lib/x86_64-linux-gnu/liblapack.so.3 /usr/lib/liblapack.so.3</code></p>
+</li>
+<li>
+<p>Downloaded and installed CUDA 11.6 from <a href="https://developer.nvidia.com/cuda-downloads">https://developer.nvidia.com/cuda-downloads</a></p>
+</li>
+<li>
+<p>Copied example <code>nvblas.conf</code> from <a href="https://docs.nvidia.com/cuda/nvblas/">https://docs.nvidia.com/cuda/nvblas/</a> into local directory using</p>
+<p><code>cat &gt; nvblas.conf</code></p>
+</li>
+<li>
+<p>Edited <code>nvblas.conf</code> to have</p>
+<p><code>NVBLAS_CPU_BLAS_LIB  /usr/lib/x86_64-linux-gnu/blas/libblas.so.3</code></p>
+</li>
+<li>
+<p>Now, by adapting what's given at <a href="https://github.com/fommil/netlib-java/wiki/NVBLAS">https://github.com/fommil/netlib-java/wiki/NVBLAS</a>, issued</p>
+<p><code>export LD_LIBRARY_PATH=/usr/local/cuda-11.6/lib64:/usr/lib/x86_64-linux-gnu/blas/libblas.so.3</code></p>
+</li>
+<li>
+<p>Then,</p>
+<p><code>~/Desktop/weka-3-8-6/weka.sh -main weka.Run .RandomRBF -a 5000 &gt; RandomRBF.a5000.arff
+LD_PRELOAD=libnvblas.so ~/Desktop/weka-3-8-6/weka.sh -main weka.Run .attributeSelection.PrincipalComponents -i RandomRBF.a5000.arff</code></p>
+</li>
+<li>
+<p>Observation: Memory is being allocated on the GPU. Looking at <code>nvblas.log</code>, the GPU is used, but only for some <code>dgemm</code> operations. 
+   However, according to <a href="https://docs.nvidia.com/cuda/nvblas/">https://docs.nvidia.com/cuda/nvblas/</a>, the <code>tremm</code> operation 
+   (which is executed on the CPU) should also be supported by the GPU. </p>
+</li>
+</ol>
+              
+            </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>
