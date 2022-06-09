@@ -320,13 +320,13 @@ Attribute declarations take the form of an ordered sequence of <strong>@attribut
 <p>Sparse ARFF files are very similar to ARFF files, but data with value 0 are not be explicitly represented.</p>
 <p>Sparse ARFF files have the same header (i.e <strong>@relation</strong> and <strong>@attribute</strong> tags) but the data section is different. Instead of representing each value in order, like this:</p>
 <pre><code>    @data
-    0, X, 0, Y, &quot;class A&quot;
-    0, 0, W, 0, &quot;class B&quot;
+    0, X, 0, Y, 'class A'
+    0, 0, W, 0, 'class B'
 </code></pre>
 <p>the non-zero attributes are explicitly identified by attribute number and their value stated, like this:</p>
 <pre><code>    @data
-    {1 X, 3 Y, 4 &quot;class A&quot;}
-    {2 W, 4 &quot;class B&quot;}
+    {1 X, 3 Y, 4 'class A'}
+    {2 W, 4 'class B'}
 </code></pre>
 <p>Each instance is surrounded by curly braces, and the format for each entry is: [index] [space] [value] where index is the attribute index (starting from 0).</p>
 <p>Note that the omitted values in a sparse instance are <strong>0</strong>, they are not "missing" values! If a value is unknown, you must explicitly represent it with a question mark (?).</p>
@@ -334,11 +334,11 @@ Attribute declarations take the form of an ordered sequence of <strong>@attribut
 <h3 id="instance-weights-in-arff-files">Instance weights in ARFF files</h3>
 <p>A weight can be associated with an instance in a standard ARFF file by appending it to the end of the line for that instance and enclosing the value in curly braces. E.g:</p>
 <pre><code>    @data
-    0, X, 0, Y, &quot;class A&quot;, {5}
+    0, X, 0, Y, 'class A', {5}
 </code></pre>
 <p>For a sparse instance, this example would look like:</p>
 <pre><code>    @data
-    {1 X, 3 Y, 4 &quot;class A&quot;}, {5}
+    {1 X, 3 Y, 4 'class A'}, {5}
 </code></pre>
 <p>Note that any instance without a weight value specified is assumed to have a weight of 1 for backwards compatibility.</p>
 <h3 id="see-also">See also</h3>
