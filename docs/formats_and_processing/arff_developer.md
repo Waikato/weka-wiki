@@ -198,16 +198,16 @@ Sparse ARFF files have the same header (i.e **@relation** and **@attribute** tag
 
 ```
     @data
-    0, X, 0, Y, "class A"
-    0, 0, W, 0, "class B"
+    0, X, 0, Y, 'class A'
+    0, 0, W, 0, 'class B'
 ```
 
 the non-zero attributes are explicitly identified by attribute number and their value stated, like this:
 
 ```
     @data
-    {1 X, 3 Y, 4 "class A"}
-    {2 W, 4 "class B"}
+    {1 X, 3 Y, 4 'class A'}
+    {2 W, 4 'class B'}
 ```
 
 Each instance is surrounded by curly braces, and the format for each entry is: [index] [space] [value] where index is the attribute index (starting from 0).
@@ -221,14 +221,14 @@ A weight can be associated with an instance in a standard ARFF file by appending
 
 ```
     @data
-    0, X, 0, Y, "class A", {5}
+    0, X, 0, Y, 'class A', {5}
 ```
 
 For a sparse instance, this example would look like:
 
 ```
     @data
-    {1 X, 3 Y, 4 "class A"}, {5}
+    {1 X, 3 Y, 4 'class A'}, {5}
 ```
 
 Note that any instance without a weight value specified is assumed to have a weight of 1 for backwards compatibility.
