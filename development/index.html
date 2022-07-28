@@ -1,193 +1,132 @@
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  
-  <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Development - Weka Wiki</title>
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
-
-  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
-  
-  <script>
-    // Current page data
-    var mkdocs_page_name = "Development";
-    var mkdocs_page_input_path = "development.md";
-    var mkdocs_page_url = "/Waikato/weka-wiki/development/";
-  </script>
-  
-  <script src="../js/jquery-2.1.1.min.js" defer></script>
-  <script src="../js/modernizr-2.8.3.min.js" defer></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script> 
-  
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://github.com/Waikato/weka-wiki/development/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Development - Weka Wiki</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Development";
+        var mkdocs_page_input_path = "development.md";
+        var mkdocs_page_url = "/Waikato/weka-wiki/development/";
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
 </head>
 
 <body class="wy-body-for-nav" role="document">
 
   <div class="wy-grid-for-nav">
-
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-        <a href=".." class="icon icon-home"> Weka Wiki</a>
-        <div role="search">
+          <a href=".." class="icon icon-home"> Weka Wiki
+        </a><div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
   </form>
 </div>
       </div>
 
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-	<ul class="current">
-	  
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="..">Home</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../downloading_weka/">Downloading and installing Weka</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../requirements/">Requirements</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../documentation/">Documentation</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../getting_help/">Getting help</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../citing_weka/">Citing Weka</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../literature/">Literature</a>
-	    </li>
-          
-            <li class="toctree-l1 current">
-		
-    <a class="current" href="./">Development</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l2"><a href="#source-code-repository">Source code repository</a></li>
-    
-
-    <li class="toctree-l2"><a href="#code-credits">Code credits</a></li>
-    
-
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../downloading_weka/">Downloading and installing Weka</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../requirements/">Requirements</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../documentation/">Documentation</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../getting_help/">Getting help</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../citing_weka/">Citing Weka</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../literature/">Literature</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">Development</a>
+    <ul class="current">
     </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../history/">History</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <span class="caption-text">Resources</span>
-    <ul class="subnav">
-                <li class="">
-                    
-    <a class="" href="../faq/">FAQ</a>
                 </li>
-                <li class="">
-                    
-    <a class="" href="../not_so_faq/">Not so FAQ</a>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../history/">History</a>
                 </li>
-                <li class="">
-                    
-    <a class="" href="../troubleshooting/">Troubleshooting</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../using_the_api/">Using the API</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../extending_weka/">Extending Weka</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../formats_and_processing/arff/">ARFF Format</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../primer/">Primer</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../datasets/">Datasets</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../visualization_articles/">Visualization Articles</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../properties_file/">Properties File</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../packages/">Packages</a>
-                </li>
-                <li class="">
-                    
-    <a class="" href="../experimenter/experimenter/">Experimenter</a>
-                </li>
-    </ul>
-	    </li>
-          
-        </ul>
+              </ul>
+              <p class="caption"><span class="caption-text">Resources</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../faq/">FAQ</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../not_so_faq/">Not so FAQ</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../troubleshooting/">Troubleshooting</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../using_the_api/">Using the API</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../extending_weka/">Extending Weka</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../formats_and_processing/arff/">ARFF Format</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../primer/">Primer</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../datasets/">Datasets</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../visualization_articles/">Visualization Articles</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../properties_file/">Properties File</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../packages/">Packages</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../experimenter/experimenter/">Experimenter</a>
+                  </li>
+              </ul>
       </div>
-      &nbsp;
+    </div>
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="..">Weka Wiki</a>
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Weka Wiki</a>
+        
       </nav>
-
-      
       <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="breadcrumbs navigation">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
-    <li><a href="..">Docs</a> &raquo;</li>
-    
-      
-    
-    <li>Development</li>
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+      <li>Development</li>
     <li class="wy-breadcrumbs-aside">
-      
     </li>
   </ul>
   <hr/>
 </div>
-          <div role="main">
-            <div class="section">
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
               
                 <p>We are following the Linux model of releases, where an even second
 digit of a release number indicates a "stable" release and an odd
@@ -202,16 +141,8 @@ applications, it is best to use a stable release of Weka.</p>
 <p>Weka's source code for a particular release is included in the
 distribution when you download it, in a .jar file (a form of .zip
 file) called <code>weka-src.jar</code>. However, it is also possible to read source
-code directly from the <a href="../subversion/">Subversion source code
-repository</a> for Weka, and there is also <a href="https://svn.cms.waikato.ac.nz/svn/weka/">web-based
-access to the repository</a>. </p>
-<p>If you like to use Git rather than Subversion for software
-development, there is a <a href="https://github.com/Waikato/weka-3.8">Git mirror of the Subversion repository's
-branch for Weka 3.8</a> and a
-corresponding one for <a href="https://github.com/Waikato/weka-trunk">the main development trunk of
-Weka</a>. Note that these mirrors
-are read-only, and we continue to use Subversion to commit changes to
-the software, not Git.</p>
+code directly from the <a href="../git/">git source code
+repository</a> for Weka.</p>
 <h3 id="code-credits">Code credits</h3>
 <p>The Weka developers would like to thank <a href="http://www.mathworks.com/">The
 MathWorks</a> and the <a href="http://www.nist.gov/">National Institute of
@@ -250,29 +181,21 @@ packages, please consult the Javadoc for the relevant package and the
 corresponding package lib folder.</p>
               
             </div>
-          </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../literature/" class="btn btn-neutral float-left" title="Literature"><span class="icon icon-circle-arrow-left"></span> Previous</a>
         <a href="../history/" class="btn btn-neutral float-right" title="History">Next <span class="icon icon-circle-arrow-right"></span></a>
-      
-      
-        <a href="../literature/" class="btn btn-neutral" title="Literature"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-      
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <!-- Copyright etc -->
-    
   </div>
 
-  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
-      
+          
         </div>
       </div>
 
@@ -280,20 +203,26 @@ corresponding package lib folder.</p>
 
   </div>
 
-  <div class="rst-versions" role="note" style="cursor: pointer">
-    <span class="rst-current-version" data-toggle="rst-current-version">
-      
-      
-        <span><a href="../literature/" style="color: #fcfcfc;">&laquo; Previous</a></span>
-      
-      
-        <span style="margin-left: 15px"><a href="../history/" style="color: #fcfcfc">Next &raquo;</a></span>
-      
-    </span>
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../literature/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../history/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
 </div>
     <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
     <script src="../js/theme.js" defer></script>
       <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
 
 </body>
 </html>
