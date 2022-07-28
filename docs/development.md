@@ -13,17 +13,8 @@ applications, it is best to use a stable release of Weka.
 Weka's source code for a particular release is included in the
 distribution when you download it, in a .jar file (a form of .zip
 file) called `weka-src.jar`. However, it is also possible to read source
-code directly from the [Subversion source code
-repository](subversion.md) for Weka, and there is also [web-based
-access to the repository](https://svn.cms.waikato.ac.nz/svn/weka/). 
-
-If you like to use Git rather than Subversion for software
-development, there is a [Git mirror of the Subversion repository's
-branch for Weka 3.8](https://github.com/Waikato/weka-3.8) and a
-corresponding one for [the main development trunk of
-Weka](https://github.com/Waikato/weka-trunk). Note that these mirrors
-are read-only, and we continue to use Subversion to commit changes to
-the software, not Git.
+code directly from the [git source code
+repository](git.md) for Weka.
 
 # Code credits
 
