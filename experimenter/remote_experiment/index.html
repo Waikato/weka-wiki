@@ -303,14 +303,14 @@ See also <a href="https://list.waikato.ac.nz/pipermail/wekalist/2009-March/01631
 </blockquote>
 <ul>
 <li>If you serialized an experiment and then modify your <code>DatabaseUtils.props</code> file due to an error (e.g., a missing type-mapping), the Experimenter will use the <code>DatabaseUtils.props</code> you had at the time you serialized the experiment. Keep in mind that the serialization process also serializes the DatabaseUtils class and therefore stored your props-file! This is another reason for storing your experiments as XML and not in the properietary binary format the Java serialization produces.</li>
-<li>Using a corrupt or incomplete <code>DatabaseUtils.props</code> file can cause peculiar interface errors, for example disabling the use of the <em>User</em> button alongside the database URL. If in doubt copy a clean <code>DatabaseUtils.props</code> from <a href="../../subversion/">Subversion</a>.</li>
+<li>Using a corrupt or incomplete <code>DatabaseUtils.props</code> file can cause peculiar interface errors, for example disabling the use of the <em>User</em> button alongside the database URL. If in doubt copy a clean <code>DatabaseUtils.props</code> from <a href="../../git/">git</a>.</li>
 <li>If you get <code>NullPointerException at java.util.Hashtable.get()</code> in the Remote Engine do not be alarmed. This will have no effect on the results of your experiment.</li>
 </ul>
 <h3 id="links">Links</h3>
 <ul>
 <li><a href="../../databases/">Databases</a></li>
 <li><a href="../../weka_experiment_database_utils.props/">weka/experiment/DatabaseUtils.props</a></li>
-<li><a href="../../subversion/">Subversion</a></li>
+<li><a href="../../git/">git</a></li>
 <li><a href="http://hsqldb.sourceforge.net/">HSQLDB</a></li>
 <li><a href="http://www.mysql.com/">MySQL</a></li>
 </ul>

@@ -489,7 +489,7 @@
 <li><code>globalInfo()</code> - returns a short description of what the filter does; will be displayed in the GUI</li>
 <li><code>determineOutputFormat(Instances)</code> - generates the new format, based on the input data</li>
 <li><code>process(Instances)</code> - processes the whole dataset in one go</li>
-<li><code>getRevision()</code> - returns the <a href="../subversion/">Subversion</a> revision information</li>
+<li><code>getRevision()</code> - returns the revision information</li>
 </ul>
 <p>If you need access to the full input dataset in <code>determineOutputFormat(Instances)</code>, then you need to also override the method <code>allowAccessToFullInputFormat()</code> and make it return true. </p>
 <p>If more options are necessary, then the following methods need to be overridden:</p>
@@ -548,7 +548,7 @@
 <li><code>globalInfo()</code> - returns a short description of what the filter does; will be displayed in the GUI</li>
 <li><code>determineOutputFormat(Instances)</code> - generates the new format, based on the input data</li>
 <li><code>process(Instance)</code>processes a single instance and turns it from the old format into the new one</li>
-<li><code>getRevision()</code> - returns the <a href="../subversion/">Subversion</a> revision information</li>
+<li><code>getRevision()</code> - returns the revision information</li>
 </ul>
 <p>The <code>reset()</code> method is only used, since the random number generator needs to be re-initialized in order to obtain repeatable results.</p>
 <p>If more options are necessary, then the following methods need to be overridden:</p>
@@ -615,7 +615,7 @@
 <li><code>isFirstBatchDone()</code> - returns <code>true</code> as soon as the first batch was finished via the <code>batchFinished()</code> method. Useful for <em>supervised</em> filters, which should not be altered after being trained with the first batch of instances.</li>
 </ul>
 <h3 id="revisions">Revisions</h3>
-<p>Filters also implement the <code>weka.core.RevisionHandler</code> interface. This provides the functionality of obtaining the <a href="../subversion/">Subversion</a> revision from within Java. Filters that are not part of the official Weka distribution will have to implement the method <code>getRevision()</code> as follows, which will return a dummy revision of <em>1.0</em>:</p>
+<p>Filters also implement the <code>weka.core.RevisionHandler</code> interface. Filters that are not part of the official Weka distribution will have to implement the method <code>getRevision()</code> as follows, which will return a dummy revision of <em>1.0</em>:</p>
 <pre><code class="language-java">  /**
    * Returns the revision string.
    * 
@@ -654,7 +654,6 @@
 <p>It needs to return <em>Tests OK!</em>.</p>
 <h4 id="unit-tests">Unit tests</h4>
 <p>In order to make sure that your filter applies to the Weka criteria, you should add your filter to the <a href="http://www.junit.org/">junit</a> unit test framework, i.e., by creating a Test class.</p>
-<p>How to check out the unit test framework, you can find <a href="../subversion/#junit">here</a>.</p>
 <h3 id="see-also">See also</h3>
 <ul>
 <li><a href="../generic_object_editor/">GenericObjectEditor</a> </li>
