@@ -21,9 +21,9 @@ The wiki is based on [Markdown](https://daringfireball.net/projects/markdown/) a
 Please post the bug report to the [Weka mailing list](mailing_list.md). The
 following information will help tracking things down:
 
-* version of Weka (e.g., 3.9.2)
-* operating system (e.g., Windows 10 or Ubuntu 16.04 64bit)
-* Java version (e.g., 1.8.0_162 64bit)
+* version of Weka (e.g., 3.9.6)
+* operating system (e.g., Windows 11 or Ubuntu 20.04 64bit)
+* Java version (e.g., 11.0.11+9)
 
 You can also run the following command in the SimpleCLI and attach the generated output as a text file to your post:
 
