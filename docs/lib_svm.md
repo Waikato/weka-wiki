@@ -14,7 +14,7 @@ From WEKA >= 3.7.2 installation and use of LibSVM in WEKA has been simplified by
 `weka.classifiers.functions`
 
 # Download 
-The wrapper class is part of WEKA since version 3.5.2. But *LibSVM*, as a third-party-tool needs to be downloaded separately. It is recommended to upgrade to a post-3.5.3 version (or [Subversion](subversion.md)) for bug-fixes and extensions (contains now the `distributionForInstance` method).
+The wrapper class is part of WEKA since version 3.5.2. But *LibSVM*, as a third-party-tool needs to be downloaded separately. It is recommended to upgrade to a post-3.5.3 version (or [git](git.md)) for bug-fixes and extensions (contains now the `distributionForInstance` method).
 
 # CLASSPATH 
 Add the `libsvm.jar` from the LibSVM distribution to your [CLASSPATH](classpath.md) to make it available.

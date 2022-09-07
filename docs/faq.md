@@ -63,7 +63,7 @@
 
 * [Where can I get WEKA's source code?](faqs/where_can_i_get_wekas_source_code.md)
 * [How do I compile WEKA?](faqs/how_do_i_compile_weka.md)
-* [What is Subversion and what do I need to do to access it?](faqs/what_is_subversion_and_what_do_i_need_to_do_to_access_it.md)
+* [What is Git and what do I need to do to access it?](faqs/what_is_git_and_what_do_i_need_to_do_to_access_it.md)
 * [How do I use WEKA's classes in my own code?](faqs/how_do_i_use_wekas_classes_in_my_own_code.md)
 * [How do I write a new classifier or filter?](faqs/how_do_i_write_a_new_classifier_or_filter.md)
 * [Can I compile WEKA into native code?](faqs/can_i_compile_weka_into_native_code.md)

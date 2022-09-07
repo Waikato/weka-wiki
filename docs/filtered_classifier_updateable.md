@@ -19,4 +19,4 @@ weka.classifiers.meta
 -none-
 
 # Version
-Tested with source code from [Subversion](subversion.md) (= `trunk/weka`) as of 10/11/2008.
+Tested with source code from [git](git.md) (= `trunk/weka`) as of 10/11/2008.

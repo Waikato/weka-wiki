@@ -20,7 +20,7 @@ What is ANT? This is how the ANT [homepage](http://ant.apache.org/) defines its 
 
 # Weka and ANT
 
-* a build file for Weka is available from [subversion](subversion.md) (it has been included in the `weka-src.jar` since version 3.4.8 and 3.5.3)
+* a build file for Weka is available from [git](git.md) (it has been included in the `weka-src.jar` since version 3.4.8 and 3.5.3)
 * it is located in the `weka` directory
 * some targets of interest
 

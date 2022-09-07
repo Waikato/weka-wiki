@@ -394,7 +394,7 @@ Only the following abstract methods need to be implemented:
 * `globalInfo()` - returns a short description of what the filter does; will be displayed in the GUI
 * `determineOutputFormat(Instances)` - generates the new format, based on the input data
 * `process(Instances)` - processes the whole dataset in one go
-* `getRevision()` - returns the [Subversion](subversion.md) revision information
+* `getRevision()` - returns the revision information
 
 If you need access to the full input dataset in `determineOutputFormat(Instances)`, then you need to also override the method `allowAccessToFullInputFormat()` and make it return true. 
 
@@ -457,7 +457,7 @@ Only the following abstract methods need to be implemented:
 * `globalInfo()` - returns a short description of what the filter does; will be displayed in the GUI
 * `determineOutputFormat(Instances)` - generates the new format, based on the input data
 * `process(Instance)`processes a single instance and turns it from the old format into the new one
-* `getRevision()` - returns the [Subversion](subversion.md) revision information
+* `getRevision()` - returns the revision information
 
 The `reset()` method is only used, since the random number generator needs to be re-initialized in order to obtain repeatable results.
 
@@ -529,7 +529,7 @@ Some useful methods of the filter classes:
 * `isFirstBatchDone()` - returns `true` as soon as the first batch was finished via the `batchFinished()` method. Useful for *supervised* filters, which should not be altered after being trained with the first batch of instances.
 
 # Revisions
-Filters also implement the `weka.core.RevisionHandler` interface. This provides the functionality of obtaining the [Subversion](subversion.md) revision from within Java. Filters that are not part of the official Weka distribution will have to implement the method `getRevision()` as follows, which will return a dummy revision of *1.0*:
+Filters also implement the `weka.core.RevisionHandler` interface. Filters that are not part of the official Weka distribution will have to implement the method `getRevision()` as follows, which will return a dummy revision of *1.0*:
 
 ```java
   /**
@@ -590,8 +590,6 @@ It needs to return *Tests OK!*.
 
 ## Unit tests
 In order to make sure that your filter applies to the Weka criteria, you should add your filter to the [junit](http://www.junit.org/) unit test framework, i.e., by creating a Test class.
-
-How to check out the unit test framework, you can find [here](subversion.md#junit).
 
 
 # See also

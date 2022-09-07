@@ -1,6 +1,6 @@
 
 
-The following examples show how to add weights to normal datasets and save them in the new XRFF data format. A version of Weka later than 3.5.3 (or the code from [Subversion](subversion.md)) is necessary for this code to work.
+The following examples show how to add weights to normal datasets and save them in the new XRFF data format. A version of Weka later than 3.5.3 (or the code from [Git](git.md)) is necessary for this code to work.
 
 # Add arbitrary weights
 ```java
@@ -142,5 +142,5 @@ The following examples show how to add weights to normal datasets and save them 
 * [AddWeightsFromAtt.java](files/AddWeightsFromAtt.java)
 
 # See also
-* [Subversion](subversion.md)
+* [git](git.md)
 * The unofficial Weka package [dataset-weights](https://github.com/fracpete/dataset-weights-weka-package) allows you to modify attribute/instance weights using filters - no coding required

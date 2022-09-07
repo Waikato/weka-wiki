@@ -185,7 +185,7 @@ After finishing the coding stage, it's time to integrate your classifier in the 
 The [GenericObjectEditor](generic_object_editor.md) article shows you how to tell Weka where to find your classifier and therefore displaying it in the *GenericObjectEditor*.
 
 # Revisions
-Classifiers also implement the `weka.core.RevisionHandler` interface. This provides the functionality of obtaining the [Subversion](subversion.md) revision from within Java. Classifiers that are not part of the official Weka distribution will have to implement the method `getRevision()` as follows, which will return a dummy revision of *1.0*:
+Classifiers also implement the `weka.core.RevisionHandler` interface. Classifiers that are not part of the official Weka distribution will have to implement the method `getRevision()` as follows, which will return a dummy revision of *1.0*:
 
 ```java
   /**
@@ -257,8 +257,6 @@ It needs to return *Tests OK!*.
 
 ## Unit tests
 In order to make sure that your classifier applies to the Weka criteria, you should add your classifier to the [junit](http://www.junit.org/) unit test framework, i.e., by creating a Test class derived from `AbstractClassifierTest`. This class uses the `CheckClassifier`, `CheckOptionHandler` and `CheckGOE` class to run a battery of tests.
-
-How to check out the unit test framework, you can find [here](subversion.md#junit).
 
 # See also
 * [GenericObjectEditor](generic_object_editor.md)

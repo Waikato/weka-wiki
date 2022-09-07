@@ -131,7 +131,7 @@ Documentation in Python is done with the so-called *doc strings* within the clas
      'version' -- $Revision$
      """
 ```
-> **Note:** the `$Revision$` tag is filled in by a source control system like CVS or [Subversion](subversion.md).
+> **Note:** the `$Revision$` tag is filled in by a source control system like CVS or Subversion.
 
 * Method doc string:
 

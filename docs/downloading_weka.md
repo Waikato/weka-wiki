@@ -16,10 +16,10 @@ download and install packages.
 
 # Snapshots
               
-Every night, a snapshot of the Subversion repository with the Weka
+Every night, a snapshot of the [Git](git.md) repository with the Weka
 source code is taken, compiled, and put together in ZIP files. This
 happens for both the development branch of the software and the stable
-branch.  Those who want the latest bug fixes before the next official
+branch. Those who want the latest bug fixes before the next official
 release is made can download these
 [snapshots](https://www.cs.waikato.ac.nz/~ml/weka/snapshots/weka_snapshots.html).
 
