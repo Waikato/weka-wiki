@@ -7,7 +7,10 @@ theme:
 markdown_extensions:
     - toc:
         baselevel: 3
-# if page names start with a blank, eg ' Some name', then they get 
+        permalink: "#"
+plugins:
+    - search
+# if page names start with a blank, eg ' Some name', then they get
 # excluded from the navigation on the left-hand side
 nav:
   - 'Home': index.md
