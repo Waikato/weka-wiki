@@ -129,7 +129,7 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h3 id="general">General</h3>
+                <h3 id="general">General<a class="headerlink" href="#general" title="Permanent link">#</a></h3>
 <p>A properties file is a simple text file with this structure:</p>
 <blockquote>
 <p><code>&lt;key&gt;=&lt;value&gt;</code></p>
@@ -146,7 +146,7 @@
 &gt; weka.filters.unsupervised.attribute, \
 &gt; weka.filters.unsupervised.instance
 </code></pre>
-<h3 id="precedence">Precedence</h3>
+<h3 id="precedence">Precedence<a class="headerlink" href="#precedence" title="Permanent link">#</a></h3>
 <p>The Weka property files (extension <em>.props</em>) are searched for in the following order:</p>
 <ul>
 <li>current directory</li>
@@ -156,7 +156,7 @@
 </ul>
 <p>If WEKA encounters those files it only supplements the properties, never overrides them. In other words, a property in the property file of the current directory has a higher precedence than the one in the user's home directory.</p>
 <p><strong>Note:</strong> Under <a href="http://cygwin.com/">Cywgin</a>, the home directory is still the Windows one, since the java installation will be still one for Windows.</p>
-<h3 id="how-to-modify-a-props-file">How to modify a .props file?</h3>
+<h3 id="how-to-modify-a-props-file">How to modify a .props file?<a class="headerlink" href="#how-to-modify-a-props-file" title="Permanent link">#</a></h3>
 <p>It is quite possible, that the default setup of WEKA is not to your liking and that you want to tweak it a little bit. The use of <code>.props</code> files instead of hard-coding makes it quite easy to modify WEKA's behavior. As example, we are modifying the background color of the 2D plots in the Explorer, changing it to <em>dark gray</em>. The responsible <code>.props</code> file is <a href="../weka_gui_visualize_visualize.props/">weka/gui/visualize/Visualize.props</a>.
 These are the necessary steps:</p>
 <ul>
@@ -167,7 +167,7 @@ These are the necessary steps:</p>
 <li>navigate to the property <code>weka.gui.visualize.Plot2D.backgroundColour</code> and change the color after the equal sign ("=") to <code>darkGray</code> (the article about <a href="../weka_gui_visualize_visualize.props/">weka/gui/visualize/Visualize.props</a> lists all possible colors)</li>
 <li>save the file and restart WEKA</li>
 </ul>
-<h3 id="notes">Notes</h3>
+<h3 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">#</a></h3>
 <ul>
 <li><strong>Escaping</strong><blockquote>
 <p>Backslashes in values need to be escaped (i.e., doubled), otherwise they get interpreted as character sequence.
@@ -175,7 +175,7 @@ E.g., "is\this" will be interpreted as "is<TAB>his". Correctly escaped, this wou
 </blockquote>
 </li>
 </ul>
-<h3 id="see-also">See also</h3>
+<h3 id="see-also">See also<a class="headerlink" href="#see-also" title="Permanent link">#</a></h3>
 <p>Further information about specific props files:</p>
 <ul>
 <li><a href="../weka_core_capabilities.props/">weka/core/Capabilities.props</a></li>

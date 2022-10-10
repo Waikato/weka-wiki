@@ -127,7 +127,7 @@
             <div class="section" itemprop="articleBody">
               
                 <p>An ARFF (Attribute-Relation File Format) file is an ASCII text file that describes a list of instances sharing a set of attributes. </p>
-<h3 id="overview">Overview</h3>
+<h3 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">#</a></h3>
 <p>ARFF files have two distinct sections. The first section is the <strong>Header</strong> information, which is followed the <strong>Data</strong> information.</p>
 <p>The <strong>Header</strong> of the ARFF file contains the name of the relation, a list of the attributes (the columns in the data), and their types. An example header on the standard IRIS dataset looks like this:</p>
 <pre><code>   % 1. Title: Iris Plants Database
@@ -159,11 +159,11 @@
    4.9,3.1,1.5,0.1,Iris-setosa
 </code></pre>
 <p>Lines that begin with a <code>%</code> are comments. The <strong>@RELATION</strong>, <strong>@ATTRIBUTE</strong> and <strong>@DATA</strong> declarations are case insensitive.</p>
-<h3 id="examples">Examples</h3>
+<h3 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">#</a></h3>
 <p>Several well-known machine learning datasets are distributed with Weka in the <code>$WEKAHOME/data</code> directory as ARFF files.</p>
-<h4 id="the-arff-header-section">The ARFF Header Section</h4>
+<h4 id="the-arff-header-section">The ARFF Header Section<a class="headerlink" href="#the-arff-header-section" title="Permanent link">#</a></h4>
 <p>The ARFF Header section of the file contains the relation declaration and attribute declarations.</p>
-<h4 id="the-relation-declaration">The @relation Declaration</h4>
+<h4 id="the-relation-declaration">The @relation Declaration<a class="headerlink" href="#the-relation-declaration" title="Permanent link">#</a></h4>
 <p>The relation name is defined as the first line in the ARFF file. The format is:</p>
 <pre><code>    @relation [relation-name]
 </code></pre>
@@ -173,7 +173,7 @@
 <li>'{', '}', ',', or '%' </li>
 </ul>
 <p>Moreover, it can only begin with a single or double quote if there is a corresponding quote at the end of the name.</p>
-<h4 id="the-attribute-declarations">The @attribute Declarations</h4>
+<h4 id="the-attribute-declarations">The @attribute Declarations<a class="headerlink" href="#the-attribute-declarations" title="Permanent link">#</a></h4>
 <p>Attribute declarations take the form of an ordered sequence of <strong>@attribute</strong> statements. Each attribute in the data set has its own <strong>@attribute</strong> statement which uniquely defines the name of that attribute and its data type. The order the attributes are declared indicates the column position in the data section of the file. For example, if an attribute is the third one declared then Weka expects that all that attributes values will be found in the third comma delimited column.</p>
 <p>The format for the <strong>@attribute</strong> statement is:</p>
 <pre><code>    @attribute [attribute-name] [datatype]
@@ -190,25 +190,25 @@
 <li><em>relational</em> for multi-instance data (for future use)</li>
 </ul>
 <p>where <em>[nominal-specification]</em> and <em>[date-format]</em> are defined below. The keywords <strong>numeric</strong>, <strong>real</strong>, <strong>integer</strong>, <strong>string</strong> and <strong>date</strong> are case insensitive.</p>
-<h5 id="numeric-attributes">Numeric attributes</h5>
+<h5 id="numeric-attributes">Numeric attributes<a class="headerlink" href="#numeric-attributes" title="Permanent link">#</a></h5>
 <p>Numeric attributes can be real or integer numbers.</p>
-<h5 id="nominal-attributes">Nominal attributes</h5>
+<h5 id="nominal-attributes">Nominal attributes<a class="headerlink" href="#nominal-attributes" title="Permanent link">#</a></h5>
 <p>Nominal values are defined by providing an [nominal-specification] listing the possible values: {[nominal-name1], [nominal-name2], [nominal-name3], ...}</p>
 <p>For example, the class value of the Iris dataset can be defined as follows:</p>
 <pre><code>    @ATTRIBUTE class        {Iris-setosa,Iris-versicolor,Iris-virginica}
 </code></pre>
 <p>Values that contain spaces must be quoted.</p>
-<h5 id="string-attributes">String attributes</h5>
+<h5 id="string-attributes">String attributes<a class="headerlink" href="#string-attributes" title="Permanent link">#</a></h5>
 <p>String attributes allow us to create attributes containing arbitrary textual values. This is very useful in text-mining applications, as we can create datasets with string attributes, then write Weka Filters to manipulate strings (like <code>StringToWordVectorFilter</code>). String attributes are declared as follows:</p>
 <pre><code>    @ATTRIBUTE LCC    string
 </code></pre>
-<h5 id="date-attributes">Date attributes</h5>
+<h5 id="date-attributes">Date attributes<a class="headerlink" href="#date-attributes" title="Permanent link">#</a></h5>
 <p>Date attribute declarations take the form:</p>
 <pre><code>    @attribute [name] date [[date-format]]
 </code></pre>
 <p>where [name] is the name for the attribute and <em>[date-format]</em> is an optional string specifying how date values should be parsed and printed (this is the same format used by <code>SimpleDateFormat</code>). The default format string accepts the ISO-8601 combined date and time format: <code>yyyy-MM-dd'T'HH:mm:ss</code>. Check out the Javadoc of the <a href="https://docs.oracle.com/javase/8/docs/api/java/text/SimpleDateFormat.html">java.text.SimpleDateFormat</a> class for supported character patterns.</p>
 <p>Dates must be specified in the data section as the corresponding string representations of the date/time (see example below).</p>
-<h5 id="relational-attributes">Relational attributes</h5>
+<h5 id="relational-attributes">Relational attributes<a class="headerlink" href="#relational-attributes" title="Permanent link">#</a></h5>
 <p>Relational attribute declarations take the form:</p>
 <pre><code>    @attribute [name] relational
       [further attribute definitions]
@@ -224,13 +224,13 @@
  @attribute class {0,1}
  ...
 </code></pre>
-<h4 id="the-arff-data-section">The ARFF Data Section</h4>
+<h4 id="the-arff-data-section">The ARFF Data Section<a class="headerlink" href="#the-arff-data-section" title="Permanent link">#</a></h4>
 <p>The ARFF Data section of the file contains the data declaration line and the actual instance lines.</p>
-<h4 id="the-data-declaration">The @data Declaration</h4>
+<h4 id="the-data-declaration">The @data Declaration<a class="headerlink" href="#the-data-declaration" title="Permanent link">#</a></h4>
 <p>The <strong>@data</strong> declaration is a single line denoting the start of the data segment in the file. The format is:</p>
 <pre><code>    @data
 </code></pre>
-<h4 id="the-instance-data">The instance data</h4>
+<h4 id="the-instance-data">The instance data<a class="headerlink" href="#the-instance-data" title="Permanent link">#</a></h4>
 <p>Each instance is represented on a single line, with carriage returns denoting the end of the instance.  A percent sign (%) introduces a comment, which continues to the end of the line.</p>
 <p>Attribute values for each instance can be delimited by commas or tabs. A comma/tab may be followed by zero or more spaces. Attribute values must appear in the order in which they were declared in the header section (i.e., the data corresponding to the nth <strong>@attribute</strong> declaration is always the nth field of the attribute).</p>
 <p>A missing value is represented by a single question mark, as in:</p>
@@ -262,7 +262,7 @@
 <p>Relational data must be enclosed within double quotes <em>"</em>. For example an instance of the <em>MUSK1</em> dataset (<em>"..."</em> denotes an omission):</p>
 <pre><code> MUSK-188,&quot;42,...,30&quot;,1
 </code></pre>
-<h3 id="sparse-arff-files">Sparse ARFF files</h3>
+<h3 id="sparse-arff-files">Sparse ARFF files<a class="headerlink" href="#sparse-arff-files" title="Permanent link">#</a></h3>
 <p>Sparse ARFF files are very similar to ARFF files, but data with value 0 are not be explicitly represented.</p>
 <p>Sparse ARFF files have the same header (i.e <strong>@relation</strong> and <strong>@attribute</strong> tags) but the data section is different. Instead of representing each value in order, like this:</p>
 <pre><code>    @data
@@ -277,7 +277,7 @@
 <p>Each instance is surrounded by curly braces, and the format for each entry is: [index] [space] [value] where index is the attribute index (starting from 0).</p>
 <p>Note that the omitted values in a sparse instance are <strong>0</strong>, they are not "missing" values! If a value is unknown, you must explicitly represent it with a question mark (?).</p>
 <p><strong>Warning:</strong> There is a known problem saving SparseInstance objects from datasets that have string attributes. In Weka, string and nominal data values are stored as numbers; these numbers act as indexes into an array of possible attribute values (this is very efficient). However, the first string value is assigned index 0: this means that, internally, this value is stored as a 0. When a SparseInstance is written, string instances with internal value 0 are not output, so their string value is lost (and when the arff file is read again, the default value 0 is the index of a different string value, so the attribute value appears to change). To get around this problem, add a dummy string value at index 0 that is never used whenever you declare string attributes that are likely to be used in SparseInstance objects and saved as Sparse ARFF files.</p>
-<h3 id="instance-weights-in-arff-files">Instance weights in ARFF files</h3>
+<h3 id="instance-weights-in-arff-files">Instance weights in ARFF files<a class="headerlink" href="#instance-weights-in-arff-files" title="Permanent link">#</a></h3>
 <p>A weight can be associated with an instance in a standard ARFF file by appending it to the end of the line for that instance and enclosing the value in curly braces. E.g:</p>
 <pre><code>    @data
     0, X, 0, Y, 'class A', {5}
@@ -287,12 +287,12 @@
     {1 X, 3 Y, 4 'class A'}, {5}
 </code></pre>
 <p>Note that any instance without a weight value specified is assumed to have a weight of 1 for backwards compatibility.</p>
-<h3 id="see-also">See also</h3>
+<h3 id="see-also">See also<a class="headerlink" href="#see-also" title="Permanent link">#</a></h3>
 <ul>
 <li><a href="../../add_weights_to_dataset/">Add weights to dataset</a></li>
 <li><a href="../arff_syntax/">ARFF Syntax Highlighting</a> for various editors</li>
 </ul>
-<h3 id="links">Links</h3>
+<h3 id="links">Links<a class="headerlink" href="#links" title="Permanent link">#</a></h3>
 <ul>
 <li><a href="http://www.iso.org/iso/en/prods-services/popstds/datesandtime.html">ISO-8601</a></li>
 <li>Javadoc of <a href="https://docs.oracle.com/javase/8/docs/api/java/text/SimpleDateFormat.html">java.text.SimpleDateFormat</a> (lists the supported character patterns)</li>

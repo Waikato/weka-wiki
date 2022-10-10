@@ -127,7 +127,7 @@
             <div class="section" itemprop="articleBody">
               
                 <p>Unless one has access to a 64-bit machine with lots of RAM, it can happen quite easy that one runs into an <a href="../faqs/OutOfMemoryException/">OutOfMemoryException</a> running WEKA on large datasets. This article tries to present some solutions apart from buying new hardware.</p>
-<h3 id="sampling">Sampling</h3>
+<h3 id="sampling">Sampling<a class="headerlink" href="#sampling" title="Permanent link">#</a></h3>
 <p>The question is, does one really need to train with <strong>all</strong> the data, or is a subset of the data already sufficient? </p>
 <p>WEKA offers several filters for re-sampling a dataset and generating a new dataset reduced in size:</p>
 <ul>
@@ -145,12 +145,12 @@
 </li>
 </ul>
 <p>See the respective Javadoc for more information (<a href="https://weka.sourceforge.io/doc.stable-3-8/">book version</a>, <a href="https://weka.sourceforge.io/doc.dev/">developer version</a>).</p>
-<h3 id="incremental-classifiers">Incremental classifiers</h3>
+<h3 id="incremental-classifiers">Incremental classifiers<a class="headerlink" href="#incremental-classifiers" title="Permanent link">#</a></h3>
 <p>Most classifiers need to see all the data before they can be trained, e.g., J48 or SMO. But there are also schemes that can be trained in an incremental fashion, not just in batch mode. All classifiers implementing the <code>weka.classifiers.UpdateableClassifier</code> interface are able to process data in such a way.</p>
 <p>Running such a classifier from commandline will load the dataset incrementally (NB: 
 not all data formats can be loaded incrementally; <a href="../formats_and_processing/xrff/">XRFF</a> is one of them, <a href="../formats_and_processing/arff/">ARFF</a> on the other hand can be read incrementally) and feed the data instance by instance to the classifier.</p>
 <p>Check out the Javadoc of the <code>UpdateableClassifier</code> interface to see what schemes implement it (<a href="https://weka.sourceforge.io/doc.stable-3-8/weka/classifiers/UpdateableClassifier.html">book version</a>, <a href="https://weka.sourceforge.io/doc.dev/weka/classifiers/UpdateableClassifier.html">developer version</a>).</p>
-<h3 id="other-tools">Other tools</h3>
+<h3 id="other-tools">Other tools<a class="headerlink" href="#other-tools" title="Permanent link">#</a></h3>
 <ul>
 <li><a href="http://sourceforge.net/projects/moa-datastream/">MOA - Massive Online Analysis</a><blockquote>
 <p>A framework for learning from a continuous supply of examples, a data stream. Includes tools for evaluation and a collection of machine learning algorithms. Related to the WEKA project, also written in Java, while scaling to more demanding problems.</p>

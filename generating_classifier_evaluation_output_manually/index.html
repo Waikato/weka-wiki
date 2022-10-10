@@ -127,7 +127,7 @@
             <div class="section" itemprop="articleBody">
               
                 <p>In the following some code snippets that explain how to generate the output Weka generates when one runs a classifier from the commandline. When referring to the <code>Evaluation</code> class, the <a href="https://weka.sourceforge.io/doc.stable-3-8/weka/classifiers/Evaluation.html">weka.classifiers.Evaluation</a> class is meant. This article provides only a quick overview, for more details, please see the <a href="https://weka.sourceforge.io/doc.stable-3-8/">Javadoc</a> of the <a href="https://weka.sourceforge.io/doc.stable-3-8/weka/classifiers/Evaluation.html">Evaluation</a> class.</p>
-<h3 id="model">Model</h3>
+<h3 id="model">Model<a class="headerlink" href="#model" title="Permanent link">#</a></h3>
 <p>A classifier's model, if that classifier supports the output of it, can be simply output by using the <code>toString()</code> method after it got trained:</p>
 <pre><code class="language-java"> Instances data = ... // from somewhere
  Classifier cls = new weka.classifiers.trees.J48();
@@ -135,7 +135,7 @@
  System.out.println(cls);
 </code></pre>
 <p><strong>NB:</strong> Weka always outputs the model based on the <em>full</em> training set (provided with the option <code>-t</code>), no matter whether cross-validation is used or a designated test set (via <code>-T</code>). The 10 models generated during a 10-fold cross-validation run are never output. If you want to output these models you have to simulate the <code>crossValidateModel</code> method yourself, use the KnowledgeFlow (see article <a href="../visualization/displaying_results_of_cross_validation_folds/">Displaying results of cross-validation folds</a>).</p>
-<h3 id="statistics">Statistics</h3>
+<h3 id="statistics">Statistics<a class="headerlink" href="#statistics" title="Permanent link">#</a></h3>
 <p>The statistics, also called the summary of an evaluation, can be be generated via the <code>toSummaryString</code> methods. Here is an example of the summary from a cross-validated J48:</p>
 <pre><code class="language-java"> Classifier cls = new J48();
  Evaluation eval = new Evaluation(data);
@@ -144,7 +144,7 @@
  eval.crossValidateModel(cls, data, folds, rand);
  System.out.println(eval.toSummaryString());
 </code></pre>
-<h3 id="detailed-class-statistics">Detailed class statistics</h3>
+<h3 id="detailed-class-statistics">Detailed class statistics<a class="headerlink" href="#detailed-class-statistics" title="Permanent link">#</a></h3>
 <p>In order to generate the detailed statistics per class (on the commandline via option <code>-i</code>), one can use the <code>toClassDetailsString</code> methods. Once again a code snippet featuring a cross-validated J48:</p>
 <pre><code class="language-java"> Classifier cls = new J48();
  Evaluation eval = new Evaluation(data);
@@ -153,7 +153,7 @@
  eval.crossValidateModel(cls, data, folds, rand);
  System.out.println(eval.toClassDetailsString());
 </code></pre>
-<h3 id="confusion-matrix">Confusion matrix</h3>
+<h3 id="confusion-matrix">Confusion matrix<a class="headerlink" href="#confusion-matrix" title="Permanent link">#</a></h3>
 <p>The confusion matrix is simply output with the <code>toMatrixString()</code> or <code>toMatrixString(String)</code> method of the <code>Evaluation</code> class. In the following an example of cross-validating J48 on a dataset and outputting the confusion matrix to stdout.</p>
 <pre><code class="language-java"> Classifier cls = new J48();
  Evaluation eval = new Evaluation(data);
@@ -162,7 +162,7 @@
  eval.crossValidateModel(cls, data, folds, rand);
  System.out.println(eval.toMatrixString());
 </code></pre>
-<h3 id="see-also">See also</h3>
+<h3 id="see-also">See also<a class="headerlink" href="#see-also" title="Permanent link">#</a></h3>
 <ul>
 <li><a href="../use_weka_in_your_java_code/">Use Weka in your Java code</a> - general overview of the Weka API</li>
 </ul>

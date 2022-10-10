@@ -246,7 +246,7 @@
    }
  }
 </code></pre>
-<h3 id="missing-values">Missing values</h3>
+<h3 id="missing-values">Missing values<a class="headerlink" href="#missing-values" title="Permanent link">#</a></h3>
 <p>By default, a new double array will be initialized with 0s. In case you want to be a value missing at a certain position, you have to explicitly set the <em>missing value</em> via the <code>missingValue()</code> method of the <code>weka.core.Utils</code> class. In case you already have an existing <code>weka.core.Instance</code> object, then you use its <code>setMissing(int)</code> method, which sets a missing value at the given position. Here are examples, which set the <strong>third</strong> attribute to missing:</p>
 <ul>
 <li>
@@ -261,11 +261,11 @@ Instance inst = new DenseInstance(1.0, vals);
 inst.setMissing(2);</code></p>
 </li>
 </ul>
-<h3 id="downloads">Downloads</h3>
+<h3 id="downloads">Downloads<a class="headerlink" href="#downloads" title="Permanent link">#</a></h3>
 <ul>
 <li><a href="../../files/AttTest.java">AttTest.java</a> (<a href="https://svn.cms.waikato.ac.nz/svn/weka/branches/stable-3-8/wekaexamples/src/main/java/wekaexamples/core/CreateInstances.java">stable</a>, <a href="https://svn.cms.waikato.ac.nz/svn/weka/trunk/wekaexamples/src/main/java/wekaexamples/core/CreateInstances.java">developer</a>) - the above class</li>
 </ul>
-<h3 id="see-also">See also</h3>
+<h3 id="see-also">See also<a class="headerlink" href="#see-also" title="Permanent link">#</a></h3>
 <ul>
 <li><a href="../save_instances_to_arff/">Save Instances to an ARFF File</a> - if you want to save the data to a file instead of printing it to stdout</li>
 <li><a href="../../adding_attributes_to_dataset/">Adding attributes to a dataset</a> - shows how to add attributes to an existing dataset</li>

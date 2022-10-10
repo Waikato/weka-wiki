@@ -127,7 +127,7 @@
             <div class="section" itemprop="articleBody">
               
                 <p>The KnowledgeFlow enables one to plot the error rate (= RMSE, root mean squared error) and the accuracy of an incremental classifier. An <em>incremental classifier</em> is a classifier that does not need to see the whole data at once, but can be trained instance by instance. All classifiers implementing the interface <code>[weka.classifiers.UpdateableClassifier](https://weka.sourceforge.io/doc.dev/weka/classifiers/updateableclassifier.html)</code> are incremental ones.</p>
-<h3 id="setup">Setup</h3>
+<h3 id="setup">Setup<a class="headerlink" href="#setup" title="Permanent link">#</a></h3>
 <p>The most basic setup for an incremental classifier is show below, using the classifier <code>NaiveBayesUpdateable</code>:</p>
 <pre><code class="language-text"> ArffLoader
    --instance--&gt; NaiveBayesUpdateable
@@ -137,7 +137,7 @@
 <p>Here is a screenshot of the setup:</p>
 <p><img alt="Screenshot" src="../../img/KnowledgeFlow-incremental_classifier-Setup.png" /></p>
 <p>You can also download <a href="../../files/KnowledgeFlow-incremental_classifier.kfml">KnowledgeFlow-incremental_classifier.kfml</a>, an XML version of this setup.</p>
-<h3 id="displaying-the-chart">Displaying the chart</h3>
+<h3 id="displaying-the-chart">Displaying the chart<a class="headerlink" href="#displaying-the-chart" title="Permanent link">#</a></h3>
 <ul>
 <li>select a dataset that you want to train the classifier with, via <em>Configure...</em> from the <code>ArffLoader's</code> context menu, e.g., the UCI dataset <em>anneal</em>.</li>
 <li>select <em>Show chart</em> from the <code>StripChart's</code> context menu (the chart will <strong>only</strong> be updated if visible!)</li>
@@ -145,7 +145,7 @@
 <li>bring the chart back to front and you should get a graph similar to this one (click to enlarge):</li>
 </ul>
 <p><img alt="Screenshot" src="../../img/KnowledgeFlow-incremental_classifier-StripChart.png" /></p>
-<h3 id="exporting-the-chart">Exporting the chart</h3>
+<h3 id="exporting-the-chart">Exporting the chart<a class="headerlink" href="#exporting-the-chart" title="Permanent link">#</a></h3>
 <p>As of 08/07/2008 (or Weka &gt;3.5.7), the chart can be exported to several file formats using the developer version of Weka. The <em>magic</em> key for bringing up the export dialog is <code>&lt;Ctrl+Alt+Shift&gt;&lt;Left-Click&gt;</code>.</p>
 <p>Since the default black background is not very practical if one wants to embed the chart in a document, one can change the background color via the following property of the <a href="../../weka_gui_beans_beans.props/">Beans.props</a> <a href="../../properties_file/">properties file</a> (and set it to <em>white</em>):</p>
 <pre><code class="language-text"> weka.gui.beans.StripChart.backgroundColour
@@ -154,12 +154,12 @@
 <pre><code class="language-text"> weka.gui.beans.StripChart$LegendPanel.borderColour
 </code></pre>
 <p><strong>Note:</strong> Due to the design of the StripChart (nested JPanels), the EPS export does not work properly. But one can always export it as PNG and then convert it under Linux via the <code>pngtopnm/pnmtops/ps2epsi</code> chain. See commandline help of those tools for more details.</p>
-<h3 id="see-also">See also</h3>
+<h3 id="see-also">See also<a class="headerlink" href="#see-also" title="Permanent link">#</a></h3>
 <ul>
 <li><a href="../../properties_file/">Properties File</a></li>
 <li><a href="../../weka_gui_beans_beans.props/">weka/gui/beans/Beans.props</a></li>
 </ul>
-<h3 id="links">Links</h3>
+<h3 id="links">Links<a class="headerlink" href="#links" title="Permanent link">#</a></h3>
 <ul>
 <li><a href="../../files/KnowledgeFlow-incremental_classifier.kfml">KnowledgeFlow-incremental_classifier.kfml</a></li>
 </ul>

@@ -129,13 +129,13 @@
                 <p>Jython is an implementation of the high-level, dynamic, object-oriented language Python written in 100% Pure Java, and seamlessly integrated with the Java platform. It thus allows you to run Python on any Java platform.</p>
 <p><em>-- taken from the <a href="http://www.jython.org/">Jython homepage</a></em></p>
 <p>This article explains how use Weka classes from within Jython and how to write a classifier in Jython that can be used within the Weka framework.</p>
-<h3 id="accessing-weka-classes-from-jython">Accessing Weka classes from Jython</h3>
-<h4 id="requirements">Requirements</h4>
+<h3 id="accessing-weka-classes-from-jython">Accessing Weka classes from Jython<a class="headerlink" href="#accessing-weka-classes-from-jython" title="Permanent link">#</a></h3>
+<h4 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">#</a></h4>
 <p>In order for Jython to find the Weka classes, you must export them in your <a href="../classpath/">CLASSPATH</a>. Here is an example for adding the <code>weka.jar</code> located in the directory <code>/some/where</code> to the CLASSPATH in a bash under Linux:</p>
 <pre><code class="language-bash">export CLASSPATH=$CLASSPATH:/some/where/weka.jar
 </code></pre>
 <p><strong>Note:</strong> Windows users must just the backslash ("\") in the command prompt instead of the slash ("/") in paths.</p>
-<h4 id="implementation">Implementation</h4>
+<h4 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link">#</a></h4>
 <p>As soon as one imports classes in a Jython module one can use that class just like in Java. E.g., if one wants to use the J48 classifier, one only needs to import it as follows:</p>
 <pre><code class="language-python"> import weka.classifiers.trees.J48 as J48
 </code></pre>
@@ -160,13 +160,13 @@
 </code></pre>
 <p>A slightly more elaborate example can be found in <a href="../files/UsingJ48Ext.py">UsingJ48Ext.py</a>, which uses more methods of the <code>weka.classifiers.Evaluation</code> class.</p>
 <p><strong>NB:</strong> The example <code>UsingJ48Ext.py</code> needs Weka 3.6.x to run, due to some changes in the API.</p>
-<h3 id="implementing-a-jython-classifier">Implementing a Jython classifier</h3>
-<h4 id="requirements_1">Requirements</h4>
+<h3 id="implementing-a-jython-classifier">Implementing a Jython classifier<a class="headerlink" href="#implementing-a-jython-classifier" title="Permanent link">#</a></h3>
+<h4 id="requirements_1">Requirements<a class="headerlink" href="#requirements_1" title="Permanent link">#</a></h4>
 <ul>
 <li>Weka &gt;3.5.6 (or <a href="../snapshots/">snapshot</a> from 02/08/2007 or later)</li>
 <li>Jython 2.2rc2 (later versions should work as well)</li>
 </ul>
-<h4 id="implementation_1">Implementation</h4>
+<h4 id="implementation_1">Implementation<a class="headerlink" href="#implementation_1" title="Permanent link">#</a></h4>
 <p>This section covers the implementation of <code>weka.classifiers.rules.ZeroR</code> in Python, <a href="../files/JeroR.py">JeroR.py</a>:</p>
 <ul>
 <li>Subclass an abstract superclass of Weka classifiers (in this case <code>weka.classifiers.Classifier</code>):</li>
@@ -257,7 +257,7 @@ Returns a string describing the not-yet-built or built model.</p>
 </blockquote>
 <pre><code class="language-ini">python.security.respectJavaAccessibility=false
 </code></pre>
-<h4 id="documentation">Documentation</h4>
+<h4 id="documentation">Documentation<a class="headerlink" href="#documentation" title="Permanent link">#</a></h4>
 <p>Documentation in Python is done with the so-called <em>doc strings</em> within the class or method the documentation is for. Using <a href="http://happydoc.sourceforge.net/">HappyDoc</a>, one can use <em>structured text</em> to output nice HTML, similar to <a href="http://java.sun.com/j2se/javadoc/">Javadoc</a>.</p>
 <ul>
 <li>Class doc string:</li>
@@ -294,34 +294,34 @@ Returns a string describing the not-yet-built or built model.</p>
          the prediction for the given instance
      &quot;&quot;&quot;
 </code></pre>
-<h4 id="execution">Execution</h4>
+<h4 id="execution">Execution<a class="headerlink" href="#execution" title="Permanent link">#</a></h4>
 <p><strong>Note:</strong> The commands listed here for a Linux/Unix bash, for Windows remove all the backslashes ("\") at the end of the lines and assemble the command in a single line. Under Windows, the path separator ":" used in the <a href="../classpath/">CLASSPATH</a> needs to be replaced with ";" as well.</p>
-<h4 id="jython">Jython</h4>
+<h4 id="jython">Jython<a class="headerlink" href="#jython" title="Permanent link">#</a></h4>
 <p>The Jython classifier, e.g., <code>FunkyClassifier.py</code>, can be run like this from commandline, with only the <code>weka.jar</code> and the <code>jython.jar</code> in the <a href="../classpath/">CLASSPATH</a>:</p>
 <pre><code class="language-bash"> java -classpath weka.jar:jython.jar \
    org.python.util.jython \
    /some/place/FunkyClassifier.py \
    -t /some/where/file.arff
 </code></pre>
-<h4 id="weka">Weka</h4>
+<h4 id="weka">Weka<a class="headerlink" href="#weka" title="Permanent link">#</a></h4>
 <p>In order to execute the Jython classifier <code>FunkyClassifier.py</code> with Weka, one basically only needs to have the <code>weka.jar</code> and the <code>jython.jar</code> in the <a href="../classpath/">CLASSPATH</a> and call the <code>weka.classifiers.JythonClassifier</code> classifier with the Jython classifier, i.e., <code>FunkyClassifier.py</code>, as parameter ("<code>-J</code>"):</p>
 <pre><code class="language-bash"> java -classpath weka.jar:jython.jar \
    weka.classifiers.JythonClassifier \
    -J /some/place/FunkyClassifier.py \
    -t /some/where/file.arff
 </code></pre>
-<h3 id="downloads">Downloads</h3>
+<h3 id="downloads">Downloads<a class="headerlink" href="#downloads" title="Permanent link">#</a></h3>
 <ul>
 <li><a href="../files/UsingJ48.py">UsingJ48.py</a></li>
 <li><a href="../files/UsingJ48Ext.py">UsingJ48Ext.py</a></li>
 <li><a href="../files/JeroR.py">JeroR.py</a> - <code>weka.classifiers.rules.ZeroR</code> as Jython script implemented</li>
 </ul>
-<h3 id="see-also">See also</h3>
+<h3 id="see-also">See also<a class="headerlink" href="#see-also" title="Permanent link">#</a></h3>
 <ul>
 <li><a href="../use_weka_in_your_java_code/">Use Weka in your Java code</a> - for general information on how to use the Weka API</li>
 <li><a href="../using_weka_via_jepp/">Using Weka via Jepp</a> - using the <code>javax.script</code> approach to interface Java and Python</li>
 </ul>
-<h3 id="links">Links</h3>
+<h3 id="links">Links<a class="headerlink" href="#links" title="Permanent link">#</a></h3>
 <ul>
 <li>Jython<ul>
 <li><a href="http://www.jython.org/">Homepage</a></li>

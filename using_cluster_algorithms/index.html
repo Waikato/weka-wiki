@@ -127,7 +127,7 @@
             <div class="section" itemprop="articleBody">
               
                 <p>This article discusses the use of cluster schemes in Weka from the commandline. This functionality is, of course, also available from the GUI, namely the Explorer and the KnowledgeFlow.</p>
-<h3 id="commandline">Commandline</h3>
+<h3 id="commandline">Commandline<a class="headerlink" href="#commandline" title="Permanent link">#</a></h3>
 <p>Clusterers can be used in a similar fashion Weka's classifiers:</p>
 <ul>
 <li><code>-t &lt;file&gt;</code><blockquote>
@@ -205,9 +205,9 @@ class
  2 fold CV Log Likelihood: 
 -40.9751
 </code></pre>
-<h3 id="filters">Filters</h3>
+<h3 id="filters">Filters<a class="headerlink" href="#filters" title="Permanent link">#</a></h3>
 <p>Weka contains some filters that make life easier with the cluster algorithms.</p>
-<h4 id="addcluster">AddCluster</h4>
+<h4 id="addcluster">AddCluster<a class="headerlink" href="#addcluster" title="Permanent link">#</a></h4>
 <p>The filter <code>weka.filters.unsupervised.attribute.AddCluster</code> adds the cluster number as nominal attribute to the data processed by the filter. This makes the post-processing or analyzing of the cluster assignments easier than with the <code>-p X</code> option.</p>
 <p>Here's an example for the UCI <a href="../datasets/">dataset</a> <em>anneal</em> using <code>SimpleKMeans</code>:</p>
 <pre><code class="language-bash"> java weka.filters.unsupervised.attribute.AddCluster \
@@ -229,7 +229,7 @@ class
  '?',C,A,8,0,'?',S,'?',0,'?','?',G,'?','?','?','?','?','?','?','?','?','?','?','?','?','?','?','?','?','?','?',COIL,0.7,610,0,'?',0,'?',3,cluster2
  '?',C,R,0,0,'?',S,2,0,'?','?',E,'?','?','?','?','?','?','?','?','?','?','?','?','?','?','?',Y,'?','?','?',COIL,3.2,610,0,'?',0,'?',3,cluster2
 </code></pre>
-<h4 id="clustermembership">ClusterMembership</h4>
+<h4 id="clustermembership">ClusterMembership<a class="headerlink" href="#clustermembership" title="Permanent link">#</a></h4>
 <p>If you're more interested in the probability for each each cluster an instance gets assigned, you can use the filter <code>weka.filters.unsupervised.attribute.ClusterMembership</code>.</p>
 <p>Here's an example for the UCI <a href="../datasets/">dataset</a> <em>anneal</em> using <code>EM</code>:</p>
 <pre><code class="language-bash"> java weka.filters.unsupervised.attribute.ClusterMembership \
@@ -255,8 +255,8 @@ class
  0.00292,0.000002,0,0.997078,0,0
  ...
 </code></pre>
-<h3 id="classifiers">Classifiers</h3>
-<h4 id="classificationviaclustering">ClassificationViaClustering</h4>
+<h3 id="classifiers">Classifiers<a class="headerlink" href="#classifiers" title="Permanent link">#</a></h3>
+<h4 id="classificationviaclustering">ClassificationViaClustering<a class="headerlink" href="#classificationviaclustering" title="Permanent link">#</a></h4>
 <p>A new meta-classifier, <code>weka.classifiers.meta.ClassificationViaClustering</code>, got introduced in the developer version (&gt;3.5.6 or <a href="../snapshots/">snapshot</a>), which mimics the <em>clusters to classes</em> functionality of the <code>weka.core.ClusterEvaluation</code> class. A user defined cluster algorithm is built with the training data presented to the meta-classifier (after the class attribute got removed, of course) and then the mapping between classes and clusters is determined. This mapping is then used for predicting class labels of unseen instances.</p>
 <p>Here's an example for the UCI <a href="../datasets/">dataset</a> <em>balance-scale</em>:</p>
 <pre><code class="language-bash"> java weka.classifiers.meta.ClassificationViaClustering \
@@ -287,13 +287,13 @@ L (1)
  ...
 </code></pre>
 <p><strong>Note:</strong> In order to obtain a useful model, you have to make sure that the cluster algorithms are properly setup for the dataset you are using. E.g., <code>SimpleKMeans</code> has a fixed number of clusters that it should determine. Trying to determine 2 clusters on a dataset with 5 class labels isn't very useful.</p>
-<h3 id="notes">Notes</h3>
+<h3 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">#</a></h3>
 <ul>
 <li>All examples are for a Linux bash. For Windows or the SimplCLI, just remove the backslashes and collapse all the lines into a single one.</li>
 <li>Comments in the examples follow a <strong>#</strong> and need to be removed, of course.</li>
 <li><strong>...</strong> denotes an omission of unnecessary content.</li>
 </ul>
-<h3 id="see-also">See also</h3>
+<h3 id="see-also">See also<a class="headerlink" href="#see-also" title="Permanent link">#</a></h3>
 <ul>
 <li><a href="../use_weka_in_your_java_code/">Use Weka in your Java code</a>, section <em>Clustering</em> explains using the Weka API for clusterers</li>
 <li><a href="../batch_filtering/">Batch filtering</a> - shows how to use filters in batch mode</li>

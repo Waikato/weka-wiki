@@ -127,9 +127,9 @@
             <div class="section" itemprop="articleBody">
               
                 <p>This tutorial walks you through the creation of a <em>Microsoft C#</em> program that uses <em>Weka</em>, and some <em>Java</em> API classes, via <em>IKVM</em>. The process will be similar for other <em>.NET</em> languages.</p>
-<h3 id="set-up-installation">Set up / Installation</h3>
+<h3 id="set-up-installation">Set up / Installation<a class="headerlink" href="#set-up-installation" title="Permanent link">#</a></h3>
 <p>You will first need to install IKVM, which can be found <a href="http://www.ikvm.net/">here</a>. You will also need a C# compiler/VM - <a href="http://www.mono-project.com/">Mono</a> is an excellent open source solution for both linux and windows, or you could just use Microsoft Visual Studio .NET.</p>
-<h3 id="conversion-from-java-to-a-net-dll">Conversion from Java to a .NET dll</h3>
+<h3 id="conversion-from-java-to-a-net-dll">Conversion from Java to a .NET dll<a class="headerlink" href="#conversion-from-java-to-a-net-dll" title="Permanent link">#</a></h3>
 <p>With that out of the way, the first thing you will want to do is to convert the Weka .jar file into a .NET dll. To do this, we will use <em>ikvmc</em>, which is the IKVM static compiler.
 On the console, go to the directory which contains weka.jar, and type:</p>
 <pre><code class="language-bash">&gt; ikvmc -target:library weka.jar
@@ -137,7 +137,7 @@ On the console, go to the directory which contains weka.jar, and type:</p>
 <p>The <code>-target:library</code> call causes <em>ikvmc</em> to create a .dll library instead of an executable.</p>
 <p>Note that the IKVM tutorial tells you that you should add <code>-reference:/usr/lib/IKVM.GNU.Classpath.dll</code>(or appropriate path) to the above command, it tells IKVM where to find the GNU Classpath library. <strong>However, <code>IKVM.GNU.Classpath.dll</code> Is no longer included in the download package, and is from very old versions of IKVM. When Sun open sources Java, it got replaced by the IKVM.OpenJDK.*.dll files.</strong></p>
 <p>You should now have a file called "weka.dll", which is a .NET version of the entire weka API. That's exactly what we want!</p>
-<h3 id="use-the-dll-in-a-net-application">Use the dll in a .NET application</h3>
+<h3 id="use-the-dll-in-a-net-application">Use the dll in a .NET application<a class="headerlink" href="#use-the-dll-in-a-net-application" title="Permanent link">#</a></h3>
 <p>To try it out, lets use a small C# program that I wrote. The program simply runs the J48 classifier on the Iris dataset with a 66% test/data split, and prints out the correctness percentage. It also uses a few Java classes, and is already about 95% legal Java code.</p>
 <p>The code is here:</p>
 <pre><code class="language-csharp">//start of file Main.cs
@@ -192,7 +192,7 @@ On the console, go to the directory which contains weka.jar, and type:</p>
  }
  //end of file Main.cs
 </code></pre>
-<h3 id="compile-and-run-it">Compile and run it</h3>
+<h3 id="compile-and-run-it">Compile and run it<a class="headerlink" href="#compile-and-run-it" title="Permanent link">#</a></h3>
 <p>Now we just need to compile it. If you are using MonoDevelop or Visual Studio, you will need to add references to weka.dll, and all of the IKVM.OpenJDK.*.dll files, and lastly IKVM.Runtime.dll into your project. Otherwise, on the command line, you can type:</p>
 <p><em>NOTE: 
 replace </em>IKVM.OpenJDK.<em>.dll with the remaining IKVM.openJDK files.</em></p>
@@ -212,7 +212,7 @@ replace </em>IKVM.OpenJDK.<em>.dll with the remaining IKVM.openJDK files.</em></
  49 out of 51 correct (96.078431372549%)
 </code></pre>
 <p>And there you have it. Now we have a working program that uses Weka classes, and some classes from the standard Java API, in a C# program for the .NET framework.</p>
-<h3 id="links">Links</h3>
+<h3 id="links">Links<a class="headerlink" href="#links" title="Permanent link">#</a></h3>
 <ul>
 <li><a href="http://www.onjava.com/pub/a/onjava/2004/08/18/ikvm.html">An Introduction to IKVM</a></li>
 <li><a href="http://www.ikvm.net/">IKVM.NET</a></li>

@@ -126,11 +126,11 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h3 id="introduction">Introduction</h3>
+                <h3 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">#</a></h3>
 <p>As of Weka version &gt;3.5.8 (only developer version, not stable-3.6 branch) one can easily add tree visualization plugins in the Explorer (Classify and Cluster panel). This makes it easy to implement custom visualizations, if the ones Weka offers are not sufficient.</p>
 <p><strong>Note:</strong> This is also covered in chapter <em>Extending WEKA</em> of the WEKA manual in versions later than 3.7.0 or <a href="../../snapshots/">snapshots</a> of the developer version later than 10/01/2010.</p>
 <p><em>tree</em> is referring to trees generated, for instance, by the <code>weka.classifiers.trees.J48</code> classifier. To be more precise, all classes that import the <code>weka.core.Drawable</code> interface and which <code>graphType()</code> method returns <code>weka.core.Drawable.TREE</code>. This means, that the trees the clusterer <code>weka.clusterers.Cobweb</code> generates, can be displayed as well.</p>
-<h3 id="requirements">Requirements</h3>
+<h3 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">#</a></h3>
 <ul>
 <li>custom visualization class must implement the following <strong>interface</strong><blockquote>
 <p><code>weka.gui.visualize.plugins.TreeVisualizePlugin</code></p>
@@ -142,7 +142,7 @@
 </li>
 <li>or the class' package must be listed in the <code>weka.gui.visualize.plugins.TreeVisualizePlugin</code> key of the <code>[weka/gui/GenericPropertiesCreator.props](weka_gui_genericpropertiescreator.props.md)</code> file.</li>
 </ul>
-<h3 id="implementation">Implementation</h3>
+<h3 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link">#</a></h3>
 <p>The visualization interface contains the following four methods</p>
 <ul>
 <li><strong>getMinVersion</strong><blockquote>
@@ -162,24 +162,24 @@
 </blockquote>
 </li>
 </ul>
-<h3 id="examples">Examples</h3>
-<h4 id="prefuse-visualization-toolkit">prefuse visualization toolkit</h4>
+<h3 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">#</a></h3>
+<h4 id="prefuse-visualization-toolkit">prefuse visualization toolkit<a class="headerlink" href="#prefuse-visualization-toolkit" title="Permanent link">#</a></h4>
 <p>The <a href="../../files/PrefuseTree.java">PrefuseTree.java</a>. It is based on the <code>prefuse.demos.TreeView</code> demo class.</p>
 <p>The following screenshot was generated using <em>J48</em> on the UCI dataset <em>anneal</em> with default parameters:</p>
 <p><img alt="Screenshot" src="../../img/PrefuseTreeClassifier.png" /></p>
 <p>And here is an example of <em>Cobweb</em> on the same dataset, once again with default parameters:</p>
 <p><img alt="Screenshot" src="../../img/PrefuseTreeClusterer.png" /></p>
 <p><strong>Note:</strong> Both trees are only partially displayed, since the prefuse tree component offers <em>exploration</em> of the loaded tree.</p>
-<h3 id="downloads">Downloads</h3>
+<h3 id="downloads">Downloads<a class="headerlink" href="#downloads" title="Permanent link">#</a></h3>
 <ul>
 <li><a href="../../files/PrefuseTree.java">PrefuseTree.java</a></li>
 </ul>
-<h3 id="see-also">See also</h3>
+<h3 id="see-also">See also<a class="headerlink" href="#see-also" title="Permanent link">#</a></h3>
 <ul>
 <li><a href="../../use_weka_in_your_java_code/">Use Weka in your Java code</a> - general overview of the basic Weka API</li>
 <li><a href="../explorer_visualization_plugins/">Explorer visualization plugins</a></li>
 </ul>
-<h3 id="links">Links</h3>
+<h3 id="links">Links<a class="headerlink" href="#links" title="Permanent link">#</a></h3>
 <ul>
 <li><a href="http://prefuse.org/">Prefuse homepage</a></li>
 <li><a href="http://goosebumps4all.net/34all/bb/forumdisplay.php?fid=18">PAP - prefuse assistance pool</a></li>

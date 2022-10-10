@@ -126,28 +126,28 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h3 id="description">Description</h3>
+                <h3 id="description">Description<a class="headerlink" href="#description" title="Permanent link">#</a></h3>
 <p>J48-Weighter patch: 
 Modification of J48 for Weighted Data.</p>
-<h3 id="reference">Reference</h3>
+<h3 id="reference">Reference<a class="headerlink" href="#reference" title="Permanent link">#</a></h3>
 <p>-none-</p>
-<h3 id="package">Package</h3>
+<h3 id="package">Package<a class="headerlink" href="#package" title="Permanent link">#</a></h3>
 <p>Patches to:</p>
 <ul>
 <li><code>weka.classifiers.trees.j48</code></li>
 <li><code>weka.core</code></li>
 <li><code>weka.filters.unsupervised.attribute</code></li>
 </ul>
-<h3 id="download">Download</h3>
+<h3 id="download">Download<a class="headerlink" href="#download" title="Permanent link">#</a></h3>
 <p>Patch for Weka 3.4.5: 
 <a href="../files/j48-weighter.patch">j48-weighter.patch</a></p>
-<h3 id="additional-information">Additional Information</h3>
+<h3 id="additional-information">Additional Information<a class="headerlink" href="#additional-information" title="Permanent link">#</a></h3>
 <p>This patch addresses two separate but related issues:</p>
 <ul>
 <li>The proposed filter "Weighter" allows one to specify a numeric attribute to be used as an instance weight.</li>
 <li>As mentioned on Wekalist, tests using weighted sample-survey data indicated possible problems in the J48 decision tree algorithm.</li>
 </ul>
-<h4 id="the-weighter-filter">The Weighter filter</h4>
+<h4 id="the-weighter-filter">The Weighter filter<a class="headerlink" href="#the-weighter-filter" title="Permanent link">#</a></h4>
 <p>Weighter is a general-purpose filter independent of J48 or other
 classifiers, but to preserve the weight assignment it initially had to
 be run under FilteredClassifier.  To make weights persistent via .arff
@@ -162,7 +162,7 @@ the .arff file inverts the Save process, transparent to the user.</p>
 name.  The special case of invoking Weighter without an attribute
 argument restores the unweighted dataset, with an appended attribute
 named as above.</p>
-<h4 id="j48-with-instance-weights">J48 with instance weights</h4>
+<h4 id="j48-with-instance-weights">J48 with instance weights<a class="headerlink" href="#j48-with-instance-weights" title="Permanent link">#</a></h4>
 <p>The simple rescaling inserted in weka.classifiers.trees.j48.Stats is
 intended to:</p>
 <ul>

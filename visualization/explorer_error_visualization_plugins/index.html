@@ -126,10 +126,10 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h3 id="introduction">Introduction</h3>
+                <h3 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">#</a></h3>
 <p>As of Weka version &gt;3.5.8 (only developer version, not stable-3.6 branch) one can easily add graph visualization plugins in the Explorer (Classify panel). This makes it easy to implement custom visualizations, if the ones Weka offers are not sufficient.</p>
 <p><strong>Note:</strong> This is also covered in chapter <em>Extending WEKA</em> of the WEKA manual in versions later than 3.7.0 or <a href="../../snapshots/">snapshots</a> of the developer version later than 10/01/2010.</p>
-<h3 id="requirements">Requirements</h3>
+<h3 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">#</a></h3>
 <ul>
 <li>custom visualization class must implement the following <strong>interface</strong><blockquote>
 <p><code>weka.gui.visualize.plugins.ErrorVisualizePlugin</code></p>
@@ -141,7 +141,7 @@
 </li>
 <li>or the class' package must be listed in the <code>weka.gui.visualize.plugins.ErrorVisualizePlugin</code> key of the <a href="../../weka_gui_generic_properties_creator.props/">weka/gui/GenericPropertiesCreator.props</a> file.</li>
 </ul>
-<h3 id="implementation">Implementation</h3>
+<h3 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link">#</a></h3>
 <p>The visualization interface contains the following four methods</p>
 <ul>
 <li><strong>getMinVersion</strong><blockquote>
@@ -159,26 +159,26 @@ This method returns the <em>maximal</em> version (exclusive) of Weka that is nec
 </blockquote>
 </li>
 </ul>
-<h3 id="examples">Examples</h3>
+<h3 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">#</a></h3>
 <p>The following screenshots were generated using <code>weka.classifiers.functions.LinearRegression</code> with default parameters on the UCI <a href="../../datasets/">dataset</a> <em>bolts</em>, using a percentage split of 66% for the training set and the remainder for testing.</p>
-<h4 id="using-weka-panels">Using Weka panels</h4>
+<h4 id="using-weka-panels">Using Weka panels<a class="headerlink" href="#using-weka-panels" title="Permanent link">#</a></h4>
 <p>The <a href="../../files/ClassifierErrorsWeka.java">ClassifierErrorsWeka.java</a> example simply displays the classifier errors as the <em>Visualize classifier errors</em> menu item already available in Weka. It is just to demonstrate how to use existing Weka classes. </p>
 <p><img alt="Screenshot" src="../../img/ClassifierErrorsWeka.png" /></p>
-<h4 id="using-jmathtools-boxplot">Using JMathtools' Boxplot</h4>
+<h4 id="using-jmathtools-boxplot">Using JMathtools' Boxplot<a class="headerlink" href="#using-jmathtools-boxplot" title="Permanent link">#</a></h4>
 <p>The <a href="../../files/ClassifierErrorsMathtools.java">ClassifierErrorsMathtools.java</a>. The relative error per prediction is displayed as vertical line.</p>
 <p><img alt="Screenshot" src="../../img/ClassifierErrorsMathtools.png" /></p>
 <p><strong>Note:</strong> This display is only available for numeric classes.</p>
-<h3 id="downloads">Downloads</h3>
+<h3 id="downloads">Downloads<a class="headerlink" href="#downloads" title="Permanent link">#</a></h3>
 <ul>
 <li><a href="../../files/ClassifierErrorsWeka.java">ClassifierErrorsWeka.java</a></li>
 <li><a href="../../files/ClassifierErrorsMathtools.java">ClassifierErrorsMathtools.java</a></li>
 </ul>
-<h3 id="see-also">See also</h3>
+<h3 id="see-also">See also<a class="headerlink" href="#see-also" title="Permanent link">#</a></h3>
 <ul>
 <li><a href="../../use_weka_in_your_java_code/">Use Weka in your Java code</a> - general overview of the basic Weka API</li>
 <li><a href="../explorer_visualization_plugins/">Explorer visualization plugins</a></li>
 </ul>
-<h3 id="links">Links</h3>
+<h3 id="links">Links<a class="headerlink" href="#links" title="Permanent link">#</a></h3>
 <ul>
 <li><a href="http://jmathtools.sourceforge.net/">JMathTools homepage</a></li>
 </ul>

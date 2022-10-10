@@ -128,7 +128,7 @@
               
                 <p>Some of the schemes in Weka can generate Java source code that represents their current internal state. At the moment these are classifiers (book and developer version) and filters (<a href="../snapshots/">snapshot</a> or &gt;3.5.6). The generated code can be used within Weka as normal classifier/filter, since this code will be derived from the same superclass (<code>weka.classifiers.Classifier</code> or <code>weka.filters.Filter</code>) as the generating code.</p>
 <p><strong>Note:</strong> The commands listed here are for a Linux/Unix bash (the backslash tells the shell that the command isn't finished yet and continues on the next line). In case of Windows or the SimpleCLI, just remove the backslashes and put everything on one line.</p>
-<h3 id="classifiers">Classifiers</h3>
+<h3 id="classifiers">Classifiers<a class="headerlink" href="#classifiers" title="Permanent link">#</a></h3>
 <p>Instead of using a serialized filter to perform further classifications/predictions, one can also obtain source code from a trained classifier and use this instead. The advantage of this is being less dependent on version changes and incompatible serialized files. All classifiers implementing the <code>weka.classifiers.Sourcable</code> interface can turn their model into Java source code (check the Javadoc of this interface for all the classifiers implementing it).</p>
 <p>Here's an example of generating source code from a trained <code>J48</code> (the source code is saved in a file called <code>WekaWrapper.java</code>):</p>
 <pre><code class="language-bash"> java weka.classifiers.trees.J48 \
@@ -143,7 +143,7 @@
    -p 0                  # output predictions for training set
 </code></pre>
 <p><strong>Note:</strong> the Explorer can output source code as well, you only have to check the <em>Output source code</em> option in the <em>More options</em> dialog.</p>
-<h3 id="filters">Filters</h3>
+<h3 id="filters">Filters<a class="headerlink" href="#filters" title="Permanent link">#</a></h3>
 <p>With versions of Weka later than 3.5.6 or a <a href="../snapshots/">snapshot</a> of the developer version, one can now also turn filters into source code. The process is basically the same as with classifiers outlined above. All filters that implement the <code>weka.filters.Sourcable</code> interface can be turned into Java code (again, check out the Javadoc for this interface, to see the filters implementing it).</p>
 <p>The following command turns an initialized ReplaceMissingValues filter into source code:</p>
 <pre><code class="language-bash"> java weka.filters.unsupervised.attribute.ReplaceMissingValues \
@@ -158,7 +158,7 @@
    -i /some/where/input.arff \     # must have the same structure as **/somewhere1/input.arff**, of course
    -o /other/place/output.arff 
 </code></pre>
-<h3 id="see-also">See also</h3>
+<h3 id="see-also">See also<a class="headerlink" href="#see-also" title="Permanent link">#</a></h3>
 <ul>
 <li><a href="../serialization/">Serialization</a> - can be used for all classifiers and filters to save them in a persistent state.</li>
 </ul>

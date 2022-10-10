@@ -134,7 +134,7 @@
 <li>Auto-WEKA (<a href="https://www.cs.ubc.ca/labs/beta/Projects/autoweka/">external package</a> package for 3.7.13+)</li>
 </ul>
 <p>After finding the best possible setup, the meta-classifiers then train an instance of the base classifier with these parameters and use it for subsequent predictions.</p>
-<h3 id="cvparameterselection">CVParameterSelection</h3>
+<h3 id="cvparameterselection">CVParameterSelection<a class="headerlink" href="#cvparameterselection" title="Permanent link">#</a></h3>
 <p>This meta-classifier can optimize over an arbitrary number of parameters, with only one drawback (apart from the obvious explosion of possible parameter combinations): 
 one cannot optimize on nested options, only direct options of the base classifier. What does that mean? It means, that you can optimize the <em>C</em> parameter of <code>weka.classifiers.functions.SMO</code>, but not the <em>C</em> of an <code>weka.classifiers.functions.SMO</code> within a <code>weka.classifiers.meta.FilteredClassifier</code>.</p>
 <p>Here are a few examples:</p>
@@ -209,7 +209,7 @@ weka.classifiers.functions.LibSVM
  Classifier Options: 
 **-G 0.09** -S 0 -K 2 -D 3 -R 0.0 -N 0.5 -M 40.0 -C 1.0 -E 0.0010 -P 0.1
 </code></pre>
-<h3 id="gridsearch">GridSearch</h3>
+<h3 id="gridsearch">GridSearch<a class="headerlink" href="#gridsearch" title="Permanent link">#</a></h3>
 <p><code>weka.classifiers.meta.GridSearch</code> is a meta-classifier for exploring 2 parameters, hence the <em>grid</em> in the name. If one turns the log on, the classifier will create output suitable for <a href="http://www.gnuplot.info/">gnuplot</a>, i.e., sections of the log will contain script and data sections. Instead of just using a classifier, one can specify a base classifier <strong>and</strong> a filter, which both of them can be optimized (one parameter each). In contrast to <code>CVParameterSelection</code>, <code>GridSearch</code> is not limited to first-level parameters of the base classifier, since it's using <a href="http://java.sun.com/docs/books/tutorial/javabeans/">Java Beans</a> <a href="http://java.sun.com/docs/books/tutorial/javabeans/introspection/">Introspection</a> and one can specify <em>paths</em> to the properties one wants to optimize. A <em>property</em> here is the string of the parameter displayed in the GenericObjectEditor (generated though Introspection), e.g., <code>bagSizePercent</code> or <code>classifier</code> of <code>weka.classifiers.meta.Bagging</code>.</p>
 <p>Due to some important bugfixes, one should obtain a version of Weka &gt;3.5.6 or a <a href="../snapshots/">snapshot</a> later than 11 Sept 2007.</p>
 <p>For each of the two axes, X and Y, one can specify the following parameters:</p>
@@ -319,7 +319,7 @@ Correlation coefficient
 <li>a property for the filter starts with <strong>filter.</strong></li>
 <li>Arrays of objects are addressed with <strong>[<index>]</strong>, with the <em>index</em> being 0-based. E.g., using a <code>weka.filters.MultiFilter</code> in <code>GridSearch</code> consisting of a <code>ReplaceMissingValues</code> and a <code>PLSFilter</code> filter one can address the <em>numComponents</em> property of the <code>PLSFilter</code> with <em>filter.filter[1].numComponents</em></li>
 </ul>
-<h3 id="multisearch">MultiSearch</h3>
+<h3 id="multisearch">MultiSearch<a class="headerlink" href="#multisearch" title="Permanent link">#</a></h3>
 <p><code>weka.classifiers.meta.MultiSearch</code> is available through <a href="https://github.com/fracpete/multisearch-weka-package">this</a> Weka package (requires Weka 3.7.11 or later; for downloads see the <em>Releases</em> section). MultiSearch is similar to GridSearch, more general and simpler at the same time. More general, because it allows the optimization of an arbitrary number of parameters, not just two. Simpler, because it does not offer any search space expansions or <a href="http://gnuplot.info/">gnuplot</a> output and less options.</p>
 <p>For each parameter to optimize, the user has to define a <em>search parameter</em>. There are two types of parameters available:</p>
 <ul>
@@ -352,17 +352,17 @@ Correlation coefficient
 <li>Accuracy (= ACC)</li>
 <li>Kappa (= KAP)</li>
 </ul>
-<h3 id="auto-weka">Auto-WEKA</h3>
+<h3 id="auto-weka">Auto-WEKA<a class="headerlink" href="#auto-weka" title="Permanent link">#</a></h3>
 <p><a href="https://www.cs.ubc.ca/labs/beta/Projects/autoweka/">Auto-WEKA</a> is available as a package through the WEKA package manager. It provides the class <code>weka.classifiers.meta.AutoWEKAClassifier</code> and optimizes all parameters of all learners. It also automatically determines the best learner to use and the best attribute selection method for a given dataset. More information is available on the project website and the <a href="https://www.cs.ubc.ca/labs/beta/Projects/autoweka/manual.pdf">manual</a>.</p>
-<h3 id="downloads">Downloads</h3>
+<h3 id="downloads">Downloads<a class="headerlink" href="#downloads" title="Permanent link">#</a></h3>
 <ul>
 <li><a href="../files/CVParam.java">CVParam.java</a> - optimizes J48's <code>-C</code> parameter</li>
 </ul>
-<h3 id="see-also">See also</h3>
+<h3 id="see-also">See also<a class="headerlink" href="#see-also" title="Permanent link">#</a></h3>
 <ul>
 <li><a href="../lib_svm/">LibSVM</a> - you need additional jars in your <a href="../classpath/">CLASSPATH</a> to be able to use LibSVM</li>
 </ul>
-<h3 id="links">Links</h3>
+<h3 id="links">Links<a class="headerlink" href="#links" title="Permanent link">#</a></h3>
 <ul>
 <li><a href="http://www.gnuplot.info/">gnuplot homepage</a></li>
 <li><a href="http://java.sun.com/docs/books/tutorial/javabeans/">Java Beans</a></li>

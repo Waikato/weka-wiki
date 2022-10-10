@@ -128,7 +128,7 @@
               
                 <p>Usually, the term "package" is used to refer to Java's concept of organizing classes. From version 3.7.2, Weka has the concept of a package as a bundle of additional functionality, separate from that supplied in the main weka.jar file. A package consists of various jar files, documentation, meta data, and possibly source code. Many learning algorithms and tools that were present in earlier versions of Weka have become separate packages from version 3.7.2. This simplifies the core Weka system and allows users to install just what they need or are interested in. It also provides a simple mechanism for people to use when contributing to Weka. There are a number of packages available for Weka that add learning schemes or extend the functionality of the core system in some fashion. Many are provided by the Weka team and others are from third parties.</p>
 <p>Weka includes a facility for the management of packages and a mechanism to load them dynamically at runtime. There is both a command-line and GUI package manager. If the package manager does not start when you try to run it, take a look at <a href="../../faqs/package_manager_doesnt_start/">this</a> page.</p>
-<h3 id="command-line-package-management">Command line package management</h3>
+<h3 id="command-line-package-management">Command line package management<a class="headerlink" href="#command-line-package-management" title="Permanent link">#</a></h3>
 <p>Assuming that the weka.jar file is in the classpath, the package manager can be accessed by typing:</p>
 <pre><code> java weka.core.WekaPackageManager
 </code></pre>
@@ -190,7 +190,7 @@ Maintainer:Weka team &lt;wekalist@list.scms.waikato.ac.nz&gt;
 <li>providing a URL (beginning with <code>http://</code>) to a package zip file on the web will download and attempt to install the zip file as a Weka package</li>
 </ul>
 <p>The <code>uninstall-package</code> command will uninstall the named package. Of course, the named package has to be installed for this command to have any effect!</p>
-<h4 id="running-installed-learning-algorithms">Running installed learning algorithms</h4>
+<h4 id="running-installed-learning-algorithms">Running installed learning algorithms<a class="headerlink" href="#running-installed-learning-algorithms" title="Permanent link">#</a></h4>
 <p>Running learning algorithms that come with the main weka distribution (i.e. are contained in the weka.jar file) was covered earlier in the <a href="../../primer/">Primer</a>. But what about algorithms from packages that you’ve installed using the package manager? We don’t want to have to add a ton of jar files to our classpath every time we wan’t to run a particular algorithm. Fortunately, we don’t have to. Weka has a mechanism to load installed packages dynamically at run time. This means that newly installed packages are available in Weka's GUIs immediately.</p>
 <p>What about running algorithms from packages on the command line I hear you ask? We can run a named algorithm by using the Run command:</p>
 <pre><code> java weka.Run
@@ -221,37 +221,37 @@ Maintainer:Weka team &lt;wekalist@list.scms.waikato.ac.nz&gt;
 <p>To reduce startup time you can also turn off the dynamic loading of installed packages by specifying the <code>-no-load</code> option. In this case, you will need to explicitly include any packaged algorithms in your classpath if you plan to use them. E.g.</p>
 <pre><code>java -classpath ./weka.jar:$HOME/wekafiles/packages/DTNB/DTNB.jar rweka.Run -no-load -no-scan weka.classifiers.rules.DTNB
 </code></pre>
-<h3 id="gui-package-manager">GUI package manager</h3>
+<h3 id="gui-package-manager">GUI package manager<a class="headerlink" href="#gui-package-manager" title="Permanent link">#</a></h3>
 <p>As well as a command line client, there is also a graphical interface to Weka’s package management system. This is available from the <code>Tools</code> menu in the <code>GUIChooser</code>. All the functionality available in the command line client to the package management system is available in the GUI version, along with the ability to install and uninstall multiple packages in one hit.</p>
 <p><img alt="Screenshot" src="../../img/PackageManagerMain.png" /></p>
 <p>The package manager’s window is split horizontally into two parts: at the top is a list of packages and at the bottom is a mini browser that can be used to display information on the currently selected package.</p>
 <p>The package list shows the name of a package, its category, the currently installed version (if installed), the latest version available via the repository and whether the package has been loaded or not. This list may be sorted by either package name or category by clicking on the appropriate column header. A second click on the same header reverses the sort order. Three radio buttons in the upper left of the window can be used to filter what is displayed in the list. All packages (default), all available packages (i.e. those not yet installed) or only installed packages can be displayed.</p>
 <p>If multiple versions of a package are available, they can be accessed by clicking on an entry in the “Repository version” column:</p>
 <p><img alt="Screenshot" src="../../img/PackageManagerVersions.png" /></p>
-<h4 id="installing-and-removing-packages">Installing and removing packages</h4>
+<h4 id="installing-and-removing-packages">Installing and removing packages<a class="headerlink" href="#installing-and-removing-packages" title="Permanent link">#</a></h4>
 <p>At the very top of the window are three buttons. On the left-hand side is a button that can be used to refresh the cached copy of the package repository meta data. The first time that the package manager (GUI or command line) is used there will be a short delay as the initial cache is established. </p>
 <p><strong>NOTE: Weka (3.7.2) will not automatically check for new information at the central repository, so it is a good idea to refresh the local cache regularly. From Weka 3.7.3 the package manager will notify you if there are new packages available at the central repository</strong>.</p>
 <p>The two buttons at the top right are used to install and remove packages repspectively. Multiple packages may be installed/removed by using a shift-left-click combination to select a range and/or by using a command-left-click combination to add to the selection. Underneath the install and uninstall but- tons is a checkbox that can be enabled to ignore any dependencies required by selected packages and any conflicts that may occur. Installing packages while this checkbox is selected will '''not''' install required dependencies.</p>
 <p>Some packages may have additional information on how to complete the installation or special instructions that gets displayed when the package is installed:</p>
 <p><img alt="Screenshot" src="../../img/PackageManagerSpecial.png" /></p>
 <p>Usually it is not necessary to restart Weka after packages have been installed—the changes should be available immediately. An exception is when upgrading a package that is already installed. If in doubt, restart Weka.</p>
-<h4 id="unofficial-packages">Unofficial packages</h4>
+<h4 id="unofficial-packages">Unofficial packages<a class="headerlink" href="#unofficial-packages" title="Permanent link">#</a></h4>
 <p>The package list shows those packages that have their meta data stored in Weka’s central meta data repository. These packages are “official” Weka packages and the Weka team as verified that they appear to provide what is advertised (and do not contain malicious code or malware).</p>
 <p>It is also possible to install an <em>unofficial</em> package that has not gone through the process of become official. Unofficial packages might be provided, for exam- ple, by researchers who want to make experimental algorithms quickly available to the community for feedback. Unofficial packages can be installed by clicking the “File/url” button on the top-right of the package manager window. This will bring up an “Unnoficial package install” dialog where the user can browse their file system for a package zip file or directly enter an URL to the package zip file. Note that no dependency checking is done for unofficial packages.</p>
-<h4 id="using-a-http-proxy">Using a HTTP proxy</h4>
+<h4 id="using-a-http-proxy">Using a HTTP proxy<a class="headerlink" href="#using-a-http-proxy" title="Permanent link">#</a></h4>
 <p>Both the GUI and command line package managers can operate via a http proxy. To do so, start Weka from the command line and supply property values for the proxy host and port:</p>
 <pre><code> java -Dhttp.proxyHost=some.proxy.somewhere.net -Dhttp.proxyPort=port weka.gui.GUIChooser
 </code></pre>
 <p>If your proxy requires authentication, then Weka will present a GUI dialog where you can enter your username and password. If you are running on a headless environment, then two more (non-standard) properties can be supplied:</p>
 <pre><code> -Dhttp.proxyUser=some_user_name -Dhttp.proxyPassword=some_password
 </code></pre>
-<h4 id="using-an-alternative-central-package-meta-data-repository">Using an alternative central package meta data repository</h4>
+<h4 id="using-an-alternative-central-package-meta-data-repository">Using an alternative central package meta data repository<a class="headerlink" href="#using-an-alternative-central-package-meta-data-repository" title="Permanent link">#</a></h4>
 <p>By default, both the command-line and GUI package managers use the central package meta data repository hosted on Sourceforge. In the unlikely event that this site is unavailable for one reason or another, it is possible to point the package management system at an alternative repository. This mechanism allows a temporary backup of the official repostory to be accessed, local mirrors to be established and alternative repositories to be set up for use etc.</p>
 <p>An alternative repository can be specified by setting a Java property:</p>
 <pre><code>weka.core.wekaPackageRepositoryURL=http://some.mirror.somewhere
 </code></pre>
 <p>This can either be set when starting Weka from the command line with the <code>-D</code> flag, or it can be placed into a file called “PackageRepository.props” in <code>$WEKA_HOME/props</code>. The default value of <code>WEKA_HOME</code> is <code>user.home/wekafiles</code>, where <code>user.home</code> is the user’s home directory. More information on how and where Weka stores configuration information is given in the <a href="../structure/">Package Structure</a> article.</p>
-<h3 id="package-manager-property-file">Package manager property file</h3>
+<h3 id="package-manager-property-file">Package manager property file<a class="headerlink" href="#package-manager-property-file" title="Permanent link">#</a></h3>
 <p>As mentioned in the previous section, an alternative package meta data repository can be specified by placing an entry in the PackageRepository.props file in <code>$WEKA_HOME/props</code>. From Weka 3.7.8 (and snapshot builds after 24 September 2012), the package manager also looks for properties placed in <code>$WEKA_HOME/props/PackageManager.props</code>. The current set of properties that can be set are:</p>
 <pre><code>weka.core.wekaPackageRepositoryURL=http://some.mirror.somewhere
 weka.packageManager.offline=[true | false]

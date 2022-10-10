@@ -140,7 +140,7 @@
 </ul>
 <p><em>-- taken from the <a href="https://groovy-lang.org/">Groovy homepage</a></em></p>
 <p>This article explains how to use Weka classes within Groovy.</p>
-<h3 id="groovy-classpath">Groovy CLASSPATH</h3>
+<h3 id="groovy-classpath">Groovy CLASSPATH<a class="headerlink" href="#groovy-classpath" title="Permanent link">#</a></h3>
 <p>Additional jars can be added to Groovy in various ways:</p>
 <ul>
 <li><strong><code>$GROOVY_HOME/lib</code></strong><blockquote>
@@ -176,17 +176,17 @@
 <p><code>groovy -classpath &lt;jars, etc=""&gt; &lt;script.groovy&gt;</code></p>
 </blockquote>
 </blockquote>
-<h3 id="the-grape">The Grape:</h3>
+<h3 id="the-grape">The Grape:<a class="headerlink" href="#the-grape" title="Permanent link">#</a></h3>
 <p>Groovy dependency manager </p>
 <p>Grape is a JAR dependency manager embedded into Groovy. Grape lets you quickly add maven repository dependencies to your classpath, making scripting even easier. Weka can be added as a dependency in your Groovy script</p>
 <p>You can also search for dependencies and versions numbers on <a href="http://mvnrepository.com/">mvnrepository.com</a> and it will provide you the <code>Grab</code> annotation form of the <code>pom.xml</code> entry.</p>
-<h3 id="accessing-weka-classes-from-groovy">Accessing Weka classes from Groovy</h3>
-<h4 id="requirements">Requirements</h4>
+<h3 id="accessing-weka-classes-from-groovy">Accessing Weka classes from Groovy<a class="headerlink" href="#accessing-weka-classes-from-groovy" title="Permanent link">#</a></h3>
+<h4 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">#</a></h4>
 <ul>
 <li>Groovy 1.5.7 or later</li>
 <li>Weka 3.5.4 or later</li>
 </ul>
-<h4 id="implementation">Implementation</h4>
+<h4 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link">#</a></h4>
 <p>If your Groovy CLASSPATH has been setup correctly, you can use all those classes in Groovy straight away. E.g., after including the <code>weka.jar</code>, I can run the following little script (<a href="../files/UsingJ48.groovy">UsingJ48.groovy</a> to train J48 on a supplied dataset and output its model:</p>
 <pre><code class="language-groovy">import weka.classifiers.trees.J48
 import weka.core.converters.ConverterUtils.DataSource
@@ -210,13 +210,13 @@ println j48
 </code></pre>
 <p>A slightly more elaborate example can be found in <a href="../files/UsingJ48Ext.groovy">UsingJ48Ext.groovy</a>, which uses more methods of the <code>weka.classifiers.Evaluation</code> class.</p>
 <p><strong>NB:</strong> The example <code>UsingJ48Ext.groovy</code> needs Weka 3.6.x (or a snapshot of the developer version) to run, due to some changes in the API.</p>
-<h3 id="implementing-a-groovy-classifier">Implementing a Groovy classifier</h3>
-<h4 id="requirements_1">Requirements</h4>
+<h3 id="implementing-a-groovy-classifier">Implementing a Groovy classifier<a class="headerlink" href="#implementing-a-groovy-classifier" title="Permanent link">#</a></h3>
+<h4 id="requirements_1">Requirements<a class="headerlink" href="#requirements_1" title="Permanent link">#</a></h4>
 <ul>
 <li>Groovy 1.5.7 or later</li>
 <li>developer version of Weka later than 3.5.8, <a href="../snapshots/">snapshots</a> later than 02/02/2009</li>
 </ul>
-<h4 id="implementation_1">Implementation</h4>
+<h4 id="implementation_1">Implementation<a class="headerlink" href="#implementation_1" title="Permanent link">#</a></h4>
 <p>Implementing a Groovy classifier is pretty straight-forward, since the syntax is almost the same and Java classes are imported/used in Groovy just like in Java. The <a href="../files/GeroR.groovy">GeroR.groovy</a> file re-implements the <code>weka.classifiers.rules.ZeroR</code> classifier as Groovy script.</p>
 <p>The class declaration for <code>GeroR.groovy</code> looks like this, for instance:</p>
 <pre><code class="language-groovy">class GeroR
@@ -226,8 +226,8 @@ println j48
 }
 </code></pre>
 <p>For more information on implementing classifiers, see the <a href="../writing_classifier/">Writing your own Classifier</a> article.</p>
-<h4 id="execution">Execution</h4>
-<h5 id="groovy">Groovy</h5>
+<h4 id="execution">Execution<a class="headerlink" href="#execution" title="Permanent link">#</a></h4>
+<h5 id="groovy">Groovy<a class="headerlink" href="#groovy" title="Permanent link">#</a></h5>
 <p>As long as you have the <code>weka.jar</code> in your Groovy environment, you can directly run these scripts using the <code>groovy</code> command.
 Here is an example, executing the <code>FunkyClassifier.groovy</code> script in a Linux bash:</p>
 <pre><code class="language-bash">groovy -classpath weka.jar \
@@ -235,7 +235,7 @@ Here is an example, executing the <code>FunkyClassifier.groovy</code> script in 
   -t /my/datasets/data.arff \
   &lt;more options for the Groovy script&gt;
 </code></pre>
-<h5 id="weka">Weka</h5>
+<h5 id="weka">Weka<a class="headerlink" href="#weka" title="Permanent link">#</a></h5>
 <p>In order to execute classifiers written in Groovy, you have to use the <code>weka.classifiers.scripting.GroovyClassifier</code> classifier.
 Here is an example, executing the <code>FunkyClassifier.groovy</code> script in a Linux bash:</p>
 <pre><code class="language-bash">java weka.jar:groovy-all-1.5.7.jar \
@@ -244,7 +244,7 @@ Here is an example, executing the <code>FunkyClassifier.groovy</code> script in 
   -G /some/where/FunkyClassifier.groovy \
   -- &lt;more options for the Groovy script&gt;
 </code></pre>
-<h3 id="downloads">Downloads</h3>
+<h3 id="downloads">Downloads<a class="headerlink" href="#downloads" title="Permanent link">#</a></h3>
 <ul>
 <li><a href="../files/UsingJ48.groovy">UsingJ48.groovy</a> - simple example for using J48 in a Groovy script</li>
 <li><a href="../files/UsingJ48Ext.groovy">UsingJ48Ext.groovy</a> - a slightly more elaborate example script for using J48</li>
@@ -254,7 +254,7 @@ Here is an example, executing the <code>FunkyClassifier.groovy</code> script in 
 <li><a href="../files/multiple_eval.groovy">multiple_eval.groovy</a> - evaluates multiple classifiers on multiple train/test pairs and outputs statistics</li>
 <li><a href="../files/AttributeStatistics.groovy">AttributeStatistics.groovy</a> - Outputs statistics for each attribute in a dataset</li>
 </ul>
-<h3 id="links">Links</h3>
+<h3 id="links">Links<a class="headerlink" href="#links" title="Permanent link">#</a></h3>
 <ul>
 <li>Groovy<ul>
 <li><a href="https://groovy-lang.org/">Homepage</a></li>

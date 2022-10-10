@@ -128,7 +128,7 @@
               
                 <p>The following is based on a <a href="https://list.waikato.ac.nz/hyperkitty/list/wekalist@list.waikato.ac.nz/message/TJIEPO2CYGBJE5NFYPIP26SL4WFMWEZC/">post</a> 
 from Eibe Frank on the Weka mailing list.</p>
-<h3 id="cpu-acceleration">CPU acceleration</h3>
+<h3 id="cpu-acceleration">CPU acceleration<a class="headerlink" href="#cpu-acceleration" title="Permanent link">#</a></h3>
 <p>WEKA implementations of algorithms that are based on standard linear algebra generally apply the MTJ library, which, 
 optionally, can use a much faster native backend than the default pure-Java backend. Install the appropriate 
 <code>netlibNative*</code> package for your platform using the WEKA package manager to get this acceleration.</p>
@@ -156,7 +156,7 @@ is install the WEKA package netlibNativeOSX* to get high-speed matrix algebra.</
 <li>LeastMedSq</li>
 <li>RBFNetwork</li>
 </ul>
-<h3 id="gpu-acceleration">GPU acceleration</h3>
+<h3 id="gpu-acceleration">GPU acceleration<a class="headerlink" href="#gpu-acceleration" title="Permanent link">#</a></h3>
 <p>Now, regarding GPUs, it's actually possible to set up a GPU-based backend for MTJ/NetlibJava. However, WEKA uses 
 double-precision arithmetic and consumer-grade GPUs are optimised for single-precision arithmetic and very slow 
 when using double-precision arithmetic. (Neural networks in deep learning libraries are generally trained using 

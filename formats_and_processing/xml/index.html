@@ -127,7 +127,7 @@
             <div class="section" itemprop="articleBody">
               
                 <p>Weka now supports <a href="http://www.w3c.org/xml/">XML</a> (e<strong>X</strong>tensible <strong>M</strong>arkup <strong>L</strong>anguage) in several places:</p>
-<h3 id="command-line">Command Line</h3>
+<h3 id="command-line">Command Line<a class="headerlink" href="#command-line" title="Permanent link">#</a></h3>
 <p>WEKA now allows to start Classifiers and Experiments with the <code>-xml</code> option followed by a filename to retrieve the command line options from the XML file instead of the command line.</p>
 <p>For such simple classifiers like e.g. J48 this looks like overkill, but as soon as one uses Meta-Classifiers or Meta-Meta-Classifiers the handling gets tricky and one spends a lot of time looking for missing quotes. With the hierarchical structure of XML files it is simple to plug in other classifiers by just exchanging tags.</p>
 <p>The DTD for the XML options is quite simple:</p>
@@ -234,7 +234,7 @@ E.g., does <code>-W weka.classifiers.trees.J48 -- -C 0.001</code> become this:</
 <p><strong>Responsible Class(es):</strong>
 <code>weka.core.xml.XMLOptions</code></p>
 <p><strong>Example(s):</strong> <a href="../../files/commandline.xml">commandline.xml</a></p>
-<h3 id="serialization-of-experiments">Serialization of Experiments</h3>
+<h3 id="serialization-of-experiments">Serialization of Experiments<a class="headerlink" href="#serialization-of-experiments" title="Permanent link">#</a></h3>
 <p>It is now possible to serialize the Experiments from the <em>WEKA Experimenter</em> not only in the proprietary binary format Java offers with serialization (with this you run into problems trying to read old experiments with a newer WEKA version, due to different SerialUIDs), but also in XML. There are currently two different ways to do this:</p>
 <ul>
 <li><strong>built-in</strong><blockquote>
@@ -291,7 +291,7 @@ E.g., does <code>-W weka.classifiers.trees.J48 -- -C 0.001</code> become this:</
 <p><strong>Example(s):</strong> <a href="../../files/serialization.koml">serialization.koml</a></p>
 </blockquote>
 <p>The experiment class can of course read those XML files if passed as input or output file (see options of <code>weka.experiment.Experiment</code> and <code>weka.experiment.RemoteExperiment</code>).</p>
-<h3 id="serialization-of-classifiers">Serialization of Classifiers</h3>
+<h3 id="serialization-of-classifiers">Serialization of Classifiers<a class="headerlink" href="#serialization-of-classifiers" title="Permanent link">#</a></h3>
 <p>The options for models of a classifier, <code>-l</code> for the input model and <code>-d</code> for the output model, now also supports XML serialized files. Here we have to differentiate between two different formats:</p>
 <ul>
 <li>
@@ -315,7 +315,7 @@ it returns only a flat String-Array and not a tree structure.</p>
 <code>weka.core.xml.KOML</code>
 <code>weka.classifiers.xml.XMLClassifier</code></p>
 <p><strong>Example(s):</strong> <a href="../../files/commandline_inputmodel.xml">commandline_inputmodel.xml</a></p>
-<h3 id="bayesian-networks">Bayesian Networks</h3>
+<h3 id="bayesian-networks">Bayesian Networks<a class="headerlink" href="#bayesian-networks" title="Permanent link">#</a></h3>
 <p>The GraphVisualizer (<code>weka.gui.graphvisualizer.GraphVisualizer</code>) can save graphs into the <a href="http://sites.poli.usp.br/p/fabio.cozman/Research/InterchangeFormat/index.html">Interchange Format</a> for Bayesian Networks (BIF). If started from command line with an XML filename as first parameter and not from the Explorer it can display the given file directly.</p>
 <p>The DTD for BIF is this:</p>
 <pre><code class="language-xml"> &lt;!DOCTYPE BIF [
@@ -340,7 +340,7 @@ it returns only a flat String-Array and not a tree structure.</p>
 <code>weka.classifiers.bayes.net.BIFReader</code>
 <code>weka.gui.graphvisualizer.BIFParser</code></p>
 <p><strong>Example(s):</strong> <a href="../../files/bif.xml">bif.xml</a></p>
-<h3 id="tools">Tools</h3>
+<h3 id="tools">Tools<a class="headerlink" href="#tools" title="Permanent link">#</a></h3>
 <ul>
 <li>
 <p><strong>Experimenter options</strong></p>
@@ -363,7 +363,7 @@ it returns only a flat String-Array and not a tree structure.</p>
 <p><em>Note: 
 you can use any XSLT processor, e.g., xt; xsltproc is just one.</em></p>
 </blockquote>
-<h3 id="downloads">Downloads</h3>
+<h3 id="downloads">Downloads<a class="headerlink" href="#downloads" title="Permanent link">#</a></h3>
 <ul>
 <li>KOML<ul>
 <li><a href="../../files/koml12.dtd">koml12.dtd</a> - local copy of the KOML DTD 1.2</li>

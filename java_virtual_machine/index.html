@@ -127,9 +127,9 @@
             <div class="section" itemprop="articleBody">
               
                 <p>The <a href="http://en.wikipedia.org/wiki/java_virtual_machine">Java virtual machine</a> (JVM) is the platform dependent <a href="http://en.wikipedia.org/wiki/interpreter_%28computing%29">interpreter</a> of the <a href="http://en.wikipedia.org/wiki/java_%28programming_language%29">Java</a> <a href="http://en.wikipedia.org/wiki/bytecode">bytecode</a> (i.e., the <a href="http://en.wikipedia.org/wiki/class_%28computer_science%29">classes</a>). It translates the bytecode into machine specific instructions.</p>
-<h3 id="amount-of-available-memory">Amount of available memory</h3>
+<h3 id="amount-of-available-memory">Amount of available memory<a class="headerlink" href="#amount-of-available-memory" title="Permanent link">#</a></h3>
 <p>If you start the virtual machine without any parameters it takes default values for stack and heap. In case you run into <a href="../faqs/OutOfMemoryException/">OutOfMemory</a> exceptions, try to start your JVM with a bigger maximum heap size. (However, there's a limit, depending on your OS. See the <a href="./#32-bit">32-Bit</a> and <a href="./#64-bit">64-Bit</a> sections.)</p>
-<h3 id="32-bit">32-bit</h3>
+<h3 id="32-bit">32-bit<a class="headerlink" href="#32-bit" title="Permanent link">#</a></h3>
 <p>With a 32-Bit machine you can address at most 4GB of <a href="http://en.wikipedia.org/wiki/virtual_memory">virtual memory</a>. Different operating systems divide up the memory further into //system/kernel<em> and </em>user space*.</p>
 <p>From experience, you can achieve the following maximum sizes for the <em>heap</em> on Windows and Linux:</p>
 <ul>
@@ -138,7 +138,7 @@
 <li>Linux: 
 1.7GB</li>
 </ul>
-<h3 id="64-bit">64-bit</h3>
+<h3 id="64-bit">64-bit<a class="headerlink" href="#64-bit" title="Permanent link">#</a></h3>
 <p>Larger heap sizes are available when using 64-bit Java in a conjunction with a 64-bit operating system.</p>
 <p>There is more information available <a href="http://www.oracle.com/technetwork/java/hotspotfaq-138619.html#gc_heap_32bit">here</a>.</p>
               

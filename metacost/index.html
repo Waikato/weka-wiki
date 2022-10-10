@@ -130,7 +130,7 @@
 <p><em>Pedro Domingos: MetaCost: A general method for making classifiers cost-sensitive. In: 
 Fifth International Conference on Knowledge Discovery and Data Mining, 155-164, 1999.</em></p>
 <p>This classifier should produce similar results to one created by passing the base learner to Bagging, which is in turn passed to a CostSensitiveClassifier operating on minimum expected cost. The difference is that MetaCost produces a single cost-sensitive classifier of the base learner, giving the benefits of fast classification and interpretable output (if the base learner itself is interpretable). This implementation uses all bagging iterations when reclassifying training data (the MetaCost paper reports a marginal improvement when only those iterations containing each training instance are used in reclassifying that instance).</p>
-<h3 id="examples">Examples</h3>
+<h3 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">#</a></h3>
 <p>The following cost matrix is used for a 3-class problem:</p>
 <pre><code class="language-text"> -3  1  1
   1 -6  1
@@ -149,12 +149,12 @@ Fifth International Conference on Knowledge Discovery and Data Mining, 155-164, 
 +---------------+-----------------+--------------+
 </code></pre>
 <p><code>*</code> in case of a tie, the first one will be picked.</p>
-<h3 id="see-also">See also</h3>
+<h3 id="see-also">See also<a class="headerlink" href="#see-also" title="Permanent link">#</a></h3>
 <ul>
 <li><a href="../cost_sensitive_classifier/">CostSensitiveClassifier</a></li>
 <li><a href="../cost_matrix/">CostMatrix</a></li>
 </ul>
-<h3 id="links">Links</h3>
+<h3 id="links">Links<a class="headerlink" href="#links" title="Permanent link">#</a></h3>
 <ul>
 <li><a href="http://citeseer.ist.psu.edu/domingos99metacost.html">Publication on CiteSeer</a></li>
 </ul>

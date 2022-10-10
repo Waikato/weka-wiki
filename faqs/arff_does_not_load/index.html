@@ -130,7 +130,7 @@
 <pre><code> java weka.core.Instances filename.arff
 </code></pre>
 <p>where you substitute <code>filename</code> for the actual name of your file. This should return an error if there is a problem reading the file, or show some statistics if the file is ok. The error message you get should give some indication of what is wrong.</p>
-<h3 id="nominal-value-not-declared-in-header-read-tokenx-line-y">nominal value not declared in header, read Token[X], line Y</h3>
+<h3 id="nominal-value-not-declared-in-header-read-tokenx-line-y">nominal value not declared in header, read Token[X], line Y<a class="headerlink" href="#nominal-value-not-declared-in-header-read-tokenx-line-y" title="Permanent link">#</a></h3>
 <p>If you get this error message than you seem to have declared a nominal attribute in the ARFF header section, but WEKA came across a value (<strong>"X"</strong>) in the data (in line <strong>Y</strong>) for this particular attribute that wasn't listed as possible value.</p>
 <p><strong>All</strong> nominal values that appear in the data must be declared in the header.</p>
               

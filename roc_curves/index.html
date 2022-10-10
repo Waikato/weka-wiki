@@ -127,10 +127,10 @@
             <div class="section" itemprop="articleBody">
               
                 <p><img style="float: right; margin: 10px; " width="250" src="../img/Breast-cancer_roc-curve.jpg"></p>
-<h3 id="general">General</h3>
+<h3 id="general">General<a class="headerlink" href="#general" title="Permanent link">#</a></h3>
 <p>Weka just varies the threshold on the class probability estimates in each case. What does that mean? In case of a classifier that does not return proper class probabilities (like SMO with the -M option, or IB1), you will end up with only two points in the curve. Using a classifier that returns proper distributions, like BayesNet, J48 or SMO with -M option for building logistic models, you will get nice curves.</p>
 <p>The class used for calculating the ROC and also the <a href="../auc/">AUC</a> (= area under the curve) is <a href="https://weka.sourceforge.io/doc.stable-3-8/weka/classifiers/evaluation/ThresholdCurve.html">weka.classifiers.evaluation.ThresholdCurve</a>.</p>
-<h3 id="commandline">Commandline</h3>
+<h3 id="commandline">Commandline<a class="headerlink" href="#commandline" title="Permanent link">#</a></h3>
 <p>You can output the data for the ROC curves with the following options:</p>
 <pre><code> -threshold-file &lt;file&gt;
         The file to save the threshold data to.
@@ -144,8 +144,8 @@
 <pre><code class="language-bash"> java weka.classifiers.trees.J48 -t /some/where/anneal.arff \
       -threshold-file anneal_roc_U.arff -threshold-label U
 </code></pre>
-<h3 id="explorer">Explorer</h3>
-<h4 id="generating">Generating</h4>
+<h3 id="explorer">Explorer<a class="headerlink" href="#explorer" title="Permanent link">#</a></h3>
+<h4 id="generating">Generating<a class="headerlink" href="#generating" title="Permanent link">#</a></h4>
 <p>The Weka Explorer enables you to plot the ROC (<em>Receiver operating characteristic</em>) curve for a certain class label of dataset:</p>
 <ul>
 <li>run a classifier on a dataset</li>
@@ -153,13 +153,13 @@
 <li>select <strong>Visualize threshold curve</strong> and choose the class label you want the plot for</li>
 </ul>
 <p><strong>Note:</strong> the <a href="../auc/">AUC</a> for this plot is also displayed, just above the actual plot.</p>
-<h4 id="saving">Saving</h4>
+<h4 id="saving">Saving<a class="headerlink" href="#saving" title="Permanent link">#</a></h4>
 <p>You can save the ROC curve in two ways:</p>
 <ul>
 <li>as an <a href="../formats_and_processing/arff/">ARFF</a> file, containing the data points (can be displayed again)</li>
 <li>as an <strong>image</strong> (using <em>Alt+Shift+Left click</em> to bring up a save dialog)</li>
 </ul>
-<h4 id="loading">Loading</h4>
+<h4 id="loading">Loading<a class="headerlink" href="#loading" title="Permanent link">#</a></h4>
 <p>A previously saved ROC data file can be displayed in two ways:</p>
 <ul>
 <li>
@@ -170,14 +170,14 @@
 <p>with the <a href="../auc/">AUC</a> - needs <a href="../visualization/visualizing_roc_curve/">this</a> source code</p>
 </li>
 </ul>
-<h3 id="knowledgeflow">KnowledgeFlow</h3>
+<h3 id="knowledgeflow">KnowledgeFlow<a class="headerlink" href="#knowledgeflow" title="Permanent link">#</a></h3>
 <p>See <a href="../plotting_multiple_roc_curves/">Plotting multiple ROC curves</a>.</p>
-<h3 id="see-also">See also</h3>
+<h3 id="see-also">See also<a class="headerlink" href="#see-also" title="Permanent link">#</a></h3>
 <ul>
 <li><a href="../plotting_multiple_roc_curves/">Plotting multiple ROC curves</a></li>
 <li><a href="../generating_roc_curve/">Generating ROC curve</a></li>
 </ul>
-<h3 id="links">Links</h3>
+<h3 id="links">Links<a class="headerlink" href="#links" title="Permanent link">#</a></h3>
 <ul>
 <li><a href="http://en.wikipedia.org/wiki/ROC_Curve">WikiPedia article on ROC curve</a></li>
 <li><a href="https://weka.sourceforge.io/doc.stable-3-8/weka/classifiers/evaluation/ThresholdCurve.html">weka.classifiers.evaluation.ThresholdCurve</a></li>
