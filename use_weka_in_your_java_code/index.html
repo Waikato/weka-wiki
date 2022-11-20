@@ -136,6 +136,27 @@
 </ul>
 <p>The following sections explain how to use them in your own code. A link to an <strong>example class</strong> can be found at the end of this page, under the <a href="#links">Links</a> section. The classifiers and filters always list their options in the Javadoc API (<a href="https://weka.sourceforge.io/doc.stable-3-8/">stable</a>, <a href="https://weka.sourceforge.io/doc.dev/">developer</a> version) specification.</p>
 <p>A comprehensive source of information is the chapter <em>Using the API</em> of the Weka manual.</p>
+<h3 id="packages">Packages<a class="headerlink" href="#packages" title="Permanent link">#</a></h3>
+<h4 id="initialization">Initialization<a class="headerlink" href="#initialization" title="Permanent link">#</a></h4>
+<p>In order to get your installed Weka packages initialized and also the internal MTJ and arpack libraries added to 
+the classpath, call the <code>loadPackages</code> method of the <code>weka.core.WekaPackageManager</code> class before you instantiate
+any other classifiers, clusterers, filters, etc:</p>
+<pre><code>import weka.core.WekaPackageManager;
+...
+WekaPackageManager.loadPackages(false);
+</code></pre>
+<h4 id="instantiation">Instantiation<a class="headerlink" href="#instantiation" title="Permanent link">#</a></h4>
+<p>For instantiating classes from packages, you can use the <code>forName</code> method of the <code>weka.core.Utils</code> class.</p>
+<p>The following example shows how to instantiate the (hypothetical) classifier <code>com.example.FunkyClassifier</code>, 
+which is available from a Weka package that is currently installed:</p>
+<pre><code>import weka.core.Utils;
+import weka.classifiers.Classifier;
+...
+Classifier cls = (Classifier) Utils.forName(
+                    Classifier.class, 
+                    &quot;com.example.FunkyClassifier&quot;, 
+                    new String[]{&quot;-R&quot;, &quot;1&quot;, &quot;-another-option&quot;});
+</code></pre>
 <h3 id="instances">Instances<a class="headerlink" href="#instances" title="Permanent link">#</a></h3>
 <h4 id="datasets">Datasets<a class="headerlink" href="#datasets" title="Permanent link">#</a></h4>
 <p>The <code>DataSource</code> class is not limited to ARFF files. It can also read CSV files and other formats (basically all file formats that Weka can import via its converters; it uses the file extension to determine the associated loader).</p>
