@@ -10,6 +10,34 @@ The following sections explain how to use them in your own code. A link to an **
 
 A comprehensive source of information is the chapter *Using the API* of the Weka manual.
 
+# Packages
+## Initialization
+In order to get your installed Weka packages initialized and also the internal MTJ and arpack libraries added to 
+the classpath, call the `loadPackages` method of the `weka.core.WekaPackageManager` class before you instantiate
+any other classifiers, clusterers, filters, etc:
+
+```
+import weka.core.WekaPackageManager;
+...
+WekaPackageManager.loadPackages(false);
+```
+
+## Instantiation
+For instantiating classes from packages, you can use the `forName` method of the `weka.core.Utils` class.
+
+The following example shows how to instantiate the (hypothetical) classifier `com.example.FunkyClassifier`, 
+which is available from a Weka package that is currently installed:
+
+```
+import weka.core.Utils;
+import weka.classifiers.Classifier;
+...
+Classifier cls = (Classifier) Utils.forName(
+                    Classifier.class, 
+                    "com.example.FunkyClassifier", 
+                    new String[]{"-R", "1", "-another-option"});
+```
+
 # Instances 
 ## Datasets
 The `DataSource` class is not limited to ARFF files. It can also read CSV files and other formats (basically all file formats that Weka can import via its converters; it uses the file extension to determine the associated loader).
