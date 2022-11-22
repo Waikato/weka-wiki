@@ -145,6 +145,29 @@ any other classifiers, clusterers, filters, etc:</p>
 ...
 WekaPackageManager.loadPackages(false);
 </code></pre>
+<h4 id="management">Management<a class="headerlink" href="#management" title="Permanent link">#</a></h4>
+<p>You can list <em>all</em> packages using:</p>
+<pre><code class="language-java">for (Package p: WekaPackageManager.getAllPackages())
+  System.out.println(&quot;- &quot; + p.getName() + &quot;/&quot; + p.getPackageMetaData().get(&quot;Version&quot;));
+</code></pre>
+<p>Currently <em>installed</em> packages using: </p>
+<pre><code class="language-java">for (Package p: WekaPackageManager.getInstalledPackages())
+  System.out.println(&quot;- &quot; + p.getName() + &quot;/&quot; + p.getPackageMetaData().get(&quot;Version&quot;));
+</code></pre>
+<p>And packages that are <em>available</em> for installation with:</p>
+<pre><code class="language-java">for (Package p: WekaPackageManager.getAvailablePackages())
+  System.out.println(&quot;- &quot; + p.getName() + &quot;/&quot; + p.getPackageMetaData().get(&quot;Version&quot;));
+</code></pre>
+<p>The following installs the latest version (version parameter is <code>null</code>) of the <code>alternatingModelTrees</code> package:</p>
+<pre><code class="language-java">WekaPackageManager.installPackageFromRepository(&quot;alternatingModelTrees&quot;, null, System.out);
+</code></pre>
+<p>And this call uninstalls the package:</p>
+<pre><code class="language-java">WekaPackageManager.uninstallPackage(&quot;alternatingModelTrees&quot;, true, System.out);
+</code></pre>
+<p>You can install a package also directly from a URL, e.g.:</p>
+<pre><code class="language-java">java.net.URL url = new java.net.URL(&quot;https://sourceforge.net/projects/weka/files/weka-packages/DilcaDistance1.0.2.zip/download&quot;);
+WekaPackageManager.installPackageFromURL(url, System.out);
+</code></pre>
 <h4 id="instantiation">Instantiation<a class="headerlink" href="#instantiation" title="Permanent link">#</a></h4>
 <p>For instantiating classes from packages, you can use the <code>forName</code> method of the <code>weka.core.Utils</code> class.</p>
 <p>The following example shows how to instantiate the (hypothetical) classifier <code>com.example.FunkyClassifier</code>, 
