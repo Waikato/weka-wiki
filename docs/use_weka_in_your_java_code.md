@@ -22,6 +22,48 @@ import weka.core.WekaPackageManager;
 WekaPackageManager.loadPackages(false);
 ```
 
+## Management
+You can list *all* packages using:
+
+```java
+for (Package p: WekaPackageManager.getAllPackages())
+  System.out.println("- " + p.getName() + "/" + p.getPackageMetaData().get("Version"));
+```
+
+Currently *installed* packages using: 
+
+```java
+for (Package p: WekaPackageManager.getInstalledPackages())
+  System.out.println("- " + p.getName() + "/" + p.getPackageMetaData().get("Version"));
+```
+
+And packages that are *available* for installation with:
+
+```java
+for (Package p: WekaPackageManager.getAvailablePackages())
+  System.out.println("- " + p.getName() + "/" + p.getPackageMetaData().get("Version"));
+```
+
+The following installs the latest version (version parameter is `null`) of the `alternatingModelTrees` package:
+
+```java
+WekaPackageManager.installPackageFromRepository("alternatingModelTrees", null, System.out);
+```
+
+And this call uninstalls the package:
+
+```java
+WekaPackageManager.uninstallPackage("alternatingModelTrees", true, System.out);
+```
+
+You can install a package also directly from a URL, e.g.:
+
+```java
+java.net.URL url = new java.net.URL("https://sourceforge.net/projects/weka/files/weka-packages/DilcaDistance1.0.2.zip/download");
+WekaPackageManager.installPackageFromURL(url, System.out);
+```
+
+
 ## Instantiation
 For instantiating classes from packages, you can use the `forName` method of the `weka.core.Utils` class.
 
