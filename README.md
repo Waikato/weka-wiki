@@ -31,7 +31,7 @@ Best approach is to install mkdocs (>= 0.16.0) in a virtual environment
 * Install the mkdocs package
 
   ```
-  ./venv/bin/pip install mkdocs
+  ./venv/bin/pip install mkdocs==1.4.2 jinja2==3.1.2 "Markdown<3.4.0" mkdocs-material==8.5.10
   ```
 
 

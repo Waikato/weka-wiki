@@ -1,15 +1,23 @@
 site_name: Weka Wiki
 site_url: https://github.com/Waikato/weka-wiki
 site_description: Documention on Weka that can also be found in the manual and the example archive that comes with each Weka download (zip or installer).
+repo_url: https://github.com/Waikato/weka-wiki
+edit_uri: edit/master/docs/
 theme:
-    name: readthedocs
-#    custom_dir: weka_theme/
+    name: material
 markdown_extensions:
     - toc:
         baselevel: 3
         permalink: "#"
+    - attr_list
+    - pymdownx.highlight:
+        anchor_linenums: true
+    - pymdownx.inlinehilite
+    - pymdownx.snippets
+    - pymdownx.superfences
 plugins:
     - search
+
 # if page names start with a blank, eg ' Some name', then they get
 # excluded from the navigation on the left-hand side
 nav:
