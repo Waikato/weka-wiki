@@ -1,188 +1,849 @@
-<!DOCTYPE html>
-<html class="writer-html5" lang="en" >
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://github.com/Waikato/weka-wiki/primer/" />
-      <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Primer - Weka Wiki</title>
-    <link rel="stylesheet" href="../css/theme.css" />
-    <link rel="stylesheet" href="../css/theme_extra.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
     
-      <script>
-        // Current page data
-        var mkdocs_page_name = "Primer";
-        var mkdocs_page_input_path = "primer.md";
-        var mkdocs_page_url = "/Waikato/weka-wiki/primer/";
-      </script>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documention on Weka that can also be found in the manual and the example archive that comes with each Weka download (zip or installer).">
+      
+      
+      
+        <link rel="canonical" href="https://github.com/Waikato/weka-wiki/primer/">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
     
-    <script src="../js/jquery-3.6.0.min.js" defer></script>
-    <!--[if lt IE 9]>
-      <script src="../js/html5shiv.min.js"></script>
-    <![endif]-->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-      <script>hljs.initHighlightingOnLoad();</script> 
-</head>
+    
+      
+        <title>Primer - Weka Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.472b142f.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.08040f6c.min.css">
+        
+      
+      
 
-<body class="wy-body-for-nav" role="document">
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
 
-  <div class="wy-grid-for-nav">
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
-    <div class="wy-side-scroll">
-      <div class="wy-side-nav-search">
-          <a href=".." class="icon icon-home"> Weka Wiki
-        </a><div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
-      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
-  </form>
-</div>
-      </div>
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="None" data-md-color-accent="None">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#basic-concepts" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
 
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
-                </li>
-              </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../downloading_weka/">Downloading and installing Weka</a>
-                </li>
-              </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../requirements/">Requirements</a>
-                </li>
-              </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../documentation/">Documentation</a>
-                </li>
-              </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../getting_help/">Getting help</a>
-                </li>
-              </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../citing_weka/">Citing Weka</a>
-                </li>
-              </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../literature/">Literature</a>
-                </li>
-              </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../development/">Development</a>
-                </li>
-              </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../history/">History</a>
-                </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Resources</span></p>
-              <ul class="current">
-                  <li class="toctree-l1"><a class="reference internal" href="../faq/">FAQ</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../not_so_faq/">Not so FAQ</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../troubleshooting/">Troubleshooting</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../using_the_api/">Using the API</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../extending_weka/">Extending Weka</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../formats_and_processing/arff/">ARFF Format</a>
-                  </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Primer</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#dataset">Dataset</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#classifier">Classifier</a>
-    </li>
-    </ul>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../datasets/">Datasets</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../visualization_articles/">Visualization Articles</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../properties_file/">Properties File</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../packages/">Packages</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../experimenter/experimenter/">Experimenter</a>
-                  </li>
-              </ul>
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Weka Wiki" class="md-header__button md-logo" aria-label="Weka Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Weka Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Primer
+            
+          </span>
+        </div>
       </div>
     </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="..">Weka Wiki</a>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
         
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
       </nav>
-      <div class="wy-nav-content">
-        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
-          <li>Resources &raquo;</li>
-      <li>Primer</li>
-    <li class="wy-breadcrumbs-aside">
-    </li>
-  </ul>
-  <hr/>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-            <div class="section" itemprop="articleBody">
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Waikato/weka-wiki" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
               
-                <p><a href="http://www.cs.waikato.ac.nz/%7eml/weka/">WEKA</a> is a comprehensive workbench for machine learning and data mining. Its main strengths lie in the classification area, where many of the main machine learning approaches have been implemented within a clean, object-oriented Java class hierarchy. Regression, association rule mining, time series prediction, and clustering algorithms have also been implemented.</p>
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Weka Wiki" class="md-nav__button md-logo" aria-label="Weka Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Weka Wiki
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Waikato/weka-wiki" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../downloading_weka/" class="md-nav__link">
+        Downloading and installing Weka
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../requirements/" class="md-nav__link">
+        Requirements
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../documentation/" class="md-nav__link">
+        Documentation
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting_help/" class="md-nav__link">
+        Getting help
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../citing_weka/" class="md-nav__link">
+        Citing Weka
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../literature/" class="md-nav__link">
+        Literature
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../development/" class="md-nav__link">
+        Development
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../history/" class="md-nav__link">
+        History
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10">
+          Resources
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Resources" data-md-level="1">
+        <label class="md-nav__title" for="__nav_10">
+          <span class="md-nav__icon md-icon"></span>
+          Resources
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/" class="md-nav__link">
+        FAQ
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../not_so_faq/" class="md-nav__link">
+        Not so FAQ
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting/" class="md-nav__link">
+        Troubleshooting
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../using_the_api/" class="md-nav__link">
+        Using the API
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../extending_weka/" class="md-nav__link">
+        Extending Weka
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../formats_and_processing/arff/" class="md-nav__link">
+        ARFF Format
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Primer
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Primer
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#basic-concepts" class="md-nav__link">
+    Basic concepts
+  </a>
+  
+    <nav class="md-nav" aria-label="Basic concepts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dataset" class="md-nav__link">
+    Dataset
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#classifier" class="md-nav__link">
+    Classifier
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#weka-filters" class="md-nav__link">
+    weka filters
+  </a>
+  
+    <nav class="md-nav" aria-label="weka filters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wekafilterssupervised" class="md-nav__link">
+    weka.filters.supervised
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attribute" class="md-nav__link">
+    attribute
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instance" class="md-nav__link">
+    instance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wekafiltersunsupervised" class="md-nav__link">
+    weka.filters.unsupervised
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attribute_1" class="md-nav__link">
+    attribute
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instance_1" class="md-nav__link">
+    instance
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wekaclassifiers" class="md-nav__link">
+    weka.classifiers
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../datasets/" class="md-nav__link">
+        Datasets
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../visualization_articles/" class="md-nav__link">
+        Visualization Articles
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../properties_file/" class="md-nav__link">
+        Properties File
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../packages/" class="md-nav__link">
+        Packages
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../experimenter/experimenter/" class="md-nav__link">
+        Experimenter
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#basic-concepts" class="md-nav__link">
+    Basic concepts
+  </a>
+  
+    <nav class="md-nav" aria-label="Basic concepts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dataset" class="md-nav__link">
+    Dataset
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#classifier" class="md-nav__link">
+    Classifier
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#weka-filters" class="md-nav__link">
+    weka filters
+  </a>
+  
+    <nav class="md-nav" aria-label="weka filters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wekafilterssupervised" class="md-nav__link">
+    weka.filters.supervised
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attribute" class="md-nav__link">
+    attribute
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instance" class="md-nav__link">
+    instance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wekafiltersunsupervised" class="md-nav__link">
+    weka.filters.unsupervised
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attribute_1" class="md-nav__link">
+    attribute
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instance_1" class="md-nav__link">
+    instance
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wekaclassifiers" class="md-nav__link">
+    weka.classifiers
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  <a href="https://github.com/Waikato/weka-wiki/edit/master/docs/primer.md" title="Edit this page" class="md-content__button md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+  <h1>Primer</h1>
+
+<p><a href="http://www.cs.waikato.ac.nz/%7eml/weka/">WEKA</a> is a comprehensive workbench for machine learning and data mining. Its main strengths lie in the classification area, where many of the main machine learning approaches have been implemented within a clean, object-oriented Java class hierarchy. Regression, association rule mining, time series prediction, and clustering algorithms have also been implemented.</p>
 <p>This document serves as a brief introduction to using WEKA from the command line interface. We will begin by describing <a href="./#basic-concepts">basic concepts</a> and ideas. Then, we will describe the <a href="./#weka-filters">weka.filters</a> package, which is used to transform input data, e.g., for preprocessing, transformation, feature generation and so on. Following that, we will consider some <a href="./#classifier">machine learning algorithms</a> that generate classification models. Afterwards, some practical examples are given.</p>
 <p>Note that, in the doc directory of the WEKA installation directory, you can find documentation of all Java classes in WEKA. Prepare to use it since this introduction is not intended to be complete. If you want to know exactly what is going on, take a look at the source code, which can be found in weka-src.jar and can be extracted via the jar utility from the Java Development Kit.</p>
 <h3 id="basic-concepts">Basic concepts<a class="headerlink" href="#basic-concepts" title="Permanent link">#</a></h3>
 <h4 id="dataset">Dataset<a class="headerlink" href="#dataset" title="Permanent link">#</a></h4>
 <p>A set of data items, the dataset, is a very basic concept of machine learning. A dataset is roughly equivalent to a two-dimensional spreadsheet or database table. In WEKA, it is implemented by the <a href="https://weka.sourceforge.io/doc.stable-3-8/weka/core/Instances.html">Instances</a> class. A dataset is a collection of examples, each one of class <a href="https://weka.sourceforge.io/doc.stable-3-8/weka/core/Instance.html">Instance</a>. Each Instance consists of a number of attributes, any of which can be nominal (= one of a predefined list of values), numeric (= a real or integer number) or a string (= an arbitrary long list of characters, enclosed in "double quotes"). WEKA also supports date attributes and relational attributes. The external representation of an Instances class is an ARFF file, which consists of a header describing the attribute types and the data as comma-separated list. Here is a short, commented example. A complete description of the ARFF file format can be found <a href="../formats_and_processing/arff/">here</a>.</p>
-<pre><code>% This is a toy example, the UCI weather dataset.
-% Any relation to real weather is purely coincidental.
-</code></pre>
-<p>Comment lines at the beginning of the dataset should give an indication of its source, context and meaning.</p>
-<pre><code>@relation golfWeatherMichigan_1988/02/10_14days
-</code></pre>
-<p>Here we state the internal name of the dataset. Try to be as descriptive as possible.</p>
-<pre><code>@attribute outlook {sunny, overcast rainy}
-@attribute windy {TRUE, FALSE}
-</code></pre>
-<p>Here we define two nominal attributes, <em>outlook</em> and <em>windy</em>. The former has three values: <em>sunny</em>, <em>overcast</em> and <em>rainy</em>; the latter two: 
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>% This is a toy example, the UCI weather dataset.
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>% Any relation to real weather is purely coincidental.
+</code></pre></div>
+Comment lines at the beginning of the dataset should give an indication of its source, context and meaning.</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>@relation golfWeatherMichigan_1988/02/10_14days
+</code></pre></div>
+Here we state the internal name of the dataset. Try to be as descriptive as possible.</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>@attribute outlook {sunny, overcast rainy}
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>@attribute windy {TRUE, FALSE}
+</code></pre></div>
+Here we define two nominal attributes, <em>outlook</em> and <em>windy</em>. The former has three values: <em>sunny</em>, <em>overcast</em> and <em>rainy</em>; the latter two: 
 <em>TRUE</em> and <em>FALSE</em>. Nominal values with special characters, commas or spaces are enclosed in 'single quotes'.</p>
-<pre><code>@attribute temperature numeric
-@attribute humidity numeric
-</code></pre>
-<p>These lines define two numeric attributes.</p>
-<pre><code>@attribute play {yes, no}
-</code></pre>
-<p>The last attribute is the default target or class variable used for prediction. In our case it is a nominal attribute with two values, making this a binary classification problem.</p>
-<pre><code>@data
-sunny,FALSE,85,85,no
-sunny,TRUE,80,90,no
-overcast,FALSE,83,86,yes
-rainy,FALSE,70,96,yes
-rainy,FALSE,68,80,yes
-</code></pre>
-<p>The rest of the dataset consists of the token @data, followed by comma-separated values for the attributes -- one line per example. In our case there are five examples.</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>@attribute temperature numeric
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>@attribute humidity numeric
+</code></pre></div>
+These lines define two numeric attributes.</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>@attribute play {yes, no}
+</code></pre></div>
+The last attribute is the default target or class variable used for prediction. In our case it is a nominal attribute with two values, making this a binary classification problem.</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>@data
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>sunny,FALSE,85,85,no
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>sunny,TRUE,80,90,no
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>overcast,FALSE,83,86,yes
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>rainy,FALSE,70,96,yes
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>rainy,FALSE,68,80,yes
+</code></pre></div>
+The rest of the dataset consists of the token @data, followed by comma-separated values for the attributes -- one line per example. In our case there are five examples.</p>
 <p>Some basic statistics and validation of given ARFF files can be obtained via the main() routine of <a href="https://weka.sourceforge.io/doc.stable-3-8/weka/core/Instances.html">weka.core.Instances</a>:</p>
-<pre><code class="language-bash"> java weka.core.Instances data/soybean.arff
-</code></pre>
-<p><code>weka.core</code> offers some other useful routines, e.g., <a href="https://weka.sourceforge.io/doc.stable-3-8/weka/core/converters/C45Loader.html">converters.C45Loader</a> and <a href="https://weka.sourceforge.io/doc.stable-3-8/weka/core/converters/CSVLoader.html">converters.CSVLoader</a>, which can be used to convert C45 datasets and comma/tab-separated datasets respectively, e.g.:</p>
-<pre><code class="language-bash"> java weka.core.converters.CSVLoader data.csv &gt; data.arff
- java weka.core.converters.C45Loader c45_filestem &gt; data.arff
-</code></pre>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a> java weka.core.Instances data/soybean.arff
+</code></pre></div>
+<code>weka.core</code> offers some other useful routines, e.g., <a href="https://weka.sourceforge.io/doc.stable-3-8/weka/core/converters/C45Loader.html">converters.C45Loader</a> and <a href="https://weka.sourceforge.io/doc.stable-3-8/weka/core/converters/CSVLoader.html">converters.CSVLoader</a>, which can be used to convert C45 datasets and comma/tab-separated datasets respectively, e.g.:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a> java weka.core.converters.CSVLoader data.csv &gt; data.arff
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a> java weka.core.converters.C45Loader c45_filestem &gt; data.arff
+</code></pre></div>
 <h4 id="classifier">Classifier<a class="headerlink" href="#classifier" title="Permanent link">#</a></h4>
 <p>Any classification or regression algorithm in WEKA is derived from the abstract <a href="https://weka.sourceforge.io/doc.stable-3-8/weka/classifiers/Classifier.html">Classifier</a> class. Surprisingly little is needed for a basic classifier: 
 a routine which generates a classifier model from a training dataset (= <code>buildClassifier</code>) and another routine which produces a classification for a given instance (= <code>classifyInstance</code>), or generates a probability distribution for all classes of the instance (= <code>distributionForInstance</code>).</p>
 <p>A classifier model is an arbitrary complex mapping from predictor attributes to the class attribute. The specific form and creation of this mapping, or model, differs from classifier to classifier. For example, <a href="https://weka.sourceforge.io/doc.stable-3-8/weka/classifiers/rules/ZeroR.html">ZeroR's</a> model just consists of a single value: 
 the most common class in the case of classification problems, or the median of all numeric values in case of predicting a numeric value (= regression learning). ZeroR is a trivial classifier, but it gives a lower bound on the performance of a given dataset that should be significantly improved by more complex classifiers. As such it is a reasonable test of how well the class can be predicted without considering the other attributes.</p>
 <p><a href="./#classifiers">Later</a>, we will explain how to interpret the output from classifiers in detail -- for now just focus on the <em>Correctly Classified Instances</em> in the section <em>Stratified cross-validation</em> and notice how it improves from ZeroR to J48 when we use the soybean data:</p>
-<pre><code class="language-bash"> java weka.classifiers.rules.ZeroR -t soybean.arff
- java weka.classifiers.trees.J48 -t soybean.arff
-</code></pre>
-<p>There are various approaches to determine the performance of classifiers. It can most simply be measured by counting the proportion of correctly predicted examples in a test dataset. This value is the <em>classification</em> <em>accuracy</em>, which is also <em>1-ErrorRate</em>. Both terms are used in literature.</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a> java weka.classifiers.rules.ZeroR -t soybean.arff
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a> java weka.classifiers.trees.J48 -t soybean.arff
+</code></pre></div>
+There are various approaches to determine the performance of classifiers. It can most simply be measured by counting the proportion of correctly predicted examples in a test dataset. This value is the <em>classification</em> <em>accuracy</em>, which is also <em>1-ErrorRate</em>. Both terms are used in literature.</p>
 <p>The simplest case for evaluation is when we use a training set and a test set which are mutually independent. This is referred to as hold-out estimate. To estimate variance in these performance estimates, hold-out estimates may be computed by repeatedly by resampling the same dataset -- i.e., randomly shuffling it and then splitting it into training and test sets with a specific proportion of the examples, collecting all estimates on the test sets and computing average and standard deviation of accuracy.</p>
 <p>A more elaborate method is <em>k</em>-fold cross-validation. Here, a number of folds <em>k</em> is specified. The dataset is randomly shuffled and then split into <em>k</em> folds of equal size. In each iteration, one fold is used for testing and the other <em>k-1</em> folds are used for training the classifier. The test results are collected and pooled (or averaged) over all folds. This gives the cross-validation estimate of accuracy. The folds can be purely random or slightly modified to create the same class distributions in each fold as in the complete dataset. In the latter case the cross-validation is called <em>stratified</em>. Leave-one-out (loo) cross-validation signifies that <em>k</em> is equal to the number of examples. Out of necessity, loo cv has to be non-stratified, i.e., the class distributions in the test sets are not the same as those in the training data. Therefore loo CV can produce misleading results in rare cases. However it is still quite useful in dealing with small datasets since it utilizes the greatest amount of training data from the dataset.</p>
 <h3 id="weka-filters">weka filters<a class="headerlink" href="#weka-filters" title="Permanent link">#</a></h3>
@@ -191,46 +852,46 @@ the most common class in the case of classification problems, or the median of a
 <h4 id="wekafilterssupervised">weka.filters.supervised<a class="headerlink" href="#wekafilterssupervised" title="Permanent link">#</a></h4>
 <p>Classes below weka.filters.supervised in WEKA's Java class hierarchy are for supervised filtering, i.e., taking advantage of the class information. For those filters, a class must be assigned by providing the index of the class attribute via <em>-c</em>.</p>
 <h4 id="attribute">attribute<a class="headerlink" href="#attribute" title="Permanent link">#</a></h4>
-<p><a href="https://weka.sourceforge.io/doc.stable-3-8/weka/filters/supervised/attribute/Discretize.html">Discretize</a> is used to discretize numeric attributes into nominal ones, based on the class information, via Fayyad &amp; Irani's MDL method, or optionally with Kononeko's MDL method. Some learning schemes or classifiers can only process nominal data, e.g., <a href="https://weka.sourceforge.io/doc.packages/simpleEducationalLearningSchemes/weka/classifiers/rules/Prism.html">rules.Prism</a>; and in some cases discretization may also reduce learning time and help combat overfitting.</p>
-<pre><code class="language-bash"> java weka.filters.supervised.attribute.Discretize -i data/iris.arff -o iris-nom.arff -c last
- java weka.filters.supervised.attribute.Discretize -i data/cpu.arff -o cpu-classvendor-nom.arff -c first
-</code></pre>
-<p><a href="https://weka.sourceforge.io/doc.stable-3-8/weka/filters/supervised/attribute/NominalToBinary.html">NominalToBinary</a> encodes all nominal attributes into binary (two-valued) attributes, which can be used to transform the dataset into a purely numeric representation, e.g., for visualization via multi-dimensional scaling.</p>
-<pre><code class="language-bash"> java weka.filters.supervised.attribute.NominalToBinary -i data/contact-lenses.arff -o contact-lenses-bin.arff -c last
-</code></pre>
-<p>Note that most classifiers in WEKA utilize transformation filters internally, e.g., Logistic and SMO, so you may not have to use these filters explicity.</p>
+<p><a href="https://weka.sourceforge.io/doc.stable-3-8/weka/filters/supervised/attribute/Discretize.html">Discretize</a> is used to discretize numeric attributes into nominal ones, based on the class information, via Fayyad &amp; Irani's MDL method, or optionally with Kononeko's MDL method. Some learning schemes or classifiers can only process nominal data, e.g., <a href="https://weka.sourceforge.io/doc.packages/simpleEducationalLearningSchemes/weka/classifiers/rules/Prism.html">rules.Prism</a>; and in some cases discretization may also reduce learning time and help combat overfitting.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a> java weka.filters.supervised.attribute.Discretize -i data/iris.arff -o iris-nom.arff -c last
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a> java weka.filters.supervised.attribute.Discretize -i data/cpu.arff -o cpu-classvendor-nom.arff -c first
+</code></pre></div>
+<a href="https://weka.sourceforge.io/doc.stable-3-8/weka/filters/supervised/attribute/NominalToBinary.html">NominalToBinary</a> encodes all nominal attributes into binary (two-valued) attributes, which can be used to transform the dataset into a purely numeric representation, e.g., for visualization via multi-dimensional scaling.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a> java weka.filters.supervised.attribute.NominalToBinary -i data/contact-lenses.arff -o contact-lenses-bin.arff -c last
+</code></pre></div>
+Note that most classifiers in WEKA utilize transformation filters internally, e.g., Logistic and SMO, so you may not have to use these filters explicity.</p>
 <h4 id="instance">instance<a class="headerlink" href="#instance" title="Permanent link">#</a></h4>
-<p><a href="https://weka.sourceforge.io/doc.stable-3-8/weka/filters/supervised/instance/Resample.html">Resample</a> creates a stratified subsample of the given dataset. This means that overall class distributions are approximately retained within the sample. A bias towards uniform class distribution can be specified via -<em>B</em>.</p>
-<pre><code class="language-bash"> java weka.filters.supervised.instance.Resample -i data/soybean.arff -o soybean-5%.arff -c last -Z 5
- java weka.filters.supervised.instance.Resample -i data/soybean.arff -o soybean-uniform-5%.arff -c last -Z 5 -B 1
-</code></pre>
-<p><a href="https://weka.sourceforge.io/doc.stable-3-8/weka/filters/supervised/instance/StratifiedRemoveFolds.html">StratifiedRemoveFolds</a> creates stratified cross-validation folds of the given dataset. This means that per default the class distributions are approximately retained within each fold. The following example splits soybean.arff into stratified training and test datasets, the latter consisting of 25% (=1/4) of the data.</p>
-<pre><code class="language-bash"> java weka.filters.supervised.instance.StratifiedRemoveFolds -i data/soybean.arff -o soybean-train.arff \
-   -c last -N 4 -F 1 -V
- java weka.filters.supervised.instance.StratifiedRemoveFolds -i data/soybean.arff -o soybean-test.arff \
-   -c last -N 4 -F 1
-</code></pre>
+<p><a href="https://weka.sourceforge.io/doc.stable-3-8/weka/filters/supervised/instance/Resample.html">Resample</a> creates a stratified subsample of the given dataset. This means that overall class distributions are approximately retained within the sample. A bias towards uniform class distribution can be specified via -<em>B</em>.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a> java weka.filters.supervised.instance.Resample -i data/soybean.arff -o soybean-5%.arff -c last -Z <span class="m">5</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a> java weka.filters.supervised.instance.Resample -i data/soybean.arff -o soybean-uniform-5%.arff -c last -Z <span class="m">5</span> -B <span class="m">1</span>
+</code></pre></div>
+<a href="https://weka.sourceforge.io/doc.stable-3-8/weka/filters/supervised/instance/StratifiedRemoveFolds.html">StratifiedRemoveFolds</a> creates stratified cross-validation folds of the given dataset. This means that per default the class distributions are approximately retained within each fold. The following example splits soybean.arff into stratified training and test datasets, the latter consisting of 25% (=1/4) of the data.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a> java weka.filters.supervised.instance.StratifiedRemoveFolds -i data/soybean.arff -o soybean-train.arff <span class="se">\</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>   -c last -N <span class="m">4</span> -F <span class="m">1</span> -V
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a> java weka.filters.supervised.instance.StratifiedRemoveFolds -i data/soybean.arff -o soybean-test.arff <span class="se">\</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>   -c last -N <span class="m">4</span> -F <span class="m">1</span>
+</code></pre></div></p>
 <h4 id="wekafiltersunsupervised">weka.filters.unsupervised<a class="headerlink" href="#wekafiltersunsupervised" title="Permanent link">#</a></h4>
 <p>Classes below <code>weka.filters.unsupervised</code> in WEKA's Java class hierarchy are for unsupervised filtering, e.g., the non-stratified version of Resample. A class should not be assigned here.</p>
 <h4 id="attribute_1">attribute<a class="headerlink" href="#attribute_1" title="Permanent link">#</a></h4>
 <p><a href="https://weka.sourceforge.io/doc.stable-3-8/weka/filters/unsupervised/attribute/StringToWordVector.html">StringToWordVector</a> transforms string attributes into a word vectors, e.g., creating one attribute for each word that either encodes presence or word count (<em>-C</em>) within the string. <em>-W</em> can be used to set an approximate limit on the number of words. When a class is assigned, the limit applies to each class separately. This filter is useful for text mining.</p>
 <p><a href="https://weka.sourceforge.io/doc.stable-3-8/weka/filters/unsupervised/attribute/Obfuscate.html">Obfuscate</a> renames the dataset name, all attribute names and nominal attribute values. This is intended for exchanging sensitive datasets without giving away restricted information.</p>
 <p><a href="https://weka.sourceforge.io/doc.stable-3-8/weka/filters/unsupervised/attribute/Remove.html">Remove</a> is intended for explicit deletion of attributes from a dataset, e.g. for removing attributes of the iris dataset:</p>
-<pre><code class="language-bash"> java weka.filters.unsupervised.attribute.Remove -R 1-2 -i data/iris.arff -o iris-simplified.arff
- java weka.filters.unsupervised.attribute.Remove -V -R 3-last -i data/iris.arff -o iris-simplified.arff
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a> java weka.filters.unsupervised.attribute.Remove -R <span class="m">1</span>-2 -i data/iris.arff -o iris-simplified.arff
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a> java weka.filters.unsupervised.attribute.Remove -V -R <span class="m">3</span>-last -i data/iris.arff -o iris-simplified.arff
+</code></pre></div>
 <h4 id="instance_1">instance<a class="headerlink" href="#instance_1" title="Permanent link">#</a></h4>
-<p><a href="https://weka.sourceforge.io/doc.stable-3-8/weka/filters/unsupervised/instance/Resample.html">Resample</a> creates a non-stratified subsample of the given dataset. It performs random sampling without regard to the class information. Otherwise it is equivalent to its supervised variant.</p>
-<pre><code class="language-bash"> java weka.filters.unsupervised.instance.Resample -i data/soybean.arff -o soybean-5%.arff -Z 5
-</code></pre>
-<p><a href="https://weka.sourceforge.io/doc.stable-3-8/weka/filters/unsupervised/instance/RemoveFolds.html">RemoveFolds</a> creates cross-validation folds of the given dataset. The class distributions are not retained. The following example splits soybean.arff into training and test datasets, the latter consisting of 25% (=1/4) of the data.</p>
-<pre><code class="language-bash"> java weka.filters.unsupervised.instance.RemoveFolds -i data/soybean.arff -o soybean-train.arff -c last -N 4 -F 1 -V
- java weka.filters.unsupervised.instance.RemoveFolds -i data/soybean.arff -o soybean-test.arff -c last -N 4 -F 1
-</code></pre>
-<p><a href="https://weka.sourceforge.io/doc.stable-3-8/weka/filters/unsupervised/instance/RemoveWithValues.html">RemoveWithValues</a> filters instances according to the value of an attribute.</p>
-<pre><code class="language-bash"> java weka.filters.unsupervised.instance.RemoveWithValues -i data/soybean.arff \
-   -o soybean-without_herbicide_injury.arff -V -C last -L 19
-</code></pre>
+<p><a href="https://weka.sourceforge.io/doc.stable-3-8/weka/filters/unsupervised/instance/Resample.html">Resample</a> creates a non-stratified subsample of the given dataset. It performs random sampling without regard to the class information. Otherwise it is equivalent to its supervised variant.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a> java weka.filters.unsupervised.instance.Resample -i data/soybean.arff -o soybean-5%.arff -Z <span class="m">5</span>
+</code></pre></div>
+<a href="https://weka.sourceforge.io/doc.stable-3-8/weka/filters/unsupervised/instance/RemoveFolds.html">RemoveFolds</a> creates cross-validation folds of the given dataset. The class distributions are not retained. The following example splits soybean.arff into training and test datasets, the latter consisting of 25% (=1/4) of the data.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a> java weka.filters.unsupervised.instance.RemoveFolds -i data/soybean.arff -o soybean-train.arff -c last -N <span class="m">4</span> -F <span class="m">1</span> -V
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a> java weka.filters.unsupervised.instance.RemoveFolds -i data/soybean.arff -o soybean-test.arff -c last -N <span class="m">4</span> -F <span class="m">1</span>
+</code></pre></div>
+<a href="https://weka.sourceforge.io/doc.stable-3-8/weka/filters/unsupervised/instance/RemoveWithValues.html">RemoveWithValues</a> filters instances according to the value of an attribute.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a> java weka.filters.unsupervised.instance.RemoveWithValues -i data/soybean.arff <span class="se">\</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>   -o soybean-without_herbicide_injury.arff -V -C last -L <span class="m">19</span>
+</code></pre></div></p>
 <h3 id="wekaclassifiers">weka.classifiers<a class="headerlink" href="#wekaclassifiers" title="Permanent link">#</a></h3>
 <p>Classifiers are at the core of WEKA. There are a lot of common options for classifiers, most of which are related to evaluation purposes. We will focus on the most important ones. All others including classifier-specific parameters can be found via -<em>h</em>, as usual.</p>
 <table>
@@ -287,215 +948,249 @@ the most common class in the case of classification problems, or the median of a
 <li><a href="https://weka.sourceforge.io/doc.stable-3-8/weka/classifiers/rules/JRip.html"><code>rules.JRip</code></a> A clone of the RIPPER rule learner.</li>
 </ul>
 <p>Based on a simple example, we will now explain the output of a typical classifier, <a href="https://weka.sourceforge.io/doc.stable-3-8/weka/classifiers/trees/J48.html">weka.classifiers.trees.J48</a>. Consider the following call from the command line, or start the WEKA explorer and train J48 on weather.numeric.arff:</p>
-<pre><code class="language-bash"> java weka.classifiers.trees.J48 -t data/weather.numeric.arff
-</code></pre>
-<pre><code>J48 pruned tree
-------------------
-
-outlook = sunny
-|   humidity &lt;= 75: 
-yes (2.0)
-|   humidity &gt; 75: 
-no (3.0)
-outlook = overcast: 
-yes (4.0)
-outlook = rainy
-|   windy = TRUE: 
-no (2.0)
-|   windy = FALSE: 
-yes (3.0)
-
-Number of Leaves  : 
- 5
-
-Size of the tree : 
- 8
-</code></pre>
-<p>The first part, unless you specify <em>-o</em>, is a human-readable form of the training set model. In this case, it is a decision tree. <em>outlook</em> is at the root of the tree and determines the first decision. In case it is overcast, we'll always play golf. The numbers in (parentheses) at the end of each leaf tell us the number of examples in this leaf. If one or more leaves were not pure (= all of the same class), the number of misclassified examples would also be given, after a /slash/</p>
-<pre><code>Time taken to build model: 
-0.05 seconds
-Time taken to test model on training data: 
-0 seconds
-</code></pre>
-<p>As you can see, a decision tree learns quite fast and is evaluated even faster.</p>
-<pre><code>== Error on training data ==
-
-Correctly Classified Instance      14              100      %
-Incorrectly Classified Instances    0                0      %
-Kappa statistic                     1
-Mean absolute error                 0
-Root mean squared error             0
-Relative absolute error             0      %
-Root relative squared error         0      %
-Total Number of Instances          14
-
-== Detailed Accuracy By Class ==
-
-TP Rate   FP Rate   Precision   Recall  F-Measure   Class
-  1         0          1         1         1        yes
-  1         0          1         1         1        no
-
-== Confusion Matrix ==
-
- a b   &lt;-- classified as
- 9 0 | a = yes
- 0 5 | b = no
-</code></pre>
-<p>This is quite boring: 
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a> java weka.classifiers.trees.J48 -t data/weather.numeric.arff
+</code></pre></div>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>J48 pruned tree
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>------------------
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>outlook = sunny
+<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>|   humidity &lt;= 75: 
+<a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a>yes (2.0)
+<a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a>|   humidity &gt; 75: 
+<a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a>no (3.0)
+<a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a>outlook = overcast: 
+<a id="__codelineno-18-10" name="__codelineno-18-10" href="#__codelineno-18-10"></a>yes (4.0)
+<a id="__codelineno-18-11" name="__codelineno-18-11" href="#__codelineno-18-11"></a>outlook = rainy
+<a id="__codelineno-18-12" name="__codelineno-18-12" href="#__codelineno-18-12"></a>|   windy = TRUE: 
+<a id="__codelineno-18-13" name="__codelineno-18-13" href="#__codelineno-18-13"></a>no (2.0)
+<a id="__codelineno-18-14" name="__codelineno-18-14" href="#__codelineno-18-14"></a>|   windy = FALSE: 
+<a id="__codelineno-18-15" name="__codelineno-18-15" href="#__codelineno-18-15"></a>yes (3.0)
+<a id="__codelineno-18-16" name="__codelineno-18-16" href="#__codelineno-18-16"></a>
+<a id="__codelineno-18-17" name="__codelineno-18-17" href="#__codelineno-18-17"></a>Number of Leaves  : 
+<a id="__codelineno-18-18" name="__codelineno-18-18" href="#__codelineno-18-18"></a> 5
+<a id="__codelineno-18-19" name="__codelineno-18-19" href="#__codelineno-18-19"></a>
+<a id="__codelineno-18-20" name="__codelineno-18-20" href="#__codelineno-18-20"></a>Size of the tree : 
+<a id="__codelineno-18-21" name="__codelineno-18-21" href="#__codelineno-18-21"></a> 8
+</code></pre></div>
+The first part, unless you specify <em>-o</em>, is a human-readable form of the training set model. In this case, it is a decision tree. <em>outlook</em> is at the root of the tree and determines the first decision. In case it is overcast, we'll always play golf. The numbers in (parentheses) at the end of each leaf tell us the number of examples in this leaf. If one or more leaves were not pure (= all of the same class), the number of misclassified examples would also be given, after a /slash/</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>Time taken to build model: 
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>0.05 seconds
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>Time taken to test model on training data: 
+<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>0 seconds
+</code></pre></div>
+As you can see, a decision tree learns quite fast and is evaluated even faster.</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>== Error on training data ==
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>Correctly Classified Instance      14              100      %
+<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>Incorrectly Classified Instances    0                0      %
+<a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a>Kappa statistic                     1
+<a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a>Mean absolute error                 0
+<a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a>Root mean squared error             0
+<a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a>Relative absolute error             0      %
+<a id="__codelineno-20-9" name="__codelineno-20-9" href="#__codelineno-20-9"></a>Root relative squared error         0      %
+<a id="__codelineno-20-10" name="__codelineno-20-10" href="#__codelineno-20-10"></a>Total Number of Instances          14
+<a id="__codelineno-20-11" name="__codelineno-20-11" href="#__codelineno-20-11"></a>
+<a id="__codelineno-20-12" name="__codelineno-20-12" href="#__codelineno-20-12"></a>== Detailed Accuracy By Class ==
+<a id="__codelineno-20-13" name="__codelineno-20-13" href="#__codelineno-20-13"></a>
+<a id="__codelineno-20-14" name="__codelineno-20-14" href="#__codelineno-20-14"></a>TP Rate   FP Rate   Precision   Recall  F-Measure   Class
+<a id="__codelineno-20-15" name="__codelineno-20-15" href="#__codelineno-20-15"></a>  1         0          1         1         1        yes
+<a id="__codelineno-20-16" name="__codelineno-20-16" href="#__codelineno-20-16"></a>  1         0          1         1         1        no
+<a id="__codelineno-20-17" name="__codelineno-20-17" href="#__codelineno-20-17"></a>
+<a id="__codelineno-20-18" name="__codelineno-20-18" href="#__codelineno-20-18"></a>== Confusion Matrix ==
+<a id="__codelineno-20-19" name="__codelineno-20-19" href="#__codelineno-20-19"></a>
+<a id="__codelineno-20-20" name="__codelineno-20-20" href="#__codelineno-20-20"></a> a b   &lt;-- classified as
+<a id="__codelineno-20-21" name="__codelineno-20-21" href="#__codelineno-20-21"></a> 9 0 | a = yes
+<a id="__codelineno-20-22" name="__codelineno-20-22" href="#__codelineno-20-22"></a> 0 5 | b = no
+</code></pre></div>
+This is quite boring: 
 our classifier is perfect, at least on the training data -- all instances were classified correctly and all errors are zero. As is usually the case, the training set accuracy is too optimistic. The detailed accuracy by class and the confusion matrix is similarily trivial.</p>
-<pre><code>== Stratified cross-validation ==
-
-Correctly Classified Instances      9               64.2857 %
-Incorrectly Classified Instances    5               35.7143 %
-Kappa statistic                     0.186
-Mean absolute error                 0.2857
-Root mean squared error             0.4818
-Relative absolute error            60      %
-Root relative squared error        97.6586 %
-Total Number of Instances          14
-
-
-== Detailed Accuracy By Class ==
-
-TP Rate   FP Rate   Precision   Recall  F-Measure   Class
-  0.778     0.6        0.7       0.778     0.737    yes
-  0.4       0.222      0.5       0.4       0.444    no
-
-
-== Confusion Matrix ==
-
- a b   &lt;-- classified as
- 7 2 | a = yes
- 3 2 | b = no
-</code></pre>
-<p>The stratified cross-validation paints a more realistic picture. The accuracy is around 64%. The kappa statistic measures the agreement of prediction with the true class -- 1.0 signifies complete agreement. The error values that are shown, e.g., the root of the mean squared error, indicate the accuracy of the probability estimates that are generated by the classification model.</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>== Stratified cross-validation ==
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>Correctly Classified Instances      9               64.2857 %
+<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>Incorrectly Classified Instances    5               35.7143 %
+<a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>Kappa statistic                     0.186
+<a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a>Mean absolute error                 0.2857
+<a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a>Root mean squared error             0.4818
+<a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a>Relative absolute error            60      %
+<a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a>Root relative squared error        97.6586 %
+<a id="__codelineno-21-10" name="__codelineno-21-10" href="#__codelineno-21-10"></a>Total Number of Instances          14
+<a id="__codelineno-21-11" name="__codelineno-21-11" href="#__codelineno-21-11"></a>
+<a id="__codelineno-21-12" name="__codelineno-21-12" href="#__codelineno-21-12"></a>
+<a id="__codelineno-21-13" name="__codelineno-21-13" href="#__codelineno-21-13"></a>== Detailed Accuracy By Class ==
+<a id="__codelineno-21-14" name="__codelineno-21-14" href="#__codelineno-21-14"></a>
+<a id="__codelineno-21-15" name="__codelineno-21-15" href="#__codelineno-21-15"></a>TP Rate   FP Rate   Precision   Recall  F-Measure   Class
+<a id="__codelineno-21-16" name="__codelineno-21-16" href="#__codelineno-21-16"></a>  0.778     0.6        0.7       0.778     0.737    yes
+<a id="__codelineno-21-17" name="__codelineno-21-17" href="#__codelineno-21-17"></a>  0.4       0.222      0.5       0.4       0.444    no
+<a id="__codelineno-21-18" name="__codelineno-21-18" href="#__codelineno-21-18"></a>
+<a id="__codelineno-21-19" name="__codelineno-21-19" href="#__codelineno-21-19"></a>
+<a id="__codelineno-21-20" name="__codelineno-21-20" href="#__codelineno-21-20"></a>== Confusion Matrix ==
+<a id="__codelineno-21-21" name="__codelineno-21-21" href="#__codelineno-21-21"></a>
+<a id="__codelineno-21-22" name="__codelineno-21-22" href="#__codelineno-21-22"></a> a b   &lt;-- classified as
+<a id="__codelineno-21-23" name="__codelineno-21-23" href="#__codelineno-21-23"></a> 7 2 | a = yes
+<a id="__codelineno-21-24" name="__codelineno-21-24" href="#__codelineno-21-24"></a> 3 2 | b = no
+</code></pre></div>
+The stratified cross-validation paints a more realistic picture. The accuracy is around 64%. The kappa statistic measures the agreement of prediction with the true class -- 1.0 signifies complete agreement. The error values that are shown, e.g., the root of the mean squared error, indicate the accuracy of the probability estimates that are generated by the classification model.</p>
 <p>The confusion matrix is more commonly named <em>contingency table</em>. In our case we have two classes, and therefore a 2x2 confusion matrix, the matrix could be arbitrarily large. The number of correctly classified instances is the sum of diagonals in the matrix; all others are incorrectly classified (class "a" gets misclassified as "b" exactly twice, and class "b" gets misclassified as "a" three times).</p>
 <p>The <em>True Positive (TP)</em> rate is the proportion of examples which were classified as class <em>x</em>, among all examples which truly have class <em>x</em>, i.e., how much of the class was captured correctly. It is equivalent to <em>Recall</em>. In the confusion matrix, this is the diagonal element divided by the sum over the relevant row, i.e., 7/(7+2)=0.778 for class <em>yes</em> and 2/(3+2)=0.4 for class <em>no</em> in our example.</p>
 <p>The <em>False Positive (FP)</em> rate is the proportion of examples which were classified as class <em>x</em>, but belong to a different class, among all examples which are not of class <em>x</em>. In the matrix, this is the column sum of class <em>x</em> minus the diagonal element, divided by the row sums of all other classes; i.e. 3/5=0.6 for class <em>yes</em> and 2/9=0.222 for class <em>no</em>.</p>
 <p>The <em>Precision</em> is the proportion of the examples which truly have class <em>x</em> among all those which were classified as class <em>x</em>. In the matrix, this is the diagonal element divided by the sum over the relevant column, i.e. 7/(7+3)=0.7 for class <em>yes</em> and 2/(2+2)=0.5 for class <em>no</em>.</p>
 <p>The <em>F-Measure</em> is simply 2<em>Precision</em>Recall/(Precision+Recall), a combined measure for precision and recall.</p>
-<p>These measures are useful for comparing classifiers. However, if more detailed information about the classifier's predictions are necessary, <em>-p #</em> outputs just the predictions for each test instance, along with a range of one-based attribute ids (0 for none). Let's look at the following example. We shall assume soybean-train.arff and soybean-test.arff have been constructed via weka.filters.supervised.instance.StratifiedRemoveFolds as in a previous example.</p>
-<pre><code class="language-java"> java weka.classifiers.bayes.NaiveBayes -K -t soybean-train.arff -T soybean-test.arff -p 0
-</code></pre>
-<pre><code>0 diaporthe-stem-canker 0.9999672587892333 diaporthe-stem-canker
-1 diaporthe-stem-canker 0.9999992614503429 diaporthe-stem-canker
-2 diaporthe-stem-canker 0.999998948559035 diaporthe-stem-canker
-3 diaporthe-stem-canker 0.9999998441238833 diaporthe-stem-canker
-4 diaporthe-stem-canker 0.9999989997681132 diaporthe-stem-canker
-5 rhizoctonia-root-rot 0.9999999395928124 rhizoctonia-root-rot
-6 rhizoctonia-root-rot 0.999998912860593 rhizoctonia-root-rot
-7 rhizoctonia-root-rot 0.9999994386283236 rhizoctonia-root-rot
-...
-</code></pre>
-<p>The values in each line are separated by a single space. The fields are the zero-based test instance id, followed by the predicted class value, the confidence for the prediction (estimated probability of predicted class), and the true class. All these are correctly classified, so let's look at a few erroneous ones.</p>
-<pre><code>32 phyllosticta-leaf-spot 0.7789710144361445 brown-spot
-...
-39 alternarialeaf-spot 0.6403333824349896 brown-spot
-...
-44 phyllosticta-leaf-spot 0.893568420641914 brown-spot
-...
-46 alternarialeaf-spot 0.5788190397739439 brown-spot
-...
-73 brown-spot 0.4943768155314637 alternarialeaf-spot
-...
-</code></pre>
-<p>In each of these cases, a misclassification occurred, mostly between classes <em>alternarialeaf-spot</em> and <em>brown-spot</em>. The confidences seem to be lower than for correct classification, so for a real-life application it may make sense to output <em>don't know</em> below a certain threshold. WEKA also outputs a trailing newline.</p>
+<p>These measures are useful for comparing classifiers. However, if more detailed information about the classifier's predictions are necessary, <em>-p #</em> outputs just the predictions for each test instance, along with a range of one-based attribute ids (0 for none). Let's look at the following example. We shall assume soybean-train.arff and soybean-test.arff have been constructed via weka.filters.supervised.instance.StratifiedRemoveFolds as in a previous example.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="w"> </span><span class="n">java</span><span class="w"> </span><span class="n">weka</span><span class="p">.</span><span class="na">classifiers</span><span class="p">.</span><span class="na">bayes</span><span class="p">.</span><span class="na">NaiveBayes</span><span class="w"> </span><span class="o">-</span><span class="n">K</span><span class="w"> </span><span class="o">-</span><span class="n">t</span><span class="w"> </span><span class="n">soybean</span><span class="o">-</span><span class="n">train</span><span class="p">.</span><span class="na">arff</span><span class="w"> </span><span class="o">-</span><span class="n">T</span><span class="w"> </span><span class="n">soybean</span><span class="o">-</span><span class="n">test</span><span class="p">.</span><span class="na">arff</span><span class="w"> </span><span class="o">-</span><span class="n">p</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
+</code></pre></div></p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>0 diaporthe-stem-canker 0.9999672587892333 diaporthe-stem-canker
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>1 diaporthe-stem-canker 0.9999992614503429 diaporthe-stem-canker
+<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>2 diaporthe-stem-canker 0.999998948559035 diaporthe-stem-canker
+<a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a>3 diaporthe-stem-canker 0.9999998441238833 diaporthe-stem-canker
+<a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a>4 diaporthe-stem-canker 0.9999989997681132 diaporthe-stem-canker
+<a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a>5 rhizoctonia-root-rot 0.9999999395928124 rhizoctonia-root-rot
+<a id="__codelineno-23-7" name="__codelineno-23-7" href="#__codelineno-23-7"></a>6 rhizoctonia-root-rot 0.999998912860593 rhizoctonia-root-rot
+<a id="__codelineno-23-8" name="__codelineno-23-8" href="#__codelineno-23-8"></a>7 rhizoctonia-root-rot 0.9999994386283236 rhizoctonia-root-rot
+<a id="__codelineno-23-9" name="__codelineno-23-9" href="#__codelineno-23-9"></a>...
+</code></pre></div>
+The values in each line are separated by a single space. The fields are the zero-based test instance id, followed by the predicted class value, the confidence for the prediction (estimated probability of predicted class), and the true class. All these are correctly classified, so let's look at a few erroneous ones.</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>32 phyllosticta-leaf-spot 0.7789710144361445 brown-spot
+<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>...
+<a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a>39 alternarialeaf-spot 0.6403333824349896 brown-spot
+<a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a>...
+<a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a>44 phyllosticta-leaf-spot 0.893568420641914 brown-spot
+<a id="__codelineno-24-6" name="__codelineno-24-6" href="#__codelineno-24-6"></a>...
+<a id="__codelineno-24-7" name="__codelineno-24-7" href="#__codelineno-24-7"></a>46 alternarialeaf-spot 0.5788190397739439 brown-spot
+<a id="__codelineno-24-8" name="__codelineno-24-8" href="#__codelineno-24-8"></a>...
+<a id="__codelineno-24-9" name="__codelineno-24-9" href="#__codelineno-24-9"></a>73 brown-spot 0.4943768155314637 alternarialeaf-spot
+<a id="__codelineno-24-10" name="__codelineno-24-10" href="#__codelineno-24-10"></a>...
+</code></pre></div>
+In each of these cases, a misclassification occurred, mostly between classes <em>alternarialeaf-spot</em> and <em>brown-spot</em>. The confidences seem to be lower than for correct classification, so for a real-life application it may make sense to output <em>don't know</em> below a certain threshold. WEKA also outputs a trailing newline.</p>
 <p>If we had chosen a range of attributes via <em>-p</em>, e.g., <em>-p first-last</em>, the mentioned attributes would have been output afterwards as comma-separated values, in parantheses. However, the zero-based instance id in the first column offers a safer way to determine the test instances.</p>
 <p>Usually, if you evaluate a classifier for a longer experiment, you will do something like this (for csh):</p>
-<pre><code class="language-bash"> java -Xmx1024m weka.classifiers.trees.J48 -t data.arff -k -d J48-data.model &gt;&amp;! J48-data.out &amp;
-</code></pre>
-<p>The -Xmx1024m parameter for maximum heap size enables the Java heap, where Java stores objects, to grow to a maximum size of 1024 Megabytes. There is no overhead involved, it just leaves more room for the heap to grow. The -<em>k</em> flag gives you some additional performance statistics. In case your model performs well, it makes sense to save it via <em>-d</em> - you can always delete it later! The implicit cross-validation gives a more reasonable estimate of the expected accuracy on unseen data than the training set accuracy. The output both of standard error and output should be redirected, so you get both errors and the normal output of your classifier. The last &amp; starts the task in the background. Keep an eye on your task via <em>top</em> and if you notice the hard disk works hard all the time (for linux), this probably means your task needs too much memory and will not finish in time for the exam. ;-) In that case, switch to a faster classifier or use <a href="./#weka-filters">filters</a>, e.g., for <a href="https://weka.sourceforge.io/doc.stable-3-8/weka/filters/supervised/instance/Resample.html">Resample</a> to reduce the size of your dataset or <a href="https://weka.sourceforge.io/doc.stable-3-8/weka/filters/supervised/instance/StratifiedRemoveFolds.html">StratifiedRemoveFolds</a> to create training and test sets - for most classifiers, training takes more time than testing.</p>
-<p>So, now you have run a lot of experiments -- which classifier is best? Try</p>
-<pre><code class="language-bash"> cat *.out | grep -A 3 &quot;Stratified&quot; | grep &quot;^Correctly&quot;
-</code></pre>
-<p>...this should give you all cross-validated accuracies. If the cross-validated accuracy is roughly the same as the training set accuracy, this indicates that your classifiers is presumably not overfitting the training set.</p>
-<p>Assume you have found the best classifier. To apply it on a new dataset, use something like</p>
-<pre><code class="language-bash"> java weka.classifiers.trees.J48 -l J48-data.model -T new-data.arff
-</code></pre>
-<p>You will have to use the same classifier to load the model, but you need not set any options. Just add the new test file via <em>-T</em>. If you want, <em>-p first-last</em> will output all test instances with classifications and confidence scores, followed by all attribute values, so you can look at each error separately.</p>
-<p>The following more complex csh script creates datasets for learning curves, creating a 75% training set and 25% test set from a given dataset, then successively reducing the test set by factor 1.2 (83%), until it is also 25% in size. All this is repeated thirty times, with different random reorderings (-<em>S</em>) and the results are written to different directories. The Experimenter GUI in WEKA can be used to design and run similar experiments.</p>
-<pre><code class="language-bash">#!/bin/csh
-foreach f ($*)
-  set run=1
-  while ( $run &lt;= 30 )
-    mkdir $run &gt;&amp;! /dev/null
-    java weka.filters.supervised.instance.StratifiedRemoveFolds -N 4 -F 1 -S $run -c last -i ../$f -o $run/t_$f
-    java weka.filters.supervised.instance.StratifiedRemoveFolds -N 4 -F 1 -S $run -V -c last -i ../$f -o $run/t0$f
-    foreach nr (0 1 2 3 4 5)
-      set nrp1=$nr
-      @ nrp1++
-      java weka.filters.supervised.instance.Resample -S 0 -Z 83 -c last -i $run/t$nr$f -o $run/t$nrp1$f
-    end
-
-    echo Run $run of $f done.
-    @ run++
-  end
-end
-</code></pre>
-<p>If meta classifiers are used, i.e. classifiers whose options include classifier specifications - for example, <a href="https://weka.sourceforge.io/doc.stable-3-8/weka/classifiers/meta/StackingC.html">StackingC</a> or <a href="https://weka.sourceforge.io/doc.stable-3-8/weka/classifiers/meta/ClassificationViaRegression.html">ClassificationViaRegression</a>, care must be taken not to mix the parameters. For example,</p>
-<pre><code class="language-bash"> java weka.classifiers.meta.ClassificationViaRegression -W weka.classifiers.functions.LinearRegression -S 1 \
-   -t data/iris.arff -x 2
-</code></pre>
-<p>gives us an illegal options exception for <em>-S 1</em>. This parameter is meant for LinearRegression, not for ClassificationViaRegression, but WEKA does not know this by itself. One way to clarify this situation is to enclose the classifier specification, including all parameters, in "double" quotes, like this:</p>
-<pre><code class="language-bash"> java weka.classifiers.meta.ClassificationViaRegression -W &quot;weka.classifiers.functions.LinearRegression -S 1&quot; \
-   -t data/iris.arff -x 2
-</code></pre>
-<p>However this does not always work, depending on how the option handling was implemented in the top-level classifier. While for Stacking this approach would work quite well, for ClassificationViaRegression it does not. We get the dubious error message that the class <em>weka.classifiers.functions.LinearRegression -S 1</em> cannot be found.
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a> java -Xmx1024m weka.classifiers.trees.J48 -t data.arff -k -d J48-data.model &gt;<span class="p">&amp;</span>! J48-data.out <span class="p">&amp;</span>
+</code></pre></div>
+The -Xmx1024m parameter for maximum heap size enables the Java heap, where Java stores objects, to grow to a maximum size of 1024 Megabytes. There is no overhead involved, it just leaves more room for the heap to grow. The -<em>k</em> flag gives you some additional performance statistics. In case your model performs well, it makes sense to save it via <em>-d</em> - you can always delete it later! The implicit cross-validation gives a more reasonable estimate of the expected accuracy on unseen data than the training set accuracy. The output both of standard error and output should be redirected, so you get both errors and the normal output of your classifier. The last &amp; starts the task in the background. Keep an eye on your task via <em>top</em> and if you notice the hard disk works hard all the time (for linux), this probably means your task needs too much memory and will not finish in time for the exam. ;-) In that case, switch to a faster classifier or use <a href="./#weka-filters">filters</a>, e.g., for <a href="https://weka.sourceforge.io/doc.stable-3-8/weka/filters/supervised/instance/Resample.html">Resample</a> to reduce the size of your dataset or <a href="https://weka.sourceforge.io/doc.stable-3-8/weka/filters/supervised/instance/StratifiedRemoveFolds.html">StratifiedRemoveFolds</a> to create training and test sets - for most classifiers, training takes more time than testing.</p>
+<p>So, now you have run a lot of experiments -- which classifier is best? Try
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a> cat *.out <span class="p">|</span> grep -A <span class="m">3</span> <span class="s2">&quot;Stratified&quot;</span> <span class="p">|</span> grep <span class="s2">&quot;^Correctly&quot;</span>
+</code></pre></div>
+...this should give you all cross-validated accuracies. If the cross-validated accuracy is roughly the same as the training set accuracy, this indicates that your classifiers is presumably not overfitting the training set.</p>
+<p>Assume you have found the best classifier. To apply it on a new dataset, use something like
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a> java weka.classifiers.trees.J48 -l J48-data.model -T new-data.arff
+</code></pre></div>
+You will have to use the same classifier to load the model, but you need not set any options. Just add the new test file via <em>-T</em>. If you want, <em>-p first-last</em> will output all test instances with classifications and confidence scores, followed by all attribute values, so you can look at each error separately.</p>
+<p>The following more complex csh script creates datasets for learning curves, creating a 75% training set and 25% test set from a given dataset, then successively reducing the test set by factor 1.2 (83%), until it is also 25% in size. All this is repeated thirty times, with different random reorderings (-<em>S</em>) and the results are written to different directories. The Experimenter GUI in WEKA can be used to design and run similar experiments.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="ch">#!/bin/csh</span>
+<a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a>foreach f <span class="o">(</span><span class="nv">$*</span><span class="o">)</span>
+<a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a>  <span class="nb">set</span> <span class="nv">run</span><span class="o">=</span><span class="m">1</span>
+<a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a>  <span class="k">while</span> <span class="o">(</span> <span class="nv">$run</span> &lt;<span class="o">=</span> <span class="m">30</span> <span class="o">)</span>
+<a id="__codelineno-28-5" name="__codelineno-28-5" href="#__codelineno-28-5"></a>    mkdir <span class="nv">$run</span> &gt;<span class="p">&amp;</span>! /dev/null
+<a id="__codelineno-28-6" name="__codelineno-28-6" href="#__codelineno-28-6"></a>    java weka.filters.supervised.instance.StratifiedRemoveFolds -N <span class="m">4</span> -F <span class="m">1</span> -S <span class="nv">$run</span> -c last -i ../<span class="nv">$f</span> -o <span class="nv">$run</span>/t_<span class="nv">$f</span>
+<a id="__codelineno-28-7" name="__codelineno-28-7" href="#__codelineno-28-7"></a>    java weka.filters.supervised.instance.StratifiedRemoveFolds -N <span class="m">4</span> -F <span class="m">1</span> -S <span class="nv">$run</span> -V -c last -i ../<span class="nv">$f</span> -o <span class="nv">$run</span>/t0<span class="nv">$f</span>
+<a id="__codelineno-28-8" name="__codelineno-28-8" href="#__codelineno-28-8"></a>    foreach nr <span class="o">(</span><span class="m">0</span> <span class="m">1</span> <span class="m">2</span> <span class="m">3</span> <span class="m">4</span> <span class="m">5</span><span class="o">)</span>
+<a id="__codelineno-28-9" name="__codelineno-28-9" href="#__codelineno-28-9"></a>      <span class="nb">set</span> <span class="nv">nrp1</span><span class="o">=</span><span class="nv">$nr</span>
+<a id="__codelineno-28-10" name="__codelineno-28-10" href="#__codelineno-28-10"></a>      @ nrp1++
+<a id="__codelineno-28-11" name="__codelineno-28-11" href="#__codelineno-28-11"></a>      java weka.filters.supervised.instance.Resample -S <span class="m">0</span> -Z <span class="m">83</span> -c last -i <span class="nv">$run</span>/t<span class="nv">$nr$f</span> -o <span class="nv">$run</span>/t<span class="nv">$nrp1$f</span>
+<a id="__codelineno-28-12" name="__codelineno-28-12" href="#__codelineno-28-12"></a>    end
+<a id="__codelineno-28-13" name="__codelineno-28-13" href="#__codelineno-28-13"></a>
+<a id="__codelineno-28-14" name="__codelineno-28-14" href="#__codelineno-28-14"></a>    <span class="nb">echo</span> Run <span class="nv">$run</span> of <span class="nv">$f</span> <span class="k">done</span>.
+<a id="__codelineno-28-15" name="__codelineno-28-15" href="#__codelineno-28-15"></a>    @ run++
+<a id="__codelineno-28-16" name="__codelineno-28-16" href="#__codelineno-28-16"></a>  end
+<a id="__codelineno-28-17" name="__codelineno-28-17" href="#__codelineno-28-17"></a>end
+</code></pre></div></p>
+<p>If meta classifiers are used, i.e. classifiers whose options include classifier specifications - for example, <a href="https://weka.sourceforge.io/doc.stable-3-8/weka/classifiers/meta/StackingC.html">StackingC</a> or <a href="https://weka.sourceforge.io/doc.stable-3-8/weka/classifiers/meta/ClassificationViaRegression.html">ClassificationViaRegression</a>, care must be taken not to mix the parameters. For example,
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a> java weka.classifiers.meta.ClassificationViaRegression -W weka.classifiers.functions.LinearRegression -S <span class="m">1</span> <span class="se">\</span>
+<a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a>   -t data/iris.arff -x <span class="m">2</span>
+</code></pre></div>
+gives us an illegal options exception for <em>-S 1</em>. This parameter is meant for LinearRegression, not for ClassificationViaRegression, but WEKA does not know this by itself. One way to clarify this situation is to enclose the classifier specification, including all parameters, in "double" quotes, like this:</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a> java weka.classifiers.meta.ClassificationViaRegression -W <span class="s2">&quot;weka.classifiers.functions.LinearRegression -S 1&quot;</span> <span class="se">\</span>
+<a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a>   -t data/iris.arff -x <span class="m">2</span>
+</code></pre></div>
+However this does not always work, depending on how the option handling was implemented in the top-level classifier. While for Stacking this approach would work quite well, for ClassificationViaRegression it does not. We get the dubious error message that the class <em>weka.classifiers.functions.LinearRegression -S 1</em> cannot be found.
 Fortunately, there is another approach: 
-All parameters given after -- are processed by the first sub-classifier; another -- lets us specify parameters for the second sub-classifier and so on.</p>
-<pre><code class="language-bash"> java weka.classifiers.meta.ClassificationViaRegression -W weka.classifiers.functions.LinearRegression \
-   -t data/iris.arff -x 2 -- -S 1
-</code></pre>
-<p>In some cases, both approaches have to be mixed, for example:</p>
-<pre><code class="language-bash"> java weka.classifiers.meta.Stacking -B &quot;weka.classifiers.lazy.IBk -K 10&quot; \
-   -M &quot;weka.classifiers.meta.ClassificationViaRegression -W weka.classifiers.functions.LinearRegression -- -S 1&quot; \
-   -t data/iris.arff -x 2
-</code></pre>
-<p>Notice that while ClassificationViaRegression honors the -- parameter, Stacking itself does not.</p>
-              
+All parameters given after -- are processed by the first sub-classifier; another -- lets us specify parameters for the second sub-classifier and so on.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a> java weka.classifiers.meta.ClassificationViaRegression -W weka.classifiers.functions.LinearRegression <span class="se">\</span>
+<a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a>   -t data/iris.arff -x <span class="m">2</span> -- -S <span class="m">1</span>
+</code></pre></div>
+In some cases, both approaches have to be mixed, for example:</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a> java weka.classifiers.meta.Stacking -B <span class="s2">&quot;weka.classifiers.lazy.IBk -K 10&quot;</span> <span class="se">\</span>
+<a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a>   -M <span class="s2">&quot;weka.classifiers.meta.ClassificationViaRegression -W weka.classifiers.functions.LinearRegression -- -S 1&quot;</span> <span class="se">\</span>
+<a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a>   -t data/iris.arff -x <span class="m">2</span>
+</code></pre></div>
+Notice that while ClassificationViaRegression honors the -- parameter, Stacking itself does not.</p>
+
+
+
+
+
+                
+              </article>
             </div>
-          </div><footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../formats_and_processing/arff/" class="btn btn-neutral float-left" title="ARFF Format"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../datasets/" class="btn btn-neutral float-right" title="Datasets">Next <span class="icon icon-circle-arrow-right"></span></a>
-    </div>
-
-  <hr/>
-
-  <div role="contentinfo">
-    <!-- Copyright etc -->
-  </div>
-
-  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
-</footer>
+          
           
         </div>
-      </div>
-
-    </section>
-
-  </div>
-
-  <div class="rst-versions" role="note" aria-label="Versions">
-  <span class="rst-current-version" data-toggle="rst-current-version">
+        
+      </main>
+      
+        <footer class="md-footer">
+  
     
-    
-      <span><a href="../formats_and_processing/arff/" style="color: #fcfcfc">&laquo; Previous</a></span>
-    
-    
-      <span><a href="../datasets/" style="color: #fcfcfc">Next &raquo;</a></span>
-    
-  </span>
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../formats_and_processing/arff/" class="md-footer__link md-footer__link--prev" aria-label="Previous: ARFF Format" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              ARFF Format
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../datasets/" class="md-footer__link md-footer__link--next" aria-label="Next: Datasets" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Datasets
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
 </div>
-    <script>var base_url = '..';</script>
-    <script src="../js/theme_extra.js" defer></script>
-    <script src="../js/theme.js" defer></script>
-      <script src="../search/main.js" defer></script>
-    <script defer>
-        window.onload = function () {
-            SphinxRtdTheme.Navigation.enable(true);
-        };
-    </script>
-
-</body>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d6c3db9e.min.js"></script>
+      
+    
+  </body>
 </html>

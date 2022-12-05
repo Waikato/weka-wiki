@@ -1,141 +1,640 @@
-<!DOCTYPE html>
-<html class="writer-html5" lang="en" >
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://github.com/Waikato/weka-wiki/packages/structure/" />
-      <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>Structure - Weka Wiki</title>
-    <link rel="stylesheet" href="../../css/theme.css" />
-    <link rel="stylesheet" href="../../css/theme_extra.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
     
-      <script>
-        // Current page data
-        var mkdocs_page_name = "Structure";
-        var mkdocs_page_input_path = "packages/structure.md";
-        var mkdocs_page_url = "/Waikato/weka-wiki/packages/structure/";
-      </script>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documention on Weka that can also be found in the manual and the example archive that comes with each Weka download (zip or installer).">
+      
+      
+      
+        <link rel="canonical" href="https://github.com/Waikato/weka-wiki/packages/structure/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
     
-    <script src="../../js/jquery-3.6.0.min.js" defer></script>
-    <!--[if lt IE 9]>
-      <script src="../../js/html5shiv.min.js"></script>
-    <![endif]-->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-      <script>hljs.initHighlightingOnLoad();</script> 
-</head>
+    
+      
+        <title>Structure - Weka Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.472b142f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.08040f6c.min.css">
+        
+      
+      
 
-<body class="wy-body-for-nav" role="document">
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
 
-  <div class="wy-grid-for-nav">
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
-    <div class="wy-side-scroll">
-      <div class="wy-side-nav-search">
-          <a href="../.." class="icon icon-home"> Weka Wiki
-        </a><div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
-      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
-  </form>
-</div>
-      </div>
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="None" data-md-color-accent="None">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#where-does-weka-store-packages-and-other-configuration-stuff" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
 
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
-                </li>
-              </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../../downloading_weka/">Downloading and installing Weka</a>
-                </li>
-              </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../../requirements/">Requirements</a>
-                </li>
-              </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../../documentation/">Documentation</a>
-                </li>
-              </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../../getting_help/">Getting help</a>
-                </li>
-              </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../../citing_weka/">Citing Weka</a>
-                </li>
-              </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../../literature/">Literature</a>
-                </li>
-              </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../../development/">Development</a>
-                </li>
-              </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../../history/">History</a>
-                </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Resources</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../../faq/">FAQ</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../not_so_faq/">Not so FAQ</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/">Troubleshooting</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../using_the_api/">Using the API</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../extending_weka/">Extending Weka</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../formats_and_processing/arff/">ARFF Format</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../primer/">Primer</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../datasets/">Datasets</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../visualization_articles/">Visualization Articles</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../properties_file/">Properties File</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../">Packages</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../experimenter/experimenter/">Experimenter</a>
-                  </li>
-              </ul>
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Weka Wiki" class="md-header__button md-logo" aria-label="Weka Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Weka Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Structure
+            
+          </span>
+        </div>
       </div>
     </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../..">Weka Wiki</a>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
         
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
       </nav>
-      <div class="wy-nav-content">
-        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
-      <li>Structure</li>
-    <li class="wy-breadcrumbs-aside">
-    </li>
-  </ul>
-  <hr/>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-            <div class="section" itemprop="articleBody">
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Waikato/weka-wiki" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
               
-                <p>Articles such as <a href="../../faqs/how_do_i_use_wekas_classes_in_my_own_code/">How do I use WEKA's classes in my own code?</a> and <a href="../../faqs/how_do_i_write_a_new_classifier_or_filter/">How do I write a new classifier or filter?</a> describe how to extend Weka to add your own learning algorithms and so forth. This article describes how such enhancements can be assembled into a <em>package</em> that can be accessed via Weka’s <a href="../manager/">package management</a> system. Bundling your enhancements in a package makes it easy to share with other Weka users.</p>
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Weka Wiki" class="md-nav__button md-logo" aria-label="Weka Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Weka Wiki
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Waikato/weka-wiki" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../downloading_weka/" class="md-nav__link">
+        Downloading and installing Weka
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../requirements/" class="md-nav__link">
+        Requirements
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../documentation/" class="md-nav__link">
+        Documentation
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting_help/" class="md-nav__link">
+        Getting help
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../citing_weka/" class="md-nav__link">
+        Citing Weka
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../literature/" class="md-nav__link">
+        Literature
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../development/" class="md-nav__link">
+        Development
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../history/" class="md-nav__link">
+        History
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10">
+          Resources
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Resources" data-md-level="1">
+        <label class="md-nav__title" for="__nav_10">
+          <span class="md-nav__icon md-icon"></span>
+          Resources
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        FAQ
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../not_so_faq/" class="md-nav__link">
+        Not so FAQ
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../troubleshooting/" class="md-nav__link">
+        Troubleshooting
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../using_the_api/" class="md-nav__link">
+        Using the API
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../extending_weka/" class="md-nav__link">
+        Extending Weka
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../formats_and_processing/arff/" class="md-nav__link">
+        ARFF Format
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../primer/" class="md-nav__link">
+        Primer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../datasets/" class="md-nav__link">
+        Datasets
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../visualization_articles/" class="md-nav__link">
+        Visualization Articles
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../properties_file/" class="md-nav__link">
+        Properties File
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        Packages
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../experimenter/experimenter/" class="md-nav__link">
+        Experimenter
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#where-does-weka-store-packages-and-other-configuration-stuff" class="md-nav__link">
+    Where does WEKA store packages and other configuration stuff?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anatomy-of-a-package" class="md-nav__link">
+    Anatomy of a package
+  </a>
+  
+    <nav class="md-nav" aria-label="Anatomy of a package">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#additional-configuration-files" class="md-nav__link">
+    Additional configuration files
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contributing-a-package" class="md-nav__link">
+    Contributing a package
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creating-a-mirror-of-the-package-meta-data-repository" class="md-nav__link">
+    Creating a mirror of the package meta data repository
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  <a href="https://github.com/Waikato/weka-wiki/edit/master/docs/packages/structure.md" title="Edit this page" class="md-content__button md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+  <h1>Structure</h1>
+
+<p>Articles such as <a href="../../faqs/how_do_i_use_wekas_classes_in_my_own_code/">How do I use WEKA's classes in my own code?</a> and <a href="../../faqs/how_do_i_write_a_new_classifier_or_filter/">How do I write a new classifier or filter?</a> describe how to extend Weka to add your own learning algorithms and so forth. This article describes how such enhancements can be assembled into a <em>package</em> that can be accessed via Weka’s <a href="../manager/">package management</a> system. Bundling your enhancements in a package makes it easy to share with other Weka users.</p>
 <p>In this article we refer to a <em>package</em> as an archive containing various resources such as compiled code, source code, javadocs, package description files (meta data), third-party libraries and configuration property files. Not all of the preceding may be in a given package, and there may be other resources included as well. This concept of a <em>package</em> is quite different to that of a Java packages, which simply define how classes are arranged hierarchically.</p>
 <h3 id="where-does-weka-store-packages-and-other-configuration-stuff">Where does WEKA store packages and other configuration stuff?<a class="headerlink" href="#where-does-weka-store-packages-and-other-configuration-stuff" title="Permanent link">#</a></h3>
 <p>By default, Weka stores packages and other information in <code>$WEKA_HOME</code>. The default location for <code>WEKA_HOME</code> is <code>user.home/wekafiles</code>, where <code>user.home</code> is the user’s home directory. You can change the default location for <code>WEKA_HOME</code> by setting this either as an evironment variable for your platform, or by specifying it as a Java property when starting Weka. E.g.:</p>
-<pre><code>export WEKA_HOME=/home/somewhere/weka_bits_and_bobs
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>export WEKA_HOME=/home/somewhere/weka_bits_and_bobs
+</code></pre></div>
 <p>will set the directory that Weka uses to <code>/home/somewhere/weka_bits_and_bobs</code> under the LINUX operating system.</p>
 <p>The same thing can be accomplished when starting Weka by specifying a Java property on the command line, E.g.:</p>
-<pre><code>java -DWEKA_HOME=/home/somewhere/weka_bits_and_bobs -jar weka.jar
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>java -DWEKA_HOME=/home/somewhere/weka_bits_and_bobs -jar weka.jar
+</code></pre></div>
 <p>Inside <code>$WEKA_HOME</code> you will find the main weka log file (weka.log) and a number of directories:</p>
 <ul>
 <li><strong>packages</strong> holds installed packages. Each package is contained its own subdirectory.</li>
@@ -145,79 +644,79 @@
 </ul>
 <h3 id="anatomy-of-a-package">Anatomy of a package<a class="headerlink" href="#anatomy-of-a-package" title="Permanent link">#</a></h3>
 <p>A Weka package is a zip archive that must unpack to the current directory. For example, the <code>DTNB</code> package contains the decision table naive Bayes hybrid classifier and is delivered in a file called <code>DTNB.zip</code>. When unpacked this zip file creates the following directory structure:</p>
-<pre><code>   &lt;current directory&gt;
-     +-DTNB.jar
-     +-Description.props
-     +-build_package.xml
-     +-src
-     |   +-main
-     |   |   +-java
-     |   |       +-weka
-     |   |           +-classifiers
-     |   |               +-rules
-     |   |                   +-DTNB.java
-     |   +-test
-     |       +-java
-     |           +-weka
-     |               +-classifiers
-     |                   +-rules
-     |                       +-DTNBTest.java
-     +-lib
-     +-doc
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>   &lt;current directory&gt;
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>     +-DTNB.jar
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>     +-Description.props
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>     +-build_package.xml
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>     +-src
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>     |   +-main
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>     |   |   +-java
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>     |   |       +-weka
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>     |   |           +-classifiers
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>     |   |               +-rules
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>     |   |                   +-DTNB.java
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>     |   +-test
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>     |       +-java
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>     |           +-weka
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>     |               +-classifiers
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>     |                   +-rules
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>     |                       +-DTNBTest.java
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>     +-lib
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>     +-doc
+</code></pre></div>
 <p>When installing, the package manager will use the value of the "PackageName" field in the Description.props file (see below) to create a directory in <code>$WEKA_HOME/packages</code> to hold the package contents. The contents of the <code>doc</code> directory have not been shown in the diagram above, but this directory contains javadoc for the <code>DTNB</code> class. A package must have a <code>Description.props</code> file and contain at least one jar file with compiled Java classes. The package manager will attempt to load all jar files that it finds in the root directory and the <code>lib</code> directory. Other files are optional, but if the package is open-source then it is nice to include the source code and an ant build file that can be used to compile the code. Template versions of the <a href="../../files/Description.props">Description.props</a> file and
 <a href="../../files/build_package.xml">build_package.xml</a> file are available from the Weka site and here.</p>
 <p>==The description file==
 A valid package must contain a <code>Description.props</code> file that provides meta data on the package. Identical files are stored at the central package repository and the local cache maintained by the package manager. The package manager uses these files to compare what is installed to what is available and resolve dependencies.</p>
 <p>The <a href="../../files/Description.props">Description.props</a> contains basic information on the package in the following format:</p>
-<pre><code># Template Description file for a Weka package
-
-# Package name (required)
-PackageName=funkyPackage
-
-# Version (required)
-Version=1.0.0
-
-#Date (year-month-day)
-Date=2010-01-01
-
-# Title (required)
-Title=My cool algorithm
-
-# Category (recommended)
-Category=Classification
-
-# Author (required)
-Author=Joe Dev &lt;joe@somewhere.net&gt;,Dev2 &lt;dev2@somewhereelse.net&gt;
-
-# Maintainer (required)
-Maintainer=Joe Dev &lt;joe@somewhere.net&gt;
-
-# License (required)
-License=GPL 2.0|Mozilla
-
-# Description (required)
-Description=This package contains the famous Funky Classifer that performs \
- truely funky prediction.
-
-# Changes and/or bug fixes in this package (optional)
-Changes=Fixed a serious bug that affected overall coolness of the Funky Classifier
-
-# Package URL for obtaining the package archive (required)
-PackageURL=http://somewhere.net/weka/funkyPackage.zip
-
-# URL for further information
-URL=http://somewhere.net/funkyResearchInfo.html
-
-# Enhances various other packages?
-Enhances=packageName1,packageName2,...
-
-# Related to other packages?
-Related=packageName1,packageName2,...
-
-# Dependencies (required; format: packageName (equality/inequality version_number)
-Depends=weka (&gt;=3.7.1), packageName1 (=x.y.z), packageName2 (&gt;u.v.w|&lt;=x.y.z),...
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a># Template Description file for a Weka package
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a># Package name (required)
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>PackageName=funkyPackage
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a># Version (required)
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>Version=1.0.0
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>#Date (year-month-day)
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>Date=2010-01-01
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a># Title (required)
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>Title=My cool algorithm
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a># Category (recommended)
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>Category=Classification
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a># Author (required)
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>Author=Joe Dev &lt;joe@somewhere.net&gt;,Dev2 &lt;dev2@somewhereelse.net&gt;
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>
+<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a># Maintainer (required)
+<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>Maintainer=Joe Dev &lt;joe@somewhere.net&gt;
+<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>
+<a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a># License (required)
+<a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>License=GPL 2.0|Mozilla
+<a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a>
+<a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a># Description (required)
+<a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a>Description=This package contains the famous Funky Classifer that performs \
+<a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a> truely funky prediction.
+<a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a>
+<a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a># Changes and/or bug fixes in this package (optional)
+<a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a>Changes=Fixed a serious bug that affected overall coolness of the Funky Classifier
+<a id="__codelineno-3-33" name="__codelineno-3-33" href="#__codelineno-3-33"></a>
+<a id="__codelineno-3-34" name="__codelineno-3-34" href="#__codelineno-3-34"></a># Package URL for obtaining the package archive (required)
+<a id="__codelineno-3-35" name="__codelineno-3-35" href="#__codelineno-3-35"></a>PackageURL=http://somewhere.net/weka/funkyPackage.zip
+<a id="__codelineno-3-36" name="__codelineno-3-36" href="#__codelineno-3-36"></a>
+<a id="__codelineno-3-37" name="__codelineno-3-37" href="#__codelineno-3-37"></a># URL for further information
+<a id="__codelineno-3-38" name="__codelineno-3-38" href="#__codelineno-3-38"></a>URL=http://somewhere.net/funkyResearchInfo.html
+<a id="__codelineno-3-39" name="__codelineno-3-39" href="#__codelineno-3-39"></a>
+<a id="__codelineno-3-40" name="__codelineno-3-40" href="#__codelineno-3-40"></a># Enhances various other packages?
+<a id="__codelineno-3-41" name="__codelineno-3-41" href="#__codelineno-3-41"></a>Enhances=packageName1,packageName2,...
+<a id="__codelineno-3-42" name="__codelineno-3-42" href="#__codelineno-3-42"></a>
+<a id="__codelineno-3-43" name="__codelineno-3-43" href="#__codelineno-3-43"></a># Related to other packages?
+<a id="__codelineno-3-44" name="__codelineno-3-44" href="#__codelineno-3-44"></a>Related=packageName1,packageName2,...
+<a id="__codelineno-3-45" name="__codelineno-3-45" href="#__codelineno-3-45"></a>
+<a id="__codelineno-3-46" name="__codelineno-3-46" href="#__codelineno-3-46"></a># Dependencies (required; format: packageName (equality/inequality version_number)
+<a id="__codelineno-3-47" name="__codelineno-3-47" href="#__codelineno-3-47"></a>Depends=weka (&gt;=3.7.1), packageName1 (=x.y.z), packageName2 (&gt;u.v.w|&lt;=x.y.z),...
+</code></pre></div>
 <p>The <em>PackageName</em> and <em>Version</em> give the name of the package and version number respectively. The name can consist of letters, numbers, and the dot character. It should not start with a dot and should not contain any spaces. The version number is a sequence of three non-negative integers separated by single <em>.</em> or <em>-</em> characters.</p>
 <p>The <em>Title</em> field should give a one sentence description of the package. The <em>Description</em> field can give a longer description of the package spaning multiple sentences. It may include technical references and can use HTML markup.</p>
 <p>The <em>Category</em> field is strongly recommended as this information is displayed on both the repository web site and in the GUI package manager client. In the latter, the user can sort the packages on the basis of the category field. It is recommended that an existing category be assigned if possible. Some examples include (Classification, Text classification, Ensemble learning, Regression, Clustering, Associations, Preprocessing, Visualization, Explorer, Experimenter, KnowledgeFlow).</p>
@@ -226,14 +725,14 @@ Depends=weka (&gt;=3.7.1), packageName1 (=x.y.z), packageName2 (&gt;u.v.w|&lt;=x
 <p>The <em>License</em> field lists the license(s) that apply to the package. This field may contain the short specification of a license (such as LGPL, GPL 2.0 etc.) or the string <em>file LICENSE</em>, where <em>LICENSE</em> exists as a file in the top-level directory of the package. The string <em>Unlimited</em> may be supplied to indicate that there are no restrictions on distribution or use aside from those imposed by relevant laws.</p>
 <p>The <em>PackageURL</em> field lists valid URL that points to the package zip file. This URL is used by the package manager to download and install the package.</p>
 <p>The optional <em>Depends</em> field gives a comma separated list of packages which this package depends on. The name of a package is optionally followed by a version number constraint enclosed in parenthesis. Valid operators for version number constraints include =, &lt;, &gt;, &lt;=, &gt;=. The keyword <em>weka</em> is reserved to refer to the base Weka system and can be used to indicate a dependency on<br />  a particular version of Weka. For example:</p>
-<pre><code>Depends=weka (&gt;=3.7.2), DTNB (=1.0.0)
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Depends=weka (&gt;=3.7.2), DTNB (=1.0.0)
+</code></pre></div>
 <p>states that this package requires Weka 3.7.2 or higher and version 1.0.0 of the package DTNB.</p>
-<pre><code>Depends=weka (&gt;3.7.1|&lt;3.8.0)
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Depends=weka (&gt;3.7.1|&lt;3.8.0)
+</code></pre></div>
 <p>states that this package requires a version of Weka between 3.7.1 and 3.8.0.</p>
-<pre><code>Depends=DTNB (&lt;1.5.0|&gt;=2.0.1)
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>Depends=DTNB (&lt;1.5.0|&gt;=2.0.1)
+</code></pre></div>
 <p>states that this package requires that a version of the DTNB package be installed that is either less than version 1.5.0 or greater than or equal to version 2.0.1.</p>
 <p>If there is no version number constraint following a package name, the package manager assumes that the latest version of the dependent package is suitable.</p>
 <p>The optional <em>URL</em> field gives a URL at which the user can find additional online information about the package or its constituent algorithms.</p>
@@ -241,49 +740,49 @@ Depends=weka (&gt;=3.7.1), packageName1 (=x.y.z), packageName2 (&gt;u.v.w|&lt;=x
 <p>The optional <em>Related</em> field is similar to the <em>Enhances</em> field. It can be used to point the user to other packages that are related in some fashion to this one.</p>
 <p>The optional <em>Changes</em> field should be used to indicate what changes/bug fixes are included in the current release of the package.</p>
 <p>There are several other fields that can be used to provide information to assist the user with completing installation (if it can’t be completely accomplished with the package zip file) or display error messages if necessary components are missing:</p>
-<pre><code>MessageToDisplayOnInstallation=Funky package requires some extra\n\
- stuff to be installed after installing this package. You will\n\
- need to blah, blah, blah in order to blah, blah, blah...
-
-DoNotLoadIfFileNotPresent=lib/someLibrary.jar,otherStuff/important,...
-
-DoNotLoadIfFileNotPresentMessage=funkyPackage can't be loaded because some \
- funky libraries are missing. Please download funkyLibrary.jar from \
- http://www.funky.com and install in $WEKA_HOME/packages/funkyPackage/lib
-
-DoNotLoadIfClassNotPresent=com.some.class.from.some.Where,org.some.other.Class,...
-
-DoNotLoadIfClassNotPresentMessage=funkyPackage can't be loaded because \
- com.funky.FunkyClass can't be instantiated. Have you downloaded and run \
- the funky software installer for your platform?
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>MessageToDisplayOnInstallation=Funky package requires some extra\n\
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a> stuff to be installed after installing this package. You will\n\
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a> need to blah, blah, blah in order to blah, blah, blah...
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>DoNotLoadIfFileNotPresent=lib/someLibrary.jar,otherStuff/important,...
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>DoNotLoadIfFileNotPresentMessage=funkyPackage can&#39;t be loaded because some \
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a> funky libraries are missing. Please download funkyLibrary.jar from \
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a> http://www.funky.com and install in $WEKA_HOME/packages/funkyPackage/lib
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>DoNotLoadIfClassNotPresent=com.some.class.from.some.Where,org.some.other.Class,...
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>DoNotLoadIfClassNotPresentMessage=funkyPackage can&#39;t be loaded because \
+<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a> com.funky.FunkyClass can&#39;t be instantiated. Have you downloaded and run \
+<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a> the funky software installer for your platform?
+</code></pre></div>
 <p>The optional <em>MessageToDisplayOnInstallation</em> field allows you to specify special instructions to the user in order to help them complete the intallation manually. This message gets displayed on the console, written to the log and appears in a pop-up information dialog if using the GUI package manager. It should include <em>\n</em> in order to avoid long lines when displayed in a GUI pop-up dialog.</p>
 <p>The optional <em>DoNotLoadIfFileNotPresent</em> field can be used to prevent Weka from loading the package if the named ''files'' and/or ''directories'' are not present in the package’s installation directory. An example is the massiveOnlineAnalysis package. This package is a connector only package and does not include the MOA library. Users of this package must download the moa.jar file separately and copy it to the package’s <code>lib</code> directory manually. Multiple files and directories can be specified as a comma separated list. All paths are relative to the top-level directory of the package. <strong>IMPORTANT</strong>: use forward slashes as separator characters, as these are portable accross all platforms. The <em>DoNotLoadIfFileNotPresentMessage</em> field can be used to supply an optional message to display to the user if Weka detects that a file or directory is missing from the package. This message will be displayed on the console and in the log.</p>
 <p>The optional <em>DoNotLoadIfClassNotPresent</em> field can be used to prevent Weka from loading the package if the named ''class(es)'' can’t be instantiated. This is useful for packages that rely on stuff that has to be installed manually by the user. For example, Java3D is a separate download on all platforms except for OSX, and installs itself into the system JRE/JDK. The <em>DoNotLoadIfClassNotPresentMessage</em> field can be used to supply an optional message to display to the user if Weka detects that a class can’t be instantiated. Again, this will be displayed on the console and in the log.</p>
 <p>New in Weka 3.9.2 and 3.8.2 is the ability to constrain the OS and architecture that a package can be installed and loaded on. Two new fields are used for this:</p>
-<pre><code># Specify which OS's the package can operate with. Omitting this entry indicates no restrictions on OS. (optional)
-OSName=Windows,Mac,Linux
-
-# Specify which architecture the package can operate with. Omitting this entry indicates no restriction. (optional)
-OSArch=64
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a># Specify which OS&#39;s the package can operate with. Omitting this entry indicates no restrictions on OS. (optional)
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>OSName=Windows,Mac,Linux
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a># Specify which architecture the package can operate with. Omitting this entry indicates no restriction. (optional)
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>OSArch=64
+</code></pre></div>
 <p>Entries in the OSName field are compared against the value of the Java property "os.name" using a String.toLowerCase().contains() operation. Any single match indicates a pass. If an OSName field exists in the Description.props, and it matches, then the optional OSArch field is examined. If present, values in the OSArch list are compared against the value of the Java property "os.arch". The special OSArch entries "32" and "64" are tested using a String().contains() operation; all other entries are compared using String.equalsIgnoreCase().</p>
 <h4 id="additional-configuration-files">Additional configuration files<a class="headerlink" href="#additional-configuration-files" title="Permanent link">#</a></h4>
 <p>Certain types of packages may require additional configuration files to be present as part of the package. The last chapter covered various ways in which Weka can be extended without having to alter the core Weka code. These plugin mechanisms have been subsumed by the package management system, so some of the configuration property files they require must be present in the package’s top-level directory if the package in question contains such a plugin. Examples include additional tabs for the Explorer, mappings to custom property editors for Weka’s GenericObjectEditor and Knowledge Flow plugins. Here are some examples:</p>
 <p>The scatterPlot3D package adds a new tab to the Explorer. In order to accomplish this a property has to be set in the Explorer.props file (which contains default values for the Explorer) in order to tell Weka to instantiate and display the new panel. The scatterPlot3D file includes an <em>Explorer.props</em> file in its top-level directory that has the following contents:</p>
-<pre><code># Explorer.props file. Adds the Explorer3DPanel to the Tabs key.
-Tabs=weka.gui.explorer.Explorer3DPanel
-TabsPolicy=append
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a># Explorer.props file. Adds the Explorer3DPanel to the Tabs key.
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>Tabs=weka.gui.explorer.Explorer3DPanel
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>TabsPolicy=append
+</code></pre></div>
 <p>This property file is read by the package management system when the package is loaded and any key-value pairs are added to existing Explorer properties that have been loaded by the system at startup. If the key already exists in the Explorer properties, then the package has the option to either replace (i.e. overwrite) or append to the existing value. This can be specified with the "TabsPolicy" key. In this case, the value <code>weka.gui.explorer.Explorer3DPanel</code> is appended to any existing value associated with the "Tabs" key. <code>Explorer3DPanel</code> gets instantiated and added as a new tab when the Explorer starts.</p>
 <p>Another example is the kfGroovy package. This package adds a plugin component to Weka’s Knowledge Flow that allows a Knowledge Flow step to be implemented and compiled dynamically at runtime as a Groovy script. In order for the Knowledge Flow to make the new step appear in its <em>Plugins</em> toolbar, there needs to be a <em>Beans.props</em> file in the package’s top level directory. In the case of kfGroovy, this property file has the following contents:</p>
-<pre><code># Specifies that this component goes into the Plugins toolbar
-weka.gui.beans.KnowledgeFlow.Plugins=org.pentaho.dm.kf.GroovyComponent
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a># Specifies that this component goes into the Plugins toolbar
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>weka.gui.beans.KnowledgeFlow.Plugins=org.pentaho.dm.kf.GroovyComponent
+</code></pre></div>
 <p>The new pluggable evaluation metrics for classification/regression (from Weka 3.7.8 and nightly developer snapshots from 15-11-2012) are managed by the PluginManager class. To tell PluginManager that your package provides a new evaluation metric you need to provide a "PluginManager.props" file in the package's top level directory. For example, a hypothetical bobsMetric package might declare a new "Area under Bob curve" metric like so:</p>
-<pre><code># Specify a new plugin Evaluation metric
-weka.classifiers.evaluation.AbstractEvaluationMetric=weka.classifiers.evaluation.BobsAUC
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a># Specify a new plugin Evaluation metric
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>weka.classifiers.evaluation.AbstractEvaluationMetric=weka.classifiers.evaluation.BobsAUC
+</code></pre></div>
 <h3 id="contributing-a-package">Contributing a package<a class="headerlink" href="#contributing-a-package" title="Permanent link">#</a></h3>
 <p>If you have created a package for Weka then there are two options for making it available to the community. In both cases, hosting the package’s zip archive is the responsibility of the contributer.</p>
 <p>The first, and official, route is to contact the current Weka maintainer (normally also the admin of the WEKA homepage) and supply your package’s <code>Description.props</code> file. The Weka team will then test downloading and using your package to make sure that there are no obvious problems with what has been specified in the <code>Description.props</code> file and that the software runs and does not contain any malware/malicious code. If all is well, then the package will become an <em>official</em> Weka package and the central package repository meta data will be updated with the package’s <code>Description.props file</code>. </p>
@@ -292,9 +791,9 @@ weka.classifiers.evaluation.AbstractEvaluationMetric=weka.classifiers.evaluation
 <h3 id="creating-a-mirror-of-the-package-meta-data-repository">Creating a mirror of the package meta data repository<a class="headerlink" href="#creating-a-mirror-of-the-package-meta-data-repository" title="Permanent link">#</a></h3>
 <p>In this section we discuss an easy approach to setting up and maintaining a mirror of the package meta data repository. Having a local mirror may provide faster access times than to that of the official repository on Sourceforge. Extending this approach to the creation of an alternative central repository (hosting packages not available at the official repository) should be straight forward.</p>
 <p>Just about everything necessary for creating a mirror exists in the local meta data cache created by Weka’s package management system. This cache resides at <code>$WEKA_HOME/repCache</code>. The only thing missing (in Weka 3.7.2) for a complete mirror is the file <em>images.txt</em>, that lists all the image files used in the html index files. This file contains the following two lines:</p>
-<pre><code>Title-Bird-Header.gif
-pentaho_logo_rgb_sm.png
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>Title-Bird-Header.gif
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>pentaho_logo_rgb_sm.png
+</code></pre></div>
 <p><em>images.txt</em> is downloaded automatically by the package management system in Weka 3.7.3 and higher.</p>
 <p>To create a mirror:
 1. Copy the contents of <code>$WEKA_HOME/repCache</code> to a temporary directory. For the purposes of this example we’ll call it <code>tempRep</code>
@@ -316,42 +815,48 @@ pentaho_logo_rgb_sm.png
 <li>Runs <code>weka.core.RepoistoryIndexGenerator</code></li>
 <li>rsyncs <code>tempRep</code> to your web server</li>
 </ol>
-              
+
+
+
+
+
+                
+              </article>
             </div>
-          </div><footer>
-
-  <hr/>
-
-  <div role="contentinfo">
-    <!-- Copyright etc -->
-  </div>
-
-  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
-</footer>
+          
           
         </div>
-      </div>
-
-    </section>
-
-  </div>
-
-  <div class="rst-versions" role="note" aria-label="Versions">
-  <span class="rst-current-version" data-toggle="rst-current-version">
-    
-    
-    
-  </span>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
 </div>
-    <script>var base_url = '../..';</script>
-    <script src="../../js/theme_extra.js" defer></script>
-    <script src="../../js/theme.js" defer></script>
-      <script src="../../search/main.js" defer></script>
-    <script defer>
-        window.onload = function () {
-            SphinxRtdTheme.Navigation.enable(true);
-        };
-    </script>
-
-</body>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d6c3db9e.min.js"></script>
+      
+    
+  </body>
 </html>

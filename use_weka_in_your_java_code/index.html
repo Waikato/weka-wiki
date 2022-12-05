@@ -1,132 +1,903 @@
-<!DOCTYPE html>
-<html class="writer-html5" lang="en" >
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://github.com/Waikato/weka-wiki/use_weka_in_your_java_code/" />
-      <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Use weka in your java code - Weka Wiki</title>
-    <link rel="stylesheet" href="../css/theme.css" />
-    <link rel="stylesheet" href="../css/theme_extra.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
     
-      <script>
-        // Current page data
-        var mkdocs_page_name = "Use weka in your java code";
-        var mkdocs_page_input_path = "use_weka_in_your_java_code.md";
-        var mkdocs_page_url = "/Waikato/weka-wiki/use_weka_in_your_java_code/";
-      </script>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documention on Weka that can also be found in the manual and the example archive that comes with each Weka download (zip or installer).">
+      
+      
+      
+        <link rel="canonical" href="https://github.com/Waikato/weka-wiki/use_weka_in_your_java_code/">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
     
-    <script src="../js/jquery-3.6.0.min.js" defer></script>
-    <!--[if lt IE 9]>
-      <script src="../js/html5shiv.min.js"></script>
-    <![endif]-->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-      <script>hljs.initHighlightingOnLoad();</script> 
-</head>
+    
+      
+        <title>Use weka in your java code - Weka Wiki</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.472b142f.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.08040f6c.min.css">
+        
+      
+      
 
-<body class="wy-body-for-nav" role="document">
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
 
-  <div class="wy-grid-for-nav">
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
-    <div class="wy-side-scroll">
-      <div class="wy-side-nav-search">
-          <a href=".." class="icon icon-home"> Weka Wiki
-        </a><div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
-      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
-  </form>
-</div>
-      </div>
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="None" data-md-color-accent="None">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#packages" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
 
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
-                </li>
-              </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../downloading_weka/">Downloading and installing Weka</a>
-                </li>
-              </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../requirements/">Requirements</a>
-                </li>
-              </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../documentation/">Documentation</a>
-                </li>
-              </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../getting_help/">Getting help</a>
-                </li>
-              </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../citing_weka/">Citing Weka</a>
-                </li>
-              </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../literature/">Literature</a>
-                </li>
-              </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../development/">Development</a>
-                </li>
-              </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../history/">History</a>
-                </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Resources</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../faq/">FAQ</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../not_so_faq/">Not so FAQ</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../troubleshooting/">Troubleshooting</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../using_the_api/">Using the API</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../extending_weka/">Extending Weka</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../formats_and_processing/arff/">ARFF Format</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../primer/">Primer</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../datasets/">Datasets</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../visualization_articles/">Visualization Articles</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../properties_file/">Properties File</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../packages/">Packages</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../experimenter/experimenter/">Experimenter</a>
-                  </li>
-              </ul>
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Weka Wiki" class="md-header__button md-logo" aria-label="Weka Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Weka Wiki
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Use weka in your java code
+            
+          </span>
+        </div>
       </div>
     </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="..">Weka Wiki</a>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
         
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
       </nav>
-      <div class="wy-nav-content">
-        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
-      <li>Use weka in your java code</li>
-    <li class="wy-breadcrumbs-aside">
-    </li>
-  </ul>
-  <hr/>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-            <div class="section" itemprop="articleBody">
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Waikato/weka-wiki" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
               
-                <p>The most common components you might want to use are</p>
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Weka Wiki" class="md-nav__button md-logo" aria-label="Weka Wiki" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Weka Wiki
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Waikato/weka-wiki" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../downloading_weka/" class="md-nav__link">
+        Downloading and installing Weka
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../requirements/" class="md-nav__link">
+        Requirements
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../documentation/" class="md-nav__link">
+        Documentation
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting_help/" class="md-nav__link">
+        Getting help
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../citing_weka/" class="md-nav__link">
+        Citing Weka
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../literature/" class="md-nav__link">
+        Literature
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../development/" class="md-nav__link">
+        Development
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../history/" class="md-nav__link">
+        History
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_10" type="checkbox" id="__nav_10" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_10">
+          Resources
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Resources" data-md-level="1">
+        <label class="md-nav__title" for="__nav_10">
+          <span class="md-nav__icon md-icon"></span>
+          Resources
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/" class="md-nav__link">
+        FAQ
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../not_so_faq/" class="md-nav__link">
+        Not so FAQ
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting/" class="md-nav__link">
+        Troubleshooting
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../using_the_api/" class="md-nav__link">
+        Using the API
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../extending_weka/" class="md-nav__link">
+        Extending Weka
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../formats_and_processing/arff/" class="md-nav__link">
+        ARFF Format
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../primer/" class="md-nav__link">
+        Primer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../datasets/" class="md-nav__link">
+        Datasets
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../visualization_articles/" class="md-nav__link">
+        Visualization Articles
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../properties_file/" class="md-nav__link">
+        Properties File
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../packages/" class="md-nav__link">
+        Packages
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../experimenter/experimenter/" class="md-nav__link">
+        Experimenter
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#packages" class="md-nav__link">
+    Packages
+  </a>
+  
+    <nav class="md-nav" aria-label="Packages">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#initialization" class="md-nav__link">
+    Initialization
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#management" class="md-nav__link">
+    Management
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instantiation" class="md-nav__link">
+    Instantiation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instances" class="md-nav__link">
+    Instances
+  </a>
+  
+    <nav class="md-nav" aria-label="Instances">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#datasets" class="md-nav__link">
+    Datasets
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#database" class="md-nav__link">
+    Database
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#option-handling" class="md-nav__link">
+    Option handling
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#filter" class="md-nav__link">
+    Filter
+  </a>
+  
+    <nav class="md-nav" aria-label="Filter">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#filtering-on-the-fly" class="md-nav__link">
+    Filtering on-the-fly
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#batch-filtering" class="md-nav__link">
+    Batch filtering
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calling-conventions" class="md-nav__link">
+    Calling conventions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classification" class="md-nav__link">
+    Classification
+  </a>
+  
+    <nav class="md-nav" aria-label="Classification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#building-a-classifier" class="md-nav__link">
+    Building a Classifier
+  </a>
+  
+    <nav class="md-nav" aria-label="Building a Classifier">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#batch" class="md-nav__link">
+    Batch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#incremental" class="md-nav__link">
+    Incremental
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evaluating" class="md-nav__link">
+    Evaluating
+  </a>
+  
+    <nav class="md-nav" aria-label="Evaluating">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cross-validation" class="md-nav__link">
+    Cross-validation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#traintest-set" class="md-nav__link">
+    Train/test set
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#statistics" class="md-nav__link">
+    Statistics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#roc-curvesauc" class="md-nav__link">
+    ROC curves/AUC
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#classifying-instances" class="md-nav__link">
+    Classifying instances
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clustering" class="md-nav__link">
+    Clustering
+  </a>
+  
+    <nav class="md-nav" aria-label="Clustering">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#building-a-clusterer" class="md-nav__link">
+    Building a Clusterer
+  </a>
+  
+    <nav class="md-nav" aria-label="Building a Clusterer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#batch_1" class="md-nav__link">
+    Batch
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#incremental_1" class="md-nav__link">
+    Incremental
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evaluating_1" class="md-nav__link">
+    Evaluating
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clustering-instances" class="md-nav__link">
+    Clustering instances
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#classes-to-clusters-evaluation" class="md-nav__link">
+    Classes to clusters evaluation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attribute-selection" class="md-nav__link">
+    Attribute selection
+  </a>
+  
+    <nav class="md-nav" aria-label="Attribute selection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#meta-classifier" class="md-nav__link">
+    Meta-Classifier
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filter_1" class="md-nav__link">
+    Filter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#low-level" class="md-nav__link">
+    Low-level
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#note-on-randomization" class="md-nav__link">
+    Note on randomization
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#see-also" class="md-nav__link">
+    See also
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#links" class="md-nav__link">
+    Links
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  <a href="https://github.com/Waikato/weka-wiki/edit/master/docs/use_weka_in_your_java_code.md" title="Edit this page" class="md-content__button md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+  <h1>Use weka in your java code</h1>
+
+<p>The most common components you might want to use are</p>
 <ul>
 <li><em>Instances</em> - your data</li>
 <li><em>Filter</em> - for preprocessing the data</li>
@@ -141,74 +912,74 @@
 <p>In order to get your installed Weka packages initialized and also the internal MTJ and arpack libraries added to 
 the classpath, call the <code>loadPackages</code> method of the <code>weka.core.WekaPackageManager</code> class before you instantiate
 any other classifiers, clusterers, filters, etc:</p>
-<pre><code>import weka.core.WekaPackageManager;
-...
-WekaPackageManager.loadPackages(false);
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>import weka.core.WekaPackageManager;
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>...
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>WekaPackageManager.loadPackages(false);
+</code></pre></div>
 <h4 id="management">Management<a class="headerlink" href="#management" title="Permanent link">#</a></h4>
 <p>You can list <em>all</em> packages using:</p>
-<pre><code class="language-java">for (Package p: WekaPackageManager.getAllPackages())
-  System.out.println(&quot;- &quot; + p.getName() + &quot;/&quot; + p.getPackageMetaData().get(&quot;Version&quot;));
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Package</span><span class="w"> </span><span class="n">p</span><span class="p">:</span><span class="w"> </span><span class="n">WekaPackageManager</span><span class="p">.</span><span class="na">getAllPackages</span><span class="p">())</span><span class="w"></span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;- &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="na">getName</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;/&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="na">getPackageMetaData</span><span class="p">().</span><span class="na">get</span><span class="p">(</span><span class="s">&quot;Version&quot;</span><span class="p">));</span><span class="w"></span>
+</code></pre></div>
 <p>Currently <em>installed</em> packages using: </p>
-<pre><code class="language-java">for (Package p: WekaPackageManager.getInstalledPackages())
-  System.out.println(&quot;- &quot; + p.getName() + &quot;/&quot; + p.getPackageMetaData().get(&quot;Version&quot;));
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Package</span><span class="w"> </span><span class="n">p</span><span class="p">:</span><span class="w"> </span><span class="n">WekaPackageManager</span><span class="p">.</span><span class="na">getInstalledPackages</span><span class="p">())</span><span class="w"></span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;- &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="na">getName</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;/&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="na">getPackageMetaData</span><span class="p">().</span><span class="na">get</span><span class="p">(</span><span class="s">&quot;Version&quot;</span><span class="p">));</span><span class="w"></span>
+</code></pre></div>
 <p>And packages that are <em>available</em> for installation with:</p>
-<pre><code class="language-java">for (Package p: WekaPackageManager.getAvailablePackages())
-  System.out.println(&quot;- &quot; + p.getName() + &quot;/&quot; + p.getPackageMetaData().get(&quot;Version&quot;));
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Package</span><span class="w"> </span><span class="n">p</span><span class="p">:</span><span class="w"> </span><span class="n">WekaPackageManager</span><span class="p">.</span><span class="na">getAvailablePackages</span><span class="p">())</span><span class="w"></span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;- &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="na">getName</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;/&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="na">getPackageMetaData</span><span class="p">().</span><span class="na">get</span><span class="p">(</span><span class="s">&quot;Version&quot;</span><span class="p">));</span><span class="w"></span>
+</code></pre></div>
 <p>The following installs the latest version (version parameter is <code>null</code>) of the <code>alternatingModelTrees</code> package:</p>
-<pre><code class="language-java">WekaPackageManager.installPackageFromRepository(&quot;alternatingModelTrees&quot;, null, System.out);
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">WekaPackageManager</span><span class="p">.</span><span class="na">installPackageFromRepository</span><span class="p">(</span><span class="s">&quot;alternatingModelTrees&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
 <p>And this call uninstalls the package:</p>
-<pre><code class="language-java">WekaPackageManager.uninstallPackage(&quot;alternatingModelTrees&quot;, true, System.out);
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="n">WekaPackageManager</span><span class="p">.</span><span class="na">uninstallPackage</span><span class="p">(</span><span class="s">&quot;alternatingModelTrees&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
 <p>You can install a package also directly from a URL, e.g.:</p>
-<pre><code class="language-java">java.net.URL url = new java.net.URL(&quot;https://sourceforge.net/projects/weka/files/weka-packages/DilcaDistance1.0.2.zip/download&quot;);
-WekaPackageManager.installPackageFromURL(url, System.out);
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="n">java</span><span class="p">.</span><span class="na">net</span><span class="p">.</span><span class="na">URL</span><span class="w"> </span><span class="n">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">java</span><span class="p">.</span><span class="na">net</span><span class="p">.</span><span class="na">URL</span><span class="p">(</span><span class="s">&quot;https://sourceforge.net/projects/weka/files/weka-packages/DilcaDistance1.0.2.zip/download&quot;</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="n">WekaPackageManager</span><span class="p">.</span><span class="na">installPackageFromURL</span><span class="p">(</span><span class="n">url</span><span class="p">,</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
 <h4 id="instantiation">Instantiation<a class="headerlink" href="#instantiation" title="Permanent link">#</a></h4>
 <p>For instantiating classes from packages, you can use the <code>forName</code> method of the <code>weka.core.Utils</code> class.</p>
 <p>The following example shows how to instantiate the (hypothetical) classifier <code>com.example.FunkyClassifier</code>, 
 which is available from a Weka package that is currently installed:</p>
-<pre><code>import weka.core.Utils;
-import weka.classifiers.Classifier;
-...
-Classifier cls = (Classifier) Utils.forName(
-                    Classifier.class, 
-                    &quot;com.example.FunkyClassifier&quot;, 
-                    new String[]{&quot;-R&quot;, &quot;1&quot;, &quot;-another-option&quot;});
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>import weka.core.Utils;
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>import weka.classifiers.Classifier;
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>...
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>Classifier cls = (Classifier) Utils.forName(
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>                    Classifier.class, 
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>                    &quot;com.example.FunkyClassifier&quot;, 
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>                    new String[]{&quot;-R&quot;, &quot;1&quot;, &quot;-another-option&quot;});
+</code></pre></div>
 <h3 id="instances">Instances<a class="headerlink" href="#instances" title="Permanent link">#</a></h3>
 <h4 id="datasets">Datasets<a class="headerlink" href="#datasets" title="Permanent link">#</a></h4>
-<p>The <code>DataSource</code> class is not limited to ARFF files. It can also read CSV files and other formats (basically all file formats that Weka can import via its converters; it uses the file extension to determine the associated loader).</p>
-<pre><code class="language-java"> import weka.core.converters.ConverterUtils.DataSource;
- ...
- DataSource source = new DataSource(&quot;/some/where/data.arff&quot;);
- Instances data = source.getDataSet();
- // setting class attribute if the data format does not provide this information
- // For example, the XRFF format saves the class attribute information as well
- if (data.classIndex() == -1)
-   data.setClassIndex(data.numAttributes() - 1);
-</code></pre>
+<p>The <code>DataSource</code> class is not limited to ARFF files. It can also read CSV files and other formats (basically all file formats that Weka can import via its converters; it uses the file extension to determine the associated loader).
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="nn">weka.core.converters.ConverterUtils.DataSource</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w"> </span><span class="p">...</span><span class="w"></span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w"> </span><span class="n">DataSource</span><span class="w"> </span><span class="n">source</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DataSource</span><span class="p">(</span><span class="s">&quot;/some/where/data.arff&quot;</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w"> </span><span class="n">Instances</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">source</span><span class="p">.</span><span class="na">getDataSet</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w"> </span><span class="c1">// setting class attribute if the data format does not provide this information</span><span class="w"></span>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w"> </span><span class="c1">// For example, the XRFF format saves the class attribute information as well</span><span class="w"></span>
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">data</span><span class="p">.</span><span class="na">classIndex</span><span class="p">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="w">   </span><span class="n">data</span><span class="p">.</span><span class="na">setClassIndex</span><span class="p">(</span><span class="n">data</span><span class="p">.</span><span class="na">numAttributes</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
+</code></pre></div></p>
 <h4 id="database">Database<a class="headerlink" href="#database" title="Permanent link">#</a></h4>
 <p>Reading from <a href="../databases/">Databases</a> is slightly more complicated, but still very easy. First, you'll have to modify your <a href="databases#configuration-files">DatabaseUtils.props</a> file to reflect your database connection. Suppose you want to connect to a <a href="http://wwww.mysql.com/">MySQL</a> server that is running on the local machine on the default port <code>3306</code>. The MySQL JDBC driver is called <a href="http://dev.mysql.com/downloads/connector/j/">Connector/J</a>. (The driver class is <code>org.gjt.mm.mysql.Driver</code>.) The database where your target data resides is called <code>some_database</code>. Since you're only reading, you can use the default user <code>nobody</code> without a password. Your props file must contain the following lines:</p>
-<pre><code class="language-ini"> jdbcDriver=org.gjt.mm.mysql.Driver
- jdbcURL=jdbc:mysql://localhost:3306/some_database
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="w"> </span><span class="na">jdbcDriver</span><span class="o">=</span><span class="s">org.gjt.mm.mysql.Driver</span><span class="w"></span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w"> </span><span class="na">jdbcURL</span><span class="o">=</span><span class="s">jdbc:mysql://localhost:3306/some_database</span><span class="w"></span>
+</code></pre></div>
 <p>Secondly, your Java code needs to look like this to load the data from the database:</p>
-<pre><code class="language-java"> import weka.core.Instances;
- import weka.experiment.InstanceQuery;
- ...
- InstanceQuery query = new InstanceQuery();
- query.setUsername(&quot;nobody&quot;);
- query.setPassword(&quot;&quot;);
- query.setQuery(&quot;select * from whatsoever&quot;);
- // You can declare that your data set is sparse
- // query.setSparseData(true);
- Instances data = query.retrieveInstances();
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="nn">weka.core.Instances</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="nn">weka.experiment.InstanceQuery</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w"> </span><span class="p">...</span><span class="w"></span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w"> </span><span class="n">InstanceQuery</span><span class="w"> </span><span class="n">query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">InstanceQuery</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w"> </span><span class="n">query</span><span class="p">.</span><span class="na">setUsername</span><span class="p">(</span><span class="s">&quot;nobody&quot;</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="w"> </span><span class="n">query</span><span class="p">.</span><span class="na">setPassword</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="w"> </span><span class="n">query</span><span class="p">.</span><span class="na">setQuery</span><span class="p">(</span><span class="s">&quot;select * from whatsoever&quot;</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="w"> </span><span class="c1">// You can declare that your data set is sparse</span><span class="w"></span>
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="w"> </span><span class="c1">// query.setSparseData(true);</span><span class="w"></span>
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="w"> </span><span class="n">Instances</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">query</span><span class="p">.</span><span class="na">retrieveInstances</span><span class="p">();</span><span class="w"></span>
+</code></pre></div>
 <p><strong>Notes:</strong>
 * Don't forget to add the JDBC driver to your <code>CLASSPATH</code>.
 * For MS Access, you must use the JDBC-ODBC-bridge that is part of a JDK. The <a href="../windows_databases/">Windows databases</a> article explains how to do this.
@@ -223,26 +994,26 @@ Classifier cls = (Classifier) Utils.forName(
 <ul>
 <li>Manually creating a String array:</li>
 </ul>
-<pre><code class="language-java">   String[] options = new String[2];
-   options[0] = &quot;-R&quot;;
-   options[1] = &quot;1&quot;;
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="w">   </span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">options</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">   </span><span class="n">options</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;-R&quot;</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">   </span><span class="n">options</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;1&quot;</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
 <ul>
 <li>Using a single command-line string and using the <code>splitOptions</code> method of the <code>weka.core.Utils</code> class to turn it into an array:</li>
 </ul>
-<pre><code class="language-java">    String[] options = weka.core.Utils.splitOptions(&quot;-R 1&quot;);
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="w">    </span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">options</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">weka</span><span class="p">.</span><span class="na">core</span><span class="p">.</span><span class="na">Utils</span><span class="p">.</span><span class="na">splitOptions</span><span class="p">(</span><span class="s">&quot;-R 1&quot;</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
 <ul>
 <li>Using the <a href="../files/OptionsToCode.java">OptionsToCode.java</a> class to automatically turn a command line into code. Especially handy if the command line contains nested classes that have their own options, such as kernels for SMO:</li>
 </ul>
-<pre><code class="language-bash">  java OptionsToCode weka.classifiers.functions.SMO
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>  java OptionsToCode weka.classifiers.functions.SMO
+</code></pre></div>
 <p>will generate output like this:</p>
-<pre><code class="language-java"> // create new instance of scheme
- weka.classifiers.functions.SMO scheme = new weka.classifiers.functions.SMO();
- // set options
- scheme.setOptions(weka.core.Utils.splitOptions(&quot;-C 1.0 -L 0.0010 -P 1.0E-12 -N 0 -V -1 -W 1 -K \&quot;weka.classifiers.functions.supportVector.PolyKernel -C 250007 -E 1.0\&quot;&quot;));
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="w"> </span><span class="c1">// create new instance of scheme</span><span class="w"></span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="w"> </span><span class="n">weka</span><span class="p">.</span><span class="na">classifiers</span><span class="p">.</span><span class="na">functions</span><span class="p">.</span><span class="na">SMO</span><span class="w"> </span><span class="n">scheme</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">weka</span><span class="p">.</span><span class="na">classifiers</span><span class="p">.</span><span class="na">functions</span><span class="p">.</span><span class="na">SMO</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="w"> </span><span class="c1">// set options</span><span class="w"></span>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="w"> </span><span class="n">scheme</span><span class="p">.</span><span class="na">setOptions</span><span class="p">(</span><span class="n">weka</span><span class="p">.</span><span class="na">core</span><span class="p">.</span><span class="na">Utils</span><span class="p">.</span><span class="na">splitOptions</span><span class="p">(</span><span class="s">&quot;-C 1.0 -L 0.0010 -P 1.0E-12 -N 0 -V -1 -W 1 -K \&quot;weka.classifiers.functions.supportVector.PolyKernel -C 250007 -E 1.0\&quot;&quot;</span><span class="p">));</span><span class="w"></span>
+</code></pre></div>
 <p>Also, the <a href="../files/OptionTree.java">OptionTree.java</a> tool allows you to view a nested options string, e.g., used at the command line, as a tree. This can help you spot nesting errors.</p>
 <h3 id="filter">Filter<a class="headerlink" href="#filter" title="Permanent link">#</a></h3>
 <p>A filter has two different properties:</p>
@@ -258,51 +1029,51 @@ Classifier cls = (Classifier) Utils.forName(
 </ul>
 <p>Most filters implement the <code>OptionHandler</code> interface, which means you can set the options via a String array, rather than setting them each manually via <code>set</code>-methods.
 For example, if you want to remove the <em>first</em> attribute of a dataset, you need this filter</p>
-<pre><code class="language-java"> weka.filters.unsupervised.attribute.Remove
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="w"> </span><span class="n">weka</span><span class="p">.</span><span class="na">filters</span><span class="p">.</span><span class="na">unsupervised</span><span class="p">.</span><span class="na">attribute</span><span class="p">.</span><span class="na">Remove</span><span class="w"></span>
+</code></pre></div>
 <p>with this option</p>
-<pre><code> -R 1
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a> -R 1
+</code></pre></div>
 <p>If you have an <code>Instances</code> object, called <code>data</code>, you can create and apply the filter like this:</p>
-<pre><code class="language-java"> import weka.core.Instances;
- import weka.filters.Filter;
- import weka.filters.unsupervised.attribute.Remove;
- ...
- String[] options = new String[2];
- options[0] = &quot;-R&quot;;                                    // &quot;range&quot;
- options[1] = &quot;1&quot;;                                     // first attribute
- Remove remove = new Remove();                         // new instance of filter
- remove.setOptions(options);                           // set options
- remove.setInputFormat(data);                          // inform filter about dataset **AFTER** setting options
- Instances newData = Filter.useFilter(data, remove);   // apply filter
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="nn">weka.core.Instances</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="nn">weka.filters.Filter</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="nn">weka.filters.unsupervised.attribute.Remove</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="w"> </span><span class="p">...</span><span class="w"></span>
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="w"> </span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">options</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a><span class="w"> </span><span class="n">options</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;-R&quot;</span><span class="p">;</span><span class="w">                                    </span><span class="c1">// &quot;range&quot;</span><span class="w"></span>
+<a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a><span class="w"> </span><span class="n">options</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;1&quot;</span><span class="p">;</span><span class="w">                                     </span><span class="c1">// first attribute</span><span class="w"></span>
+<a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a><span class="w"> </span><span class="n">Remove</span><span class="w"> </span><span class="n">remove</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Remove</span><span class="p">();</span><span class="w">                         </span><span class="c1">// new instance of filter</span><span class="w"></span>
+<a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a><span class="w"> </span><span class="n">remove</span><span class="p">.</span><span class="na">setOptions</span><span class="p">(</span><span class="n">options</span><span class="p">);</span><span class="w">                           </span><span class="c1">// set options</span><span class="w"></span>
+<a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a><span class="w"> </span><span class="n">remove</span><span class="p">.</span><span class="na">setInputFormat</span><span class="p">(</span><span class="n">data</span><span class="p">);</span><span class="w">                          </span><span class="c1">// inform filter about dataset **AFTER** setting options</span><span class="w"></span>
+<a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a><span class="w"> </span><span class="n">Instances</span><span class="w"> </span><span class="n">newData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Filter</span><span class="p">.</span><span class="na">useFilter</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="n">remove</span><span class="p">);</span><span class="w">   </span><span class="c1">// apply filter</span><span class="w"></span>
+</code></pre></div>
 <h4 id="filtering-on-the-fly">Filtering on-the-fly<a class="headerlink" href="#filtering-on-the-fly" title="Permanent link">#</a></h4>
 <p>The <a href="https://weka.sourceforge.io/doc.stable-3-8/weka/classifiers/meta/FilteredClassifier.html">FilteredClassifer</a> meta-classifier is an easy way of filtering data on the fly. It removes the necessity of filtering the data before the classifier can be trained. Also, the data need not be passed through the trained filter again at prediction time. The following is an example of using this meta-classifier with the <code>Remove</code> filter and <code>J48</code> for getting rid of a numeric ID attribute in the data:</p>
-<pre><code class="language-java"> import weka.classifiers.meta.FilteredClassifier;
- import weka.classifiers.trees.J48;
- import weka.filters.unsupervised.attribute.Remove;
- ...
- Instances train = ...         // from somewhere
- Instances test = ...          // from somewhere
- // filter
- Remove rm = new Remove();
- rm.setAttributeIndices(&quot;1&quot;);  // remove 1st attribute
- // classifier
- J48 j48 = new J48();
- j48.setUnpruned(true);        // using an unpruned J48
- // meta-classifier
- FilteredClassifier fc = new FilteredClassifier();
- fc.setFilter(rm);
- fc.setClassifier(j48);
- // train and make predictions
- fc.buildClassifier(train);
- for (int i = 0; i &lt; test.numInstances(); i++) {
-   double pred = fc.classifyInstance(test.instance(i));
-   System.out.print(&quot;ID: &quot; + test.instance(i).value(0));
-   System.out.print(&quot;, actual: &quot; + test.classAttribute().value((int) test.instance(i).classValue()));
-   System.out.println(&quot;, predicted: &quot; + test.classAttribute().value((int) pred));
- }
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="nn">weka.classifiers.meta.FilteredClassifier</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="nn">weka.classifiers.trees.J48</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="nn">weka.filters.unsupervised.attribute.Remove</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="w"> </span><span class="p">...</span><span class="w"></span>
+<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a><span class="w"> </span><span class="n">Instances</span><span class="w"> </span><span class="n">train</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...</span><span class="w">         </span><span class="c1">// from somewhere</span><span class="w"></span>
+<a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a><span class="w"> </span><span class="n">Instances</span><span class="w"> </span><span class="n">test</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...</span><span class="w">          </span><span class="c1">// from somewhere</span><span class="w"></span>
+<a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a><span class="w"> </span><span class="c1">// filter</span><span class="w"></span>
+<a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a><span class="w"> </span><span class="n">Remove</span><span class="w"> </span><span class="n">rm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Remove</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a><span class="w"> </span><span class="n">rm</span><span class="p">.</span><span class="na">setAttributeIndices</span><span class="p">(</span><span class="s">&quot;1&quot;</span><span class="p">);</span><span class="w">  </span><span class="c1">// remove 1st attribute</span><span class="w"></span>
+<a id="__codelineno-18-10" name="__codelineno-18-10" href="#__codelineno-18-10"></a><span class="w"> </span><span class="c1">// classifier</span><span class="w"></span>
+<a id="__codelineno-18-11" name="__codelineno-18-11" href="#__codelineno-18-11"></a><span class="w"> </span><span class="n">J48</span><span class="w"> </span><span class="n">j48</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">J48</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-18-12" name="__codelineno-18-12" href="#__codelineno-18-12"></a><span class="w"> </span><span class="n">j48</span><span class="p">.</span><span class="na">setUnpruned</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span><span class="w">        </span><span class="c1">// using an unpruned J48</span><span class="w"></span>
+<a id="__codelineno-18-13" name="__codelineno-18-13" href="#__codelineno-18-13"></a><span class="w"> </span><span class="c1">// meta-classifier</span><span class="w"></span>
+<a id="__codelineno-18-14" name="__codelineno-18-14" href="#__codelineno-18-14"></a><span class="w"> </span><span class="n">FilteredClassifier</span><span class="w"> </span><span class="n">fc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FilteredClassifier</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-18-15" name="__codelineno-18-15" href="#__codelineno-18-15"></a><span class="w"> </span><span class="n">fc</span><span class="p">.</span><span class="na">setFilter</span><span class="p">(</span><span class="n">rm</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-18-16" name="__codelineno-18-16" href="#__codelineno-18-16"></a><span class="w"> </span><span class="n">fc</span><span class="p">.</span><span class="na">setClassifier</span><span class="p">(</span><span class="n">j48</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-18-17" name="__codelineno-18-17" href="#__codelineno-18-17"></a><span class="w"> </span><span class="c1">// train and make predictions</span><span class="w"></span>
+<a id="__codelineno-18-18" name="__codelineno-18-18" href="#__codelineno-18-18"></a><span class="w"> </span><span class="n">fc</span><span class="p">.</span><span class="na">buildClassifier</span><span class="p">(</span><span class="n">train</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-18-19" name="__codelineno-18-19" href="#__codelineno-18-19"></a><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">test</span><span class="p">.</span><span class="na">numInstances</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-18-20" name="__codelineno-18-20" href="#__codelineno-18-20"></a><span class="w">   </span><span class="kt">double</span><span class="w"> </span><span class="n">pred</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fc</span><span class="p">.</span><span class="na">classifyInstance</span><span class="p">(</span><span class="n">test</span><span class="p">.</span><span class="na">instance</span><span class="p">(</span><span class="n">i</span><span class="p">));</span><span class="w"></span>
+<a id="__codelineno-18-21" name="__codelineno-18-21" href="#__codelineno-18-21"></a><span class="w">   </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;ID: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">test</span><span class="p">.</span><span class="na">instance</span><span class="p">(</span><span class="n">i</span><span class="p">).</span><span class="na">value</span><span class="p">(</span><span class="mi">0</span><span class="p">));</span><span class="w"></span>
+<a id="__codelineno-18-22" name="__codelineno-18-22" href="#__codelineno-18-22"></a><span class="w">   </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;, actual: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">test</span><span class="p">.</span><span class="na">classAttribute</span><span class="p">().</span><span class="na">value</span><span class="p">((</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="n">test</span><span class="p">.</span><span class="na">instance</span><span class="p">(</span><span class="n">i</span><span class="p">).</span><span class="na">classValue</span><span class="p">()));</span><span class="w"></span>
+<a id="__codelineno-18-23" name="__codelineno-18-23" href="#__codelineno-18-23"></a><span class="w">   </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;, predicted: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">test</span><span class="p">.</span><span class="na">classAttribute</span><span class="p">().</span><span class="na">value</span><span class="p">((</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="n">pred</span><span class="p">));</span><span class="w"></span>
+<a id="__codelineno-18-24" name="__codelineno-18-24" href="#__codelineno-18-24"></a><span class="w"> </span><span class="p">}</span><span class="w"></span>
+</code></pre></div>
 <p>Other handy meta-schemes in Weka:</p>
 <ul>
 <li><a href="https://weka.sourceforge.io/doc.stable-3-8/weka/clusterers/FilteredClusterer.html">weka.clusterers.FilteredClusterer</a></li>
@@ -310,30 +1081,30 @@ For example, if you want to remove the <em>first</em> attribute of a dataset, yo
 </ul>
 <h4 id="batch-filtering">Batch filtering<a class="headerlink" href="#batch-filtering" title="Permanent link">#</a></h4>
 <p>On the command line, you can enable a second input/output pair (via <code>-r</code> and <code>-s</code>) with the <code>-b</code> option, in order to process the second file with the same filter setup as the first one. Necessary, if you're using attribute selection or standardization - otherwise you end up with incompatible datasets. This is done fairly easy, since one initializes the filter only once with the <code>setInputFormat(Instances)</code> method, namely with the training set, and then applies the filter subsequently to the training set <em>and</em> the test set. The following example shows how to apply the <code>Standardize</code> filter to a train and a test set.</p>
-<pre><code class="language-java"> Instances train = ...   // from somewhere
- Instances test = ...    // from somewhere
- Standardize filter = new Standardize();
- filter.setInputFormat(train);  // initializing the filter once with training set
- Instances newTrain = Filter.useFilter(train, filter);  // configures the Filter based on train instances and returns filtered instances
- Instances newTest = Filter.useFilter(test, filter);    // create new test set
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="w"> </span><span class="n">Instances</span><span class="w"> </span><span class="n">train</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...</span><span class="w">   </span><span class="c1">// from somewhere</span><span class="w"></span>
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="w"> </span><span class="n">Instances</span><span class="w"> </span><span class="n">test</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...</span><span class="w">    </span><span class="c1">// from somewhere</span><span class="w"></span>
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="w"> </span><span class="n">Standardize</span><span class="w"> </span><span class="n">filter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Standardize</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="w"> </span><span class="n">filter</span><span class="p">.</span><span class="na">setInputFormat</span><span class="p">(</span><span class="n">train</span><span class="p">);</span><span class="w">  </span><span class="c1">// initializing the filter once with training set</span><span class="w"></span>
+<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a><span class="w"> </span><span class="n">Instances</span><span class="w"> </span><span class="n">newTrain</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Filter</span><span class="p">.</span><span class="na">useFilter</span><span class="p">(</span><span class="n">train</span><span class="p">,</span><span class="w"> </span><span class="n">filter</span><span class="p">);</span><span class="w">  </span><span class="c1">// configures the Filter based on train instances and returns filtered instances</span><span class="w"></span>
+<a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a><span class="w"> </span><span class="n">Instances</span><span class="w"> </span><span class="n">newTest</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Filter</span><span class="p">.</span><span class="na">useFilter</span><span class="p">(</span><span class="n">test</span><span class="p">,</span><span class="w"> </span><span class="n">filter</span><span class="p">);</span><span class="w">    </span><span class="c1">// create new test set</span><span class="w"></span>
+</code></pre></div>
 <h4 id="calling-conventions">Calling conventions<a class="headerlink" href="#calling-conventions" title="Permanent link">#</a></h4>
 <p>The <code>setInputFormat(Instances)</code> method <strong>always</strong> has to be the last call before the filter is applied, e.g., with <code>Filter.useFilter(Instances,Filter)</code>. <em>Why?</em> First, it is the convention for using filters and, secondly, lots of filters generate the header of the output format in the <code>setInputFormat(Instances)</code> method with the currently set options (setting otpions <em>after</em> this call doesn't have any effect any more).</p>
 <h3 id="classification">Classification<a class="headerlink" href="#classification" title="Permanent link">#</a></h3>
-<p>The necessary classes can be found in this package:</p>
-<pre><code> weka.classifiers
-</code></pre>
+<p>The necessary classes can be found in this package:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a> weka.classifiers
+</code></pre></div></p>
 <h4 id="building-a-classifier">Building a Classifier<a class="headerlink" href="#building-a-classifier" title="Permanent link">#</a></h4>
 <h5 id="batch">Batch<a class="headerlink" href="#batch" title="Permanent link">#</a></h5>
 <p>A Weka classifier is rather simple to train on a given dataset. E.g., we can train an unpruned C4.5 tree algorithm on a given dataset <em>data</em>. The training is done via the <code>buildClassifier(Instances)</code> method.</p>
-<pre><code class="language-java"> import weka.classifiers.trees.J48;
- ...
- String[] options = new String[1];
- options[0] = &quot;-U&quot;;            // unpruned tree
- J48 tree = new J48();         // new instance of tree
- tree.setOptions(options);     // set the options
- tree.buildClassifier(data);   // build classifier
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="nn">weka.classifiers.trees.J48</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="w"> </span><span class="p">...</span><span class="w"></span>
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="w"> </span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">options</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a><span class="w"> </span><span class="n">options</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;-U&quot;</span><span class="p">;</span><span class="w">            </span><span class="c1">// unpruned tree</span><span class="w"></span>
+<a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a><span class="w"> </span><span class="n">J48</span><span class="w"> </span><span class="n">tree</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">J48</span><span class="p">();</span><span class="w">         </span><span class="c1">// new instance of tree</span><span class="w"></span>
+<a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a><span class="w"> </span><span class="n">tree</span><span class="p">.</span><span class="na">setOptions</span><span class="p">(</span><span class="n">options</span><span class="p">);</span><span class="w">     </span><span class="c1">// set the options</span><span class="w"></span>
+<a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a><span class="w"> </span><span class="n">tree</span><span class="p">.</span><span class="na">buildClassifier</span><span class="p">(</span><span class="n">data</span><span class="p">);</span><span class="w">   </span><span class="c1">// build classifier</span><span class="w"></span>
+</code></pre></div>
 <h5 id="incremental">Incremental<a class="headerlink" href="#incremental" title="Permanent link">#</a></h5>
 <p>Classifiers implementing the <code>weka.classifiers.UpdateableClassifier</code> interface can be trained incrementally. This conserves memory, since the data doesn't have to be loaded into memory all at once. See the Javadoc of this interface to see what classifiers are implementing it.</p>
 <p>The actual process of training an incremental classifier is fairly simple:</p>
@@ -341,47 +1112,47 @@ For example, if you want to remove the <em>first</em> attribute of a dataset, yo
 <li>Call <code>buildClassifier(Instances)</code> with the structure of the dataset (may or may not contain any actual data rows).</li>
 <li>Subsequently call the <code>updateClassifier(Instance)</code> method to feed the classifier new <code>weka.core.Instance</code> objects, one by one.</li>
 </ul>
-<p>Here is an example using data from a <code>weka.core.converters.ArffLoader</code> to train <code>weka.classifiers.bayes.NaiveBayesUpdateable</code>:</p>
-<pre><code class="language-java"> // load data
- ArffLoader loader = new ArffLoader();
- loader.setFile(new File(&quot;/some/where/data.arff&quot;));
- Instances structure = loader.getStructure();
- structure.setClassIndex(structure.numAttributes() - 1);
-
- // train NaiveBayes
- NaiveBayesUpdateable nb = new NaiveBayesUpdateable();
- nb.buildClassifier(structure);
- Instance current;
- while ((current = loader.getNextInstance(structure)) != null)
-   nb.updateClassifier(current);
-</code></pre>
+<p>Here is an example using data from a <code>weka.core.converters.ArffLoader</code> to train <code>weka.classifiers.bayes.NaiveBayesUpdateable</code>:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="w"> </span><span class="c1">// load data</span><span class="w"></span>
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="w"> </span><span class="n">ArffLoader</span><span class="w"> </span><span class="n">loader</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArffLoader</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="w"> </span><span class="n">loader</span><span class="p">.</span><span class="na">setFile</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">File</span><span class="p">(</span><span class="s">&quot;/some/where/data.arff&quot;</span><span class="p">));</span><span class="w"></span>
+<a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a><span class="w"> </span><span class="n">Instances</span><span class="w"> </span><span class="n">structure</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">loader</span><span class="p">.</span><span class="na">getStructure</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a><span class="w"> </span><span class="n">structure</span><span class="p">.</span><span class="na">setClassIndex</span><span class="p">(</span><span class="n">structure</span><span class="p">.</span><span class="na">numAttributes</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a>
+<a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a><span class="w"> </span><span class="c1">// train NaiveBayes</span><span class="w"></span>
+<a id="__codelineno-22-8" name="__codelineno-22-8" href="#__codelineno-22-8"></a><span class="w"> </span><span class="n">NaiveBayesUpdateable</span><span class="w"> </span><span class="n">nb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">NaiveBayesUpdateable</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-22-9" name="__codelineno-22-9" href="#__codelineno-22-9"></a><span class="w"> </span><span class="n">nb</span><span class="p">.</span><span class="na">buildClassifier</span><span class="p">(</span><span class="n">structure</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-22-10" name="__codelineno-22-10" href="#__codelineno-22-10"></a><span class="w"> </span><span class="n">Instance</span><span class="w"> </span><span class="n">current</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-22-11" name="__codelineno-22-11" href="#__codelineno-22-11"></a><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="p">((</span><span class="n">current</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">loader</span><span class="p">.</span><span class="na">getNextInstance</span><span class="p">(</span><span class="n">structure</span><span class="p">))</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-22-12" name="__codelineno-22-12" href="#__codelineno-22-12"></a><span class="w">   </span><span class="n">nb</span><span class="p">.</span><span class="na">updateClassifier</span><span class="p">(</span><span class="n">current</span><span class="p">);</span><span class="w"></span>
+</code></pre></div></p>
 <p>A working example is <a href="../files/IncrementalClassifier.java">IncrementalClassifier.java</a>.</p>
 <h4 id="evaluating">Evaluating<a class="headerlink" href="#evaluating" title="Permanent link">#</a></h4>
 <h5 id="cross-validation">Cross-validation<a class="headerlink" href="#cross-validation" title="Permanent link">#</a></h5>
 <p>If you only have a training set and no test you might want to evaluate the classifier by using 10 times 10-fold cross-validation. This can be easily done via the <code>Evaluation</code> class. Here we <em>seed</em> the random selection of our folds for the CV with <em>1</em>. Check out the <code>Evaluation</code> class for more information about the statistics it produces.</p>
-<pre><code class="language-java"> import weka.classifiers.Evaluation;
- import java.util.Random;
- ...
- Evaluation eval = new Evaluation(newData);
- eval.crossValidateModel(tree, newData, 10, new Random(1));
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="nn">weka.classifiers.Evaluation</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Random</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="w"> </span><span class="p">...</span><span class="w"></span>
+<a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a><span class="w"> </span><span class="n">Evaluation</span><span class="w"> </span><span class="n">eval</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Evaluation</span><span class="p">(</span><span class="n">newData</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a><span class="w"> </span><span class="n">eval</span><span class="p">.</span><span class="na">crossValidateModel</span><span class="p">(</span><span class="n">tree</span><span class="p">,</span><span class="w"> </span><span class="n">newData</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Random</span><span class="p">(</span><span class="mi">1</span><span class="p">));</span><span class="w"></span>
+</code></pre></div>
 <p><strong>Note:</strong> The classifier (in our example <em>tree</em>) should not be trained when handed over to the <code>crossValidateModel</code> method. <strong>Why?</strong> If the classifier does not abide to the Weka convention that a classifier must be re-initialized every time the <code>buildClassifier</code> method is called (in other words: subsequent calls to the <code>buildClassifier</code> method always return the same results), you will get inconsistent and worthless results. The <code>crossValidateModel</code> takes care of training and evaluating the classifier. (It creates a copy of the original classifier that you hand over to the <code>crossValidateModel</code> for each run of the cross-validation.)</p>
 <h5 id="traintest-set">Train/test set<a class="headerlink" href="#traintest-set" title="Permanent link">#</a></h5>
 <p>In case you have a dedicated test set, you can train the classifier and then evaluate it on this test set. In the following example, a J48 is instantiated, trained and then evaluated. Some statistics are printed to <code>stdout</code>:</p>
-<pre><code class="language-java"> import weka.core.Instances;
- import weka.classifiers.Evaluation;
- import weka.classifiers.trees.J48;
- ...
- Instances train = ...   // from somewhere
- Instances test = ...    // from somewhere
- // train classifier
- Classifier cls = new J48();
- cls.buildClassifier(train);
- // evaluate classifier and print some statistics
- Evaluation eval = new Evaluation(train);
- eval.evaluateModel(cls, test);
- System.out.println(eval.toSummaryString(&quot;\nResults\n======\n&quot;, false));
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="nn">weka.core.Instances</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="nn">weka.classifiers.Evaluation</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="nn">weka.classifiers.trees.J48</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a><span class="w"> </span><span class="p">...</span><span class="w"></span>
+<a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a><span class="w"> </span><span class="n">Instances</span><span class="w"> </span><span class="n">train</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...</span><span class="w">   </span><span class="c1">// from somewhere</span><span class="w"></span>
+<a id="__codelineno-24-6" name="__codelineno-24-6" href="#__codelineno-24-6"></a><span class="w"> </span><span class="n">Instances</span><span class="w"> </span><span class="n">test</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...</span><span class="w">    </span><span class="c1">// from somewhere</span><span class="w"></span>
+<a id="__codelineno-24-7" name="__codelineno-24-7" href="#__codelineno-24-7"></a><span class="w"> </span><span class="c1">// train classifier</span><span class="w"></span>
+<a id="__codelineno-24-8" name="__codelineno-24-8" href="#__codelineno-24-8"></a><span class="w"> </span><span class="n">Classifier</span><span class="w"> </span><span class="n">cls</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">J48</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-24-9" name="__codelineno-24-9" href="#__codelineno-24-9"></a><span class="w"> </span><span class="n">cls</span><span class="p">.</span><span class="na">buildClassifier</span><span class="p">(</span><span class="n">train</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-24-10" name="__codelineno-24-10" href="#__codelineno-24-10"></a><span class="w"> </span><span class="c1">// evaluate classifier and print some statistics</span><span class="w"></span>
+<a id="__codelineno-24-11" name="__codelineno-24-11" href="#__codelineno-24-11"></a><span class="w"> </span><span class="n">Evaluation</span><span class="w"> </span><span class="n">eval</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Evaluation</span><span class="p">(</span><span class="n">train</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-24-12" name="__codelineno-24-12" href="#__codelineno-24-12"></a><span class="w"> </span><span class="n">eval</span><span class="p">.</span><span class="na">evaluateModel</span><span class="p">(</span><span class="n">cls</span><span class="p">,</span><span class="w"> </span><span class="n">test</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-24-13" name="__codelineno-24-13" href="#__codelineno-24-13"></a><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">eval</span><span class="p">.</span><span class="na">toSummaryString</span><span class="p">(</span><span class="s">&quot;\nResults\n======\n&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">false</span><span class="p">));</span><span class="w"></span>
+</code></pre></div>
 <h5 id="statistics">Statistics<a class="headerlink" href="#statistics" title="Permanent link">#</a></h5>
 <p>Some methods for retrieving the results from the evaluation:</p>
 <ul>
@@ -410,71 +1181,71 @@ For example, if you want to remove the <em>first</em> attribute of a dataset, yo
 </li>
 </ul>
 <p>If you want to have the exact same behavior as from the command line, use this call:</p>
-<pre><code class="language-java"> import weka.classifiers.trees.J48;
- import weka.classifiers.Evaluation;
- ...
- String[] options = new String[2];
- options[0] = &quot;-t&quot;;
- options[1] = &quot;/some/where/somefile.arff&quot;;
- System.out.println(Evaluation.evaluateModel(new J48(), options));
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="nn">weka.classifiers.trees.J48</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="nn">weka.classifiers.Evaluation</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a><span class="w"> </span><span class="p">...</span><span class="w"></span>
+<a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a><span class="w"> </span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">options</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a><span class="w"> </span><span class="n">options</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;-t&quot;</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-25-6" name="__codelineno-25-6" href="#__codelineno-25-6"></a><span class="w"> </span><span class="n">options</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;/some/where/somefile.arff&quot;</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-25-7" name="__codelineno-25-7" href="#__codelineno-25-7"></a><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">Evaluation</span><span class="p">.</span><span class="na">evaluateModel</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">J48</span><span class="p">(),</span><span class="w"> </span><span class="n">options</span><span class="p">));</span><span class="w"></span>
+</code></pre></div>
 <h5 id="roc-curvesauc">ROC curves/AUC<a class="headerlink" href="#roc-curvesauc" title="Permanent link">#</a></h5>
 <p>You can also generate ROC curves/AUC with the predictions Weka recorded during testing. You can access these predictions via the <code>predictions()</code> method of the <code>Evaluation</code> class. See the <a href="../generating_roc_curve/">Generating ROC curve</a> article for a full example of how to generate ROC curves.</p>
 <h4 id="classifying-instances">Classifying instances<a class="headerlink" href="#classifying-instances" title="Permanent link">#</a></h4>
 <p>In case you have an unlabeled dataset that you want to classify with your newly trained classifier, you can use the following code snippet. It loads the file <code>/some/where/unlabeled.arff</code>, uses the previously built classifier <code>tree</code> to label the instances, and saves the labeled data as <code>/some/where/labeled.arff</code>.</p>
-<pre><code class="language-java"> import java.io.BufferedReader;
- import java.io.BufferedWriter;
- import java.io.FileReader;
- import java.io.FileWriter;
- import weka.core.Instances;
- ...
- // load unlabeled data
- Instances unlabeled = new Instances(
-                         new BufferedReader(
-                           new FileReader(&quot;/some/where/unlabeled.arff&quot;)));
-
- // set class attribute
- unlabeled.setClassIndex(unlabeled.numAttributes() - 1);
-
- // create copy
- Instances labeled = new Instances(unlabeled);
-
- // label instances
- for (int i = 0; i &lt; unlabeled.numInstances(); i++) {
-   double clsLabel = tree.classifyInstance(unlabeled.instance(i));
-   labeled.instance(i).setClassValue(clsLabel);
- }
- // save labeled data
- BufferedWriter writer = new BufferedWriter(
-                           new FileWriter(&quot;/some/where/labeled.arff&quot;));
- writer.write(labeled.toString());
- writer.newLine();
- writer.flush();
- writer.close();
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.BufferedReader</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.BufferedWriter</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.FileReader</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.FileWriter</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-26-5" name="__codelineno-26-5" href="#__codelineno-26-5"></a><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="nn">weka.core.Instances</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-26-6" name="__codelineno-26-6" href="#__codelineno-26-6"></a><span class="w"> </span><span class="p">...</span><span class="w"></span>
+<a id="__codelineno-26-7" name="__codelineno-26-7" href="#__codelineno-26-7"></a><span class="w"> </span><span class="c1">// load unlabeled data</span><span class="w"></span>
+<a id="__codelineno-26-8" name="__codelineno-26-8" href="#__codelineno-26-8"></a><span class="w"> </span><span class="n">Instances</span><span class="w"> </span><span class="n">unlabeled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Instances</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-26-9" name="__codelineno-26-9" href="#__codelineno-26-9"></a><span class="w">                         </span><span class="k">new</span><span class="w"> </span><span class="n">BufferedReader</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-26-10" name="__codelineno-26-10" href="#__codelineno-26-10"></a><span class="w">                           </span><span class="k">new</span><span class="w"> </span><span class="n">FileReader</span><span class="p">(</span><span class="s">&quot;/some/where/unlabeled.arff&quot;</span><span class="p">)));</span><span class="w"></span>
+<a id="__codelineno-26-11" name="__codelineno-26-11" href="#__codelineno-26-11"></a>
+<a id="__codelineno-26-12" name="__codelineno-26-12" href="#__codelineno-26-12"></a><span class="w"> </span><span class="c1">// set class attribute</span><span class="w"></span>
+<a id="__codelineno-26-13" name="__codelineno-26-13" href="#__codelineno-26-13"></a><span class="w"> </span><span class="n">unlabeled</span><span class="p">.</span><span class="na">setClassIndex</span><span class="p">(</span><span class="n">unlabeled</span><span class="p">.</span><span class="na">numAttributes</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-26-14" name="__codelineno-26-14" href="#__codelineno-26-14"></a>
+<a id="__codelineno-26-15" name="__codelineno-26-15" href="#__codelineno-26-15"></a><span class="w"> </span><span class="c1">// create copy</span><span class="w"></span>
+<a id="__codelineno-26-16" name="__codelineno-26-16" href="#__codelineno-26-16"></a><span class="w"> </span><span class="n">Instances</span><span class="w"> </span><span class="n">labeled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Instances</span><span class="p">(</span><span class="n">unlabeled</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-26-17" name="__codelineno-26-17" href="#__codelineno-26-17"></a>
+<a id="__codelineno-26-18" name="__codelineno-26-18" href="#__codelineno-26-18"></a><span class="w"> </span><span class="c1">// label instances</span><span class="w"></span>
+<a id="__codelineno-26-19" name="__codelineno-26-19" href="#__codelineno-26-19"></a><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">unlabeled</span><span class="p">.</span><span class="na">numInstances</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-26-20" name="__codelineno-26-20" href="#__codelineno-26-20"></a><span class="w">   </span><span class="kt">double</span><span class="w"> </span><span class="n">clsLabel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tree</span><span class="p">.</span><span class="na">classifyInstance</span><span class="p">(</span><span class="n">unlabeled</span><span class="p">.</span><span class="na">instance</span><span class="p">(</span><span class="n">i</span><span class="p">));</span><span class="w"></span>
+<a id="__codelineno-26-21" name="__codelineno-26-21" href="#__codelineno-26-21"></a><span class="w">   </span><span class="n">labeled</span><span class="p">.</span><span class="na">instance</span><span class="p">(</span><span class="n">i</span><span class="p">).</span><span class="na">setClassValue</span><span class="p">(</span><span class="n">clsLabel</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-26-22" name="__codelineno-26-22" href="#__codelineno-26-22"></a><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-26-23" name="__codelineno-26-23" href="#__codelineno-26-23"></a><span class="w"> </span><span class="c1">// save labeled data</span><span class="w"></span>
+<a id="__codelineno-26-24" name="__codelineno-26-24" href="#__codelineno-26-24"></a><span class="w"> </span><span class="n">BufferedWriter</span><span class="w"> </span><span class="n">writer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">BufferedWriter</span><span class="p">(</span><span class="w"></span>
+<a id="__codelineno-26-25" name="__codelineno-26-25" href="#__codelineno-26-25"></a><span class="w">                           </span><span class="k">new</span><span class="w"> </span><span class="n">FileWriter</span><span class="p">(</span><span class="s">&quot;/some/where/labeled.arff&quot;</span><span class="p">));</span><span class="w"></span>
+<a id="__codelineno-26-26" name="__codelineno-26-26" href="#__codelineno-26-26"></a><span class="w"> </span><span class="n">writer</span><span class="p">.</span><span class="na">write</span><span class="p">(</span><span class="n">labeled</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span><span class="w"></span>
+<a id="__codelineno-26-27" name="__codelineno-26-27" href="#__codelineno-26-27"></a><span class="w"> </span><span class="n">writer</span><span class="p">.</span><span class="na">newLine</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-26-28" name="__codelineno-26-28" href="#__codelineno-26-28"></a><span class="w"> </span><span class="n">writer</span><span class="p">.</span><span class="na">flush</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-26-29" name="__codelineno-26-29" href="#__codelineno-26-29"></a><span class="w"> </span><span class="n">writer</span><span class="p">.</span><span class="na">close</span><span class="p">();</span><span class="w"></span>
+</code></pre></div>
 <p><strong>Note on nominal classes:</strong></p>
 <ul>
 <li>If you're interested in the distribution over all the classes, use the method <code>distributionForInstance(Instance)</code>. This method returns a double array with the probability for each class.</li>
 <li>The returned double value from <code>classifyInstance</code> (or the index in the array returned by <code>distributionForInstance</code>) is just the index for the string values in the attribute. That is, if you want the string representation for the class label returned above <code>clsLabel</code>, then you can print it like this:</li>
 </ul>
-<pre><code class="language-java">System.out.println(clsLabel + &quot; -&gt; &quot; + unlabeled.classAttribute().value((int) clsLabel));
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">clsLabel</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; -&gt; &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">unlabeled</span><span class="p">.</span><span class="na">classAttribute</span><span class="p">().</span><span class="na">value</span><span class="p">((</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="n">clsLabel</span><span class="p">));</span><span class="w"></span>
+</code></pre></div>
 <h3 id="clustering">Clustering<a class="headerlink" href="#clustering" title="Permanent link">#</a></h3>
-<p>Clustering is similar to classification. The necessary classes can be found in this package:</p>
-<pre><code> weka.clusterers
-</code></pre>
+<p>Clustering is similar to classification. The necessary classes can be found in this package:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a> weka.clusterers
+</code></pre></div></p>
 <h4 id="building-a-clusterer">Building a Clusterer<a class="headerlink" href="#building-a-clusterer" title="Permanent link">#</a></h4>
 <h5 id="batch_1">Batch<a class="headerlink" href="#batch_1" title="Permanent link">#</a></h5>
-<p>A clusterer is built in much the same way as a classifier, but the <code>buildClusterer(Instances)</code> method instead of <code>buildClassifier(Instances)</code>. The following code snippet shows how to build an <code>EM</code> clusterer with a maximum of <code>100</code> iterations.</p>
-<pre><code class="language-java"> import weka.clusterers.EM;
- ...
- String[] options = new String[2];
- options[0] = &quot;-I&quot;;                 // max. iterations
- options[1] = &quot;100&quot;;
- EM clusterer = new EM();   // new instance of clusterer
- clusterer.setOptions(options);     // set the options
- clusterer.buildClusterer(data);    // build the clusterer
-</code></pre>
+<p>A clusterer is built in much the same way as a classifier, but the <code>buildClusterer(Instances)</code> method instead of <code>buildClassifier(Instances)</code>. The following code snippet shows how to build an <code>EM</code> clusterer with a maximum of <code>100</code> iterations.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="nn">weka.clusterers.EM</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a><span class="w"> </span><span class="p">...</span><span class="w"></span>
+<a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a><span class="w"> </span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">options</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-29-4" name="__codelineno-29-4" href="#__codelineno-29-4"></a><span class="w"> </span><span class="n">options</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;-I&quot;</span><span class="p">;</span><span class="w">                 </span><span class="c1">// max. iterations</span><span class="w"></span>
+<a id="__codelineno-29-5" name="__codelineno-29-5" href="#__codelineno-29-5"></a><span class="w"> </span><span class="n">options</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;100&quot;</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-29-6" name="__codelineno-29-6" href="#__codelineno-29-6"></a><span class="w"> </span><span class="n">EM</span><span class="w"> </span><span class="n">clusterer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">EM</span><span class="p">();</span><span class="w">   </span><span class="c1">// new instance of clusterer</span><span class="w"></span>
+<a id="__codelineno-29-7" name="__codelineno-29-7" href="#__codelineno-29-7"></a><span class="w"> </span><span class="n">clusterer</span><span class="p">.</span><span class="na">setOptions</span><span class="p">(</span><span class="n">options</span><span class="p">);</span><span class="w">     </span><span class="c1">// set the options</span><span class="w"></span>
+<a id="__codelineno-29-8" name="__codelineno-29-8" href="#__codelineno-29-8"></a><span class="w"> </span><span class="n">clusterer</span><span class="p">.</span><span class="na">buildClusterer</span><span class="p">(</span><span class="n">data</span><span class="p">);</span><span class="w">    </span><span class="c1">// build the clusterer</span><span class="w"></span>
+</code></pre></div></p>
 <h5 id="incremental_1">Incremental<a class="headerlink" href="#incremental_1" title="Permanent link">#</a></h5>
 <p>Clusterers implementing the <code>weka.clusterers.UpdateableClusterer</code> interface can be trained incrementally. This conserves memory, since the data doesn't have to be loaded into memory all at once. See the Javadoc for this interface to see which clusterers implement it.</p>
 <p>The actual process of training an incremental clusterer is fairly simple:</p>
@@ -484,54 +1255,54 @@ For example, if you want to remove the <em>first</em> attribute of a dataset, yo
 <li>Call <code>updateFinished()</code> after all Instance objects have been processed, for the clusterer to perform additional computations.</li>
 </ul>
 <p>Here is an example using data from a <code>weka.core.converters.ArffLoader</code> to train <code>weka.clusterers.Cobweb</code>:</p>
-<pre><code class="language-java"> // load data
- ArffLoader loader = new ArffLoader();
- loader.setFile(new File(&quot;/some/where/data.arff&quot;));
- Instances structure = loader.getStructure();
-
- // train Cobweb
- Cobweb cw = new Cobweb();
- cw.buildClusterer(structure);
- Instance current;
- while ((current = loader.getNextInstance(structure)) != null)
-   cw.updateClusterer(current);
- cw.updateFinished();
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="w"> </span><span class="c1">// load data</span><span class="w"></span>
+<a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a><span class="w"> </span><span class="n">ArffLoader</span><span class="w"> </span><span class="n">loader</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArffLoader</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a><span class="w"> </span><span class="n">loader</span><span class="p">.</span><span class="na">setFile</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">File</span><span class="p">(</span><span class="s">&quot;/some/where/data.arff&quot;</span><span class="p">));</span><span class="w"></span>
+<a id="__codelineno-30-4" name="__codelineno-30-4" href="#__codelineno-30-4"></a><span class="w"> </span><span class="n">Instances</span><span class="w"> </span><span class="n">structure</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">loader</span><span class="p">.</span><span class="na">getStructure</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-30-5" name="__codelineno-30-5" href="#__codelineno-30-5"></a>
+<a id="__codelineno-30-6" name="__codelineno-30-6" href="#__codelineno-30-6"></a><span class="w"> </span><span class="c1">// train Cobweb</span><span class="w"></span>
+<a id="__codelineno-30-7" name="__codelineno-30-7" href="#__codelineno-30-7"></a><span class="w"> </span><span class="n">Cobweb</span><span class="w"> </span><span class="n">cw</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Cobweb</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-30-8" name="__codelineno-30-8" href="#__codelineno-30-8"></a><span class="w"> </span><span class="n">cw</span><span class="p">.</span><span class="na">buildClusterer</span><span class="p">(</span><span class="n">structure</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-30-9" name="__codelineno-30-9" href="#__codelineno-30-9"></a><span class="w"> </span><span class="n">Instance</span><span class="w"> </span><span class="n">current</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-30-10" name="__codelineno-30-10" href="#__codelineno-30-10"></a><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="p">((</span><span class="n">current</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">loader</span><span class="p">.</span><span class="na">getNextInstance</span><span class="p">(</span><span class="n">structure</span><span class="p">))</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"></span>
+<a id="__codelineno-30-11" name="__codelineno-30-11" href="#__codelineno-30-11"></a><span class="w">   </span><span class="n">cw</span><span class="p">.</span><span class="na">updateClusterer</span><span class="p">(</span><span class="n">current</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-30-12" name="__codelineno-30-12" href="#__codelineno-30-12"></a><span class="w"> </span><span class="n">cw</span><span class="p">.</span><span class="na">updateFinished</span><span class="p">();</span><span class="w"></span>
+</code></pre></div>
 <p>A working example is <a href="../files/IncrementalClusterer.java">IncrementalClusterer.java</a>.</p>
 <h4 id="evaluating_1">Evaluating<a class="headerlink" href="#evaluating_1" title="Permanent link">#</a></h4>
 <p>For evaluating a clusterer, you can use the <code>ClusterEvaluation</code> class. In this example, the number of clusters found is written to output:</p>
-<pre><code class="language-java"> import weka.clusterers.ClusterEvaluation;
- import weka.clusterers.Clusterer;
- ...
- ClusterEvaluation eval = new ClusterEvaluation();
- Clusterer clusterer = new EM();                                 // new clusterer instance, default options
- clusterer.buildClusterer(data);                                 // build clusterer
- eval.setClusterer(clusterer);                                   // the cluster to evaluate
- eval.evaluateClusterer(newData);                                // data to evaluate the clusterer on
- System.out.println(&quot;# of clusters: &quot; + eval.getNumClusters());  // output # of clusters
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="nn">weka.clusterers.ClusterEvaluation</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="nn">weka.clusterers.Clusterer</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a><span class="w"> </span><span class="p">...</span><span class="w"></span>
+<a id="__codelineno-31-4" name="__codelineno-31-4" href="#__codelineno-31-4"></a><span class="w"> </span><span class="n">ClusterEvaluation</span><span class="w"> </span><span class="n">eval</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ClusterEvaluation</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-31-5" name="__codelineno-31-5" href="#__codelineno-31-5"></a><span class="w"> </span><span class="n">Clusterer</span><span class="w"> </span><span class="n">clusterer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">EM</span><span class="p">();</span><span class="w">                                 </span><span class="c1">// new clusterer instance, default options</span><span class="w"></span>
+<a id="__codelineno-31-6" name="__codelineno-31-6" href="#__codelineno-31-6"></a><span class="w"> </span><span class="n">clusterer</span><span class="p">.</span><span class="na">buildClusterer</span><span class="p">(</span><span class="n">data</span><span class="p">);</span><span class="w">                                 </span><span class="c1">// build clusterer</span><span class="w"></span>
+<a id="__codelineno-31-7" name="__codelineno-31-7" href="#__codelineno-31-7"></a><span class="w"> </span><span class="n">eval</span><span class="p">.</span><span class="na">setClusterer</span><span class="p">(</span><span class="n">clusterer</span><span class="p">);</span><span class="w">                                   </span><span class="c1">// the cluster to evaluate</span><span class="w"></span>
+<a id="__codelineno-31-8" name="__codelineno-31-8" href="#__codelineno-31-8"></a><span class="w"> </span><span class="n">eval</span><span class="p">.</span><span class="na">evaluateClusterer</span><span class="p">(</span><span class="n">newData</span><span class="p">);</span><span class="w">                                </span><span class="c1">// data to evaluate the clusterer on</span><span class="w"></span>
+<a id="__codelineno-31-9" name="__codelineno-31-9" href="#__codelineno-31-9"></a><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;# of clusters: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">eval</span><span class="p">.</span><span class="na">getNumClusters</span><span class="p">());</span><span class="w">  </span><span class="c1">// output # of clusters</span><span class="w"></span>
+</code></pre></div>
 <p>Or, in the case of <a href="https://weka.sourceforge.io/doc.stable-3-8/weka/clusterers/DensityBasedClusterer.html">DensityBasedClusterer</a>, you can cross-validate the clusterer (Note: with <a href="https://weka.sourceforge.io/doc.stable-3-8/weka/clusterers/MakeDensityBasedClusterer.html">MakeDensityBasedClusterer</a> you can turn any clusterer into a density-based one):</p>
-<pre><code class="language-java"> import weka.clusterers.ClusterEvaluation;
- import weka.clusterers.DensityBasedClusterer;
- import weka.core.Instances;
- import java.util.Random;
- ...
- Instances data = ...                                     // from somewhere
- DensityBasedClusterer clusterer = new ...                // the clusterer to evaluate
- double logLikelyhood =
-    ClusterEvaluation.crossValidateModel(                 // cross-validate
-    clusterer, data, 10,                                  // with 10 folds
-    new Random(1));                                       // and random number generator with seed 1
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="nn">weka.clusterers.ClusterEvaluation</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="nn">weka.clusterers.DensityBasedClusterer</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="nn">weka.core.Instances</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-32-4" name="__codelineno-32-4" href="#__codelineno-32-4"></a><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Random</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-32-5" name="__codelineno-32-5" href="#__codelineno-32-5"></a><span class="w"> </span><span class="p">...</span><span class="w"></span>
+<a id="__codelineno-32-6" name="__codelineno-32-6" href="#__codelineno-32-6"></a><span class="w"> </span><span class="n">Instances</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...</span><span class="w">                                     </span><span class="c1">// from somewhere</span><span class="w"></span>
+<a id="__codelineno-32-7" name="__codelineno-32-7" href="#__codelineno-32-7"></a><span class="w"> </span><span class="n">DensityBasedClusterer</span><span class="w"> </span><span class="n">clusterer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="p">...</span><span class="w">                </span><span class="c1">// the clusterer to evaluate</span><span class="w"></span>
+<a id="__codelineno-32-8" name="__codelineno-32-8" href="#__codelineno-32-8"></a><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">logLikelyhood</span><span class="w"> </span><span class="o">=</span><span class="w"></span>
+<a id="__codelineno-32-9" name="__codelineno-32-9" href="#__codelineno-32-9"></a><span class="w">    </span><span class="n">ClusterEvaluation</span><span class="p">.</span><span class="na">crossValidateModel</span><span class="p">(</span><span class="w">                 </span><span class="c1">// cross-validate</span><span class="w"></span>
+<a id="__codelineno-32-10" name="__codelineno-32-10" href="#__codelineno-32-10"></a><span class="w">    </span><span class="n">clusterer</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">                                  </span><span class="c1">// with 10 folds</span><span class="w"></span>
+<a id="__codelineno-32-11" name="__codelineno-32-11" href="#__codelineno-32-11"></a><span class="w">    </span><span class="k">new</span><span class="w"> </span><span class="n">Random</span><span class="p">(</span><span class="mi">1</span><span class="p">));</span><span class="w">                                       </span><span class="c1">// and random number generator with seed 1</span><span class="w"></span>
+</code></pre></div>
 <p>Or, if you want the same behavior/print-out from command line, use this call:</p>
-<pre><code class="language-java"> import weka.clusterers.EM;
- import weka.clusterers.ClusterEvaluation;
- ...
- String[] options = new String[2];
- options[0] = &quot;-t&quot;;
- options[1] = &quot;/some/where/somefile.arff&quot;;
- System.out.println(ClusterEvaluation.evaluateClusterer(new EM(), options));
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="nn">weka.clusterers.EM</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a><span class="w"> </span><span class="kn">import</span><span class="w"> </span><span class="nn">weka.clusterers.ClusterEvaluation</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-33-3" name="__codelineno-33-3" href="#__codelineno-33-3"></a><span class="w"> </span><span class="p">...</span><span class="w"></span>
+<a id="__codelineno-33-4" name="__codelineno-33-4" href="#__codelineno-33-4"></a><span class="w"> </span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">options</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="o">[</span><span class="mi">2</span><span class="o">]</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-33-5" name="__codelineno-33-5" href="#__codelineno-33-5"></a><span class="w"> </span><span class="n">options</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;-t&quot;</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-33-6" name="__codelineno-33-6" href="#__codelineno-33-6"></a><span class="w"> </span><span class="n">options</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;/some/where/somefile.arff&quot;</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-33-7" name="__codelineno-33-7" href="#__codelineno-33-7"></a><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">ClusterEvaluation</span><span class="p">.</span><span class="na">evaluateClusterer</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">EM</span><span class="p">(),</span><span class="w"> </span><span class="n">options</span><span class="p">));</span><span class="w"></span>
+</code></pre></div>
 <h4 id="clustering-instances">Clustering instances<a class="headerlink" href="#clustering-instances" title="Permanent link">#</a></h4>
 <p>The only difference with regard to classification is the method name. Instead of <code>classifyInstance(Instance)</code>, it is now <code>clusterInstance(Instance)</code>. The method for obtaining the distribution is still the same, i.e., <code>distributionForInstance(Instance)</code>.</p>
 <h4 id="classes-to-clusters-evaluation">Classes to clusters evaluation<a class="headerlink" href="#classes-to-clusters-evaluation" title="Permanent link">#</a></h4>
@@ -539,82 +1310,84 @@ For example, if you want to remove the <em>first</em> attribute of a dataset, yo
 <ul>
 <li>load the data and set the class attribute</li>
 </ul>
-<pre><code class="language-java"> Instances data = new Instances(new BufferedReader(new FileReader(&quot;/some/where/file.arff&quot;)));
- data.setClassIndex(data.numAttributes() - 1);
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="w"> </span><span class="n">Instances</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Instances</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">BufferedReader</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">FileReader</span><span class="p">(</span><span class="s">&quot;/some/where/file.arff&quot;</span><span class="p">)));</span><span class="w"></span>
+<a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a><span class="w"> </span><span class="n">data</span><span class="p">.</span><span class="na">setClassIndex</span><span class="p">(</span><span class="n">data</span><span class="p">.</span><span class="na">numAttributes</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
 <ul>
 <li>generate the <em>class-less</em> data to train the clusterer with</li>
 </ul>
-<pre><code class="language-java"> weka.filters.unsupervised.attribute.Remove filter = new weka.filters.unsupervised.attribute.Remove();
- filter.setAttributeIndices(&quot;&quot; + (data.classIndex() + 1));
- filter.setInputFormat(data);
- Instances dataClusterer = Filter.useFilter(data, filter);
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="w"> </span><span class="n">weka</span><span class="p">.</span><span class="na">filters</span><span class="p">.</span><span class="na">unsupervised</span><span class="p">.</span><span class="na">attribute</span><span class="p">.</span><span class="na">Remove</span><span class="w"> </span><span class="n">filter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">weka</span><span class="p">.</span><span class="na">filters</span><span class="p">.</span><span class="na">unsupervised</span><span class="p">.</span><span class="na">attribute</span><span class="p">.</span><span class="na">Remove</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a><span class="w"> </span><span class="n">filter</span><span class="p">.</span><span class="na">setAttributeIndices</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">data</span><span class="p">.</span><span class="na">classIndex</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">));</span><span class="w"></span>
+<a id="__codelineno-35-3" name="__codelineno-35-3" href="#__codelineno-35-3"></a><span class="w"> </span><span class="n">filter</span><span class="p">.</span><span class="na">setInputFormat</span><span class="p">(</span><span class="n">data</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-35-4" name="__codelineno-35-4" href="#__codelineno-35-4"></a><span class="w"> </span><span class="n">Instances</span><span class="w"> </span><span class="n">dataClusterer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Filter</span><span class="p">.</span><span class="na">useFilter</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="n">filter</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
 <ul>
 <li>train the clusterer, e.g., <code>EM</code></li>
 </ul>
-<pre><code class="language-java"> EM clusterer = new EM();
- // set further options for EM, if necessary...
- clusterer.buildClusterer(dataClusterer);
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a><span class="w"> </span><span class="n">EM</span><span class="w"> </span><span class="n">clusterer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">EM</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a><span class="w"> </span><span class="c1">// set further options for EM, if necessary...</span><span class="w"></span>
+<a id="__codelineno-36-3" name="__codelineno-36-3" href="#__codelineno-36-3"></a><span class="w"> </span><span class="n">clusterer</span><span class="p">.</span><span class="na">buildClusterer</span><span class="p">(</span><span class="n">dataClusterer</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
 <ul>
-<li>evaluate the clusterer with the data still containing the class attribute</li>
+<li>
+<p>evaluate the clusterer with the data still containing the class attribute
+<div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a><span class="w"> </span><span class="n">ClusterEvaluation</span><span class="w"> </span><span class="n">eval</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ClusterEvaluation</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-37-2" name="__codelineno-37-2" href="#__codelineno-37-2"></a><span class="w"> </span><span class="n">eval</span><span class="p">.</span><span class="na">setClusterer</span><span class="p">(</span><span class="n">clusterer</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-37-3" name="__codelineno-37-3" href="#__codelineno-37-3"></a><span class="w"> </span><span class="n">eval</span><span class="p">.</span><span class="na">evaluateClusterer</span><span class="p">(</span><span class="n">data</span><span class="p">);</span><span class="w"></span>
+</code></pre></div></p>
+</li>
+<li>
+<p>print the results of the evaluation to <em>stdout</em></p>
+</li>
 </ul>
-<pre><code class="language-java"> ClusterEvaluation eval = new ClusterEvaluation();
- eval.setClusterer(clusterer);
- eval.evaluateClusterer(data);
-</code></pre>
-<ul>
-<li>print the results of the evaluation to <em>stdout</em></li>
-</ul>
-<pre><code class="language-java"> System.out.println(eval.clusterResultsToString());
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">eval</span><span class="p">.</span><span class="na">clusterResultsToString</span><span class="p">());</span><span class="w"></span>
+</code></pre></div>
 <h3 id="attribute-selection">Attribute selection<a class="headerlink" href="#attribute-selection" title="Permanent link">#</a></h3>
 <p>There is no real need to use the attribute selection classes directly in your own code, since there are already a meta-classifier and a filter available for applying attribute selection, but the low-level approach is still listed for the sake of completeness. The following examples all use <code>CfsSubsetEval</code> and <code>GreedyStepwise</code> (backwards). The code listed below is taken from the <a href="../files/AttributeSelectionTest.java">AttributeSelectionTest.java</a>.</p>
 <h4 id="meta-classifier">Meta-Classifier<a class="headerlink" href="#meta-classifier" title="Permanent link">#</a></h4>
 <p>The following meta-classifier performs a preprocessing step of attribute selection before the data gets presented to the base classifier (in the example here, this is <code>J48</code>).</p>
-<pre><code class="language-java">  Instances data = ...  // from somewhere
-  AttributeSelectedClassifier classifier = new AttributeSelectedClassifier();
-  CfsSubsetEval eval = new CfsSubsetEval();
-  GreedyStepwise search = new GreedyStepwise();
-  search.setSearchBackwards(true);
-  J48 base = new J48();
-  classifier.setClassifier(base);
-  classifier.setEvaluator(eval);
-  classifier.setSearch(search);
-  // 10-fold cross-validation
-  Evaluation evaluation = new Evaluation(data);
-  evaluation.crossValidateModel(classifier, data, 10, new Random(1));
-  System.out.println(evaluation.toSummaryString());
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a><span class="w">  </span><span class="n">Instances</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...</span><span class="w">  </span><span class="c1">// from somewhere</span><span class="w"></span>
+<a id="__codelineno-39-2" name="__codelineno-39-2" href="#__codelineno-39-2"></a><span class="w">  </span><span class="n">AttributeSelectedClassifier</span><span class="w"> </span><span class="n">classifier</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">AttributeSelectedClassifier</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-39-3" name="__codelineno-39-3" href="#__codelineno-39-3"></a><span class="w">  </span><span class="n">CfsSubsetEval</span><span class="w"> </span><span class="n">eval</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">CfsSubsetEval</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-39-4" name="__codelineno-39-4" href="#__codelineno-39-4"></a><span class="w">  </span><span class="n">GreedyStepwise</span><span class="w"> </span><span class="n">search</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">GreedyStepwise</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-39-5" name="__codelineno-39-5" href="#__codelineno-39-5"></a><span class="w">  </span><span class="n">search</span><span class="p">.</span><span class="na">setSearchBackwards</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-39-6" name="__codelineno-39-6" href="#__codelineno-39-6"></a><span class="w">  </span><span class="n">J48</span><span class="w"> </span><span class="n">base</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">J48</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-39-7" name="__codelineno-39-7" href="#__codelineno-39-7"></a><span class="w">  </span><span class="n">classifier</span><span class="p">.</span><span class="na">setClassifier</span><span class="p">(</span><span class="n">base</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-39-8" name="__codelineno-39-8" href="#__codelineno-39-8"></a><span class="w">  </span><span class="n">classifier</span><span class="p">.</span><span class="na">setEvaluator</span><span class="p">(</span><span class="n">eval</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-39-9" name="__codelineno-39-9" href="#__codelineno-39-9"></a><span class="w">  </span><span class="n">classifier</span><span class="p">.</span><span class="na">setSearch</span><span class="p">(</span><span class="n">search</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-39-10" name="__codelineno-39-10" href="#__codelineno-39-10"></a><span class="w">  </span><span class="c1">// 10-fold cross-validation</span><span class="w"></span>
+<a id="__codelineno-39-11" name="__codelineno-39-11" href="#__codelineno-39-11"></a><span class="w">  </span><span class="n">Evaluation</span><span class="w"> </span><span class="n">evaluation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Evaluation</span><span class="p">(</span><span class="n">data</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-39-12" name="__codelineno-39-12" href="#__codelineno-39-12"></a><span class="w">  </span><span class="n">evaluation</span><span class="p">.</span><span class="na">crossValidateModel</span><span class="p">(</span><span class="n">classifier</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Random</span><span class="p">(</span><span class="mi">1</span><span class="p">));</span><span class="w"></span>
+<a id="__codelineno-39-13" name="__codelineno-39-13" href="#__codelineno-39-13"></a><span class="w">  </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">evaluation</span><span class="p">.</span><span class="na">toSummaryString</span><span class="p">());</span><span class="w"></span>
+</code></pre></div>
 <h4 id="filter_1">Filter<a class="headerlink" href="#filter_1" title="Permanent link">#</a></h4>
 <p>The filter approach is straightforward: after setting up the filter, one just filters the data through the filter and obtains the reduced dataset.</p>
-<pre><code class="language-java">  Instances data = ...  // from somewhere
-  AttributeSelection filter = new AttributeSelection();  // package weka.filters.supervised.attribute!
-  CfsSubsetEval eval = new CfsSubsetEval();
-  GreedyStepwise search = new GreedyStepwise();
-  search.setSearchBackwards(true);
-  filter.setEvaluator(eval);
-  filter.setSearch(search);
-  filter.setInputFormat(data);
-  // generate new data
-  Instances newData = Filter.useFilter(data, filter);
-  System.out.println(newData);
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a><span class="w">  </span><span class="n">Instances</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...</span><span class="w">  </span><span class="c1">// from somewhere</span><span class="w"></span>
+<a id="__codelineno-40-2" name="__codelineno-40-2" href="#__codelineno-40-2"></a><span class="w">  </span><span class="n">AttributeSelection</span><span class="w"> </span><span class="n">filter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">AttributeSelection</span><span class="p">();</span><span class="w">  </span><span class="c1">// package weka.filters.supervised.attribute!</span><span class="w"></span>
+<a id="__codelineno-40-3" name="__codelineno-40-3" href="#__codelineno-40-3"></a><span class="w">  </span><span class="n">CfsSubsetEval</span><span class="w"> </span><span class="n">eval</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">CfsSubsetEval</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-40-4" name="__codelineno-40-4" href="#__codelineno-40-4"></a><span class="w">  </span><span class="n">GreedyStepwise</span><span class="w"> </span><span class="n">search</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">GreedyStepwise</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-40-5" name="__codelineno-40-5" href="#__codelineno-40-5"></a><span class="w">  </span><span class="n">search</span><span class="p">.</span><span class="na">setSearchBackwards</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-40-6" name="__codelineno-40-6" href="#__codelineno-40-6"></a><span class="w">  </span><span class="n">filter</span><span class="p">.</span><span class="na">setEvaluator</span><span class="p">(</span><span class="n">eval</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-40-7" name="__codelineno-40-7" href="#__codelineno-40-7"></a><span class="w">  </span><span class="n">filter</span><span class="p">.</span><span class="na">setSearch</span><span class="p">(</span><span class="n">search</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-40-8" name="__codelineno-40-8" href="#__codelineno-40-8"></a><span class="w">  </span><span class="n">filter</span><span class="p">.</span><span class="na">setInputFormat</span><span class="p">(</span><span class="n">data</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-40-9" name="__codelineno-40-9" href="#__codelineno-40-9"></a><span class="w">  </span><span class="c1">// generate new data</span><span class="w"></span>
+<a id="__codelineno-40-10" name="__codelineno-40-10" href="#__codelineno-40-10"></a><span class="w">  </span><span class="n">Instances</span><span class="w"> </span><span class="n">newData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Filter</span><span class="p">.</span><span class="na">useFilter</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="n">filter</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-40-11" name="__codelineno-40-11" href="#__codelineno-40-11"></a><span class="w">  </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">newData</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
 <h4 id="low-level">Low-level<a class="headerlink" href="#low-level" title="Permanent link">#</a></h4>
 <p>If neither the meta-classifier nor filter approach is suitable for your purposes, you can use the attribute selection classes themselves.</p>
-<pre><code class="language-java">  Instances data = ...  // from somewhere
-  AttributeSelection attsel = new AttributeSelection();  // package weka.attributeSelection!
-  CfsSubsetEval eval = new CfsSubsetEval();
-  GreedyStepwise search = new GreedyStepwise();
-  search.setSearchBackwards(true);
-  attsel.setEvaluator(eval);
-  attsel.setSearch(search);
-  attsel.SelectAttributes(data);
-  // obtain the attribute indices that were selected
-  int[] indices = attsel.selectedAttributes();
-  System.out.println(Utils.arrayToString(indices));
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a><span class="w">  </span><span class="n">Instances</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">...</span><span class="w">  </span><span class="c1">// from somewhere</span><span class="w"></span>
+<a id="__codelineno-41-2" name="__codelineno-41-2" href="#__codelineno-41-2"></a><span class="w">  </span><span class="n">AttributeSelection</span><span class="w"> </span><span class="n">attsel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">AttributeSelection</span><span class="p">();</span><span class="w">  </span><span class="c1">// package weka.attributeSelection!</span><span class="w"></span>
+<a id="__codelineno-41-3" name="__codelineno-41-3" href="#__codelineno-41-3"></a><span class="w">  </span><span class="n">CfsSubsetEval</span><span class="w"> </span><span class="n">eval</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">CfsSubsetEval</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-41-4" name="__codelineno-41-4" href="#__codelineno-41-4"></a><span class="w">  </span><span class="n">GreedyStepwise</span><span class="w"> </span><span class="n">search</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">GreedyStepwise</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-41-5" name="__codelineno-41-5" href="#__codelineno-41-5"></a><span class="w">  </span><span class="n">search</span><span class="p">.</span><span class="na">setSearchBackwards</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-41-6" name="__codelineno-41-6" href="#__codelineno-41-6"></a><span class="w">  </span><span class="n">attsel</span><span class="p">.</span><span class="na">setEvaluator</span><span class="p">(</span><span class="n">eval</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-41-7" name="__codelineno-41-7" href="#__codelineno-41-7"></a><span class="w">  </span><span class="n">attsel</span><span class="p">.</span><span class="na">setSearch</span><span class="p">(</span><span class="n">search</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-41-8" name="__codelineno-41-8" href="#__codelineno-41-8"></a><span class="w">  </span><span class="n">attsel</span><span class="p">.</span><span class="na">SelectAttributes</span><span class="p">(</span><span class="n">data</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-41-9" name="__codelineno-41-9" href="#__codelineno-41-9"></a><span class="w">  </span><span class="c1">// obtain the attribute indices that were selected</span><span class="w"></span>
+<a id="__codelineno-41-10" name="__codelineno-41-10" href="#__codelineno-41-10"></a><span class="w">  </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">indices</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">attsel</span><span class="p">.</span><span class="na">selectedAttributes</span><span class="p">();</span><span class="w"></span>
+<a id="__codelineno-41-11" name="__codelineno-41-11" href="#__codelineno-41-11"></a><span class="w">  </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">Utils</span><span class="p">.</span><span class="na">arrayToString</span><span class="p">(</span><span class="n">indices</span><span class="p">));</span><span class="w"></span>
+</code></pre></div>
 <h3 id="note-on-randomization">Note on randomization<a class="headerlink" href="#note-on-randomization" title="Permanent link">#</a></h3>
 <p>Most machine learning schemes, like classifiers and clusterers, are susceptible to the ordering of the data. Using a different seed for randomizing the data will most likely produce a different result. For example, the Explorer, or a classifier/clusterer run from the command line, uses only a seeded <code>java.util.Random</code> number generator, whereas the <code>weka.core.Instances.getRandomNumberGenerator(int)</code> (which the <a href="../files/WekaDemo.java">WekaDemo.java</a> uses) also takes the data into account for seeding. Unless one runs 10-fold cross-validation 10 times and averages the results, one will most likely get different results.</p>
 <h3 id="see-also">See also<a class="headerlink" href="#see-also" title="Permanent link">#</a></h3>
@@ -667,42 +1440,48 @@ For example, if you want to remove the <em>first</em> attribute of a dataset, yo
 </ul>
 </li>
 </ul>
-              
+
+
+
+
+
+                
+              </article>
             </div>
-          </div><footer>
-
-  <hr/>
-
-  <div role="contentinfo">
-    <!-- Copyright etc -->
-  </div>
-
-  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
-</footer>
+          
           
         </div>
-      </div>
-
-    </section>
-
-  </div>
-
-  <div class="rst-versions" role="note" aria-label="Versions">
-  <span class="rst-current-version" data-toggle="rst-current-version">
-    
-    
-    
-  </span>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
 </div>
-    <script>var base_url = '..';</script>
-    <script src="../js/theme_extra.js" defer></script>
-    <script src="../js/theme.js" defer></script>
-      <script src="../search/main.js" defer></script>
-    <script defer>
-        window.onload = function () {
-            SphinxRtdTheme.Navigation.enable(true);
-        };
-    </script>
-
-</body>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d6c3db9e.min.js"></script>
+      
+    
+  </body>
 </html>
