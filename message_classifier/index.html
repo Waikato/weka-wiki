@@ -625,21 +625,21 @@
 <ul>
 <li>compile the source code like this, if the <code>weka.jar</code> is already in your <a href="../classpath/">CLASSPATH</a> environment variable:</li>
 </ul>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a> javac MessageClassifier.java
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="w"> </span>javac<span class="w"> </span>MessageClassifier.java
 </code></pre></div>
 * otherwise, use this command line (of course, replace <code>/path/to/</code> with the correct path on your system):</p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="w"> </span><span class="n">javac</span><span class="w"> </span><span class="o">-</span><span class="n">classpath</span><span class="w"> </span><span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">weka</span><span class="p">.</span><span class="na">jar</span><span class="w"> </span><span class="n">MessageClassifier</span><span class="p">.</span><span class="na">java</span><span class="w"></span>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="w"> </span><span class="n">javac</span><span class="w"> </span><span class="o">-</span><span class="n">classpath</span><span class="w"> </span><span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">weka</span><span class="p">.</span><span class="na">jar</span><span class="w"> </span><span class="n">MessageClassifier</span><span class="p">.</span><span class="na">java</span>
 </code></pre></div>
 <strong>Note:</strong> The classpath handling is omitted from here on.</p>
 <h3 id="training">Training<a class="headerlink" href="#training" title="Permanent link">#</a></h3>
 <p>If you run the <code>MessageClassifier</code> for the first time, you need to provide labeled examples to build a classifier from, i.e., messages ("<code>-m</code>") and the corresponding classes ("<code>-c</code>"). Since the data and the model are kept for future use, one has to specify a filename, where the <code>MessageClassifier</code> is serialized to ("<code>-t</code>").</p>
 <p>Here's an example, that labels the message <em>email1.txt</em> as <em>miss</em>:</p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a> java MessageClassifier -m email1.txt -c miss -t messageclassifier.model
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="w"> </span>java<span class="w"> </span>MessageClassifier<span class="w"> </span>-m<span class="w"> </span>email1.txt<span class="w"> </span>-c<span class="w"> </span>miss<span class="w"> </span>-t<span class="w"> </span>messageclassifier.model
 </code></pre></div>
 Repeat this for all the messages you want to have classified.</p>
 <h3 id="classifying">Classifying<a class="headerlink" href="#classifying" title="Permanent link">#</a></h3>
 <p>Classifying an unseen message is quite straight-forward, one just omits the class option ("<code>-c</code>"). The following call
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a> java MessageClassifier -m email1023.txt -t messageclassifier.model
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="w"> </span>java<span class="w"> </span>MessageClassifier<span class="w"> </span>-m<span class="w"> </span>email1023.txt<span class="w"> </span>-t<span class="w"> </span>messageclassifier.model
 </code></pre></div>
 will produce something like this:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a> Message classified as : 

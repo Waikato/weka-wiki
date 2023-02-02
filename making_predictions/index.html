@@ -677,7 +677,7 @@
 <p>The following sections show how to obtain predictions/classifications without writing your own Java code via the command line.</p>
 <h4 id="classifiers">Classifiers<a class="headerlink" href="#classifiers" title="Permanent link">#</a></h4>
 <p>After a <a href="../saving_and_loading_models/">model has been saved</a>, one can make predictions for a test set, whether that set contains valid class values or not. The output will contain both the actual and predicted class. (Note that if the test class contains simply '?' for the class label for each instance, the "actual" class label for each instance will not contain useful information, but the predicted class label will.) The <code>-T &lt;test_set&gt;</code> command-line switch specifies the dataset of instances whose classes are to be predicted, while the <code>-p &lt;attribute_range&gt;</code> switch allows the user to write out a range of attributes (examples: "1-2" for the first and second attributes, or "0" for no attributes). Sample command line:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a> java weka.classifiers.trees.J48 -T unclassified.arff -l j48.model -p <span class="m">0</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="w"> </span>java<span class="w"> </span>weka.classifiers.trees.J48<span class="w"> </span>-T<span class="w"> </span>unclassified.arff<span class="w"> </span>-l<span class="w"> </span>j48.model<span class="w"> </span>-p<span class="w"> </span><span class="m">0</span>
 </code></pre></div>
 <p>The format of the output is as follows:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>&lt;test_instance_index&gt; &lt;actual_class_index&gt;:&lt;actual_class_val&gt; &lt;pred_class_index&gt;:&lt;pred_class_val&gt; [+| ] &lt;prob_of_pred_class_val&gt;
@@ -706,24 +706,24 @@ This filter can add the classification, class distribution and the error per row
 <ul>
 <li>training the classifier, e.g., J48, on the input data and replacing the class values with the ones of the trained classifier:</li>
 </ul>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>   java <span class="se">\</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>     weka.filters.supervised.attribute.AddClassification <span class="se">\</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>     -W <span class="s2">&quot;weka.classifiers.trees.J48&quot;</span> <span class="se">\</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>     -classification <span class="se">\</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>     -remove-old-class <span class="se">\</span>
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>     -i train.arff <span class="se">\</span>
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>     -o train_classified.arff <span class="se">\</span>
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>     -c last
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="w">   </span>java<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">     </span>weka.filters.supervised.attribute.AddClassification<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">     </span>-W<span class="w"> </span><span class="s2">&quot;weka.classifiers.trees.J48&quot;</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">     </span>-classification<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">     </span>-remove-old-class<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">     </span>-i<span class="w"> </span>train.arff<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">     </span>-o<span class="w"> </span>train_classified.arff<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">     </span>-c<span class="w"> </span>last
 </code></pre></div>
 * using a serialized model, e.g., a J48 model, to replace the class values with the ones predicted by the serialized model:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>   java <span class="se">\</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>     weka.filters.supervised.attribute.AddClassification <span class="se">\</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>     -serialized /some/where/j48.model <span class="se">\</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>     -classification <span class="se">\</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>     -remove-old-class <span class="se">\</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>     -i train.arff <span class="se">\</span>
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>     -o train_classified.arff <span class="se">\</span>
-<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>     -c last
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="w">   </span>java<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">     </span>weka.filters.supervised.attribute.AddClassification<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">     </span>-serialized<span class="w"> </span>/some/where/j48.model<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">     </span>-classification<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">     </span>-remove-old-class<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">     </span>-i<span class="w"> </span>train.arff<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">     </span>-o<span class="w"> </span>train_classified.arff<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">     </span>-c<span class="w"> </span>last
 </code></pre></div>
 <h3 id="gui">GUI<a class="headerlink" href="#gui" title="Permanent link">#</a></h3>
 <p>The Weka GUI allows you as well to output predictions based on a previously saved model.</p>

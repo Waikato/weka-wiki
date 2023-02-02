@@ -619,10 +619,10 @@ The attribute value that is being processed, can be referenced as <strong><code>
 <ul>
 <li>using <code>MathExpression</code> to create discrete values</li>
 </ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a> weka.filters.unsupervised.attribute.MathExpression <span class="se">\</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>   -E <span class="s2">&quot;ifelse(A&gt;20, ifelse(A&gt;80, 3, 2), 1)&quot;</span> <span class="se">\</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>   -V <span class="se">\</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>   -R <span class="m">1</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="w"> </span>weka.filters.unsupervised.attribute.MathExpression<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">   </span>-E<span class="w"> </span><span class="s2">&quot;ifelse(A&gt;20, ifelse(A&gt;80, 3, 2), 1)&quot;</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">   </span>-V<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">   </span>-R<span class="w"> </span><span class="m">1</span>
 </code></pre></div>
 <blockquote>
 <p><strong>Note:</strong> <code>-V -R 1</code> means we only want to transform the first attribute. Without <code>-V</code> all the numeric attributes would be transformed according to this expression.
@@ -635,8 +635,8 @@ The attribute value that is being processed, can be referenced as <strong><code>
 <ul>
 <li>using <code>NumericToBinary</code> to create a nominal attribute from the numeric one</li>
 </ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a> weka.filters.unsupervised.attribute.NumericToNominal <span class="se">\</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>   -R <span class="m">1</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="w"> </span>weka.filters.unsupervised.attribute.NumericToNominal<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">   </span>-R<span class="w"> </span><span class="m">1</span>
 </code></pre></div>
 <ul>
 <li><em>optional:</em> if one wants to rename those labels, one can use the class listed in the <a href="../formats_and_processing/rename_attribute_values/">Rename Attribute Values</a> article for that</li>

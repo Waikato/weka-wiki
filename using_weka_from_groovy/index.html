@@ -755,25 +755,25 @@
 </ul>
 <h4 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link">#</a></h4>
 <p>If your Groovy CLASSPATH has been setup correctly, you can use all those classes in Groovy straight away. E.g., after including the <code>weka.jar</code>, I can run the following little script (<a href="../files/UsingJ48.groovy">UsingJ48.groovy</a> to train J48 on a supplied dataset and output its model:</p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">weka.classifiers.trees.J48</span><span class="w"></span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">weka.core.converters.ConverterUtils.DataSource</span><span class="w"></span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">weka.core.Instances</span><span class="w"></span>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">weka.classifiers.trees.J48</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">weka.core.converters.ConverterUtils.DataSource</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">weka.core.Instances</span>
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="nf">if</span><span class="w"> </span><span class="o">(</span><span class="n">args</span><span class="o">.</span><span class="na">size</span><span class="o">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="o">)</span><span class="w"> </span><span class="o">{</span><span class="w"></span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">  </span><span class="n">println</span><span class="w"> </span><span class="s2">&quot;Usage: UsingJ48.groovy &lt;arff-file&gt;&quot;</span><span class="w"></span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">  </span><span class="n">System</span><span class="o">.</span><span class="na">exit</span><span class="o">(</span><span class="mi">0</span><span class="o">)</span><span class="w"></span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="o">}</span><span class="w"></span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="nf">if</span><span class="w"> </span><span class="o">(</span><span class="n">args</span><span class="o">.</span><span class="na">size</span><span class="o">()</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="o">)</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">  </span><span class="n">println</span><span class="w"> </span><span class="s2">&quot;Usage: UsingJ48.groovy &lt;arff-file&gt;&quot;</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">  </span><span class="n">System</span><span class="o">.</span><span class="na">exit</span><span class="o">(</span><span class="mi">0</span><span class="o">)</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="o">}</span>
 <a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="c1">// load data and set class index</span><span class="w"></span>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DataSource</span><span class="o">.</span><span class="na">read</span><span class="o">(</span><span class="n">args</span><span class="o">[</span><span class="mi">0</span><span class="o">])</span><span class="w"></span>
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="n">data</span><span class="o">.</span><span class="na">setClassIndex</span><span class="o">(</span><span class="n">data</span><span class="o">.</span><span class="na">numAttributes</span><span class="o">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="o">)</span><span class="w"></span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="c1">// load data and set class index</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DataSource</span><span class="o">.</span><span class="na">read</span><span class="o">(</span><span class="n">args</span><span class="o">[</span><span class="mi">0</span><span class="o">])</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="n">data</span><span class="o">.</span><span class="na">setClassIndex</span><span class="o">(</span><span class="n">data</span><span class="o">.</span><span class="na">numAttributes</span><span class="o">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="o">)</span>
 <a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="c1">// create the model</span><span class="w"></span>
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="n">j48</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">J48</span><span class="o">()</span><span class="w"></span>
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="n">j48</span><span class="o">.</span><span class="na">buildClassifier</span><span class="o">(</span><span class="n">data</span><span class="o">)</span><span class="w"></span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="c1">// create the model</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="n">j48</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">J48</span><span class="o">()</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="n">j48</span><span class="o">.</span><span class="na">buildClassifier</span><span class="o">(</span><span class="n">data</span><span class="o">)</span>
 <a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>
-<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="c1">// print out the built model</span><span class="w"></span>
-<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="n">println</span><span class="w"> </span><span class="n">j48</span><span class="w"></span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="c1">// print out the built model</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="n">println</span><span class="w"> </span><span class="n">j48</span>
 </code></pre></div>
 A slightly more elaborate example can be found in <a href="../files/UsingJ48Ext.groovy">UsingJ48Ext.groovy</a>, which uses more methods of the <code>weka.classifiers.Evaluation</code> class.</p>
 <p><strong>NB:</strong> The example <code>UsingJ48Ext.groovy</code> needs Weka 3.6.x (or a snapshot of the developer version) to run, due to some changes in the API.</p>
@@ -786,30 +786,30 @@ A slightly more elaborate example can be found in <a href="../files/UsingJ48Ext.
 <h4 id="implementation_1">Implementation<a class="headerlink" href="#implementation_1" title="Permanent link">#</a></h4>
 <p>Implementing a Groovy classifier is pretty straight-forward, since the syntax is almost the same and Java classes are imported/used in Groovy just like in Java. The <a href="../files/GeroR.groovy">GeroR.groovy</a> file re-implements the <code>weka.classifiers.rules.ZeroR</code> classifier as Groovy script.</p>
 <p>The class declaration for <code>GeroR.groovy</code> looks like this, for instance:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">class</span><span class="w"> </span><span class="nc">GeroR</span><span class="w"></span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="kd">extends</span><span class="w"> </span><span class="n">Classifier</span><span class="w"></span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="kd">implements</span><span class="w"> </span><span class="n">WeightedInstancesHandler</span><span class="w"> </span><span class="o">{</span><span class="w"></span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="o">...</span><span class="w"></span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="o">}</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">class</span><span class="w"> </span><span class="nc">GeroR</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="kd">extends</span><span class="w"> </span><span class="n">Classifier</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="kd">implements</span><span class="w"> </span><span class="n">WeightedInstancesHandler</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="o">...</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="o">}</span>
 </code></pre></div>
 <p>For more information on implementing classifiers, see the <a href="../writing_classifier/">Writing your own Classifier</a> article.</p>
 <h4 id="execution">Execution<a class="headerlink" href="#execution" title="Permanent link">#</a></h4>
 <h5 id="groovy">Groovy<a class="headerlink" href="#groovy" title="Permanent link">#</a></h5>
 <p>As long as you have the <code>weka.jar</code> in your Groovy environment, you can directly run these scripts using the <code>groovy</code> command.
 Here is an example, executing the <code>FunkyClassifier.groovy</code> script in a Linux bash:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>groovy -classpath weka.jar <span class="se">\</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>  /some/where/FunkyClassifier.groovy <span class="se">\</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>  -t /my/datasets/data.arff <span class="se">\</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>  &lt;more options <span class="k">for</span> the Groovy script&gt;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>groovy<span class="w"> </span>-classpath<span class="w"> </span>weka.jar<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span>/some/where/FunkyClassifier.groovy<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span>-t<span class="w"> </span>/my/datasets/data.arff<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">  </span>&lt;more<span class="w"> </span>options<span class="w"> </span><span class="k">for</span><span class="w"> </span>the<span class="w"> </span>Groovy<span class="w"> </span>script&gt;
 </code></pre></div>
 <h5 id="weka">Weka<a class="headerlink" href="#weka" title="Permanent link">#</a></h5>
 <p>In order to execute classifiers written in Groovy, you have to use the <code>weka.classifiers.scripting.GroovyClassifier</code> classifier.
 Here is an example, executing the <code>FunkyClassifier.groovy</code> script in a Linux bash:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>java weka.jar:groovy-all-1.5.7.jar <span class="se">\</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>  weka.classifiers.scripting.GroovyClassifier <span class="se">\</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>  -t /my/datasets/data.arff <span class="se">\</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>  -G /some/where/FunkyClassifier.groovy <span class="se">\</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>  -- &lt;more options <span class="k">for</span> the Groovy script&gt;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>java<span class="w"> </span>weka.jar:groovy-all-1.5.7.jar<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span>weka.classifiers.scripting.GroovyClassifier<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">  </span>-t<span class="w"> </span>/my/datasets/data.arff<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">  </span>-G<span class="w"> </span>/some/where/FunkyClassifier.groovy<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">  </span>--<span class="w"> </span>&lt;more<span class="w"> </span>options<span class="w"> </span><span class="k">for</span><span class="w"> </span>the<span class="w"> </span>Groovy<span class="w"> </span>script&gt;
 </code></pre></div>
 <h3 id="downloads">Downloads<a class="headerlink" href="#downloads" title="Permanent link">#</a></h3>
 <ul>

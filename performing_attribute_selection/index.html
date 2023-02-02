@@ -628,37 +628,37 @@
 <p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a> weka.attributeSelection
 </code></pre></div>
 Example using <code>CfsSubsetEval</code> and <code>BestFirst</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a> java weka.attributeSelection.CfsSubsetEval <span class="se">\</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    -M <span class="se">\</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    -s <span class="s2">&quot;weka.attributeSelection.BestFirst -D 1 -N 5&quot;</span> <span class="se">\</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    -i &lt;file.arff&gt;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="w"> </span>java<span class="w"> </span>weka.attributeSelection.CfsSubsetEval<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span>-M<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span>-s<span class="w"> </span><span class="s2">&quot;weka.attributeSelection.BestFirst -D 1 -N 5&quot;</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span>-i<span class="w"> </span>&lt;file.arff&gt;
 </code></pre></div>
 <h3 id="meta-classifier">Meta-classifier<a class="headerlink" href="#meta-classifier" title="Permanent link">#</a></h3>
 <p>Weka also offers a meta-classifier that takes a search algorithm and evaluator next to the base classifier. This makes the attribute selection process completely transparent and the base classifier receives only the reduced dataset. This is the full classname of the meta-classifier:</p>
 <p><div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a> weka.classifiers.meta.AttributeSelectedClassifier
 </code></pre></div>
 Example using <code>CfsSubsetEval</code> and <code>BestFirst</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a> java weka.classifiers.meta.AttributeSelectedClassifier <span class="se">\</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>   -t &lt;training.arff&gt; <span class="se">\</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>   -E <span class="s2">&quot;weka.attributeSelection.CfsSubsetEval -M&quot;</span> <span class="se">\</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>   -S <span class="s2">&quot;weka.attributeSelection.BestFirst -D 1 -N 5&quot;</span> <span class="se">\</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>   -W weka.classifiers.trees.J48 <span class="se">\</span>
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>   -- <span class="se">\</span>
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>   -C <span class="m">0</span>.25 -M <span class="m">2</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="w"> </span>java<span class="w"> </span>weka.classifiers.meta.AttributeSelectedClassifier<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">   </span>-t<span class="w"> </span>&lt;training.arff&gt;<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">   </span>-E<span class="w"> </span><span class="s2">&quot;weka.attributeSelection.CfsSubsetEval -M&quot;</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">   </span>-S<span class="w"> </span><span class="s2">&quot;weka.attributeSelection.BestFirst -D 1 -N 5&quot;</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">   </span>-W<span class="w"> </span>weka.classifiers.trees.J48<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">   </span>--<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">   </span>-C<span class="w"> </span><span class="m">0</span>.25<span class="w"> </span>-M<span class="w"> </span><span class="m">2</span>
 </code></pre></div>
 <h3 id="filter">Filter<a class="headerlink" href="#filter" title="Permanent link">#</a></h3>
 <p>In case you want to obtain the reduced/ranked data and not just output the selected/ranked attributes or using it internally in a classifier, you can use the filter approach. The following filter offers attribute selection:</p>
 <p><div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>  weka.filters.supervised.attribute.AttributeSelection
 </code></pre></div>
 Example using <code>CfsSubsetEval</code> and <code>BestFirst</code> in <a href="../batch_filtering/">batch mode</a>:</p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a> java weka.filters.supervised.attribute.AttributeSelection <span class="se">\</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>    -E <span class="s2">&quot;weka.attributeSelection.CfsSubsetEval -M&quot;</span> <span class="se">\</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    -S <span class="s2">&quot;weka.attributeSelection.BestFirst -D 1 -N 5&quot;</span> <span class="se">\</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>    -b <span class="se">\</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>    -i &lt;input1.arff&gt; <span class="se">\</span>
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>    -o &lt;output1.arff&gt; <span class="se">\</span>
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>    -r &lt;input2.arff&gt; <span class="se">\</span>
-<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>    -s &lt;output2.arff&gt;
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="w"> </span>java<span class="w"> </span>weka.filters.supervised.attribute.AttributeSelection<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span>-E<span class="w"> </span><span class="s2">&quot;weka.attributeSelection.CfsSubsetEval -M&quot;</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span>-S<span class="w"> </span><span class="s2">&quot;weka.attributeSelection.BestFirst -D 1 -N 5&quot;</span><span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span>-b<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">    </span>-i<span class="w"> </span>&lt;input1.arff&gt;<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">    </span>-o<span class="w"> </span>&lt;output1.arff&gt;<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">    </span>-r<span class="w"> </span>&lt;input2.arff&gt;<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">    </span>-s<span class="w"> </span>&lt;output2.arff&gt;
 </code></pre></div>
 <strong>Note:</strong> batch mode is not available from the Explorer.</p>
 <h3 id="see-also">See also<a class="headerlink" href="#see-also" title="Permanent link">#</a></h3>

@@ -613,10 +613,10 @@
   <h1>Saving and loading models</h1>
 
 <p>You save a trained classifier with the <code>-d</code> option (<em>dumping</em>), e.g.:</p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a> java weka.classifiers.trees.J48 -C <span class="m">0</span>.25 -M <span class="m">2</span> -t /some/where/train.arff -d /other/place/j48.model
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="w"> </span>java<span class="w"> </span>weka.classifiers.trees.J48<span class="w"> </span>-C<span class="w"> </span><span class="m">0</span>.25<span class="w"> </span>-M<span class="w"> </span><span class="m">2</span><span class="w"> </span>-t<span class="w"> </span>/some/where/train.arff<span class="w"> </span>-d<span class="w"> </span>/other/place/j48.model
 </code></pre></div>
 And you can load it with <code>-l</code> and use it on a test set, e.g.:</p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a> java weka.classifiers.trees.J48 -l /other/place/j48.model -T /some/where/test.arff
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="w"> </span>java<span class="w"> </span>weka.classifiers.trees.J48<span class="w"> </span>-l<span class="w"> </span>/other/place/j48.model<span class="w"> </span>-T<span class="w"> </span>/some/where/test.arff
 </code></pre></div>
 Note, when loading a model you no longer need to supply specific parameters to the classifier.</p>
 <h4 id="explorer">Explorer<a class="headerlink" href="#explorer" title="Permanent link">#</a></h4>

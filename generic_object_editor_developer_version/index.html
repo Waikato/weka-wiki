@@ -691,27 +691,27 @@
 <p>A limitation of the GOE prior to 3.4.4 was, that additional classifiers, filters, etc., had to fit into the same package structure as the already existing ones, i.e., all had to be located below <code>weka</code>. WEKA can now display multiple class hierarchies in the GUI, which makes adding new functionality quite easy as we will see later in an example (it is not restricted to classifiers only, but also works with all the other entries in the GPC file).</p>
 <h3 id="file-structure">File Structure<a class="headerlink" href="#file-structure" title="Permanent link">#</a></h3>
 <p>The structure of the GOE so far was a key-value-pair, separated by an <em>equals</em>-sign. The <em>value</em> is a comma separated list of classes that are all derived from the superclass/superinterface <em>key</em>. The GPC is slightly different, instead of declaring all the classes/interfaces one need only to specify all the packages descendants are located in (only non-abstract ones are then listed). E.g., the <code>weka.classifiers.Classifier</code> entry in the GOE file looks like this:</p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="w"> </span><span class="na">weka.classifiers.Classifier</span><span class="o">=</span><span class="s">\</span><span class="w"></span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="na">weka.classifiers.bayes.AODE,\</span><span class="w"></span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="na">weka.classifiers.bayes.BayesNet,\</span><span class="w"></span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="na">weka.classifiers.bayes.ComplementNaiveBayes,\</span><span class="w"></span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">  </span><span class="na">weka.classifiers.bayes.NaiveBayes,\</span><span class="w"></span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">  </span><span class="na">weka.classifiers.bayes.NaiveBayesMultinomial,\</span><span class="w"></span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">  </span><span class="na">weka.classifiers.bayes.NaiveBayesSimple,\</span><span class="w"></span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">  </span><span class="na">weka.classifiers.bayes.NaiveBayesUpdateable,\</span><span class="w"></span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">  </span><span class="na">weka.classifiers.functions.LeastMedSq,\</span><span class="w"></span>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">  </span><span class="na">weka.classifiers.functions.LinearRegression,\</span><span class="w"></span>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">  </span><span class="na">weka.classifiers.functions.Logistic,\</span><span class="w"></span>
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">  </span><span class="na">...</span><span class="w"></span>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="w"> </span><span class="na">weka.classifiers.Classifier</span><span class="o">=</span>\
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="s">weka.classifiers.bayes.AODE,</span>\
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="s">weka.classifiers.bayes.BayesNet,</span>\
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="s">weka.classifiers.bayes.ComplementNaiveBayes,</span>\
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">  </span><span class="s">weka.classifiers.bayes.NaiveBayes,</span>\
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">  </span><span class="s">weka.classifiers.bayes.NaiveBayesMultinomial,</span>\
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">  </span><span class="s">weka.classifiers.bayes.NaiveBayesSimple,</span>\
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">  </span><span class="s">weka.classifiers.bayes.NaiveBayesUpdateable,</span>\
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">  </span><span class="s">weka.classifiers.functions.LeastMedSq,</span>\
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">  </span><span class="s">weka.classifiers.functions.LinearRegression,</span>\
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">  </span><span class="s">weka.classifiers.functions.Logistic,</span>\
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">  </span><span class="s">...</span>
 </code></pre></div>
 The entry producing the same output for the classifiers in the GPC looks like this (7 lines instead of over 70 in WEKA 3.4.4!):</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="w"> </span><span class="na">weka.classifiers.Classifier</span><span class="o">=</span><span class="s">\</span><span class="w"></span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="na">weka.classifiers.bayes,\</span><span class="w"></span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="na">weka.classifiers.functions,\</span><span class="w"></span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span><span class="na">weka.classifiers.lazy,\</span><span class="w"></span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">  </span><span class="na">weka.classifiers.meta,\</span><span class="w"></span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">  </span><span class="na">weka.classifiers.trees,\</span><span class="w"></span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">  </span><span class="na">weka.classifiers.rules</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="w"> </span><span class="na">weka.classifiers.Classifier</span><span class="o">=</span>\
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="s">weka.classifiers.bayes,</span>\
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="s">weka.classifiers.functions,</span>\
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span><span class="s">weka.classifiers.lazy,</span>\
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">  </span><span class="s">weka.classifiers.meta,</span>\
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">  </span><span class="s">weka.classifiers.trees,</span>\
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">  </span><span class="s">weka.classifiers.rules</span>
 </code></pre></div>
 <h3 id="exclusion">Exclusion<a class="headerlink" href="#exclusion" title="Permanent link">#</a></h3>
 <p>It may not always be desired to list all the classes that can be found along the <a href="../classpath/">CLASSPATH</a>. Sometimes, classes cannot be declared <code>abstract</code> but still shouldn't be listed in the GOE. For that reason one can list classes, interfaces, superclasses for certain packages to be excluded from display. This exclusion is done with the following file:</p>
@@ -736,34 +736,34 @@ Where the <code>&lt;key&gt;</code> corresponds to a key in the <code>GenericProp
 </li>
 </ul>
 <p>Here are a few examples:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="w"> </span><span class="c1"># exclude all ResultListeners that also implement the ResultProducer interface</span><span class="w"></span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w"> </span><span class="c1"># (all ResultProducers do that!)</span><span class="w"></span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w"> </span><span class="na">weka.experiment.ResultListener</span><span class="o">=</span><span class="s">\</span><span class="w"></span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">   </span><span class="na">I:weka.experiment.ResultProducer</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="w"> </span><span class="c1"># exclude all ResultListeners that also implement the ResultProducer interface</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w"> </span><span class="c1"># (all ResultProducers do that!)</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w"> </span><span class="na">weka.experiment.ResultListener</span><span class="o">=</span>\
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">   </span><span class="s">I:weka.experiment.ResultProducer</span>
 <a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w"> </span><span class="c1"># exclude J48 and all SingleClassifierEnhancers</span><span class="w"></span>
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w"> </span><span class="na">weka.classifiers.Classifier</span><span class="o">=</span><span class="s">\</span><span class="w"></span>
-<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">   </span><span class="na">C:weka.classifiers.trees.J48,\</span><span class="w"></span>
-<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">   </span><span class="na">S:weka.classifiers.SingleClassifierEnhancer</span><span class="w"></span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w"> </span><span class="c1"># exclude J48 and all SingleClassifierEnhancers</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w"> </span><span class="na">weka.classifiers.Classifier</span><span class="o">=</span>\
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">   </span><span class="s">C:weka.classifiers.trees.J48,</span>\
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">   </span><span class="s">S:weka.classifiers.SingleClassifierEnhancer</span>
 </code></pre></div>
 <h3 id="class-discovery">Class Discovery<a class="headerlink" href="#class-discovery" title="Permanent link">#</a></h3>
 <p>Unlike the <code>Class.forName(String)</code> method that grabs the first class it can find in the <a href="../classpath/">CLASSPATH</a>, and therefore fixes the location of the package it found the class in, the dynamic discovery examines the complete <a href="../classpath/">CLASSPATH</a> you're starting the <a href="../java_virtual_machine/">Java Virtual Machine</a> (JVM) with. This means that you can have several parallel directories with the same WEKA package structure, e.g. the standard release of WEKA in one directory (<code>/distribution/weka.jar</code>) and another one with your own classes (<code>/development/weka/...</code>), and display all of the classifiers in the GUI. In case of a name conflict, i.e. two directories contain the same class, the first one that can be found is used. In a nutshell, your <code>java</code> call of the GUIChooser could look like this:</p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a> java -classpath <span class="s2">&quot;/development:/distribution/weka.jar&quot;</span> weka.gui.GUIChooser
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="w"> </span>java<span class="w"> </span>-classpath<span class="w"> </span><span class="s2">&quot;/development:/distribution/weka.jar&quot;</span><span class="w"> </span>weka.gui.GUIChooser
 </code></pre></div>
 <em>Note:</em> Windows users have to replace the ":" with ";" and the forward slashes with backslashes.</p>
 <h3 id="multiple-class-hierarchies">Multiple Class Hierarchies<a class="headerlink" href="#multiple-class-hierarchies" title="Permanent link">#</a></h3>
 <p>In case you're developing your own framework, but still want to use your classifiers within WEKA that wasn't possible so far. With the release <strong>3.4.4</strong> it is possible to have multiple class hierarchies being displayed in the GUI. If you've developed a modified version of J48, let's call it <em>MyJ48</em> and it's located in the package <code>dummy.classifiers</code> then you'll have to add this package to the classifiers list in the GPC file like this:</p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="w"> </span><span class="na">weka.classifiers.Classifier</span><span class="o">=</span><span class="s">\</span><span class="w"></span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span><span class="na">weka.classifiers.bayes,\</span><span class="w"></span>
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">  </span><span class="na">weka.classifiers.functions,\</span><span class="w"></span>
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">  </span><span class="na">weka.classifiers.lazy,\</span><span class="w"></span>
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">  </span><span class="na">weka.classifiers.meta,\</span><span class="w"></span>
-<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">  </span><span class="na">weka.classifiers.trees,\</span><span class="w"></span>
-<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">  </span><span class="na">weka.classifiers.rules,\</span><span class="w"></span>
-<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">  </span><span class="na">dummy.classifiers</span><span class="w"></span>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="w"> </span><span class="na">weka.classifiers.Classifier</span><span class="o">=</span>\
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span><span class="s">weka.classifiers.bayes,</span>\
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">  </span><span class="s">weka.classifiers.functions,</span>\
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">  </span><span class="s">weka.classifiers.lazy,</span>\
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">  </span><span class="s">weka.classifiers.meta,</span>\
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">  </span><span class="s">weka.classifiers.trees,</span>\
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">  </span><span class="s">weka.classifiers.rules,</span>\
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">  </span><span class="s">dummy.classifiers</span>
 </code></pre></div>
 Your <code>java</code> call for the GUIChooser might look like this:</p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a> java -classpath <span class="s2">&quot;weka.jar:dummy.jar&quot;</span> weka.gui.GUIChooser
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="w"> </span>java<span class="w"> </span>-classpath<span class="w"> </span><span class="s2">&quot;weka.jar:dummy.jar&quot;</span><span class="w"> </span>weka.gui.GUIChooser
 </code></pre></div>
 <em>Note:</em> Windows users have to replace the ":" with ";" and the forward slashes with backslashes.</p>
 <p>Starting up the GUI you'll now have another root node in the tree view of the classifiers, called <em>root</em>, and below it the <em>weka</em> and the <em>dummy</em> package hierarchy as you can see here:</p>

@@ -677,9 +677,9 @@ don't download the <em>RPM</em>, but the <em>Linux self-extracting file</em>)</l
 <p>Linux</p>
 <ul>
 <li>create a new bash script called <code>weka.sh</code> in the directory <code>weka</code> with the following content
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a> <span class="c1">#!/bin/bash</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a> <span class="nv">CP</span><span class="o">=</span><span class="nv">$CLASSPATH</span>:./weka-3-5-3/weka.jar
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a> ./jre1.5.0_10/bin/java -classpath <span class="nv">$CP</span> weka.gui.GUIChooser
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="w"> </span><span class="c1">#!/bin/bash</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w"> </span><span class="nv">CP</span><span class="o">=</span><span class="nv">$CLASSPATH</span>:./weka-3-5-3/weka.jar
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w"> </span>./jre1.5.0_10/bin/java<span class="w"> </span>-classpath<span class="w"> </span><span class="nv">$CP</span><span class="w"> </span>weka.gui.GUIChooser
 </code></pre></div><blockquote>
 <p><strong>Note:</strong> since memory sticks normally use the <a href="http://en.wikipedia.org/wiki/fat32">FAT32</a> file-system you probably won't need to make it executable</p>
 </blockquote>

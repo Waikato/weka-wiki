@@ -631,28 +631,28 @@
 <p>WEKA now allows to start Classifiers and Experiments with the <code>-xml</code> option followed by a filename to retrieve the command line options from the XML file instead of the command line.</p>
 <p>For such simple classifiers like e.g. J48 this looks like overkill, but as soon as one uses Meta-Classifiers or Meta-Meta-Classifiers the handling gets tricky and one spends a lot of time looking for missing quotes. With the hierarchical structure of XML files it is simple to plug in other classifiers by just exchanging tags.</p>
 <p>The DTD for the XML options is quite simple:</p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a> <span class="cp">&lt;!DOCTYPE options</span>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="w"> </span><span class="cp">&lt;!DOCTYPE options</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="cp"> [</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="cp">    &lt;!ELEMENT options (option)*&gt;</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="cp">&lt;!ATTLIST options type CDATA &quot;classifier&quot;&gt;</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="cp">&lt;!ATTLIST options value CDATA &quot;&quot;&gt;</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="cp">&lt;!ELEMENT option (#PCDATA | options)*&gt;</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="cp">&lt;!ATTLIST option name CDATA #REQUIRED&gt;</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="cp">&lt;!ATTLIST option type (flag | single | hyphens | quotes) &quot;single&quot;&gt;</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a> ]
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a> &gt;
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="cp">&lt;!ATTLIST options type CDATA &quot;classifier&quot;&gt;</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="cp">&lt;!ATTLIST options value CDATA &quot;&quot;&gt;</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="cp">&lt;!ELEMENT option (#PCDATA | options)*&gt;</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="cp">&lt;!ATTLIST option name CDATA #REQUIRED&gt;</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="cp">&lt;!ATTLIST option type (flag | single | hyphens | quotes) &quot;single&quot;&gt;</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w"> </span>]
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w"> </span>&gt;
 </code></pre></div>
 The type attribute of the option tag needs some explanations. There are currently four different types of options in WEKA:</p>
 <ul>
 <li><strong>flag</strong><blockquote>
 <p>The simplest option that takes no arguments, like e.g. the <code>-V</code> flag for inversing an selection.
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a> <span class="nt">&lt;option</span> <span class="na">name=</span><span class="s">&quot;V&quot;</span> <span class="na">type=</span><span class="s">&quot;flag&quot;</span><span class="nt">/&gt;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="w"> </span><span class="nt">&lt;option</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;V&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;flag&quot;</span><span class="nt">/&gt;</span>
 </code></pre></div></p>
 </blockquote>
 </li>
 <li><strong>single</strong><blockquote>
 <p>The option takes exactly one parameter, directly following after the option, e.g., for specifying the trainings file with <code>-t somefile.arff</code>. Here the parameter value is just put between the opening and closing tag. Since single is the default value for the type  tag we don't need to specify it explicitly.
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a> <span class="nt">&lt;option</span> <span class="na">name=</span><span class="s">&quot;t&quot;</span><span class="nt">&gt;</span>somefile.arff<span class="nt">&lt;/option&gt;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="w"> </span><span class="nt">&lt;option</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;t&quot;</span><span class="nt">&gt;</span>somefile.arff<span class="nt">&lt;/option&gt;</span>
 </code></pre></div></p>
 </blockquote>
 </li>
@@ -663,11 +663,11 @@ E.g., does <code>-W weka.classifiers.trees.J48 -- -C 0.001</code> become this:</
 </blockquote>
 </li>
 </ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a> <span class="nt">&lt;option</span> <span class="na">name=</span><span class="s">&quot;W&quot;</span> <span class="na">type=</span><span class="s">&quot;hyphens&quot;</span><span class="nt">&gt;</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    <span class="nt">&lt;options</span> <span class="na">type=</span><span class="s">&quot;classifier&quot;</span> <span class="na">value=</span><span class="s">&quot;weka.classifiers.trees.J48&quot;</span><span class="nt">&gt;</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>       <span class="nt">&lt;option</span> <span class="na">name=</span><span class="s">&quot;C&quot;</span><span class="nt">&gt;</span>0.001<span class="nt">&lt;/option&gt;</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    <span class="nt">&lt;/options&gt;</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a> <span class="nt">&lt;/option&gt;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="w"> </span><span class="nt">&lt;option</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;W&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;hyphens&quot;</span><span class="nt">&gt;</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="nt">&lt;options</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;classifier&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;weka.classifiers.trees.J48&quot;</span><span class="nt">&gt;</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">       </span><span class="nt">&lt;option</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;C&quot;</span><span class="nt">&gt;</span>0.001<span class="nt">&lt;/option&gt;</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="nt">&lt;/options&gt;</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w"> </span><span class="nt">&lt;/option&gt;</span>
 </code></pre></div>
 <blockquote>
 <p>Internally, all the options enclosed by the <code>options</code> tag are pushed to the end after the <code>--</code> if one transforms the XML into a command line string.</p>
@@ -678,9 +678,9 @@ E.g., does <code>-W weka.classifiers.trees.J48 -- -C 0.001</code> become this:</
 </blockquote>
 </li>
 </ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a> <span class="nt">&lt;option</span> <span class="na">name=</span><span class="s">&quot;B&quot;</span> <span class="na">type=</span><span class="s">&quot;quotes&quot;</span><span class="nt">&gt;</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    <span class="nt">&lt;options</span> <span class="na">type=</span><span class="s">&quot;classifier&quot;</span> <span class="na">value=</span><span class="s">&quot;weka.classifiers.trees.J48&quot;</span><span class="nt">/&gt;</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a> <span class="nt">&lt;/option&gt;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="w"> </span><span class="nt">&lt;option</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;B&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;quotes&quot;</span><span class="nt">&gt;</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="nt">&lt;options</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;classifier&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;weka.classifiers.trees.J48&quot;</span><span class="nt">/&gt;</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w"> </span><span class="nt">&lt;/option&gt;</span>
 </code></pre></div>
 <blockquote>
 <p>With the XML representation one doesn't have to worry anymore about the level of quotes one is using and therefore doesn't have to care about the correct escaping (i.e. " ... \" ... \" ...") since this is done automatically.</p>
@@ -689,39 +689,39 @@ E.g., does <code>-W weka.classifiers.trees.J48 -- -C 0.001</code> become this:</
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>weka.classifiers.meta.Stacking -B &quot;weka.classifiers.meta.AdaBoostM1 -W weka.classifiers.trees.J48 -- -C 0.001&quot; -B &quot;weka.classifiers.meta.Bagging -W weka.classifiers.meta.AdaBoostM1 -- -W weka.classifiers.trees.J48&quot; -B &quot;weka.classifiers.meta.Stacking -B \&quot;weka.classifiers.trees.J48\&quot;&quot; -t test/datasets/hepatitis.arff
 </code></pre></div>
 <p>into XML:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a> <span class="nt">&lt;options</span> <span class="na">type=</span><span class="s">&quot;class&quot;</span> <span class="na">value=</span><span class="s">&quot;weka.classifiers.meta.Stacking&quot;</span><span class="nt">&gt;</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>    <span class="nt">&lt;option</span> <span class="na">name=</span><span class="s">&quot;B&quot;</span> <span class="na">type=</span><span class="s">&quot;quotes&quot;</span><span class="nt">&gt;</span>
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>       <span class="nt">&lt;options</span> <span class="na">type=</span><span class="s">&quot;classifier&quot;</span> <span class="na">value=</span><span class="s">&quot;weka.classifiers.meta.AdaBoostM1&quot;</span><span class="nt">&gt;</span>
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>          <span class="nt">&lt;option</span> <span class="na">name=</span><span class="s">&quot;W&quot;</span> <span class="na">type=</span><span class="s">&quot;hyphens&quot;</span><span class="nt">&gt;</span>
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>             <span class="nt">&lt;options</span> <span class="na">type=</span><span class="s">&quot;classifier&quot;</span> <span class="na">value=</span><span class="s">&quot;weka.classifiers.trees.J48&quot;</span><span class="nt">&gt;</span>
-<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>                <span class="nt">&lt;option</span> <span class="na">name=</span><span class="s">&quot;C&quot;</span><span class="nt">&gt;</span>0.001<span class="nt">&lt;/option&gt;</span>
-<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>             <span class="nt">&lt;/options&gt;</span>
-<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>          <span class="nt">&lt;/option&gt;</span>
-<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>       <span class="nt">&lt;/options&gt;</span>
-<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>    <span class="nt">&lt;/option&gt;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="w"> </span><span class="nt">&lt;options</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;class&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;weka.classifiers.meta.Stacking&quot;</span><span class="nt">&gt;</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span><span class="nt">&lt;option</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;B&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;quotes&quot;</span><span class="nt">&gt;</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">       </span><span class="nt">&lt;options</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;classifier&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;weka.classifiers.meta.AdaBoostM1&quot;</span><span class="nt">&gt;</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">          </span><span class="nt">&lt;option</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;W&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;hyphens&quot;</span><span class="nt">&gt;</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">             </span><span class="nt">&lt;options</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;classifier&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;weka.classifiers.trees.J48&quot;</span><span class="nt">&gt;</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">                </span><span class="nt">&lt;option</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;C&quot;</span><span class="nt">&gt;</span>0.001<span class="nt">&lt;/option&gt;</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">             </span><span class="nt">&lt;/options&gt;</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">          </span><span class="nt">&lt;/option&gt;</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">       </span><span class="nt">&lt;/options&gt;</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="w">    </span><span class="nt">&lt;/option&gt;</span>
 <a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>
-<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>    <span class="nt">&lt;option</span> <span class="na">name=</span><span class="s">&quot;B&quot;</span> <span class="na">type=</span><span class="s">&quot;quotes&quot;</span><span class="nt">&gt;</span>
-<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>       <span class="nt">&lt;options</span> <span class="na">type=</span><span class="s">&quot;classifier&quot;</span> <span class="na">value=</span><span class="s">&quot;weka.classifiers.meta.Bagging&quot;</span><span class="nt">&gt;</span>
-<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>          <span class="nt">&lt;option</span> <span class="na">name=</span><span class="s">&quot;W&quot;</span> <span class="na">type=</span><span class="s">&quot;hyphens&quot;</span><span class="nt">&gt;</span>
-<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>             <span class="nt">&lt;options</span> <span class="na">type=</span><span class="s">&quot;classifier&quot;</span> <span class="na">value=</span><span class="s">&quot;weka.classifiers.meta.AdaBoostM1&quot;</span><span class="nt">&gt;</span>
-<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>                <span class="nt">&lt;option</span> <span class="na">name=</span><span class="s">&quot;W&quot;</span> <span class="na">type=</span><span class="s">&quot;hyphens&quot;</span><span class="nt">&gt;</span>
-<a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a>                   <span class="nt">&lt;options</span> <span class="na">type=</span><span class="s">&quot;classifier&quot;</span> <span class="na">value=</span><span class="s">&quot;weka.classifiers.trees.J48&quot;</span><span class="nt">/&gt;</span>
-<a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a>                <span class="nt">&lt;/option&gt;</span>
-<a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a>             <span class="nt">&lt;/options&gt;</span>
-<a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a>          <span class="nt">&lt;/option&gt;</span>
-<a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a>       <span class="nt">&lt;/options&gt;</span>
-<a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a>    <span class="nt">&lt;/option&gt;</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="w">    </span><span class="nt">&lt;option</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;B&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;quotes&quot;</span><span class="nt">&gt;</span>
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="w">       </span><span class="nt">&lt;options</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;classifier&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;weka.classifiers.meta.Bagging&quot;</span><span class="nt">&gt;</span>
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="w">          </span><span class="nt">&lt;option</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;W&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;hyphens&quot;</span><span class="nt">&gt;</span>
+<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a><span class="w">             </span><span class="nt">&lt;options</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;classifier&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;weka.classifiers.meta.AdaBoostM1&quot;</span><span class="nt">&gt;</span>
+<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a><span class="w">                </span><span class="nt">&lt;option</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;W&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;hyphens&quot;</span><span class="nt">&gt;</span>
+<a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a><span class="w">                   </span><span class="nt">&lt;options</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;classifier&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;weka.classifiers.trees.J48&quot;</span><span class="nt">/&gt;</span>
+<a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a><span class="w">                </span><span class="nt">&lt;/option&gt;</span>
+<a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a><span class="w">             </span><span class="nt">&lt;/options&gt;</span>
+<a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a><span class="w">          </span><span class="nt">&lt;/option&gt;</span>
+<a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a><span class="w">       </span><span class="nt">&lt;/options&gt;</span>
+<a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a><span class="w">    </span><span class="nt">&lt;/option&gt;</span>
 <a id="__codelineno-6-23" name="__codelineno-6-23" href="#__codelineno-6-23"></a>
-<a id="__codelineno-6-24" name="__codelineno-6-24" href="#__codelineno-6-24"></a>    <span class="nt">&lt;option</span> <span class="na">name=</span><span class="s">&quot;B&quot;</span> <span class="na">type=</span><span class="s">&quot;quotes&quot;</span><span class="nt">&gt;</span>
-<a id="__codelineno-6-25" name="__codelineno-6-25" href="#__codelineno-6-25"></a>       <span class="nt">&lt;options</span> <span class="na">type=</span><span class="s">&quot;classifier&quot;</span> <span class="na">value=</span><span class="s">&quot;weka.classifiers.meta.Stacking&quot;</span><span class="nt">&gt;</span>
-<a id="__codelineno-6-26" name="__codelineno-6-26" href="#__codelineno-6-26"></a>          <span class="nt">&lt;option</span> <span class="na">name=</span><span class="s">&quot;B&quot;</span> <span class="na">type=</span><span class="s">&quot;quotes&quot;</span><span class="nt">&gt;</span>
-<a id="__codelineno-6-27" name="__codelineno-6-27" href="#__codelineno-6-27"></a>             <span class="nt">&lt;options</span> <span class="na">type=</span><span class="s">&quot;classifier&quot;</span> <span class="na">value=</span><span class="s">&quot;weka.classifiers.trees.J48&quot;</span><span class="nt">/&gt;</span>
-<a id="__codelineno-6-28" name="__codelineno-6-28" href="#__codelineno-6-28"></a>          <span class="nt">&lt;/option&gt;</span>
-<a id="__codelineno-6-29" name="__codelineno-6-29" href="#__codelineno-6-29"></a>       <span class="nt">&lt;/options&gt;</span>
-<a id="__codelineno-6-30" name="__codelineno-6-30" href="#__codelineno-6-30"></a>    <span class="nt">&lt;/option&gt;</span>
+<a id="__codelineno-6-24" name="__codelineno-6-24" href="#__codelineno-6-24"></a><span class="w">    </span><span class="nt">&lt;option</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;B&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;quotes&quot;</span><span class="nt">&gt;</span>
+<a id="__codelineno-6-25" name="__codelineno-6-25" href="#__codelineno-6-25"></a><span class="w">       </span><span class="nt">&lt;options</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;classifier&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;weka.classifiers.meta.Stacking&quot;</span><span class="nt">&gt;</span>
+<a id="__codelineno-6-26" name="__codelineno-6-26" href="#__codelineno-6-26"></a><span class="w">          </span><span class="nt">&lt;option</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;B&quot;</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;quotes&quot;</span><span class="nt">&gt;</span>
+<a id="__codelineno-6-27" name="__codelineno-6-27" href="#__codelineno-6-27"></a><span class="w">             </span><span class="nt">&lt;options</span><span class="w"> </span><span class="na">type=</span><span class="s">&quot;classifier&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;weka.classifiers.trees.J48&quot;</span><span class="nt">/&gt;</span>
+<a id="__codelineno-6-28" name="__codelineno-6-28" href="#__codelineno-6-28"></a><span class="w">          </span><span class="nt">&lt;/option&gt;</span>
+<a id="__codelineno-6-29" name="__codelineno-6-29" href="#__codelineno-6-29"></a><span class="w">       </span><span class="nt">&lt;/options&gt;</span>
+<a id="__codelineno-6-30" name="__codelineno-6-30" href="#__codelineno-6-30"></a><span class="w">    </span><span class="nt">&lt;/option&gt;</span>
 <a id="__codelineno-6-31" name="__codelineno-6-31" href="#__codelineno-6-31"></a>
-<a id="__codelineno-6-32" name="__codelineno-6-32" href="#__codelineno-6-32"></a>    <span class="nt">&lt;option</span> <span class="na">name=</span><span class="s">&quot;t&quot;</span><span class="nt">&gt;</span>test/datasets/hepatitis.arff<span class="nt">&lt;/option&gt;</span>
-<a id="__codelineno-6-33" name="__codelineno-6-33" href="#__codelineno-6-33"></a> <span class="nt">&lt;/options&gt;</span>
+<a id="__codelineno-6-32" name="__codelineno-6-32" href="#__codelineno-6-32"></a><span class="w">    </span><span class="nt">&lt;option</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;t&quot;</span><span class="nt">&gt;</span>test/datasets/hepatitis.arff<span class="nt">&lt;/option&gt;</span>
+<a id="__codelineno-6-33" name="__codelineno-6-33" href="#__codelineno-6-33"></a><span class="w"> </span><span class="nt">&lt;/options&gt;</span>
 </code></pre></div>
 <p><strong>Note:</strong></p>
 <blockquote>
@@ -742,28 +742,28 @@ E.g., does <code>-W weka.classifiers.trees.J48 -- -C 0.001</code> become this:</
 <p>This kind of serialization is always available and can be selected via a Filter (*.xml) in the Save/Open-Dialog of the Experimenter.</p>
 <p>The DTD is very simple and looks like this (for version 3.4.5):</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a> <span class="cp">&lt;!DOCTYPE object[</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="w"> </span><span class="cp">&lt;!DOCTYPE object[</span>
 <a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="cp">    &lt;!ELEMENT object (#PCDATA | object)*&gt;</span>
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>    <span class="cp">&lt;!ATTLIST object name      CDATA #REQUIRED&gt;</span>
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>    <span class="cp">&lt;!ATTLIST object class     CDATA #REQUIRED&gt;</span>
-<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>    <span class="cp">&lt;!ATTLIST object primitive CDATA &quot;no&quot;&gt;</span>
-<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>    <span class="cp">&lt;!ATTLIST object array     CDATA &quot;no&quot;&gt;</span>   <span class="cm">&lt;!-- the dimensions of the array; no=0, yes=1 --&gt;</span>
-<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>    <span class="cp">&lt;!ATTLIST object null      CDATA &quot;no&quot;&gt;</span>   
-<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>    <span class="cp">&lt;!ATTLIST object version   CDATA &quot;3.4.5&quot;&gt;</span>
-<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a> ]&gt;
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">    </span><span class="cp">&lt;!ATTLIST object name      CDATA #REQUIRED&gt;</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">    </span><span class="cp">&lt;!ATTLIST object class     CDATA #REQUIRED&gt;</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">    </span><span class="cp">&lt;!ATTLIST object primitive CDATA &quot;no&quot;&gt;</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">    </span><span class="cp">&lt;!ATTLIST object array     CDATA &quot;no&quot;&gt;</span><span class="w">   </span><span class="cm">&lt;!-- the dimensions of the array; no=0, yes=1 --&gt;</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">    </span><span class="cp">&lt;!ATTLIST object null      CDATA &quot;no&quot;&gt;</span><span class="w">   </span>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">    </span><span class="cp">&lt;!ATTLIST object version   CDATA &quot;3.4.5&quot;&gt;</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="w"> </span>]&gt;
 </code></pre></div>
 <blockquote>
 <p>Prior to versions 3.4.5 and 3.5.0 it looked like this:</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a> <span class="cp">&lt;!DOCTYPE object</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="w"> </span><span class="cp">&lt;!DOCTYPE object</span>
 <a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="cp"> [</span>
 <a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="cp">    &lt;!ELEMENT object (#PCDATA | object)*&gt;</span>
-<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>    <span class="cp">&lt;!ATTLIST object name      CDATA #REQUIRED&gt;</span>
-<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>    <span class="cp">&lt;!ATTLIST object class     CDATA #REQUIRED&gt;</span>
-<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>    <span class="cp">&lt;!ATTLIST object primitive CDATA &quot;yes&quot;&gt;</span>
-<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>    <span class="cp">&lt;!ATTLIST object array     CDATA &quot;no&quot;&gt;</span>
-<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a> ]
-<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a> &gt;
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">    </span><span class="cp">&lt;!ATTLIST object name      CDATA #REQUIRED&gt;</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">    </span><span class="cp">&lt;!ATTLIST object class     CDATA #REQUIRED&gt;</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">    </span><span class="cp">&lt;!ATTLIST object primitive CDATA &quot;yes&quot;&gt;</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">    </span><span class="cp">&lt;!ATTLIST object array     CDATA &quot;no&quot;&gt;</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="w"> </span>]
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="w"> </span>&gt;
 </code></pre></div>
 <blockquote>
 <p><strong>Responsible Class(es):</strong>
@@ -814,22 +814,22 @@ it returns only a flat String-Array and not a tree structure.</p>
 <h3 id="bayesian-networks">Bayesian Networks<a class="headerlink" href="#bayesian-networks" title="Permanent link">#</a></h3>
 <p>The GraphVisualizer (<code>weka.gui.graphvisualizer.GraphVisualizer</code>) can save graphs into the <a href="http://sites.poli.usp.br/p/fabio.cozman/Research/InterchangeFormat/index.html">Interchange Format</a> for Bayesian Networks (BIF). If started from command line with an XML filename as first parameter and not from the Explorer it can display the given file directly.</p>
 <p>The DTD for BIF is this:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a> <span class="cp">&lt;!DOCTYPE BIF [</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="w"> </span><span class="cp">&lt;!DOCTYPE BIF [</span>
 <a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="cp">    &lt;!ELEMENT BIF ( NETWORK )*&gt;</span>
-<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>          <span class="cp">&lt;!ATTLIST BIF VERSION CDATA #REQUIRED&gt;</span>
-<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>    <span class="cp">&lt;!ELEMENT NETWORK ( NAME, ( PROPERTY | VARIABLE | DEFINITION )* )&gt;</span>
-<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>    <span class="cp">&lt;!ELEMENT NAME (#PCDATA)&gt;</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">          </span><span class="cp">&lt;!ATTLIST BIF VERSION CDATA #REQUIRED&gt;</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">    </span><span class="cp">&lt;!ELEMENT NETWORK ( NAME, ( PROPERTY | VARIABLE | DEFINITION )* )&gt;</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="w">    </span><span class="cp">&lt;!ELEMENT NAME (#PCDATA)&gt;</span>
 <a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>
-<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>    <span class="cp">&lt;!ELEMENT VARIABLE ( NAME, ( OUTCOME |  PROPERTY )* ) &gt;</span>
-<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>          <span class="cp">&lt;!ATTLIST VARIABLE TYPE (nature|decision|utility) &quot;nature&quot;&gt;</span>
-<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>    <span class="cp">&lt;!ELEMENT OUTCOME (#PCDATA)&gt;</span>
-<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>    <span class="cp">&lt;!ELEMENT DEFINITION ( FOR | GIVEN | TABLE | PROPERTY )* &gt;</span>
-<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>    <span class="cp">&lt;!ELEMENT FOR (#PCDATA)&gt;</span>
-<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>    <span class="cp">&lt;!ELEMENT GIVEN (#PCDATA)&gt;</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="w">    </span><span class="cp">&lt;!ELEMENT VARIABLE ( NAME, ( OUTCOME |  PROPERTY )* ) &gt;</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="w">          </span><span class="cp">&lt;!ATTLIST VARIABLE TYPE (nature|decision|utility) &quot;nature&quot;&gt;</span>
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="w">    </span><span class="cp">&lt;!ELEMENT OUTCOME (#PCDATA)&gt;</span>
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="w">    </span><span class="cp">&lt;!ELEMENT DEFINITION ( FOR | GIVEN | TABLE | PROPERTY )* &gt;</span>
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="w">    </span><span class="cp">&lt;!ELEMENT FOR (#PCDATA)&gt;</span>
+<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a><span class="w">    </span><span class="cp">&lt;!ELEMENT GIVEN (#PCDATA)&gt;</span>
 <a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a>
-<a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a>    <span class="cp">&lt;!ELEMENT TABLE (#PCDATA)&gt;</span>
-<a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a>    <span class="cp">&lt;!ELEMENT PROPERTY (#PCDATA)&gt;</span>
-<a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a> ]&gt;
+<a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a><span class="w">    </span><span class="cp">&lt;!ELEMENT TABLE (#PCDATA)&gt;</span>
+<a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a><span class="w">    </span><span class="cp">&lt;!ELEMENT PROPERTY (#PCDATA)&gt;</span>
+<a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a><span class="w"> </span>]&gt;
 </code></pre></div>
 <p><strong>Responsible Class(es):</strong>
 <code>weka.classifiers.bayes.BayesNet#toXMLBIF03()</code>
@@ -848,7 +848,7 @@ it returns only a flat String-Array and not a tree structure.</p>
 <li>commandline-like, i.e., the class followed by all its parameters; at each end of a line a "\" is appended. (works only on *nix and <a href="http://www.cygwin.com/">Cygwin</a>)<blockquote>
 <p>(Use <a href="../../files/options_single.xsl">options_single.xsl</a>
  <strong>Usage:</strong>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a> xsltproc options.xsl &lt;xml file&gt;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="w"> </span>xsltproc<span class="w"> </span>options.xsl<span class="w"> </span>&lt;xml<span class="w"> </span>file&gt;
 </code></pre></div>
  <em>Note: 
 you can use any XSLT processor, e.g., xt; xsltproc is just one.</em></p>

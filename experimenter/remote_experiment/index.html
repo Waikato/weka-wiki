@@ -657,8 +657,8 @@
 <strong> Download the JDBC driver for HSQLDB, extract the <code>hsqldb.jar</code> and place it in the directory <code>/home/johndoe/jars</code>.
 </strong> To set up the database server, choose or create a directory to run the database server from, and start the server with:</li>
 </ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a> java -classpath /home/johndoe/jars/hsqldb.jar <span class="se">\</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>   org.hsqldb.Server -database.0 experiment -dbname.0 experiment
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="w"> </span>java<span class="w"> </span>-classpath<span class="w"> </span>/home/johndoe/jars/hsqldb.jar<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">   </span>org.hsqldb.Server<span class="w"> </span>-database.0<span class="w"> </span>experiment<span class="w"> </span>-dbname.0<span class="w"> </span>experiment
 </code></pre></div>
 <blockquote>
 <p><strong>Note:</strong> This will start up a database with the alias <em>experiment</em> (<code>-dbname.0 &lt;alias&gt;</code>) and create a properties and a log file at the current location prefixed with <em>experiment</em> (<code>-database.0 &lt;file&gt;</code>).</p>
@@ -677,7 +677,7 @@
 <ul>
 <li>First, set up a directory for scripts and policy files:</li>
 </ul>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a> /home/johndoe/remote_engine
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="w"> </span>/home/johndoe/remote_engine
 </code></pre></div>
 * Unzip the <code>remoteExperimentServer.jar</code> (from the Weka distribution; or build it from the sources with <code>ant remotejar</code>) into a temporary directory.
 * Next, copy the remoteEngine.jar to the <code>/home/johndoe/remote_engine</code> directory.
@@ -685,24 +685,24 @@
 <blockquote>
 <ul>
 <li>HSQLDB
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a> java -Xmx256m <span class="se">\</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>   -classpath /home/johndoe/jars/hsqldb.jar:remoteEngine.jar <span class="se">\</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>   -Djava.security.policy<span class="o">=</span>remote.policy <span class="se">\</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>   weka.experiment.RemoteEngine <span class="p">&amp;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="w"> </span>java<span class="w"> </span>-Xmx256m<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">   </span>-classpath<span class="w"> </span>/home/johndoe/jars/hsqldb.jar:remoteEngine.jar<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">   </span>-Djava.security.policy<span class="o">=</span>remote.policy<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">   </span>weka.experiment.RemoteEngine<span class="w"> </span><span class="p">&amp;</span>
 </code></pre></div></li>
 <li>MySQL
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a> java -Xmx256m <span class="se">\</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>   -classpath /home/johndoe/jars/mysql.jar:remoteEngine.jar <span class="se">\</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>   -Djava.security.policy<span class="o">=</span>remote.policy <span class="se">\</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>   weka.experiment.RemoteEngine <span class="p">&amp;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="w"> </span>java<span class="w"> </span>-Xmx256m<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">   </span>-classpath<span class="w"> </span>/home/johndoe/jars/mysql.jar:remoteEngine.jar<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">   </span>-Djava.security.policy<span class="o">=</span>remote.policy<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">   </span>weka.experiment.RemoteEngine<span class="w"> </span><span class="p">&amp;</span>
 </code></pre></div></li>
 <li>From Weka 3.7.2 you will need to include the core weka.jar file in the classpath for the RemoteEngine. Assuming that the weka.jar file has been copied to <code>/home/johndoe/remote_engine</code>:</li>
 </ul>
 </blockquote>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>java -Xmx256m <span class="se">\</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>  -classpath /home/johndoe/jars/hsqldb.jar:remoteEngine.jar:weka.jar <span class="se">\</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>  -Djava.security.policy<span class="o">=</span>remote.policy <span class="se">\</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>  weka.experiment.RemoteEngine <span class="p">&amp;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>java<span class="w"> </span>-Xmx256m<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span>-classpath<span class="w"> </span>/home/johndoe/jars/hsqldb.jar:remoteEngine.jar:weka.jar<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">  </span>-Djava.security.policy<span class="o">=</span>remote.policy<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">  </span>weka.experiment.RemoteEngine<span class="w"> </span><span class="p">&amp;</span>
 </code></pre></div>
 <ul>
 <li>
@@ -730,19 +730,19 @@
 </ul>
 </li>
 </ul>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a> java <span class="se">\</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>   -cp /home/johndoe/jars/hsqldb.jar:remoteEngine.jar:/home/johndoe/weka/weka.jar <span class="se">\</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>   -Djava.rmi.server.codebase<span class="o">=</span>file:/home/johndoe/weka/weka.jar <span class="se">\</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>   weka.gui.experiment.Experimenter
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="w"> </span>java<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">   </span>-cp<span class="w"> </span>/home/johndoe/jars/hsqldb.jar:remoteEngine.jar:/home/johndoe/weka/weka.jar<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">   </span>-Djava.rmi.server.codebase<span class="o">=</span>file:/home/johndoe/weka/weka.jar<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">   </span>weka.gui.experiment.Experimenter
 </code></pre></div>
 * MySQL
     * Copy the <em>DatabaseUtils.props.mysql</em> file to the <code>/home/johndoe/remote_engine</code> directory and rename it to <em>DatabaseUtils.props</em> - a copy comes with your Weka distribution in <code>weka/experiment</code>.
     * Edit this file and change the "<code>jdbcURL=jdbc:mysql://server_name:3306/database_name</code>" entry to include the name of the machine that is running your database server and the name of the database the result will be stored in (e.g., <code>jdbcURL=jdbc:mysql://dodo.company.com:3306/experiment</code>).
     * Now start the experimenter (inside this directory):</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a> java <span class="se">\</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>   -cp /home/johndoe/jars/mysql.jar:remoteEngine.jar:/home/johndoe/weka/weka.jar <span class="se">\</span>
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>   -Djava.rmi.server.codebase<span class="o">=</span>file:/home/johndoe/weka/weka.jar <span class="se">\</span>
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>   weka.gui.experiment.Experimenter
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="w"> </span>java<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">   </span>-cp<span class="w"> </span>/home/johndoe/jars/mysql.jar:remoteEngine.jar:/home/johndoe/weka/weka.jar<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">   </span>-Djava.rmi.server.codebase<span class="o">=</span>file:/home/johndoe/weka/weka.jar<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">   </span>weka.gui.experiment.Experimenter
 </code></pre></div>
 <blockquote>
 <p><strong>Note:</strong> the database name experiment can be still modified in the Experimenter, this is just the default setup. </p>

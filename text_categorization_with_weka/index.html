@@ -710,11 +710,11 @@
 <a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>    |  ...
 </code></pre></div>
 The above directory structure can be turned into an ARFF file like this:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>java weka.core.converters.TextDirectoryLoader -dir text_example &gt; text_example.arff
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>java<span class="w"> </span>weka.core.converters.TextDirectoryLoader<span class="w"> </span>-dir<span class="w"> </span>text_example<span class="w"> </span>&gt;<span class="w"> </span>text_example.arff
 </code></pre></div>
 <h4 id="csv-files">CSV files<a class="headerlink" href="#csv-files" title="Permanent link">#</a></h4>
 <p>CSV files can be imported in Weka easily via the Weka Explorer or via commandline via the <code>CSVLoader</code> class:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a> java weka.core.converters.CSVLoader file.csv &gt; file.arff
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="w"> </span>java<span class="w"> </span>weka.core.converters.CSVLoader<span class="w"> </span>file.csv<span class="w"> </span>&gt;<span class="w"> </span>file.arff
 </code></pre></div>
 <p>By default, non-numerical attributes get imported as <em>NOMINAL</em> attributes, which is not necessarily desired for textual data, especially if one wants to use the <a href="https://weka.sourceforge.io/doc.stable-3-8/weka/filters/unsupervised/attribute/StringToWordVector.html">StringToWordVector</a> filter. In order to change the attribute to <em>STRING</em>, one can run the <code>NominalToString</code> filter (package <code>weka.filters.unsupervised.attribute</code>) on the data, specifying the attribute index or range of indices that should be converted (NB: 
 this filter does <strong>not</strong> exclude the class attribute from conversion!). In order to retain the attribute types, one needs to save the file in <a href="../formats_and_processing/arff/">ARFF</a> or <a href="../formats_and_processing/xrff/">XRFF</a> format (or in the compressed version of these formats).</p>
@@ -726,7 +726,7 @@ this filter does <strong>not</strong> exclude the class attribute from conversio
 <h4 id="conversion">Conversion<a class="headerlink" href="#conversion" title="Permanent link">#</a></h4>
 <p>Most classifiers in Weka cannot handle <em>String</em> attributes. For these learning schemes one has to process the data with appropriate filters, e.g., the <a href="https://weka.sourceforge.io/doc.stable-3-8/weka/filters/unsupervised/attribute/StringToWordVector.html">StringToWordVector</a> filter which can perform <a href="http://en.wikipedia.org/wiki/tf%e2%80%93idf">TF/IDF transformation</a>.</p>
 <p>The <code>StringToWordVector</code> filter places the class attribute of the generated output data at the beginning. In case you'd to like to have it as last attribute again, you can use the <a href="https://weka.sourceforge.io/doc.stable-3-8/weka/filters/unsupervised/attribute/Reorder.html">Reorder</a> filter with the following setup:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>weka.filters.unsupervised.attribute.Reorder -R <span class="m">2</span>-last,first
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>weka.filters.unsupervised.attribute.Reorder<span class="w"> </span>-R<span class="w"> </span><span class="m">2</span>-last,first
 </code></pre></div>
 <p>And with the <a href="https://weka.sourceforge.io/doc.stable-3-8/weka/filters/MultiFilter.html">MultiFilter</a> you can also apply both filters in one go, instead of subsequently. Makes it easier in the Explorer for instance.</p>
 <h4 id="stopwords">Stopwords<a class="headerlink" href="#stopwords" title="Permanent link">#</a></h4>
@@ -734,7 +734,7 @@ this filter does <strong>not</strong> exclude the class attribute from conversio
 <p><strong>Note:</strong> There was a bug in Weka 3.5.6 (which introduced the support of external stopwords lists), which ignored the external stopwords list. Later versions or <a href="../snapshots/">snapshot</a>s from 21/07/2007 on will work correctly.</p>
 <h3 id="utf-8">UTF-8<a class="headerlink" href="#utf-8" title="Permanent link">#</a></h3>
 <p>In case you are working with text files containing non-ASCII characters, e.g., Arabic, you might encounter some display problems under Windows. Java was designed to display <a href="http://en.wikipedia.org/wiki/utf-8">UTF-8</a>, which should include arabic characters. By default, Java uses <a href="http://en.wikipedia.org/wiki/cp1252">code page 1252</a> under Windows, which garbles the display of other characters. In order to fix this, you will have to modify the java command-line with which you start up Weka:</p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>  java -Dfile.encoding<span class="o">=</span>utf-8 -classpath ...
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="w">  </span>java<span class="w"> </span>-Dfile.encoding<span class="o">=</span>utf-8<span class="w"> </span>-classpath<span class="w"> </span>...
 </code></pre></div>
 The <code>-Dfile.encoding=utf-8</code> tells Java to explicitly use <a href="http://en.wikipedia.org/wiki/utf-8">UTF-8</a> encoding instead of the default <a href="http://en.wikipedia.org/wiki/cp1252">CP1252</a>.
 If you are starting Weka via start menu and you use a recent version (at least 3.5.8 or 3.4.13), then you will just have to modify the <code>fileEncoding</code> placeholder in the <code>RunWeka.ini</code> accordingly.</p>

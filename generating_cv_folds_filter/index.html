@@ -593,37 +593,37 @@
 
 <p>The filter <code>RemoveFolds</code> (package <code>weka.filters.unsupervised.instance</code>) can be used to generate the train/test splits used in cross-validation (for stratified folds, use <code>weka.filters.supervised.instance.StratifiedRemoveFolds</code>). The filter has to be used twice for each train/test split, first to generate the train set and then to obtain the test set.</p>
 <p>Since this is rather cumbersome by hand, one can also put this into a <a href="http://en.wikipedia.org/wiki/Bash">bash</a> script:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a> <span class="c1">#!/bin/bash</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a> <span class="c1">#</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a> <span class="c1"># expects the weka.jar as first parameter and the datasets to work on as </span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a> <span class="c1"># second parameter.</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a> <span class="c1">#</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a> <span class="c1"># FracPete, 2007-04-10</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="w"> </span><span class="c1">#!/bin/bash</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w"> </span><span class="c1">#</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w"> </span><span class="c1"># expects the weka.jar as first parameter and the datasets to work on as </span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w"> </span><span class="c1"># second parameter.</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w"> </span><span class="c1">#</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w"> </span><span class="c1"># FracPete, 2007-04-10</span>
 <a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a> <span class="k">if</span> <span class="o">[</span> ! <span class="nv">$#</span> -eq <span class="m">2</span> <span class="o">]</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a> <span class="k">then</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>   <span class="nb">echo</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>   <span class="nb">echo</span> <span class="s2">&quot;usage: folds.sh &lt;weka.jar&gt; &lt;dataset&gt;&quot;</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>   <span class="nb">echo</span>
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>   <span class="nb">exit</span> <span class="m">1</span>
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a> <span class="k">fi</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>!<span class="w"> </span><span class="nv">$#</span><span class="w"> </span>-eq<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="o">]</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w"> </span><span class="k">then</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">   </span><span class="nb">echo</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">   </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;usage: folds.sh &lt;weka.jar&gt; &lt;dataset&gt;&quot;</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">   </span><span class="nb">echo</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">   </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w"> </span><span class="k">fi</span>
 <a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a> <span class="nv">JAR</span><span class="o">=</span><span class="nv">$1</span>
-<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a> <span class="nv">DATASET</span><span class="o">=</span><span class="nv">$2</span>
-<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a> <span class="nv">FOLDS</span><span class="o">=</span><span class="m">10</span>
-<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a> <span class="nv">FILTER</span><span class="o">=</span>weka.filters.unsupervised.instance.RemoveFolds
-<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a> <span class="nv">SEED</span><span class="o">=</span><span class="m">1</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w"> </span><span class="nv">JAR</span><span class="o">=</span><span class="nv">$1</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w"> </span><span class="nv">DATASET</span><span class="o">=</span><span class="nv">$2</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w"> </span><span class="nv">FOLDS</span><span class="o">=</span><span class="m">10</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w"> </span><span class="nv">FILTER</span><span class="o">=</span>weka.filters.unsupervised.instance.RemoveFolds
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w"> </span><span class="nv">SEED</span><span class="o">=</span><span class="m">1</span>
 <a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>
-<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a> <span class="k">for</span> <span class="o">((</span><span class="nv">i</span> <span class="o">=</span> <span class="m">1</span><span class="p">;</span> i &lt;<span class="o">=</span> <span class="nv">$FOLDS</span><span class="p">;</span> i++<span class="o">))</span>
-<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a> <span class="k">do</span>
-<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>   <span class="nb">echo</span> <span class="s2">&quot;Generating pair </span><span class="nv">$i</span><span class="s2">/</span><span class="nv">$FOLDS</span><span class="s2">...&quot;</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="o">((</span><span class="nv">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">;</span><span class="w"> </span>i<span class="w"> </span>&lt;<span class="o">=</span><span class="w"> </span><span class="nv">$FOLDS</span><span class="p">;</span><span class="w"> </span>i++<span class="o">))</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w"> </span><span class="k">do</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="w">   </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Generating pair </span><span class="nv">$i</span><span class="s2">/</span><span class="nv">$FOLDS</span><span class="s2">...&quot;</span>
 <a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>
-<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>   <span class="nv">OUTFILE</span><span class="o">=</span><span class="sb">`</span><span class="nb">echo</span> <span class="nv">$DATASET</span> <span class="p">|</span> sed s/<span class="s2">&quot;\.arff&quot;</span>//g<span class="sb">`</span>
-<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>   <span class="c1"># train set</span>
-<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>   java -cp <span class="nv">$JAR</span> <span class="nv">$FILTER</span> -V -N <span class="nv">$FOLDS</span> -F <span class="nv">$i</span> -S <span class="nv">$SEED</span> -i <span class="nv">$DATASET</span> -o <span class="s2">&quot;</span><span class="nv">$OUTFILE</span><span class="s2">-train-</span><span class="nv">$i</span><span class="s2">-of-</span><span class="nv">$FOLDS</span><span class="s2">.arff&quot;</span>
-<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>   <span class="c1"># test set</span>
-<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>   java -cp <span class="nv">$JAR</span> <span class="nv">$FILTER</span>    -N <span class="nv">$FOLDS</span> -F <span class="nv">$i</span> -S <span class="nv">$SEED</span> -i <span class="nv">$DATASET</span> -o <span class="s2">&quot;</span><span class="nv">$OUTFILE</span><span class="s2">-test-</span><span class="nv">$i</span><span class="s2">-of-</span><span class="nv">$FOLDS</span><span class="s2">.arff&quot;</span>
-<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a> <span class="k">done</span>
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="w">   </span><span class="nv">OUTFILE</span><span class="o">=</span><span class="sb">`</span><span class="nb">echo</span><span class="w"> </span><span class="nv">$DATASET</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span>s/<span class="s2">&quot;\.arff&quot;</span>//g<span class="sb">`</span>
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="w">   </span><span class="c1"># train set</span>
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="w">   </span>java<span class="w"> </span>-cp<span class="w"> </span><span class="nv">$JAR</span><span class="w"> </span><span class="nv">$FILTER</span><span class="w"> </span>-V<span class="w"> </span>-N<span class="w"> </span><span class="nv">$FOLDS</span><span class="w"> </span>-F<span class="w"> </span><span class="nv">$i</span><span class="w"> </span>-S<span class="w"> </span><span class="nv">$SEED</span><span class="w"> </span>-i<span class="w"> </span><span class="nv">$DATASET</span><span class="w"> </span>-o<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$OUTFILE</span><span class="s2">-train-</span><span class="nv">$i</span><span class="s2">-of-</span><span class="nv">$FOLDS</span><span class="s2">.arff&quot;</span>
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="w">   </span><span class="c1"># test set</span>
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="w">   </span>java<span class="w"> </span>-cp<span class="w"> </span><span class="nv">$JAR</span><span class="w"> </span><span class="nv">$FILTER</span><span class="w">    </span>-N<span class="w"> </span><span class="nv">$FOLDS</span><span class="w"> </span>-F<span class="w"> </span><span class="nv">$i</span><span class="w"> </span>-S<span class="w"> </span><span class="nv">$SEED</span><span class="w"> </span>-i<span class="w"> </span><span class="nv">$DATASET</span><span class="w"> </span>-o<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$OUTFILE</span><span class="s2">-test-</span><span class="nv">$i</span><span class="s2">-of-</span><span class="nv">$FOLDS</span><span class="s2">.arff&quot;</span>
+<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="w"> </span><span class="k">done</span>
 </code></pre></div>
 <p>The script expects two parameters:</p>
 <ol>
@@ -631,7 +631,7 @@
 <li>the dataset to generate the train/test pairs from </li>
 </ol>
 <p>Example:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a> ./folds.sh /some/where/weka.jar /some/where/else/dataset.arff
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="w"> </span>./folds.sh<span class="w"> </span>/some/where/weka.jar<span class="w"> </span>/some/where/else/dataset.arff
 </code></pre></div>
 <p>This example will create the train/test splits for a 10-fold cross-validation at the same location as the original dataset, i.e., in the directory <code>/some/where/else/</code>.</p>
 <h3 id="downloads">Downloads<a class="headerlink" href="#downloads" title="Permanent link">#</a></h3>
