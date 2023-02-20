@@ -76,5 +76,5 @@ Source code:
 * [Plotting multiple ROC curves](../plotting_multiple_roc_curves.md) - also contains a Java example of plotting multiple ROC curves in a single plot
 
 # Downloads
-* [VisualizeROC.java](../files/VisualizeROC.java) ([stable](https://svn.cms.waikato.ac.nz/svn/weka/branches/stable-3-6/wekaexamples/src/main/java/wekaexamples/gui/visualize/VisualizeROC.java), [developer](https://svn.cms.waikato.ac.nz/svn/weka/trunk/wekaexamples/src/main/java/wekaexamples/gui/visualize/VisualizeROC.java))
+* [VisualizeROC.java](../files/VisualizeROC.java) ([stable](https://git.cms.waikato.ac.nz/weka/weka/-/tree/stable-3-8/wekaexamples/src/main/java/wekaexamples/gui/visualize/VisualizeROC.java), [developer](https://git.cms.waikato.ac.nz/weka/weka/-/tree/main/trunk/wekaexamples/src/main/java/wekaexamples/gui/visualize/VisualizeROC.java))
 

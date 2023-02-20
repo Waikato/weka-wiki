@@ -100,4 +100,4 @@ Source code:
 * [Save Instances to an ARFF File](formats_and_processing/save_instances_to_arff.md) - if you want to save the output to a file instead of printing them to stdout
 
 # Downloads
-* [AddAttribute.java](files/AddAttribute.java) ([stable](https://svn.cms.waikato.ac.nz/svn/weka/branches/stable-3-8/wekaexamples/src/main/java/wekaexamples/filters/AddAttribute.java), [developer](https://svn.cms.waikato.ac.nz/svn/weka/trunk/wekaexamples/src/main/java/wekaexamples/filters/AddAttribute.java))
+* [AddAttribute.java](files/AddAttribute.java) ([stable](https://git.cms.waikato.ac.nz/weka/weka/-/tree/stable-3-8/wekaexamples/src/main/java/wekaexamples/filters/AddAttribute.java), [developer](https://git.cms.waikato.ac.nz/weka/weka/-/tree/main/trunk/wekaexamples/src/main/java/wekaexamples/filters/AddAttribute.java))

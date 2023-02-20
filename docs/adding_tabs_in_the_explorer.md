@@ -141,7 +141,7 @@ Useful for people who are working a lot with databases and would like to have an
 ![Screenshot](img/SqlPanel.png)
 
 ### Source
-* [SqlPanel.java](files/SqlPanel.java) ([stable-3.6](https://svn.cms.waikato.ac.nz/svn/weka/branches/stable-3-6/wekaexamples/src/main/java/wekaexamples/gui/explorer/SqlPanel.java), [developer](https://svn.cms.waikato.ac.nz/svn/weka/trunk/wekaexamples/src/main/java/wekaexamples/gui/explorer/SqlPanel.java))
+* [SqlPanel.java](files/SqlPanel.java) ([stable-3.8](https://git.cms.waikato.ac.nz/weka/weka/-/tree/stable-3-8/wekaexamples/src/main/java/wekaexamples/gui/explorer/SqlPanel.java), [developer](https://git.cms.waikato.ac.nz/weka/weka/-/tree/main/trunk/wekaexamples/src/main/java/wekaexamples/gui/explorer/SqlPanel.java))
 
 ## Artificial data generation
 ### Purpose
@@ -291,7 +291,7 @@ Instead of only having a *Generate...* button in the PreprocessPanel or using it
 ![Screenshot](img/GeneratorPanel.png)
 
 ### Source
-* [GeneratorPanel.java](files/GeneratorPanel.java) ([stable-3.6](https://svn.cms.waikato.ac.nz/svn/weka/branches/stable-3-6/wekaexamples/src/main/java/wekaexamples/gui/explorer/GeneratorPanel.java), [developer](https://svn.cms.waikato.ac.nz/svn/weka/trunk/wekaexamples/src/main/java/wekaexamples/gui/explorer/GeneratorPanel.java))
+* [GeneratorPanel.java](files/GeneratorPanel.java) ([stable-3.8](https://git.cms.waikato.ac.nz/weka/weka/-/tree/stable-3-8/wekaexamples/src/main/java/wekaexamples/gui/explorer/GeneratorPanel.java), [developer](https://git.cms.waikato.ac.nz/weka/weka/-/tree/main/trunk/wekaexamples/src/main/java/wekaexamples/gui/explorer/GeneratorPanel.java))
 
 ## Experimenter "light"
 ### Purpose
@@ -318,5 +318,5 @@ it can be used to obtain statistical sound results for a specific classifier/dat
 ![Screenshot](img/ExperimentPanel.png)
 
 ### Source
-* [ExperimentPanel.java](files/ExperimentPanel.java) ([stable-3.6](https://svn.cms.waikato.ac.nz/svn/weka/branches/stable-3-6/wekaexamples/src/main/java/wekaexamples/gui/explorer/ExperimentPanel.java), [developer](https://svn.cms.waikato.ac.nz/svn/weka/trunk/wekaexamples/src/main/java/wekaexamples/gui/explorer/ExperimentPanel.java))
+* [ExperimentPanel.java](files/ExperimentPanel.java) ([stable-3.6](https://git.cms.waikato.ac.nz/weka/weka/-/tree/stable-3-8/wekaexamples/src/main/java/wekaexamples/gui/explorer/ExperimentPanel.java), [developer](https://git.cms.waikato.ac.nz/weka/weka/-/tree/main/trunk/wekaexamples/src/main/java/wekaexamples/gui/explorer/ExperimentPanel.java))
 

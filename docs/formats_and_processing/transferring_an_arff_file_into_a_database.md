@@ -56,8 +56,8 @@ import weka.core.*;
 * [Arff2Database.java](../files/Arff2Database.java)
 * The [Weka Examples](../weka_examples.md) collection contains several example classes:
 
-	* `SaveDataToDbBatch.java` ([book](https://svn.cms.waikato.ac.nz/svn/weka/branches/book2ndEd-branch/wekaexamples/src/main/java/wekaexamples/core/converters/SaveDataToDbBatch.java), [stable-3.6](https://svn.cms.waikato.ac.nz/svn/weka/branches/stable-3-6/wekaexamples/src/main/java/wekaexamples/core/converters/SaveDataToDbBatch.java), [developer](https://svn.cms.waikato.ac.nz/svn/weka/trunk/wekaexamples/src/main/java/wekaexamples/core/converters/SaveDataToDbBatch.java))
-	* `SaveDataToDbIncremental.java` ([book](https://svn.cms.waikato.ac.nz/svn/weka/branches/book2ndEd-branch/wekaexamples/src/main/java/wekaexamples/core/converters/SaveDataToDbIncremental.java), [stable-3.6](https://svn.cms.waikato.ac.nz/svn/weka/branches/stable-3-6/wekaexamples/src/main/java/wekaexamples/core/converters/SaveDataToDbIncremental.java), [developer](https://svn.cms.waikato.ac.nz/svn/weka/trunk/wekaexamples/src/main/java/wekaexamples/core/converters/SaveDataToDbIncremental.java))
+	* `SaveDataToDbBatch.java` ([stable-3.8](https://git.cms.waikato.ac.nz/weka/weka/-/tree/stable-3-8/wekaexamples/src/main/java/wekaexamples/core/converters/SaveDataToDbBatch.java), [developer](https://git.cms.waikato.ac.nz/weka/weka/-/tree/main/trunk/wekaexamples/src/main/java/wekaexamples/core/converters/SaveDataToDbBatch.java))
+	* `SaveDataToDbIncremental.java` ([stable-3.8](https://git.cms.waikato.ac.nz/weka/weka/-/tree/stable-3-8/wekaexamples/src/main/java/wekaexamples/core/converters/SaveDataToDbIncremental.java), [developer](https://git.cms.waikato.ac.nz/weka/weka/-/tree/main/trunk/wekaexamples/src/main/java/wekaexamples/core/converters/SaveDataToDbIncremental.java))
 
 # Links
 * [MySQL homepage](http://www.mysql.com/)

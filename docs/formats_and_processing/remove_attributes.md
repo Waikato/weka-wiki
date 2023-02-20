@@ -42,4 +42,4 @@ The same can be achieved with the following filter commandline (add `-V` to inve
 ```
 
 # Downloads
-* `RemoveTest.java` ([book](https://svn.cms.waikato.ac.nz/svn/weka/branches/book2ndEd-branch/wekaexamples/src/main/java/wekaexamples/filters/RemoveTest.java), [stable-3.6](https://svn.cms.waikato.ac.nz/svn/weka/branches/stable-3-6/wekaexamples/src/main/java/wekaexamples/filters/RemoveTest.java), [developer](https://svn.cms.waikato.ac.nz/svn/weka/trunk/wekaexamples/src/main/java/wekaexamples/filters/RemoveTest.java))
+* `RemoveTest.java` ([stable-3.8](https://git.cms.waikato.ac.nz/weka/weka/-/tree/stable-3-8/wekaexamples/src/main/java/wekaexamples/filters/RemoveTest.java), [developer](https://git.cms.waikato.ac.nz/weka/weka/-/tree/main/trunk/wekaexamples/src/main/java/wekaexamples/filters/RemoveTest.java))

@@ -19,4 +19,4 @@ Here is the snippet :
 https:/weka.sourceforge.io/doc.dev/weka/classifiers/evaluation/ThresholdCurve.html
 
 # Downloads
-* `LoadBif.java` ([book](https://svn.cms.waikato.ac.nz/svn/weka/branches/book2ndEd-branch/wekaexamples/src/main/java/wekaexamples/classifiers/LoadBIF.java), [stable-3.8](https://svn.cms.waikato.ac.nz/svn/weka/branches/stable-3-8/wekaexamples/src/main/java/wekaexamples/classifiers/LoadBIF.java), [developer](https://svn.cms.waikato.ac.nz/svn/weka/trunk/wekaexamples/src/main/java/wekaexamples/classifiers/LoadBIF.java))
+* `LoadBif.java` ([stable-3.8](https://git.cms.waikato.ac.nz/weka/weka/-/tree/stable-3-8/wekaexamples/src/main/java/wekaexamples/classifiers/LoadBIF.java), [developer](https://git.cms.waikato.ac.nz/weka/weka/-/tree/main/trunk/wekaexamples/src/main/java/wekaexamples/classifiers/LoadBIF.java))

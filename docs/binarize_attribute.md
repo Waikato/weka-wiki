@@ -61,4 +61,4 @@ The Weka filter [NominalToBinary](https://weka.sourceforge.io/doc.stable-3-8/wek
 The [Binarize.java](files/Binarize.java) class on the other hand generates directly several [ARFF](formats_and_processing/arff.md) out of a given one in the desired format.
 
 # Download
-* [Binarize.java](files/Binarize.java) ([stable](https://svn.cms.waikato.ac.nz/svn/weka/branches/stable-3-8/wekaexamples/src/main/java/wekaexamples/filters/Binarize.java), [developer](https://svn.cms.waikato.ac.nz/svn/weka/trunk/wekaexamples/src/main/java/wekaexamples/filters/Binarize.java))
+* [Binarize.java](files/Binarize.java) ([stable](https://git.cms.waikato.ac.nz/weka/weka/-/tree/stable-3-8/wekaexamples/src/main/java/wekaexamples/filters/Binarize.java), [developer](https://git.cms.waikato.ac.nz/weka/weka/-/tree/main/trunk/wekaexamples/src/main/java/wekaexamples/filters/Binarize.java))

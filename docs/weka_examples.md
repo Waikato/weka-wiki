@@ -8,7 +8,7 @@ Through [git](git.md)
 
 * stable-3.8 version (3.8.x): 
       
-    [https://svn.cms.waikato.ac.nz/svn/weka/branches/stable-3-8/wekaexamples/](https://svn.cms.waikato.ac.nz/svn/weka/branches/stable-3-8/wekaexamples/)
+    [https://git.cms.waikato.ac.nz/weka/weka/-/tree/stable-3-8/wekaexamples/](https://git.cms.waikato.ac.nz/weka/weka/-/tree/stable-3-8/wekaexamples/)
 
 * developer version (3.9.x): 
       
