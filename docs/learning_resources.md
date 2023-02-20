@@ -10,6 +10,6 @@
 
 # MOOCs
 
-* [Data Mining with Weka](https://www.futurelearn.com/courses/data-mining-with-weka)
-* [More Data Mining with Weka](https://www.futurelearn.com/courses/more-data-mining-with-weka)
-* [Advanced Data Mining with Weka](https://www.futurelearn.com/courses/advanced-data-mining-with-weka)
+* [Data Mining with Weka](https://www.cs.waikato.ac.nz/ml/weka/mooc/dataminingwithweka/)
+* [More Data Mining with Weka](https://www.cs.waikato.ac.nz/ml/weka/mooc/moredataminingwithweka/)
+* [Advanced Data Mining with Weka](https://www.cs.waikato.ac.nz/ml/weka/mooc/advanceddataminingwithweka/)
