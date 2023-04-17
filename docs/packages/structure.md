@@ -53,7 +53,7 @@ A Weka package is a zip archive that must unpack to the current directory. For e
 When installing, the package manager will use the value of the "PackageName" field in the Description.props file (see below) to create a directory in `$WEKA_HOME/packages` to hold the package contents. The contents of the `doc` directory have not been shown in the diagram above, but this directory contains javadoc for the `DTNB` class. A package must have a `Description.props` file and contain at least one jar file with compiled Java classes. The package manager will attempt to load all jar files that it finds in the root directory and the `lib` directory. Other files are optional, but if the package is open-source then it is nice to include the source code and an ant build file that can be used to compile the code. Template versions of the [Description.props](../files/Description.props) file and
 [build_package.xml](../files/build_package.xml) file are available from the Weka site and here.
 
-==The description file==
+# The description file
 A valid package must contain a `Description.props` file that provides meta data on the package. Identical files are stored at the central package repository and the local cache maintained by the package manager. The package manager uses these files to compare what is installed to what is available and resolve dependencies.
 
 The [Description.props](../files/Description.props) contains basic information on the package in the following format:
