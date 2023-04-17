@@ -122,7 +122,7 @@ The *License* field lists the license(s) that apply to the package. This field m
 
 The *PackageURL* field lists valid URL that points to the package zip file. This URL is used by the package manager to download and install the package.
 
-The optional *Depends* field gives a comma separated list of packages which this package depends on. The name of a package is optionally followed by a version number constraint enclosed in parenthesis. Valid operators for version number constraints include =, <, >, <=, >=. The keyword *weka* is reserved to refer to the base Weka system and can be used to indicate a dependency on<br />  a particular version of Weka. For example:
+The required *Depends* field gives a comma separated list of packages which this package depends on. The name of a package is followed by a version number constraint enclosed in parenthesis. Valid operators for version number constraints include =, <, >, <=, >=. The keyword *weka* is reserved to refer to the base Weka system and can be used to indicate a dependency on a particular version of Weka. At a minimum, the *Depends* field should list the base version of Weka that the package will operate with. Some examples include:
 
 ``` 
 Depends=weka (>=3.7.2), DTNB (=1.0.0)
@@ -137,7 +137,7 @@ Depends=weka (>3.7.1|<3.8.0)
 states that this package requires a version of Weka between 3.7.1 and 3.8.0.
 
 ``` 
-Depends=DTNB (<1.5.0|>=2.0.1)
+Depends=weka (>=3.7.2), DTNB (<1.5.0|>=2.0.1)
 ```
 
 states that this package requires that a version of the DTNB package be installed that is either less than version 1.5.0 or greater than or equal to version 2.0.1.
