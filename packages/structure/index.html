@@ -574,7 +574,14 @@
     Anatomy of a package
   </a>
   
-    <nav class="md-nav" aria-label="Anatomy of a package">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-description-file" class="md-nav__link">
+    The description file
+  </a>
+  
+    <nav class="md-nav" aria-label="The description file">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -666,8 +673,8 @@
 </code></pre></div>
 <p>When installing, the package manager will use the value of the "PackageName" field in the Description.props file (see below) to create a directory in <code>$WEKA_HOME/packages</code> to hold the package contents. The contents of the <code>doc</code> directory have not been shown in the diagram above, but this directory contains javadoc for the <code>DTNB</code> class. A package must have a <code>Description.props</code> file and contain at least one jar file with compiled Java classes. The package manager will attempt to load all jar files that it finds in the root directory and the <code>lib</code> directory. Other files are optional, but if the package is open-source then it is nice to include the source code and an ant build file that can be used to compile the code. Template versions of the <a href="../../files/Description.props">Description.props</a> file and
 <a href="../../files/build_package.xml">build_package.xml</a> file are available from the Weka site and here.</p>
-<p>==The description file==
-A valid package must contain a <code>Description.props</code> file that provides meta data on the package. Identical files are stored at the central package repository and the local cache maintained by the package manager. The package manager uses these files to compare what is installed to what is available and resolve dependencies.</p>
+<h3 id="the-description-file">The description file<a class="headerlink" href="#the-description-file" title="Permanent link">#</a></h3>
+<p>A valid package must contain a <code>Description.props</code> file that provides meta data on the package. Identical files are stored at the central package repository and the local cache maintained by the package manager. The package manager uses these files to compare what is installed to what is available and resolve dependencies.</p>
 <p>The <a href="../../files/Description.props">Description.props</a> contains basic information on the package in the following format:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a># Template Description file for a Weka package
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
