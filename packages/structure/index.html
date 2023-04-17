@@ -724,14 +724,14 @@ A valid package must contain a <code>Description.props</code> file that provides
 <p>The <em>Maintainer</em> field lists who maintains the package and should include a single email address, enclosed in angle brackets, for sending bug reports to.</p>
 <p>The <em>License</em> field lists the license(s) that apply to the package. This field may contain the short specification of a license (such as LGPL, GPL 2.0 etc.) or the string <em>file LICENSE</em>, where <em>LICENSE</em> exists as a file in the top-level directory of the package. The string <em>Unlimited</em> may be supplied to indicate that there are no restrictions on distribution or use aside from those imposed by relevant laws.</p>
 <p>The <em>PackageURL</em> field lists valid URL that points to the package zip file. This URL is used by the package manager to download and install the package.</p>
-<p>The optional <em>Depends</em> field gives a comma separated list of packages which this package depends on. The name of a package is optionally followed by a version number constraint enclosed in parenthesis. Valid operators for version number constraints include =, &lt;, &gt;, &lt;=, &gt;=. The keyword <em>weka</em> is reserved to refer to the base Weka system and can be used to indicate a dependency on<br />  a particular version of Weka. For example:</p>
+<p>The required <em>Depends</em> field gives a comma separated list of packages which this package depends on. The name of a package is followed by a version number constraint enclosed in parenthesis. Valid operators for version number constraints include =, &lt;, &gt;, &lt;=, &gt;=. The keyword <em>weka</em> is reserved to refer to the base Weka system and can be used to indicate a dependency on a particular version of Weka. At a minimum, the <em>Depends</em> field should list the base version of Weka that the package will operate with. Some examples include:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Depends=weka (&gt;=3.7.2), DTNB (=1.0.0)
 </code></pre></div>
 <p>states that this package requires Weka 3.7.2 or higher and version 1.0.0 of the package DTNB.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Depends=weka (&gt;3.7.1|&lt;3.8.0)
 </code></pre></div>
 <p>states that this package requires a version of Weka between 3.7.1 and 3.8.0.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>Depends=DTNB (&lt;1.5.0|&gt;=2.0.1)
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>Depends=weka (&gt;=3.7.2), DTNB (&lt;1.5.0|&gt;=2.0.1)
 </code></pre></div>
 <p>states that this package requires that a version of the DTNB package be installed that is either less than version 1.5.0 or greater than or equal to version 2.0.1.</p>
 <p>If there is no version number constraint following a package name, the package manager assumes that the latest version of the dependent package is suitable.</p>
