@@ -6,3 +6,5 @@ old/weka/
 *.swp
 serve.sh
 deploy.sh
+.idea/
+*.iml
