@@ -22,4 +22,4 @@ Apart from [Data Mining: Practical Machine Learning Tools and Techniques](https:
 
 * Hongbo Du (2010) [Data Mining Techniques and Applications](https://cengage.co.nz/product/title/data-mining-techniques-and-applications/isbn/9781844808915), Cengage Learning.
 
-* A book explaining why [Weka won't learn](https://www.cs.waikato.ac.nz/~ml/images/weka_wont_learn.gif) (discovered by Stuart Inglis).
+* A book explaining why [Weka won't learn](https://ml.cms.waikato.ac.nz/images/weka_wont_learn.gif) (discovered by Stuart Inglis).

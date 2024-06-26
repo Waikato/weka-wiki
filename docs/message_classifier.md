@@ -6,9 +6,9 @@ In the following you'll find some information about the MessageClassifier from t
 Depending on the version of the book, download the corresponding version (this article is based on the **2nd** edition):
 
 * 1st Edition: 
-[MessageClassifier](https://www.cs.waikato.ac.nz/~ml/weka/example_code/MessageClassifier.java)
+[MessageClassifier](https://ml.cms.waikato.ac.nz/weka/example_code/MessageClassifier.java)
 * 2nd Edition: 
-[MessageClassifier](https://www.cs.waikato.ac.nz/~ml/weka/example_code/2ed/MessageClassifier.java) ([book](https://git.cms.waikato.ac.nz/weka/weka/-/tree/book2ndEd-branch/wekaexamples/src/main/java/wekaexamples/book/MessageClassifier.java), [stable-3.8](https://git.cms.waikato.ac.nz/weka/weka/-/tree/stable-3-8/wekaexamples/src/main/java/wekaexamples/book/MessageClassifier.java), [developer](https://git.cms.waikato.ac.nz/weka/weka/-/tree/main/trunk/wekaexamples/src/main/java/wekaexamples/book/MessageClassifier.java))
+[MessageClassifier](https://ml.cms.waikato.ac.nz/weka/example_code/2ed/MessageClassifier.java) ([book](https://git.cms.waikato.ac.nz/weka/weka/-/tree/book2ndEd-branch/wekaexamples/src/main/java/wekaexamples/book/MessageClassifier.java), [stable-3.8](https://git.cms.waikato.ac.nz/weka/weka/-/tree/stable-3-8/wekaexamples/src/main/java/wekaexamples/book/MessageClassifier.java), [developer](https://git.cms.waikato.ac.nz/weka/weka/-/tree/main/trunk/wekaexamples/src/main/java/wekaexamples/book/MessageClassifier.java))
 
 # Compiling
 * compile the source code like this, if the `weka.jar` is already in your [CLASSPATH](classpath.md) environment variable:

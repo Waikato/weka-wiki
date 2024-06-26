@@ -21,7 +21,7 @@ source code is taken, compiled, and put together in ZIP files. This
 happens for both the development branch of the software and the stable
 branch. Those who want the latest bug fixes before the next official
 release is made can download these
-[snapshots](https://www.cs.waikato.ac.nz/~ml/weka/snapshots/weka_snapshots.html).
+[snapshots](https://ml.cms.waikato.ac.nz/weka/snapshots/weka_snapshots.html).
 
 # Stable version
 
@@ -162,7 +162,7 @@ Weka 3.8 package manager does not start up, please delete the file
 `installedPackageCache.ser` in the `packages` folder that resides in
 the `wekafiles` folder in your user home. Also, serialized Weka models
 created in 3.7 are incompatible with 3.8. The [model
-migrator](https://www.cs.waikato.ac.nz/~ml/weka/modelMigrator.jar)
+migrator](https://ml.cms.waikato.ac.nz/weka/modelMigrator.jar)
 tool can migrate some models to 3.8 (a known
 exception is RandomForest). Usage is as follows:
 

@@ -1,6 +1,6 @@
 The best reference for WEKA 3.8 and 3.9 is the [online
 appendix on the WEKA
-workbench](https://www.cs.waikato.ac.nz/ml/weka/Witten_et_al_2016_appendix.pdf)
+workbench](https://ml.cms.waikato.ac.nz/weka/Witten_et_al_2016_appendix.pdf)
 for the fourth edition of "Data Mining: Practical Machine Learning
 Tools and Techniques" by I.H. Witten, Eibe Frank, Mark A. Hall, and
 Chris J. Pal.  The citation is

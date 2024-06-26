@@ -10,6 +10,6 @@
 
 # MOOCs
 
-* [Data Mining with Weka](https://www.cs.waikato.ac.nz/ml/weka/mooc/dataminingwithweka/)
-* [More Data Mining with Weka](https://www.cs.waikato.ac.nz/ml/weka/mooc/moredataminingwithweka/)
-* [Advanced Data Mining with Weka](https://www.cs.waikato.ac.nz/ml/weka/mooc/advanceddataminingwithweka/)
+* [Data Mining with Weka](https://ml.cms.waikato.ac.nz/weka/mooc/dataminingwithweka/)
+* [More Data Mining with Weka](https://ml.cms.waikato.ac.nz/weka/mooc/moredataminingwithweka/)
+* [Advanced Data Mining with Weka](https://ml.cms.waikato.ac.nz/weka/mooc/advanceddataminingwithweka/)

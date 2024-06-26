@@ -3,25 +3,25 @@ software. Weka comes with built-in help and includes a comprehensive
 manual. For an introduction to the machine learning techniques
 implemented in Weka, and the software itself, consider taking a look
 at the book [Data Mining: Practical Machine Learning Tools and
-Techniques](https://www.cs.waikato.ac.nz/~ml/weka/book.html) and its
+Techniques](https://ml.cms.waikato.ac.nz/weka/book.html) and its
 freely available [online appendix on the Weka
-workbench](https://www.cs.waikato.ac.nz/ml/weka/Witten_et_al_2016_appendix.pdf),
+workbench](https://ml.cms.waikato.ac.nz/weka/Witten_et_al_2016_appendix.pdf),
 providing an overview of the software. Closely linked to the book,
 there are also free [online
-courses](https://www.cs.waikato.ac.nz/~ml/weka/courses.html) on data
+courses](https://ml.cms.waikato.ac.nz/weka/courses.html) on data
 mining with the machine learning techniques in Weka. A list of sources
 with information on Weka is provided below.
 
 	    
 # General documentation
 
-* The online appendix [The Weka Workbench](https://www.cs.waikato.ac.nz/ml/weka/Witten_et_al_2016_appendix.pdf), distributed as a free PDF, for the fourth edition of the book [Data Mining: Practical Machine Learning Tools and Techniques](https://www.cs.waikato.ac.nz/~ml/weka/book.html).
+* The online appendix [The Weka Workbench](https://ml.cms.waikato.ac.nz/weka/Witten_et_al_2016_appendix.pdf), distributed as a free PDF, for the fourth edition of the book [Data Mining: Practical Machine Learning Tools and Techniques](https://ml.cms.waikato.ac.nz/weka/book.html).
 		  
 * The [manual for Weka 3.8](https://prdownloads.sourceforge.net/weka/WekaManual-3-8-3.pdf?download) and the [manual for Weka 3.9](https://prdownloads.sourceforge.net/weka/WekaManual-3-9-3.pdf?download), as included in the distribution of the software when you download it.
 		      
 * The [Javadoc for Weka 3.8](https://weka.sourceforge.io/doc.stable-3-8/) and the [Javadoc for Weka 3.9](https://weka.sourceforge.io/doc.dev/), extracted directly from the source code, providing information on the API and parameters for command-line usage of Weka.
 
-* The videos and slides for the online courses on [Data Mining with Weka](https://www.cs.waikato.ac.nz/ml/weka/mooc/dataminingwithweka/), [More Data Mining with Weka](https://www.cs.waikato.ac.nz/ml/weka/mooc/moredataminingwithweka/), and [Advanced Data Mining with Weka](https://www.cs.waikato.ac.nz/ml/weka/mooc/advanceddataminingwithweka/).
+* The videos and slides for the online courses on [Data Mining with Weka](https://ml.cms.waikato.ac.nz/weka/mooc/dataminingwithweka/), [More Data Mining with Weka](https://ml.cms.waikato.ac.nz/weka/mooc/moredataminingwithweka/), and [Advanced Data Mining with Weka](https://ml.cms.waikato.ac.nz/weka/mooc/advanceddataminingwithweka/).
 
 # Weka packages
 

@@ -48,10 +48,10 @@ You may also want to take a look at the (incomplete) list of ["unofficial" packa
 * [StarSystem](https://github.com/elettrotecnica/starsystem) command-line tool implementing best practices in supervised classification, including "agnostic" feature selection.
 * [TClass](https://github.com/fracpete/tclass-weka-package) - classifying multivariate time series.
 * [Tertius](http://www.cs.bris.ac.uk/research/machinelearning/tertius/) - a system for rule discovery.
-* [TUBE](https://www.cs.waikato.ac.nz/ml/weka/TUBE/) - Tree-based Density Estimation Algorithms.
+* [TUBE](https://ml.cms.waikato.ac.nz/weka/TUBE/) - Tree-based Density Estimation Algorithms.
 * [TunedIT](http://tunedit.org/) - Automated tests of machine-learning algorithms. Repository of datasets, algorithms and benchmarks.
 * [Weka for Computational Genetics](http://sourceforge.net/projects/wekacg) - Multifactor Dimensionality Reduction (MDR) added to the Weka package.
-* [Weka Proper](https://www.cs.waikato.ac.nz/ml/proper/)- Database propositionalization for Weka.
+* [Weka Proper](https://ml.cms.waikato.ac.nz/proper/)- Database propositionalization for Weka.
 * [weka4WS](http://gridlab.dimes.unical.it/weka4ws/) - distributed data mining.
 * [Weka-GDPM and Weka-STPM](http://www.inf.ufsc.br/~vania/software.html) - Weka for geographic data processing and Moving Object Data Analysis and Mining.
 * [WekaMetal](http://www.cs.bris.ac.uk/research/machinelearning/wekametal/) - a meta-learning extension to Weka.

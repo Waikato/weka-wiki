@@ -12,7 +12,7 @@ you can see the entire error output from Java (including the Java
 stack trace). This makes it much more likely that you will get useful
 help.  When posting questions, comments, or bug reports to the Weka
 mailing list, consider the [mailing list
-etiquette](https://www.cs.waikato.ac.nz/~ml/weka/mailinglist_etiquette.html).
+etiquette](https://ml.cms.waikato.ac.nz/weka/mailinglist_etiquette.html).
 
 # Mailing list archive and mirrors
 

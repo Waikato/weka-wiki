@@ -4,7 +4,7 @@ Some example datasets for analysis with Weka are included in the Weka distributi
 
 * A jarfile containing 37 classification problems originally obtained from the [UCI repository of machine learning datasets](https://www.ics.uci.edu/~mlearn/mlrepository.html) ([datasets-UCI.jar](https://prdownloads.sourceforge.net/weka/datasets-UCI.jar), 1,190,961 Bytes).
 * A jarfile containing 37 regression problems obtained from various sources ([datasets-numeric.jar](https://prdownloads.sourceforge.net/weka/datasets-numeric.jar), 169,344 Bytes).
-* A jarfile containing 6 agricultural datasets obtained from agricultural researchers in New Zealand ([agridatasets.jar](https://www.cs.waikato.ac.nz/~ml/weka/agridatasets.jar), 31,200 Bytes).
+* A jarfile containing 6 agricultural datasets obtained from agricultural researchers in New Zealand ([agridatasets.jar](https://ml.cms.waikato.ac.nz/weka/agridatasets.jar), 31,200 Bytes).
 * A jarfile containing 30 regression datasets collected by [Professor Luis Torgo](https://web.cs.dal.ca/~ltorgo/) ([regression-datasets.jar](https://prdownloads.sourceforge.net/weka/regression-datasets.jar), 10,090,266 Bytes).
 * A gzip'ed tar containing [UCI ML](https://www.ics.uci.edu/~mlearn/MLRepository.html) and [UCI KDD](https://kdd.ics.uci.edu/) datasets ([uci-20070111.tar.gz](https://prdownloads.sourceforge.net/weka/uci-20070111.tar.gz), 17,952,832  Bytes)
 * A gzip'ed tar containing [StatLib](http://lib.stat.cmu.edu/datasets/) datasets ([statlib-20050214.tar.gz](https://prdownloads.sourceforge.net/weka/statlib-20050214.tar.gz), 12,785,582 Bytes)
