@@ -714,7 +714,7 @@ This will iterate over the gamma parameter, using values from 0.01 to 0.1 (= 10 
 </code></pre></div>
 <h3 id="gridsearch">GridSearch<a class="headerlink" href="#gridsearch" title="Permanent link">#</a></h3>
 <p><code>weka.classifiers.meta.GridSearch</code> is a meta-classifier for exploring 2 parameters, hence the <em>grid</em> in the name. If one turns the log on, the classifier will create output suitable for <a href="http://www.gnuplot.info/">gnuplot</a>, i.e., sections of the log will contain script and data sections. Instead of just using a classifier, one can specify a base classifier <strong>and</strong> a filter, which both of them can be optimized (one parameter each). In contrast to <code>CVParameterSelection</code>, <code>GridSearch</code> is not limited to first-level parameters of the base classifier, since it's using <a href="http://java.sun.com/docs/books/tutorial/javabeans/">Java Beans</a> <a href="http://java.sun.com/docs/books/tutorial/javabeans/introspection/">Introspection</a> and one can specify <em>paths</em> to the properties one wants to optimize. A <em>property</em> here is the string of the parameter displayed in the GenericObjectEditor (generated though Introspection), e.g., <code>bagSizePercent</code> or <code>classifier</code> of <code>weka.classifiers.meta.Bagging</code>.</p>
-<p>Due to some important bugfixes, one should obtain a version of Weka &gt;3.5.6 or a <a href="../snapshots/">snapshot</a> later than 11 Sept 2007.</p>
+<p>Due to some important bugfixes, one should obtain a version of Weka &gt;3.5.6 later than 11 Sept 2007.</p>
 <p>For each of the two axes, X and Y, one can specify the following parameters:</p>
 <ul>
 <li><strong>property</strong><blockquote>

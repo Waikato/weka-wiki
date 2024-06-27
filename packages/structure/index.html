@@ -786,7 +786,7 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a># Specifies that this component goes into the Plugins toolbar
 <a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>weka.gui.beans.KnowledgeFlow.Plugins=org.pentaho.dm.kf.GroovyComponent
 </code></pre></div>
-<p>The new pluggable evaluation metrics for classification/regression (from Weka 3.7.8 and nightly developer snapshots from 15-11-2012) are managed by the PluginManager class. To tell PluginManager that your package provides a new evaluation metric you need to provide a "PluginManager.props" file in the package's top level directory. For example, a hypothetical bobsMetric package might declare a new "Area under Bob curve" metric like so:</p>
+<p>The new pluggable evaluation metrics for classification/regression (from Weka 3.7.8) are managed by the PluginManager class. To tell PluginManager that your package provides a new evaluation metric you need to provide a "PluginManager.props" file in the package's top level directory. For example, a hypothetical bobsMetric package might declare a new "Area under Bob curve" metric like so:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a># Specify a new plugin Evaluation metric
 <a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>weka.classifiers.evaluation.AbstractEvaluationMetric=weka.classifiers.evaluation.BobsAUC
 </code></pre></div>

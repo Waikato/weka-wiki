@@ -776,12 +776,12 @@
 <a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="n">println</span><span class="w"> </span><span class="n">j48</span>
 </code></pre></div>
 A slightly more elaborate example can be found in <a href="../files/UsingJ48Ext.groovy">UsingJ48Ext.groovy</a>, which uses more methods of the <code>weka.classifiers.Evaluation</code> class.</p>
-<p><strong>NB:</strong> The example <code>UsingJ48Ext.groovy</code> needs Weka 3.6.x (or a snapshot of the developer version) to run, due to some changes in the API.</p>
+<p><strong>NB:</strong> The example <code>UsingJ48Ext.groovy</code> needs Weka 3.6.x to run, due to some changes in the API.</p>
 <h3 id="implementing-a-groovy-classifier">Implementing a Groovy classifier<a class="headerlink" href="#implementing-a-groovy-classifier" title="Permanent link">#</a></h3>
 <h4 id="requirements_1">Requirements<a class="headerlink" href="#requirements_1" title="Permanent link">#</a></h4>
 <ul>
 <li>Groovy 1.5.7 or later</li>
-<li>developer version of Weka later than 3.5.8, <a href="../snapshots/">snapshots</a> later than 02/02/2009</li>
+<li>developer version of Weka later than 3.5.8</li>
 </ul>
 <h4 id="implementation_1">Implementation<a class="headerlink" href="#implementation_1" title="Permanent link">#</a></h4>
 <p>Implementing a Groovy classifier is pretty straight-forward, since the syntax is almost the same and Java classes are imported/used in Groovy just like in Java. The <a href="../files/GeroR.groovy">GeroR.groovy</a> file re-implements the <code>weka.classifiers.rules.ZeroR</code> classifier as Groovy script.</p>
