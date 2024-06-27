@@ -14,9 +14,9 @@ This is the basic setup (based on a Wekalist post):
  ---thresholdData---> ModelPerformanceChart
 ```
 
-![Snapshot](img/Knowledgeflow_breast-cancer_roc-curve_setup.jpg)
+![Screenshot](img/Knowledgeflow_breast-cancer_roc-curve_setup.jpg)
 
-![Snapshot](img/Knowledgeflow_breast-cancer_roc-curve.jpg)
+![Screenshot](img/Knowledgeflow_breast-cancer_roc-curve.jpg)
 
 This setup can be easily extended to host several classifiers, which illustrates the [Plotting_multiple_roc.kfml](files/Plotting_multiple_roc.kfml) example, containing `J48` and `RandomForest` as classifiers.
 

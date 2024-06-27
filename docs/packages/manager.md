@@ -23,7 +23,7 @@ Options:
 
 ---
 
-Weka 3.7.8 and snapshot builds of the developer version of Weka after September 24 2012 now offer a completely "offline" mode that involves no attempts to connect to the internet. This mode can be used to install package zip files that the user already has on the file system, and to browse already installed packages. This mode can be accessed from the command line package manager by specifying the "-offline" option. Alternatively, the property weka.packageManager.offline=true can be provided to the Java virtual machine on the command line or in a properties file (see the section on properties below).
+Weka 3.7.8 now offers a completely "offline" mode that involves no attempts to connect to the internet. This mode can be used to install package zip files that the user already has on the file system, and to browse already installed packages. This mode can be accessed from the command line package manager by specifying the "-offline" option. Alternatively, the property weka.packageManager.offline=true can be provided to the Java virtual machine on the command line or in a properties file (see the section on properties below).
 
 ----
 
@@ -192,7 +192,7 @@ This can either be set when starting Weka from the command line with the `-D` fl
 
  
 # Package manager property file
-As mentioned in the previous section, an alternative package meta data repository can be specified by placing an entry in the PackageRepository.props file in `$WEKA_HOME/props`. From Weka 3.7.8 (and snapshot builds after 24 September 2012), the package manager also looks for properties placed in `$WEKA_HOME/props/PackageManager.props`. The current set of properties that can be set are:
+As mentioned in the previous section, an alternative package meta data repository can be specified by placing an entry in the PackageRepository.props file in `$WEKA_HOME/props`. From Weka 3.7.8, the package manager also looks for properties placed in `$WEKA_HOME/props/PackageManager.props`. The current set of properties that can be set are:
 
 ```
 weka.core.wekaPackageRepositoryURL=http://some.mirror.somewhere

@@ -20,7 +20,7 @@ Customizes display of plots and certain curves in the GUI.
 > Display the list of one dimensional attribute visualizations
 * `weka.gui.visualize.AttributePanel.barColour`
 > Colour for the background of the attribute bars in the AttributePanel (can use R,G,B format)
-* `weka.gui.visualize.Plot2D.instanceInfoFrame` (developer version later than 3.5.8 or [snapshot](snapshots.md), not in stable-3.6)
+* `weka.gui.visualize.Plot2D.instanceInfoFrame` (developer version later than 3.5.8, not in stable-3.6)
 > Lists the classname for displaying the instance info, e.g., when visualizing the classifier errors in the Explorer. Custom classes only need to be derived from `javax.swing.JFrame` and implement the `weka.gui.visualize.InstanceInfo` interface.
 * Threshold curve plots
 	* `weka.gui.visualize.ThresholdVisualizePanel.ThresholdCurve.XDimension`

@@ -55,7 +55,7 @@ A slightly more elaborate example can be found in [UsingJ48Ext.py](files/UsingJ4
 
 ## Requirements
 
-* Weka >3.5.6 (or [snapshot](snapshots.md) from 02/08/2007 or later)
+* Weka >3.5.6
 * Jython 2.2rc2 (later versions should work as well)
 
 ## Implementation

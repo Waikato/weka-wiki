@@ -7,7 +7,7 @@
 This props file determines the look and feel of the minimalistic scripting IDE for [Groovy](https://groovy-lang.org/).
 
 # Version
-* > 3.5.8 or [snapshot](snapshots.md) later than 6/3/2009 (only developer version)
+* > 3.5.8
 
 # Fields
 * `FontName`

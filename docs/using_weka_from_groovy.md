@@ -85,14 +85,14 @@ println j48
 ```
 A slightly more elaborate example can be found in [UsingJ48Ext.groovy](files/UsingJ48Ext.groovy), which uses more methods of the `weka.classifiers.Evaluation` class.
 
-**NB:** The example `UsingJ48Ext.groovy` needs Weka 3.6.x (or a snapshot of the developer version) to run, due to some changes in the API.
+**NB:** The example `UsingJ48Ext.groovy` needs Weka 3.6.x to run, due to some changes in the API.
 
 # Implementing a Groovy classifier 
 
 ## Requirements
 
 * Groovy 1.5.7 or later
-* developer version of Weka later than 3.5.8, [snapshots](snapshots.md) later than 02/02/2009
+* developer version of Weka later than 3.5.8
 
 ## Implementation
 Implementing a Groovy classifier is pretty straight-forward, since the syntax is almost the same and Java classes are imported/used in Groovy just like in Java. The [GeroR.groovy](files/GeroR.groovy) file re-implements the `weka.classifiers.rules.ZeroR` classifier as Groovy script.

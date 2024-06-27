@@ -3,7 +3,7 @@
 # Introduction
 As of Weka version >3.5.8 (only developer version, not stable-3.6 branch) one can easily add tree visualization plugins in the Explorer (Classify and Cluster panel). This makes it easy to implement custom visualizations, if the ones Weka offers are not sufficient.
 
-**Note:** This is also covered in chapter *Extending WEKA* of the WEKA manual in versions later than 3.7.0 or [snapshots](../snapshots.md) of the developer version later than 10/01/2010.
+**Note:** This is also covered in chapter *Extending WEKA* of the WEKA manual in versions later than 3.7.0.
 
 *tree* is referring to trees generated, for instance, by the `weka.classifiers.trees.J48` classifier. To be more precise, all classes that import the `weka.core.Drawable` interface and which `graphType()` method returns `weka.core.Drawable.TREE`. This means, that the trees the clusterer `weka.clusterers.Cobweb` generates, can be displayed as well.
 

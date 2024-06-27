@@ -77,7 +77,7 @@ And with the [MultiFilter](https://weka.sourceforge.io/doc.stable-3-8/weka/filte
 
 The [StringToWordVector](https://weka.sourceforge.io/doc.stable-3-8/weka/filters/unsupervised/attribute/StringToWordVector.html) filter can also work with a different stopword list than the built-in one (based on the Rainbow system). One can use the `-stopwords` option to load the external stopwords file. The format for such a stopword file is one stopword per line, lines starting with '#' are interpreted as comments and ignored.
 
-**Note:** There was a bug in Weka 3.5.6 (which introduced the support of external stopwords lists), which ignored the external stopwords list. Later versions or [snapshot](snapshots.md)s from 21/07/2007 on will work correctly.
+**Note:** There was a bug in Weka 3.5.6 (which introduced the support of external stopwords lists), which ignored the external stopwords list. Later versions from 21/07/2007 on will work correctly.
 
 # UTF-8
 

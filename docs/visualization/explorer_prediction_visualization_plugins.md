@@ -3,7 +3,7 @@
 # Introduction
 As of Weka version >3.5.2 one can easily add visualization plugins in the Explorer (Classify panel). This makes it easy to implement custom visualizations, if the ones Weka offers are not sufficient.
 
-**Note:** This is also covered in chapter *Extending WEKA* of the WEKA manual in versions later than 3.6.1/3.7.0 or [snapshots](../snapshots.md) of the stable-3.6/developer version later than 10/01/2010.
+**Note:** This is also covered in chapter *Extending WEKA* of the WEKA manual in versions later than 3.6.1/3.7.0.
 
 # Requirements
 * custom visualization class must implement the following **interface**

@@ -77,7 +77,7 @@ weka.classifiers.functions.LibSVM
 # GridSearch 
 `weka.classifiers.meta.GridSearch` is a meta-classifier for exploring 2 parameters, hence the *grid* in the name. If one turns the log on, the classifier will create output suitable for [gnuplot](http://www.gnuplot.info/), i.e., sections of the log will contain script and data sections. Instead of just using a classifier, one can specify a base classifier **and** a filter, which both of them can be optimized (one parameter each). In contrast to `CVParameterSelection`, `GridSearch` is not limited to first-level parameters of the base classifier, since it's using [Java Beans](http://java.sun.com/docs/books/tutorial/javabeans/) [Introspection](http://java.sun.com/docs/books/tutorial/javabeans/introspection/) and one can specify *paths* to the properties one wants to optimize. A *property* here is the string of the parameter displayed in the GenericObjectEditor (generated though Introspection), e.g., `bagSizePercent` or `classifier` of `weka.classifiers.meta.Bagging`.
 
-Due to some important bugfixes, one should obtain a version of Weka >3.5.6 or a [snapshot](snapshots.md) later than 11 Sept 2007.
+Due to some important bugfixes, one should obtain a version of Weka >3.5.6 later than 11 Sept 2007.
 
 For each of the two axes, X and Y, one can specify the following parameters:
 

@@ -3,10 +3,10 @@
 # Description
 This article explains how to add extra tabs in the Explorer in order to add new functionality without the hassle of having to dig into the Explorer code oneself. With the new plugin-architecture of the Explorer it is fairly easy making your extensions available in the GUI.
 
-**Note:** This is also covered in chapter *Extending WEKA* of the WEKA manual in versions later than 3.6.1/3.7.0 or [snapshots](snapshots.md) of the stable-3.6/developer version later than 10/01/2010.
+**Note:** This is also covered in chapter *Extending WEKA* of the WEKA manual in versions later than 3.6.1/3.7.0 of the stable-3.6/developer version later than 10/01/2010.
 
 # Version
->3.5.5 or [Snapshot](snapshots.md)
+>3.5.5
 
 # Requirements
 Here is roughly what is required in order to add a new tab (the examples go into more detail):

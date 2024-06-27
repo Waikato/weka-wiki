@@ -42,7 +42,7 @@ In this case, taken directly from a test dataset where all class attributes were
 * Using the `-classifications` option instead of `-p ...` you can also use different output formats, like [CSV](https://weka.sourceforge.io/doc.stable-3-8/weka/classifiers/evaluation/output/prediction/CSV.html): `-classifications "weka.classifiers.evaluation.output.prediction.CSV -p ..."` (the `-p` option takes the indices of the additional attributes to output).
 
 ## Filters
-The [AddClassification](https://weka.sourceforge.io/doc.stable-3-8/weka/filters/supervised/attribute/AddClassification.html) filter (package `weka.filters.supervised.attribute`) can either train a classifier on the input data and transform this or load a serialized model to transform the input data (even though the filter was introduced in 3.5.4, due to a bug in the commandline option handling, it is recommended to download a version >3.5.5 or a snapshot from the Weka homepage).
+The [AddClassification](https://weka.sourceforge.io/doc.stable-3-8/weka/filters/supervised/attribute/AddClassification.html) filter (package `weka.filters.supervised.attribute`) can either train a classifier on the input data and transform this or load a serialized model to transform the input data (even though the filter was introduced in 3.5.4, due to a bug in the commandline option handling, it is recommended to download a version >3.5.5 from the Weka homepage).
 This filter can add the classification, class distribution and the error per row as extra attributes to the dataset.
 
 * training the classifier, e.g., J48, on the input data and replacing the class values with the ones of the trained classifier:
@@ -91,7 +91,7 @@ Example output for the *anneal* UCI dataset:
     20          ?        3:3      +   0      0     *1      0      0      0    
     ...
 ```
-**Note:** The developer version (>3.5.6 or [snapshot](snapshots.md)) can also output additional attributes like the commandline with the `-p` option. In the *More options...* dialog you can specify those attribute indices with *Output additional attributes*, e.g., *first* or *1-7*. In contrast to the commandline, this output also works for cross-validation.
+**Note:** The developer version (>3.5.6) can also output additional attributes like the commandline with the `-p` option. In the *More options...* dialog you can specify those attribute indices with *Output additional attributes*, e.g., *first* or *1-7*. In contrast to the commandline, this output also works for cross-validation.
 
 ## KnowledgeFlow
 ## Using the PredictionAppender

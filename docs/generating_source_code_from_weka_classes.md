@@ -1,6 +1,6 @@
 
 
-Some of the schemes in Weka can generate Java source code that represents their current internal state. At the moment these are classifiers (book and developer version) and filters ([snapshot](snapshots.md) or >3.5.6). The generated code can be used within Weka as normal classifier/filter, since this code will be derived from the same superclass (`weka.classifiers.Classifier` or `weka.filters.Filter`) as the generating code.
+Some of the schemes in Weka can generate Java source code that represents their current internal state. At the moment these are classifiers (book and developer version) and filters (>3.5.6). The generated code can be used within Weka as normal classifier/filter, since this code will be derived from the same superclass (`weka.classifiers.Classifier` or `weka.filters.Filter`) as the generating code.
 
 **Note:** The commands listed here are for a Linux/Unix bash (the backslash tells the shell that the command isn't finished yet and continues on the next line). In case of Windows or the SimpleCLI, just remove the backslashes and put everything on one line.
 
@@ -27,7 +27,7 @@ The following command calls the generated classifier with a training set (traini
 **Note:** the Explorer can output source code as well, you only have to check the *Output source code* option in the *More options* dialog.
 
 # Filters
-With versions of Weka later than 3.5.6 or a [snapshot](snapshots.md) of the developer version, one can now also turn filters into source code. The process is basically the same as with classifiers outlined above. All filters that implement the `weka.filters.Sourcable` interface can be turned into Java code (again, check out the Javadoc for this interface, to see the filters implementing it).
+With versions of Weka later than 3.5.6 of the developer version, one can now also turn filters into source code. The process is basically the same as with classifiers outlined above. All filters that implement the `weka.filters.Sourcable` interface can be turned into Java code (again, check out the Javadoc for this interface, to see the filters implementing it).
 
 The following command turns an initialized ReplaceMissingValues filter into source code:
 

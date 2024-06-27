@@ -18,7 +18,7 @@ This props file determines what schemes and options are initially set in the Exp
 * Tabs
 >> Lists all the tabs that should be displayed in the Explorer. Apart from the Preprocess panel itself, all other panels are basically plugins.
 >> See the [Adding tabs in the Explorer](adding_tabs_in_the_explorer.md) article for more details on adding custom panels.
-* InitialDirectory (> 3.6.0, developer version and [snapshots](snapshots.md) later than 07/02/2009)
+* InitialDirectory (> 3.6.0, developer version)
 >> Defines the initial directory for opening datasets in the Preprocess panel.
 >> The following placeholders are recognized (work across platforms):
 
@@ -27,9 +27,9 @@ This props file determines what schemes and options are initially set in the Exp
 	* %c - the current directory **(the default setting)**
 	* %% - gets replaced by a single percentage sign
 	
-* enableUndo (> 3.6.5, > 3.7.4 and [snapshots](snapshots.md) later than 09/01/2011)
+* enableUndo (> 3.6.5, > 3.7.4)
 >> Enable/disable the creation of undo files (default is enabled)
-* undoDirectory (> 3.6.5, > 3.7.4 and [snapshots](snapshots.md) later than 09/01/2011)
+* undoDirectory (> 3.6.5, > 3.7.4)
 >> Specify the directory to use for saving undo files
 >> The following placeholders are recognized (work across platforms):
 	* %t - the temp directory

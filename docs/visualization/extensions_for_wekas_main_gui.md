@@ -3,7 +3,7 @@
 The main GUI (= `weka.gui.Main`) contains a plugin mechanism to add functionality to the main menu without having to modify the code of that class (the GUIChooser in the developer version as well). Thanks to the automatic class discovery, Weka will display all components that are found in packages listed in the [GenericPropertiesCreator.props](../weka_gui_generic_properties_creator.props.md) file.
 
 # Version
->3.5.5 (or [snapshot](../snapshots.md)/[git](../git.md) after 25/05/2007)
+>3.5.5
 
 # Requirements
 The are only *two* requirements for components to be listed in the main menu (under the *Extensions* menu):

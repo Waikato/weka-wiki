@@ -211,7 +211,7 @@ Another example is the kfGroovy package. This package adds a plugin component to
 weka.gui.beans.KnowledgeFlow.Plugins=org.pentaho.dm.kf.GroovyComponent
 ```
 
-The new pluggable evaluation metrics for classification/regression (from Weka 3.7.8 and nightly developer snapshots from 15-11-2012) are managed by the PluginManager class. To tell PluginManager that your package provides a new evaluation metric you need to provide a "PluginManager.props" file in the package's top level directory. For example, a hypothetical bobsMetric package might declare a new "Area under Bob curve" metric like so:
+The new pluggable evaluation metrics for classification/regression (from Weka 3.7.8) are managed by the PluginManager class. To tell PluginManager that your package provides a new evaluation metric you need to provide a "PluginManager.props" file in the package's top level directory. For example, a hypothetical bobsMetric package might declare a new "Area under Bob curve" metric like so:
 
 ```
 # Specify a new plugin Evaluation metric

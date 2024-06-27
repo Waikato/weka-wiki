@@ -135,7 +135,7 @@ And some example output:
 
 ## ClassificationViaClustering
 
-A new meta-classifier, `weka.classifiers.meta.ClassificationViaClustering`, got introduced in the developer version (>3.5.6 or [snapshot](snapshots.md)), which mimics the *clusters to classes* functionality of the `weka.core.ClusterEvaluation` class. A user defined cluster algorithm is built with the training data presented to the meta-classifier (after the class attribute got removed, of course) and then the mapping between classes and clusters is determined. This mapping is then used for predicting class labels of unseen instances.
+A new meta-classifier, `weka.classifiers.meta.ClassificationViaClustering`, got introduced in the developer version (>3.5.6), which mimics the *clusters to classes* functionality of the `weka.core.ClusterEvaluation` class. A user defined cluster algorithm is built with the training data presented to the meta-classifier (after the class attribute got removed, of course) and then the mapping between classes and clusters is determined. This mapping is then used for predicting class labels of unseen instances.
 
 Here's an example for the UCI [dataset](datasets.md) *balance-scale*:
 
