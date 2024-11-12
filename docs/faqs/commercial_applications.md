@@ -19,7 +19,6 @@ is available as well.
 
 The copyright for most WEKA code is owned by the University of Waikato. For
 information on licenses for this code please
-contact [WaikatoLink](http://www.waikatolink.co.nz), the commercialization unit
-of the [University of Waikato](http://waikato.ac.nz), by sending email to 
-*weka-enquiries at waikatolink.co.nz*.
-
+contact Rosanne Ellis, Director of Innovation and Impact,
+here at the [University of Waikato](http://waikato.ac.nz), by sending an email to 
+*rosanne dot ellis at waikato dot ac dot nz*.
