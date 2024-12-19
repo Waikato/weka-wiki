@@ -6,8 +6,7 @@ The WEKA Mailing list can be found here:
 
 Before posting, please read the [mailing list etiquette](https://ml.cms.waikato.ac.nz/weka/mailinglist_etiquette.html).
 
-Once you have subscribed to the list (a moderator may have to approve your request), you can send posts to the list
-using the following email address:
+Once you have subscribed to the list, you can send posts to the list using the following email address:
 
 ```
 weka-users@lists.sourceforge.net
