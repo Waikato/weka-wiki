@@ -17,7 +17,7 @@ etiquette](https://ml.cms.waikato.ac.nz/weka/mailinglist_etiquette.html).
 # Mailing list archive and mirrors
 
 * Consider searching the [archive of the Weka mailing list
-  (wekalist)](https://list.waikato.ac.nz/hyperkitty/list/wekalist@list.waikato.ac.nz/)
+  (wekalist)](https://sourceforge.net/p/weka/mailman/weka-users/)
   or its mirror [marc.info](https://marc.info/?l=wekalist).
 	  
 # Forums offering help
@@ -31,9 +31,9 @@ etiquette](https://ml.cms.waikato.ac.nz/weka/mailinglist_etiquette.html).
 	  
 # Bug reports
 	  
-* Bug reports can be send to the [Weka mailing
-list](https://list.waikato.ac.nz/postorius/lists/wekalist.list.waikato.ac.nz)
-or posted at the
+* Bug reports can be sent to the [Weka mailing
+list](https://sourceforge.net/projects/weka/lists/weka-users)
+or posted at
 [JIRA](https://jira.pentaho.com/projects/DATAMINING/issues/DATAMINING-753).
 	  
 # IRC channel for discussing Weka
