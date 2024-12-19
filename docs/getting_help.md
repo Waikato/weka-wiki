@@ -32,8 +32,8 @@ etiquette](https://ml.cms.waikato.ac.nz/weka/mailinglist_etiquette.html).
 # Bug reports
 	  
 * Bug reports can be sent to the [Weka mailing
-list](https://sourceforge.net/projects/weka/lists/weka-users)
-or posted at
+list](https://sourceforge.net/projects/weka/lists/weka-users) using `weka-users@lists.sourceforge.net`
+or posted on
 [JIRA](https://jira.pentaho.com/projects/DATAMINING/issues/DATAMINING-753).
 	  
 # IRC channel for discussing Weka
