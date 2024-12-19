@@ -23,13 +23,16 @@ with information on Weka is provided below.
 
 * The videos and slides for the online courses on [Data Mining with Weka](https://ml.cms.waikato.ac.nz/weka/mooc/dataminingwithweka/), [More Data Mining with Weka](https://ml.cms.waikato.ac.nz/weka/mooc/moredataminingwithweka/), and [Advanced Data Mining with Weka](https://ml.cms.waikato.ac.nz/weka/mooc/advanceddataminingwithweka/).
 
+
 # Weka packages
 
 * There is a [list of packages](https://weka.sourceforge.io/packageMetaData/) for Weka that can be installed using the built-in package manager. Javadoc for a package is available at https://weka.sourceforge.io/doc.packages/ followed by the name of the package.
 
+
 # Mailing list archive
 
-* The [Weka mailing list](https://list.waikato.ac.nz/hyperkitty/list/wekalist@list.waikato.ac.nz/) is a very helpful source of information, spanning more than 15 years of questions and answers on Weka.
+* The [Weka mailing list](https://sourceforge.net/projects/weka/lists/weka-users) is a very helpful source of information, spanning more than 15 years of questions and answers on Weka.
+
 
 # Blogs
 
@@ -37,10 +40,9 @@ with information on Weka is provided below.
 
 * There is also [Mark Hall's blog](https://markahall.blogspot.co.nz/) with a lot of useful information on several important Weka packages in particular.
 
+
 # Other sources of information
 
-* Weka can be used from several other software systems for data science, and there is a set of slides on [WEKA in the Ecosystem for Scientific Computing](https://www.cs.waikato.ac.nz/~eibe/WEKA_Ecosystem.pdf) covering Octave/Matlab, R, Python, and Hadoop.
-
-* A page with [with news and documentation on Weka's support for importing PMML models](https://wiki.pentaho.com/display/DATAMINING/PMML+Support+in+Weka).
+* A page [with news and documentation on Weka's support for importing PMML models](https://pentaho-public.atlassian.net/wiki/spaces/DATAMINING/pages/281411566/PMML+Support+in+Weka).
 
 * A short tutorial on [connecting Weka to MongoDB using a JDBC driver](https://github.com/selvinsource/mongodb-datamining-shell/wiki/Weka-MongoDB).
