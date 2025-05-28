@@ -40,7 +40,7 @@ You may also want to take a look at the (incomplete) list of ["unofficial" packa
 * [pHMM4weka](http://sourceforge.net/projects/phmm4weka/) - Profile Hidden Markov Models for Weka.
 * [PROMPT](http://www.geneinfo.eu/prompt/) - Statistical comparison and mapping of protein sets. Import/Export of WEKA arff data files.
 * [python-arff](http://bitbucket.org/panzi/arff) - Pure Python library for parsing and writing ARFF files.
-* [python-weka-wrapper](https://github.com/fracpete/python-weka-wrapper) - Wrapper for conveniently using Weka from Python.
+* [python-weka-wrapper3](https://github.com/fracpete/python-weka-wrapper3) - Wrapper for conveniently using Weka from Python.
 * [RWeka](https://cran.r-project.org/web/packages/RWeka/index.html) - an R interface to Weka.
 * [ScalaLab](http://code.google.com/p/scalalab/) - Scala based Matlab-like interface to Weka's algorithms.
 * [Semi-Supervised and Collective Classification](https://github.com/fracpete/collective-classification-weka-package) using Weka.
