@@ -55,6 +55,7 @@ You may also want to take a look at the (incomplete) list of ["unofficial" packa
 * [weka4WS](http://gridlab.dimes.unical.it/weka4ws/) - distributed data mining.
 * [Weka-GDPM and Weka-STPM](http://www.inf.ufsc.br/~vania/software.html) - Weka for geographic data processing and Moving Object Data Analysis and Mining.
 * [WekaMetal](http://www.cs.bris.ac.uk/research/machinelearning/wekametal/) - a meta-learning extension to Weka.
+* [Weka noVNC (LXDE)](https://github.com/jmeiracorbal/weka-waikato) - execute Weka in a LXDE desktop environment that is accessible via browser with the noVNC project running behind Docker.
 * [Weka-Parallel](http://weka-parallel.sourceforge.net/) - parallel processing for Weka.
 * [Word sense disambiguation](http://www.d.umn.edu/%7etpederse/senseval2.html) by Ted Pedersen.
 * [x2arff](https://sites.google.com/site/x2arff/home) - A simple VB application to convert data stored in excel files into Attribute-Relation File Format.
