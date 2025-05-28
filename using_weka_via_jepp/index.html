@@ -631,20 +631,20 @@
 <p>Jepp doesn't seem to be able to import third-party libraries like <code>scipy</code>, <code>numpy</code> or <code>wx</code> (pure Python modules can be imported, though).</p>
 <h3 id="accessing-weka-classes-within-jepp">Accessing Weka classes within Jepp<a class="headerlink" href="#accessing-weka-classes-within-jepp" title="Permanent link">#</a></h3>
 <p>Java classes are imported in one's Python script as follows:</p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a> <span class="kn">from</span> <span class="o">&lt;</span><span class="n">package</span><span class="o">&gt;</span> <span class="kn">import</span> <span class="o">&lt;</span><span class="n">class</span><span class="o">&gt;</span>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a> <span class="kn">from</span><span class="w"> </span><span class="o">&lt;</span><span class="n">package</span><span class="o">&gt;</span> <span class="kn">import</span><span class="w"> </span><span class="o">&lt;</span><span class="n">class</span><span class="o">&gt;</span>
 </code></pre></div>
 E.g., importing J48 looks like this:</p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a> <span class="kn">from</span> <span class="nn">weka.classifiers.trees</span> <span class="kn">import</span> <span class="n">J48</span>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a> <span class="kn">from</span><span class="w"> </span><span class="nn">weka.classifiers.trees</span><span class="w"> </span><span class="kn">import</span> <span class="n">J48</span>
 </code></pre></div>
 In the following a little example script for loading a dataset, cross-validating J48 with it and outputting the results of the cross-validation in the console:</p>
 <p><div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a> <span class="c1"># import classes</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a> <span class="kn">from</span> <span class="nn">weka.core</span> <span class="kn">import</span> <span class="n">Instances</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a> <span class="kn">from</span> <span class="nn">weka.classifiers</span> <span class="kn">import</span> <span class="n">Evaluation</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a> <span class="kn">from</span> <span class="nn">weka.classifiers.trees</span> <span class="kn">import</span> <span class="n">J48</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a> <span class="kn">from</span><span class="w"> </span><span class="nn">weka.core</span><span class="w"> </span><span class="kn">import</span> <span class="n">Instances</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a> <span class="kn">from</span><span class="w"> </span><span class="nn">weka.classifiers</span><span class="w"> </span><span class="kn">import</span> <span class="n">Evaluation</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a> <span class="kn">from</span><span class="w"> </span><span class="nn">weka.classifiers.trees</span><span class="w"> </span><span class="kn">import</span> <span class="n">J48</span>
 <a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a> <span class="kn">from</span> <span class="nn">java.io</span> <span class="kn">import</span> <span class="n">BufferedReader</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a> <span class="kn">from</span> <span class="nn">java.io</span> <span class="kn">import</span> <span class="n">FileReader</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a> <span class="kn">from</span> <span class="nn">java.util</span> <span class="kn">import</span> <span class="n">Random</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a> <span class="kn">from</span><span class="w"> </span><span class="nn">java.io</span><span class="w"> </span><span class="kn">import</span> <span class="n">BufferedReader</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a> <span class="kn">from</span><span class="w"> </span><span class="nn">java.io</span><span class="w"> </span><span class="kn">import</span> <span class="n">FileReader</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a> <span class="kn">from</span><span class="w"> </span><span class="nn">java.util</span><span class="w"> </span><span class="kn">import</span> <span class="n">Random</span>
 <a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>
 <a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a> <span class="c1"># load data</span>
 <a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a> <span class="n">reader</span> <span class="o">=</span> <span class="n">BufferedReader</span><span class="p">(</span><span class="n">FileReader</span><span class="p">(</span><span class="s1">&#39;/some/where/file.arff&#39;</span><span class="p">))</span>

@@ -698,14 +698,14 @@
 <p><strong>Note:</strong> Windows users must just the backslash ("\") in the command prompt instead of the slash ("/") in paths.</p>
 <h4 id="implementation">Implementation<a class="headerlink" href="#implementation" title="Permanent link">#</a></h4>
 <p>As soon as one imports classes in a Jython module one can use that class just like in Java. E.g., if one wants to use the J48 classifier, one only needs to import it as follows:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a> <span class="kn">import</span> <span class="nn">weka.classifiers.trees.J48</span> <span class="k">as</span> <span class="nn">J48</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a> <span class="kn">import</span><span class="w"> </span><span class="nn">weka.classifiers.trees.J48</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">J48</span>
 </code></pre></div>
 <p>Here's a Jython module (<a href="../files/UsingJ48.py">UsingJ48.py</a>):</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a> <span class="kn">import</span> <span class="nn">sys</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a> <span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a> <span class="kn">import</span> <span class="nn">java.io.FileReader</span> <span class="k">as</span> <span class="nn">FileReader</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a> <span class="kn">import</span> <span class="nn">weka.core.Instances</span> <span class="k">as</span> <span class="nn">Instances</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a> <span class="kn">import</span> <span class="nn">weka.classifiers.trees.J48</span> <span class="k">as</span> <span class="nn">J48</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a> <span class="kn">import</span><span class="w"> </span><span class="nn">java.io.FileReader</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">FileReader</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a> <span class="kn">import</span><span class="w"> </span><span class="nn">weka.core.Instances</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">Instances</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a> <span class="kn">import</span><span class="w"> </span><span class="nn">weka.classifiers.trees.J48</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">J48</span>
 <a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
 <a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a> <span class="c1"># load data file</span>
 <a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a> <span class="n">file</span> <span class="o">=</span> <span class="n">FileReader</span><span class="p">(</span><span class="s2">&quot;/some/where/file.arff&quot;</span><span class="p">)</span>
@@ -821,7 +821,7 @@ Returns a string describing the not-yet-built or built model.</p>
 <ul>
 <li>Class doc string:</li>
 </ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a> <span class="k">class</span> <span class="nc">JeroR</span> <span class="p">(</span><span class="n">Classifier</span><span class="p">,</span> <span class="n">JythonSerializableObject</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a> <span class="k">class</span><span class="w"> </span><span class="nc">JeroR</span> <span class="p">(</span><span class="n">Classifier</span><span class="p">,</span> <span class="n">JythonSerializableObject</span><span class="p">):</span>
 <a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
 <a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">     </span><span class="sd">&quot;&quot;&quot;</span>
 <a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="sd">     JeroR is a Jython implementation of the Weka classifier ZeroR</span>
@@ -837,7 +837,7 @@ Returns a string describing the not-yet-built or built model.</p>
 <ul>
 <li>Method doc string:</li>
 </ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a> <span class="k">def</span> <span class="nf">classifyInstance</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">instance</span><span class="p">):</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a> <span class="k">def</span><span class="w"> </span><span class="nf">classifyInstance</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">instance</span><span class="p">):</span>
 <a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
 <a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">     </span><span class="sd">&quot;&quot;&quot;</span>
 <a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="sd">     returns the prediction for the given instance</span>
