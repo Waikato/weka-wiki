@@ -28,7 +28,7 @@ You may also want to take a look at the (incomplete) list of ["unofficial" packa
 * [Java Framework to crate ARFF from JPA Entity](../using_a_new_java_framework_to_create_arff_from_jpa_entity.md) - Use the JPA Entities to create automatically you ARFF file.
 * [Kea](http://www.nzdl.org/kea/) - automatic keyphrase extraction.
 * [KeplerWeka](https://sourceforge.net/projects/keplerweka/) - Weka module for the [Kepler](https://kepler-project.org/) workflow environment.
-* [Learning Vector Quanization](http://sourceforge.net/projects/wekaclassalgos/) - and more with Weka.
+* [Learning Vector Quanization](http://sourceforge.net/projects/wekaclassalgos/) - and more with Weka ([Weka package fork](https://github.com/fracpete/wekaclassalgos)).
 * [Matlab Weka Interface](http://www.mathworks.com/matlabcentral/fileexchange/21204-matlab-weka-interface) - A module for using Weka from Matlab.
 * [Mayday](http://www-ps.informatik.uni-tuebingen.de/mayday/wp/) - Machine Learning for Microarrays - plugin for the WEKA machine Learning Library.
 * [Meka](http://meka.sourceforge.net/) - A multi-label extension for Weka.
