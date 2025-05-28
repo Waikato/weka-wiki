@@ -18,6 +18,7 @@ You may also want to take a look at the (incomplete) list of ["unofficial" packa
 * [Debellor](http://www.debellor.org/) - Data mining platform for data streams.
 * [DecisionTemplate](http://www.perdisci.com/projects/weka-code) - Combining classifiers using Decision Templates.
 * [distributedWekaSpark](https://github.com/ariskk/distributedwekaspark) - A proof of concept for running Weka in Apache Spark.
+* [djl-arff](https://github.com/waikato-datamining/djl-arff) - Reading ARFF datasets using [Deep Java Library (DJL)](https://djl.ai/). 
 * [ELKI](http://elki.dbs.ifi.lmu.de/) - Similar project, with focus on clustering and outlier detection, as well as on using database index structures for acceleration.
 * [Fuzzyweka](http://sourceforge.net/projects/fuzzyweka/) - Classifier for fuzzy classification based on fuzzy if-then rules.
 * [GATE](http://gate.ac.uk/) - NLP workbench with Weka interface.
