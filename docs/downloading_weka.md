@@ -21,12 +21,24 @@ with earlier 3.8 releases, although major new features may become
 available in packages.  There are different options for downloading
 and installing it on your system:
 
-### Windows
+### Windows - Intel processors
 
 * Click
-[here](https://prdownloads.sourceforge.net/weka/weka-3-8-6-azul-zulu-windows.exe)
+[here](https://prdownloads.sourceforge.net/weka/weka-3-8-7-bellsoft-x64-windows.exe)
 to download a self-extracting executable for 64-bit Windows that
-includes Azul's 64-bit OpenJDK Java VM 17 (weka-3-8-6-azul-zulu-windows.exe; 133.2 MB)
+includes Bellsoft's 64-bit OpenJDK Java VM 25 for Intel Windows
+(weka-3-8-7-bellsoft-x64-windows.exe; 175.7 MB)
+
+This executable will install Weka in your Program Menu. Launching via the Program
+Menu or shortcuts will automatically use the included JVM to run Weka.
+
+### Windows - ARM processors
+
+* Click
+[here](https://prdownloads.sourceforge.net/weka/weka-3-8-7-bellsoft-arm-windows.exe)
+to download a self-extracting executable for 64-bit Windows that
+includes Bellsoft's 64-bit OpenJDK Java VM 25 for ARM Windows
+(weka-3-8-7-bellsoft-arm-windows.exe; 105.5 MB)
 
 This executable will install Weka in your Program Menu. Launching via the Program
 Menu or shortcuts will automatically use the included JVM to run Weka.
@@ -34,40 +46,55 @@ Menu or shortcuts will automatically use the included JVM to run Weka.
 ### Mac OS - Intel processors
                   
 * Click
-[here](https://prdownloads.sourceforge.net/weka/weka-3-8-6-azul-zulu-osx.dmg)
+[here](https://prdownloads.sourceforge.net/weka/weka-3-8-7-bellsoft-x64-osx.dmg)
 to download a disk image for Mac OS that contains a
-Mac application including Azul's 64-bit OpenJDK Java VM 17 for Intel Macs.
-(weka-3-8-6-azul-zulu-osx.dmg; 180.2 MB)
+Mac application including Bellsoft's 64-bit OpenJDK Java VM 25 for Intel Macs.
+(weka-3-8-7-bellsoft-x64-osx.dmg; 238.5 MB)
 
 ### Mac OS - ARM processors
                   
 * Click
-[here](https://prdownloads.sourceforge.net/weka/weka-3-8-6-azul-zulu-arm-osx.dmg)
+[here](https://prdownloads.sourceforge.net/weka/weka-3-8-7-bellsoft-arm-osx.dmg)
 to download a disk image for Mac OS that contains a
-Mac application including Azul's 64-bit OpenJDK Java VM 17 for ARM Macs.
-(weka-3-8-6-azul-zulu-arm-osx.dmg; 166.3 MB)
+Mac application including Bellsoft's 64-bit OpenJDK Java VM 25 for ARM Macs.
+(weka-3-8-7-bellsoft-arm-osx.dmg; 231.8 MB)
 
-### Linux
+### Linux - Intel processors
 
 * Click
-[here](https://prdownloads.sourceforge.net/weka/weka-3-8-6-azul-zulu-linux.zip)
-to download a zip archive for Linux that includes Azul's 64-bit OpenJDK Java VM 17
-(weka-3-8-6-azul-zulu-linux.zip; 146.9 MB)
+[here](https://prdownloads.sourceforge.net/weka/weka-3-8-7-bellsoft-x64-linux.zip)
+to download a zip archive for Linux that includes Bellsoft's 64-bit OpenJDK Java VM 25
+for ARM Linux (weka-3-8-7-bellsoft-x64-linux.zip; 200.3 MB)
 
 First unzip the zip file. This will create a new directory called
-weka-3-8-5. To run Weka, change into that directory and type
+weka-3-8-7. To run Weka, change into that directory and type
 
 ``` bash
 ./weka.sh
 ```
 
-### Other platforms
+### Linux - ARM processors
 
-* Click [here](https://prdownloads.sourceforge.net/weka/weka-3-8-6.zip)
- to download a zip archive containing Weka (weka-3-8-6.zip; 59.6 MB)
+* Click
+[here](https://prdownloads.sourceforge.net/weka/weka-3-8-7-bellsoft-arm-linux.zip)
+to download a zip archive for Linux that includes Bellsoft's 64-bit OpenJDK Java VM 25
+for ARM Linux (weka-3-8-7-bellsoft-arm-linux.zip; 203.5 MB)
 
 First unzip the zip file. This will create a new directory called
-weka-3-8-6. To run Weka, change into that directory and type
+weka-3-8-7. To run Weka, change into that directory and type
+
+``` bash
+./weka.sh
+```
+
+
+### Other platforms
+
+* Click [here](https://prdownloads.sourceforge.net/weka/weka-3-8-7.zip)
+ to download a zip archive containing Weka (weka-3-8-7.zip; 57.7 MB)
+
+First unzip the zip file. This will create a new directory called
+weka-3-8-7. To run Weka, change into that directory and type
 
 ``` bash
 java -jar weka.jar
@@ -82,63 +109,88 @@ CLASSPATH variable and only use the `weka.jar`.
 This is the main development trunk of Weka and continues from the stable Weka 3.8 code line. It
 may receive new features that break backwards compatibility.
 
-### Windows
+### Windows - Intel processors
 
 * Click
-[here](https://prdownloads.sourceforge.net/weka/weka-3-9-6-azul-zulu-windows.exe)
+[here](https://prdownloads.sourceforge.net/weka/weka-3-9-7-bellsoft-x64-windows.exe)
 to download a self-extracting executable for 64-bit Windows that
-includes Azul's 64-bit OpenJDK Java VM 17 (weka-3-9-6-azul-zulu-windows.exe; 133.0 MB)
+includes Bellsoft's 64-bit OpenJDK Java VM 25 for Intel Windows
+(weka-3-9-7-bellsoft-x64-windows.exe; 175.7 MB)
 
 This executable will install Weka in your Program Menu. Launching via the Program
 Menu or shortcuts will automatically use the included JVM to run Weka.
 
+### Windows - ARM processors
+
+* Click
+[here](https://prdownloads.sourceforge.net/weka/weka-3-9-7-bellsoft-arm-windows.exe)
+to download a self-extracting executable for 64-bit Windows that
+includes Bellsoft's 64-bit OpenJDK Java VM 25 for ARM Windows
+(weka-3-9-7-bellsoft-arm-windows.exe; 105.5 MB)
+
+This executable will install Weka in your Program Menu. Launching via the Program
+Menu or shortcuts will automatically use the included JVM to run Weka.
 
 ### Mac OS - Intel processors
                   
 * Click
-[here](https://prdownloads.sourceforge.net/weka/weka-3-9-6-azul-zulu-osx.dmg)
+[here](https://prdownloads.sourceforge.net/weka/weka-3-9-7-bellsoft-x64-osx.dmg)
 to download a disk image for Mac OS that contains a
-Mac application including Azul's 64-bit OpenJDK Java VM 17 for Intel Macs.
-(weka-3-9-6-azul-zulu-osx.dmg; 180.0 MB)
+Mac application including Bellsoft's 64-bit OpenJDK Java VM 25 for Intel Macs.
+(weka-3-9-7-bellsoft-x64-osx.dmg; 238.5 MB)
 
 ### Mac OS - ARM processors
                   
 * Click
-[here](https://prdownloads.sourceforge.net/weka/weka-3-9-6-azul-zulu-arm-osx.dmg)
+[here](https://prdownloads.sourceforge.net/weka/weka-3-9-7-bellsoft-arm-osx.dmg)
 to download a disk image for Mac OS that contains a
-Mac application including Azul's 64-bit OpenJDK Java VM 17 for ARM Macs.
-(weka-3-9-6-azul-zulu-arm-osx.dmg; 166.3 MB)
+Mac application including Bellsoft's 64-bit OpenJDK Java VM 25 for ARM Macs.
+(weka-3-9-7-bellsoft-arm-osx.dmg; 231.8 MB)
 
-### Linux
+### Linux - Intel processors
 
 * Click
-[here](https://prdownloads.sourceforge.net/weka/weka-3-9-6-azul-zulu-linux.zip)
-to download a zip archive for Linux that includes Azul's 64-bit OpenJDK Java VM 17
-(weka-3-9-6-azul-zulu-linux.zip; 146.7 MB)
+[here](https://prdownloads.sourceforge.net/weka/weka-3-9-7-bellsoft-x64-linux.zip)
+to download a zip archive for Linux that includes Bellsoft's 64-bit OpenJDK Java VM 25
+for ARM Linux (weka-3-9-7-bellsoft-x64-linux.zip; 200.4 MB)
 
 First unzip the zip file. This will create a new directory called
-weka-3-9-6. To run Weka, change into that directory and type
+weka-3-9-7. To run Weka, change into that directory and type
 
 ``` bash
 ./weka.sh
 ```
 
-### Other platforms
+### Linux - ARM processors
 
-* Click [here](https://prdownloads.sourceforge.net/weka/weka-3-9-6.zip)
- to download a zip archive containing Weka (weka-3-9-6.zip; 59.4 MB)
+* Click
+[here](https://prdownloads.sourceforge.net/weka/weka-3-9-7-bellsoft-arm-linux.zip)
+to download a zip archive for Linux that includes Bellsoft's 64-bit OpenJDK Java VM 25
+for ARM Linux (weka-3-9-7-bellsoft-arm-linux.zip; 203.5 MB)
 
 First unzip the zip file. This will create a new directory called
-weka-3-9-6. To run Weka, change into that directory and type
+weka-3-9-7. To run Weka, change into that directory and type
+
+``` bash
+./weka.sh
+```
+
+
+### Other platforms
+
+* Click [here](https://prdownloads.sourceforge.net/weka/weka-3-9-7.zip)
+ to download a zip archive containing Weka (weka-3-9-7.zip; 57.7 MB)
+
+First unzip the zip file. This will create a new directory called
+weka-3-9-7. To run Weka, change into that directory and type
 
 ``` bash
 java -jar weka.jar
 ```
 
 Note that Java needs to be installed on your system for this to
-work. Also note, that using `-jar` will override your current
+work. Also note that using `-jar` will override your current
 CLASSPATH variable and only use the `weka.jar`.
-
 
 # Old versions
 
