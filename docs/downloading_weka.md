@@ -64,7 +64,7 @@ Mac application including Bellsoft's 64-bit OpenJDK Java VM 25 for ARM Macs.
 * Click
 [here](https://prdownloads.sourceforge.net/weka/weka-3-8-7-bellsoft-x64-linux.zip)
 to download a zip archive for Linux that includes Bellsoft's 64-bit OpenJDK Java VM 25
-for ARM Linux (weka-3-8-7-bellsoft-x64-linux.zip; 200.3 MB)
+for X86 Linux (weka-3-8-7-bellsoft-x64-linux.zip; 200.3 MB)
 
 First unzip the zip file. This will create a new directory called
 weka-3-8-7. To run Weka, change into that directory and type
@@ -152,7 +152,7 @@ Mac application including Bellsoft's 64-bit OpenJDK Java VM 25 for ARM Macs.
 * Click
 [here](https://prdownloads.sourceforge.net/weka/weka-3-9-7-bellsoft-x64-linux.zip)
 to download a zip archive for Linux that includes Bellsoft's 64-bit OpenJDK Java VM 25
-for ARM Linux (weka-3-9-7-bellsoft-x64-linux.zip; 200.4 MB)
+for X86 Linux (weka-3-9-7-bellsoft-x64-linux.zip; 200.4 MB)
 
 First unzip the zip file. This will create a new directory called
 weka-3-9-7. To run Weka, change into that directory and type
