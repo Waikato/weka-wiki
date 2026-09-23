@@ -690,6 +690,9 @@
 <p>Jython is an implementation of the high-level, dynamic, object-oriented language Python written in 100% Pure Java, and seamlessly integrated with the Java platform. It thus allows you to run Python on any Java platform.</p>
 <p><em>-- taken from the <a href="http://www.jython.org/">Jython homepage</a></em></p>
 <p>This article explains how use Weka classes from within Jython and how to write a classifier in Jython that can be used within the Weka framework.</p>
+<blockquote>
+<p><strong>Compatibility note:</strong> This article documents the Jython-based approach to using Weka and contains examples written for older Weka and Jython versions. If you are looking for a Python 3 interface to Weka, see the <a href="../faqs/can_i_use_weka_from_python/">Python FAQ</a> for currently available alternatives.</p>
+</blockquote>
 <h3 id="accessing-weka-classes-from-jython">Accessing Weka classes from Jython<a class="headerlink" href="#accessing-weka-classes-from-jython" title="Permanent link">#</a></h3>
 <h4 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">#</a></h4>
 <p>In order for Jython to find the Weka classes, you must export them in your <a href="../classpath/">CLASSPATH</a>. Here is an example for adding the <code>weka.jar</code> located in the directory <code>/some/where</code> to the CLASSPATH in a bash under Linux:</p>
