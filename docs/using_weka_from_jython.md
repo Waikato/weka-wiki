@@ -6,7 +6,7 @@ Jython is an implementation of the high-level, dynamic, object-oriented language
 
 This article explains how use Weka classes from within Jython and how to write a classifier in Jython that can be used within the Weka framework.
 
-> **Compatibility note:** This article documents the Jython-based approach to using Weka and contains examples written for older Weka and Jython versions. If you are looking for a Python 3 interface to Weka, see the [Python FAQ](faqs/can_i_use_weka_from_python.md) for currently available alternatives.
+> **Compatibility note:** This article documents the Jython-based approach to using Weka and contains examples written for older Weka and Jython versions (compatible with Python 2.7). If you are looking for a Python 3 interface to Weka, see the [Python FAQ](faqs/can_i_use_weka_from_python.md) for currently available alternatives.
 
 # Accessing Weka classes from Jython
 ## Requirements
